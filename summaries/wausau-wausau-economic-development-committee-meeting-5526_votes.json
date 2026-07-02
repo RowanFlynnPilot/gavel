@@ -1,0 +1,136 @@
+{
+  "event_id": 1991,
+  "agenda_id": 1543,
+  "items": [
+    {
+      "number": "1",
+      "name": "Call to Order by the Clerk.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": []
+    },
+    {
+      "number": "2",
+      "name": "Elect Chairperson and Vice Chairperson for the 2026-2028 term of the Economic Development Committee. ",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": []
+    },
+    {
+      "number": "3",
+      "name": "Establish regular meeting date and time for the 2026-2028 term of the Economic Development Committee. ",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": []
+    },
+    {
+      "number": "4",
+      "name": "Public comment on agenda items and reading of the City of Wausau Public Comment Statement.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": []
+    },
+    {
+      "number": "5",
+      "name": "Consideration of the minutes of the preceding meeting(s).",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Regular Economic Development Committee Minutes",
+          "desc": "",
+          "votes": [],
+          "docs": [
+            {
+              "name": "Economic Development_Regular_Minutes_04062026",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6943)",
+              "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "size": 162640
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "6",
+      "name": "Discussion and possible action.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Approving Consent to Transfer, Waiver of Right of First Refusal, Termination of Deed Restrictions and Approval of New Deed Restrictions for 725 S. 84th Avenue",
+          "desc": "",
+          "votes": [],
+          "docs": [
+            {
+              "name": "termination and deed restrictions 725 s 84th ave bennett to diverse",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6944)",
+              "type": "application/pdf",
+              "size": 131562
+            },
+            {
+              "name": "725 s 84th ave request of city",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6896)",
+              "type": "application/pdf",
+              "size": 268694
+            },
+            {
+              "name": "725 s 84th ave offer to purchase",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6897)",
+              "type": "application/pdf",
+              "size": 1622978
+            },
+            {
+              "name": "725 S 84th Ave deed",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6898)",
+              "type": "application/pdf",
+              "size": 2196944
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "7",
+      "name": "Discussion.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Overview of Community Development Department",
+          "desc": "",
+          "votes": [],
+          "docs": [
+            {
+              "name": "2026 CDD Overview and Welcome",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6956)",
+              "type": "application/pdf",
+              "size": 3415332
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "8",
+      "name": "Adjournment.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": []
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "overview": "The Wausau Transit Commission met on June 18, 2026, and approved two key items: sending a WisGo electronic fare collection contract to the Finance Committee for review, and allowing transit buses to serve as crowd barriers at the Wings Over Wausau airshow. The meeting also featured public comment from a former commissioner, Kathy Flurry, who disputed her removal from the commission by Mayor Doug Diny, and heard a director's update on ongoing technology upgrades including a new CAD/AVL system and the hire of a new deputy director.",
+  "committee": "Wausau Transit Commission",
+  "presiding": "Chair (name not clearly stated in transcript)",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to order and quorum confirmation"
+    },
+    {
+      "time": "0:30",
+      "item": "Public comment"
+    },
+    {
+      "time": "6:10",
+      "item": "Consideration of minutes from preceding meetings"
+    },
+    {
+      "time": "6:40",
+      "item": "Discussion and possible action on WisGo electronic fare contract"
+    },
+    {
+      "time": "19:30",
+      "item": "Wings Over Wausau bus barrier request"
+    },
+    {
+      "time": "22:00",
+      "item": "Director's report: technology upgrade and feasibility study"
+    },
+    {
+      "time": "26:30",
+      "item": "Future agenda items discussion"
+    },
+    {
+      "time": "30:30",
+      "item": "Adjournment"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Public Comment - Kathy Flurry appointment dispute",
+      "body": "Kathy Flurry, 915 North 2nd Avenue, addressed the commission disputing her removal from the Transit Commission by Mayor Doug Diny. She stated she signed an oath of office on October 22, 2025 with a term running through April 30, 2028, and was not informed of her removal until June 4, 2026, after a new community member (Christopher Weems) had already been appointed on June 2, 2026. She requested a written explanation and a copy of term limit policies, and asked for information on how to appeal the mayor's decision. A second speaker, Deborah Ryan of 702 Elm Street, corroborated parts of Flurry's account and alleged the city clerk had overstepped his boundaries in the appointment process. The chair thanked Flurry for her years of service but did not indicate any commission action would be taken."
+    },
+    {
+      "item": "Consideration of minutes",
+      "body": "A motion to accept the minutes of the preceding meetings was made by Weems and seconded by Watson. The motion passed unanimously with no discussion."
+    },
+    {
+      "item": "WisGo Electronic Fare Contract",
+      "body": "Transit Director Aaron (last name not stated) presented the WisGo electronic fare collection system, operated through Milwaukee Transit and used by multiple Wisconsin transit agencies, as a replacement for the current cash-only system. He outlined a one-time startup cost of $133,900 (to be covered by existing grant funds) and an annual fee of $24,260, and noted that fare increases would likely accompany the transition — adult fares from $1.75 to $2.00, senior fares from $0.85 to $1.00, adult monthly passes from $42 to $60, and senior monthly passes from $21 to $40. Commission members Alder Lukens and Alder Watson asked questions about card reloading, app integration, senior fare caps, and school ticket transitions. The director noted a driver was previously hospitalized after touching a fentanyl-laced transfer slip, citing driver safety as an additional benefit of going paperless. Weems moved to send the contract to finance for review; Alder Lukens seconded. The motion passed unanimously."
+    },
+    {
+      "item": "Wings Over Wausau Bus Barrier",
+      "body": "The director requested commission approval to drive idle express route buses to the airport to serve as crowd barriers for the Wings Over Wausau airshow (June 26-27), noting there would be no cost to the transit system and that it would provide advertising exposure. Alder Lukens moved to approve; Weems seconded. The motion passed unanimously. Commission members briefly discussed the possibility of future shuttle services for community events and suggested creating promotional materials or signage to display alongside the buses."
+    },
+    {
+      "item": "Director's Report",
+      "body": "The director reported that CAD/AVL system installation on current fleet buses will begin next month, but the full system will not go live until new buses arrive in October-December, at which point everything will launch simultaneously. Scheduling software is expected to go live sooner and will be used to redesign staffing. A feasibility study for a new transit facility is ongoing, with the current building facing stormwater challenges. The director also announced the hire of a new deputy director starting July 6. Community member Mr. Meany expressed enthusiasm about the changes, noting he is a long-time bus rider."
+    },
+    {
+      "item": "Future Agenda Items",
+      "body": "Commission members proposed several future agenda items including a paratransit service overview for new members (requested by Alder Lukens), a presentation on e-bike compatibility with buses (the director confirmed current bike racks cannot support e-bike weight and there are battery safety concerns), marketing and outreach ideas including a bus presence at the August police and fire cookout (suggested by Mr. Wayne/Weems), and a potential resident fare discount tied to the new card system. The chair noted a council member had expressed interest in building a 'real system' in Wausau."
+    }
+  ],
+  "publicComment": "Two speakers addressed the commission. Kathy Flurry (915 North 2nd Avenue) spoke about her disputed removal from the Transit Commission by Mayor Doug Diny, stating she had signed an oath of office for a term through 2028 but was told she could no longer serve after a new member was appointed. She requested a written explanation and appeal process information. Deborah Ryan (702 Elm Street), a 15-year neighborhood advocate, corroborated Flurry's account and alleged the city clerk acted inappropriately and unprofessionally in the appointment process, though she said she did not blame Flurry.",
+  "actionItems": [
+    "WisGo electronic fare contract referred to Finance Committee for review and consideration",
+    "Approved use of idle express route buses as crowd barriers at Wings Over Wausau airshow (June 26-27) at no cost to transit",
+    "Director to begin CAD/AVL hardware installation on current fleet next month; full system launch planned for after new buses arrive (October-December)",
+    "New deputy director begins July 6",
+    "Director to prepare a paratransit service overview for a future commission meeting",
+    "Director to prepare information on e-bike policy and safety concerns for future distribution",
+    "Commission to explore marketing and outreach opportunities including a bus presence at the August police and fire cookout at the 400 Block",
+    "Director to explore potential resident fare discount tied to new WisGo card system"
+  ],
+  "_source": "transcript",
+  "title": "Wausau Transit Commission Meeting - 6/18/26",
+  "url": "https://www.youtube.com/watch?v=ojZQHZHTodE",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-06-28T17:07:25.200303+00:00"
+}

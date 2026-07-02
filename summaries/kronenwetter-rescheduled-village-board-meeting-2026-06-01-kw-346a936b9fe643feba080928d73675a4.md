@@ -1,0 +1,57 @@
+# RESCHEDULED Village Board Meeting - 2026-06-01
+
+**Organization:** Village of Kronenwetter  
+**Source:** https://kronenwetter-wi.municodemeetings.com/bc-vb/page/rescheduled-village-board-meeting-0  
+**Documents:** https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-346a936b9fe643feba080928d73675a4.pdf  
+**Summarized:** 2026-06-10 20:27 UTC
+
+---
+
+## Meeting Overview
+The Kronenwetter Village Board approved five substantive items at its June 1, 2026 rescheduled meeting, including a concept plan to extend East Nick Avenue through to Highway J in coordination with neighboring municipalities, a police department policy contract, a municipal court fee increase of $10, and a Fire Department DNR grant application. All motions carried unanimously 5-0, with Trustee Stowell absent for most of the meeting.
+
+## Key Discussions
+### Administrator Report
+Administrator James Davel updated the board on recent flooding and electrical failures at the Municipal Building. He also shared information about a letter sent to the Marathon County Board regarding the Kronenwetter Police Department. Davel, Police Chief Terry McHugh, and Finance Director John Jacobs answered board questions about the Police Department budget.
+
+### Public Works Director Report
+Public Works Director Greg Ulman presented his report, including updates on lift station performance during the recent storm. Trustee Lesniak thanked the Public Works Department for their dedication during the event.
+
+### Finance Director Report
+Finance Director John Jacobs reported that the 2024 Audit and an RFP for reassessment would be brought to the next board meeting. He also announced the Village would purchase Capital Infrastructure Project software to assist with CIP management.
+
+### Consent Agenda
+The consent agenda, comprising the April 2026 vouchers, ACH transactions and credit card statement activity, and the May 11, 2026 Village Board meeting minutes, was approved on a motion by Lesniak, seconded by Myszka. The motion carried by roll call vote 5-0.
+
+### East Nick Avenue Development
+Gary Guerndt, Owner and President of PGA, Inc., and Kurt Suebert presented a concept plan to extend East Nick Avenue to Highway J, requiring coordination with the municipalities of Weston, Reid, Ringle, and Kronenwetter. Guerndt said the road extension would support future residential development and improve safety for current residents, with PGA Inc. financing construction and seeking reimbursement from municipalities upon development. Trustee Lesniak moved, seconded by Mortensen, to move forward with the concept plan and direct staff to work with the other communities. The motion carried by roll call vote 5-0.
+
+### Fire Department DNR Grant Opportunity
+Administrator Davel presented the item, noting the Kronenwetter Fire Department has received this DNR grant multiple times in the past. Trustee Coyle moved, seconded by Myszka, to approve the Fire Department's plan for the DNR grant. The motion carried by roll call vote 5-0.
+
+### Police CSI Policy Contract
+Police Chief Terry McHugh presented the contract with CSI Policy, stating that updated policies would reduce liability, the cost is reimbursable, and the program would allow for efficient policy updates. Trustee Myszka moved, seconded by Coyle, to approve the contract. The motion carried by roll call vote 5-0.
+
+### Municipal Court Fee Increase
+President Joling and Administrator Davel presented the item, noting court fees had not increased in many years. Trustee Mortensen moved, seconded by Myszka, to approve a $10 increase in court costs. The motion carried by roll call vote 5-0.
+
+### HR-005-Wage Adjustment Chart
+Administrator Davel proposed revising the employee evaluation process so that managers are evaluated by October each year and the wage scale is set during the budget process rather than in January. Trustee Lesniak moved, seconded by Myszka, to approve the revisions to HR-005 Employee Evaluations. The motion carried by voice vote 5-0.
+
+### Closure of Municipal Center Offices for Administrative Work Days
+Administrator Davel presented the current staff schedule and approach. Rather than take immediate action, the board moved to delay a decision. Trustee Lesniak moved, seconded by Mortensen, to postpone action until the first regular meeting in August, with the administrator returning with recommendations. The motion carried by voice vote 5-0.
+
+### Village Board Priorities
+Administrator Davel recommended four priorities: TID 1, changing Village culture, lift stations and long-term infrastructure, and the Capital Improvement Program. Trustee Myszka named parks, roads including Maple Ridge Road, business development, and TID 1 as his priorities. Trustee Coyle added that Village ordinances need to be reviewed and updated. No action was taken on this item.
+
+## Public Comment
+Teresa Holewinski, 1814 Forsyth Road, Kronenwetter, submitted written comments that were read by Village Clerk Jennifer Poyer and attached to the minutes. Holewinski raised three concerns: (1) the deteriorating and potentially dangerous playground equipment at Buska Park, which she said has been on the improvement plan for years, as well as a broken Eagle Scout book library bench at the park; (2) an access path on the north side of Towering Pines park that she said was excavated and converted into uneven terrain by the Evergreen Bike Group, making it inaccessible to seniors, people with disabilities, and stroller users; and (3) a request for a published date for a CLIPP committee walkthrough of neighborhood parks to allow resident participation, as has been done in past years.
+
+## Action Items
+- Staff directed to work with the municipalities of Weston, Reid, Ringle, and Kronenwetter on the East Nick Avenue to Highway J road extension concept plan.
+- Fire Department authorized to proceed with DNR grant application.
+- Contract with CSI Policy for police department policy updates approved and to be executed.
+- Municipal court costs increased by $10 effective upon approval.
+- HR-005 Employee Evaluations policy revised to move manager evaluations to October and wage scale setting to the budget process.
+- Administrator Davel directed to return to the first regular board meeting in August with recommendations on closure of Municipal Center offices for administrative work days.
+- 2024 Audit and RFP for reassessment to be placed on the next board meeting agenda.

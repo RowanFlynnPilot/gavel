@@ -1,0 +1,259 @@
+{
+  "instance": {
+    "name": "Marathon County Meeting Tracker",
+    "newsroom": "Wausau Pilot & Review",
+    "newsroom_url": "https://wausaupilotandreview.com",
+    "region": "the Wausau, Wisconsin area",
+    "timezone": "America/Chicago",
+    "max_meetings": 50,
+    "date_cutoff": "20260428",
+    "skip_ids": ["eIjwnwe6aBE", "4IiT1PAaCHA", "PkJesaGLD0Q", "bb_748411", "bb_748413"]
+  },
+  "theme": {
+    "primary": "#4aaba7",
+    "primary_dark": "#3e847a",
+    "background": "#F7F3EC",
+    "ink": "#1A1209",
+    "divider": "#E0D8CC",
+    "font_display": "Bebas Neue",
+    "font_headline": "Playfair Display",
+    "font_body": "Lora",
+    "font_data": "monospace",
+    "logo": "assets/logo.jpg"
+  },
+  "jurisdictions": [
+    {
+      "key": "marathon",
+      "name": "Marathon County",
+      "short": "COUNTY",
+      "accent": "#4aaba7",
+      "doc_host": "marathoncounty.gov",
+      "avatar": "assets/avatars/marathon-avatar.jpg",
+      "video": {
+        "adapter": "youtube",
+        "channel_url": "https://www.youtube.com/@marathoncountyboardmeetings/streams",
+        "doc_pattern": "https?://[^\\s\\r\\n]*(?:marathoncounty\\.gov/home/showpublisheddocument)[^\\s\\r\\n]*",
+        "scan_descriptions_for_upcoming": true
+      },
+      "agendas": {
+        "adapter": "rule_schedule",
+        "days_ahead": 60,
+        "rules": [
+          { "name": "Public Safety Committee",                   "weekday": 1, "nth": 2, "time": "5:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "Environmental Resources Committee",         "weekday": 1, "nth": 4, "time": "5:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "Health & Human Services Committee",         "weekday": 3, "nth": 1, "time": "5:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "Infrastructure Committee",                  "weekday": 3, "nth": 2, "time": "5:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "HR, Finance & Property Committee",          "weekday": 3, "nth": 3, "time": "5:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "Extension, Education & Econ Dev Committee", "weekday": 2, "nth": 2, "time": "5:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "Executive Committee",                       "weekday": 3, "nth": 2, "time": "3:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" },
+          { "name": "County Board Meeting",                      "weekday": 1, "nth": 4, "time": "7:00 PM", "url": "https://www.marathoncounty.gov/about-us/county-calendar" }
+        ]
+      },
+      "title_strip_patterns": ["^Marathon County\\s+"],
+      "committee_map": {
+        "executive committee":                 "Executive Committee",
+        "public safety committee":             "Public Safety",
+        "environmental resources committee":   "Environmental Resources",
+        "health and human services committee": "Health & Human Services",
+        "health & human services committee":   "Health & Human Services",
+        "infrastructure committee":            "Infrastructure",
+        "hr, finance & property":              "HR, Finance & Property",
+        "human resources, finance & property": "HR, Finance & Property",
+        "extension, education & econ":         "Extension & Economic Dev",
+        "county board":                        "County Board"
+      }
+    },
+    {
+      "key": "wausau",
+      "name": "City of Wausau",
+      "short": "CITY",
+      "accent": "#C0392B",
+      "doc_host": "wausauwi.portal.civicclerk.com",
+      "avatar": "assets/avatars/wausau-avatar.jpg",
+      "video": {
+        "adapter": "youtube",
+        "channel_url": "https://www.youtube.com/@CityofWausauMeetings/streams",
+        "doc_pattern": "https?://[^\\s\\r\\n]*(?:wausauwi\\.portal\\.civicclerk\\.com/event/\\d+|wausauwi\\.gov/home/showpublisheddocument)[^\\s\\r\\n]*"
+      },
+      "agendas": {
+        "adapter": "civicclerk",
+        "api_base": "https://wausauwi.api.civicclerk.com/v1",
+        "portal": "https://wausauwi.portal.civicclerk.com",
+        "days_ahead": 45
+      },
+      "title_strip_patterns": ["^(City of\\s+)?Wausau\\s+"],
+      "committee_map": {
+        "public health & safety":     "Public Health & Safety",
+        "public health and safety":   "Public Health & Safety",
+        "board of public works":      "Board of Public Works",
+        "common council":             "City Council",
+        "infrastructure & facilities": "Infrastructure & Facilities",
+        "wausau water works":         "Water Works",
+        "wausau plan commission":     "Plan Commission",
+        "wausau finance committee":   "Finance",
+        "wausau parks":               "Parks & Recreation",
+        "wausau economic development": "Economic Development"
+      }
+    },
+    {
+      "key": "weston",
+      "name": "Village of Weston",
+      "short": "WESTON",
+      "accent": "#3A6B43",
+      "doc_host": "westonwi.gov",
+      "avatar": "assets/avatars/weston-avatar.jpg",
+      "video": {
+        "adapter": "youtube",
+        "channel_url": "https://www.youtube.com/@WestonWI/videos"
+      },
+      "agendas": {
+        "adapter": "agendacenter",
+        "base": "https://www.westonwi.gov",
+        "days_ahead": 60,
+        "fallback_rules": [
+          { "name": "Plan Commission",                          "weekday": 0, "nth": 2, "time": "6:00 PM" },
+          { "name": "Public Works Committee",                   "weekday": 0, "nth": 2, "time": "6:00 PM" },
+          { "name": "Community Life & Public Safety Committee", "weekday": 0, "nth": 1, "time": "6:00 PM" },
+          { "name": "Finance & Human Resources Committee",      "weekday": 0, "nth": 3, "time": "5:30 PM" },
+          { "name": "Parks & Recreation Committee",             "weekday": 0, "nth": 4, "time": "6:00 PM" },
+          { "name": "Board of Trustees",                        "weekday": 0, "nth": 3, "time": "6:00 PM" },
+          { "name": "S.A.F.E.R. Board of Directors",            "weekday": 1, "nth": 2, "time": "6:00 PM" },
+          { "name": "Mountain Bay Metro Police Oversight",      "weekday": 3, "nth": 3, "time": "6:00 PM" }
+        ]
+      },
+      "title_strip_patterns": ["^(Village of\\s+)?Weston\\s+"],
+      "committee_map": {
+        "board of trustees":                     "Board of Trustees",
+        "finance and human resources committee": "Finance & Human Resources",
+        "finance & human resources committee":   "Finance & Human Resources",
+        "public works committee":                "Public Works",
+        "public works & utility":                "Public Works",
+        "community life & public safety":        "Community Life & Public Safety",
+        "community life and public safety":      "Community Life & Public Safety",
+        "s.a.f.e.r":                             "S.A.F.E.R. Board",
+        "mountain bay metro":                    "Mountain Bay Metro Police"
+      }
+    },
+    {
+      "key": "school_board",
+      "name": "Wausau School Board",
+      "short": "SCHOOL",
+      "accent": "#6B2D5C",
+      "doc_host": "meetings.boardbook.org",
+      "avatar": "assets/avatars/school-avatar.jpg",
+      "video": {
+        "adapter": "youtube",
+        "channel_url": "https://www.youtube.com/channel/UCw63l8UWL_hpDtUy9IBIVvw/videos",
+        "upgrade_window_days": 45
+      },
+      "agendas": {
+        "adapter": "boardbook",
+        "base": "https://meetings.boardbook.org",
+        "org_id": 1360,
+        "label": "Wausau School District Board of Education",
+        "days_ahead": 60,
+        "fallback_rules": [
+          { "name": "Regular Board Meeting",            "weekday": 0, "nth": 2, "time": "5:00 PM" },
+          { "name": "Education & Operations Committee", "weekday": 0, "nth": 4, "time": "5:00 PM" }
+        ]
+      },
+      "title_strip_patterns": ["^Wausau School (Board|District)\\s+"],
+      "committee_map": {
+        "committee of the whole": "Committee of the Whole",
+        "audit of the bills":     "Audit of the Bills"
+      }
+    },
+    {
+      "key": "kronenwetter",
+      "name": "Village of Kronenwetter",
+      "short": "KRONEN",
+      "accent": "#8B6914",
+      "doc_host": "kronenwetter-wi.municodemeetings.com",
+      "avatar": "assets/avatars/kronenwetter-avatar.jpg",
+      "video": null,
+      "agendas": {
+        "adapter": "municode",
+        "base": "https://kronenwetter-wi.municodemeetings.com",
+        "ada_url": "https://meetings.municode.com/adaHtmlDocument/index?cc=KRNWTRWI&me={guid}&ip=False",
+        "blob_base": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu",
+        "id_prefix": "kw",
+        "minutes_upgrade_window_days": 45,
+        "days_ahead": 60
+      },
+      "title_strip_patterns": [],
+      "committee_map": {
+        "village board":               "Village Board",
+        "plan commission":             "Plan Commission",
+        "administrative policy":       "Administrative Policy",
+        "utility committee":           "Utility",
+        "clipp":                       "CLIPP",
+        "community life, infrastructure": "CLIPP",
+        "police & fire":               "Police & Fire Commission",
+        "redevelopment authority":     "Redevelopment Authority",
+        "board of review":             "Board of Review"
+      }
+    },
+    {
+      "key": "dc_everest",
+      "name": "DC Everest School Board",
+      "short": "DCE",
+      "accent": "#1F6F6B",
+      "doc_host": "meetings.boardbook.org",
+      "avatar": "assets/avatars/dc-everest-avatar.jpg",
+      "video": {
+        "adapter": "youtube",
+        "channel_url": "https://www.youtube.com/@dceverestschoolboard2202/videos",
+        "upgrade_window_days": 45
+      },
+      "agendas": {
+        "adapter": "boardbook",
+        "base": "https://meetings.boardbook.org",
+        "org_id": 1315,
+        "label": "D.C. Everest Area School District Board of Education",
+        "days_ahead": 60
+      },
+      "title_strip_patterns": ["^D\\.?C\\.?\\s*Everest( Area)?( School)?( District)?\\s+"],
+      "committee_map": {
+        "regular school board": "Regular Meeting",
+        "special school board": "Special Meeting",
+        "board workshop":       "Board Workshop",
+        "annual meeting":       "Annual Meeting",
+        "budget hearing":       "Annual Meeting"
+      }
+    }
+  ],
+  "committee_styles": {
+    "Executive Committee":            { "bg": "#4aaba7", "text": "#fff" },
+    "Public Safety":                  { "bg": "#1A3A5C", "text": "#fff" },
+    "Environmental Resources":        { "bg": "#2D5A3D", "text": "#fff" },
+    "Regular Meeting":                { "bg": "#2C5F8A", "text": "#fff" },
+    "Committee of the Whole":         { "bg": "#1A4060", "text": "#fff" },
+    "Special Meeting":                { "bg": "#5A3A1A", "text": "#fff" },
+    "Board of Trustees":              { "bg": "#1A4A7A", "text": "#fff" },
+    "Finance & Human Resources":      { "bg": "#2A3A5A", "text": "#fff" },
+    "Public Works":                   { "bg": "#3A3A2A", "text": "#fff" },
+    "Plan Commission":                { "bg": "#2A4A3A", "text": "#fff" },
+    "Parks":                          { "bg": "#1A5C2A", "text": "#fff" },
+    "Community Life & Public Safety": { "bg": "#5A2A1A", "text": "#fff" },
+    "Public Health & Safety":         { "bg": "#7B2D2D", "text": "#fff" },
+    "Economic Development":           { "bg": "#4A3580", "text": "#fff" },
+    "Parks & Recreation":             { "bg": "#1A5C3A", "text": "#fff" },
+    "Board of Public Works":          { "bg": "#3A4A5C", "text": "#fff" },
+    "City Council":                   { "bg": "#5C3A1A", "text": "#fff" },
+    "Finance":                        { "bg": "#2D4A2D", "text": "#fff" },
+    "Infrastructure":                 { "bg": "#4A4A1A", "text": "#fff" },
+    "Health & Human Services":        { "bg": "#3A5C5C", "text": "#fff" },
+    "County Board":                   { "bg": "#365A2D", "text": "#fff" },
+    "Water Works":                    { "bg": "#1F4F66", "text": "#fff" },
+    "Tourism Commission":             { "bg": "#7A4019", "text": "#fff" },
+    "Village Board":                  { "bg": "#2C3E6B", "text": "#fff" },
+    "Administrative Policy":          { "bg": "#5C2A6A", "text": "#fff" },
+    "Utility":                        { "bg": "#1E5F59", "text": "#fff" },
+    "CLIPP":                          { "bg": "#6B3A1F", "text": "#fff" },
+    "Police & Fire Commission":       { "bg": "#5C1F3A", "text": "#fff" },
+    "Board of Review":                { "bg": "#3F4A2A", "text": "#fff" },
+    "Redevelopment Authority":        { "bg": "#2F4858", "text": "#fff" },
+    "Board Workshop":                 { "bg": "#3A5550", "text": "#fff" },
+    "Annual Meeting":                 { "bg": "#4A4030", "text": "#fff" }
+  }
+}

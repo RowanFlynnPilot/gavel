@@ -1,0 +1,244 @@
+{
+  "event_id": 2191,
+  "agenda_id": 1529,
+  "items": [
+    {
+      "number": "1",
+      "name": "Consideration of the minutes of the preceding meeting(s).",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Regular Wausau Water Works Commission Minutes",
+          "desc": "",
+          "votes": [
+            {
+              "motion": "Motion to Approve Minutes of April 8, 2026.",
+              "passed": true,
+              "initiator": "Deb Hadley",
+              "seconder": "Peter Gelhar",
+              "yes": [
+                "Doug Diny",
+                "Deb Hadley",
+                "Peter Gelhar",
+                "Michael  Martens"
+              ],
+              "no": [],
+              "abstain": []
+            }
+          ],
+          "docs": [
+            {
+              "name": "WausauWaterWorks_Regular_04082026_Minutes",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6815)",
+              "type": "application/pdf",
+              "size": 123084
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "2",
+      "name": "Director's Reports.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Update on Lead Service Line Replacements.",
+          "desc": "",
+          "votes": [],
+          "docs": [
+            {
+              "name": "Memo - WDNR LSL Update_2024-2026_May2026",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6940)",
+              "type": "application/pdf",
+              "size": 163403
+            }
+          ],
+          "children": []
+        },
+        {
+          "number": "b",
+          "name": "Wastewater Project Updates- Headworks Screening Project, Cherry Street Lift Station and Lift Station Assessment w/ Clark Dietz.",
+          "desc": "",
+          "votes": [],
+          "docs": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "3",
+      "name": "Discussion and Possible Action.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Approving the 2027 through 2031 Capital Improvement Projects (CIP) Budget for the Drinking Water and Wastewater Utility.",
+          "desc": "",
+          "votes": [
+            {
+              "motion": "Approve the 2027- 2031 Capital Improvement Projects (CIP) Budget for the Drinking Water and Wastewater Utility.",
+              "passed": true,
+              "initiator": "Peter Gelhar",
+              "seconder": "Deb Hadley",
+              "yes": [
+                "Doug Diny",
+                "Deb Hadley",
+                "Peter Gelhar",
+                "Michael  Martens"
+              ],
+              "no": [],
+              "abstain": []
+            }
+          ],
+          "docs": [
+            {
+              "name": "Memo - 2027-2031 Water Capital Budget_May2026",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6939)",
+              "type": "application/pdf",
+              "size": 279174
+            },
+            {
+              "name": "Memo - 2027-2031 WW Capital Budget_May2026",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6942)",
+              "type": "application/pdf",
+              "size": 279149
+            }
+          ],
+          "children": []
+        },
+        {
+          "number": "b",
+          "name": "Approving the Sole Source Renewal Agreement for HydroCorp Non-Residential Cross Connection Control (CCC) Program.",
+          "desc": "",
+          "votes": [
+            {
+              "motion": "Approve the Sole Source Renewal Agreement for HydroCrop Non-Residential Cross Connection Control (CCC) Program.",
+              "passed": true,
+              "initiator": "Deb Hadley",
+              "seconder": "Peter Gelhar",
+              "yes": [
+                "Doug Diny",
+                "Deb Hadley",
+                "Peter Gelhar",
+                "Michael  Martens"
+              ],
+              "no": [],
+              "abstain": []
+            }
+          ],
+          "docs": [
+            {
+              "name": "HydroCorp Non-Residential CCC Program Renewal Agreement_2026-04-27 Redline",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6919)",
+              "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "size": 449391
+            }
+          ],
+          "children": []
+        },
+        {
+          "number": "c",
+          "name": "Approving the Sole Source Request for MCEP9 and K144L-NA Polymers used to thicken solids in the Belt Filter Presses and Gravity Belt Thickeners.",
+          "desc": "",
+          "votes": [
+            {
+              "motion": "Approve the Sole Source Request for MCEP9 and K144L-NA Polymers to thicken solids in Belt Filter Presses and Gravity Belt Thickners.",
+              "passed": true,
+              "initiator": "Peter Gelhar",
+              "seconder": "Michael  Martens",
+              "yes": [
+                "Doug Diny",
+                "Deb Hadley",
+                "Peter Gelhar",
+                "Michael  Martens"
+              ],
+              "no": [],
+              "abstain": []
+            }
+          ],
+          "docs": [
+            {
+              "name": "Quote - Wausau Water Works - polymer 04-15-26",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6817)",
+              "type": "application/pdf",
+              "size": 239312
+            },
+            {
+              "name": "2026-BFP&GBT-Polymer_Sole Source Purchasing Form",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6816)",
+              "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "size": 49784
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "4",
+      "name": "Discussion.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": [
+        {
+          "number": "a",
+          "name": "Regarding the Wastewater - Final WPDES Permit Issued with a permit term of five years.",
+          "desc": "",
+          "votes": [],
+          "docs": [
+            {
+              "name": "WPDES Memo",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6934)",
+              "type": "application/pdf",
+              "size": 199450
+            },
+            {
+              "name": "Signed Wausau Permit",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6935)",
+              "type": "application/pdf",
+              "size": 807534
+            },
+            {
+              "name": "Final Wausau FS",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6936)",
+              "type": "application/pdf",
+              "size": 457818
+            },
+            {
+              "name": "Signed Wausau CL",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6937)",
+              "type": "application/pdf",
+              "size": 310683
+            },
+            {
+              "name": "Wausau NFD",
+              "url": "https://wausauwi.api.civicclerk.com/v1/Meetings/GetAttachmentFile(fileId=6938)",
+              "type": "application/pdf",
+              "size": 133780
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "number": "5",
+      "name": "Adjournment.",
+      "desc": "",
+      "votes": [],
+      "docs": [],
+      "children": []
+    }
+  ]
+}

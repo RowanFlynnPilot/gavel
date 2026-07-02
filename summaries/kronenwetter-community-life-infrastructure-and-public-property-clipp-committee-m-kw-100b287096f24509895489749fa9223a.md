@@ -1,0 +1,56 @@
+# Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting - 2026-06-01
+
+**Organization:** Village of Kronenwetter  
+**Source:** https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-25  
+**Documents:** https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-100b287096f24509895489749fa9223a.pdf  
+**Summarized:** 2026-06-10 21:39 UTC
+
+---
+
+## Meeting Overview
+The Kronenwetter CLIPP Committee met on June 1, 2026, taking action on four key matters: recommending SD Allen Becker as general contractor for a new six-bay municipal garage (5-0), voting to proceed with Lea Road trails while eliminating the parking lot and driveway from the project scope to save approximately $17,000 (5-0), voting to recommend a parks subcommittee to the village board (5-0), and deferring the Chromewood Drive/Flanar-Gem Roth road rehabilitation project due to costs roughly doubling from estimates. The meeting also featured a public comment from a resident urging the committee to follow through on previously approved trail improvements.
+
+## Key Discussions
+### Approval of May 4, 2026 CLIPP Minutes
+Trustee Patty moved and Garrett seconded to approve the minutes. No discussion was held. Motion carried 5-0.
+
+### Police Chief Report
+Chief Terry (last name not clearly stated) reported an increase in complaints about e-bikes and bicycles in general, noting that staff are working to spread awareness about safe riding and rules of the road. A committee member asked whether the speed limit near a construction zone had been reduced to 25 mph; the chief was uncertain whether that was permanent or temporary.
+
+### Fire Chief Report
+The fire chief noted that April had been an extraordinarily busy month for both fire and medical calls, per the written report provided. No further discussion or questions were raised by committee members.
+
+### Public Works Director Report
+Public Works Director Greg provided an extensive update on storm and infrastructure damage. A severe storm knocked out power village-wide; flooding from roof downspouts inundated the WPS transformer at the municipal building, sending water into the main electrical panel in the police department. A transfer switch on the backup diesel generator also failed, leaving portions of the building without power. Greg noted a replacement part must come from Canada or North Dakota with a 7-10 day lead time. He also reported a lift station basement backup and pump issues at multiple stations. In response to a question about long-term solutions, Greg indicated that a Capital Improvement Plan (CIP) would be presented next month addressing aging infrastructure including original 1984 boilers.
+
+### Chromewood Drive/Flanar-Gem Roth Road Rehabilitation Bids
+Public Works Director Greg and Village Administrator John explained that bids came back far higher than the originally estimated $620,000, roughly doubling in cost. After reviewing available TID funds, only about $61 in TID2 contingency and $27,000 in non-TID funds would remain, which was deemed insufficient given an anticipated change order on the Kronenwetter Drive project. John noted that borrowing proceeds must be spent by end of October 2027, so the funds can remain available. However, he cautioned that if the project is deferred, any future funding will be village general obligation debt rather than TID district debt, since the TID district can no longer take on new debt. The committee discussed potentially bundling the project with the Maple Ridge road project for better bid pricing. No vote was taken; the project was deferred pending further review of options.
+
+### Municipal Garage Building Proposals
+Public Works Director Greg presented an RFP process in which six contractors responded and only SD Allen Becker of Athens, Wisconsin came in person for a full site meeting. Greg recommended SD Allen Becker as general contractor for a new six-bay garage budgeted at $800,000, which would house two police bays, two sewer utility bays, and two parks/public works bays. The two-thirds village share is already in the capital project fund and one-third comes from the sewer utility fund cash balance. Police Chief noted that the department currently has vehicles sitting outside, including one bay tied up with an evidence vehicle from an aggravated battery case. Greg also noted that ordering a sewer jetter truck before December 31, 2026 would lock in 2026 emissions pricing and save approximately $35,000. Trustee Patty moved to recommend SD Allen Becker as general contractor; Paul seconded. Motion carried 5-0. Timeline: design finalized in approximately one month, concrete poured in August, building erected in October, occupancy by January.
+
+### Bushka Park Fundraising Update
+Committee members Jennifer and Paddy (Patty Kasky) reported approximately $3,000 raised so far plus a $1,000 donation of jewelry. Plans include attending the farmers market with a jewelry donation jar and being present at movie nights. The effort received coverage on Channel 7 news and generated social media activity on Facebook and Nextdoor. A committee member noted that residents at a recent bike-and-walk event expressed frustration about the park's name change from 'Sunset Park' to 'Bushka Park,' and described some equipment as outdated and potentially dangerous. No vote was taken; the committee agreed to provide monthly updates.
+
+### Kronenwetter Parks Committee Proposal
+Trustee Erin (last name not clearly identified) proposed creating a parks subcommittee, citing three residents who expressed interest in serving after completing surveys at the bike-and-walk event. Village Administrator John noted that subcommittees are authorized under village ordinance, report back to CLIPP, and require board approval of appointments by the village president. John indicated existing budget savings from an unfilled planner/tech position and fewer-than-anticipated administrative committee meetings could fund the subcommittee without adding to the budget. Garrett moved to recommend the parks subcommittee to the village board; Dan (Trustee Muschka) seconded. Motion carried 5-0.
+
+### Trails and Leisure - Village Owned Property on Lea Road
+Public Works Director Greg presented cost estimates of approximately $58,000 for graveling walking and bike trails on village-owned land near the Lea Road wellheads. He raised a security concern about increased public foot traffic near the wellheads and generators, noting that fencing quotes came in at approximately $45,000. Trustee Muschka had previously suggested scaling back by eliminating the parking lot and driveway to redirect funds toward the Bushka Park playground. Garrett argued that the committee and village board had already approved the project and that removing the parking lot rather than the trails was the right compromise, noting local residents primarily access the area on foot. He also suggested cameras (estimated at roughly $5,000) and door security sensors as cost-effective wellhead security alternatives. Garrett moved to eliminate the driveway and parking lot from the project scope and proceed with graveling only the trails; a second was offered (name [inaudible]). Motion carried 5-0.
+
+## Public Comment
+One speaker offered public comment. Tim Stracota of 2023 Greenbud Road spoke about the Lea Road trails project. He noted the project was approved by CLIPP in August by a 4-0 vote and by the village board 4-7-0 (likely 4-0 or 7-0; phrasing unclear in transcript), and expressed frustration at perceived backpedaling. He stated the project missed eligibility for a Noel Nelson Stewardship Grant for recreational trails because the state stopped funding and CLIPP had not acted. He recommended against eliminating gravel from the trail due to difficulty pushing strollers, erosion, and increased maintenance if grass is used instead. He suggested dropping the parking lot and driveway to save approximately $17,000. He cited a 2023 village survey in which walking trails ranked number one, selected by 54% of respondents, ahead of playground equipment and splash pads. He concluded by noting the trails are within a mile and a half of approximately 1,800 residential parcels and recommended requiring future developers to include parks or walking trails in residential designs.
+
+## Action Items
+- SD Allen Becker recommended to village board as general contractor for new six-bay municipal garage; board to vote at next meeting
+- Municipal garage design to be finalized over approximately one month, with concrete pouring targeted for August and building completion by January
+- Public Works Director to pursue sewer jetter truck order before December 31, 2026 to lock in 2026 emissions pricing once garage contract is signed
+- Chromewood Drive/Flanar-Gem Roth road rehabilitation project deferred; village administrator to monitor TID fund balances and explore bundling with Maple Ridge road project
+- Village administrator to prepare long-term CIP for aging municipal building infrastructure including boilers, to be presented to CLIPP next month
+- Parks subcommittee creation recommended to village board for approval; village president to make citizen appointments
+- Lea Road trails to proceed with gravel path only; parking lot and driveway eliminated from project scope
+- Public works staff to investigate low-cost wellhead security options including cameras and door sensors for Lea Road well site
+- Village administrator to calculate potential park fund match amount for Bushka Park fundraising effort
+- WPS to be contacted to inspect transformer at municipal building following storm flooding
+- Transfer switch replacement part (from Canada or North Dakota) to be installed upon arrival to restore full building power
+- Next CLIPP meeting scheduled for July 6, 2026

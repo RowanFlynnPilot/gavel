@@ -1,0 +1,590 @@
+{
+  "processed": {
+    "bb_741715": {
+      "title": "Special Meeting - 2026-04-30",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=741715",
+      "processed_at": "2026-05-03T23:35:42.535365+00:00",
+      "summary_file": "summaries/school-board-special-meeting-2026-04-30.md"
+    },
+    "bb_742862": {
+      "title": "Regular Meeting - 2026-04-27",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=742862",
+      "processed_at": "2026-05-03T23:35:48.750264+00:00",
+      "summary_file": "summaries/school-board-regular-meeting-2026-04-27.md"
+    },
+    "bb_742168": {
+      "title": "Committee of the Whole Meeting - 2026-04-27",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=742168",
+      "processed_at": "2026-05-03T23:35:58.735202+00:00",
+      "summary_file": "summaries/school-board-committee-of-the-whole-meeting-2026-04-27.md"
+    },
+    "bb_742178": {
+      "title": "Special Meeting - 2026-04-27",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=742178",
+      "processed_at": "2026-05-03T23:36:09.465283+00:00",
+      "summary_file": "summaries/school-board-special-meeting-2026-04-27.md"
+    },
+    "bb_739586": {
+      "title": "Regular Meeting - 2026-04-13",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=739586",
+      "processed_at": "2026-05-03T23:36:34.219347+00:00",
+      "summary_file": "summaries/school-board-regular-meeting-2026-04-13.md"
+    },
+    "bb_738313": {
+      "title": "Special Meeting - 2026-04-13",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=738313",
+      "processed_at": "2026-05-03T23:36:40.383356+00:00",
+      "summary_file": "summaries/school-board-special-meeting-2026-04-13.md"
+    },
+    "bb_739874": {
+      "title": "Public Meeting - 2026-04-13",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=739874",
+      "processed_at": "2026-05-03T23:36:44.470099+00:00",
+      "summary_file": "summaries/school-board-public-meeting-2026-04-13.md"
+    },
+    "bb_734863": {
+      "title": "Committee of the Whole Meeting - 2026-03-23",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=734863",
+      "processed_at": "2026-05-03T23:36:59.437509+00:00",
+      "summary_file": "summaries/school-board-committee-of-the-whole-meeting-2026-03-23.md"
+    },
+    "WD9kixgx6oY": {
+      "title": "Marathon County Regular Meeting",
+      "source": "marathon",
+      "doc_url": "https://www.marathoncounty.gov/home/showpublisheddocument/18350/639126184295330000",
+      "upload_date": "20260429",
+      "meeting_date": "20260428",
+      "duration": null,
+      "processed_at": "2026-05-28T02:08:33.619564+00:00",
+      "summary_file": "summaries/marathon-marathon-county-regular-meeting.md"
+    },
+    "CIhVYLRBgok": {
+      "title": "Wausau City Council Meeting - 4/28/26",
+      "source": "wausau",
+      "doc_url": "https://wausauwi.portal.civicclerk.com/event/2335/overview",
+      "processed_at": "2026-05-03T23:37:38.442453+00:00",
+      "summary_file": "summaries/wausau-wausau-city-council-meeting-42826.md",
+      "upload_date": "20260429",
+      "meeting_date": "20260428",
+      "duration": 10320
+    },
+    "QM1mHief1xs": {
+      "title": "Wausau Board of Public Works Meeting - 4/28/26",
+      "source": "wausau",
+      "doc_url": "https://wausauwi.portal.civicclerk.com/event/2334/overview",
+      "processed_at": "2026-05-03T23:37:48.530817+00:00",
+      "summary_file": "summaries/wausau-wausau-board-of-public-works-meeting-42826.md",
+      "upload_date": "20260428",
+      "meeting_date": "20260428",
+      "duration": 133
+    },
+    "ZzEeG1Z64pg": {
+      "title": "Marathon County Health & Human Services Committee Meeting",
+      "source": "marathon",
+      "doc_url": "https://www.marathoncounty.gov/home/showpublisheddocument/18402/639132213564100000",
+      "upload_date": "20260507",
+      "meeting_date": "20260506",
+      "duration": null,
+      "processed_at": "2026-05-28T02:09:06.108037+00:00",
+      "summary_file": "summaries/marathon-marathon-county-health-human-services-committee-meeting.md"
+    },
+    "OLzrpSp3Dfg": {
+      "title": "Marathon County Environmental Resources Committee Meeting",
+      "source": "marathon",
+      "doc_url": "https://www.marathoncounty.gov/home/showpublisheddocument/18384/639131339701200000",
+      "upload_date": "20260506",
+      "meeting_date": "20260505",
+      "duration": null,
+      "processed_at": "2026-05-28T02:08:03.630009+00:00",
+      "summary_file": "summaries/marathon-marathon-county-environmental-resources-committee-meeting.md"
+    },
+    "6QSQOUqDnhM": {
+      "title": "Wausau Economic Development Committee Meeting - 5/5/26",
+      "source": "wausau",
+      "doc_url": "https://wausauwi.portal.civicclerk.com/event/1991/overview",
+      "processed_at": "2026-05-07T04:34:32.092136+00:00",
+      "summary_file": "summaries/wausau-wausau-economic-development-committee-meeting-5526.md",
+      "upload_date": "20260506",
+      "meeting_date": "20260505",
+      "duration": 1438
+    },
+    "I31JGv7tRq4": {
+      "title": "Wausau Water Works Commission Meeting - 5/5/26",
+      "source": "wausau",
+      "doc_url": "https://wausauwi.portal.civicclerk.com/event/2191/overview",
+      "processed_at": "2026-05-07T04:34:49.150383+00:00",
+      "summary_file": "summaries/wausau-wausau-water-works-commission-meeting-5526.md",
+      "upload_date": "20260506",
+      "meeting_date": "20260505",
+      "duration": 1842
+    },
+    "bb_744112": {
+      "title": "Regular Meeting - 2026-05-11",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=744112",
+      "upload_date": null,
+      "meeting_date": null,
+      "duration": 1325.0,
+      "video_url": "https://www.youtube.com/watch?v=aOKJiLFy5s4",
+      "processed_at": "2026-05-12T04:35:54.851295+00:00",
+      "summary_file": "summaries/school-board-regular-meeting-2026-05-11-bb-744112.md"
+    },
+    "Ay3CNwxe6g4": {
+      "title": "Community Life and Public Safety",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260511",
+      "meeting_date": "20260504",
+      "duration": null,
+      "processed_at": "2026-05-28T02:07:34.094833+00:00",
+      "summary_file": "summaries/weston-community-life-and-public-safety.md"
+    },
+    "j64Gj2ean2k": {
+      "title": "Public Works Committee",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260512",
+      "meeting_date": "20260511",
+      "duration": null,
+      "processed_at": "2026-05-28T02:10:17.977050+00:00",
+      "summary_file": "summaries/weston-public-works-committee.md"
+    },
+    "eX7VOuywzb8": {
+      "title": "Plan Commission",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260512",
+      "meeting_date": "20260511",
+      "duration": null,
+      "processed_at": "2026-05-28T02:09:33.305320+00:00",
+      "summary_file": "summaries/weston-plan-commission.md"
+    },
+    "bb_746488": {
+      "title": "Special Meeting - 2026-05-18",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=746488",
+      "processed_at": "2026-05-20T05:03:38.566759+00:00",
+      "summary_file": "summaries/school-board-special-meeting-2026-05-18.md"
+    },
+    "bb_744162": {
+      "title": "Committee of the Whole Meeting - 2026-05-18",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=744162",
+      "upload_date": null,
+      "meeting_date": null,
+      "duration": 3697.0,
+      "video_url": "https://www.youtube.com/watch?v=3imG7wgT3RY",
+      "processed_at": "2026-05-20T05:03:51.704694+00:00",
+      "summary_file": "summaries/school-board-committee-of-the-whole-meeting-2026-05-18-bb-744162.md"
+    },
+    "YQ-B8Dd3ltU": {
+      "title": "Board of Trustees",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260519",
+      "meeting_date": "20260518",
+      "duration": 9152,
+      "processed_at": "2026-05-20T05:06:16.239712+00:00",
+      "summary_file": "summaries/weston-board-of-trustees.md"
+    },
+    "NwM-PoBvvMg": {
+      "title": "Parks Committee",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260527",
+      "meeting_date": "20260526",
+      "duration": 3237,
+      "processed_at": "2026-05-28T02:06:48.665871+00:00",
+      "summary_file": "summaries/weston-parks-committee.md"
+    },
+    "KaLahH4JieQ": {
+      "title": "Finance and Human Resources Committee",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260518",
+      "meeting_date": "20260518",
+      "duration": 3209.0,
+      "processed_at": "2026-05-28T03:16:40.744415+00:00",
+      "summary_file": "summaries/weston-finance-and-human-resources-committee.md"
+    },
+    "ee6clAtgrYw": {
+      "title": "Tourism Commission",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260518",
+      "meeting_date": "20260518",
+      "duration": 662.0,
+      "processed_at": "2026-05-28T03:16:54.996312+00:00",
+      "summary_file": "summaries/weston-tourism-commission.md"
+    },
+    "bb_748015": {
+      "title": "Regular Meeting - 2026-06-08",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=748015",
+      "upload_date": "20260608",
+      "meeting_date": "20260608",
+      "duration": null,
+      "processed_at": "2026-06-09T18:00:37.338863+00:00",
+      "summary_file": "summaries/school-board-regular-meeting-2026-06-08.md"
+    },
+    "bxeIsJHsifg": {
+      "title": "Public Works Committee",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260608",
+      "meeting_date": "20260608",
+      "duration": 4305.0,
+      "processed_at": "2026-06-09T18:02:14.413021+00:00",
+      "summary_file": "summaries/weston-public-works-committee-bxeisjhsifg.md"
+    },
+    "kw_c427847ae4914e0b8e48bbb4f7095c9b": {
+      "title": "Special Village Board Meeting - 2026-06-09",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c427847ae4914e0b8e48bbb4f7095c9b.pdf",
+      "upload_date": "20260609",
+      "meeting_date": "20260609",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-12",
+      "processed_at": "2026-06-10T20:26:34.838534+00:00",
+      "summary_file": "summaries/kronenwetter-special-village-board-meeting-2026-06-09-kw-c427847ae4914e0b8e48bbb4f7095c9b.md"
+    },
+    "kw_6d1d3c94a7f74afab4563e23babf4de8": {
+      "title": "Village Board Meeting - 2026-06-08",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-6d1d3c94a7f74afab4563e23babf4de8.pdf",
+      "upload_date": "20260608",
+      "meeting_date": "20260608",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-59",
+      "processed_at": "2026-06-10T20:26:44.923672+00:00",
+      "summary_file": "summaries/kronenwetter-village-board-meeting-2026-06-08-kw-6d1d3c94a7f74afab4563e23babf4de8.md"
+    },
+    "kw_51516c759297414687a6c1787c9508dd": {
+      "title": "Utility Committee Meeting - 2026-06-02",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-51516c759297414687a6c1787c9508dd.pdf",
+      "upload_date": "20260602",
+      "meeting_date": "20260602",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-27",
+      "processed_at": "2026-06-10T20:26:49.678265+00:00",
+      "summary_file": "summaries/kronenwetter-utility-committee-meeting-2026-06-02-kw-51516c759297414687a6c1787c9508dd.md"
+    },
+    "kw_100b287096f24509895489749fa9223a": {
+      "title": "Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting - 2026-06-01",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-100b287096f24509895489749fa9223a.pdf",
+      "upload_date": "20260601",
+      "meeting_date": "20260601",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-25",
+      "processed_at": "2026-06-10T20:26:58.233667+00:00",
+      "summary_file": "summaries/kronenwetter-community-life-infrastructure-and-public-property-clipp-committee-m-kw-100b287096f24509895489749fa9223a.md"
+    },
+    "kw_f7694e4efbdd49cfa9485ac17f2c6460": {
+      "title": "Police and Fire Commission Meeting - 2026-06-01",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-f7694e4efbdd49cfa9485ac17f2c6460.pdf",
+      "upload_date": "20260601",
+      "meeting_date": "20260601",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-21",
+      "processed_at": "2026-06-10T20:27:03.750292+00:00",
+      "summary_file": "summaries/kronenwetter-police-and-fire-commission-meeting-2026-06-01-kw-f7694e4efbdd49cfa9485ac17f2c6460.md"
+    },
+    "kw_7c83b7b0bdba4fb6a73532f82b8309f7": {
+      "title": "REVISED Special Village Board Meeting - 2026-06-01",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-7c83b7b0bdba4fb6a73532f82b8309f7.pdf",
+      "upload_date": "20260601",
+      "meeting_date": "20260601",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/revised-special-village-board-meeting-1",
+      "processed_at": "2026-06-10T20:27:13.220438+00:00",
+      "summary_file": "summaries/kronenwetter-revised-special-village-board-meeting-2026-06-01-kw-7c83b7b0bdba4fb6a73532f82b8309f7.md"
+    },
+    "kw_346a936b9fe643feba080928d73675a4": {
+      "title": "RESCHEDULED Village Board Meeting - 2026-06-01",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-346a936b9fe643feba080928d73675a4.pdf",
+      "upload_date": "20260601",
+      "meeting_date": "20260601",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/rescheduled-village-board-meeting-0",
+      "processed_at": "2026-06-10T20:27:44.083569+00:00",
+      "summary_file": "summaries/kronenwetter-rescheduled-village-board-meeting-2026-06-01-kw-346a936b9fe643feba080928d73675a4.md"
+    },
+    "kw_a4539e059d6d4b61a237393668ff8174": {
+      "title": "Administrative Policy Committee Meeting - 2026-05-19",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-a4539e059d6d4b61a237393668ff8174.pdf",
+      "upload_date": "20260519",
+      "meeting_date": "20260519",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-29",
+      "processed_at": "2026-06-10T20:27:51.931210+00:00",
+      "summary_file": "summaries/kronenwetter-administrative-policy-committee-meeting-2026-05-19-kw-a4539e059d6d4b61a237393668ff8174.md"
+    },
+    "kw_6d8764e98acd4fb69cae1f00cc02d83b": {
+      "title": "Plan Commission Meeting - 2026-05-18",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-6d8764e98acd4fb69cae1f00cc02d83b.pdf",
+      "upload_date": "20260518",
+      "meeting_date": "20260518",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-26",
+      "processed_at": "2026-06-10T20:27:59.827615+00:00",
+      "summary_file": "summaries/kronenwetter-plan-commission-meeting-2026-05-18-kw-6d8764e98acd4fb69cae1f00cc02d83b.md"
+    },
+    "kw_2c3d0976c1224c5a93b228e6ca9dc2c9": {
+      "title": "Board of Review Meeting - 2026-05-13",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2c3d0976c1224c5a93b228e6ca9dc2c9.pdf",
+      "upload_date": "20260513",
+      "meeting_date": "20260513",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/board-review-meeting",
+      "processed_at": "2026-06-10T20:28:06.310714+00:00",
+      "summary_file": "summaries/kronenwetter-board-of-review-meeting-2026-05-13-kw-2c3d0976c1224c5a93b228e6ca9dc2c9.md"
+    },
+    "kw_c19b4fca8707467fa4d6a2fa1e4a4407": {
+      "title": "Village Board Meeting - 2026-05-11",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c19b4fca8707467fa4d6a2fa1e4a4407.pdf",
+      "upload_date": "20260511",
+      "meeting_date": "20260511",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-58",
+      "processed_at": "2026-06-10T20:28:41.538685+00:00",
+      "summary_file": "summaries/kronenwetter-village-board-meeting-2026-05-11-kw-c19b4fca8707467fa4d6a2fa1e4a4407.md"
+    },
+    "kw_ea413d5c907d464ab592ada30077d709": {
+      "title": "Utility Committee Meeting - 2026-05-05",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-ea413d5c907d464ab592ada30077d709.pdf",
+      "upload_date": "20260505",
+      "meeting_date": "20260505",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-26",
+      "processed_at": "2026-06-10T20:28:47.428803+00:00",
+      "summary_file": "summaries/kronenwetter-utility-committee-meeting-2026-05-05-kw-ea413d5c907d464ab592ada30077d709.md"
+    },
+    "kw_bc02fc4aee3a40b9852da71250e3b100": {
+      "title": "Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting - 2026-05-04",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-bc02fc4aee3a40b9852da71250e3b100.pdf",
+      "upload_date": "20260504",
+      "meeting_date": "20260504",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-24",
+      "processed_at": "2026-06-10T20:29:30.501559+00:00",
+      "summary_file": "summaries/kronenwetter-community-life-infrastructure-and-public-property-clipp-committee-m-kw-bc02fc4aee3a40b9852da71250e3b100.md"
+    },
+    "kw_acca56fb4a9045e28855b0cb1d58a749": {
+      "title": "Special Village Board Meeting - 2026-04-30",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-acca56fb4a9045e28855b0cb1d58a749.pdf",
+      "upload_date": "20260430",
+      "meeting_date": "20260430",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-11",
+      "processed_at": "2026-06-10T20:29:41.844278+00:00",
+      "summary_file": "summaries/kronenwetter-special-village-board-meeting-2026-04-30-kw-acca56fb4a9045e28855b0cb1d58a749.md"
+    },
+    "bb_742658": {
+      "title": "Regular School Board Meeting - 2026-05-20",
+      "source": "dc_everest",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=742658",
+      "upload_date": "20260520",
+      "meeting_date": "20260520",
+      "duration": 5402.0,
+      "video_url": "https://www.youtube.com/watch?v=OZRbHeR8XjM",
+      "processed_at": "2026-06-14T20:30:10.060080+00:00",
+      "summary_file": "summaries/dc-everest-regular-school-board-meeting-2026-05-20-bb-742658.md"
+    },
+    "bb_743045": {
+      "title": "Board Workshop - 2026-05-18",
+      "source": "dc_everest",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=743045",
+      "upload_date": "20260518",
+      "meeting_date": "20260518",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-06-14T20:30:12.586456+00:00",
+      "summary_file": "summaries/dc-everest-board-workshop-2026-05-18-bb-743045.md"
+    },
+    "kw_3d492d2ece7c4a638a942fb6ff6b6d41": {
+      "title": "Plan Commission Meeting - 2026-06-15",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-3d492d2ece7c4a638a942fb6ff6b6d41.pdf",
+      "upload_date": "20260615",
+      "meeting_date": "20260615",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-27",
+      "processed_at": "2026-06-15T03:54:39.006307+00:00",
+      "summary_file": "summaries/kronenwetter-plan-commission-meeting-2026-06-15-kw-3d492d2ece7c4a638a942fb6ff6b6d41.md"
+    },
+    "kw_54c9ed868e8e4099af1b56a7cc1ec508": {
+      "title": "Administrative Policy Committee Meeting - 2026-06-15",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-54c9ed868e8e4099af1b56a7cc1ec508.pdf",
+      "upload_date": "20260615",
+      "meeting_date": "20260615",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-30",
+      "processed_at": "2026-06-15T03:54:44.787207+00:00",
+      "summary_file": "summaries/kronenwetter-administrative-policy-committee-meeting-2026-06-15-kw-54c9ed868e8e4099af1b56a7cc1ec508.md"
+    },
+    "3M_6AzxlR1I": {
+      "title": "Finance and Human Resources Committee",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260615",
+      "meeting_date": "20260615",
+      "duration": 4855.0,
+      "video_url": null,
+      "processed_at": "2026-06-16T22:11:19.772025+00:00",
+      "summary_file": "summaries/weston-finance-and-human-resources-committee-3m-6azxlr1i.md"
+    },
+    "bb_747929": {
+      "title": "Regular School Board Meeting Including a Public Hearing as Required Underneath Wis. Stat. 118.38(1)(b) - 2026-06-17",
+      "source": "dc_everest",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=747929",
+      "upload_date": "20260617",
+      "meeting_date": "20260617",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-06-17T03:43:29.603434+00:00",
+      "summary_file": "summaries/dc-everest-regular-school-board-meeting-including-a-public-hearing-as-required-u-bb-747929.md"
+    },
+    "KiUCocPjWMY": {
+      "title": "Board of Trustees",
+      "source": "weston",
+      "doc_url": null,
+      "upload_date": "20260615",
+      "meeting_date": "20260615",
+      "duration": 7157.0,
+      "video_url": null,
+      "processed_at": "2026-06-17T15:21:47.229040+00:00",
+      "summary_file": "summaries/weston-board-of-trustees-kiucocpjwmy.md"
+    },
+    "Sqkikt4swxo": {
+      "title": "Wausau Public Health & Safety Committee Meeting Pt.1 - 6/15/26",
+      "source": "wausau",
+      "doc_url": null,
+      "upload_date": "20260615",
+      "meeting_date": "20260615",
+      "duration": 7253.0,
+      "video_url": null,
+      "processed_at": "2026-06-17T22:00:41.871198+00:00",
+      "summary_file": "summaries/wausau-wausau-public-health-safety-committee-meeting-pt1-61526-sqkikt4swxo.md"
+    },
+    "7G0iUK3XEhc": {
+      "title": "Wausau Board of Public Works Meeting Pt.1 - 6/16/26",
+      "source": "wausau",
+      "doc_url": null,
+      "upload_date": "20260616",
+      "meeting_date": "20260616",
+      "duration": 580.0,
+      "video_url": null,
+      "processed_at": "2026-06-19T09:08:01.803698+00:00",
+      "summary_file": "summaries/wausau-wausau-board-of-public-works-meeting-pt1-61626-7g0iuk3xehc.md"
+    },
+    "bb_750995": {
+      "title": "Special Meeting - 2026-06-22",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=750995",
+      "upload_date": "20260622",
+      "meeting_date": "20260622",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-06-22T03:53:17.876344+00:00",
+      "summary_file": "summaries/school-board-special-meeting-2026-06-22-bb-750995.md"
+    },
+    "bb_750271": {
+      "title": "Committee of the Whole Meeting - 2026-06-22",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=750271",
+      "upload_date": "20260622",
+      "meeting_date": "20260622",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-06-22T03:53:23.786180+00:00",
+      "summary_file": "summaries/school-board-committee-of-the-whole-meeting-2026-06-22-bb-750271.md"
+    },
+    "kw_763affdb06034572ad57359551b02e1c": {
+      "title": "Village Board Meeting - 2026-06-22",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-763affdb06034572ad57359551b02e1c.pdf",
+      "upload_date": "20260622",
+      "meeting_date": "20260622",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-60",
+      "processed_at": "2026-06-22T03:53:33.149658+00:00",
+      "summary_file": "summaries/kronenwetter-village-board-meeting-2026-06-22-kw-763affdb06034572ad57359551b02e1c.md"
+    },
+    "kw_8eb365830ccd47e5865e3f22088e7351": {
+      "title": "Police and Fire Commission Meeting - 2026-06-22",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-8eb365830ccd47e5865e3f22088e7351.pdf",
+      "upload_date": "20260622",
+      "meeting_date": "20260622",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-22",
+      "processed_at": "2026-06-22T03:53:36.688141+00:00",
+      "summary_file": "summaries/kronenwetter-police-and-fire-commission-meeting-2026-06-22-kw-8eb365830ccd47e5865e3f22088e7351.md"
+    },
+    "ojZQHZHTodE": {
+      "title": "Wausau Transit Commission Meeting - 6/18/26",
+      "source": "wausau",
+      "doc_url": null,
+      "upload_date": "20260618",
+      "meeting_date": "20260618",
+      "duration": 1854.0,
+      "video_url": null,
+      "processed_at": "2026-06-28T17:07:25.200529+00:00",
+      "summary_file": "summaries/wausau-wausau-transit-commission-meeting-61826-ojzqhzhtode.md"
+    },
+    "kw_2db49f1a40bb48f29ddef818971f951e": {
+      "title": "Parks Committee - 2026-06-29",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2db49f1a40bb48f29ddef818971f951e.pdf",
+      "upload_date": "20260629",
+      "meeting_date": "20260629",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee",
+      "processed_at": "2026-06-29T03:33:50.251717+00:00",
+      "summary_file": "summaries/kronenwetter-parks-committee-2026-06-29-kw-2db49f1a40bb48f29ddef818971f951e.md"
+    },
+    "bb_753632": {
+      "title": "Public Meeting - 2026-07-01",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=753632",
+      "upload_date": "20260701",
+      "meeting_date": "20260701",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-07-01T03:29:11.791940+00:00",
+      "summary_file": "summaries/school-board-public-meeting-2026-07-01-bb-753632.md"
+    },
+    "r52jrIBJHcc": {
+      "title": "Wausau City Council Retreat Meeting Pt.2 - 6/23/26",
+      "source": "wausau",
+      "doc_url": null,
+      "upload_date": "20260623",
+      "meeting_date": "20260623",
+      "duration": 6307.0,
+      "video_url": null,
+      "processed_at": "2026-07-01T17:53:37.089238+00:00",
+      "summary_file": "summaries/wausau-wausau-city-council-retreat-meeting-pt2-62326-r52jribjhcc.md"
+    }
+  }
+}
