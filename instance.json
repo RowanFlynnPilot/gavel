@@ -1,6 +1,6 @@
 {
   "instance": {
-    "name": "Marathon County Meeting Tracker",
+    "name": "Central Wisconsin Meeting Tracker",
     "newsroom": "Wausau Pilot & Review",
     "newsroom_url": "https://wausaupilotandreview.com",
     "region": "the Wausau, Wisconsin area",
@@ -19,6 +19,12 @@
     "font_headline": "Playfair Display",
     "font_body": "Lora",
     "font_data": "monospace",
+    "font_files": {
+      "display": "assets/fonts/BebasNeue-Regular.ttf",
+      "headline": "assets/fonts/PlayfairDisplay-VF.ttf",
+      "body": "assets/fonts/Lora-VF.ttf"
+    },
+    "digest_accent": "#A8842E",
     "logo": "assets/logo.jpg"
   },
   "jurisdictions": [
@@ -170,6 +176,7 @@
       "accent": "#8B6914",
       "doc_host": "kronenwetter-wi.municodemeetings.com",
       "avatar": "assets/avatars/kronenwetter-avatar.jpg",
+      "audio_url": "https://soundcloud.com/kronenwetter",
       "video": null,
       "agendas": {
         "adapter": "municode",

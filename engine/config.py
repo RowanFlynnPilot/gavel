@@ -94,6 +94,7 @@ class Jurisdiction:
         self.accent: str = _require(raw, "accent", ctx)
         self.doc_host: str = raw.get("doc_host", "")
         self.avatar: str = raw.get("avatar", "")
+        self.audio_url: str = raw.get("audio_url", "")
         self.title_strip_patterns: list[str] = raw.get("title_strip_patterns", [])
         self.committee_map: dict[str, str] = raw.get("committee_map", {})
 

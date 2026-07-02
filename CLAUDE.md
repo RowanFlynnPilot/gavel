@@ -29,6 +29,16 @@ WPR is Instance Zero and the permanent reference deployment.
   existing state, no scraping/API calls (used for parity testing)
 - `python -m engine.ingest_transcript --video-id ID --transcript FILE` —
   manually inject a pasted transcript for an agenda-only meeting
+- `python -m engine.digest [--days N] [--out PATH] [--date YYYY-MM-DD]` —
+  render the weekly newsletter PNG from data/upcoming.json, themed from
+  instance.json (fonts via theme.font_files, footer accent via
+  theme.digest_accent)
+- `python -m engine.fetch_transcripts [IDs] [--all] [--push]` — residential
+  transcript fetcher (operator machine only; CI IPs are caption-blocked).
+  Saves to transcripts/ for the CI ingest step; --push commits, pushes, and
+  triggers the workflow. BoardBook entries match recordings on the district
+  channel; municode jurisdictions with an `audio_url` (e.g. Kronenwetter's
+  SoundCloud) go through audio download + local Whisper.
 
 ## Architecture
 
@@ -158,10 +168,13 @@ caption retry (14 days), BoardBook recording match
   errors (was: indistinguishable from quiet runs).
 
 ## Phase status
-- Phase 1 (engine extraction): this package. Acceptance = `--publish-only`
-  against WPR state reproduces production meetings.json.
-- Phase 2: `frontend/` port + Actions workflow + side-by-side parity week.
-  Also ports generate_digest.py (config-themed) and smoke checks stay
-  WPR-only.
+- Phase 1 (engine extraction): COMPLETE July 2026. Acceptance passed:
+  byte-exact meetings.json parity (49/49 incl. order) and upcoming.json
+  parity (6/6 sources) vs the marathon-meetings reference on identical
+  state; digest renders pixel-identical to production. Includes
+  engine/digest.py and engine/fetch_transcripts.py per the amended scope.
+- Phase 2: `frontend/` port (runtime fetch + CSS variables from theme
+  tokens) + Actions workflow (pipeline.yml) + side-by-side parity week on a
+  separate Pages URL. Smoke checks stay WPR-only.
 - Phase 3: template repo + ONBOARDING.md (incl. residential transcript-fetch
   infrastructure — CI IPs are caption-blocked regardless of cookies).
