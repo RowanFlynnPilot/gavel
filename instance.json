@@ -14,7 +14,8 @@
       "bb_748411",
       "bb_748413"
     ],
-    "tracker_page_url": "https://wausaupilotandreview.com/central-wisconsin-meeting-tracker/"
+    "tracker_page_url": "https://wausaupilotandreview.com/central-wisconsin-meeting-tracker/",
+    "tagline": "MORE NEWS. LESS FLUFF. ALL LOCAL."
   },
   "seo": {
     "pages_base_url": "https://rowanflynnpilot.github.io/gavel",
@@ -142,6 +143,7 @@
     {
       "key": "wausau",
       "name": "City of Wausau",
+      "filter_label": "Wausau",
       "short": "CITY",
       "accent": "#C0392B",
       "doc_host": "wausauwi.portal.civicclerk.com",
@@ -182,6 +184,7 @@
     {
       "key": "weston",
       "name": "Village of Weston",
+      "filter_label": "Weston",
       "short": "WESTON",
       "accent": "#3A6B43",
       "doc_host": "westonwi.gov",
@@ -274,6 +277,7 @@
     {
       "key": "school_board",
       "name": "Wausau School Board",
+      "filter_label": "School Board",
       "short": "SCHOOL",
       "accent": "#6B2D5C",
       "doc_host": "meetings.boardbook.org",
@@ -327,6 +331,7 @@
     {
       "key": "kronenwetter",
       "name": "Village of Kronenwetter",
+      "filter_label": "Kronenwetter",
       "short": "KRONEN",
       "accent": "#8B6914",
       "doc_host": "kronenwetter-wi.municodemeetings.com",
@@ -369,6 +374,7 @@
     {
       "key": "dc_everest",
       "name": "DC Everest School Board",
+      "filter_label": "DC Everest",
       "short": "DCE",
       "accent": "#1F6F6B",
       "doc_host": "meetings.boardbook.org",
@@ -541,6 +547,7 @@
     "prompt": "Interested in sponsoring this content?",
     "button": "REACH OUT",
     "email": "christina@wausaupilotandreview.com",
+    "contact_name": "Christina",
     "subject": "Sponsoring the Central Wisconsin Meeting Tracker"
   }
 }
