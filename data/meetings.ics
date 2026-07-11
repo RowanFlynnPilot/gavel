@@ -600,4 +600,14 @@ URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
+BEGIN:VEVENT
+UID:721a59153cd8b9f0c53f@gavel
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=America/Chicago:20260909T170000
+DTEND;TZID=America/Chicago:20260909T183000
+SUMMARY:Marathon County: Extension\, Education & Econ Dev Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
 END:VCALENDAR
