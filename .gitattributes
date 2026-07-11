@@ -1,0 +1,2 @@
+# RFC 5545 mandates CRLF in ics files; never let git eol-normalize them.
+*.ics -text
