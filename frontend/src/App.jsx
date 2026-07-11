@@ -153,6 +153,18 @@ function _applyConfig(config, meetings, upcoming) {
   }
   themeColor.content = THEME.primary_dark;
 
+  // Parity-soak deployments must never compete with the production tracker in
+  // search: robots.txt already disallows crawling, and this covers the SPA
+  // shell itself. Turns off automatically when seo.noindex flips at cutover.
+  if (config.seo && config.seo.noindex) {
+    _injectOnce("gavel-noindex", () => {
+      const m = document.createElement("meta");
+      m.name = "robots";
+      m.content = "noindex, nofollow";
+      return m;
+    });
+  }
+
   // Plausible Analytics. The tracker is embedded as an iframe on the newsroom
   // site, so the parent page's analytics can't see usage inside it — this
   // script captures the tool's own pageviews + engagement events and reports
