@@ -38,7 +38,17 @@ WPR is Instance Zero and the permanent reference deployment.
   Saves to transcripts/ for the CI ingest step; --push commits, pushes, and
   triggers the workflow. BoardBook entries match recordings on the district
   channel; municode jurisdictions with an `audio_url` (e.g. Kronenwetter's
-  SoundCloud) go through audio download + local Whisper.
+  SoundCloud) go through audio download + local Whisper (seeded with the
+  jurisdiction's `officials` as a vocabulary hint).
+- `python -m engine.ics [--out data/meetings.ics] [--days N]` — subscribable
+  calendar feed (deterministic; America/Chicago only in v1, other timezones
+  raise ConfigError)
+- `python -m engine.roundup [--days-back N] [--dry-run]` — weekly newsletter
+  draft (one Sonnet call, cost-ledgered purpose=roundup) → data/roundup.txt/.html
+- `python -m engine.pages [--out-dir frontend/public]` — static indexable
+  meeting pages + sitemap/robots. Gated by seo.pages_base_url; seo.noindex
+  emits robots Disallow + per-page noindex (REQUIRED for parity-soak
+  deployments). Pages persist after cards rotate off (permanent archive).
 
 ## Architecture
 
@@ -87,13 +97,25 @@ per jurisdiction:
   name for badges
 - `title_strip_patterns`: regexes removed from display titles (the source
   badge already identifies the jurisdiction)
+- `officials` (optional): "Name (Role)" strings — authoritative name
+  spellings injected into transcript/minutes prompts and used as Whisper
+  vocabulary hints. **Update after each spring election.**
+- `calendar_url` (optional): the jurisdiction's official calendar page
+  (frontend FULL CALENDARS link)
+
+Top-level optional blocks: `instance.tracker_page_url` (reader-facing embed
+page; ics/roundup/pages link there), `seo` {pages_base_url, noindex},
+`analytics` {plausible_domain}, `sponsor` {prompt, button, email, subject}.
 
 ### Normalized PAST-MEETING record (element of data/meetings.json)
 ```
 {id, source, title, date "March 12, 2026", shortDate "MAR 12", committee,
  duration "1h 20m"|null, url, docUrl, isAgendaOnly, badge "new"|null,
  overview, agenda: [{time, item}], discussions: [{item, body}],
- publicComment, actionItems: [str], civicItems?: [...]}
+ publicComment, actionItems: [str],
+ topics: [str],                       # 3-5 Title Case tags from all prompts
+ votes: [{item, motion, mover, second, outcome, tally}],  # transcript/minutes
+ civicItems?: [...]}
 ```
 Newest-first, pruned to `instance.max_meetings`. `id` is the YouTube video
 ID, `bb_<meeting_id>` (BoardBook), or `<id_prefix>_<guid>` (Municode).
