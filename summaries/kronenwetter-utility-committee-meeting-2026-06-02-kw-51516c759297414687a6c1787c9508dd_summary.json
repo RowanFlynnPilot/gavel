@@ -49,5 +49,10 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-27",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-51516c759297414687a6c1787c9508dd.pdf",
-  "processed_at": "2026-06-10T20:26:49.678093+00:00"
+  "processed_at": "2026-06-10T20:26:49.678093+00:00",
+  "topics": [
+    "Utilities",
+    "Facilities",
+    "Lea Road"
+  ]
 }

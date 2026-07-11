@@ -41,5 +41,8 @@
   "url": "https://www.youtube.com/@wausauschoolboard",
   "source": "school_board",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=746488",
-  "processed_at": "2026-05-20T05:03:38.566541+00:00"
+  "processed_at": "2026-05-20T05:03:38.566541+00:00",
+  "topics": [
+    "Staffing"
+  ]
 }

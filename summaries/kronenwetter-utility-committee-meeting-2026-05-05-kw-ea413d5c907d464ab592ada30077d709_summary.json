@@ -87,5 +87,21 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-26",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-ea413d5c907d464ab592ada30077d709.pdf",
-  "processed_at": "2026-06-10T21:42:54.466328+00:00"
+  "processed_at": "2026-06-10T21:42:54.466328+00:00",
+  "topics": [
+    "Utilities",
+    "Development",
+    "Lift Station 8",
+    "Glacier Meadows Development"
+  ],
+  "votes": [
+    {
+      "item": "Approval of April Meeting Minutes",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

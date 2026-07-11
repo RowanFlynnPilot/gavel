@@ -263,5 +263,10 @@
   "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=747929",
   "source": "dc_everest",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=747929",
-  "processed_at": "2026-06-17T03:43:29.603062+00:00"
+  "processed_at": "2026-06-17T03:43:29.603062+00:00",
+  "topics": [
+    "Curriculum",
+    "Facilities",
+    "Riverside Elementary"
+  ]
 }

@@ -121,5 +121,52 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/rescheduled-village-board-meeting-0",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-346a936b9fe643feba080928d73675a4.pdf",
-  "processed_at": "2026-06-10T20:27:44.083314+00:00"
+  "processed_at": "2026-06-10T20:27:44.083314+00:00",
+  "topics": [
+    "Development",
+    "Public Safety",
+    "East Nick Avenue Extension"
+  ],
+  "votes": [
+    {
+      "item": "Consent agenda: April 2026 vouchers, ACH transactions, credit card statement activity, and May 11, 2026 Village Board meeting minutes",
+      "motion": null,
+      "mover": "Lesniak",
+      "second": "Myszka",
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Move forward with East Nick Avenue to Highway J concept plan and direct staff to work with other municipalities",
+      "motion": null,
+      "mover": "Trustee Lesniak",
+      "second": "Mortensen",
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Fire Department authorized to proceed with DNR grant application",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Contract with CSI Policy for police department policy updates approved",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Municipal court costs increased by $10",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    }
+  ]
 }

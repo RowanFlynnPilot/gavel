@@ -32,7 +32,8 @@ from .adapters import boardbook as bb_adapter
 from .adapters import youtube
 from .config import (MEETINGS_JSON, STATE_FILE, WHISPER_MODEL, InstanceConfig,
                      load_instance, setup_logging)
-from .transcripts import _fetch_via_youtube_transcript_api, parse_vtt
+from .transcripts import (_fetch_via_youtube_transcript_api, build_whisper_hint,
+                          parse_vtt)
 
 TRANSCRIPTS_DIR = Path("./transcripts")
 WORKFLOW_FILE = "pipeline.yml"
@@ -114,7 +115,7 @@ def fetch_transcript(video_id: str) -> str | None:
     return fetch_transcript_ytdlp(video_id)
 
 
-def fetch_transcript_whisper_url(media_url: str) -> str | None:
+def fetch_transcript_whisper_url(media_url: str, whisper_hint: str = "") -> str | None:
     """Download audio from any yt-dlp-supported URL (e.g. SoundCloud) and
     transcribe locally with faster-whisper."""
     try:
@@ -147,8 +148,11 @@ def fetch_transcript_whisper_url(media_url: str) -> str | None:
         t0 = time.time()
         model = faster_whisper.WhisperModel(WHISPER_MODEL, device="cpu",
                                             compute_type="int8")
+        if whisper_hint:
+            print(f"  Whisper vocabulary hint: {whisper_hint[:90]}...")
         segments, _info = model.transcribe(
             audio_path, language="en", beam_size=1, vad_filter=True,
+            initial_prompt=whisper_hint or None,
             vad_parameters={"min_silence_duration_ms": 500},
         )
         text = " ".join(seg.text.strip() for seg in segments).strip()
@@ -326,7 +330,8 @@ def find_audio_matches(cfg: InstanceConfig) -> list[dict]:
             hits = [t for t in tracks if t["date"] == mdate and t["type"] == mtype]
             if len(hits) == 1:
                 out.append({"id": m["id"], "fetch_url": hits[0]["url"],
-                            "title": m.get("title") or m["id"]})
+                            "title": m.get("title") or m["id"],
+                            "whisper_hint": build_whisper_hint(jur.name, jur.officials)})
     return out
 
 
@@ -356,7 +361,8 @@ def main() -> None:
         jobs += [{"save": m["id"], "fetch": m["fetch_id"], "title": m["title"]}
                  for m in find_boardbook_video_matches(cfg)]
         jobs += [{"save": m["id"], "fetch": m["id"], "fetch_url": m["fetch_url"],
-                  "method": "whisper", "title": m["title"]}
+                  "method": "whisper", "title": m["title"],
+                  "whisper_hint": m.get("whisper_hint", "")}
                  for m in find_audio_matches(cfg)]
         if not jobs:
             print("No agenda-only meetings with available recordings found.")
@@ -394,7 +400,8 @@ def main() -> None:
         print(f"Fetching: {j['save']}")
         if j.get("method") == "whisper":
             print(f"  {j['fetch_url']}")
-            text = fetch_transcript_whisper_url(j["fetch_url"])
+            text = fetch_transcript_whisper_url(j["fetch_url"],
+                                                whisper_hint=j.get("whisper_hint", ""))
         else:
             print(f"  https://www.youtube.com/watch?v={j['fetch']}")
             text = fetch_transcript(j["fetch"])

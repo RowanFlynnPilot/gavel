@@ -85,5 +85,44 @@
   "url": "https://www.youtube.com/watch?v=7G0iUK3XEhc",
   "source": "wausau",
   "doc_url": null,
-  "processed_at": "2026-06-19T09:08:01.803514+00:00"
+  "processed_at": "2026-06-19T09:08:01.803514+00:00",
+  "topics": [
+    "Roads",
+    "Utilities",
+    "North Fourth Street Lighting Project"
+  ],
+  "votes": [
+    {
+      "item": "Approval of June 9, 2026 minutes",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "2026 East Parking Ramp Project repairs - bid award to Masonry Restorations Inc.",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Pay estimate #28 - Community Infrastructure Partners lead service line replacement",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "2026 Downtown Utility Project - Haas Inc. Change Order #1",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

@@ -111,5 +111,45 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-29",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-a4539e059d6d4b61a237393668ff8174.pdf",
-  "processed_at": "2026-06-10T21:41:59.826545+00:00"
+  "processed_at": "2026-06-10T21:41:59.826545+00:00",
+  "topics": [
+    "Budget",
+    "Staffing",
+    "Public Safety",
+    "Fire Department"
+  ],
+  "votes": [
+    {
+      "item": "Election of chairperson",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Election of vice chairperson",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "DNR forest fire protection grant $10,000 match",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Police department policy contract with CSI Information LLC",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

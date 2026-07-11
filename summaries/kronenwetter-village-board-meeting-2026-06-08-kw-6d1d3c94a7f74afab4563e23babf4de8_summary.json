@@ -101,5 +101,37 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-59",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-6d1d3c94a7f74afab4563e23babf4de8.pdf",
-  "processed_at": "2026-06-10T21:41:05.661393+00:00"
+  "processed_at": "2026-06-10T21:41:05.661393+00:00",
+  "topics": [
+    "Budget",
+    "Staffing",
+    "Facilities",
+    "Parks"
+  ],
+  "votes": [
+    {
+      "item": "Mary Solheim appointed as Village Board Trustee",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-1"
+    },
+    {
+      "item": "Purchase of 2026 GMC Sierra 2500 truck for Public Works at $49,558.50",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "S.D. Allen Becker awarded municipal garage design-build contract at $799,780",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

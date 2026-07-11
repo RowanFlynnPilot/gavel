@@ -111,5 +111,11 @@
   "url": "https://www.youtube.com/watch?v=j64Gj2ean2k",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-10T15:33:10.201371+00:00"
+  "processed_at": "2026-06-10T15:33:10.201371+00:00",
+  "topics": [
+    "Roads",
+    "Utilities",
+    "Weston Public Works"
+  ],
+  "votes": []
 }

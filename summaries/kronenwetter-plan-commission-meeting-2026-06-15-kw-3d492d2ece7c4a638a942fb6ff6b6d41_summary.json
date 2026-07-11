@@ -37,5 +37,9 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-27",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-3d492d2ece7c4a638a942fb6ff6b6d41.pdf",
-  "processed_at": "2026-06-15T03:54:39.006162+00:00"
+  "processed_at": "2026-06-15T03:54:39.006162+00:00",
+  "topics": [
+    "Development",
+    "Zoning"
+  ]
 }

@@ -78,5 +78,35 @@
   "url": "https://www.youtube.com/watch?v=ojZQHZHTodE",
   "source": "wausau",
   "doc_url": null,
-  "processed_at": "2026-06-28T17:07:25.200303+00:00"
+  "processed_at": "2026-06-28T17:07:25.200303+00:00",
+  "topics": [
+    "Transit Expansion",
+    "Wings Over Wausau"
+  ],
+  "votes": [
+    {
+      "item": "Accept minutes of preceding meetings",
+      "motion": null,
+      "mover": "Weems",
+      "second": "Watson",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "WisGo Electronic Fare Collection Contract - refer to Finance Committee",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Use of idle express route buses as crowd barriers at Wings Over Wausau airshow",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

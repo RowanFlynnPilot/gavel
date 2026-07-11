@@ -29,5 +29,8 @@
   "url": "https://www.youtube.com/@wausauschoolboard",
   "source": "school_board",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=741715",
-  "processed_at": "2026-05-03T23:35:42.535257+00:00"
+  "processed_at": "2026-05-03T23:35:42.535257+00:00",
+  "topics": [
+    "Curriculum"
+  ]
 }

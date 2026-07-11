@@ -69,5 +69,35 @@
   "url": "https://www.youtube.com/watch?v=3M_6AzxlR1I",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-17T03:45:23.822433+00:00"
+  "processed_at": "2026-06-17T03:45:23.822433+00:00",
+  "topics": [
+    "Budget",
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Approval of May 18th minutes",
+      "motion": null,
+      "mover": "Daniels",
+      "second": "Mynull",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "May budget status report, TIF reports, legal details, PSC annual report, and State Municipal Financial Report",
+      "motion": null,
+      "mover": "Mynull",
+      "second": "Daniels",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Hybrid uniform policy: employees may retain Cintas rental service or receive $500 annual clothing allowance with annual January opt-in election",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

@@ -1,0 +1,60 @@
+{
+  "overview": "The Wausau Room Tax Commission held a brief meeting on June 23, 2026, with a single action item: a $25,000 room tax funding request for the Domtar Dam modernization project. The commission approved the funding unanimously after a short discussion confirming the expenditure falls within the room tax charter as infrastructure reasonably likely to generate overnight stays.",
+  "committee": "Wausau Room Tax Commission",
+  "presiding": "Unknown (referred to as 'Mr. Chair' but not identified by name in transcript)",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to order and quorum established"
+    },
+    {
+      "time": "0:30",
+      "item": "Discussion and possible action: Room Tax funding request for Domtar Dam modernization - $25,000"
+    },
+    {
+      "time": "4:10",
+      "item": "Adjournment"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Room Tax Funding Request for Domtar Dam Modernization - $25,000",
+      "body": "The chair introduced the item, noting the Domtar Dam modernization is a large, expensive project and that neighboring communities with a vested interest in Lake Wausau are being asked to contribute as a match to a grant from the John Alexander Foundation. Alderman Neil expressed support in principle but raised a concern about whether infrastructure spending falls within the room tax commission's charter. The chair and a participant identified as Mary Ann Lewitsky addressed the concern, citing the Peckham Way Trail as a recent precedent and referencing item number four of the room tax statute, which allows funding for 'tangible municipal development reasonably likely to generate overnight stays.' The motion was made by Neil and seconded by Lewitsky, and the item was approved unanimously."
+    }
+  ],
+  "publicComment": "No public comment was offered. Mary Ann Lewitsky participated remotely and provided informational comments in support of the funding request, and the mayor was noted as present in the room.",
+  "actionItems": [
+    "Approve $25,000 room tax funding contribution toward the Domtar Dam modernization project as a match to the John Alexander Foundation grant"
+  ],
+  "topics": [
+    "Room Tax",
+    "Tourism Infrastructure",
+    "Domtar Dam Modernization",
+    "Lake Wausau",
+    "Intergovernmental Cooperation"
+  ],
+  "votes": [
+    {
+      "item": "$25,000 Room Tax funding request for Domtar Dam modernization",
+      "motion": "Motion to approve",
+      "mover": "Neil",
+      "second": "Lewitsky",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Adjournment",
+      "motion": "Motion to adjourn",
+      "mover": "Lukens",
+      "second": "Neil",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ],
+  "_source": "transcript",
+  "title": "Wausau Room Tax Commission Meeting - 6/23/26",
+  "url": "https://www.youtube.com/watch?v=dTog0NO0arg",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-07-06T02:51:36.903228+00:00"
+}

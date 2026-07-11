@@ -94,5 +94,34 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/board-review-meeting",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2c3d0976c1224c5a93b228e6ca9dc2c9.pdf",
-  "processed_at": "2026-06-10T21:40:09.031807+00:00"
+  "processed_at": "2026-06-10T21:40:09.031807+00:00",
+  "topics": [
+    "Budget"
+  ],
+  "votes": [
+    {
+      "item": "Selection of Dan Jolene as chairperson",
+      "motion": null,
+      "mover": "Trustee Lesniak",
+      "second": "Trustee Quail",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Selection of Craig Mortensen as vice chairperson",
+      "motion": null,
+      "mover": "Trustee Mishka",
+      "second": "Trustee Stoll",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Approval of July 10, 2025 Board of Review minutes",
+      "motion": null,
+      "mover": "Trustee Mishka",
+      "second": "Trustee Stoll",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

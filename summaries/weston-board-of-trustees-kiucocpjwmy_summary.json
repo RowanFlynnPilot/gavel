@@ -114,5 +114,11 @@
   "url": "https://www.youtube.com/watch?v=KiUCocPjWMY",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-18T03:37:50.760097+00:00"
+  "processed_at": "2026-06-18T03:37:50.760097+00:00",
+  "topics": [
+    "Roads",
+    "Public Safety",
+    "Parks"
+  ],
+  "votes": []
 }

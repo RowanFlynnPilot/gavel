@@ -140,5 +140,43 @@
   "url": "https://www.youtube.com/watch?v=Sqkikt4swxo",
   "source": "wausau",
   "doc_url": null,
-  "processed_at": "2026-06-17T22:00:41.870871+00:00"
+  "processed_at": "2026-06-17T22:00:41.870871+00:00",
+  "topics": [
+    "Public Safety",
+    "Bridge Street Mission"
+  ],
+  "votes": [
+    {
+      "item": "Regular and special Public Health & Safety Committee minutes",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "All May 2026 license applications",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "True North Energy LLC liquor license extended to September 18, 2026",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "City of Wausau Emergency Operations Plan with grammatical corrections and succession-of-authority update",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

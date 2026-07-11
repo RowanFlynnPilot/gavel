@@ -38,5 +38,26 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-11",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-acca56fb4a9045e28855b0cb1d58a749.pdf",
-  "processed_at": "2026-06-10T20:29:41.844127+00:00"
+  "processed_at": "2026-06-10T20:29:41.844127+00:00",
+  "topics": [
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Convene into closed session",
+      "motion": null,
+      "mover": "Trustee Coyle",
+      "second": "Trustee Mortensen",
+      "outcome": "Approved",
+      "tally": "7-0"
+    },
+    {
+      "item": "Termination of Community Development Director for just cause",
+      "motion": null,
+      "mover": "Trustee Lesniak",
+      "second": "Trustee Myszka",
+      "outcome": "Approved",
+      "tally": "6-0"
+    }
+  ]
 }

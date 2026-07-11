@@ -16,16 +16,29 @@ from .claude import call_claude, parse_summary_json
 from .config import CLAUDE_MODEL, CLAUDE_MODEL_AGENDA, MAX_TRANSCRIPT_CHARS
 
 
+def _roster_block(officials: list[str] | None) -> str:
+    """Prompt fragment giving Claude authoritative name spellings. Auto
+    transcripts and audio garble names; the jurisdiction's `officials` list
+    in instance.json is the spelling reference."""
+    if not officials:
+        return ""
+    return (
+        "\n\nKNOWN OFFICIALS (authoritative spellings — transcripts often garble "
+        "names; when a name in the source closely matches one of these, use "
+        "EXACTLY this spelling):\n"
+        + "\n".join(f"- {o}" for o in officials))
+
+
 def summarize_meeting(transcript: str, title: str, url: str, *,
                       org_label: str, region: str, jurisdiction: str,
-                      meeting_id: str) -> dict:
+                      meeting_id: str, officials: list[str] | None = None) -> dict:
     """Full-transcript summary — the flagship product."""
     prompt = f"""You are a local government reporter covering {region}.
 
 Meeting title: {title}
 Organization: {org_label}
 YouTube link:  {url}
-
+{_roster_block(officials)}
 Below is the auto-generated transcript of the ACTUAL meeting recording. Your job is to report what ACTUALLY HAPPENED - votes taken, decisions made, who said what, outcomes, not just what was planned.
 
 Produce a JSON object with this exact structure and nothing else - no markdown, no preamble, just valid JSON:
@@ -44,7 +57,11 @@ Produce a JSON object with this exact structure and nothing else - no markdown, 
     }}
   ],
   "publicComment": "Describe actual public comment offered - who spoke, what they said, how many speakers. Or 'No public comment was offered.'",
-  "actionItems": ["specific decisions made or next steps directed by the committee"]
+  "actionItems": ["specific decisions made or next steps directed by the committee"],
+  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places discussed (e.g. Highway J Extension, Riverlife District)"],
+  "votes": [
+    {{"item": "what was voted on, concisely", "motion": "the motion as made, if stated", "mover": "who moved it, or null", "second": "who seconded, or null", "outcome": "Approved | Failed | Tabled", "tally": "e.g. 6-0, 5-2, Unanimous, or null if not stated"}}
+  ]
 }}
 
 Rules:
@@ -52,6 +69,7 @@ Rules:
 - agenda: extract timestamps from transcript (format: "M:SS" or "H:MM:SS"). Include 5-10 items.
 - discussions: focus on WHAT WAS DECIDED or DEBATED, not just what the topic was.
 - Include vote results where mentioned (e.g. "Approved 5-2", "Passed unanimously").
+- votes: ONLY votes actually taken — empty array if none. Never invent movers, seconders, or tallies; use null for anything not stated in the transcript.
 - Name specific people who spoke or voted when identifiable from transcript.
 - Note unclear audio as [inaudible] rather than guessing.
 - Return ONLY the JSON object.
@@ -90,7 +108,8 @@ Below is the text of the official meeting agenda. Produce a JSON object with thi
     {{"item": "agenda item title", "body": "2-3 sentence description of what this item involves. Use tentative language: 'was scheduled to discuss', 'was expected to consider', 'was set to review' - NOT past tense like 'discussed' or 'approved'."}}
   ],
   "publicComment": "Note whether public comment was on the agenda, or 'Not indicated on agenda.'",
-  "actionItems": ["expected action items based on agenda - use 'scheduled to vote on', 'expected to consider', etc."]
+  "actionItems": ["expected action items based on agenda - use 'scheduled to vote on', 'expected to consider', etc."],
+  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places on the agenda"]
 }}
 
 Rules:
@@ -183,7 +202,8 @@ Produce a JSON object with this exact structure - no markdown, no preamble, just
     {{"item": "agenda item title", "body": "2-3 sentences reporting the ACTUAL OUTCOME: was it approved or denied? What was the vote count? Who moved/seconded? Include specific names and numbers from the vote records."}}
   ],
   "publicComment": "Note whether public comment was on the agenda, or 'Not indicated on agenda.'",
-  "actionItems": ["specific decisions made and next steps based on actual vote outcomes"]
+  "actionItems": ["specific decisions made and next steps based on actual vote outcomes"],
+  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"]
 }}
 
 Rules:
@@ -241,7 +261,8 @@ Produce a JSON object with this exact structure and nothing else:
     {{"item": "agenda item title", "body": "2-3 sentence description incorporating any presenter names, time estimates, and detail text from the agenda. Use tentative language: 'was scheduled to present', 'was expected to request approval for'."}}
   ],
   "publicComment": "description of public comment if the agenda includes one, or 'No public comment period was included on this agenda.'",
-  "actionItems": ["expected action items using tentative language — 'Board was expected to vote on...', 'Action was requested for...'"]
+  "actionItems": ["expected action items using tentative language — 'Board was expected to vote on...', 'Action was requested for...'"],
+  "topics": ["3-5 short Title Case topic tags: recurring school-district themes (Budget, Curriculum, Facilities, Staffing, Policy, Athletics) plus specific named schools, programs, or projects on the agenda"]
 }}
 
 Rules:
@@ -260,7 +281,7 @@ Rules:
 
 def summarize_from_minutes(minutes_text: str, title: str, url: str, *,
                            org_label: str, region: str, jurisdiction: str,
-                           meeting_id: str) -> dict:
+                           meeting_id: str, officials: list[str] | None = None) -> dict:
     """Official-minutes summary — authoritative outcomes, Sonnet tier."""
     prompt = f"""You are a local government reporter covering {region}.
 
@@ -268,7 +289,7 @@ Meeting title: {title}
 Organization: {org_label}
 Source: Official meeting minutes
 Meeting page: {url}
-
+{_roster_block(officials)}
 Below are the official minutes of this meeting. Minutes are the authoritative record of what ACTUALLY HAPPENED — motions made, votes taken, who moved and seconded, what passed or failed. Report actual outcomes.
 
 Produce a JSON object with this exact structure - no markdown, no preamble, just valid JSON:
@@ -284,12 +305,17 @@ Produce a JSON object with this exact structure - no markdown, no preamble, just
     {{"item": "agenda item title", "body": "2-4 sentences reporting the ACTUAL OUTCOME: motion text, who moved/seconded, the vote result (e.g. 'carried 6-0', 'failed 3-4'), and any recorded discussion or public input. Name names."}}
   ],
   "publicComment": "Describe public comment as recorded in the minutes — who spoke and on what. Or 'No public comment was recorded.'",
-  "actionItems": ["specific decisions made and directed next steps from the minutes"]
+  "actionItems": ["specific decisions made and directed next steps from the minutes"],
+  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"],
+  "votes": [
+    {{"item": "what was voted on, concisely", "motion": "the motion as recorded", "mover": "who moved it, or null", "second": "who seconded, or null", "outcome": "Approved | Failed | Tabled", "tally": "e.g. 6-0, 5-2, Unanimous, or null if not recorded"}}
+  ]
 }}
 
 Rules:
 - Minutes record REAL outcomes — report them as fact, in past tense.
 - Include vote counts and mover/seconder names wherever the minutes record them.
+- votes: ONLY votes actually recorded — empty array if none. Use null for movers/seconders/tallies the minutes don't state.
 - Skip purely procedural items (call to order, roll call, adjournment) in discussions.
 - NEVER use placeholder text like [AGENDA_ITEM_NAME], [TBD], [INSERT], etc.
 - Return ONLY the JSON object.

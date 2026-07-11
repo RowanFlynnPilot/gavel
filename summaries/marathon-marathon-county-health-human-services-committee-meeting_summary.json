@@ -83,5 +83,19 @@
   "url": "https://www.youtube.com/watch?v=ZzEeG1Z64pg",
   "source": "marathon",
   "doc_url": "https://www.marathoncounty.gov/home/showpublisheddocument/18402/639132213564100000",
-  "processed_at": "2026-06-10T15:31:42.005094+00:00"
+  "processed_at": "2026-06-10T15:31:42.005094+00:00",
+  "topics": [
+    "Public Safety",
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Approval of April 1st meeting minutes",
+      "motion": null,
+      "mover": "Supervisor Cavlli",
+      "second": "Vice Chair Rosenberg",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

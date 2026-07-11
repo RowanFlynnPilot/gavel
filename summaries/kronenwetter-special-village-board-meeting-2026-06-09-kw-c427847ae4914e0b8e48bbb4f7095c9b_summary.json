@@ -52,5 +52,26 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-12",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c427847ae4914e0b8e48bbb4f7095c9b.pdf",
-  "processed_at": "2026-06-10T21:42:13.481980+00:00"
+  "processed_at": "2026-06-10T21:42:13.481980+00:00",
+  "topics": [
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Motion to convene in closed session pursuant to Wisconsin Statute 19.85(1)(c) to interview Community Development Director candidate",
+      "motion": null,
+      "mover": "Trustee Coil",
+      "second": "Trustee Mishka",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Authorize village administrator to make job offer to Mason Sandwick for Community Development Director position within compensation parameters set in closed session",
+      "motion": null,
+      "mover": null,
+      "second": "Trustee Mishka",
+      "outcome": "Approved",
+      "tally": "5-0"
+    }
+  ]
 }

@@ -128,5 +128,53 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-24",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-bc02fc4aee3a40b9852da71250e3b100.pdf",
-  "processed_at": "2026-06-10T20:29:30.501291+00:00"
+  "processed_at": "2026-06-10T20:29:30.501291+00:00",
+  "topics": [
+    "Roads",
+    "Public Safety",
+    "County Highway Shop Facility",
+    "Flanner/Jamroz Project"
+  ],
+  "votes": [
+    {
+      "item": "Selection of Chairperson - Aaron Myszka",
+      "motion": null,
+      "mover": "Patty Tikalsky",
+      "second": "President Dan Joling",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Selection of Vice-Chairperson - Garrett Lysne",
+      "motion": null,
+      "mover": "President Joling",
+      "second": "Tikalsky",
+      "outcome": "Approved",
+      "tally": "4-0-1"
+    },
+    {
+      "item": "Approval of April 6, 2026 CLIPP Committee Meeting Minutes",
+      "motion": null,
+      "mover": "Joling",
+      "second": "Mijal",
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Support for Wausau Metropolitan Planning Organization Draft Model E-Bike Ordinance",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Support for Quit Claim Deed for Tax Parcel ID 145-2707-023-0994 - Marathon County Highway Shop Facility",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    }
+  ]
 }

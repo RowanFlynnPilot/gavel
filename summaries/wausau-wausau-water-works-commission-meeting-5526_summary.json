@@ -74,5 +74,9 @@
   "url": "https://www.youtube.com/watch?v=I31JGv7tRq4",
   "source": "wausau",
   "doc_url": "https://wausauwi.portal.civicclerk.com/event/2191/overview",
-  "processed_at": "2026-05-07T04:34:49.149823+00:00"
+  "processed_at": "2026-05-07T04:34:49.149823+00:00",
+  "topics": [
+    "Budget",
+    "Utilities"
+  ]
 }

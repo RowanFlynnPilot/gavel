@@ -97,6 +97,13 @@ class Jurisdiction:
         self.audio_url: str = raw.get("audio_url", "")
         self.title_strip_patterns: list[str] = raw.get("title_strip_patterns", [])
         self.committee_map: dict[str, str] = raw.get("committee_map", {})
+        # Optional officials roster ("Name (Role)" strings) — authoritative
+        # name spellings for summarization prompts and Whisper vocabulary
+        # hints. Update after each spring election.
+        self.officials: list[str] = raw.get("officials", [])
+        if not isinstance(self.officials, list) or \
+                not all(isinstance(o, str) for o in self.officials):
+            raise ConfigError(f"{ctx}: 'officials' must be a list of strings")
 
         self.video: dict | None = raw.get("video")
         if self.video is not None:
@@ -154,9 +161,18 @@ class InstanceConfig:
         self.max_meetings: int = int(_require(inst, "max_meetings", "instance"))
         self.date_cutoff: str = inst.get("date_cutoff", "")
         self.skip_ids: frozenset[str] = frozenset(inst.get("skip_ids", []))
+        # Where the tracker is embedded/published for readers (links in the
+        # ics feed, roundup, and static pages point here). Optional; modules
+        # fall back to newsroom_url.
+        self.tracker_page_url: str = inst.get("tracker_page_url", "")
 
         self.theme: dict = _require(raw, "theme", "top level")
         self.committee_styles: dict = raw.get("committee_styles", {})
+        # Optional feature blocks. seo.pages_base_url enables static meeting
+        # pages; seo.noindex=true adds robots/meta noindex (parity-soak
+        # deployments must not compete with production for search ranking).
+        self.seo: dict = raw.get("seo", {})
+        self.analytics: dict = raw.get("analytics", {})
 
         jur_raw = _require(raw, "jurisdictions", "top level")
         if not isinstance(jur_raw, list) or not jur_raw:

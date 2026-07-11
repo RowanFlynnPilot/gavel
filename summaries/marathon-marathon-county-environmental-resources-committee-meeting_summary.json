@@ -78,5 +78,44 @@
   "url": "https://www.youtube.com/watch?v=OLzrpSp3Dfg",
   "source": "marathon",
   "doc_url": "https://www.marathoncounty.gov/home/showpublisheddocument/18384/639131339701200000",
-  "processed_at": "2026-06-10T15:29:43.267111+00:00"
+  "processed_at": "2026-06-10T15:29:43.267111+00:00",
+  "topics": [
+    "Zoning",
+    "Parks",
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Approval of March 31, 2026 committee minutes",
+      "motion": null,
+      "mover": "Supervisor Sefeld",
+      "second": "Supervisor Drebeck",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Tim Veland rezoning petition - Green Valley",
+      "motion": null,
+      "mover": "Supervisor Drebeck",
+      "second": "Supervisor Kurt",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Jeffrey and Cynthia Schmidtz rezoning petition - McMillan",
+      "motion": null,
+      "mover": "Supervisor Sefelt",
+      "second": "Supervisor Drew",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Fee waiver for April 17, 2026 severe weather impacted properties - forward amended resolution to county board",
+      "motion": null,
+      "mover": "Supervisor Sefelt",
+      "second": "Supervisor Drebeck",
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

@@ -84,5 +84,60 @@
   "url": "https://www.youtube.com/watch?v=WD9kixgx6oY",
   "source": "marathon",
   "doc_url": "https://www.marathoncounty.gov/home/showpublisheddocument/18350/639126184295330000",
-  "processed_at": "2026-06-10T15:30:19.800018+00:00"
+  "processed_at": "2026-06-10T15:30:19.800018+00:00",
+  "topics": [
+    "Budget",
+    "Utilities",
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Committee appointments for the new term",
+      "motion": null,
+      "mover": "Supervisor Cavelli",
+      "second": "Supervisor Crims",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Election of two supervisors to at-large executive committee positions",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Consent agenda items C10 through C14A",
+      "motion": null,
+      "mover": "Supervisor Cavelli",
+      "second": "Supervisor Drebeck",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Resolution 24-26: Out of home placement reserve increase",
+      "motion": null,
+      "mover": "Supervisor Morash",
+      "second": "Supervisor Robinson",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Resolution 25-26: Social services budget amendment",
+      "motion": null,
+      "mover": "Supervisor P",
+      "second": "Supervisor Robinson",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Resolution 26-26: Landfill tipping fee modification for storm debris",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

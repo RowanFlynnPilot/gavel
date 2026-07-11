@@ -111,5 +111,46 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-25",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-100b287096f24509895489749fa9223a.pdf",
-  "processed_at": "2026-06-10T21:39:18.395765+00:00"
+  "processed_at": "2026-06-10T21:39:18.395765+00:00",
+  "topics": [
+    "Facilities",
+    "Parks",
+    "Public Safety",
+    "Lea Road Trails",
+    "Chromewood Drive/Flanar-Gem Roth Road"
+  ],
+  "votes": [
+    {
+      "item": "Approval of May 4, 2026 CLIPP Minutes",
+      "motion": null,
+      "mover": "Trustee Patty",
+      "second": "Garrett",
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "SD Allen Becker recommended as general contractor for new six-bay municipal garage",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Proceed with Lea Road trails project while eliminating parking lot and driveway from scope",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Recommend parks subcommittee to village board",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    }
+  ]
 }

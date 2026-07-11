@@ -70,5 +70,43 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-21",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-f7694e4efbdd49cfa9485ac17f2c6460.pdf",
-  "processed_at": "2026-06-23T17:52:21.393126+00:00"
+  "processed_at": "2026-06-23T17:52:21.393126+00:00",
+  "topics": [
+    "Public Safety",
+    "Staffing"
+  ],
+  "votes": [
+    {
+      "item": "Approval of April 27, 2026 meeting minutes",
+      "motion": "Table approval of the April 27, 2026 minutes until a future meeting at which a quorum of members who were also present at that prior meeting could act on them",
+      "mover": "Rick Smith",
+      "second": "Alex Vedvik",
+      "outcome": "Tabled",
+      "tally": "3-0"
+    },
+    {
+      "item": "Election of Police and Fire Commission President",
+      "motion": "Nominate Commissioner Alex Vedvik for President",
+      "mover": "Rick Smith",
+      "second": "Commissioner Rule",
+      "outcome": "Approved",
+      "tally": "2-0 (Vedvik abstaining)"
+    },
+    {
+      "item": "Election of Police and Fire Commission Vice-President",
+      "motion": "Nominate Commissioner Rick Smith for Vice-President",
+      "mover": "Alex Vedvik",
+      "second": "Commissioner Rule",
+      "outcome": "Approved",
+      "tally": "2-0 (Smith abstaining)"
+    },
+    {
+      "item": "Fire department applicant rejection from firefighter hiring process",
+      "motion": "Not continue the applicant in the firefighter hiring process",
+      "mover": "Rick Smith",
+      "second": "Commissioner Rule",
+      "outcome": "Approved",
+      "tally": "3-0"
+    }
+  ]
 }

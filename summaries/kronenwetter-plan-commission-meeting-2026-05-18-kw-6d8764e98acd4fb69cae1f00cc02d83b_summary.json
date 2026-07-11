@@ -88,5 +88,10 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-26",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-6d8764e98acd4fb69cae1f00cc02d83b.pdf",
-  "processed_at": "2026-06-10T20:27:59.827429+00:00"
+  "processed_at": "2026-06-10T20:27:59.827429+00:00",
+  "topics": [
+    "Zoning",
+    "Development",
+    "Staffing"
+  ]
 }

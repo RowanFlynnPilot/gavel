@@ -137,12 +137,24 @@ def _vid_id_from_url(url: str) -> str | None:
     return m.group(1) if m else None
 
 
-def fetch_transcript(url: str, source_key: str = "", upload_date: str = "") -> str:
+def build_whisper_hint(body_name: str, officials: list[str]) -> str:
+    """Whisper initial_prompt biasing decoding toward officials' names so
+    spoken names come out with the jurisdiction's official spellings
+    (instance.json `officials`). Kept tight — Whisper reads ~224 tokens."""
+    if not officials:
+        return ""
+    names = [re.sub(r"\s*\(.*\)$", "", o) for o in officials][:12]
+    return f"Meeting of the {body_name}. Speakers include {', '.join(names)}."
+
+
+def fetch_transcript(url: str, source_key: str = "", upload_date: str = "",
+                     whisper_hint: str = "") -> str:
     """Fetch a transcript for a YouTube video.
 
     Method 1: youtube-transcript-api (cookie-injected session when available)
     Method 2: yt-dlp caption download
-    Method 3: Whisper audio transcription (local-only fallback)
+    Method 3: Whisper audio transcription (local-only fallback; whisper_hint
+              seeds decoding with the jurisdiction's officials)
 
     Raises NoCaptionsError when captions genuinely don't exist, or
     TranscriptAuthError when YouTube is blocking the client (cookie refresh
@@ -214,7 +226,8 @@ def fetch_transcript(url: str, source_key: str = "", upload_date: str = "") -> s
         if any(sig in combined for sig in _EXPLICIT_NO_CAPTIONS):
             print("     [fetch] No captions - trying Whisper before giving up...")
             whisper_text = _fetch_transcript_whisper(url, source_key=source_key,
-                                                     upload_date=upload_date)
+                                                     upload_date=upload_date,
+                                                     whisper_hint=whisper_hint)
             if whisper_text:
                 return whisper_text
             raise NoCaptionsError("No captions available and Whisper unavailable - skipping.")
@@ -223,7 +236,8 @@ def fetch_transcript(url: str, source_key: str = "", upload_date: str = "") -> s
             print(f"     [warn]  yt-dlp failed: {r.stderr.strip()[-200:]}")
 
     whisper_text = _fetch_transcript_whisper(url, source_key=source_key,
-                                             upload_date=upload_date)
+                                             upload_date=upload_date,
+                                             whisper_hint=whisper_hint)
     if whisper_text:
         return whisper_text
 
@@ -233,7 +247,8 @@ def fetch_transcript(url: str, source_key: str = "", upload_date: str = "") -> s
 
 
 def _fetch_transcript_whisper(url: str, source_key: str = "",
-                              upload_date: str = "") -> str | None:
+                              upload_date: str = "",
+                              whisper_hint: str = "") -> str | None:
     """Download audio and transcribe locally with faster-whisper. Only runs
     when USE_WHISPER_FALLBACK is on and the source is whisper-enabled."""
     if not USE_WHISPER_FALLBACK:
@@ -291,6 +306,9 @@ def _fetch_transcript_whisper(url: str, source_key: str = "",
             language="en",
             beam_size=1,
             vad_filter=True,
+            # Bias decoding toward the jurisdiction's officials (spellings
+            # from instance.json).
+            initial_prompt=whisper_hint or None,
             vad_parameters={"min_silence_duration_ms": 500},
         )
         text = " ".join(seg.text.strip() for seg in segments).strip()

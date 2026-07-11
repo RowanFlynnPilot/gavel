@@ -102,5 +102,37 @@
   "url": "https://www.youtube.com/watch?v=3imG7wgT3RY",
   "source": "school_board",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=744162",
-  "processed_at": "2026-06-10T17:22:10.487234+00:00"
+  "processed_at": "2026-06-10T17:22:10.487234+00:00",
+  "topics": [
+    "Budget",
+    "Curriculum",
+    "Facilities",
+    "Riverview Elementary"
+  ],
+  "votes": [
+    {
+      "item": "Approval of minutes from April 27, 2026",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Audit of bills",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Preliminary 2026-2027 Budget recommendation",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

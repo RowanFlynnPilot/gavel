@@ -262,6 +262,10 @@ def build_meeting(cfg: InstanceConfig, video_id: str, info: dict,
         "discussions": summary.get("discussions", []),
         "publicComment": summary.get("publicComment", "No public comment was offered."),
         "actionItems": summary.get("actionItems", []),
+        "topics": summary.get("topics", []),
+        # Structured votes from transcript/minutes summaries; CivicClerk
+        # jurisdictions get richer civicItems below (frontend prefers those).
+        "votes": summary.get("votes", []),
     }
 
     if civic_data and jur.agendas_adapter == "civicclerk":

@@ -117,5 +117,35 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-60",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-763affdb06034572ad57359551b02e1c.pdf",
-  "processed_at": "2026-06-30T03:00:18.804616+00:00"
+  "processed_at": "2026-06-30T03:00:18.804616+00:00",
+  "topics": [
+    "Budget",
+    "Parks"
+  ],
+  "votes": [
+    {
+      "item": "Consent Agenda - operator licenses, meeting minutes, and check register",
+      "motion": null,
+      "mover": "Trustee Mishka",
+      "second": "Trustee Coil",
+      "outcome": "Approved",
+      "tally": "7-0"
+    },
+    {
+      "item": "Resolution 2026-008 - 2025 Compliance Maintenance Annual Report",
+      "motion": null,
+      "mover": "Trustee Mortensen",
+      "second": "Trustee Mishka",
+      "outcome": "Approved",
+      "tally": "7-0"
+    },
+    {
+      "item": "Resolution 2026-009 - Creating a Special Parks Committee",
+      "motion": null,
+      "mover": "Trustee Lesniak",
+      "second": "Trustee Coil",
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

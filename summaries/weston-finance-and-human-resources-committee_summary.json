@@ -87,5 +87,28 @@
   "url": "https://www.youtube.com/watch?v=KaLahH4JieQ",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-10T15:28:27.865969+00:00"
+  "processed_at": "2026-06-10T15:28:27.865969+00:00",
+  "topics": [
+    "Budget",
+    "Staffing",
+    "Kennedy Park"
+  ],
+  "votes": [
+    {
+      "item": "Approval of minutes from previous Finance and HR meeting",
+      "motion": null,
+      "mover": "Ernling",
+      "second": "Daniels",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Acknowledgment of April budget status report, TIF detail reports, and legal details report",
+      "motion": null,
+      "mover": "Daniels",
+      "second": "Soaper",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

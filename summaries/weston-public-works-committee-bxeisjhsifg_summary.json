@@ -157,5 +157,45 @@
   "url": "https://www.youtube.com/watch?v=bxeIsJHsifg",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-10T16:34:45.670012+00:00"
+  "processed_at": "2026-06-10T16:34:45.670012+00:00",
+  "topics": [
+    "Roads",
+    "Utilities",
+    "Alderson Street And Jelnick Avenue Roundabout",
+    "Bladel Avenue"
+  ],
+  "votes": [
+    {
+      "item": "Approval of May 11, 2026 Public Works and Utility Committee minutes",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Approval of May 28, 2026 Bladel Avenue special assessment hearing minutes",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Acknowledge May 2026 water and sewer permits",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Resolution 2026-016 approving the 2025 Compliance Maintenance Annual Report for Weston Sewer Utility for submission to Wisconsin DNR",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

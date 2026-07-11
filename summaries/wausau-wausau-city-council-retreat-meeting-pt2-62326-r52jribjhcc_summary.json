@@ -107,5 +107,21 @@
   "url": "https://www.youtube.com/watch?v=r52jrIBJHcc",
   "source": "wausau",
   "doc_url": null,
-  "processed_at": "2026-07-01T17:53:37.088951+00:00"
+  "processed_at": "2026-07-01T17:53:37.088951+00:00",
+  "topics": [
+    "Budget",
+    "Development",
+    "Facilities",
+    "Transit Expansion"
+  ],
+  "votes": [
+    {
+      "item": "Direct staff coordinator Michelle to compile all priority input from retreat",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

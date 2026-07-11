@@ -103,5 +103,35 @@
   "url": "https://www.youtube.com/watch?v=Ay3CNwxe6g4",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-10T15:27:57.810267+00:00"
+  "processed_at": "2026-06-10T15:27:57.810267+00:00",
+  "topics": [
+    "Public Safety",
+    "Roads"
+  ],
+  "votes": [
+    {
+      "item": "Acknowledgment of Department Reports",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Chapter 50 Nuisances Amendments",
+      "motion": null,
+      "mover": "Trustee Olsen",
+      "second": "Campkey",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "E-Bicycle Ordinance Amendments with emoto prohibition",
+      "motion": null,
+      "mover": "Trustee Olsen",
+      "second": "Chwanka",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

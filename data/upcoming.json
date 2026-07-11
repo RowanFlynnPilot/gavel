@@ -1,34 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-07-02",
-      "time": "5:00 PM",
-      "name": "Health & Human Services Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-07-08",
-      "time": "5:00 PM",
-      "name": "Extension, Education & Econ Dev Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-07-09",
-      "time": "3:00 PM",
-      "name": "Executive Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-07-09",
-      "time": "5:00 PM",
-      "name": "Infrastructure Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-07-14",
       "time": "5:00 PM",
       "name": "Public Safety Committee",
@@ -111,44 +83,23 @@
       "name": "County Board Meeting",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-09-03",
+      "time": "5:00 PM",
+      "name": "Health & Human Services Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "5:00 PM",
+      "name": "Public Safety Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
-    {
-      "date": "2026-07-06",
-      "time": "5:15 PM",
-      "name": "Parks & Recreation Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2454/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-07",
-      "time": "4:00 PM",
-      "name": "Wausau Arts Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3532/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-07",
-      "time": "5:30 PM",
-      "name": "Economic Development Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2402/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-09",
-      "time": "5:00 PM",
-      "name": "Sustainability, Energy & Environment Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2170/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-09",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2441/overview",
-      "source": "wausau"
-    },
     {
       "date": "2026-07-13",
       "time": "4:45 PM",
@@ -158,7 +109,7 @@
     },
     {
       "date": "2026-07-13",
-      "time": "6:00 PM",
+      "time": "6:30 PM",
       "name": "Committee of the Whole Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3536/overview",
       "source": "wausau"
@@ -192,13 +143,6 @@
       "source": "wausau"
     },
     {
-      "date": "2026-07-16",
-      "time": "4:45 PM",
-      "name": "Transit Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2181/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-17",
       "time": "8:00 AM",
       "name": "Capital Improvement Projects Committee Meeting",
@@ -211,28 +155,63 @@
       "name": "Public Health & Safety Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2467/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-07-21",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3535/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-07-21",
+      "time": "5:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3517/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-07-22",
+      "time": "4:30 PM",
+      "name": "Historic Preservation Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2500/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-07-27",
+      "time": "7:30 AM",
+      "name": "Police & Fire Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2149/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-07-27",
+      "time": "4:00 PM",
+      "name": "Room Tax Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2337/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
     {
-      "date": "2026-07-06",
-      "time": "6:00 PM",
-      "name": "Community Life & Public Safety Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07062026-1933",
+      "date": "2026-07-13",
+      "time": "",
+      "name": "S.A.F.E.R. Board of Directors",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07132026-1940",
       "source": "weston"
     },
     {
       "date": "2026-07-13",
       "time": "6:00 PM",
       "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07132026-1935",
       "source": "weston"
     },
     {
       "date": "2026-07-13",
       "time": "6:00 PM",
       "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07132026-1939",
       "source": "weston"
     },
     {
@@ -247,6 +226,13 @@
       "time": "6:00 PM",
       "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "",
+      "name": "Election Notices",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1938",
       "source": "weston"
     },
     {
@@ -325,14 +311,28 @@
       "name": "Parks & Recreation Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-09-07",
+      "time": "6:00 PM",
+      "name": "Community Life & Public Safety Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "6:00 PM",
+      "name": "S.A.F.E.R. Board of Directors",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
     {
-      "date": "2026-07-01",
-      "time": "9:00 AM",
-      "name": "Public Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=753632",
+      "date": "2026-07-13",
+      "time": "5:00 PM",
+      "name": "Regular Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=752475",
       "source": "school_board"
     },
     {
@@ -366,17 +366,24 @@
   ],
   "kronenwetter": [
     {
-      "date": "2026-07-06",
-      "time": "6:00 PM",
-      "name": "Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-26",
-      "source": "kronenwetter"
-    },
-    {
       "date": "2026-07-13",
       "time": "5:00 PM",
       "name": "Police and Fire Commission Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-23",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-07-13",
+      "time": "6:00 PM",
+      "name": "Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-61",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "4:00 PM",
+      "name": "Parks Committee",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee-0",
       "source": "kronenwetter"
     },
     {
@@ -385,7 +392,22 @@
       "name": "Plan Commission Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-28",
       "source": "kronenwetter"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "6:00 PM",
+      "name": "Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-26",
+      "source": "kronenwetter"
     }
   ],
-  "dc_everest": []
+  "dc_everest": [
+    {
+      "date": "2026-07-15",
+      "time": "6:30 PM",
+      "name": "Regular School Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=752240",
+      "source": "dc_everest"
+    }
+  ]
 }

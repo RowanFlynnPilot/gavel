@@ -86,5 +86,21 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-30",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-54c9ed868e8e4099af1b56a7cc1ec508.pdf",
-  "processed_at": "2026-06-17T03:46:06.112180+00:00"
+  "processed_at": "2026-06-17T03:46:06.112180+00:00",
+  "topics": [
+    "Budget",
+    "Staffing",
+    "Parks",
+    "Facilities"
+  ],
+  "votes": [
+    {
+      "item": "Associated Appraisal of Appleton Option 2 reassessment contract for $355,000 (July 2026 through December 2031)",
+      "motion": null,
+      "mover": "President Jolyne",
+      "second": "Trustee Solheim",
+      "outcome": "Approved",
+      "tally": "3-0"
+    }
+  ]
 }

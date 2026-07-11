@@ -113,5 +113,27 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2db49f1a40bb48f29ddef818971f951e.pdf",
-  "processed_at": "2026-06-30T02:59:36.776236+00:00"
+  "processed_at": "2026-06-30T02:59:36.776236+00:00",
+  "topics": [
+    "Parks",
+    "Bushka Park"
+  ],
+  "votes": [
+    {
+      "item": "Election of Chairperson",
+      "motion": null,
+      "mover": "Patty DeCaliskey",
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Election of Vice Chairperson",
+      "motion": null,
+      "mover": "Patty DeCaliskey",
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ]
 }

@@ -88,5 +88,29 @@
   "url": "https://www.youtube.com/watch?v=NwM-PoBvvMg",
   "source": "weston",
   "doc_url": null,
-  "processed_at": "2026-06-10T15:29:06.811420+00:00"
+  "processed_at": "2026-06-10T15:29:06.811420+00:00",
+  "topics": [
+    "Parks",
+    "Eau Claire River",
+    "Kennedy Park",
+    "Yellow Banks"
+  ],
+  "votes": [
+    {
+      "item": "Approval of minutes from April 27, 2026",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Yellow Banks kayak launch signs installation",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ]
 }

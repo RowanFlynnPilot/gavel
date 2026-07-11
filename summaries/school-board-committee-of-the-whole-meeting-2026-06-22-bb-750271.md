@@ -1,36 +1,50 @@
 # Committee of the Whole Meeting - 2026-06-22
 
 **Organization:** Wausau School Board  
-**Source:** https://meetings.boardbook.org/Public/Agenda/1360?meeting=750271  
+**Source:** https://www.youtube.com/watch?v=DsdQ1pGdIE8  
 **Documents:** https://meetings.boardbook.org/Public/Agenda/1360?meeting=750271  
-**Summarized:** 2026-06-22 03:53 UTC
+**Summarized:** 2026-07-03 04:43 UTC
 
 ---
 
 ## Meeting Overview
-Based on the published agenda, the Wausau School District's Committee of the Whole meeting on June 22, 2026 was scheduled to address annual compliance and capital improvement matters, including adoption of Wisconsin Academic Standards, renewal of athletic association memberships, review of school improvement strategies, and consideration of facility repairs and equipment disposition. The meeting was expected to include several action items related to building maintenance and asset management.
+The Wausau School Board Committee of the Whole met on June 22, 2026, approving several action items including Wisconsin Academic Standards for the 2026-27 school year, WIAA membership renewals, a $420,000 EFIS wall replacement contract at South Mountain Elementary, and authorization to use equipment auction proceeds for buildings and grounds equipment purchases. The board also received an informational AGR schools data presentation showing generally positive trends in math and literacy outcomes, and recognized the retirement of a 32-year district employee.
 
 ## Key Discussions
-### Academic Standards
-Dr. Katie Colwell and Julie Schell were scheduled to present an annual notice of the adoption of Wisconsin Academic Standards by the Wausau School District. The presentation was expected to outline the knowledge and skills students should acquire in each content area and provide guidance for teachers in developing lesson plans and instructional practices.
+### Recognition of Nol Torson Retirement
+Miss Channel announced the retirement of Nol Torson after 32 years with the Wausau School District, expressing pride in his service. She also announced that Jen Bonnke would be taking his position as supervisor of financial services. The board chair noted Torson is a quiet individual and did not put him on the spot to speak.
 
-### WIAA Renewal
-The board was expected to consider annual renewal of WIAA memberships for Wausau East, Wausau West, and WAVE schools. A sample renewal application was included with the agenda materials.
+### Audit of Bills
+The board was asked to approve the audit of bills as presented. A motion was made, seconded, and passed unanimously with no discussion or public comment.
 
-### AGR Spring Summary Presentation
-The board was scheduled to review the implementation of AGR strategies and the district's progress on performance objectives for the second semester. The presentation was expected to focus on learning outcomes and priorities outlined in the AGR School's Data and Continuous Improvement Plan.
+### Annual Adoption of Wisconsin Academic Standards for 2026-27
+Dr. Katie Cowwell and Miss Shell presented the annual notice, explaining the standards were created in 1988 and that Wisconsin Act 55 (2015) requires annual board approval. They noted DPI plans to review standards for dance, art, world languages, and environmental literacy this fall, and that there are now 25 content standards including new additions for art and design and WIDA English language development. The motion to approve passed unanimously.
 
-### EFIS Repair at South Mountain
-Director of Buildings and Grounds Ryan Urmanski was scheduled to present information about the South Mountain EFIS Wall System and the need for its replacement. The presentation was expected to provide details supporting action on this facility maintenance matter.
+### WIAA Membership Renewals
+The board considered annual renewal of WIAA memberships for Wausau East, Wausau West, and WAVE. No questions were raised. The motion to recommend approval to the full board passed unanimously.
 
-### 2026 Auction
-Buildings and Grounds Director Ryan Urmanski was scheduled to present information about a potential auction of district equipment and how the proceeds would be used. The presentation was expected to outline the disposition of various pieces of equipment and funding allocation plans.
+### AGR Schools Semi-Annual Data Review
+A large team including district administrators, literacy coordinator Sandy, and building principals Jen Davidson (JD Jones), Phil Beckham (JD Jones associate principal), and Matt Schilling (Thomas Jefferson associate principal) presented spring data for Franklin, JD Jones, and Thomas Jefferson elementary schools. Math scores showed a slow uphill trajectory since fall 2023-24 with AGR buildings at approximately 62-64% at benchmark; kindergarten and first grade showed strong gains using the new Forefront number sense screener in its first year of use. Literacy data showed improvement over the prior year though some grade levels showed slight declines. Board member discussion focused heavily on classroom management after a board member shared a story of a newer teacher who didn't know she was empowered to firmly address disruptive behavior; administrators confirmed professional development on classroom management is planned including on the first day back. Board members also questioned assessment overload and spring testing fatigue, with staff acknowledging assessment windows would be adjusted. This item was informational only with no action taken.
+
+### South Mountain Elementary EFIS Wall System Replacement
+Buildings and Grounds Director Ryan Hermansky presented the need to replace the EFIS (stucco) wall system at South Mountain Elementary, citing design defects identified through engineering assessment. He recommended replacing the system with 20-gauge steel panels, the same approach successfully used at Horace Mann last fall. Four bids were received and Jackson Associates, who also completed the Horace Mann project, was the low bidder at $420,000 with work planned for November 2026. A board member asked whether Jackson was responsible for the original faulty installation; Hermansky clarified Jackson did the repair work at Horace Mann, not the original installation. The motion to recommend full board approval of the bid and contract passed unanimously.
+
+### District Equipment Auction and Proceeds Designation
+Hermansky requested board approval to hold an online auction through Wisconsin Surplus of obsolete district equipment including old lawnmowers, an automated mower blade sharpener, and a log splitter, and to direct the proceeds back to buildings and grounds for equipment purchases rather than the general fund. He estimated proceeds of $30,000-$60,000. A board member asked about consolidated school furniture; Hermansky clarified most was redistributed to schools or disposed of. The motion to recommend full board approval for auction proceeds to be designated to buildings and grounds for 2026-27 equipment needs passed unanimously.
+
+### Special Meeting Consent Agenda
+A special meeting was called immediately following adjournment of the Committee of the Whole. The consent agenda covering appointments, additional staff, replacement staff, contract increases, separations, resignations, contract decreases, terminations, leaves of absence, and retirements was approved unanimously without discussion.
 
 ## Public Comment
-A public and student comment period was included on the agenda.
+No public comment was offered.
 
 ## Action Items
-- Board was expected to vote on adoption of Wisconsin Academic Standards
-- Action was requested for renewal of WIAA memberships for Wausau East, Wausau West, and WAVE
-- Action was requested regarding EFIS wall system repair at South Mountain
-- Action was requested regarding the 2026 equipment auction and use of proceeds
+- Full board to vote on approval of Wisconsin Academic Standards for 2026-27 school year
+- Full board to vote on WIAA membership renewals for Wausau East, Wausau West, and WAVE
+- Full board to vote on contracting Jackson Associates for South Mountain Elementary EFIS wall replacement at $420,000, with work beginning November 2026
+- Full board to vote on authorizing auction proceeds from Wisconsin Surplus online auction to be directed to buildings and grounds equipment purchases in 2026-27
+- Administration to provide board with list of equipment items planned for auction
+- Administration to continue and expand classroom management professional development for teachers and paras, including on first day back
+- Elementary schools to develop common assessments for tracking daily instruction beyond screeners
+- Administration to adjust spring assessment windows to reduce student testing fatigue
+- Special meeting consent agenda approved covering staff appointments, changes, retirements, and leaves of absence

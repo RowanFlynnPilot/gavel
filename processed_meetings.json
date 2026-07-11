@@ -231,9 +231,10 @@
       "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=748015",
       "upload_date": "20260608",
       "meeting_date": "20260608",
-      "duration": null,
+      "duration": 1325.0,
+      "video_url": "https://www.youtube.com/watch?v=LRP6M6If13w",
       "processed_at": "2026-06-09T18:00:37.338863+00:00",
-      "summary_file": "summaries/school-board-regular-meeting-2026-06-08.md"
+      "summary_file": "summaries/school-board-regular-meeting-2026-06-08-bb-748015.md"
     },
     "bxeIsJHsifg": {
       "title": "Public Works Committee",
@@ -515,8 +516,8 @@
       "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=750271",
       "upload_date": "20260622",
       "meeting_date": "20260622",
-      "duration": null,
-      "video_url": null,
+      "duration": 2730.0,
+      "video_url": "https://www.youtube.com/watch?v=DsdQ1pGdIE8",
       "processed_at": "2026-06-22T03:53:23.786180+00:00",
       "summary_file": "summaries/school-board-committee-of-the-whole-meeting-2026-06-22-bb-750271.md"
     },
@@ -585,6 +586,28 @@
       "video_url": null,
       "processed_at": "2026-07-01T17:53:37.089238+00:00",
       "summary_file": "summaries/wausau-wausau-city-council-retreat-meeting-pt2-62326-r52jribjhcc.md"
+    },
+    "kw_c0cab9315fc247a99005597d59db7686": {
+      "title": "REVISED Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting - 2026-07-06",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c0cab9315fc247a99005597d59db7686.pdf",
+      "upload_date": "20260706",
+      "meeting_date": "20260706",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/revised-community-life-infrastructure-and-public-property-clipp-committee-meeting-3",
+      "processed_at": "2026-07-06T02:50:35.324383+00:00",
+      "summary_file": "summaries/kronenwetter-revised-community-life-infrastructure-and-public-property-clipp-com-kw-c0cab9315fc247a99005597d59db7686.md"
+    },
+    "dTog0NO0arg": {
+      "title": "Wausau Room Tax Commission Meeting - 6/23/26",
+      "source": "wausau",
+      "doc_url": null,
+      "upload_date": "20260623",
+      "meeting_date": "20260623",
+      "duration": 237,
+      "video_url": null,
+      "processed_at": "2026-07-06T02:51:36.903396+00:00",
+      "summary_file": "summaries/wausau-wausau-room-tax-commission-meeting-62326-dtog0no0arg.md"
     }
   }
 }
