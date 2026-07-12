@@ -610,4 +610,24 @@ URL:https://www.marathoncounty.gov/about-us/county-calendar
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
+BEGIN:VEVENT
+UID:9b3391b1bc7b0fb3e88e@gavel
+DTSTAMP:20260910T000000Z
+DTSTART;TZID=America/Chicago:20260910T150000
+DTEND;TZID=America/Chicago:20260910T163000
+SUMMARY:Marathon County: Executive Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:4ce216c68c3945fec32b@gavel
+DTSTAMP:20260910T000000Z
+DTSTART;TZID=America/Chicago:20260910T170000
+DTEND;TZID=America/Chicago:20260910T183000
+SUMMARY:Marathon County: Infrastructure Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
 END:VCALENDAR
