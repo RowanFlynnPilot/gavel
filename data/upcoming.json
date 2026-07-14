@@ -122,20 +122,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-13",
-      "time": "4:45 PM",
-      "name": "Human Resources Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2031/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-13",
-      "time": "6:30 PM",
-      "name": "Committee of the Whole Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3536/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-14",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -211,30 +197,23 @@
       "name": "Room Tax Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2337/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-07-27",
+      "time": "5:00 PM",
+      "name": "Bicycle & Pedestrian Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2124/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-07-28",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3539/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-07-13",
-      "time": "",
-      "name": "S.A.F.E.R. Board of Directors",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07132026-1940",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-13",
-      "time": "6:00 PM",
-      "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07132026-1935",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-13",
-      "time": "6:00 PM",
-      "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07132026-1939",
-      "source": "weston"
-    },
     {
       "date": "2026-07-14",
       "time": "6:00 PM",
@@ -350,20 +329,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-07-13",
-      "time": "5:00 PM",
-      "name": "Regular Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=752475",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-07-13",
-      "time": "5:00 PM",
-      "name": "Regular Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
       "date": "2026-07-27",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
@@ -386,20 +351,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-07-13",
-      "time": "5:00 PM",
-      "name": "Police and Fire Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-23",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-07-13",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-61",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-07-20",
       "time": "4:00 PM",
