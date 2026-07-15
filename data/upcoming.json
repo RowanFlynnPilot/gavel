@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-07-14",
-      "time": "5:00 PM",
-      "name": "Public Safety Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-07-16",
       "time": "5:00 PM",
       "name": "HR, Finance & Property Committee",
@@ -122,34 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-14",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3534/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-14",
-      "time": "11:30 AM",
-      "name": "Water Works Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2193/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-14",
-      "time": "5:15 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2415/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-14",
-      "time": "6:30 PM",
-      "name": "Common Council Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/1967/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-17",
       "time": "8:00 AM",
       "name": "Capital Improvement Projects Committee Meeting",
@@ -211,16 +176,37 @@
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3539/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-07-28",
+      "time": "5:15 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2429/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "7:30 AM",
+      "name": "Police & Fire Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3537/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "7:30 AM",
+      "name": "Police & Fire Commission Special Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3542/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "5:15 PM",
+      "name": "Parks & Recreation Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2455/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-07-14",
-      "time": "6:00 PM",
-      "name": "S.A.F.E.R. Board of Directors",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-07-16",
       "time": "6:00 PM",
