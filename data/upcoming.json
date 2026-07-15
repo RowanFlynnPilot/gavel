@@ -122,6 +122,13 @@
       "source": "wausau"
     },
     {
+      "date": "2026-07-17",
+      "time": "10:00 AM",
+      "name": "Historic Preservation Commission Ad Hoc Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3543/overview",
+      "source": "wausau"
+    },
+    {
       "date": "2026-07-20",
       "time": "5:15 PM",
       "name": "Public Health & Safety Committee Meeting",
@@ -197,13 +204,6 @@
       "name": "Police & Fire Commission Special Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3542/overview",
       "source": "wausau"
-    },
-    {
-      "date": "2026-08-03",
-      "time": "5:15 PM",
-      "name": "Parks & Recreation Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2455/overview",
-      "source": "wausau"
     }
   ],
   "weston": [
@@ -212,6 +212,13 @@
       "time": "",
       "name": "Village Board of Trustees",
       "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07162026-1941",
+      "source": "weston"
+    },
+    {
+      "date": "2026-07-16",
+      "time": "",
+      "name": "Mountain Bay Metropolitan Police Oversight Board",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07162026-1942",
       "source": "weston"
     },
     {
@@ -232,7 +239,7 @@
       "date": "2026-07-20",
       "time": "5:30 PM",
       "name": "Finance & Human Resources Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1943",
       "source": "weston"
     },
     {
