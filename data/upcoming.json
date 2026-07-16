@@ -231,6 +231,13 @@
     {
       "date": "2026-07-20",
       "time": "",
+      "name": "Village Board of Trustees",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1944",
+      "source": "weston"
+    },
+    {
+      "date": "2026-07-20",
+      "time": "",
       "name": "Election Notices",
       "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1938",
       "source": "weston"
@@ -325,6 +332,20 @@
       "name": "S.A.F.E.R. Board of Directors",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "6:00 PM",
+      "name": "Plan Commission",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "6:00 PM",
+      "name": "Public Works Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -346,6 +367,13 @@
       "date": "2026-08-24",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "5:00 PM",
+      "name": "Regular Board Meeting",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
     }
@@ -387,13 +415,5 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": [
-    {
-      "date": "2026-07-15",
-      "time": "6:30 PM",
-      "name": "Regular School Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=752240",
-      "source": "dc_everest"
-    }
-  ]
+  "dc_everest": []
 }
