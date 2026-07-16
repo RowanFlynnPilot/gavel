@@ -144,13 +144,13 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:08fce1ae9c8e79335373@gavel
+UID:81756dd0fcc3af0d72a4@gavel
 DTSTAMP:20260720T000000Z
 DTSTART;TZID=America/Chicago:20260720T180000
 DTEND;TZID=America/Chicago:20260720T193000
-SUMMARY:Village of Kronenwetter: Plan Commission Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission
- -meeting-28
+SUMMARY:Village of Kronenwetter: REVISED Plan Commission Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-pc/page/revised-plan-co
+ mmission-meeting-0
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -175,13 +175,14 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:6fd471647e3f51f48a74@gavel
+UID:0ac458e9320b37b342e2@gavel
 DTSTAMP:20260721T000000Z
 DTSTART;TZID=America/Chicago:20260721T173000
 DTEND;TZID=America/Chicago:20260721T190000
-SUMMARY:Village of Kronenwetter: Administrative Policy Committee Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative
- -policy-committee-meeting-31
+SUMMARY:Village of Kronenwetter: Revised Administrative Policy Committee Me
+ eting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/revised-admini
+ strative-policy-committee-meeting-8
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -253,6 +254,17 @@ DTSTART;TZID=America/Chicago:20260727T180000
 DTEND;TZID=America/Chicago:20260727T193000
 SUMMARY:Village of Weston: Parks & Recreation Committee
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:409c5a7035b08a5c995a@gavel
+DTSTAMP:20260727T000000Z
+DTSTART;TZID=America/Chicago:20260727T180000
+DTEND;TZID=America/Chicago:20260727T193000
+SUMMARY:Village of Kronenwetter: Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
+ eeting-62
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

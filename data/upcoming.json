@@ -389,15 +389,15 @@
     {
       "date": "2026-07-20",
       "time": "6:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-28",
+      "name": "REVISED Plan Commission Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/revised-plan-commission-meeting-0",
       "source": "kronenwetter"
     },
     {
       "date": "2026-07-21",
       "time": "5:30 PM",
-      "name": "Administrative Policy Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-31",
+      "name": "Revised Administrative Policy Committee Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/revised-administrative-policy-committee-meeting-8",
       "source": "kronenwetter"
     },
     {
@@ -405,6 +405,13 @@
       "time": "5:00 PM",
       "name": "Police and Fire Commission Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-24",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-07-27",
+      "time": "6:00 PM",
+      "name": "Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-62",
       "source": "kronenwetter"
     },
     {
