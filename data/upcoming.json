@@ -123,6 +123,13 @@
     },
     {
       "date": "2026-07-20",
+      "time": "4:45 PM",
+      "name": "Liquor License Review Subcommittee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3547/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-07-20",
       "time": "5:15 PM",
       "name": "Public Health & Safety Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2467/overview",
@@ -196,13 +203,6 @@
       "time": "7:30 AM",
       "name": "Police & Fire Commission Special Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3542/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-03",
-      "time": "5:15 PM",
-      "name": "Parks & Recreation Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2455/overview",
       "source": "wausau"
     }
   ],

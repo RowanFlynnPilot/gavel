@@ -76,6 +76,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:460decf27fc77bdc96b2@gavel
+DTSTAMP:20260720T000000Z
+DTSTART;TZID=America/Chicago:20260720T164500
+DTEND;TZID=America/Chicago:20260720T181500
+SUMMARY:City of Wausau: Liquor License Review Subcommittee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3547/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:0ae29b4985b87118c97a@gavel
 DTSTAMP:20260720T000000Z
 DTSTART;TZID=America/Chicago:20260720T171500
@@ -287,16 +297,6 @@ DTSTART;TZID=America/Chicago:20260803T073000
 DTEND;TZID=America/Chicago:20260803T090000
 SUMMARY:City of Wausau: Police & Fire Commission Special Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3542/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b5e28c1101835a3740ea@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T171500
-DTEND;TZID=America/Chicago:20260803T184500
-SUMMARY:City of Wausau: Parks & Recreation Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2455/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
