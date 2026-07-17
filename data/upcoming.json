@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-07-16",
-      "time": "5:00 PM",
-      "name": "HR, Finance & Property Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-07-28",
       "time": "5:00 PM",
       "name": "Environmental Resources Committee",
@@ -204,30 +197,16 @@
       "name": "Police & Fire Commission Special Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3542/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "5:15 PM",
+      "name": "Parks & Recreation Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2455/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-07-16",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07162026-1941",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-16",
-      "time": "",
-      "name": "Mountain Bay Metropolitan Police Oversight Board",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07162026-1942",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-16",
-      "time": "6:00 PM",
-      "name": "Mountain Bay Metro Police Oversight",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-07-20",
       "time": "",
