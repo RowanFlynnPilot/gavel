@@ -108,20 +108,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-17",
-      "time": "8:00 AM",
-      "name": "Capital Improvement Projects Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2484/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-17",
-      "time": "10:00 AM",
-      "name": "Historic Preservation Commission Ad Hoc Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3543/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-20",
       "time": "4:45 PM",
       "name": "Liquor License Review Subcommittee Meeting",
@@ -203,6 +189,20 @@
       "time": "7:30 AM",
       "name": "Police & Fire Commission Special Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3542/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "5:15 PM",
+      "name": "Parks & Recreation Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2455/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-04",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3540/overview",
       "source": "wausau"
     }
   ],
