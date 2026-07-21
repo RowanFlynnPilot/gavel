@@ -27,86 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:9f58bfd5554b1ff243e1@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;VALUE=DATE:20260720
-SUMMARY:Village of Weston: Village Board of Trustees
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1944
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:05abaa5eef1c42d5584f@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;VALUE=DATE:20260720
-SUMMARY:Village of Weston: Election Notices
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1938
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:846e303d00e980e490e9@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;TZID=America/Chicago:20260720T160000
-DTEND;TZID=America/Chicago:20260720T173000
-SUMMARY:Village of Kronenwetter: Parks Committee
-URL:https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committe
- e-0
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:460decf27fc77bdc96b2@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;TZID=America/Chicago:20260720T164500
-DTEND;TZID=America/Chicago:20260720T181500
-SUMMARY:City of Wausau: Liquor License Review Subcommittee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3547/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:0ae29b4985b87118c97a@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;TZID=America/Chicago:20260720T171500
-DTEND;TZID=America/Chicago:20260720T184500
-SUMMARY:City of Wausau: Public Health & Safety Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2467/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:5c4c7fdedc65bb6abdc3@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;TZID=America/Chicago:20260720T173000
-DTEND;TZID=America/Chicago:20260720T190000
-SUMMARY:Village of Weston: Finance & Human Resources Committee
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1943
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:d0fde92b5a6fffc392dc@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;TZID=America/Chicago:20260720T180000
-DTEND;TZID=America/Chicago:20260720T193000
-SUMMARY:Village of Weston: Board of Trustees
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:81756dd0fcc3af0d72a4@gavel
-DTSTAMP:20260720T000000Z
-DTSTART;TZID=America/Chicago:20260720T180000
-DTEND;TZID=America/Chicago:20260720T193000
-SUMMARY:Village of Kronenwetter: REVISED Plan Commission Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-pc/page/revised-plan-co
- mmission-meeting-0
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:4998669b7774981cda07@gavel
 DTSTAMP:20260721T000000Z
 DTSTART;TZID=America/Chicago:20260721T103000
@@ -323,12 +243,32 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:3e85302185125df95aab@gavel
+DTSTAMP:20260804T000000Z
+DTSTART;TZID=America/Chicago:20260804T173000
+DTEND;TZID=America/Chicago:20260804T190000
+SUMMARY:City of Wausau: Economic Development Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2403/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:aea5b4f69e05d421b699@gavel
 DTSTAMP:20260806T000000Z
 DTSTART;TZID=America/Chicago:20260806T170000
 DTEND;TZID=America/Chicago:20260806T183000
 SUMMARY:Marathon County: Health & Human Services Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:f01f6d20869d9095e4d6@gavel
+DTSTAMP:20260810T000000Z
+DTSTART;TZID=America/Chicago:20260810T164500
+DTEND;TZID=America/Chicago:20260810T181500
+SUMMARY:City of Wausau: Human Resources Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2032/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

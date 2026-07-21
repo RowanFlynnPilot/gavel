@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-20",
-      "time": "4:45 PM",
-      "name": "Liquor License Review Subcommittee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3547/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-20",
-      "time": "5:15 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2467/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-21",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -211,37 +197,23 @@
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3540/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-08-04",
+      "time": "5:30 PM",
+      "name": "Economic Development Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2403/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-10",
+      "time": "4:45 PM",
+      "name": "Human Resources Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2032/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-07-20",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1944",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-20",
-      "time": "",
-      "name": "Election Notices",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1938",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-20",
-      "time": "5:30 PM",
-      "name": "Finance & Human Resources Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07202026-1943",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-20",
-      "time": "6:00 PM",
-      "name": "Board of Trustees",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-07-27",
       "time": "6:00 PM",
@@ -372,20 +344,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-07-20",
-      "time": "4:00 PM",
-      "name": "Parks Committee",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee-0",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-07-20",
-      "time": "6:00 PM",
-      "name": "REVISED Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/revised-plan-commission-meeting-0",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-07-21",
       "time": "5:30 PM",
