@@ -151,6 +151,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:efc8b14801de2655f3a5@gavel
+DTSTAMP:20260728T000000Z
+DTSTART;TZID=America/Chicago:20260728T120000
+DTEND;TZID=America/Chicago:20260728T133000
+SUMMARY:City of Wausau: Community Development Authority Board Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3548/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:804e96158f6ae5890cc8@gavel
 DTSTAMP:20260728T000000Z
 DTSTART;TZID=America/Chicago:20260728T170000
@@ -259,16 +269,6 @@ DTSTART;TZID=America/Chicago:20260806T170000
 DTEND;TZID=America/Chicago:20260806T183000
 SUMMARY:Marathon County: Health & Human Services Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:f01f6d20869d9095e4d6@gavel
-DTSTAMP:20260810T000000Z
-DTSTART;TZID=America/Chicago:20260810T164500
-DTEND;TZID=America/Chicago:20260810T181500
-SUMMARY:City of Wausau: Human Resources Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2032/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
