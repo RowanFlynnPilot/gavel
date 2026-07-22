@@ -37,6 +37,24 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:4fa92cf11c8bff1ae48f@gavel
+DTSTAMP:20260727T000000Z
+DTSTART;VALUE=DATE:20260727
+SUMMARY:Village of Weston: Community Development Authority
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07272026-1946
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:a89c78e8f39ea5e2d481@gavel
+DTSTAMP:20260727T000000Z
+DTSTART;VALUE=DATE:20260727
+SUMMARY:Village of Weston: Park and Recreation Committee
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07272026-1945
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:e94e82036b6b7e668baf@gavel
 DTSTAMP:20260727T000000Z
 DTSTART;TZID=America/Chicago:20260727T073000
