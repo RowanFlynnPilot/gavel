@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-21",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3535/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-21",
-      "time": "5:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3517/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-22",
       "time": "4:30 PM",
       "name": "Historic Preservation Commission Meeting",
@@ -210,6 +196,20 @@
       "time": "5:30 PM",
       "name": "Economic Development Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2403/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-10",
+      "time": "4:45 PM",
+      "name": "Human Resources Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2032/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-11",
+      "time": "5:15 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2416/overview",
       "source": "wausau"
     }
   ],
@@ -344,13 +344,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-07-21",
-      "time": "5:30 PM",
-      "name": "Revised Administrative Policy Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/revised-administrative-policy-committee-meeting-8",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-07-27",
       "time": "4:00 PM",
