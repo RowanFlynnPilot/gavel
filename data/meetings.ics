@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:826a0718c66bf4c030ce@gavel
-DTSTAMP:20260722T000000Z
-DTSTART;TZID=America/Chicago:20260722T163000
-DTEND;TZID=America/Chicago:20260722T180000
-SUMMARY:City of Wausau: Historic Preservation Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2500/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:4fa92cf11c8bff1ae48f@gavel
 DTSTAMP:20260727T000000Z
 DTSTART;VALUE=DATE:20260727
@@ -330,6 +320,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:fbb0afd9c7cccc7e8c44@gavel
+DTSTAMP:20260811T000000Z
+DTSTART;TZID=America/Chicago:20260811T171500
+DTEND;TZID=America/Chicago:20260811T184500
+SUMMARY:City of Wausau: Finance Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2416/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:6305ed2cdd7034ea33e4@gavel
 DTSTAMP:20260811T000000Z
 DTSTART;TZID=America/Chicago:20260811T180000
@@ -565,6 +565,26 @@ DTSTAMP:20260917T000000Z
 DTSTART;TZID=America/Chicago:20260917T180000
 DTEND;TZID=America/Chicago:20260917T193000
 SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
+URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:2c3a094066bbb5a24998@gavel
+DTSTAMP:20260921T000000Z
+DTSTART;TZID=America/Chicago:20260921T173000
+DTEND;TZID=America/Chicago:20260921T190000
+SUMMARY:Village of Weston: Finance & Human Resources Committee
+URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:4fab98fd413a9c91ef90@gavel
+DTSTAMP:20260921T000000Z
+DTSTART;TZID=America/Chicago:20260921T180000
+DTEND;TZID=America/Chicago:20260921T193000
+SUMMARY:Village of Weston: Board of Trustees
 URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
