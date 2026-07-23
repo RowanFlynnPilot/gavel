@@ -144,13 +144,6 @@
     },
     {
       "date": "2026-07-28",
-      "time": "12:00 PM",
-      "name": "Community Development Authority Board Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3548/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-28",
       "time": "6:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2429/overview",
@@ -210,6 +203,13 @@
       "time": "5:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2416/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-11",
+      "time": "6:30 PM",
+      "name": "Common Council Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1968/overview",
       "source": "wausau"
     }
   ],
