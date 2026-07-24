@@ -111,6 +111,20 @@
       "name": "HR, Finance & Property Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-09-22",
+      "time": "5:00 PM",
+      "name": "Environmental Resources Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
+    },
+    {
+      "date": "2026-09-22",
+      "time": "7:00 PM",
+      "name": "County Board Meeting",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
@@ -210,6 +224,13 @@
       "time": "5:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2416/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-11",
+      "time": "6:30 PM",
+      "name": "Common Council Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1968/overview",
       "source": "wausau"
     }
   ],
