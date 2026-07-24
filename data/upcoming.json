@@ -179,20 +179,6 @@
     },
     {
       "date": "2026-08-03",
-      "time": "7:30 AM",
-      "name": "Police & Fire Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3537/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-03",
-      "time": "7:30 AM",
-      "name": "Police & Fire Commission Special Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3542/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-03",
       "time": "5:15 PM",
       "name": "Parks & Recreation Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2455/overview",
@@ -231,6 +217,13 @@
       "time": "6:30 PM",
       "name": "Common Council Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/1968/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-12",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3545/overview",
       "source": "wausau"
     }
   ],
