@@ -197,6 +197,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:a54101e2c7c1b1c91368@gavel
+DTSTAMP:20260803T000000Z
+DTSTART;TZID=America/Chicago:20260803T073000
+DTEND;TZID=America/Chicago:20260803T090000
+SUMMARY:City of Wausau: Police & Fire Commission Special Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3542/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:9314571215e75cdc16eb@gavel
 DTSTAMP:20260803T000000Z
 DTSTART;TZID=America/Chicago:20260803T160000
