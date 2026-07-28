@@ -129,27 +129,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-27",
-      "time": "7:30 AM",
-      "name": "Police & Fire Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2149/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-27",
-      "time": "4:00 PM",
-      "name": "Room Tax Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2159/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-07-27",
-      "time": "5:00 PM",
-      "name": "Bicycle & Pedestrian Advisory Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2124/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-07-28",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -232,30 +211,30 @@
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2416/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-08-12",
+      "time": "6:00 PM",
+      "name": "Airport Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1955/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-12",
+      "time": "6:30 PM",
+      "name": "Common Council Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1968/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-13",
+      "time": "5:00 PM",
+      "name": "Sustainability, Energy & Environment Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2171/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-07-27",
-      "time": "",
-      "name": "Community Development Authority",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07272026-1946",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-27",
-      "time": "",
-      "name": "Park and Recreation Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_07272026-1945",
-      "source": "weston"
-    },
-    {
-      "date": "2026-07-27",
-      "time": "6:00 PM",
-      "name": "Parks & Recreation Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-07-28",
       "time": "",
@@ -371,13 +350,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-07-27",
-      "time": "5:00 PM",
-      "name": "Education & Operations Committee",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
       "date": "2026-08-10",
       "time": "5:00 PM",
       "name": "Regular Board Meeting",
@@ -400,27 +372,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-07-27",
-      "time": "4:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-28",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-07-27",
-      "time": "5:00 PM",
-      "name": "Police and Fire Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-24",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-07-27",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-62",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-08-03",
       "time": "4:00 PM",
