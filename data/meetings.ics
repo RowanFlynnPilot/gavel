@@ -161,8 +161,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:3e85302185125df95aab@gavel
 DTSTAMP:20260804T000000Z
-DTSTART;TZID=America/Chicago:20260804T173000
-DTEND;TZID=America/Chicago:20260804T190000
+DTSTART;TZID=America/Chicago:20260804T180000
+DTEND;TZID=America/Chicago:20260804T193000
 SUMMARY:City of Wausau: Economic Development Committee Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2403/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
