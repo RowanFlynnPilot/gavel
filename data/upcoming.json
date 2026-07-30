@@ -165,13 +165,6 @@
     },
     {
       "date": "2026-08-12",
-      "time": "6:00 PM",
-      "name": "Airport Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/1955/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
       "time": "6:30 PM",
       "name": "Common Council Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/1968/overview",
@@ -203,6 +196,13 @@
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3546/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-18",
+      "time": "5:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3518/overview",
       "source": "wausau"
     }
   ],

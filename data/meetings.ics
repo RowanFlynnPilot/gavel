@@ -242,16 +242,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:f64d4e3fcd4e5aa21e39@gavel
-DTSTAMP:20260812T000000Z
-DTSTART;TZID=America/Chicago:20260812T180000
-DTEND;TZID=America/Chicago:20260812T193000
-SUMMARY:City of Wausau: Airport Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/1955/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:15d4460e73e6061222b3@gavel
 DTSTAMP:20260812T000000Z
 DTSTART;TZID=America/Chicago:20260812T183000
@@ -339,6 +329,16 @@ DTSTART;TZID=America/Chicago:20260818T103000
 DTEND;TZID=America/Chicago:20260818T120000
 SUMMARY:City of Wausau: Board of Public Works Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3546/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:6243263230f2beeeee60@gavel
+DTSTAMP:20260818T000000Z
+DTSTART;TZID=America/Chicago:20260818T170000
+DTEND;TZID=America/Chicago:20260818T183000
+SUMMARY:City of Wausau: Plan Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3518/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
