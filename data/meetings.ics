@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:8c1ad94f96786155b3bf@gavel
-DTSTAMP:20260729T000000Z
-DTSTART;TZID=America/Chicago:20260729T080000
-DTEND;TZID=America/Chicago:20260729T093000
-SUMMARY:City of Wausau: Business Improvement District Board Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3549/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:a54101e2c7c1b1c91368@gavel
 DTSTAMP:20260803T000000Z
 DTSTART;TZID=America/Chicago:20260803T073000
@@ -333,6 +323,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:6243263230f2beeeee60@gavel
+DTSTAMP:20260818T000000Z
+DTSTART;TZID=America/Chicago:20260818T170000
+DTEND;TZID=America/Chicago:20260818T183000
+SUMMARY:City of Wausau: Plan Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3518/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:10c2673cce47ae674461@gavel
 DTSTAMP:20260820T000000Z
 DTSTART;TZID=America/Chicago:20260820T170000
@@ -549,6 +549,26 @@ DTSTART;TZID=America/Chicago:20260922T190000
 DTEND;TZID=America/Chicago:20260922T203000
 SUMMARY:Marathon County: County Board Meeting
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:e6457c7814ab6a780557@gavel
+DTSTAMP:20260928T000000Z
+DTSTART;TZID=America/Chicago:20260928T170000
+DTEND;TZID=America/Chicago:20260928T183000
+SUMMARY:Wausau School Board: Education & Operations Committee
+URL:https://meetings.boardbook.org/Public/Organization/1360
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:ed77f322457986b49cb3@gavel
+DTSTAMP:20260928T000000Z
+DTSTART;TZID=America/Chicago:20260928T180000
+DTEND;TZID=America/Chicago:20260928T193000
+SUMMARY:Village of Weston: Parks & Recreation Committee
+URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

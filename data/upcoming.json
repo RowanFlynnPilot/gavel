@@ -115,13 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-07-29",
-      "time": "8:00 AM",
-      "name": "Business Improvement District Board Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3549/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-08-03",
       "time": "7:30 AM",
       "name": "Police & Fire Commission Special Meeting",
@@ -210,6 +203,13 @@
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3546/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-18",
+      "time": "5:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3518/overview",
       "source": "wausau"
     }
   ],
@@ -318,6 +318,13 @@
       "name": "Board of Trustees",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "6:00 PM",
+      "name": "Parks & Recreation Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -339,6 +346,13 @@
       "date": "2026-09-14",
       "time": "5:00 PM",
       "name": "Regular Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "5:00 PM",
+      "name": "Education & Operations Committee",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
     }
