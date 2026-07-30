@@ -48,6 +48,26 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:e358ebbede038fd53970@gavel
+DTSTAMP:20260803T000000Z
+DTSTART;TZID=America/Chicago:20260803T170000
+DTEND;TZID=America/Chicago:20260803T183000
+SUMMARY:Wausau School Board: Special Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=754152
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:c6fcbde0f31eb64d6721@gavel
+DTSTAMP:20260803T000000Z
+DTSTART;TZID=America/Chicago:20260803T170500
+DTEND;TZID=America/Chicago:20260803T183500
+SUMMARY:Wausau School Board: Board Workshop
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=754138
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:b70bd73ce729b3c0ff37@gavel
 DTSTAMP:20260803T000000Z
 DTSTART;TZID=America/Chicago:20260803T180000

@@ -322,6 +322,20 @@
   ],
   "school_board": [
     {
+      "date": "2026-08-03",
+      "time": "5:00 PM",
+      "name": "Special Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=754152",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-08-03",
+      "time": "5:05 PM",
+      "name": "Board Workshop",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=754138",
+      "source": "school_board"
+    },
+    {
       "date": "2026-08-10",
       "time": "5:00 PM",
       "name": "Regular Board Meeting",
