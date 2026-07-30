@@ -91,16 +91,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:3e85302185125df95aab@gavel
-DTSTAMP:20260804T000000Z
-DTSTART;TZID=America/Chicago:20260804T180000
-DTEND;TZID=America/Chicago:20260804T193000
-SUMMARY:City of Wausau: Economic Development Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2403/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:aea5b4f69e05d421b699@gavel
 DTSTAMP:20260806T000000Z
 DTSTART;TZID=America/Chicago:20260806T170000
@@ -198,6 +188,16 @@ DTSTART;TZID=America/Chicago:20260812T113000
 DTEND;TZID=America/Chicago:20260812T130000
 SUMMARY:City of Wausau: Water Works Commission Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2194/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:30e25451d4106db11402@gavel
+DTSTAMP:20260812T000000Z
+DTSTART;TZID=America/Chicago:20260812T160000
+DTEND;TZID=America/Chicago:20260812T173000
+SUMMARY:City of Wausau: Building Advisory Board
+URL:https://wausauwi.portal.civicclerk.com/event/3551/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -319,16 +319,6 @@ DTSTART;TZID=America/Chicago:20260818T103000
 DTEND;TZID=America/Chicago:20260818T120000
 SUMMARY:City of Wausau: Board of Public Works Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3546/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:6243263230f2beeeee60@gavel
-DTSTAMP:20260818T000000Z
-DTSTART;TZID=America/Chicago:20260818T170000
-DTEND;TZID=America/Chicago:20260818T183000
-SUMMARY:City of Wausau: Plan Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3518/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
