@@ -250,6 +250,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:f60d4e35a185dc728bc5@gavel
+DTSTAMP:20260817T000000Z
+DTSTART;TZID=America/Chicago:20260817T170000
+DTEND;TZID=America/Chicago:20260817T183000
+SUMMARY:City of Wausau: Liquor License Review Subcommittee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3552/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:cf95963abb3048414570@gavel
 DTSTAMP:20260817T000000Z
 DTSTART;TZID=America/Chicago:20260817T171500
@@ -337,16 +347,6 @@ DTSTART;TZID=America/Chicago:20260820T180000
 DTEND;TZID=America/Chicago:20260820T193000
 SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
 URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b8dd49ecd1aa5d14f09d@gavel
-DTSTAMP:20260824T000000Z
-DTSTART;TZID=America/Chicago:20260824T073000
-DTEND;TZID=America/Chicago:20260824T090000
-SUMMARY:City of Wausau: Police & Fire Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2485/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
