@@ -27,69 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:a54101e2c7c1b1c91368@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T073000
-DTEND;TZID=America/Chicago:20260803T090000
-SUMMARY:City of Wausau: Police & Fire Commission Special Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3542/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:9314571215e75cdc16eb@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T160000
-DTEND;TZID=America/Chicago:20260803T173000
-SUMMARY:Village of Kronenwetter: Parks Committee
-URL:https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committe
- e-1
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:e358ebbede038fd53970@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T170000
-DTEND;TZID=America/Chicago:20260803T183000
-SUMMARY:Wausau School Board: Special Meeting
-URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=754152
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:c6fcbde0f31eb64d6721@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T170500
-DTEND;TZID=America/Chicago:20260803T183500
-SUMMARY:Wausau School Board: Board Workshop
-URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=754138
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b70bd73ce729b3c0ff37@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T180000
-DTEND;TZID=America/Chicago:20260803T193000
-SUMMARY:Village of Weston: Community Life & Public Safety Committee
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08032026-1948
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:0cfcb2e4a824c3c70540@gavel
-DTSTAMP:20260803T000000Z
-DTSTART;TZID=America/Chicago:20260803T180000
-DTEND;TZID=America/Chicago:20260803T193000
-SUMMARY:Village of Kronenwetter: Community Life\, Infrastructure and Public
-  Property (CLIPP) Committee Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-li
- fe-infrastructure-and-public-property-clipp-committee-meeting-26
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:cfda4b7a8be13ef44dbb@gavel
 DTSTAMP:20260804T000000Z
 DTSTART;TZID=America/Chicago:20260804T103000
@@ -363,6 +300,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:a470f6f009f71cb3f0ae@gavel
+DTSTAMP:20260820T000000Z
+DTSTART;TZID=America/Chicago:20260820T164500
+DTEND;TZID=America/Chicago:20260820T181500
+SUMMARY:City of Wausau: Transit Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2182/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:10c2673cce47ae674461@gavel
 DTSTAMP:20260820T000000Z
 DTSTART;TZID=America/Chicago:20260820T170000
@@ -379,6 +326,16 @@ DTSTART;TZID=America/Chicago:20260820T180000
 DTEND;TZID=America/Chicago:20260820T193000
 SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:b8dd49ecd1aa5d14f09d@gavel
+DTSTAMP:20260824T000000Z
+DTSTART;TZID=America/Chicago:20260824T073000
+DTEND;TZID=America/Chicago:20260824T090000
+SUMMARY:City of Wausau: Police & Fire Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2485/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
