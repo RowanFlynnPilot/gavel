@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-08-06",
-      "time": "5:00 PM",
-      "name": "Health & Human Services Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-08-11",
       "time": "5:00 PM",
       "name": "Public Safety Committee",
@@ -229,17 +222,10 @@
   ],
   "weston": [
     {
-      "date": "2026-08-06",
+      "date": "2026-08-10",
       "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08062026-1949",
-      "source": "weston"
-    },
-    {
-      "date": "2026-08-06",
-      "time": "",
-      "name": "Mountain Bay Metropolitan Police Oversight Board",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08062026-1951",
+      "name": "S.A.F.E.R. Board of Directors",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1953",
       "source": "weston"
     },
     {
@@ -253,7 +239,7 @@
       "date": "2026-08-10",
       "time": "6:00 PM",
       "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1954",
       "source": "weston"
     },
     {
@@ -363,6 +349,13 @@
     }
   ],
   "school_board": [
+    {
+      "date": "2026-08-10",
+      "time": "5:00 PM",
+      "name": "Regular Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759354",
+      "source": "school_board"
+    },
     {
       "date": "2026-08-10",
       "time": "5:00 PM",

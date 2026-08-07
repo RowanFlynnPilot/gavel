@@ -27,30 +27,11 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:cf6e990f16f7657a1edd@gavel
-DTSTAMP:20260806T000000Z
-DTSTART;VALUE=DATE:20260806
-SUMMARY:Village of Weston: Village Board of Trustees
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08062026-1949
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:c5803b83e6a13b4a3931@gavel
-DTSTAMP:20260806T000000Z
-DTSTART;VALUE=DATE:20260806
-SUMMARY:Village of Weston: Mountain Bay Metropolitan Police Oversight Board
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08062026-1951
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:aea5b4f69e05d421b699@gavel
-DTSTAMP:20260806T000000Z
-DTSTART;TZID=America/Chicago:20260806T170000
-DTEND;TZID=America/Chicago:20260806T183000
-SUMMARY:Marathon County: Health & Human Services Committee
-URL:https://www.marathoncounty.gov/about-us/county-calendar
+UID:a52393c021e9ef7e6371@gavel
+DTSTAMP:20260810T000000Z
+DTSTART;VALUE=DATE:20260810
+SUMMARY:Village of Weston: S.A.F.E.R. Board of Directors
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1953
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -61,6 +42,16 @@ DTSTART;TZID=America/Chicago:20260810T164500
 DTEND;TZID=America/Chicago:20260810T181500
 SUMMARY:City of Wausau: Human Resources Committee Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2032/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:dda8ef37808625375119@gavel
+DTSTAMP:20260810T000000Z
+DTSTART;TZID=America/Chicago:20260810T170000
+DTEND;TZID=America/Chicago:20260810T183000
+SUMMARY:Wausau School Board: Regular Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=759354
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -101,7 +92,7 @@ DTSTAMP:20260810T000000Z
 DTSTART;TZID=America/Chicago:20260810T180000
 DTEND;TZID=America/Chicago:20260810T193000
 SUMMARY:Village of Weston: Public Works Committee
-URL:https://www.westonwi.gov/agendacenter
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1954
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
