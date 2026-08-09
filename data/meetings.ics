@@ -598,4 +598,24 @@ URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
+BEGIN:VEVENT
+UID:dec1146f2dc67a1b62d8@gavel
+DTSTAMP:20261008T000000Z
+DTSTART;TZID=America/Chicago:20261008T150000
+DTEND;TZID=America/Chicago:20261008T163000
+SUMMARY:Marathon County: Executive Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:1cae2a21b361f38bb3ef@gavel
+DTSTAMP:20261008T000000Z
+DTSTART;TZID=America/Chicago:20261008T170000
+DTEND;TZID=America/Chicago:20261008T183000
+SUMMARY:Marathon County: Infrastructure Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
 END:VCALENDAR
