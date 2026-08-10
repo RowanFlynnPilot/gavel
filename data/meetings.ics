@@ -288,6 +288,17 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:41d982a3d1889e0ab3e9@gavel
+DTSTAMP:20260817T000000Z
+DTSTART;TZID=America/Chicago:20260817T180000
+DTEND;TZID=America/Chicago:20260817T193000
+SUMMARY:Village of Kronenwetter: Plan Commission Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission
+ -meeting-29
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:a7a70a50f9a32f74d186@gavel
 DTSTAMP:20260818T000000Z
 DTSTART;TZID=America/Chicago:20260818T103000
@@ -304,17 +315,6 @@ DTSTART;TZID=America/Chicago:20260818T170000
 DTEND;TZID=America/Chicago:20260818T183000
 SUMMARY:City of Wausau: Plan Commission Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3518/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:f0de8fbcd676b60c1505@gavel
-DTSTAMP:20260818T000000Z
-DTSTART;TZID=America/Chicago:20260818T173000
-DTEND;TZID=America/Chicago:20260818T190000
-SUMMARY:Village of Kronenwetter: Administrative Policy Committee Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative
- -policy-committee-meeting-31
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
