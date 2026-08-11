@@ -127,135 +127,8 @@
       "source": "marathon"
     }
   ],
-  "wausau": [
-    {
-      "date": "2026-08-10",
-      "time": "4:45 PM",
-      "name": "Human Resources Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2032/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
-      "time": "8:00 AM",
-      "name": "Community Development Authority Finance Committee",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3565/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3545/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
-      "time": "11:30 AM",
-      "name": "Water Works Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2194/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
-      "time": "4:00 PM",
-      "name": "Building Advisory Board ",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3551/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
-      "time": "5:15 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2416/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-12",
-      "time": "6:30 PM",
-      "name": "Common Council Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/1968/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-13",
-      "time": "5:00 PM",
-      "name": "Sustainability, Energy & Environment Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2171/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-13",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2442/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-17",
-      "time": "5:00 PM",
-      "name": "Liquor License Review Subcommittee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3552/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-17",
-      "time": "5:15 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2468/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-18",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3546/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-18",
-      "time": "5:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3518/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-20",
-      "time": "4:45 PM",
-      "name": "Transit Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2182/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-24",
-      "time": "7:30 AM",
-      "name": "Police & Fire Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2485/overview",
-      "source": "wausau"
-    }
-  ],
+  "wausau": [],
   "weston": [
-    {
-      "date": "2026-08-10",
-      "time": "",
-      "name": "S.A.F.E.R. Board of Directors",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1953",
-      "source": "weston"
-    },
-    {
-      "date": "2026-08-10",
-      "time": "6:00 PM",
-      "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1952",
-      "source": "weston"
-    },
-    {
-      "date": "2026-08-10",
-      "time": "6:00 PM",
-      "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08102026-1954",
-      "source": "weston"
-    },
     {
       "date": "2026-08-11",
       "time": "",
@@ -364,20 +237,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-08-10",
-      "time": "5:00 PM",
-      "name": "Regular Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759354",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-08-10",
-      "time": "5:00 PM",
-      "name": "Regular Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
       "date": "2026-08-24",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
@@ -400,20 +259,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-08-10",
-      "time": "5:00 PM",
-      "name": "Police and Fire Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-25",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-08-10",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-63",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-08-17",
       "time": "6:00 PM",
