@@ -367,6 +367,13 @@
   "kronenwetter": [
     {
       "date": "2026-08-17",
+      "time": "4:00 PM",
+      "name": "Parks Committee",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee-2",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-08-17",
       "time": "6:00 PM",
       "name": "Plan Commission Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-29",
