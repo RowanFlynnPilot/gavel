@@ -27,35 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:606ba84f5a93c7d0e000@gavel
-DTSTAMP:20260811T000000Z
-DTSTART;VALUE=DATE:20260811
-SUMMARY:Village of Weston: Election Notices
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08112026-1950
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:80f5aec8781990bda209@gavel
-DTSTAMP:20260811T000000Z
-DTSTART;TZID=America/Chicago:20260811T170000
-DTEND;TZID=America/Chicago:20260811T183000
-SUMMARY:Marathon County: Public Safety Committee
-URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:6305ed2cdd7034ea33e4@gavel
-DTSTAMP:20260811T000000Z
-DTSTART;TZID=America/Chicago:20260811T180000
-DTEND;TZID=America/Chicago:20260811T193000
-SUMMARY:Village of Weston: S.A.F.E.R. Board of Directors
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:5d1132e9c620f6336c55@gavel
 DTSTAMP:20260812T000000Z
 DTSTART;TZID=America/Chicago:20260812T080000
