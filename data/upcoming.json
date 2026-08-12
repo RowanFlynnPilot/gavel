@@ -179,6 +179,13 @@
     },
     {
       "date": "2026-08-17",
+      "time": "9:00 AM",
+      "name": "Municipal Board of Canvassers Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3567/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-17",
       "time": "5:00 PM",
       "name": "Liquor License Review Subcommittee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3552/overview",
@@ -217,13 +224,6 @@
       "time": "7:30 AM",
       "name": "Police & Fire Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2485/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-24",
-      "time": "5:00 PM",
-      "name": "Bicycle & Pedestrian Advisory Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2125/overview",
       "source": "wausau"
     }
   ],
