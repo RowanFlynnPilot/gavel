@@ -180,6 +180,26 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:204a7962a6afdc7ccffc@gavel
+DTSTAMP:20260818T000000Z
+DTSTART;TZID=America/Chicago:20260818T183000
+DTEND;TZID=America/Chicago:20260818T200000
+SUMMARY:City of Wausau: Common Council Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3568/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:0c182734946353903c84@gavel
+DTSTAMP:20260819T000000Z
+DTSTART;TZID=America/Chicago:20260819T183000
+DTEND;TZID=America/Chicago:20260819T200000
+SUMMARY:DC Everest School Board: Regular School Board Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1315?meeting=757113
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:a470f6f009f71cb3f0ae@gavel
 DTSTAMP:20260820T000000Z
 DTSTART;TZID=America/Chicago:20260820T164500
@@ -306,16 +326,6 @@ DTSTART;TZID=America/Chicago:20260831T171500
 DTEND;TZID=America/Chicago:20260831T184500
 SUMMARY:City of Wausau: Parks & Recreation Committee Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2456/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:47990f9c0df289d9a8d2@gavel
-DTSTAMP:20260901T000000Z
-DTSTART;TZID=America/Chicago:20260901T113000
-DTEND;TZID=America/Chicago:20260901T130000
-SUMMARY:City of Wausau: Water Works Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2195/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
