@@ -1,20 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-08-13",
-      "time": "3:00 PM",
-      "name": "Executive Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-08-13",
-      "time": "5:00 PM",
-      "name": "Infrastructure Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-08-20",
       "time": "5:00 PM",
       "name": "HR, Finance & Property Committee",
@@ -111,23 +97,16 @@
       "name": "Infrastructure Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "5:00 PM",
+      "name": "Public Safety Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
-    {
-      "date": "2026-08-13",
-      "time": "5:00 PM",
-      "name": "Sustainability, Energy & Environment Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2171/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-13",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2442/overview",
-      "source": "wausau"
-    },
     {
       "date": "2026-08-17",
       "time": "9:00 AM",
@@ -217,6 +196,20 @@
       "time": "5:15 PM",
       "name": "Parks & Recreation Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2456/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-01",
+      "time": "11:30 AM",
+      "name": "Water Works Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2195/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-01",
+      "time": "5:30 PM",
+      "name": "Economic Development Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2404/overview",
       "source": "wausau"
     }
   ],
@@ -330,6 +323,13 @@
       "date": "2026-10-12",
       "time": "6:00 PM",
       "name": "Public Works Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "6:00 PM",
+      "name": "S.A.F.E.R. Board of Directors",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
     }
