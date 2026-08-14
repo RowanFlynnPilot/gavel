@@ -141,8 +141,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:204a7962a6afdc7ccffc@gavel
 DTSTAMP:20260818T000000Z
-DTSTART;TZID=America/Chicago:20260818T183000
-DTEND;TZID=America/Chicago:20260818T200000
+DTSTART;TZID=America/Chicago:20260818T180000
+DTEND;TZID=America/Chicago:20260818T193000
 SUMMARY:City of Wausau: Common Council Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3568/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
