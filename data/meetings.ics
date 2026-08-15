@@ -149,16 +149,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:0c182734946353903c84@gavel
-DTSTAMP:20260819T000000Z
-DTSTART;TZID=America/Chicago:20260819T183000
-DTEND;TZID=America/Chicago:20260819T200000
-SUMMARY:DC Everest School Board: Regular School Board Meeting
-URL:https://meetings.boardbook.org/Public/Agenda/1315?meeting=757113
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:a470f6f009f71cb3f0ae@gavel
 DTSTAMP:20260820T000000Z
 DTSTART;TZID=America/Chicago:20260820T164500
