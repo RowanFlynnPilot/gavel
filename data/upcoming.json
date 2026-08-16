@@ -111,6 +111,13 @@
       "name": "Extension, Education & Econ Dev Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-10-15",
+      "time": "5:00 PM",
+      "name": "HR, Finance & Property Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
@@ -337,6 +344,13 @@
       "date": "2026-10-13",
       "time": "6:00 PM",
       "name": "S.A.F.E.R. Board of Directors",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-10-15",
+      "time": "6:00 PM",
+      "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
     }
