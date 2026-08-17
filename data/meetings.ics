@@ -118,13 +118,13 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:7a2b07ccd6a45b30d45c@gavel
+UID:026c4bf813ea05e7090f@gavel
 DTSTAMP:20260818T000000Z
 DTSTART;TZID=America/Chicago:20260818T161500
 DTEND;TZID=America/Chicago:20260818T174500
-SUMMARY:Village of Kronenwetter: Special Village Board Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village
- -board-meeting-13
+SUMMARY:Village of Kronenwetter: REVISED Special Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/revised-special
+ -village-board-meeting-2
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -236,6 +236,17 @@ DTSTART;TZID=America/Chicago:20260824T180000
 DTEND;TZID=America/Chicago:20260824T193000
 SUMMARY:Village of Weston: Parks & Recreation Committee
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:6e65d3ecd2cd828656c1@gavel
+DTSTAMP:20260824T000000Z
+DTSTART;TZID=America/Chicago:20260824T180000
+DTEND;TZID=America/Chicago:20260824T193000
+SUMMARY:Village of Kronenwetter: Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
+ eeting-65
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

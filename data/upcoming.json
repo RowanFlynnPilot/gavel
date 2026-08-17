@@ -403,8 +403,8 @@
     {
       "date": "2026-08-18",
       "time": "4:15 PM",
-      "name": "Special Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-13",
+      "name": "REVISED Special Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/revised-special-village-board-meeting-2",
       "source": "kronenwetter"
     },
     {
@@ -412,6 +412,13 @@
       "time": "5:30 PM",
       "name": "Administrative Policy Committee Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-31",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-08-24",
+      "time": "6:00 PM",
+      "name": "Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-65",
       "source": "kronenwetter"
     }
   ],
