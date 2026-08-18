@@ -149,6 +149,17 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:99d31d027953b0c9e9f3@gavel
+DTSTAMP:20260824T000000Z
+DTSTART;TZID=America/Chicago:20260824T170000
+DTEND;TZID=America/Chicago:20260824T183000
+SUMMARY:Village of Kronenwetter: Police and Fire Commission Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fir
+ e-commission-meeting-26
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:b0c675608542336f3b28@gavel
 DTSTAMP:20260824T000000Z
 DTSTART;TZID=America/Chicago:20260824T180000
