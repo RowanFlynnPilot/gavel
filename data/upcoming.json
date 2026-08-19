@@ -122,27 +122,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-08-18",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3546/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-18",
-      "time": "5:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3518/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-18",
-      "time": "6:00 PM",
-      "name": "Common Council Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3568/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-08-20",
       "time": "4:45 PM",
       "name": "Transit Commission Meeting",
@@ -224,6 +203,27 @@
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3569/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "5:15 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2417/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-08",
+      "time": "6:30 PM",
+      "name": "Common Council Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1969/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-10",
+      "time": "5:00 PM",
+      "name": "Infrastructure & Facilities Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2443/overview",
       "source": "wausau"
     }
   ],
@@ -366,24 +366,10 @@
   ],
   "kronenwetter": [
     {
-      "date": "2026-08-18",
-      "time": "4:15 PM",
-      "name": "REVISED Special Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/revised-special-village-board-meeting-2",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-08-18",
-      "time": "5:30 PM",
-      "name": "Administrative Policy Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-31",
-      "source": "kronenwetter"
-    },
-    {
       "date": "2026-08-24",
       "time": "5:00 PM",
       "name": "Police and Fire Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-26",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-27",
       "source": "kronenwetter"
     },
     {
