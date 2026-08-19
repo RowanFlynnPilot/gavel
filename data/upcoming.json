@@ -223,9 +223,23 @@
   "weston": [
     {
       "date": "2026-08-20",
+      "time": "",
+      "name": "Mountain Bay Metropolitan Police Oversight Board",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08202026-1959",
+      "source": "weston"
+    },
+    {
+      "date": "2026-08-20",
       "time": "6:00 PM",
       "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-08-24",
+      "time": "",
+      "name": "Park and Recreation Committee",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08242026-1958",
       "source": "weston"
     },
     {
