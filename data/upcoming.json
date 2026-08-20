@@ -339,6 +339,20 @@
       "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "5:30 PM",
+      "name": "Finance & Human Resources Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "6:00 PM",
+      "name": "Board of Trustees",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -387,13 +401,5 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": [
-    {
-      "date": "2026-08-19",
-      "time": "6:30 PM",
-      "name": "Regular School Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=757113",
-      "source": "dc_everest"
-    }
-  ]
+  "dc_everest": []
 }
