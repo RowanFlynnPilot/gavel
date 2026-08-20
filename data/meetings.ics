@@ -56,6 +56,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:1b7992164294402fbdf3@gavel
+DTSTAMP:20260824T000000Z
+DTSTART;VALUE=DATE:20260824
+SUMMARY:Village of Weston: Village Board of Trustees
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08242026-1960
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:d5db9cc847fe75b719a3@gavel
 DTSTAMP:20260824T000000Z
 DTSTART;VALUE=DATE:20260824
@@ -143,6 +152,16 @@ DTSTART;TZID=America/Chicago:20260825T103000
 DTEND;TZID=America/Chicago:20260825T120000
 SUMMARY:City of Wausau: Board of Public Works Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3566/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:460eb4ed2e58bca48962@gavel
+DTSTAMP:20260825T000000Z
+DTSTART;TZID=America/Chicago:20260825T120000
+DTEND;TZID=America/Chicago:20260825T133000
+SUMMARY:City of Wausau: Community Development Authority Board Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3575/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -324,16 +343,6 @@ DTSTART;TZID=America/Chicago:20260910T170000
 DTEND;TZID=America/Chicago:20260910T183000
 SUMMARY:Marathon County: Infrastructure Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:19ad0ad80753c2b09a62@gavel
-DTSTAMP:20260910T000000Z
-DTSTART;TZID=America/Chicago:20260910T170000
-DTEND;TZID=America/Chicago:20260910T183000
-SUMMARY:City of Wausau: Infrastructure & Facilities Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2443/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

@@ -151,6 +151,13 @@
     },
     {
       "date": "2026-08-25",
+      "time": "12:00 PM",
+      "name": "Community Development Authority Board Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3575/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-08-25",
       "time": "5:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2430/overview",
@@ -211,13 +218,6 @@
       "name": "Common Council Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/1969/overview",
       "source": "wausau"
-    },
-    {
-      "date": "2026-09-10",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2443/overview",
-      "source": "wausau"
     }
   ],
   "weston": [
@@ -233,6 +233,13 @@
       "time": "6:00 PM",
       "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-08-24",
+      "time": "",
+      "name": "Village Board of Trustees",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08242026-1960",
       "source": "weston"
     },
     {
