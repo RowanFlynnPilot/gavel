@@ -27,35 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3fe90fb8c0642b0b2648@gavel
-DTSTAMP:20260820T000000Z
-DTSTART;VALUE=DATE:20260820
-SUMMARY:Village of Weston: Mountain Bay Metropolitan Police Oversight Board
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08202026-1959
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:10c2673cce47ae674461@gavel
-DTSTAMP:20260820T000000Z
-DTSTART;TZID=America/Chicago:20260820T170000
-DTEND;TZID=America/Chicago:20260820T183000
-SUMMARY:Marathon County: HR\, Finance & Property Committee
-URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:68596af625015398cfe6@gavel
-DTSTAMP:20260820T000000Z
-DTSTART;TZID=America/Chicago:20260820T180000
-DTEND;TZID=America/Chicago:20260820T193000
-SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:1b7992164294402fbdf3@gavel
 DTSTAMP:20260824T000000Z
 DTSTART;VALUE=DATE:20260824
@@ -343,6 +314,16 @@ DTSTART;TZID=America/Chicago:20260910T170000
 DTEND;TZID=America/Chicago:20260910T183000
 SUMMARY:Marathon County: Infrastructure Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:19ad0ad80753c2b09a62@gavel
+DTSTAMP:20260910T000000Z
+DTSTART;TZID=America/Chicago:20260910T170000
+DTEND;TZID=America/Chicago:20260910T183000
+SUMMARY:City of Wausau: Infrastructure & Facilities Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2443/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
