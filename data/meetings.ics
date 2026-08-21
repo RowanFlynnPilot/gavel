@@ -65,6 +65,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:3166d634ac2a35874e12@gavel
+DTSTAMP:20260824T000000Z
+DTSTART;TZID=America/Chicago:20260824T170000
+DTEND;TZID=America/Chicago:20260824T183000
+SUMMARY:Wausau School Board: Committee of the Whole Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=759941
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:539c448bc52a81153d8f@gavel
 DTSTAMP:20260824T000000Z
 DTSTART;TZID=America/Chicago:20260824T170000
@@ -82,6 +92,16 @@ DTEND;TZID=America/Chicago:20260824T183000
 SUMMARY:Village of Kronenwetter: Police and Fire Commission Meeting
 URL:https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fir
  e-commission-meeting-26
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:b678a84f276e3c3e18ae@gavel
+DTSTAMP:20260824T000000Z
+DTSTART;TZID=America/Chicago:20260824T173000
+DTEND;TZID=America/Chicago:20260824T190000
+SUMMARY:Wausau School Board: Special Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=762745
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
