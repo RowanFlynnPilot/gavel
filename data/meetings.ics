@@ -187,6 +187,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:b1d6f49b72010b37ca55@gavel
+DTSTAMP:20260826T000000Z
+DTSTART;TZID=America/Chicago:20260826T080000
+DTEND;TZID=America/Chicago:20260826T093000
+SUMMARY:City of Wausau: Business Improvement District Board Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3576/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:97362a083f5befaafcf2@gavel
 DTSTAMP:20260826T000000Z
 DTSTART;TZID=America/Chicago:20260826T163000
@@ -334,16 +344,6 @@ DTSTART;TZID=America/Chicago:20260910T170000
 DTEND;TZID=America/Chicago:20260910T183000
 SUMMARY:Marathon County: Infrastructure Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:19ad0ad80753c2b09a62@gavel
-DTSTAMP:20260910T000000Z
-DTSTART;TZID=America/Chicago:20260910T170000
-DTEND;TZID=America/Chicago:20260910T183000
-SUMMARY:City of Wausau: Infrastructure & Facilities Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2443/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
