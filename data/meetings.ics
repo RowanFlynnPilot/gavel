@@ -87,12 +87,12 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:431535ef1aa56718a910@gavel
+UID:12be1e7c95433981e27b@gavel
 DTSTAMP:20260826T000000Z
 DTSTART;TZID=America/Chicago:20260826T160000
 DTEND;TZID=America/Chicago:20260826T173000
-SUMMARY:City of Wausau: One Time Event
-URL:https://wausauwi.portal.civicclerk.com/event/3578/overview
+SUMMARY:City of Wausau: Historic Preservation Commission Ad Hoc Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3579/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
