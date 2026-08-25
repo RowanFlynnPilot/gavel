@@ -87,6 +87,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:431535ef1aa56718a910@gavel
+DTSTAMP:20260826T000000Z
+DTSTART;TZID=America/Chicago:20260826T160000
+DTEND;TZID=America/Chicago:20260826T173000
+SUMMARY:City of Wausau: One Time Event
+URL:https://wausauwi.portal.civicclerk.com/event/3578/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:97362a083f5befaafcf2@gavel
 DTSTAMP:20260826T000000Z
 DTSTART;TZID=America/Chicago:20260826T163000
@@ -97,13 +107,13 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:b4b5bd4afb0af63851a0@gavel
+UID:33c84f39cb0dc3eccb89@gavel
 DTSTAMP:20260827T000000Z
 DTSTART;TZID=America/Chicago:20260827T163000
 DTEND;TZID=America/Chicago:20260827T180000
-SUMMARY:Village of Kronenwetter: Village Board Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
- eeting-66
+SUMMARY:Village of Kronenwetter: Special Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village
+ -board-meeting-13
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -134,6 +144,16 @@ DTSTART;TZID=America/Chicago:20260901T173000
 DTEND;TZID=America/Chicago:20260901T190000
 SUMMARY:City of Wausau: Economic Development Committee Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2404/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:78f4fed7ec7a19d90591@gavel
+DTSTAMP:20260902T000000Z
+DTSTART;TZID=America/Chicago:20260902T173000
+DTEND;TZID=America/Chicago:20260902T190000
+SUMMARY:City of Wausau: Committee of the Whole Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3577/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -259,16 +279,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:af8cad5956abe6fd499d@gavel
-DTSTAMP:20260914T000000Z
-DTSTART;TZID=America/Chicago:20260914T164500
-DTEND;TZID=America/Chicago:20260914T181500
-SUMMARY:City of Wausau: Human Resources Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2033/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:a933acd7e8a1a6451261@gavel
 DTSTAMP:20260914T000000Z
 DTSTART;TZID=America/Chicago:20260914T170000
@@ -295,16 +305,6 @@ DTSTART;TZID=America/Chicago:20260914T180000
 DTEND;TZID=America/Chicago:20260914T193000
 SUMMARY:Village of Weston: Public Works Committee
 URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:c1dfedfd35ea09ed265a@gavel
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Chicago:20260915T093000
-DTEND;TZID=America/Chicago:20260915T110000
-SUMMARY:City of Wausau: Board of Public Works Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3571/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
