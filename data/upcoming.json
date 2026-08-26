@@ -208,6 +208,13 @@
   ],
   "weston": [
     {
+      "date": "2026-08-27",
+      "time": "",
+      "name": "Mountain Bay Metropolitan Police Oversight Board",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08272026-1961",
+      "source": "weston"
+    },
+    {
       "date": "2026-09-07",
       "time": "6:00 PM",
       "name": "Community Life & Public Safety Committee",
@@ -342,6 +349,20 @@
       "time": "4:30 PM",
       "name": "Special Village Board Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-13",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-09-10",
+      "time": "6:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-30",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "6:00 PM",
+      "name": "Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-66",
       "source": "kronenwetter"
     }
   ],

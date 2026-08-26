@@ -57,6 +57,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:b6ef75be4a9cb17784a9@gavel
+DTSTAMP:20260827T000000Z
+DTSTART;VALUE=DATE:20260827
+SUMMARY:Village of Weston: Mountain Bay Metropolitan Police Oversight Board
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08272026-1961
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:33c84f39cb0dc3eccb89@gavel
 DTSTAMP:20260827T000000Z
 DTSTART;TZID=America/Chicago:20260827T163000
@@ -229,6 +238,17 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:edd749bcf556bd4ccf35@gavel
+DTSTAMP:20260910T000000Z
+DTSTART;TZID=America/Chicago:20260910T180000
+DTEND;TZID=America/Chicago:20260910T193000
+SUMMARY:Village of Kronenwetter: Plan Commission Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission
+ -meeting-30
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:af8cad5956abe6fd499d@gavel
 DTSTAMP:20260914T000000Z
 DTSTART;TZID=America/Chicago:20260914T164500
@@ -265,6 +285,17 @@ DTSTART;TZID=America/Chicago:20260914T180000
 DTEND;TZID=America/Chicago:20260914T193000
 SUMMARY:Village of Weston: Public Works Committee
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:079d0f184e1cb27a48b0@gavel
+DTSTAMP:20260914T000000Z
+DTSTART;TZID=America/Chicago:20260914T180000
+DTEND;TZID=America/Chicago:20260914T193000
+SUMMARY:Village of Kronenwetter: Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
+ eeting-66
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
