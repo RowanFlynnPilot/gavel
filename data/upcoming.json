@@ -1,20 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-08-25",
-      "time": "5:00 PM",
-      "name": "Environmental Resources Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-08-25",
-      "time": "7:00 PM",
-      "name": "County Board Meeting",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-09-03",
       "time": "5:00 PM",
       "name": "Health & Human Services Committee",
@@ -115,27 +101,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-08-25",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3566/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-25",
-      "time": "12:00 PM",
-      "name": "Community Development Authority Board Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3575/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-25",
-      "time": "5:15 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2430/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-08-26",
       "time": "8:00 AM",
       "name": "Business Improvement District Board Meeting",
@@ -217,6 +182,27 @@
       "time": "5:00 PM",
       "name": "Infrastructure & Facilities Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2443/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-14",
+      "time": "4:45 PM",
+      "name": "Human Resources Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2033/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "9:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3571/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "5:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3519/overview",
       "source": "wausau"
     }
   ],
