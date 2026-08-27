@@ -101,27 +101,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-08-26",
-      "time": "8:00 AM",
-      "name": "Business Improvement District Board Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3576/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-26",
-      "time": "4:00 PM",
-      "name": "Historic Preservation Commission Ad Hoc Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3579/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-08-26",
-      "time": "4:30 PM",
-      "name": "Historic Preservation Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2501/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-08-31",
       "time": "5:15 PM",
       "name": "Parks & Recreation Committee Meeting",
@@ -203,6 +182,27 @@
       "time": "9:30 AM",
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3571/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-15",
+      "time": "5:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3519/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-17",
+      "time": "4:45 PM",
+      "name": "Transit Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2183/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-21",
+      "time": "5:15 PM",
+      "name": "Public Health & Safety Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2469/overview",
       "source": "wausau"
     }
   ],
@@ -318,6 +318,13 @@
       "name": "Board of Trustees",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "6:00 PM",
+      "name": "Parks & Recreation Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -339,6 +346,13 @@
       "date": "2026-10-12",
       "time": "5:00 PM",
       "name": "Regular Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "5:00 PM",
+      "name": "Education & Operations Committee",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
     }
