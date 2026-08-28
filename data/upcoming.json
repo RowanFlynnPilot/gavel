@@ -97,6 +97,20 @@
       "name": "HR, Finance & Property Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "5:00 PM",
+      "name": "Environmental Resources Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "7:00 PM",
+      "name": "County Board Meeting",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
@@ -207,13 +221,6 @@
     }
   ],
   "weston": [
-    {
-      "date": "2026-08-27",
-      "time": "",
-      "name": "Mountain Bay Metropolitan Police Oversight Board",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_08272026-1961",
-      "source": "weston"
-    },
     {
       "date": "2026-09-07",
       "time": "6:00 PM",
@@ -358,13 +365,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-08-27",
-      "time": "4:30 PM",
-      "name": "Special Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-13",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-09-10",
       "time": "6:00 PM",
