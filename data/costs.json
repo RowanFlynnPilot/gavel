@@ -1,0 +1,292 @@
+[
+  {
+    "ts": "2026-08-29T22:33:59.461467+00:00",
+    "meeting_id": "bb_762745",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 835,
+    "output_tokens": 503,
+    "usd": 0.00335
+  },
+  {
+    "ts": "2026-08-29T22:34:10.499465+00:00",
+    "meeting_id": "bb_759941",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 2055,
+    "output_tokens": 1127,
+    "usd": 0.00769
+  },
+  {
+    "ts": "2026-08-29T22:34:21.151078+00:00",
+    "meeting_id": "bb_759354",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 2171,
+    "output_tokens": 1068,
+    "usd": 0.007511
+  },
+  {
+    "ts": "2026-08-29T22:34:23.889949+00:00",
+    "meeting_id": "bb_754138",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 843,
+    "output_tokens": 323,
+    "usd": 0.002458
+  },
+  {
+    "ts": "2026-08-29T22:34:28.593791+00:00",
+    "meeting_id": "bb_754152",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1239,
+    "output_tokens": 736,
+    "usd": 0.004919
+  },
+  {
+    "ts": "2026-08-29T22:34:39.652960+00:00",
+    "meeting_id": "bb_752475",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 2438,
+    "output_tokens": 1124,
+    "usd": 0.008058
+  },
+  {
+    "ts": "2026-08-29T22:34:42.485994+00:00",
+    "meeting_id": "kw_9e62208180374bedb996ca66146bec4b",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 977,
+    "output_tokens": 281,
+    "usd": 0.002382
+  },
+  {
+    "ts": "2026-08-29T22:34:50.249551+00:00",
+    "meeting_id": "kw_ba56fe14f9d845d19d5fedf7e8b2f5d5",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1353,
+    "output_tokens": 1130,
+    "usd": 0.007003
+  },
+  {
+    "ts": "2026-08-29T22:34:54.577619+00:00",
+    "meeting_id": "kw_f432750fb1d34fbcb533fdcb37765323",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1194,
+    "output_tokens": 573,
+    "usd": 0.004059
+  },
+  {
+    "ts": "2026-08-29T22:35:00.437932+00:00",
+    "meeting_id": "kw_c8a9c022aeb74b99af4d0767a1ce6fa0",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1136,
+    "output_tokens": 885,
+    "usd": 0.005561
+  },
+  {
+    "ts": "2026-08-29T22:35:04.605980+00:00",
+    "meeting_id": "kw_dfa01e306c3f48089c892a6df5855a3f",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1086,
+    "output_tokens": 372,
+    "usd": 0.002946
+  },
+  {
+    "ts": "2026-08-29T22:35:13.322306+00:00",
+    "meeting_id": "kw_a1cf1e0be9fb4217aeeb180d8ef4cbcf",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1089,
+    "output_tokens": 945,
+    "usd": 0.005814
+  },
+  {
+    "ts": "2026-08-29T22:35:22.344259+00:00",
+    "meeting_id": "kw_ff9da6dd27894cd58c787894e5044d7e",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1126,
+    "output_tokens": 968,
+    "usd": 0.005966
+  },
+  {
+    "ts": "2026-08-29T22:35:30.612316+00:00",
+    "meeting_id": "kw_4b451bf64cea4053a801fe5073e865f5",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1171,
+    "output_tokens": 922,
+    "usd": 0.005781
+  },
+  {
+    "ts": "2026-08-29T22:35:48.003943+00:00",
+    "meeting_id": "kw_91d8ac56afd64f8387fac2558d0280f4",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1661,
+    "output_tokens": 1262,
+    "usd": 0.023913
+  },
+  {
+    "ts": "2026-08-29T22:35:53.826603+00:00",
+    "meeting_id": "kw_3ac7964efee943b284a49f1af88be58d",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1080,
+    "output_tokens": 631,
+    "usd": 0.004235
+  },
+  {
+    "ts": "2026-08-29T22:36:02.861342+00:00",
+    "meeting_id": "kw_37fdd6a47c8946c5af1dbe95d99eedea",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1251,
+    "output_tokens": 1105,
+    "usd": 0.006776
+  },
+  {
+    "ts": "2026-08-29T22:36:22.820950+00:00",
+    "meeting_id": "kw_7c76106005794cfd92b961ca57869671",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1816,
+    "output_tokens": 1460,
+    "usd": 0.027348
+  },
+  {
+    "ts": "2026-08-29T22:37:08.018416+00:00",
+    "meeting_id": "kw_905595b36d904377a0e86998afadd2e6",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 2573,
+    "output_tokens": 3052,
+    "usd": 0.053499
+  },
+  {
+    "ts": "2026-08-29T22:37:26.147733+00:00",
+    "meeting_id": "kw_a66c13aff7484eba8c841b1d59dcc2b7",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1656,
+    "output_tokens": 1361,
+    "usd": 0.025383
+  },
+  {
+    "ts": "2026-08-29T22:37:31.807473+00:00",
+    "meeting_id": "kw_a1ac0fada0c14d79b3f4c6dd5983cd2c",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1051,
+    "output_tokens": 882,
+    "usd": 0.005461
+  },
+  {
+    "ts": "2026-08-29T22:37:49.548606+00:00",
+    "meeting_id": "kw_e52048a0303f4ab683160cb2c74875cb",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1688,
+    "output_tokens": 1398,
+    "usd": 0.026034
+  },
+  {
+    "ts": "2026-08-29T22:38:01.607558+00:00",
+    "meeting_id": "kw_e852a5448baa43e28ceb171e57576336",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1644,
+    "output_tokens": 1392,
+    "usd": 0.008604
+  },
+  {
+    "ts": "2026-08-29T22:38:24.399805+00:00",
+    "meeting_id": "kw_0c186a226ebf4a359f1d4c3a52fd7b37",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1741,
+    "output_tokens": 1745,
+    "usd": 0.031398
+  },
+  {
+    "ts": "2026-08-29T22:38:50.329564+00:00",
+    "meeting_id": "kw_d62f82063c0042b5897330781843b4c2",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 2134,
+    "output_tokens": 1782,
+    "usd": 0.033132
+  },
+  {
+    "ts": "2026-08-29T22:39:11.745207+00:00",
+    "meeting_id": "kw_984daf117d4046ba8bdb30b6d98982e6",
+    "jurisdiction": "kronenwetter",
+    "purpose": "minutes_summary",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1812,
+    "output_tokens": 1589,
+    "usd": 0.029271
+  },
+  {
+    "ts": "2026-08-29T22:39:22.719504+00:00",
+    "meeting_id": "bb_757113",
+    "jurisdiction": "dc_everest",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 2905,
+    "output_tokens": 1133,
+    "usd": 0.00857
+  },
+  {
+    "ts": "2026-08-29T22:39:40.691126+00:00",
+    "meeting_id": "bb_752240",
+    "jurisdiction": "dc_everest",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 3991,
+    "output_tokens": 2494,
+    "usd": 0.016461
+  },
+  {
+    "ts": "2026-08-29T22:43:28.668352+00:00",
+    "meeting_id": "_6aNdLDBS4w",
+    "jurisdiction": "weston",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 4038,
+    "output_tokens": 4096,
+    "usd": 0.024518
+  }
+]

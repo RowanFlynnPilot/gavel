@@ -1,0 +1,96 @@
+{
+  "overview": "Based on the published agenda, the Wausau School District's Committee of the Whole was scheduled to conduct routine business including approval of minutes and bills, review of legal expenses and contracting, and consideration of the 2026-2027 budget and tax levy. The meeting was expected to address property value projections for mill rate calculations and set the date for the district's annual budget hearing and meeting.",
+  "committee": "Committee of the Whole Meeting",
+  "agenda": [
+    {
+      "time": "N/A",
+      "item": "Call to Order"
+    },
+    {
+      "time": "N/A",
+      "item": "Approve the Minutes"
+    },
+    {
+      "time": "N/A",
+      "item": "Public and Student Comment"
+    },
+    {
+      "time": "N/A",
+      "item": "Audit of the Bills"
+    },
+    {
+      "time": "N/A",
+      "item": "Legal Expenses Summary for 2025-2026"
+    },
+    {
+      "time": "N/A",
+      "item": "Approve List of Legal Firms (Action Requested)"
+    },
+    {
+      "time": "N/A",
+      "item": "Set Annual Meeting Date and Location (Action Requested)"
+    },
+    {
+      "time": "N/A",
+      "item": "Share Equalized Value Estimates"
+    },
+    {
+      "time": "N/A",
+      "item": "Recommendation for 2026-2027 Budget (Action Requested)"
+    },
+    {
+      "time": "N/A",
+      "item": "Recommendation for 2026-2027 Tax Levy (Action Requested)"
+    },
+    {
+      "time": "N/A",
+      "item": "Adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Legal Expenses Summary for 2025-2026",
+      "body": "Dr. Elizabeth Channel, Assistant Superintendent of Operations, was scheduled to present a summary report of all legal counsel expenses incurred during 2025-2026, separated by law firm and by type of legal advice sought. This was expected to be a written report requiring no action, with an estimated presentation time of one minute."
+    },
+    {
+      "item": "Approve List of Legal Firms",
+      "body": "The Committee was expected to consider a summary list of legal firms used by the District for various necessary legal needs. Action was requested to approve the list for the 2026-2027 fiscal year, with an estimated presentation time of one minute."
+    },
+    {
+      "item": "Set Annual Meeting Date and Location",
+      "body": "Administration was expected to request that the Committee recommend to the Board a date, time, and location for the budget hearing and annual meeting to ensure compliance with Wisconsin statute (s.120.08(1)(a)) requiring the annual meeting to occur between May 15 and October 31. This recommendation would allow the full Board to approve the details in a timely manner so that all statutory notices and timelines could be met."
+    },
+    {
+      "item": "Share Equalized Value Estimates",
+      "body": "The Committee was scheduled to receive information on projected property value changes for the 2026-27 mill rate calculation. Since certified property values would not be available until October 1, the District was expected to present a projection assuming uniform property value changes across municipalities, with the District's property value estimated to increase 4.03% for budget and annual meeting purposes."
+    },
+    {
+      "item": "Recommendation for 2026-2027 Budget",
+      "body": "Dr. Elizabeth Channel was scheduled to present the 2026-27 Budget Booklet for initial review and was expected to request that the Committee recommend the preliminary budget for use at the Budget Hearing and Annual Meeting. The presentation was estimated to take 15 minutes."
+    },
+    {
+      "item": "Recommendation for 2026-2027 Tax Levy",
+      "body": "The Committee was expected to consider the tax levy contained in the 2026-27 Budget Booklet to support the budget. Once approved, this levy was expected to be presented at the Budget Hearing and Annual Meeting, with an estimated discussion time of 10 minutes."
+    }
+  ],
+  "publicComment": "A public and student comment period was included on the agenda.",
+  "actionItems": [
+    "Action was requested to approve the list of legal firms for 2026-2027",
+    "Action was requested to set and recommend the date, time, and location for the budget hearing and annual meeting",
+    "Action was requested to recommend the 2026-2027 preliminary budget for use at the Budget Hearing and Annual Meeting",
+    "Action was requested to recommend the 2026-2027 tax levy for presentation at the Budget Hearing and Annual Meeting"
+  ],
+  "topics": [
+    "Budget",
+    "Finance",
+    "Legal Affairs",
+    "Policy",
+    "2026-2027 Fiscal Year Planning"
+  ],
+  "_source": "boardbook_agenda",
+  "title": "Committee of the Whole Meeting - 2026-08-24",
+  "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759941",
+  "source": "school_board",
+  "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759941",
+  "processed_at": "2026-08-29T22:34:10.500139+00:00"
+}

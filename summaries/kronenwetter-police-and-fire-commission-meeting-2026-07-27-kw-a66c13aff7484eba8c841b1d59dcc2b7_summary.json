@@ -1,0 +1,117 @@
+{
+  "overview": "The Village of Kronenwetter Police and Fire Commission voted 4-0 to continue investigating a complaint dated June 30, 2026, following a closed session that lasted nearly an hour and 45 minutes. The commission also approved revisions to the Citizen Charge Form and accompanying Citizen Charge Procedures, subject to the Village Attorney's review. Both actions were taken unanimously by the four commissioners present.",
+  "committee": "Village of Kronenwetter Police and Fire Commission",
+  "presiding": "Alex Vedvik, President",
+  "agenda": [
+    {
+      "time": "5:01 PM",
+      "item": "Call to Order and Roll Call"
+    },
+    {
+      "time": "N/A",
+      "item": "Public Comment"
+    },
+    {
+      "time": "N/A",
+      "item": "Announcement of Closed Session"
+    },
+    {
+      "time": "5:03 PM",
+      "item": "Closed Session - Section 19.85(1)(f): Personnel/Disciplinary Matters"
+    },
+    {
+      "time": "6:46 PM",
+      "item": "Reconvene into Open Session"
+    },
+    {
+      "time": "N/A",
+      "item": "Action After Closed Session - Complaint dated 06/30/2026"
+    },
+    {
+      "time": "N/A",
+      "item": "Approval of July 13, 2026 Meeting Minutes"
+    },
+    {
+      "time": "N/A",
+      "item": "Discussion and Possible Action on Citizen Charge Form and Procedures"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Closed Session - Personnel/Disciplinary Matters",
+      "body": "Commissioner Rule moved and Commissioner Udulutch seconded a motion to convene into closed session under Section 19.85(1)(f), regarding financial, medical, social, personal histories, or disciplinary data of specific persons. The motion carried 3-0 by roll call vote, with the session beginning at 5:03 p.m. Vice President Rick Smith arrived during the closed session at 5:06 p.m. The commission reconvened in open session at 6:46 p.m. on a motion by Commissioner Udulutch, seconded by Commissioner Rule, carried 4-0."
+    },
+    {
+      "item": "Action After Closed Session - Complaint dated 06/30/2026",
+      "body": "Vice President Smith moved, seconded by Commissioner Udulutch, to continue investigating the complaint dated June 30, 2026. No additional details about the nature of the complaint or the subject were disclosed in the open session record. The motion carried 4-0 by voice vote."
+    },
+    {
+      "item": "Approval of July 13, 2026 Meeting Minutes",
+      "body": "Vice President Smith moved and Commissioner Rule seconded approval of the July 13, 2026 meeting minutes as written. The motion carried 4-0 by voice vote."
+    },
+    {
+      "item": "Citizen Charge Form and Procedures",
+      "body": "Vice President Smith moved to approve changes made to the Citizen Charge Form as submitted, conditioned on review and approval by the Village Attorney for both the Citizen Charge Form and the Citizen Charge Procedures. Commissioner Rule seconded the motion. The motion carried 4-0 by voice vote."
+    }
+  ],
+  "publicComment": "No public comment was recorded.",
+  "actionItems": [
+    "Commission directed continuation of the investigation into the complaint dated June 30, 2026.",
+    "Revised Citizen Charge Form and Citizen Charge Procedures approved, subject to Village Attorney review and approval before taking effect."
+  ],
+  "topics": [
+    "Public Safety",
+    "Staffing",
+    "Complaint Investigation",
+    "Citizen Charge Form",
+    "Commission Procedures"
+  ],
+  "votes": [
+    {
+      "item": "Convene into closed session under Section 19.85(1)(f)",
+      "motion": "Motion to convene into closed session",
+      "mover": "Commissioner Rule",
+      "second": "Commissioner Udulutch",
+      "outcome": "Approved",
+      "tally": "3-0"
+    },
+    {
+      "item": "Reconvene into open session",
+      "motion": "Motion to reconvene into open session",
+      "mover": "Commissioner Udulutch",
+      "second": "Commissioner Rule",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Continue investigating the complaint dated 06/30/2026",
+      "motion": "Motion to continue investigating the complaint dated 06/30/2026",
+      "mover": "Vice President Smith",
+      "second": "Commissioner Udulutch",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Approve July 13, 2026 meeting minutes",
+      "motion": "Motion to approve the 07/13/2026 meeting minutes as written",
+      "mover": "Vice President Smith",
+      "second": "Commissioner Rule",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Approve revised Citizen Charge Form and Citizen Charge Procedures subject to Village Attorney review",
+      "motion": "Motion to approve the changes made to the Citizen Charge Form as submitted, subject to Village Attorney's review and approval of the Citizen Charge Form and Citizen Charge Procedures",
+      "mover": "Vice President Smith",
+      "second": "Commissioner Rule",
+      "outcome": "Approved",
+      "tally": "4-0"
+    }
+  ],
+  "_source": "minutes",
+  "title": "Police and Fire Commission Meeting - 2026-07-27",
+  "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-24",
+  "source": "kronenwetter",
+  "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-a66c13aff7484eba8c841b1d59dcc2b7.pdf",
+  "processed_at": "2026-08-29T22:37:26.148594+00:00"
+}

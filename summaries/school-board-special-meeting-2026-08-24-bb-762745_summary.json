@@ -1,0 +1,56 @@
+{
+  "overview": "Based on the published agenda, the Wausau School District Board of Education was scheduled to hold a special meeting on August 24, 2026, to consider personnel matters including appointments, separations, leaves of absence, and retirements. The meeting was expected to address staffing changes through a consent agenda process.",
+  "committee": "Special Meeting",
+  "agenda": [
+    {
+      "time": "N/A",
+      "item": "Call to Order"
+    },
+    {
+      "time": "N/A",
+      "item": "Approve Consent Agenda (Action Requested)"
+    },
+    {
+      "time": "N/A",
+      "item": "Appointments (Additional Staff, Replacement Staff, Contract Increases)"
+    },
+    {
+      "time": "N/A",
+      "item": "Separations (Resignations, Contract Decreases, Terminations)"
+    },
+    {
+      "time": "N/A",
+      "item": "Leaves of Absence"
+    },
+    {
+      "time": "N/A",
+      "item": "Retirements"
+    },
+    {
+      "time": "N/A",
+      "item": "Adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Approve Consent Agenda",
+      "body": "The board was expected to consider approval of a consent agenda containing personnel matters. The agenda included two versions of the consent agenda document, with an addendum uploaded on the morning of the meeting on August 24, 2026, suggesting potential last-minute additions or modifications to the personnel actions being considered."
+    }
+  ],
+  "publicComment": "No public comment period was included on this agenda.",
+  "actionItems": [
+    "Board was expected to vote on approval of the consent agenda containing personnel appointments, separations, leaves of absence, and retirements"
+  ],
+  "topics": [
+    "Staffing",
+    "Personnel",
+    "Retirements",
+    "Human Resources"
+  ],
+  "_source": "boardbook_agenda",
+  "title": "Special Meeting - 2026-08-24",
+  "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=762745",
+  "source": "school_board",
+  "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=762745",
+  "processed_at": "2026-08-29T22:33:59.462177+00:00"
+}

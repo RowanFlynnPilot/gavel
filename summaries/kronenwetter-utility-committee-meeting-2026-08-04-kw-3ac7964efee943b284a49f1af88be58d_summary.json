@@ -1,0 +1,68 @@
+{
+  "overview": "Based on the published agenda, the Utility Committee of Kronenwetter was scheduled to review financial statements and a Director of Public Works and Utilities report, and to consider matters related to a water tower cell phone lease, capital improvement planning, and Lift Station 8 operations.",
+  "committee": "Utility Committee",
+  "presiding": "",
+  "agenda": [
+    {
+      "time": "N/A",
+      "item": "Financial Statements"
+    },
+    {
+      "time": "N/A",
+      "item": "Director of Public Works and Utilities Report"
+    },
+    {
+      "time": "N/A",
+      "item": "Water Tower Cell Phone Lease Information"
+    },
+    {
+      "time": "N/A",
+      "item": "CIP Discussion"
+    },
+    {
+      "time": "N/A",
+      "item": "Lift Station 8 Information"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Financial Statements",
+      "body": "The committee was scheduled to review financial statements as part of routine reporting on utility operations and fiscal matters."
+    },
+    {
+      "item": "Director of Public Works and Utilities Report",
+      "body": "The committee was set to receive a report from the Director of Public Works and Utilities covering operational matters within their department."
+    },
+    {
+      "item": "Water Tower Cell Phone Lease Information",
+      "body": "The committee was scheduled to discuss information regarding a cell phone lease arrangement for the water tower facility, with potential action expected."
+    },
+    {
+      "item": "CIP Discussion",
+      "body": "The committee was set to discuss the Capital Improvement Plan, which was expected to address planned infrastructure projects and improvements for the village."
+    },
+    {
+      "item": "Lift Station 8 Information",
+      "body": "The committee was scheduled to review information concerning Lift Station 8 operations, with potential discussion and action anticipated."
+    }
+  ],
+  "publicComment": "Public comment was on the agenda, limited to 15 minutes total with a three-minute time period per person, at the discretion of the Chief Presiding Officer.",
+  "actionItems": [
+    "Expected to consider action on water tower cell phone lease information",
+    "Expected to discuss and potentially act on CIP matters",
+    "Expected to consider action on Lift Station 8 information"
+  ],
+  "topics": [
+    "Utilities",
+    "Budget",
+    "Infrastructure",
+    "Water Tower",
+    "Lift Station 8"
+  ],
+  "_source": "agenda",
+  "title": "Utility Committee Meeting - 2026-08-04",
+  "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-28",
+  "source": "kronenwetter",
+  "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-3ac7964efee943b284a49f1af88be58d.pdf",
+  "processed_at": "2026-08-29T22:35:53.827395+00:00"
+}
