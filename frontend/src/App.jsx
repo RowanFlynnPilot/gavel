@@ -50,6 +50,10 @@ let INK_RAW       = "#111";
 // Production hardcoded #1a5c57 under the header band; config derives it by
 // darkening primary_dark by a fixed 0.70 factor (#3e847a → #2b5c55 for WPR).
 let HEADER_BORDER = "#000";
+// Build timestamp (vite define) formatted in the instance timezone during
+// _applyConfig — CI rebuilds on every pipeline run, so a stale stamp means
+// the pipeline has stopped.
+let BUILD_STAMP   = "";
 let TITLE_LINE_1  = "";
 let TITLE_LINE_2  = "";
 let GOV_COUNT_WORD = "";
@@ -145,6 +149,16 @@ function _applyConfig(config, meetings, upcoming) {
   }
 
   document.title = `${INSTANCE.name} — ${INSTANCE.newsroom}`;
+
+  try {
+    BUILD_STAMP = new Date(__BUILD_DATE__).toLocaleString("en-US", {
+      timeZone: INSTANCE.timezone || "UTC",
+      month: "short", day: "numeric", hour: "numeric", minute: "2-digit",
+      timeZoneName: "short",
+    });
+  } catch {
+    BUILD_STAMP = "";
+  }
   let themeColor = document.querySelector('meta[name="theme-color"]');
   if (!themeColor) {
     themeColor = document.createElement("meta");
@@ -2057,6 +2071,7 @@ function Tracker() {
               <div style={{ padding: "10px 14px 12px", borderTop: `1px solid ${RULE}`, background: CREAM }}>
                 <div style={{ fontFamily: FONT_DISPLAY, fontSize: "9px", letterSpacing: "0.12em", color: "#5a5a5a", marginBottom: "5px" }}>
                   {newCount} NEW <span aria-hidden="true">·</span> {MEETINGS.length} TOTAL
+                  {BUILD_STAMP && <> <span aria-hidden="true">·</span> UPDATED {BUILD_STAMP}</>}
                 </div>
                 <div style={{ fontFamily: FONT_BODY, fontSize: "10px", color: "#666", lineHeight: 1.55 }}>
                   Coverage of{" "}

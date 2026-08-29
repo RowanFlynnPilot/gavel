@@ -1,0 +1,91 @@
+name: Staleness Sentinel
+
+# Watchdog for the main pipeline, ported from the reference instance after
+# its August 2026 silent outage (a run wedged in "waiting" state held the
+# pages concurrency group for 23 days while every later run was silently
+# cancelled). Runs independently — no shared concurrency group — and opens
+# a loud issue when the pipeline stops succeeding.
+
+on:
+  schedule:
+    - cron: '30 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check pipeline health
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PIPELINE_WORKFLOW: pipeline.yml
+          MAX_SUCCESS_AGE_HOURS: '12'
+          ISSUE_TITLE: '🚨 Pipeline is stale'
+        run: |
+          set -euo pipefail
+          NOW=$(date -u +%s)
+          PROBLEMS=""
+
+          # 1) Hours since the last successful pipeline run (12h = 3 missed
+          #    4-hour cycles; normal gaps are ~4h).
+          LAST_SUCCESS=$(gh api "repos/$REPO/actions/workflows/$PIPELINE_WORKFLOW/runs?status=success&per_page=1" \
+            --jq '.workflow_runs[0].updated_at // empty')
+          if [ -z "$LAST_SUCCESS" ]; then
+            PROBLEMS="- No successful pipeline run found at all."$'\n'
+          else
+            AGE_H=$(( (NOW - $(date -u -d "$LAST_SUCCESS" +%s)) / 3600 ))
+            echo "Last successful run: $LAST_SUCCESS (${AGE_H}h ago)"
+            if [ "$AGE_H" -ge "$MAX_SUCCESS_AGE_HOURS" ]; then
+              PROBLEMS="${PROBLEMS}- Last successful pipeline run was **${AGE_H} hours ago** ($LAST_SUCCESS)."$'\n'
+            fi
+          fi
+
+          # 2) Runs wedged in queued/waiting for over 2 hours (the August
+          #    failure mode: a zombie holding the concurrency group).
+          for STATUS in queued waiting; do
+            STUCK=$(gh api "repos/$REPO/actions/workflows/$PIPELINE_WORKFLOW/runs?status=$STATUS&per_page=5" \
+              --jq '.workflow_runs[] | "\(.id) \(.created_at)"')
+            while read -r RUN_ID CREATED; do
+              [ -z "$RUN_ID" ] && continue
+              AGE_H=$(( (NOW - $(date -u -d "$CREATED" +%s)) / 3600 ))
+              if [ "$AGE_H" -ge 2 ]; then
+                PROBLEMS="${PROBLEMS}- Run [$RUN_ID](https://github.com/$REPO/actions/runs/$RUN_ID) has been **$STATUS for ${AGE_H} hours** — likely wedged and blocking the queue. Cancel it: \`gh run cancel $RUN_ID\`"$'\n'
+              fi
+            done <<< "$STUCK"
+          done
+
+          EXISTING=$(gh issue list --repo "$REPO" --state open \
+            --search "Pipeline is stale in:title" --json number --jq '.[0].number // empty')
+
+          if [ -n "$PROBLEMS" ]; then
+            CHECKED=$(date -u '+%Y-%m-%d %H:%M UTC')
+            BODY="The pipeline watchdog found problems (checked ${CHECKED}):
+
+${PROBLEMS}
+The deployed tracker keeps serving its last-built data while this persists — readers see stale meetings.
+
+**Runbook:** cancel any wedged run listed above, then dispatch a fresh run: \`gh workflow run $PIPELINE_WORKFLOW\`. If runs are failing at the \"Surface pipeline failures\" step while the site still deploys, check the Run pipeline step log — \`ANTHROPIC_API_KEY not set\` means the repo secret is missing/expired; named errors (TranscriptAuthError, AdapterStructureError) identify cookie refresh vs adapter drift. After an outage longer than a few days, widen the upgrade windows in instance.json for one run so meetings that aged past them are re-attempted."
+            if [ -n "$EXISTING" ]; then
+              # Edit rather than comment: during a long outage this fires
+              # every 6 hours and comments would pile up.
+              gh issue edit "$EXISTING" --repo "$REPO" --body "$BODY"
+              echo "Updated existing sentinel issue #$EXISTING"
+            else
+              gh issue create --repo "$REPO" --title "$ISSUE_TITLE" --body "$BODY"
+              echo "Opened sentinel issue"
+            fi
+            exit 1
+          else
+            echo "Pipeline healthy."
+            if [ -n "$EXISTING" ]; then
+              gh issue close "$EXISTING" --repo "$REPO" \
+                --comment "Pipeline is healthy again (successful run within the last ${MAX_SUCCESS_AGE_HOURS}h). Auto-closing."
+            fi
+          fi

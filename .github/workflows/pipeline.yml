@@ -29,11 +29,16 @@ permissions:
 
 concurrency:
   group: 'pages'
-  cancel-in-progress: false
+  # A newer scheduled run supersedes an older one — in August 2026 the
+  # reference instance had a run wedge in "waiting" state and hold this
+  # group for 23 days while every later run was silently cancelled.
+  cancel-in-progress: true
 
 jobs:
   pipeline-and-deploy:
     runs-on: ubuntu-latest
+    # Backstop for hung fetches; normal runs finish in well under an hour.
+    timeout-minutes: 60
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
