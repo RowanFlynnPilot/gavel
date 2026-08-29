@@ -37,8 +37,11 @@ concurrency:
 jobs:
   pipeline-and-deploy:
     runs-on: ubuntu-latest
-    # Backstop for hung fetches; normal runs finish in well under an hour.
-    timeout-minutes: 60
+    # Backstop for hung fetches; normal runs finish in ~15 minutes, but a
+    # post-outage recovery ingesting dozens of transcripts can run over an
+    # hour (nothing commits until the end, so a mid-run kill re-spends the
+    # API budget on retry).
+    timeout-minutes: 120
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
