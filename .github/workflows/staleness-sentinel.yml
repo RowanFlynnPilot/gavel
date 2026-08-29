@@ -66,12 +66,10 @@ jobs:
 
           if [ -n "$PROBLEMS" ]; then
             CHECKED=$(date -u '+%Y-%m-%d %H:%M UTC')
-            BODY="The pipeline watchdog found problems (checked ${CHECKED}):
-
-${PROBLEMS}
-The deployed tracker keeps serving its last-built data while this persists — readers see stale meetings.
-
-**Runbook:** cancel any wedged run listed above, then dispatch a fresh run: \`gh workflow run $PIPELINE_WORKFLOW\`. If runs are failing at the \"Surface pipeline failures\" step while the site still deploys, check the Run pipeline step log — \`ANTHROPIC_API_KEY not set\` means the repo secret is missing/expired; named errors (TranscriptAuthError, AdapterStructureError) identify cookie refresh vs adapter drift. After an outage longer than a few days, widen the upgrade windows in instance.json for one run so meetings that aged past them are re-attempted."
+            BODY="The pipeline watchdog found problems (checked ${CHECKED}):"
+            BODY="${BODY}"$'\n\n'"${PROBLEMS}"
+            BODY="${BODY}"$'\n'"The deployed tracker keeps serving its last-built data while this persists — readers see stale meetings."
+            BODY="${BODY}"$'\n\n'"**Runbook:** cancel any wedged run listed above, then dispatch a fresh run: \`gh workflow run $PIPELINE_WORKFLOW\`. If runs are failing at the \"Surface pipeline failures\" step while the site still deploys, check the Run pipeline step log — \`ANTHROPIC_API_KEY not set\` means the repo secret is missing/expired; named errors (TranscriptAuthError, AdapterStructureError) identify cookie refresh vs adapter drift. After an outage longer than a few days, widen the upgrade windows in instance.json for one run so meetings that aged past them are re-attempted."
             if [ -n "$EXISTING" ]; then
               # Edit rather than comment: during a long outage this fires
               # every 6 hours and comments would pile up.
