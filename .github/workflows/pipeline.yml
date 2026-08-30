@@ -115,12 +115,21 @@ jobs:
             echo "No transcript files — skipping."
             exit 0
           fi
+          # Per-file isolation (bash -e would abort the batch on one bad
+          # file) and --video-id= equals form (YouTube IDs can start with a
+          # dash, e.g. -SFidjEgoHg, which argparse otherwise eats as a flag).
+          FAILED=0
           for TFILE in transcripts/*.txt; do
             VID=$(basename "$TFILE" .txt)
             echo "Ingesting transcript for: $VID"
-            python -m engine.ingest_transcript --video-id "$VID" --transcript "$TFILE"
+            python -m engine.ingest_transcript --video-id="$VID" --transcript "$TFILE" \
+              || { echo "::warning::transcript ingest failed for $VID (will retry next run)"; FAILED=$((FAILED+1)); }
             echo ""
           done
+          if [ "$FAILED" -gt 0 ]; then
+            echo "::error::$FAILED transcript(s) failed to ingest"
+            exit 1
+          fi
 
       - name: Re-publish data
         # Ingest may have cleared injected IDs; publish-only is cheap and

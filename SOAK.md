@@ -40,6 +40,15 @@ archive marathon-meetings.
       present (soak safety — do NOT remove until cutover)
 
 ## Transcript path
+- [ ] Port the Aug 2026 production additions to the engine (required
+      before cutover — the residential fetcher points at gavel after the
+      swap): gap sweep of unprocessed channel videos
+      (`find_unprocessed_channel_videos` + `GAP_SWEEP_DAYS`) and
+      `transcripts/<id>.meta.json` metadata sidecars in
+      `engine/fetch_transcripts.py`, sidecar-aware resolution in
+      `engine/ingest_transcript.py`, cookie-expiry detection
+      (CAPTION_HEALTH → report → issue). Context: YouTube blocks cloud
+      IPs from captions AND per-video metadata regardless of cookies.
 - [ ] Residential fetcher pointed at gavel repo for one cycle
       (`python -m engine.fetch_transcripts --all --push`) upgrades an
       agenda-only meeting end to end
