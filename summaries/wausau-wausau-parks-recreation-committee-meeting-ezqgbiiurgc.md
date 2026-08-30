@@ -1,0 +1,45 @@
+# Wausau Parks & Recreation Committee Meeting
+
+**Organization:** City of Wausau  
+**Source:** https://www.youtube.com/watch?v=ezQGBIiurGc  
+**Summarized:** 2026-08-30 04:34 UTC
+
+---
+
+## Meeting Overview
+The Wausau Parks & Recreation Committee met on July 6, 2026, covering five main topics: a West Hill subdivision park dedication, RiverLife wharf dock funding, an urban forestry and emerald ash borer update, a maintenance agreement with the Central Wisconsin Off-Road Cycling Coalition (CWOC) for Sylvan Hill bike trails, and general park updates. The committee voted unanimously to recommend accepting cash in lieu of land for the West Hill subdivision park dedication, and unanimously approved moving forward with a formal five-year maintenance contract with CWOC, formalizing a longstanding handshake agreement.
+
+## Key Discussions
+### Public Comment
+Darren Lebron of 623 Broken Arrow Road spoke during public comment, stating that he and his neighbors actively use the RiverLife wharfs for their boats and pontoons. He said his next-door neighbor had visited the docks five to ten times that summer alone, pushing back against any suggestion that the docks go unused.
+
+### Approval of June 1, 2026 Minutes
+Committee member Tom moved to approve the minutes as presented; Kristen seconded. The motion passed unanimously with no edits or corrections noted.
+
+### West Hill Subdivision Preliminary Plat Park Dedication
+Parks staff member Jamie presented the West Hill subdivision (near 72nd Avenue and Stewart Avenue, approximately 99 lots), noting the applicant proposed satisfying the park dedication requirement through cash payment rather than land. Jamie explained the area falls within a gap zone in the city's outdoor recreation plan — no city park is within a 10-minute walk — and that the standard dedication would require three acres, though taking land would reduce lot count and likely fall below the three-acre minimum anyway. Committee members discussed the lack of nearby city parks (Satine School playground is not counted; Brock Meyer Park is distant), the relatively large lot sizes suggesting less need for a neighborhood park, and the expense of park maintenance. One member raised concerns about recreational opportunities for older youth. The committee ultimately moved and seconded to recommend accepting cash in lieu of land dedication, passing unanimously.
+
+### RiverLife Wharf/Dock Funding
+Jamie explained that the seven RiverLife docks cost $8,750 annually to install and remove, a cost the city council shifted from the operating budget to the small projects fund last year. Rex Terrace and Hunter, co-owners of HRT Dock and Waterfront Services, attended and explained installation challenges (24-foot poles, 3.5-inch diameter, driven into riverbed). Committee members broadly agreed the docks should return to the operating budget rather than draw from small project funds, and that installing fewer docks — keeping at least the two kayak launches and one boat slip — was preferable to eliminating them. Alder Neil suggested exploring whether Vanguard development or RiverLife Apartments residents might lease slips. No formal vote was taken; Jamie received direction to incorporate reduced dock costs into the upcoming operating budget and explore leasing options.
+
+### Urban Forestry Update: Emerald Ash Borer, Tree Planting, IRA Grant, and Invasive Species
+City Forester John presented a comprehensive update. On emerald ash borer (EAB): roughly half the city's ash tree inventory has been removed since 2019, with 710 trees remaining for removal; the city is injecting boulevard ash trees every three years with a product called Mectite and removing approximately 350 trees per year. The city received the largest IRA/DNR urban forestry grant in Wisconsin — nearly $500,000 — funding roughly 970 tree plantings in 2025 in identified disadvantaged areas, private ash tree removal (approximately 135 trees removed, $29,000 of $100,000 remaining), and school education programs including a successful planting event at JD Jones Elementary. On invasives: Japanese knotweed, garlic mustard, and buckthorn are the primary concerns; goats returned to Barker Stewart Island today (56 goats, including one recovering from nerve damage); volunteer garlic mustard pulls were conducted at Pleasant View Park. Committee members discussed regional coordination on knotweed near Schofield, resident volunteer involvement, and potential biological controls. No votes were taken.
+
+### Maintenance Agreement with CWOC (Seawoc) for Sylvan Hill Bike Trails
+Jamie presented a draft five-year formal maintenance agreement with the Central Wisconsin Off-Road Cycling Coalition (referred to as 'Seawoc'), replacing a longstanding handshake arrangement. The agreement would allow CWOC volunteers and contractors to perform routine trail maintenance at Sylvan Hill without prior department approval for each small task, while requiring proposals for larger work. The city attorney reviewed and supported the agreement. A noted revision: the agreement will include annual review provisions to account for CWOC's two-year presidential turnover cycle rather than requiring renewal at each leadership change. Alder Neil moved to approve moving forward with finalizing the contract; Alder Trueblood seconded. Motion passed unanimously. The agreement will proceed to city council for final approval.
+
+### Park Updates Discussion
+Alder Neil raised several RiverLife-area concerns: a reported tick infestation at Brock Meyer Park (staff investigated and found it was weather-related and short-lived, no action taken); status of Adirondack chairs (delivered but not yet assembled due to splash pad project demands); and heavy vegetation blocking river views along the northern RiverLife trail corridor, which he suggested clearing to improve economic development marketing appeal. John confirmed ash trees and invasive species in that corridor are on his list for winter work, and Jamie suggested coordinating with future developers and City Economic Development staff member Randy on a possible partnership. A question was also raised about adding a permanent dock structure to RiverLife in future development planning, with members noting DNR permitting hurdles but citing Fremont, Wisconsin as a comparable example.
+
+## Public Comment
+One speaker offered public comment: Darren Lebron, 623 Broken Arrow Road, Wausau (northwest side). He stated that he personally uses the RiverLife wharfs for his boat and pontoon, and that his next-door neighbor had used them five to ten times that summer. He wanted the committee to know the docks are actively used, in response to suggestions they are underutilized.
+
+## Action Items
+- Jamie to enter staff comments in Evolve software recommending cash-in-lieu of park land dedication for the West Hill subdivision; application proceeds to Plan Commission and City Council
+- Jamie to obtain itemized cost estimates from HRT Dock and Waterfront Services for reduced dock configurations (at minimum: two kayak launches plus one boat slip) and include dock funding in the parks operating budget for upcoming budget process
+- City Economic Development staff (Randy) to contact RiverLife Apartments and Vanguard development about potential dock slip leasing interest
+- Jamie and city attorney to finalize five-year CWOC maintenance agreement language (including annual review provision for presidential turnover) for City Council approval
+- John (city forester) to assess northern RiverLife trail corridor for ash removal and invasive species clearing, and coordinate with Jamie and Randy on vista-opening opportunities for economic development
+- Staff to verify whether bollard/access control has been installed at Lincoln Park tot lot (Whirly Park)
+- John to provide district-specific lists of private ash tree owners to alders willing to do outreach for the private ash removal grant program (approximately $29,000 remaining)
+- Jamie to explore additional school partnerships for tree planting program (Franklin Elementary, John Muir Middle School) in fall and spring

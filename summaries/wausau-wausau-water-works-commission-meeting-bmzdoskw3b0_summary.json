@@ -1,0 +1,115 @@
+{
+  "overview": "The Wausau Water Works Commission met on July 14th and took action on a mandatory lead service line replacement ordinance that has been under consideration for approximately three years. The commission voted to amend the draft ordinance by removing a council-added paragraph tying enforcement to grant funding availability and restoring two original paragraphs establishing homeowner financial responsibility with city-provided financing mechanisms. The amended ordinance will be forwarded to the full city council for consideration in September.",
+  "committee": "Wausau Water Works Commission",
+  "presiding": "Not explicitly identified by name or title in the transcript",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to order and establishment of quorum"
+    },
+    {
+      "time": "0:30",
+      "item": "Item 1: Approval of minutes from June 2, 2026 regular meeting"
+    },
+    {
+      "time": "1:10",
+      "item": "Item 2: Director's report - Drinking water division nitrification investigation"
+    },
+    {
+      "time": "5:20",
+      "item": "Item 2 continued: Unregulated Contaminant Monitoring Rule (UCMR) / emerging contaminants update"
+    },
+    {
+      "time": "9:45",
+      "item": "Item 2 continued: Headwork screening project and Cherry Street lift station update"
+    },
+    {
+      "time": "12:00",
+      "item": "Item 3: Discussion and possible action on approving a mandatory lead service line replacement ordinance"
+    },
+    {
+      "time": "40:00",
+      "item": "Item 4: Discussion on selecting August meeting date"
+    },
+    {
+      "time": "44:30",
+      "item": "Motion to adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Approval of June 2, 2026 minutes",
+      "body": "A motion to approve the minutes was made by Commissioner Galhar and seconded by Commissioner Hadley. No discussion followed and the minutes were approved by voice vote."
+    },
+    {
+      "item": "Drinking water division nitrification investigation",
+      "body": "Scott presented this as an informational item, explaining that the DNR is requiring all municipal water systems to test raw water ammonia levels, even though Wausau adds ammonia intentionally for chloramine disinfection. He noted that some of the city's six wells will likely exceed the 0.2 mg/L trigger threshold and that this could become a new ongoing monitoring protocol. A commissioner asked whether the water treatment process removes excess ammonia and nitrates, and Scott confirmed chloramine disinfection is fully regulated and not a health concern."
+    },
+    {
+      "item": "Unregulated Contaminant Monitoring Rule (UCMR) / emerging contaminants update",
+      "body": "Eric provided an overview of the EPA's UCMR process, describing it as a long-term predictor of potentially regulated contaminants such as PFAS, microplastics, and pharmaceuticals. He noted that while the federal EPA may be reducing its monitoring scope, the Wisconsin DNR is not backing off its requirements, creating a compliance challenge for the utility. The discussion was informational with no action taken."
+    },
+    {
+      "item": "Headwork screening project and Cherry Street lift station update",
+      "body": "Eric reported that the headwork screening project is ahead of schedule with a final completion date of November 15th, and described the new installation as a major operational upgrade. The Cherry Street lift station is fully operational with only final punch list items remaining on the electrical, communications, and SCADA systems; final payment will be initiated once those are resolved."
+    },
+    {
+      "item": "Mandatory lead service line replacement ordinance",
+      "body": "This was the primary action item, involving a draft ordinance that has been under consideration for about three years. Eric explained that a city council amendment had inserted a paragraph in Section 9 (13.66.080) conditioning enforcement on grant funding availability, effectively gutting the mandate. With principal forgiveness funding declining, Eric recommended removing that council-added first paragraph and restoring the two original paragraphs establishing that property owners are responsible for the cost of replacing the customer-side lead service line, with the city utility responsible for the public side and an optional city financing program. Commissioner Hadley and Alder Martins both expressed support for restoring the original language, with Hadley arguing homeowners should pay their share through assessment-style financing similar to sidewalk assessments. Mayor Doug Diny [referenced as 'the mayor' in transcript] questioned why financial assistance would not cover the complete cost and expressed preference for a loan mechanism where homeowners pay back the full cost. The commission voted to amend the draft ordinance accordingly; it will go back to city council in September with additional public outreach planned beforehand."
+    },
+    {
+      "item": "August meeting date selection",
+      "body": "Because August 11th is a primary election and the council chambers will be unavailable, the commission discussed alternative dates. August 12th and 13th were proposed, with the 13th limited to about 90 minutes due to court sessions. The commission agreed to schedule the August meeting for August 12th at the same time and location, with a note that if circumstances change, staff will communicate the update."
+    }
+  ],
+  "publicComment": "No public comment was offered at this meeting, though it was noted that the public had previously provided comment on the lead service line ordinance at earlier city council meetings.",
+  "actionItems": [
+    "Amend draft mandatory lead service line replacement ordinance (Section 13.66.080) by removing the first financing paragraph added by council and restoring the original second and third paragraphs establishing homeowner cost responsibility and optional city financing program",
+    "Forward amended ordinance to city council for consideration at a September meeting",
+    "Conduct additional public outreach on the proposed ordinance before the September council meeting",
+    "Schedule August Water Works Commission meeting for August 12th at the same time and location",
+    "Monitor DNR nitrification testing protocol as requirements are clarified",
+    "Complete final punch list items at Cherry Street lift station, then initiate final payment and begin warranty period",
+    "Continue tracking Unregulated Contaminant Monitoring Rule developments from EPA and DNR"
+  ],
+  "topics": [
+    "Utilities",
+    "Lead Service Line Replacement",
+    "Water Quality",
+    "Infrastructure",
+    "Budget"
+  ],
+  "votes": [
+    {
+      "item": "Approval of June 2, 2026 meeting minutes",
+      "motion": "Motion to approve the minutes",
+      "mover": "Galhar",
+      "second": "Hadley",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Amend draft lead service line replacement ordinance Section 13.66.080 to remove paragraph one and restore paragraphs two and three",
+      "motion": "To retain in section nine paragraph two and three and remove paragraph one",
+      "mover": "Martins",
+      "second": "Galhar",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Motion to adjourn",
+      "motion": "Motion to adjourn",
+      "mover": "Ben Craig",
+      "second": "Martins",
+      "outcome": "Approved",
+      "tally": null
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "aafa252893d8bd3c",
+  "title": "Wausau Water Works Commission Meeting",
+  "url": "https://www.youtube.com/watch?v=bmZdOskw3B0",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:31:52.105089+00:00"
+}

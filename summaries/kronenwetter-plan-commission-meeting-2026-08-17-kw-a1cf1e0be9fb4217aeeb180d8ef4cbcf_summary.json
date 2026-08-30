@@ -1,5 +1,5 @@
 {
-  "overview": "Based on the published agenda, the Kronenwetter Plan Commission was scheduled to meet on August 17, 2026, to address multiple zoning and development matters including a twin home ordinance, conditional use permit, site plan review, and septic tank regulations. The meeting was set to consider both old and new business items affecting residential and commercial development in the village.",
+  "overview": "Based on the published agenda, the Village of Kronenwetter Plan Commission was scheduled to meet to discuss several land use and zoning matters, including a Twin Home Zero Lot Line Ordinance, a Conditional Use Permit for Knetter Pond, a Marathon County Garage Site Plan, and a Septic Tank Ordinance. The meeting was also set to review the Land Use and Zoning Appeals Process and consider future review of the village's zoning and subdivisions codes.",
   "committee": "Plan Commission",
   "presiding": "",
   "agenda": [
@@ -35,49 +35,49 @@
   "discussions": [
     {
       "item": "Twin Home Zero Lot Line Ordinance",
-      "body": "The Plan Commission was scheduled to discuss and take possible action on a Twin Home Zero Lot Line Ordinance. This item was listed under old business, indicating it was set for continued consideration from a previous meeting."
+      "body": "The Plan Commission was scheduled to discuss and take possible action on a Twin Home Zero Lot Line Ordinance. This item was listed under old business, suggesting it may have been carried over from a previous meeting for further consideration."
     },
     {
       "item": "Conditional Use Permit Knetter Pond",
-      "body": "The Commission was set to review and consider possible action on a Conditional Use Permit related to Knetter Pond. This matter was expected to involve discussion of how the property could be developed or used under conditional approval."
+      "body": "The Commission was set to discuss and consider possible action on a Conditional Use Permit related to Knetter Pond. This matter was scheduled as old business for the meeting."
     },
     {
       "item": "Marathon County Garage Site Plan",
-      "body": "The Plan Commission was scheduled to examine a site plan for a Marathon County Garage facility. The Commission was expected to consider design, layout, and compliance with village zoning and development standards."
+      "body": "The Plan Commission was expected to review and discuss a site plan for a Marathon County Garage facility. This item was listed as new business scheduled for discussion and possible action."
     },
     {
       "item": "Septic Tank Ordinance",
-      "body": "The Commission was set to discuss and potentially act on a new or revised Septic Tank Ordinance. This regulatory item was expected to address standards and requirements for septic systems within the village."
+      "body": "The Commission was set to discuss and consider possible action on a Septic Tank Ordinance. This new business item was scheduled for the meeting agenda."
     },
     {
       "item": "Land Use and Zoning Appeals Process",
-      "body": "The Plan Commission was scheduled to discuss the Land Use and Zoning Appeals Process. This item was set for review of procedures related to how appeals of zoning decisions are handled in the village."
+      "body": "The Plan Commission was scheduled to review the Land Use and Zoning Appeals Process. This item was set for discussion and possible action as new business."
     },
     {
       "item": "Future Review of Zoning and Subdivisions Codes",
-      "body": "The Commission was set to discuss and consider a future comprehensive review of the village's Zoning and Subdivisions Codes. This item was expected to establish parameters for an upcoming comprehensive code assessment."
+      "body": "The Commission was expected to consider scheduling a future review of the village's Zoning and Subdivisions Codes. This item was listed as new business for discussion and possible action."
     }
   ],
-  "publicComment": "Public comment was on the agenda, limited to 15 minutes total with three minutes per person.",
+  "publicComment": "Public comment was indicated on the agenda, limited to 15 minutes total with a three-minute time period per person, per Wisconsin State Statute Section 19.84(2).",
   "actionItems": [
-    "Expected to vote on or consider Twin Home Zero Lot Line Ordinance",
-    "Expected to vote on or consider Conditional Use Permit for Knetter Pond",
-    "Expected to review and consider Marathon County Garage Site Plan",
-    "Expected to vote on or consider Septic Tank Ordinance",
-    "Expected to discuss Land Use and Zoning Appeals Process",
-    "Expected to establish framework for future review of Zoning and Subdivisions Codes"
+    "Scheduled to consider possible action on Twin Home Zero Lot Line Ordinance",
+    "Scheduled to consider possible action on Conditional Use Permit for Knetter Pond",
+    "Scheduled to review and consider possible action on Marathon County Garage Site Plan",
+    "Scheduled to consider possible action on Septic Tank Ordinance",
+    "Scheduled to discuss and consider possible action on Land Use and Zoning Appeals Process",
+    "Scheduled to consider future review of Zoning and Subdivisions Codes"
   ],
   "topics": [
     "Zoning",
     "Development",
-    "Septic Systems",
-    "Conditional Use Permit",
-    "Site Plan Review"
+    "Land Use",
+    "Twin Homes",
+    "Knetter Pond"
   ],
   "_source": "agenda",
   "title": "Plan Commission Meeting - 2026-08-17",
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-29",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-a1cf1e0be9fb4217aeeb180d8ef4cbcf.pdf",
-  "processed_at": "2026-08-29T22:35:13.323044+00:00"
+  "processed_at": "2026-08-29T21:23:13.754121+00:00"
 }

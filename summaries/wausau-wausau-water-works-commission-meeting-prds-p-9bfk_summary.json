@@ -1,0 +1,110 @@
+{
+  "overview": "The Wausau Water Works Commission held its August 12, 2026 meeting, covering a fluoride supply shortage that has prompted the utility to cut dosing to half normal levels, ongoing GAC carbon vessel change-outs for PFAS treatment, and a detailed corrosion control treatment study presentation from CDM Smith recommending addition of orthophosphate at 1 mg/L to reduce lead levels ahead of new federal regulations. The commission voted to approve a proposal for a PFAS process waste tank and chemical room addition project estimated at approximately $2.5 million, to be partially funded by $1.667 million in federal grant funds.",
+  "committee": "Wausau Water Works Commission",
+  "presiding": "Not explicitly named in transcript; meeting chaired by an unidentified commission chair",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to order"
+    },
+    {
+      "time": "0:30",
+      "item": "Item 1: Consideration and approval of minutes from July 14, 2026 meeting"
+    },
+    {
+      "time": "1:10",
+      "item": "Item 2: Director's report — fluoride supply shortage update"
+    },
+    {
+      "time": "3:45",
+      "item": "Item 2 continued: GAC carbon vessel change-out update and PFAS performance"
+    },
+    {
+      "time": "10:20",
+      "item": "Item 2 continued: Headwater screening and Cherry Street lift station update (wastewater)"
+    },
+    {
+      "time": "11:30",
+      "item": "Item 3: Presentation by CDM Smith on Wausau Waterworks Corrosion Control Treatment Study"
+    },
+    {
+      "time": "53:00",
+      "item": "Item 4: Discussion and possible action — PFAS process waste tank and chemical room project proposal"
+    },
+    {
+      "time": "1:08:00",
+      "item": "Motion to adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Approval of July 14, 2026 Meeting Minutes",
+      "body": "The chair called for a motion to approve the minutes. A motion was made by Gellhar and seconded by Hadley. The minutes were approved by voice vote with no corrections noted."
+    },
+    {
+      "item": "Fluoride Supply Shortage",
+      "body": "Staff identified as Scott reported that the utility received a fluoride shipment last month but was advised the next shipment may not arrive until late next month, prompting a reduction of fluoride dosing to approximately half the normal level, consistent with actions taken by larger communities facing the same shortage. Staff noted the DNR has approved the approach and that staff is attempting to reach the county health department director for guidance on whether to notify dental offices, schools, and other entities of the reduction. One commissioner noted the CDC has been working on fluoride elimination since April, to which the chair responded the commission had previously heard public debate on fluoride."
+    },
+    {
+      "item": "GAC Carbon Vessel Change-Out and PFAS Performance",
+      "body": "Scott reported that the first GAC carbon change-out on August 5–6 went well, with Carbon Activated Corporation praised for professionalism, and that the next change-out is scheduled for September 3 using regenerated carbon from the first vessel. Staff noted that carbon saturation is occurring faster than anticipated — the vessels are not lasting the expected two years on regenerated carbon — and that change-outs will need to be expedited. Staff explained they are monitoring influent PFAS levels, which have remained stable, and are working to find the operational 'sweet spot' to maximize carbon longevity while staying under the 4 parts per trillion PFAS limit required by 2029. A commissioner asked whether influent PFAS concentrations are increasing; staff confirmed they are not."
+    },
+    {
+      "item": "CDM Smith Corrosion Control Treatment Study Presentation",
+      "body": "CDM Smith representatives Amu Itasi and Javier Lockson presented findings from a roughly year-and-a-half pipe loop study required by the Wisconsin DNR due to Wausau's treatment process change. Key findings included: the new treatment plant did not significantly change lead mineral phases on pipe scale; fifth-liter sampling (required under the new Lead and Copper Rule Improvements effective 2028) showed a 90th percentile lead concentration of 19.2 micrograms per liter, exceeding both current and upcoming action levels, versus 14.2 for first-liter sampling which would have kept the system in compliance; and orthophosphate at 1 mg/L produced the best results, reducing lead concentrations and variability without the particulate lead release seen at 3 mg/L. The DNR accepted the study and directed Wausau to begin dosing orthophosphate at 1 mg/L with the system operational by July 2028, though CDM Smith recommended having it online by spring 2026 to allow 8–12 months for the treatment to take effect before new sampling requirements begin. Commissioners asked about health effects of orthophosphate (deemed safe and widely used since the 1990s), impacts on wastewater phosphorus loads (existing plant already designed to handle phosphorus removal), biological growth risks in the distribution system, and whether the existing sodium silicate corrosion control would continue alongside orthophosphate (confirmed yes, for now)."
+    },
+    {
+      "item": "PFAS Process Waste Tank and Chemical Room Project Proposal",
+      "body": "Director Eric explained that $1.667 million in federal grant funds originally earmarked for carbon change-outs can no longer be used for that purpose and must be applied to a capital project. The proposal calls for an underground process waste tank — needed because the existing 100,000-gallon tank causes plant operational lockouts during frequent carbon change-out backwashing — plus a chemical room addition for orthophosphate dosing and a storage room convertible to a future chemical room. The total project is estimated at approximately $2.5 million, leaving a projected shortfall of $700,000–$800,000 after the grant. Susan from Donahue Engineering confirmed the estimate. Staff noted a pending EPA verification on the competitive procurement process used to select Donahue. Commissioners were told an updated capital plan would be presented by Aylers on September 1st. Motion to approve was made by Hadley and seconded by Van Craig; the proposal was approved by voice vote."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Staff to continue monitoring fluoride supply chain and report back; seek guidance from county health department on communications to dental offices, schools, and other affected parties regarding reduced fluoride levels",
+    "Staff to work with Carbon Activated Corporation to expedite GAC carbon change-out schedule and explore agreement for the next six vessels",
+    "Wausau Waterworks to proceed with design and construction of orthophosphate dosing system targeting 1 mg/L, with system online by spring 2027 (ahead of July 2028 DNR deadline)",
+    "Await EPA verification that existing competitive procurement with Donahue Engineering satisfies grant procurement requirements for the PFAS process waste tank and chemical room project",
+    "Financial update on capital plan impacts to be presented by Aylers at the September 1, 2026 commission meeting",
+    "Commission to meet next on Tuesday, September 1, 2026 at 11:30 a.m. in City Hall Council Chambers"
+  ],
+  "topics": [
+    "Utilities",
+    "PFAS Treatment",
+    "Lead and Copper Rule",
+    "Fluoride Supply",
+    "Corrosion Control"
+  ],
+  "votes": [
+    {
+      "item": "Approval of July 14, 2026 meeting minutes",
+      "motion": "Motion to approve the minutes",
+      "mover": "Gellhar",
+      "second": "Hadley",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "PFAS process waste tank and chemical room project proposal",
+      "motion": "Motion to approve the PFAS process waste tank and chemical room project proposal as presented",
+      "mover": "Hadley",
+      "second": "Van Craig",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjournment",
+      "motion": "Motion to adjourn",
+      "mover": "Martins",
+      "second": "Gellhar",
+      "outcome": "Approved",
+      "tally": null
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "c1d761f1447c60a3",
+  "title": "Wausau Water Works Commission Meeting",
+  "url": "https://www.youtube.com/watch?v=PRds_P-9bfk",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:23:08.288237+00:00"
+}

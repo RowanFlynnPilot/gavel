@@ -1,95 +1,153 @@
 {
-  "overview": "Based on the published agenda, the Village of Kronenwetter's Community Life, Infrastructure and Public Property Committee was scheduled to address infrastructure and development matters on August 3, 2026, including a potential data center moratorium, oak wilt ordinance, trail planning, and the 2027-2036 capital improvements budget.",
+  "overview": "The Village of Kronenwetter's CLIPP Committee met on August 3, 2026, taking action on four items: approving July meeting minutes, recommending the county maintain a four-way stop at County Highway XX and Teraboni Drive, rescinding the Oak Wilt ordinance and reimbursement policy, and recommending a one-year moratorium on data center development to the Village Board. The committee also received a first look at the village's inaugural 2027–2036 Capital Improvement Program, a significant planning milestone for a village that had previously operated without any multi-year capital plan.",
   "committee": "Community Life, Infrastructure and Public Property (CLIPP) Committee",
-  "presiding": "Not indicated on agenda",
+  "presiding": "Garrett Lizney, Vice Chairperson (presided in absence of Village President Dan Joling as chair)",
   "agenda": [
     {
-      "time": "N/A",
-      "item": "Approval of July 6, 2026 CLIPP Committee Meeting Minutes"
+      "time": "0:00",
+      "item": "Call to Order"
     },
     {
-      "time": "N/A",
-      "item": "Police Chief Report"
+      "time": "1:10",
+      "item": "Public Comment"
     },
     {
-      "time": "N/A",
-      "item": "Fire Chief Report"
+      "time": "4:45",
+      "item": "Approval of July 6 Committee Meeting Minutes"
     },
     {
-      "time": "N/A",
-      "item": "Public Works Director Report"
+      "time": "5:30",
+      "item": "General Item: Department Reports (Police Chief, Fire Chief, Public Works/Utilities, Complaint Log)"
     },
     {
-      "time": "N/A",
-      "item": "Complaint Log"
+      "time": "18:20",
+      "item": "Old Business: Four-Way Stop at County Highway XX and Teraboni Drive"
     },
     {
-      "time": "N/A",
-      "item": "4-Way Stop on County Road XX and Terrebonne Drive"
+      "time": "22:30",
+      "item": "New Business Sub-Item A: Oak Wilt Ordinance Review and Rescission"
     },
     {
-      "time": "N/A",
-      "item": "Oak Wilt Ordinance"
+      "time": "38:10",
+      "item": "New Business Sub-Item: One-Year Data Center Moratorium Resolution"
     },
     {
-      "time": "N/A",
-      "item": "Resolution 2026-011 Establishing a Temporary Moratorium on New Data Center Development Applications and Referring the Matter to the Planning and Utility Committees for Further Study"
+      "time": "48:00",
+      "item": "New Business Sub-Item: Potential Future Trails in Kronenwetter"
     },
     {
-      "time": "N/A",
-      "item": "Potential Future Trails in Kronenwetter"
+      "time": "58:00",
+      "item": "New Business Sub-Item L: 2027–2036 Capital Improvement Program"
     },
     {
-      "time": "N/A",
-      "item": "2027-2036 Capital Improvements Program (CIP) Budget – 1st Draft as of 07/31/2026"
-    },
-    {
-      "time": "N/A",
-      "item": "September 7, 2026 Meeting"
+      "time": "1:42:00",
+      "item": "Next Meeting Date and Adjournment"
     }
   ],
   "discussions": [
     {
-      "item": "4-Way Stop on County Road XX and Terrebonne Drive",
-      "body": "The committee was scheduled to discuss old business regarding a four-way stop intersection on County Road XX and Terrebonne Drive. This item was set for discussion and possible action."
+      "item": "Public Comment",
+      "body": "Two speakers addressed the committee. Trustee Dan Lesniak, speaking as a resident and in his role as Plan Commission Chair, urged the committee to recommend retaining the four-way stop at XX/Teraboni for public safety, and encouraged the committee to move forward with a data center moratorium so the Plan Commission can craft appropriate regulations. No other public speakers came forward."
     },
     {
-      "item": "Oak Wilt Ordinance",
-      "body": "The committee was scheduled to consider an Oak Wilt Ordinance as new business. This item was set for discussion and possible action regarding the regulation of oak wilt management in the village."
+      "item": "Approval of July 6 Committee Meeting Minutes",
+      "body": "Minutes were moved and seconded with no discussion. The committee approved them 4-0."
     },
     {
-      "item": "Resolution 2026-011 Establishing a Temporary Moratorium on New Data Center Development Applications",
-      "body": "The committee was scheduled to consider Resolution 2026-011, which would establish a temporary moratorium on new data center development applications and refer the matter to the Planning and Utility Committees for further study. This item was set for discussion and possible action."
+      "item": "Department Reports",
+      "body": "The police chief reported approximately 800 calls for service in July, noting an anecdotal spike in domestic violence incidents; one arrest resulted in 10 felony and 3 misdemeanor charges with a $50,000 cash bond. The fire chief reported the department was awarded a WPS Rewarding Responders grant to purchase a new thermal imaging camera and noted an ISO audit scheduled for the following day. The public works/utilities director reported ongoing communication with the FBI and EPA regarding cybersecurity threats to municipal water systems nationally, noting some systems had been hacked due to lack of passwords, and stated Kronenwetter has security measures in place. The complaint log showed seven complaints year-to-date, with staff noting the incoming new community development director starting Thursday would help resume normal enforcement activity."
+    },
+    {
+      "item": "Four-Way Stop at County Highway XX and Teraboni Drive",
+      "body": "Greg presented an email from Marathon County indicating the county's traffic study supports retaining a four-way stop at the intersection, though the county wanted the village's input before a Thursday committee meeting. One committee member noted personal daily use of the intersection and observed it was 'much better' as a four-way stop. The committee voted 4-0 to recommend to the county that the four-way stop be retained, with the understanding that the county retains jurisdiction and makes the final decision."
+    },
+    {
+      "item": "Oak Wilt Ordinance Review and Rescission",
+      "body": "Greg presented proposed changes to the village's Oak Wilt ordinance, noting the village has no tree inspector on staff or under contract, no longer has grant funding to assist residents with removal costs, and that Oak Wilt has spread so widely across Wisconsin that strict local enforcement is impractical. The committee debated village liability and discussed whether maintaining an unenforceable ordinance created risk. The consensus was that without the funding mechanism or tree inspector, the ordinance and associated reimbursement policy should be rescinded, with residents referred to the DNR. The committee voted 4-0 to rescind both the Oak Wilt ordinance and the reimbursement policy."
+    },
+    {
+      "item": "One-Year Data Center Moratorium Resolution",
+      "body": "A committee member introduced the resolution, describing concerns about the massive scale of data centers, their extraordinary water consumption, and the village's existing water capacity challenges. Jim noted he had spoken with a director at Wausau/Marathon County who is developing ordinance language to define and restrict data centers, and offered to share that language with relevant boards. One member noted AI data centers generate strong community opposition. A minor drafting error was caught — the resolution referred to 'the cities' rather than 'the village' — which staff agreed to correct. The committee voted 4-0 to recommend the moratorium resolution directly to the Village Board for approval."
     },
     {
       "item": "Potential Future Trails in Kronenwetter",
-      "body": "The committee was scheduled to discuss potential future trails in Kronenwetter as new business. This item was set for discussion and possible action regarding trail planning and development in the community."
+      "body": "Greg reported that a minimum cost estimate for a new trail in Kronenwetter would be at least $600,000 for construction alone, not including wetlands, culverts, or engineering. The county indicated it would not contribute financially. The committee generally agreed that trail planning should be referred to the Parks Committee for prioritization, and that trail construction is likely most cost-effective when bundled with road projects rather than as standalone projects. A member with prior experience at the Village of Weston noted that trail paths along county roads in that area were historically funded by county and state dollars, not village funds, suggesting a similar approach could apply here if a future connector road is built."
     },
     {
-      "item": "2027-2036 Capital Improvements Program (CIP) Budget – 1st Draft",
-      "body": "The committee was scheduled to review the first draft of the 2027-2036 Capital Improvements Program Budget as of July 31, 2026. This item was set for discussion and possible action on the village's long-term capital infrastructure planning."
+      "item": "2027–2036 Capital Improvement Program",
+      "body": "Finance Director John presented the village's first-ever 10-year Capital Improvement Program, noting the village had previously operated entirely year-to-year with no long-term capital plan. The current draft covers approximately $4.3 million in priority projects across departments, with roughly $1.2 million remaining from a 2024 general obligation borrowing and a possible new GO borrowing of approximately $1.7 million. Major infrastructure items include Maple Ridge Road engineering and reconstruction, Martin Road reconstruction (flagged by a committee member as the village's worst road and priority given heavy resident use of the compost site), sewer lift station panel upgrades and SCADA system, a new water tower and well, and deferred municipal center maintenance including boiler and roofing. The fire department noted rescue truck number 6 would need to be ordered well before its 2029 scheduled replacement due to 3-4 year delivery timelines. The document was presented as a living, versioned working document to be refined through August, September, and October ahead of November budget adoption."
     }
   ],
-  "publicComment": "Public comment was indicated on the agenda with a 15-minute time limit and three-minute period per person.",
+  "publicComment": "Two speakers addressed the committee. Dan Lesniak (816 Spring Road), a village trustee and Plan Commission Chair, spoke in favor of retaining the four-way stop at XX/Teraboni for public safety and encouraged the committee to advance the data center moratorium so the Plan Commission can develop appropriate regulations. No other members of the public spoke.",
   "actionItems": [
-    "scheduled to vote on approval of July 6, 2026 meeting minutes",
-    "expected to consider possible action on 4-Way Stop on County Road XX and Terrebonne Drive",
-    "expected to consider possible action on Oak Wilt Ordinance",
-    "expected to consider Resolution 2026-011 regarding data center development moratorium",
-    "expected to consider possible action on potential future trails",
-    "expected to consider possible action on 2027-2036 Capital Improvements Program Budget first draft"
+    "Staff to notify Marathon County of the committee's 4-0 recommendation to retain the four-way stop at County Highway XX and Teraboni Drive ahead of the county's Thursday committee meeting",
+    "Staff to bring rescission of Oak Wilt ordinance and reimbursement policy to Village Board for final action",
+    "Staff to correct drafting error in data center moratorium resolution (change 'cities' to 'village') and forward to Village Board for approval",
+    "Jim to obtain and share Marathon County's data center ordinance language with the Plan Commission and relevant village boards",
+    "Plan Commission to develop zoning definitions and restrictions for data centers",
+    "Parks Committee to prioritize trail projects relative to other park needs",
+    "Finance Director to refine CIP financing strategy and affordability analysis (tax levy impact by home value) for presentation to APC and Village Board later in August",
+    "Staff to investigate road conditions on Kolski Road for potential addition to CIP",
+    "Fire Chief to begin discussions about ordering a replacement rescue truck given 3-4 year delivery lead times",
+    "Next CLIPP meeting rescheduled from September 7 (Labor Day) to September 8, 2026 at 6 p.m."
   ],
   "topics": [
-    "Infrastructure",
-    "Development",
-    "Parks and Trails",
-    "Budget",
-    "Public Safety"
+    "Capital Improvement Program",
+    "Roads",
+    "Data Centers",
+    "Parks",
+    "Utilities",
+    "Oak Wilt Ordinance",
+    "Public Safety",
+    "Trails"
   ],
-  "_source": "agenda",
+  "votes": [
+    {
+      "item": "Approval of July 6 committee meeting minutes",
+      "motion": "Move to approve the agenda proposed for July 6",
+      "mover": "Dan",
+      "second": "Patty",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Recommend retaining four-way stop at County Highway XX and Teraboni Drive",
+      "motion": "Motion to keep it a four-way at the corner of [County Highway XX] and Teraboni",
+      "mover": "Patty",
+      "second": "Paul",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Rescind Oak Wilt ordinance and reimbursement policy",
+      "motion": "Rescind both the ordinance and the reimbursement policy for Oak Wilt",
+      "mover": "Paul",
+      "second": "Patty",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Recommend one-year data center moratorium resolution to Village Board",
+      "motion": "Recommend the moratorium for approval to the board",
+      "mover": "Patty",
+      "second": "Dan",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Adjourn the meeting",
+      "motion": "Move to adjourn the meeting",
+      "mover": "Dan",
+      "second": "Patty",
+      "outcome": "Approved",
+      "tally": "4-0"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "e837a4df542c9a48",
   "title": "Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting - 2026-08-03",
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-26",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-37fdd6a47c8946c5af1dbe95d99eedea.pdf",
-  "processed_at": "2026-08-29T22:36:02.862131+00:00"
+  "processed_at": "2026-08-05T02:09:51.432305+00:00"
 }

@@ -3,24 +3,24 @@
 **Organization:** Village of Kronenwetter  
 **Source:** https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-26  
 **Documents:** https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-f432750fb1d34fbcb533fdcb37765323.pdf  
-**Summarized:** 2026-08-29 22:34 UTC
+**Summarized:** 2026-08-29 21:22 UTC
 
 ---
 
 ## Meeting Overview
-Based on the published agenda, the Police and Fire Commission of Kronenwetter was scheduled to hold a regular meeting on August 24, 2026, to consider routine business including approval of prior meeting minutes and conduct a closed session interview with Fire Department applicant(s). The meeting was set to address personnel matters related to Fire Department staffing.
+Based on the published agenda, the Police and Fire Commission of Kronenwetter was scheduled to meet to approve previous meeting minutes, receive public comment, and conduct a closed session to interview Fire Department applicant(s). The meeting was set to address personnel matters related to the Fire Department.
 
 ## Key Discussions
-### Minutes Approval
-The commission was scheduled to approve the minutes from its August 10, 2026 meeting.
+### Approval of Minutes
+The commission was scheduled to approve the minutes from the August 10, 2026 meeting.
 
-### Fire Department Applicant Interview
-The commission was set to convene into closed session to interview Fire Department applicant(s) under statutory provisions protecting personnel information and employment matters. The closed session was scheduled to consider employment and performance evaluation data for individuals under the commission's jurisdiction.
+### Fire Department Applicant Interviews
+The commission was set to convene in closed session to interview Fire Department applicant(s) pursuant to Wisconsin Statute provisions regarding consideration of employment and personnel matters. The closed session was scheduled to address preliminary consideration of specific personnel issues and employment evaluation data.
 
 ## Public Comment
-Public comment was on the agenda, scheduled for up to 15 minutes total with a three-minute time limit per person, subject to extension at the presiding officer's discretion.
+Public comment was on the agenda, with a 15-minute total period and three-minute time limit per person, subject to extension at the presiding officer's discretion.
 
 ## Action Items
-- Scheduled to vote on approval of 08/10/2026 meeting minutes
-- Scheduled to convene closed session for Fire Department applicant interview(s)
-- Expected to consider action items following closed session
+- scheduled to vote on approval of 08/10/2026 meeting minutes
+- scheduled to interview Fire Department applicant(s) in closed session
+- expected to consider action after closed session

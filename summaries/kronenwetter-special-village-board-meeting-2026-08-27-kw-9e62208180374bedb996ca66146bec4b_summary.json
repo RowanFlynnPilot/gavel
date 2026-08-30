@@ -1,6 +1,6 @@
 {
-  "overview": "Based on the published agenda, this special Village Board meeting was scheduled to address the acceptance of the Village Clerk's resignation. The meeting represented an urgent personnel matter requiring immediate board action.",
-  "committee": "Village of Kronenwetter Board",
+  "overview": "Based on the published agenda, this special Village Board meeting in Kronenwetter was scheduled to address the acceptance of the Village Clerk's resignation. The meeting represents an important personnel matter requiring board action.",
+  "committee": "Village Board of Kronenwetter",
   "presiding": "",
   "agenda": [
     {
@@ -11,21 +11,21 @@
   "discussions": [
     {
       "item": "Acceptance of Village Clerk's Resignation",
-      "body": "The board was scheduled to consider and vote on the acceptance of the Village Clerk's resignation. This personnel matter was the primary focus of the special meeting called for August 27, 2026."
+      "body": "The Village Board was scheduled to consider and take action on the resignation of the Village Clerk. This personnel matter was set for discussion and possible action during the new business portion of the meeting."
     }
   ],
-  "publicComment": "Public comment was on the agenda, limited to 15 minutes total with three minutes per person at the Chief Presiding Officer's discretion.",
+  "publicComment": "Public comment was scheduled on the agenda, limited to 15 minutes total with a three-minute time period per person, at the Chief Presiding Officer's discretion.",
   "actionItems": [
-    "Scheduled to vote on acceptance of Village Clerk's resignation"
+    "Expected to vote on acceptance of Village Clerk's resignation"
   ],
   "topics": [
     "Staffing",
-    "Village Clerk Resignation"
+    "Personnel"
   ],
   "_source": "agenda",
   "title": "Special Village Board Meeting - 2026-08-27",
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/special-village-board-meeting-13",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-9e62208180374bedb996ca66146bec4b.pdf",
-  "processed_at": "2026-08-29T22:34:42.486698+00:00"
+  "processed_at": "2026-08-29T21:22:45.218977+00:00"
 }

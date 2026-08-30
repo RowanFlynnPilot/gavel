@@ -1,0 +1,86 @@
+{
+  "overview": "The Wausau Police and Fire Commission held a brief public meeting on July 27th before moving into two closed sessions: one to interview two firefighter EMT candidates for the Wausau Fire Department, and another to strategize recruitment and appointment of a new deputy police chief. The meeting was largely procedural, with no public comment offered and routine approval of the prior meeting's minutes.",
+  "committee": "Wausau Police and Fire Commission",
+  "presiding": "Strasser (chair, full name not stated in transcript)",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to order and roll call"
+    },
+    {
+      "time": "0:30",
+      "item": "Public comment"
+    },
+    {
+      "time": "0:45",
+      "item": "Approval of minutes from June 22nd meeting"
+    },
+    {
+      "time": "1:15",
+      "item": "Motion to enter closed session – Firefighter EMT candidate interviews"
+    },
+    {
+      "time": "2:30",
+      "item": "Motion to enter closed session – Deputy police chief recruitment and hiring strategy"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Approval of June 22nd Meeting Minutes",
+      "body": "The chair asked if there were any corrections to the June 22nd minutes. Hearing none, a motion was made and seconded to approve. The motion passed unanimously on a voice vote."
+    },
+    {
+      "item": "Closed Session – Firefighter EMT Candidate Interviews",
+      "body": "Commissioner Cheryl moved to enter closed session under Wisconsin State Statutes section 19.85 for the purpose of interviewing two candidates for firefighter EMT positions with the Wausau Fire Department. The motion was seconded and passed on a unanimous roll call vote with all five commissioners voting in favor."
+    },
+    {
+      "item": "Closed Session – Deputy Police Chief Recruitment Strategy",
+      "body": "Immediately following, a second closed session motion was made under Wisconsin State Statutes section 19.85 to strategize the recruitment and appointment of a new deputy police chief and to discuss the hiring process. The motion was seconded and passed unanimously on roll call, with all five commissioners voting in favor."
+    }
+  ],
+  "publicComment": "No public comment was offered. The chair noted no one in the room wished to speak.",
+  "actionItems": [
+    "Commission entered closed session to interview two firefighter EMT candidates for the Wausau Fire Department",
+    "Commission entered closed session to strategize recruitment and appointment of a new deputy police chief and discuss the hiring process"
+  ],
+  "topics": [
+    "Public Safety",
+    "Staffing",
+    "Fire Department",
+    "Police Department",
+    "Hiring and Recruitment"
+  ],
+  "votes": [
+    {
+      "item": "Approval of June 22nd meeting minutes",
+      "motion": "Motion to approve minutes",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Enter closed session to interview two firefighter EMT candidates",
+      "motion": "Motion to go into closed session pursuant to section 19.85 of the Wisconsin State Statutes for the purpose of interviewing two candidates for firefighter EMT with the Wausau Fire Department",
+      "mover": "Cheryl [last name inaudible]",
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    },
+    {
+      "item": "Enter closed session to strategize deputy police chief recruitment and hiring",
+      "motion": "Motion to go into closed session pursuant to section 19.85 of the Wisconsin State Statutes for the purpose of strategizing the recruitment and appointment of a new deputy police chief and for discussion and deliberation of hiring process",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "5-0"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "d73ce5abddfe9d97",
+  "title": "Wausau Police & Fire Commission Meeting Pt.1",
+  "url": "https://www.youtube.com/watch?v=cDcMvAutb1c",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:32:08.441872+00:00"
+}

@@ -3,39 +3,39 @@
 **Organization:** Village of Kronenwetter  
 **Source:** https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-28  
 **Documents:** https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-a1ac0fada0c14d79b3f4c6dd5983cd2c.pdf  
-**Summarized:** 2026-08-29 22:37 UTC
+**Summarized:** 2026-07-27 02:35 UTC
 
 ---
 
 ## Meeting Overview
-Based on the published agenda, the Village of Kronenwetter Plan Commission was scheduled to hold a meeting to discuss and potentially act on several zoning and land development matters, including a conditional subdivision map for Happy Hollow Road, a rezone request for the Marathon County Highway Facility, and reviews of local ordinances governing septic tanks and twin home/zero lot line developments.
+Based on the published agenda, the Village of Kronenwetter Plan Commission was scheduled to meet on July 27, 2026, to consider several land development and code matters including a Certified Survey Map for Happy Hollow Road, a rezone and CSM for the Marathon County Highway Facility, and reviews of zoning regulations and septic tank ordinances. The meeting was set to address both new subdivision/rezoning applications and potential updates to village codes.
 
 ## Key Discussions
 ### CSM Happy Hollow Road - Dean Prohaska
-The Commission was scheduled to review and potentially act on a conditional subdivision map for Happy Hollow Road involving applicant Dean Prohaska. The specifics of the proposed subdivision were not detailed in the agenda.
+The commission was scheduled to review and potentially act on a Certified Survey Map for a project on Happy Hollow Road involving applicant Dean Prohaska. The specific details of the proposed division or reconfiguration were not detailed in the agenda.
 
 ### Rezone Marathon County Highway Facility
-The Commission was set to consider a rezone request related to the Marathon County Highway Facility. The proposed zoning classification change was not specified in the agenda.
+The commission was set to consider a rezone request for property associated with the Marathon County Highway Facility. The proposed zoning classification change was expected to be discussed and acted upon during this meeting.
 
 ### CSM Marathon County Highway Facility
-The Commission was scheduled to review a conditional subdivision map associated with the Marathon County Highway Facility. Additional details regarding the proposed subdivision were not included in the agenda.
+The commission was scheduled to review a Certified Survey Map for the Marathon County Highway Facility property, likely related to the rezoning request also on the agenda. This was set for potential action during the meeting.
 
 ### Action on reviewing zoning and subdivision codes
-The Commission was expected to take action regarding a broader review of the Village's zoning and subdivision codes. The scope and nature of the code review were not elaborated upon in the agenda.
+The commission was expected to take action regarding a broader review of the village's zoning and subdivision codes. This item suggests the commission may have been preparing to initiate or advance a comprehensive code review process.
 
 ### Septic Tank Ordinance
-The Commission was scheduled to discuss and potentially act on a septic tank ordinance. The specific provisions or changes being considered were not detailed in the agenda.
+The commission was scheduled to address matters related to a septic tank ordinance. This was set for discussion and potential action, though the specific nature of proposed changes was not detailed in the agenda.
 
 ### Twin Home/Zero lot line
-The Commission was set to address regulations or considerations related to twin home and zero lot line developments. The specific proposals or code changes were not specified in the agenda.
+The commission was set to discuss twin home and zero lot line regulations. This item was expected to involve review of zoning or development code provisions related to this housing type and lot configuration.
 
 ## Public Comment
-Public comment was scheduled, limited to 15 minutes total with a three-minute time period per person at the Chief Presiding Officer's discretion. No action was to be taken under public comments.
+Public comment was on the agenda, limited to 15 minutes total with three minutes per person, at the discretion of the presiding officer.
 
 ## Action Items
-- Expected to consider and potentially act on conditional subdivision map for Happy Hollow Road
-- Scheduled to consider rezone request for Marathon County Highway Facility
-- Expected to consider conditional subdivision map for Marathon County Highway Facility
-- Scheduled to take action on reviewing zoning and subdivision codes
-- Expected to consider septic tank ordinance
-- Scheduled to address twin home and zero lot line regulations
+- scheduled to vote on or approve the CSM for Happy Hollow Road
+- expected to consider and act on the Marathon County Highway Facility rezone request
+- scheduled to vote on or approve the CSM for Marathon County Highway Facility
+- expected to take action on reviewing zoning and subdivision codes
+- scheduled to address the Septic Tank Ordinance
+- expected to consider Twin Home/Zero lot line regulations

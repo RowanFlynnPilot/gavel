@@ -1,272 +1,209 @@
 {
-  "overview": "Based on the published agenda, the D.C. Everest Area School District Board of Education was scheduled to hold a regular meeting on June 17, 2026, that included a public hearing regarding a waiver of instructional minutes for Riverside Elementary. The meeting was expected to address multiple action items including staff compensation plans for 2026-2027, the 2026-2027 budget update, student services reports, and approval of out-of-state trips for junior high and senior students.",
-  "committee": "Regular School Board Meeting Including a Public Hearing",
+  "overview": "The DC Everest School Board held its regular June meeting, highlighted by a public hearing and subsequent board approval of a waiver request to DPI for Riverside Elementary's 12.5 hours of lost instructional time due to the April 17, 2026 tornado. The board also approved a staff compensation plan, year-end spending directives, preliminary budget for 2026-27, and out-of-state trip requests, then adjourned into closed session.",
+  "committee": "DC Everest School Board",
+  "presiding": "Shannon Grabko, President",
   "agenda": [
     {
-      "time": "N/A",
-      "item": "Call to Order"
+      "time": "0:00",
+      "item": "Call to Order and Roll Call"
     },
     {
-      "time": "N/A",
-      "item": "Roll Call"
+      "time": "1:10",
+      "item": "Public Hearing - Waiver of Instructional Minutes for Riverside Elementary (Wis. Stat. 118.38(1)(b))"
     },
     {
-      "time": "N/A",
-      "item": "Pledge of Allegiance"
-    },
-    {
-      "time": "N/A",
-      "item": "Public Hearing re: Waiver of Minutes for Riverside Elementary"
-    },
-    {
-      "time": "N/A",
+      "time": "2:30",
       "item": "Approval of Agenda"
     },
     {
-      "time": "N/A",
-      "item": "Public Comment"
+      "time": "3:10",
+      "item": "Consent Agenda"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Approval of Minutes"
+      "time": "4:30",
+      "item": "Reports: WASB, CESA, Superintendent's Report"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Certified Staff Recommended Employment/Resignations/Contract Adjustments"
+      "time": "14:00",
+      "item": "Mission Moment - Weston Elementary Soaring into Summer Aviation Event"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Treasurer's Report - General/Other Fund Bills"
+      "time": "32:00",
+      "item": "New Business: Annual Required Student Data Reports including Crime Statistics"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Balance Sheet"
+      "time": "37:00",
+      "item": "Education for Employment ACP Report and Youth Apprenticeship Presentation"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Budget Transfers"
+      "time": "58:00",
+      "item": "Resolution: Riverside Elementary Waiver of Instructional Minutes"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Budget Revisions"
+      "time": "1:05:00",
+      "item": "Junior High and IDEA Out-of-State Trip Approvals"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Grant Application(s)/Budget(s) Approval"
+      "time": "1:08:00",
+      "item": "Staff Compensation Plan Approval"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Fundraising Requests"
+      "time": "1:10:00",
+      "item": "2026-2027 Budget Update (Informational) and Year-End Spending Approval"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Gift/Bequests"
+      "time": "1:35:00",
+      "item": "First Reading of Policies"
     },
     {
-      "time": "N/A",
-      "item": "Consent Agenda - Bus Accident Report"
-    },
-    {
-      "time": "N/A",
-      "item": "Consent Agenda - Second Reading of Policies - po5136 Personal Communication Devices"
-    },
-    {
-      "time": "N/A",
-      "item": "Consent Agenda - Second Reading of Policies - po9215 School Support Organizations"
-    },
-    {
-      "time": "N/A",
-      "item": "Non-Certified Staff Employment Changes (Informational Only)"
-    },
-    {
-      "time": "N/A",
-      "item": "WASB Legislative Network Member Report - Presenter: Shannon Grabko"
-    },
-    {
-      "time": "N/A",
-      "item": "CESA #9 Representative Report - Presenter: Larry Schaefer"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - District Update"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - Semiquincentennial Celebration"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - Data-Based Community Insights"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - Portrait of a Graduate"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - Facilities Study Updates"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - Youth Apprenticeship Update"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Report - Upcoming Everest Roots Podcast Topics"
-    },
-    {
-      "time": "N/A",
-      "item": "Unfinished Business - Soaring into Summer"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - Annual Required Student Data Reports"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - Education for Employment/ACP Report"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - Resolution for Riverside Elementary Waiver of Minutes"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - Junior High and Idea Out-of-State Trips"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - Staff Compensation Plan"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - 2026-2027 Budget Update"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - Year-End Spending 2025-2026"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - 2026-2027 Budgetary Spending Approval"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po0100 Definitions"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po0167.3 Public Comment at Board Meetings"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po3120 Employment of Professional Staff"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po3120.05 Employment of Personnel in Community Education Programs"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po3140 Non-Renewal, Resignation, and Termination"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po4120.04 Employment of Substitutes"
-    },
-    {
-      "time": "N/A",
-      "item": "New Business - First Reading of Policies - po5200.01 Full-Time Student"
-    },
-    {
-      "time": "N/A",
-      "item": "Petitions and Communications - Thank You from K. VanSlyke for Memorial"
-    },
-    {
-      "time": "N/A",
-      "item": "Petitions and Communications - Thank You from P. Pierce for Sympathy"
-    },
-    {
-      "time": "N/A",
-      "item": "Petitions and Communications - Thank You from T. Fischer for Retirement Recognition"
-    },
-    {
-      "time": "N/A",
-      "item": "Petitions and Communications - Thank You from J. Weller for Sympathy"
-    },
-    {
-      "time": "N/A",
-      "item": "Future Meeting Dates"
-    },
-    {
-      "time": "N/A",
-      "item": "Adjournment to Closed Session"
+      "time": "1:37:00",
+      "item": "Motion to Adjourn to Closed Session"
     }
   ],
   "discussions": [
     {
-      "item": "Public Hearing re: Waiver of Minutes for Riverside Elementary",
-      "body": "The board was scheduled to hold a public hearing as required under Wisconsin Statute 118.38(1)(b) regarding a waiver of instructional minutes for Riverside Elementary. Supporting materials included a Notice of Public Hearing and waiver application documents."
+      "item": "Public Hearing - Riverside Elementary Instructional Minutes Waiver",
+      "body": "The board held the statutorily required public hearing under Wis. Stat. 118.38(1)(b) regarding a waiver request to DPI for Riverside Elementary's lost instructional time following the April 17, 2026 tornado. No members of the public offered comment at the hearing. The board subsequently passed the formal resolution directing the superintendent to apply to DPI for the waiver of 12.5 lost instructional hours by a 6-0 roll call vote (Yee Leng Xiong was absent)."
     },
     {
-      "item": "Soaring into Summer",
-      "body": "Presenters Kelly Ziegelbauer (Weston Principal), Lauren Doescher, and Katie Wochinski were scheduled to present information regarding a 'Soaring into Summer' initiative, with supporting presentation materials provided."
+      "item": "Superintendent's Report",
+      "body": "Superintendent Dr. [last name inaudible from transcript] discussed several topics including the district's participation in the Greater Wausau Prosperity Project community dashboard comparing Wausau-area strengths and challenges to similar communities, noting food insecurity, migration, and lack of young entrepreneurs as challenges while startup growth rates and PK-16 education ranked as strengths. He also updated the board on the facility study process, noting a community survey is planned for late September or October focused primarily on the junior high and pool questions. The district's youth apprenticeship program was highlighted as moving in-house after receiving DPI grant approval, having grown to 80 apprentices with 39 employers."
     },
     {
-      "item": "Annual Required Student Data Reports",
-      "body": "Dr. Lindell and Gina Lehman were scheduled to present annual required student data reports covering homeless and foster care status, seclusion and restraint incidents, crime statistics on school property, nursing reports, at-risk students nearing graduation, continuum of services, and emergency support services. The presentation was expected to include multiple supporting documents detailing student services and student support outcomes."
+      "item": "Mission Moment - Weston Elementary Soaring into Summer Aviation Event",
+      "body": "Fifth grade teacher Lauren Dasher and former kindergarten teacher Katie Winsky presented on the Weston Elementary 'Soaring into Summer' event, which took 500 students over three days to the Wausau Airport for hands-on aviation learning including airplane building with high school engineering students, simulator use, small plane tours, and Q&A with flight instructors. The event was funded by the Education Foundation and coordinated with the Wausau Airport's John [inaudible] and Aaron Huffman's high school Engineering Tomorrow class. Board members praised the community collaboration and connection to career pathway development."
     },
     {
-      "item": "Education for Employment/ACP Report",
-      "body": "Aaron Hoffman and student Takoda Rowland were scheduled to present a report on the Education for Employment and Alternative Career Pathway programs for the district."
+      "item": "Annual Required Student Data Reports / Crime Statistics",
+      "body": "Director Jeff [inaudible] explained the consolidated student data reports, noting that seclusion and restraint numbers involving fewer than five incidents are withheld as personally identifiable, and that 14 students (less than 0.25% of enrollment) experienced seclusion or restraint during the year. The board approved the 2025-2026 DC Everest Crime Statistics on School Property Report, the only item in the packet requiring formal board action, on a voice vote."
     },
     {
-      "item": "Resolution for Riverside Elementary Waiver of Minutes",
-      "body": "Dr. Strike was scheduled to present a resolution regarding the waiver of instructional hours for Riverside Elementary, with supporting documents including the waiver application and resolution language for board consideration."
+      "item": "Education for Employment ACP Report and Youth Apprenticeship Presentation",
+      "body": "Career and Technical Education Director Aaron Huffman presented the annual Academic and Career Planning report, highlighting 80 youth apprentices placed with 39 employers this year, a record exceeding 200 industry-recognized credentials earned by the senior class, and a drone competition where DC Everest teams took first and second place out of 28 schools. Student Dakota shared his experience pivoting from welding at J&D to electrical and machine control work at Imperial, illustrating the program's goal of allowing students to explore and modify career paths. The presentation was informational only and required no board action."
     },
     {
-      "item": "Junior High and Idea Out-of-State Trips",
-      "body": "Dr. Lindell was scheduled to present three out-of-state trip requests: a junior high trip to Washington, D.C. for 2026-27, a junior high world language trip, and an Idea senior class trip, with supporting documentation for each proposal."
+      "item": "Junior High and IDEA Out-of-State Trip Approvals",
+      "body": "The board approved out-of-state trips for the junior high to Washington, D.C. and Babi, Minnesota, and for the IDEA program's senior trip to Minneapolis, Minnesota. A brief exchange occurred in which a board member asked whether the language for the junior high trip destination was correctly stated this year, referencing an error in a prior year where Spain and France were listed incorrectly. Administration indicated the language was correct. The motion passed on a voice vote."
     },
     {
       "item": "Staff Compensation Plan",
-      "body": "Dr. Strike was scheduled to present the 2026-2027 staff compensation plans for board consideration, with supporting materials outlining compensation proposals for certified staff."
+      "body": "Dr. [inaudible] presented the comprehensive staff compensation plan for 2026-2027, explaining it consolidates all compensation information in one document. Most raises had already been approved; this action addressed remaining miscellaneous items including increased substitute wages, minor rate and title adjustments for part-time GTCC staff, and the addition of a girls wrestling coach position. The board approved the plan on a unanimous voice vote."
     },
     {
-      "item": "2026-2027 Budget Update",
-      "body": "Dr. Strike was scheduled to provide a comprehensive update on the 2026-2027 budget, including preliminary budget presentation materials for board review and discussion."
-    },
-    {
-      "item": "Year-End Spending 2025-2026",
-      "body": "Dr. Strike was scheduled to present a year-end spending report for the 2025-2026 fiscal year, providing financial details on district expenditures as the school year concludes."
-    },
-    {
-      "item": "2026-2027 Budgetary Spending Approval",
-      "body": "Dr. Strike was scheduled to request board approval for 2026-2027 budgetary spending authority, with supporting documentation outlining the proposed spending framework."
+      "item": "2026-2027 Budget Update and Year-End Spending",
+      "body": "The district's finance director presented the preliminary 2026-27 budget, noting the current year is projected to end with a surplus of $1.5 to $2 million, largely from salary and fringe savings and conservative revenue estimates. The 2026-27 budget is currently balanced in Funds 10 and 27. A significant concern raised was health insurance, with a 22% renewal increase assumed due to the highest claims loss ratio in district history. The board approved year-end spending authority directing administration to use surplus funds to pay back a $1,448,000 unfunded liability in Fund 73 (staff retirement benefit catch-up contributions approved last June) with remaining funds deposited into Fund 46 by July 30, 2026. The board also approved authority to spend from the preliminary budget until formal adoption in October 2026."
     },
     {
       "item": "First Reading of Policies",
-      "body": "Dr. Nye, Dr. Lindell, and Dr. Strike were scheduled to present first readings of seven policies including Definitions (po0100), Public Comment at Board Meetings (po0167.3), Employment of Professional Staff (po3120), Employment of Personnel in Community Education Programs (po3120.05), Non-Renewal, Resignation, and Termination (po3140), Employment of Substitutes (po4120.04), and Full-Time Student (po5200.01), with a memo regarding credit limits for senior high students."
+      "body": "The board approved the first reading of a list of policies, with a note that Policy 5200.01 had an explanatory memo attached regarding requested changes, to be directed to Dr. Lindell with any questions. No substantive debate occurred and the motion passed on a voice vote."
     }
   ],
-  "publicComment": "A public comment period was included on this agenda at item VI.",
+  "publicComment": "No public comment was offered. The board noted at the opening of the public hearing and again at the start of the regular meeting that no members of the public had submitted comments.",
   "actionItems": [
-    "Board was expected to vote on the Resolution for Riverside Elementary Waiver of Minutes following the public hearing",
-    "Board was expected to approve the Staff Compensation Plan for 2026-2027",
-    "Board was expected to approve the 2026-2027 Budgetary Spending Approval",
-    "Board was expected to approve out-of-state trips for junior high and senior students",
-    "Board was expected to consider first readings of seven policies with second readings anticipated at a future meeting",
-    "Board was expected to approve Second Reading of Policies po5136 Personal Communication Devices and po9215 School Support Organizations"
+    "Superintendent directed to submit DPI waiver application for Riverside Elementary's 12.5 lost instructional hours due to April 17, 2026 tornado",
+    "Administration authorized to spend year-end funds to repay $1,448,000 Fund 73 unfunded liability for staff retirement catch-up contributions, with remainder deposited into Fund 46 by July 30, 2026",
+    "Administration authorized to make necessary payments for 2026-2027 school year until formal budget adoption in October 2026",
+    "Staff compensation plan for 2026-2027 approved for implementation",
+    "Junior high out-of-state trips to Washington D.C. and Babi, Minnesota, and IDEA senior trip to Minneapolis approved",
+    "Youth apprenticeship program to transition fully in-house following DPI grant approval",
+    "Community facility study survey to be prepared for board feedback before late September/October distribution, focusing on junior high and pool questions",
+    "Board to register for WASB Summer Learning Symposium July 10-11 in Stevens Point (hotel registration deadline noted as Friday)",
+    "First reading of policies approved; second reading and action to follow at future meeting"
   ],
-  "_source": "boardbook_agenda",
+  "topics": [
+    "Budget",
+    "Facilities",
+    "Career and Technical Education",
+    "Youth Apprenticeship",
+    "Tornado Recovery"
+  ],
+  "votes": [
+    {
+      "item": "Approval of meeting agenda",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Consent agenda",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "6-0"
+    },
+    {
+      "item": "2025-2026 DC Everest Crime Statistics on School Property Report",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Resolution to request DPI waiver of minimum instructional hours for Riverside Elementary (12.5 hours lost due to April 17, 2026 tornado)",
+      "motion": "Approval of resolution directing superintendent to apply to DPI for waiver of Wis. Stat. 121.02(1)(f) minimum instructional hours for 2025-2026 school year at Riverside Elementary",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "6-0"
+    },
+    {
+      "item": "Junior high out-of-state trips to Washington D.C. and Babi, Minnesota, and IDEA senior trip to Minneapolis",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Staff compensation plan for 2026-2027",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Year-end spending authority to repay Fund 73 unfunded liability and deposit remainder into Fund 46 by July 30, 2026",
+      "motion": "Allow administration to strategically spend end-of-year funds to best meet the needs of the district and deposit all remaining funds into Fund 73 and Fund 46 by the statutory date of July 30, 2026",
+      "mover": null,
+      "second": "Lindsey Lewitzke",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Budgetary spending approval for 2026-2027 school year prior to October budget adoption",
+      "motion": "Approve necessary payments for the 2026-2027 school year between now and the budget's official approval in October 2026",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "First reading of policies",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjourn to closed session under Wis. Stat. 19.85(1)(a) and (c)",
+      "motion": "Motion to adjourn to closed session pursuant to Wisconsin State Statute 19.85(1)(a) and (c)",
+      "mover": "Lindsey Lewitzke",
+      "second": "Katie Felch",
+      "outcome": "Approved",
+      "tally": "7-0"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "cfca345ce681cd2b",
   "title": "Regular School Board Meeting Including a Public Hearing as Required Underneath Wis. Stat. 118.38(1)(b) - 2026-06-17",
-  "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=747929",
+  "url": "https://www.youtube.com/watch?v=j_8xEzhQrrI",
   "source": "dc_everest",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=747929",
-  "processed_at": "2026-06-17T03:43:29.603062+00:00",
-  "topics": [
-    "Curriculum",
-    "Facilities",
-    "Riverside Elementary"
-  ]
+  "processed_at": "2026-08-30T03:29:57.973717+00:00"
 }

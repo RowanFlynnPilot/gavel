@@ -1,0 +1,69 @@
+# Wausau Infrastructure and Facilities Committee Meeting
+
+**Organization:** City of Wausau  
+**Source:** https://www.youtube.com/watch?v=REV8vKLbJqM  
+**Summarized:** 2026-08-30 04:25 UTC
+
+---
+
+## Meeting Overview
+The Wausau Infrastructure and Facilities Committee met on August 13th and approved multiple action items including parking restriction corrections, utility easements, DOT transportation agreements for Grand Avenue and Business 51 reconstruction, a mowing ordinance amendment, a stormwater maintenance agreement, a bicycle sidewalk ordinance change, retired city sign disposition, and a bollard encroachment permit. The committee rejected both a Lamar billboard easement and a rectangular rapid flashing beacon at Thomas Street and River Drive, and held a significant discussion about the potential purchase of county highway property at 1430, 1308, and 1212 West Street for a new fleet maintenance facility potentially shared with Metro Ride.
+
+## Key Discussions
+### A: Parking Restrictions on Greenfield Avenue from Fernwood Drive to Summit Drive
+Staff described this as a housekeeping item: a November 1st to April 1st seasonal restriction tied to snow plowing had been approved at committee but was omitted when the item went to the full council. The amendment was moved, seconded, and approved unanimously with no notable debate.
+
+### B: Easement with Wisconsin Public Service at 1603 Martin Street
+Staff explained this utility easement allows Wisconsin Public Service to run electricity across a city-owned parcel to reach a wastewater lift station under construction. The item was approved without discussion.
+
+### C: Easement for Win LLC at 814 North 1st Street
+Staff described this as another housekeeping correction: the easement had previously been approved but was incorrectly labeled as going to Alexco rather than Win LLC, preventing council approval. The corrected easement was moved and approved unanimously.
+
+### D-G: Business 51/Grand Avenue DOT Transportation Agreements
+Staff walked through four related items: a transportation project plat for Grand Avenue (Lake View Drive to Kent Street) where DOT reimburses the city 100% for right-of-way acquisition; a revised state-municipal finance agreement for the same project with the city responsible for approximately $595,000 in utility costs and 25% of design; a financing agreement for Business 51 from County Trunk Highway U to West Campus Drive with the city responsible for only $5,340 in utility adjustments; and a maintenance agreement for the same Business 51 corridor committing the city to maintain crosswalks, ped ramps, and plow intersections. A committee member asked whether additional revisions to the Grand Avenue agreement were anticipated before 2029; staff said no given the 60% plan stage. Another member noted increased maintenance responsibilities for new ped ramps and crosswalks. All four items were approved.
+
+### H: Amending Section 6.48.010 Mowing Requirement
+A committee member raised concerns that the existing ordinance language was confusing—residents were receiving citations for boulevard mowing but the obligation was not clearly codified, and language about prohibited plantings could be interpreted to allow certain gardens. Staff confirmed enforcement had generally been complaint-driven and that the ordinance was intended to mirror lawn maintenance expectations. One member moved to approve as written, arguing the intent was clear; another requested a future agenda item to address broader boulevard use communication and potential pollinator garden policy. The mowing requirement amendment was approved, and a future agenda item on boulevard ordinance communication was requested.
+
+### I: Stormwater Maintenance Agreement with Beacon Resources LLC at 731 North First Street
+Staff described this as a routine maintenance agreement required for any property redeveloped over one acre to ensure stormwater facilities are maintained. A member asked about verification mechanisms; staff confirmed periodic inspections occur. The item was approved without significant debate.
+
+### J: Amending Section 10.40.040 - Bicycling on Sidewalk near Thomas Street Bridge
+Staff, presenting on behalf of the Bicycle and Pedestrian Advisory Committee, explained the amendment would legalize bicycling on the sidewalk along a short gap between Thomas Street Bridge and Oak Island Park on River Edge Parkway, with the long-term intent of building a multi-use path to close the infrastructure gap. One member raised safety concerns about cyclists encountering pedestrians on the curved, hilly sidewalk; staff noted bike-ped committee discussed this and found on-street risk greater, and that use of the sidewalk would be optional ('may' language). The item had already passed Public Health and Safety Committee. It was approved.
+
+### K: Sign Disposition Plan for Retired City Signs
+Staff reported four city signs were replaced, two retained, and that there is significant interest from both private buyers and the Marathon County Historical Society. The plan called for giving one sign to the historical society and selling the other per municipal code. A committee member moved to amend the motion so the Marathon County Historical Society could choose which sign they preferred rather than staff selecting for them. That amended motion was approved unanimously.
+
+### L: Rectangular Rapid Flashing Beacon at Thomas Street and River Drive
+Staff noted that engineering did not recommend approval because pedestrian count thresholds were not met, though the Bicycle and Pedestrian Advisory Committee had forwarded the item citing future development at 700 Grand and proximity to the River Edge Parkway system. One member said placing a beacon 500 feet from the recently approved Thomas and McCleary beacon did not make sense from a traffic standpoint and noted the county is soliciting redevelopment proposals for nearby property. Another member argued the committee should follow its own standards or render them meaningless. A motion to table until after completion of 700 Grand was withdrawn after a member argued denial was cleaner. A motion to approve was then made and seconded; the motion failed with multiple nay votes.
+
+### M: Non-Binding Letter of Intent with TLC Properties/Lamar for Billboard Easement at 1514 North 3rd Street
+Staff explained Lamar sought a permanent easement for the billboard on Bridge Street on city-owned property, but staff recommended against it to preserve future redevelopment flexibility. A member noted the city renewed Lamar's lease in short terms specifically to maintain that flexibility and characterized a permanent easement as a great deal for Lamar but not the city. Multiple members opposed granting a permanent easement. A motion to approve was made for procedural purposes; the motion failed on a nay vote.
+
+### O: Encroachment Permit for 630 North 3rd Street
+Staff explained that the property owner, Randy Williams, wants to install bollards to protect stone copings on a recently rehabbed building from snow plow damage; because the building sits at the right-of-way line, the bollards would encroach into city right-of-way. Engineering had no objection. Members discussed aesthetic compatibility with other downtown bollards and confirmed the property owner is responsible for installation, maintenance, and removal. The encroachment permit was approved.
+
+### Discussion: County Highway Property at 1430, 1308, and 1212 West Street for Fleet Maintenance Facility
+The DPW director reported that after approximately 18 months of conversations, the county administrator indicated openness to receiving a purchase offer for the roughly 12-acre property, which could house both a new city fleet maintenance facility and a Metro Ride transit facility, enabling shared wash stations, bulk fluid storage, and other infrastructure. Staff noted most or all existing county structures would need to be demolished and rebuilt. A member asked for valuations of the current DPW fleet facility and Metro Ride property to understand potential offsets. Staff noted up to three acres fronting 17th Street could potentially be sold for redevelopment. Members noted the property's proximity to the parks department and potentially the police department. No formal action could be taken as this was a discussion item; committee expressed general support for continuing negotiations.
+
+## Public Comment
+No public comment was offered. The chair made three calls for public comment and received no response.
+
+## Action Items
+- Parking restriction amendment (Nov. 1–April 1) on Greenfield Avenue codified and forwarded to council
+- Utility easement with Wisconsin Public Service at 1603 Martin Street approved
+- Corrected easement with Win LLC at 814 North 1st Street approved
+- Business 51/Grand Avenue DOT transportation project plat approved
+- Revised state-municipal finance agreement for Grand Avenue (city responsible for ~$595,000 in utility costs) approved
+- State-municipal financing agreement for Business 51 to West Campus Drive (city responsible for $5,340 in utility adjustments) approved
+- State-municipal maintenance agreement for Business 51 corridor approved, with city taking on new crosswalk painting and ped ramp snow plowing responsibilities
+- Boulevard mowing requirement ordinance amendment approved; staff to develop communications strategy and future agenda item on broader boulevard use policy
+- Stormwater maintenance agreement with Beacon Resources LLC at 731 North First Street approved
+- Ordinance amendment allowing bicycling on sidewalk near Thomas Street Bridge approved as interim measure pending multi-use path construction
+- Retired city sign disposition plan approved with amendment: Marathon County Historical Society given first choice of which sign to keep
+- Rectangular rapid flashing beacon at Thomas Street and River Drive denied
+- Lamar billboard permanent easement at 1514 North 3rd Street denied
+- Encroachment permit for bollards at 630 North 3rd Street approved
+- Staff directed to pursue appraisal/valuation of county highway property at 1430, 1308, and 1212 West Street and current fleet/Metro Ride properties for committee review
+- Snow plowing bid item deferred to next month's agenda
+- Committee definition review added to next month's agenda

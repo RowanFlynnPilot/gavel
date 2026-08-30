@@ -1,0 +1,92 @@
+{
+  "overview": "The Marathon County Public Safety Committee received two informational presentations: a data-driven update on the county's drug treatment court program (2018–2026 year-to-date) and an overview of North Central Health Care's Hope House supportive housing program. No formal votes were taken on substantive matters aside from adjournment. The meeting highlighted that Marathon County's treatment court success rate of 58.8% exceeds the state average of 56.6%, and that lack of supportive housing was identified as the top gap in a recent strategic intercept mapping exercise.",
+  "committee": "Marathon County Public Safety Committee",
+  "presiding": "Not explicitly identified by name in the transcript; a committee chair facilitated the meeting but was not named on record.",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Treatment Court Program Overview — presented by Lori Ari, Justice Programs Coordinator"
+    },
+    {
+      "time": "4:30",
+      "item": "Treatment Court Data Presentation — presented by Michael Schultz, Data Officer"
+    },
+    {
+      "time": "8:00",
+      "item": "Treatment Court referrals, eligibility, admissions, and success rate data (2018–2025)"
+    },
+    {
+      "time": "15:00",
+      "item": "Treatment Court 2026 year-to-date data and state comparison"
+    },
+    {
+      "time": "22:00",
+      "item": "Committee Q&A on Treatment Court — questions from Jason and Kim"
+    },
+    {
+      "time": "28:00",
+      "item": "6C: North Central Health Care Hope House Program Overview — presented by Wendy Peterson"
+    },
+    {
+      "time": "35:00",
+      "item": "Committee Q&A on Hope House — questions on success rates, funding, vetting, and housing for women"
+    },
+    {
+      "time": "44:00",
+      "item": "Future agenda items and next meeting date announcement"
+    },
+    {
+      "time": "45:00",
+      "item": "Motion to adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Drug Treatment Court Program Overview and Data Presentation",
+      "body": "Justice Programs Coordinator Lori Ari and Data Officer Michael Schultz presented a comprehensive data report on the county's drug treatment court, covering 2018 through August 6, 2026. Schultz used Power BI dashboards connected to the DOJ's CORE system to show referrals, admissions, eligibility breakdowns, days in program, housing and employment status changes, and success rates. A notable highlight was that exactly 100 participants had either graduated, been terminated, or administratively discharged since the program's inception, with Marathon County's 58.8% success rate slightly exceeding the state average of 56.6% for the 2019–2023 period. Ari noted 15 participants have had children returned from out-of-home placement and six drug-free babies have been born to program participants."
+    },
+    {
+      "item": "Committee Q&A on Treatment Court",
+      "body": "Supervisor Jason asked whether graduates stay in contact with the program after completion; Ari explained graduates fill out a questionnaire about desired contact level, are required to check in at court at 30, 60, and 90 days post-graduation, and many continue to volunteer or sponsor new participants. Supervisor Kim asked about the reasons for the 40% termination rate seen in the state comparison data; Ari explained termination typically results from absconding, significant new criminal charges, or long-term failure to show any improvement. A committee member who identified as a former prosecutor noted the visible transformation in participants he had seen at graduations."
+    },
+    {
+      "item": "6C: North Central Health Care Hope House Program Overview",
+      "body": "Wendy Peterson, Director of Acute Care Services at North Central Health Care, presented an overview of Hope House, a supportive sober-living program operating under the Apricity model with two locations: an eight-bed men's facility in Wausau (average daily census 6.5) and an eight-bed women's facility in Antigo (average daily census 5.5), serving Marathon, Lincoln, and Langlade Counties. Residents must have completed treatment, maintained 30 days of sobriety, and engage in 40 hours per week of work, school, volunteering, or programming. Funding comes from resident rent supplemented by Marathon County cash levy for the Wausau location and Langlade County cash levy for the Antigo facility. County Administrator Jason noted that the recent Strategic Intercept Mapping exercise identified lack of supportive housing as the number-one gap in the community's justice and recovery system."
+    },
+    {
+      "item": "Future Agenda Items and Adjournment",
+      "body": "The chair noted that drone statistics were requested as a future agenda item and asked committee members to submit additional ideas to herself or administrator Lance. The next meeting was announced for Tuesday, September 8th at 1:30. Supervisor Joel moved to adjourn; Jen seconded; the motion passed unanimously by voice vote."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Drone statistics to be added as a future agenda item per chair's direction to the administrator.",
+    "Michael Schultz and Lori Ari to prepare a presentation on treatment court data for the Wisconsin Treatment Court Professionals Conference in the fall.",
+    "Committee members asked to submit ideas for future agenda items to the chair or administrator Lance.",
+    "Next Public Safety Committee meeting scheduled for Tuesday, September 8th at 1:30 p.m."
+  ],
+  "topics": [
+    "Public Safety",
+    "Treatment Court",
+    "Supportive Housing",
+    "Substance Use Recovery",
+    "Hope House"
+  ],
+  "votes": [
+    {
+      "item": "Adjourn the meeting",
+      "motion": "Move to adjourn",
+      "mover": "Joel",
+      "second": "Jen",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "98dca5c0df1ae41e",
+  "title": "Marathon County Public Safety Committee Pt.2",
+  "url": "https://www.youtube.com/watch?v=L9DOaVBOkJU",
+  "source": "marathon",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:17:52.598277+00:00"
+}

@@ -1,0 +1,56 @@
+# Public Works Committee
+
+**Organization:** Village of Weston  
+**Source:** https://www.youtube.com/watch?v=ubL9iQ5ZO1I  
+**Summarized:** 2026-07-14 21:00 UTC
+
+---
+
+## Meeting Overview
+The Village of Weston Public Works Committee met on July 13, 2026, covering active construction project updates, utility operations, and two action items: awarding a surveying contract for Howland Avenue and awarding the Concord Avenue/Bayberry Street reconstruction bid to HS Suns. The committee also held an extended discussion on future capital needs including the aging Ross Avenue bridge over the Eau Claire River, street lighting gaps, PFAS treatment, and asbestos cement water main replacement.
+
+## Key Discussions
+### Approval of June 8, 2026 Minutes
+A motion was made and seconded to approve the minutes from the June 8, 2026 meeting. The motion passed unanimously on a voice vote with no discussion.
+
+### Acknowledge June 2026 Water and Sewer Month
+A motion was made and seconded to acknowledge June 2026 as Water and Sewer Month. The motion passed unanimously on a voice vote with no discussion.
+
+### CIP Update
+Staff member Michael provided updates on multiple active projects. Western Avenue patch paving is largely complete with two rough patches remaining and two inoperable hydrants to be repaired. Scoffield Avenue specialty pavement markings and concrete work remain outstanding. Alderson Street and Jelnik concrete work is beginning and the intersection is expected to open around the first week of August, before school starts. Bladel Avenue reconstruction is roughly two-thirds complete on water main and sanitary sewer, with an early October finish date on schedule. The committee discussed the Rothschild/Bellwood project delay, with Rothschild reallocating funds to repave Eagles Nest Boulevard instead, pushing the shared project to next year. The DOT is reviewing Business 51 storm pond modeling; staff noted DOT contributes roughly 15% of the phosphorus load, equating to approximately $450,000 of a $3 million project, and a response is needed by end of month.
+
+### Street Operations Update
+Staff reported that rural ditch and right-of-way mowing has begun along Scoffield Avenue, Camp Phillips, and other corridors. Shouldering on Shorry Avenue from Camp Phillips to Anastasia took a crew of eight about a day and a half. Excavation on Shirley Street is underway, stripping blacktop and removing clay/organic subgrade material, replacing it with approximately two to three feet of sand fill and 12 inches of recycled base; about 300 feet remain of the 1,300-foot project. Norcon completed repairs on Scoffield Avenue, fixing close to 200 failing panels from Esther to Tegan Street. Norcon also completed bridge deck repairs on Ross Avenue over the Eau Claire River in two days; the committee noted the deck is deteriorating and discussed that repairs are a temporary fix, with a full bridge replacement discussion deferred to Item 14. Farner Asphalt is performing crack sealing but postponed chip sealing of the Sandy Lane roundabout due to heat and humidity concerns.
+
+### Utility Operations Update
+Utility director Josh reported that unidirectional water main flushing is ongoing, currently near the Alderson/Radkey area, requiring about 10 to 12 weeks to complete the whole village and flushing approximately 12 to 15 million gallons annually. Josh noted a utility operator gave notice and is leaving, reducing the team from five to four operators; a job posting will go out shortly. The SCADA system is fully operational with minor interface fine-tuning ongoing; staff are developing a wish list of additional features. InPipe Technologies will begin an inflow and infiltration study in the annexed area near Wall Street at the end of the month, with a manhole rehabilitation project expected to be ready for award next month. A pump was pulled due to a wipes clog, prompting discussion of issuing public notices about flushing only appropriate materials.
+
+### Howland Avenue Survey Services
+Staff received four survey proposals for the 2027 Howland Avenue reconstruction project. Point of Beginning submitted the low bid of $12,500 with a four-to-five-week turnaround; Breland Associates offered the fastest three-week schedule. Staff recommended Point of Beginning on cost since schedule was not a primary concern. A committee member moved to award the surveying contract to Point of Beginning at $12,500 and the motion passed unanimously on a voice vote.
+
+### Street Light Installation Discussion
+Michael presented a village-wide street light map showing existing lights (red dots), unlit intersections (yellow), and unlit road bends (green). Following the minimum policy standard of lights at intersections, dead ends, bends, and every tenth mile would require approximately 121 additional lights at an upfront cost of roughly $250,000 and an annual operating increase of about $33,000. A committee member raised Ross Avenue as a safety concern due to frequent deer strikes in the dark corridor parallel to the Eau Claire River. The committee agreed staff should obtain a WPS quote for spacing lights along Ross Avenue from Camp Phillips to the river, and should consult the police department for data on accident and deer strike locations before any broader decisions. Members expressed opposition to a blanket village-wide lighting policy, preferring targeted improvements in high-traffic or high-risk areas. No vote was taken; staff was directed to get a WPS quote and police input.
+
+### Concord Avenue Reconstruction Bid Results
+Four bids were received for the Concord Avenue and Bayberry Street reconstruction project: HS Suns at $2,223,819.90 (low bid), PGA at approximately $2,241,000, A1 at $2.36 million, and Integrity at $2.567 million. Staff recommended HS Suns, noting they have performed satisfactorily on multiple recent village projects including Jelnik Avenue, Scoffield Avenue, and the current roundabout. An alternate bid of $25,000 from HS Suns for a sidewalk connection in the Aspen area was also discussed; the committee agreed it was more cost-effective to include it now rather than return later. A committee member moved to award the project to HS Suns including the alternate for a total of $2,248,819.90 (base $2,223,819.90 plus alternate $25,000 approximately); the motion was seconded and passed unanimously on a voice vote.
+
+### Future Capital Improvement Projects Discussion
+Staff outlined several major upcoming projects for 2027–2030 and beyond. The Ross Avenue bridge over the Eau Claire River, built in 1979, is deteriorating rapidly with a hollow-sounding deck on chain testing; the committee agreed staff should develop an RFP for a structural analysis and bridge design consultation as soon as possible, noting the DOT permitting process could take four to five years. PFAS treatment was flagged as a pressing water utility need, with the Bladel and Alta Verde wells creeping toward the EPA recommended level of four parts per trillion; staff proposed designing treatment plants at those wells and pursuing DNR safe drinking water loan funding. The Fox Street lift station was identified as the oldest and most vulnerable lift station, with a small wet well and recent near-failures. Water and sewer master plans from 2017–2018 are due for a 10-year update. The Camp Phillips corridor (County Road X) was discussed; the county highway commissioner envisions an engineering study in 2028–2029 and noted the corridor is nearing traffic capacity with no practical reconstruction within its current footprint. Asbestos cement water main replacement was raised as a topic for a future meeting, with committee members urging pursuit of grant funding to accelerate the estimated 10-plus-year replacement timeline. Mountain Bay Metro Police Department evidence storage was noted as now moved out of the public safety building main structure to the two outbuildings. The Mountain Bay Metro Police Department building bid opening was noted for Thursday at 10:00 a.m.
+
+## Public Comment
+No public comment was offered. Tanya Westfall with Clark Eats joined via Zoom but no public comment period was exercised by any attendees.
+
+## Action Items
+- Award Howland Avenue surveying contract to Point of Beginning at $12,500
+- Award Concord Avenue and Bayberry Street reconstruction to HS Suns including the Aspen sidewalk alternate for a total of approximately $2,248,819.90
+- Staff to obtain WPS quote for Ross Avenue street lighting from Camp Phillips to the Eau Claire River
+- Staff to consult Weston Police Department for accident and deer strike location data to inform street lighting priorities
+- Staff to develop an RFP for Ross Avenue bridge structural analysis and design consultation and bring to committee for review
+- Staff to pursue bridge aid grants and other funding for Ross Avenue bridge replacement
+- Staff to contact Marathon County Highway Commissioner Kevin Lang for bridge RFP templates
+- Staff to incorporate Ross Avenue bridge, PFAS treatment plant design, Fox Street lift station, and master plan update into 2027 budget planning
+- Staff to bring preliminary cost numbers for future capital projects to next meeting
+- Water main replacement grant pursuit to be added as a future meeting agenda topic
+- Real estate purchase offers for the Rosaf project right-of-way (Alderson to Metro Drive) to go to Village Board for approval
+- Post job advertisement for fifth utility operator position
+- Share Mountain Bay Metro Police Department evidence storage building update with Village Board at next week's meeting

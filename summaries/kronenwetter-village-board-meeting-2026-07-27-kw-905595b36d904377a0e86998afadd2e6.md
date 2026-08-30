@@ -3,62 +3,56 @@
 **Organization:** Village of Kronenwetter  
 **Source:** https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-62  
 **Documents:** https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-905595b36d904377a0e86998afadd2e6.pdf  
-**Summarized:** 2026-08-29 22:37 UTC
+**Summarized:** 2026-07-30 02:04 UTC
 
 ---
 
 ## Meeting Overview
-The Kronenwetter Village Board approved a rezoning of the Marathon County Highway Facility 7-0 after the Plan Commission confirmed all six criteria were met, and authorized a $37,884 bike path sealing contract with Fahrner Asphalt Sealers funded through 2024 GO borrowing. The board also directed staff and the Plan Commission to move forward with exploring twin home/zero lot line housing options for the Village. All substantive votes carried unanimously 7-0.
+The Kronenwetter Village Board held its July 27, 2026 meeting and approved several significant items including a rezoning of Marathon County Highway Department property from B3SF and AR to M2 General Industrial, a Bushka Park 5K run/walk fundraiser for September 12, matching a $5,000 parks grant, and multiple budget amendments. The board also discussed the Quasquerot interchange opportunity and gave consensus to move forward on a zero-lot line ordinance change.
 
 ## Key Discussions
-### Finance Director/Treasurer Report
-Finance Director/Treasurer John Jacobs presented updates on the 2025 Audit, TID 3 Closure, capital borrowing, Capital Infrastructure Projects, the operating budget, and 2026 internal financial systems. He also reviewed the 2027 budget development timeline and the upcoming 2026-2027 reassessment timetable. Regarding the mid-year budget status report, Jacobs identified three areas of concern alongside positive developments, and answered board questions about covering any budget overages. No action was taken on these informational items.
+### Public Comment - Zero-Lot Line Development
+Keefe Wolkowski spoke in favor of the zero-lot line concept, noting he first brought it to the Planning Commission about two years ago. He explained that the proposal involves 60-foot-wide lots that would allow twin-home ownership, with each owner holding their half, and cited adoption by Rothschild, Weston, and Marshfield. He noted Gary Gurn and Timberidge Builders are interested in a mixed twin-home and single-family development in Kronenwetter.
 
-### Consent Agenda: July 13, 2026 Village Board Meeting Minutes and June 2026 Check Register
-The consent agenda included approval of the July 13, 2026 Village Board meeting minutes and the June 2026 Check Register, ACH Register, and Credit Card Transactions Activity. Trustee Lesniak moved and Trustee Myszka seconded approval. The motion carried 7-0 by roll call vote.
+### Public Comment - Quasquerot Interchange
+Resident Guy Fredel made an extended argument for keeping the Quasquerot interchange in the Wausau MPO's long-range transportation plan, noting that Duane Gaau (MPO chairperson) had written to President Joling asking for the village's position. Fredel highlighted that federal interchange standards have been reduced from seven criteria to two, that state law requires Wisconsin to cover 100% of costs if a federal waiver is needed, and that two state representatives had expressed interest in funding it in the next budget cycle. He argued safety concerns on the current I-39 northbound ramp support the interchange.
 
-### CSM Happy Hollow Road - Dean Prohaska (Plan Commission)
-President Joling announced prior to the meeting that this item would not be addressed pending further guidance from the Plan Commission. No discussion took place and no action was taken.
+### Finance Director's Mid-Year Financial Update
+Finance Director John James reported the village is at roughly 54% of revenues collected and 43% of expenditures spent at the six-month mark, which he characterized as healthy overall. He flagged three areas of concern: the village attorney budget is $10,000 over budget due to a personnel investigation with more invoices expected; the municipal building is at 53% spent due to unexpected repairs from deferred maintenance; and the garbage/recycling budget is at 54% spent due to a diesel fuel surcharge triggered when prices exceed $4 per contract. James indicated the $60,000 contingency reserve would be used to address overages via future budget amendments through APC and the board.
 
-### Rezone Marathon County Highway Facility (Plan Commission)
-Trustee Lesniak presented the item, referencing a public hearing held at the July 20, 2026 Plan Commission Meeting and a subsequent July 27 Plan Commission meeting held prior to the board meeting, at which all six rezoning criteria were confirmed to be met. County representatives Administrator Lance Leonard and Highway Commissioner Kevin Lang answered board questions about water use at the new facility. Lesniak moved and Coyle seconded approval of the zoning change as submitted by the county; the motion carried 7-0 by roll call vote.
+### 2027 Budget Timetable
+Finance Director James presented a timetable calling for the CIP budget review to begin at the August 3rd CLIP committee meeting, with two budget workshops planned for October 19 and 20, with the October 19 meeting starting earlier in the afternoon to avoid conflicting with Planning Commission. Final budget adoption is targeted for the November 9 board meeting. Trustees were encouraged to attend any committee budget meetings and to raise questions early so the final adoption meeting would be largely settled.
 
-### CSM Marathon County Highway Facility (Plan Commission)
-President Joling indicated this item would not be addressed pending further Plan Commission guidance. No discussion took place and no action was taken.
+### Item K: Rezoning - Marathon County Highway Facility
+Dan Joling reported the Planning Commission, after completing its discussion today following a storm-interrupted meeting the prior Monday, unanimously found all six required criteria were met and recommended approval of the rezoning of 25.247 acres from B3SF and AR to M2 General Industrial for the Marathon County Highway Department facility. Marathon County Highway Commissioner Kevin Lee clarified that the facility's water plan involves three components: the main building connected to village sewer and water, a private well for brine-making (a high-volume use that does not enter the sewer), and a private well for the wash bay with metered sewer discharge. The board approved the rezoning 7-0.
 
-### Septic Tank Ordinance (Plan Commission)
-President Joling indicated this item would not be addressed pending further Plan Commission guidance. No discussion took place and no action was taken.
+### Item N: Twin-Home Zero-Lot Line Ordinance - Planning Commission Guidance
+Planning Commission representative Dan [Joling] explained the commission was seeking board consensus to proceed with drafting ordinance changes to allow zero-lot line twin-home lots, following a prior recommendation that did not advance. Multiple trustees expressed support, with one noting the previous failure was partly due to misperceptions that these would be low-income rentals, when in fact units sell for approximately $400,000 per side. The board reached consensus to direct staff and the Planning Commission to gather ordinances from neighboring communities and draft language for a public hearing and future board approval. No formal vote was taken.
 
-### Twin Home/Zero Lot Line (Plan Commission)
-Trustee Lesniak explained the concept of twin home and zero lot line housing and asked the board to provide direction to staff and the Plan Commission on whether to pursue allowing such homes in the Village. This followed public comment from Keith Walkowski, who noted these housing types are permitted in neighboring municipalities and offer options for retirees and those looking to downsize. The board directed staff and the Plan Commission to move forward with exploring the change; no formal vote was recorded.
+### Item O: Bushka Park 5K Run/Walk Fundraiser
+Parks Committee Chair Erin Mishka presented a plan for a September 12, 2026 fundraiser event featuring both a 5K and a 3K route through Bushka Park, Towering Pines Park, and Civil Park, ending at Relocation Public Needary whose owner agreed to host participants and donate a percentage of sales to the Bushka Park project. President Joling volunteered to provide music. Chief McEul reviewed the routes and approved the intersections plan. The board approved the event unanimously on a voice vote.
 
-### September 12, 2026 Buska Park 5K Run/Walk Fundraiser Event (Parks Committee)
-Trustee Aaron Myszka presented the event and gave an overview of the logistics for a 5K Run/Walk fundraiser at Buska Park scheduled for September 12, 2026. Coyle moved and Solheim seconded approval; the motion carried 7-0 by voice vote.
+### Item P: Wausau Marathon County Parks and Recreation Foundation Grant Match
+Mishka reported the village was awarded a $5,000 grant from the Wausau Marathon County Parks and Recreation Foundation, with the foundation expressing a preference (not a requirement) for a $5,000 municipal match. Finance Director James said the match would be moved from the existing general fund parks budget into a dedicated park fund for transparency, with a formal budget amendment to come through APC in August. The board approved the $5,000 match 7-0, with trustees noting that matching demonstrates community investment and positions the village well for future grant applications.
 
-### Wausau & Marathon County Parks & Recreation Foundation Grant (Parks Committee)
-Public Works Director Ulman presented the grant item, noting that the foundation awarded $5,000 and requested the Village provide a matching contribution. Finance Director/Treasurer Jacobs outlined possible sources within the budget for the match. Coyle moved and Myszka seconded approval; the motion carried 7-0 by roll call vote.
+### Item Q: Budget Amendment #3 - Municipal Garage Bathroom
+The board considered a previously approved $14,815 addition for a bathroom on the police side of the new municipal garage, requiring a formal budget amendment. The amendment adds the cost to the capital projects fund. Trustee Lesniak moved and Trustee Solheim seconded; the board approved 7-0.
 
-### Budget Adjustment #3 – Municipal Garage Bathroom (APC)
-Finance Director/Treasurer Jacobs explained the budget adjustment needed for bathrooms in the Municipal Garage. Lesniak moved and Solheim seconded approval of the budget amendment; the motion carried 7-0 by roll call vote.
-
-### Bike Path Sealing (APC)
-Public Works Director Ulman presented the bike path sealing project, identifying Fahrner as the contractor and 2024 GO borrowing as the funding source. The approved contract amount is $37,884. Stowell moved and Myszka seconded approval; the motion carried 7-0 by roll call vote.
-
-### Budget Adjustment #4 – Bike Path Sealing (APC)
-Finance Director/Treasurer Jacobs explained the budget amendment associated with the bike path sealing project. Lesniak moved and Coyle seconded approval of Budget Amendment #4 as presented; the motion carried 7-0 by roll call vote.
+### Item R & S: Bike Path Sealing - Farner Asphalt and Budget Amendment #4
+Public Works Director Greg [inaudible] presented a proposal to seal all village multi-modal trails using Farner Asphalt under an existing contract for $37,884, funded from remaining 2024 geo-borrowing funds (approximately $1.2 million remaining after the Flanard/Jamros project was not completed). The board approved the sealing contract 7-0 and then approved Budget Amendment #4 allocating the $37,884 across capital projects fund and TID areas 7-0. Trustee Mishka noted participants in a recent village bike event particularly enjoyed the paths being maintained.
 
 ## Public Comment
-Keith Walkowski, 3857 State Hwy. 153, Kronenwetter, spoke in favor of the Village allowing zero lot line homes, providing a history of previous attempts to make this change and noting such homes are permitted in neighboring municipalities and provide housing options for retirees and those looking to downsize. Guy Fredel, 2240 Ruby Drive, Kronenwetter, spoke about the possibility of an interchange on Kowalski Road, explaining changes to the review process including a reduction in required standards from seven to two, and submitted written materials that were attached to the minutes.
+Two speakers addressed the board. Keefe Wolkowski of Irrill 1503 spoke in support of the zero-lot line agenda item, describing his history bringing the concept to the village and noting that neighboring communities including Rothschild, Weston, and Marshfield have adopted similar ordinances. Resident Guy Fredel distributed materials and made an extended argument urging the board to reaffirm support for the Quasquerot interchange in the Wausau MPO long-range transportation plan, citing reduced federal standards, potential state funding, and economic impact projections of 1,200 jobs and $120 million in new valuation.
 
 ## Action Items
-- Rezoning of Marathon County Highway Facility approved as submitted by the county
-- Staff and Plan Commission directed to move forward with exploring twin home/zero lot line housing allowance in the Village
-- September 12, 2026 Buska Park 5K Run/Walk fundraiser event approved
-- Wausau & Marathon County Parks & Recreation Foundation $5,000 grant with Village match approved
-- Budget Adjustment #3 for Municipal Garage bathrooms approved
-- Bike path sealing contract with Fahrner approved for $37,884 funded from 2024 GO borrowing
-- Budget Adjustment #4 for bike path sealing approved
-- CSM Happy Hollow Road, CSM Marathon County Highway Facility, and Septic Tank Ordinance items deferred pending further Plan Commission guidance
-- Kowalski Road Interchange Update and Board of Appeals Process placed on future agenda
-- Administrator Davel and President Joling scheduled to meet with a new developer the following day
-- Nathan Sandwick set to begin employment the following week
+- Marathon County Highway Department rezoning approved; county may proceed with facility development
+- Staff and Planning Commission directed to draft zero-lot line ordinance amendments using neighboring community ordinances as models for future public hearing and board approval
+- Bushka Park 5K/3K run/walk fundraiser approved for September 12, 2026; Parks Committee to finalize details including start time and sponsorships
+- Village to match $5,000 Wausau Marathon County Parks and Recreation Foundation grant; budget amendment to come through APC in August
+- Budget Amendment #3 approved for $14,815 municipal garage bathroom addition
+- Farner Asphalt contracted for $37,884 bike path sealing; Budget Amendment #4 approved
+- President Joling to contact Mr. Jacobson regarding Quasquerot interchange status and potentially place item on future board agenda
+- Planning Commission to review and recommend improvements to the Board of Appeals structure
+- Finance Director James to prepare budget amendment for village attorney overage once personnel investigation is substantially complete
+- Reassessment contractor (Associated Appraisal Consultants) to provide detailed timeline; village to begin public outreach via social media
+- CIP budget review to begin at August 3 CLIP committee meeting; budget workshops scheduled for October 19-20

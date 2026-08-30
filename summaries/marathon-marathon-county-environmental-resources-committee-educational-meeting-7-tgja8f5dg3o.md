@@ -1,0 +1,42 @@
+# Marathon County Environmental Resources Committee - Educational Meeting - 7/23/26
+
+**Organization:** Marathon County  
+**Source:** https://www.youtube.com/watch?v=TGJa8f5dG3o  
+**Summarized:** 2026-08-05 02:08 UTC
+
+---
+
+## Meeting Overview
+The Marathon County Environmental Resources Committee held a special educational meeting with no votes taken, featuring conservation staff introductions and program updates, followed by background on proposed animal waste ordinance changes. Four public commenters addressed concerns about manure spreading regulations, wind turbine development, and water quality, while staff presented on municipal wellhead protection successes in Athens and Rib Mountain, a walleye telemetry study on the Big Eau Pleine, and shoreline restoration projects.
+
+## Key Discussions
+### Public Comment - Manure Ordinance and Agriculture Regulations
+Christine Cafer (Town of McMillan) questioned where the other 72% of phosphorus load in the Wisconsin River basin originates beyond Marathon County's 28%, raised concerns about storage cost burdens on farms without facilities, and asked the committee to identify scientific evidence that additional county regulations will produce measurable improvements beyond existing state programs. Dean Beck, a member of the animal waste task force representing eastern Marathon County, warned that the proposed ordinance focuses only on animal waste while commercial fertilizer used by crop farmers contains equally significant phosphorus and nitrogen, potentially undermining the ordinance's water quality goals. Pat Saha (Town of Repro), also on the task force, expressed general support for a February-March winter spreading ban and for requiring nutrient management plans for all farmers, and shared a positive personal experience installing buffer strips that improved water quality without reducing yield.
+
+### Public Comment - Hub City Wind and Utility-Scale Wind Development
+Nikki Catrell (Town of Brighton) asked the committee to place utility-scale wind development on a future agenda and to recommend the county board adopt a temporary moratorium while evaluating whether current ordinances adequately address projects of this scale. She argued that modern turbines are dramatically larger than those that shaped existing regulations and cited a Wisconsin Badger Hollow Wind proceeding in which independent audiologist Dr. Jerry Punch from Michigan State University found a developer's acoustic analysis fundamentally inadequate, concluding that independent expert review is necessary before irreversible decisions are made. She drew a parallel to the committee's planned August consideration of a moratorium on data centers, arguing the same principle should apply to wind development.
+
+### Conservation Staff Introductions and Program Overview
+Conservation staff — Matt Reking, Ken Pazorski (who announced his retirement after 35 years), Kirk Lane, Brooke Benick, Caleb Armstrong, and Jared Mdd — each described their program areas including animal waste ordinance administration, livestock licensing, farmland preservation, nutrient management training, managed grazing, the EPIC producer group, youth education, and water resources. Staff noted the team has over 130 combined years of experience across eight conservationists. A committee member asked about anaerobic digesters, and staff clarified that digesters in Marathon County are all on CAFO farms regulated by the state DNR, so the county is not directly involved.
+
+### Wisconsin Land and Water Training Debrief
+Staff invited committee members to share takeaways from a Wisconsin Land and Water training held in Merrill approximately six weeks prior. One committee member highlighted learning about Lincoln County's culvert fish passage assessment and the technical complexity of manure spill response. Staff noted that Marathon County statistically has the fifth most manure spills in Wisconsin. The session was informal and conversational, with no formal action.
+
+### Municipal Wellhead Protection Updates - Athens, Rib Mountain, Hatley
+Staff described the completed Athens project, where 30 acres nearest municipal wells were converted to prairie and 30 acres to pasture, eliminating row-crop nutrient applications near wells with increasing nitrates. The private landowner received a higher rental payment than under row crops. Staff reported Athens residents have embraced the prairie on social media and the village reached out this week requesting more prairie. A similar project is underway in Rib Mountain adjacent to Rib Mountain State Park and Depkey Park on County Road N, with multiple funding sources stacked to make the project a win for all parties. Staff also reported early-stage outreach to the Village of Hatley, which has only one municipal well with nitrates already above 7 mg/L and rising, serving a population of about 500 with an average age of 33.
+
+### Big Eau Pleine Walleye Acoustic Telemetry Fish Movement Study
+Jared Mdd presented updates on a 10-year walleye tagging study initiated through a surface water grant that also funded replacement of the Big Eau Pleine aeration system (originally installed in 1980). In year one, 30 walleye were tagged; 8 were caught by anglers, 7 were harvested but all tags returned and recycled. In year two, 12 additional tags were purchased and 7 new fish tagged. Receivers are placed throughout the flowage to track fish movement every 30 seconds via acoustic pings. Staff noted 4 receivers are currently missing, likely lost during spring ice breakup, and DNR divers will search for them this fall. One fish passed through Moon Dam and is believed to be in Lake Dubay.
+
+### Animal Waste Ordinance Proposed Changes Overview
+Staff briefly reviewed proposed ordinance changes that have been under discussion for approximately eight months to a year, given time constraints. Key proposals include: requiring a nutrient management plan or a winter spreading permit for anyone applying liquid manure in winter, with setbacks from water bodies and sensitive areas; and a February-March liquid manure spreading ban for farms at approximately 300 animal units (roughly 150 milk cows and 150 young stock) or greater. CAFO operations at 1,000 animal units or greater are already subject to these requirements under state law. Staff noted the animal waste ordinance work group of approximately 25 stakeholders — including farmers, water resource professionals, and seed dealers — has been involved in developing these proposals. The meeting ended before a full discussion could occur due to time constraints.
+
+## Public Comment
+Four speakers offered public comment. Christine Cafer (Town of McMillan) raised concerns about the cost burden of manure storage facilities, questioned the scientific basis for county regulations beyond existing state programs, and asked where the other 72% of Wisconsin River phosphorus load originates. Nikki Catrell (Town of Brighton) requested the committee place utility-scale wind development on a future agenda and consider a temporary moratorium, citing concerns about outdated ordinances and the need for independent acoustic review, analogous to the planned data center moratorium. Dean Beck (County East), a member of the animal waste task force, warned that excluding crop farmers using commercial fertilizer from the ordinance would undermine phosphorus reduction goals. Pat Saha (Town of Repro), also on the task force, expressed support for the February-March winter spreading ban, mandatory nutrient management plans, and buffer strips, sharing a positive personal experience with buffers on his own farm.
+
+## Action Items
+- Committee to consider placing utility-scale wind development (Hub City Wind) on a future agenda per public commenter request
+- Staff to continue advancing Hatley municipal wellhead protection project in partnership with DNR and Wisconsin Rural Water Association
+- DNR divers to search for missing acoustic telemetry receivers on Big Eau Pleine this fall
+- Staff to continue animal waste ordinance work group process; ordinance proposed changes to be brought forward for formal committee action at a future meeting
+- Committee members encouraged to review white paper on animal waste ordinance changes and Wisconsin Land and Water resource guide provided in meeting packet

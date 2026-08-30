@@ -1,111 +1,120 @@
 {
-  "overview": "Based on the published agenda, the Wausau School District Board of Education was scheduled to hold a regular meeting on August 10, 2026, to address staffing changes, construction updates on four school projects, class size policies, and new Act 89 compliance policies. The meeting included action items on consent agenda items and Act 89 policy language review.",
-  "committee": "Regular Meeting",
+  "overview": "The Wausau School Board held its regular August 10, 2026 meeting, dominated by a lengthy discussion on elementary class sizes prompted by Rib Mountain Elementary parents concerned about a projected 25-student first grade class with no scheduling flexibility as a single-section school. The board also received a referendum construction update showing projects at John Marshall, Rib Mountain, Franklin, and Lincoln near completion, and unanimously approved eight policy updates required by Wisconsin Act 89, a new law governing staff-student communications and mandatory reporting timelines.",
+  "committee": "Wausau School District Board of Education",
+  "presiding": "James Bouché, Board President (identified in transcript as Jim)",
   "agenda": [
     {
-      "time": "N/A",
-      "item": "Call to Order"
+      "time": "0:00",
+      "item": "Call to Order and Roll Call"
     },
     {
-      "time": "N/A",
-      "item": "Roll Call"
+      "time": "1:30",
+      "item": "Pledge of Allegiance and Mission Statement"
     },
     {
-      "time": "N/A",
-      "item": "Pledge of Allegiance"
+      "time": "2:15",
+      "item": "Agenda Item 5: Public and Student Comment"
     },
     {
-      "time": "N/A",
-      "item": "Reading of the Mission Statement"
+      "time": "14:20",
+      "item": "Agenda Item 6: Consent Agenda Approval"
     },
     {
-      "time": "N/A",
-      "item": "Public and Student Comment"
+      "time": "16:10",
+      "item": "Agenda Item 8: Old Business - No items"
     },
     {
-      "time": "N/A",
-      "item": "Approve Consent Agenda"
+      "time": "16:30",
+      "item": "Agenda Item 8 (New Business): Referendum 2022 Construction Updates - Nexus Presentation"
     },
     {
-      "time": "N/A",
-      "item": "Education/Operations Committee Meeting (Old/Recurring Business)"
+      "time": "28:45",
+      "item": "Agenda Item 8C: Administration Presentation on District Class Size"
     },
     {
-      "time": "N/A",
-      "item": "Education/Operations Committee Meeting (New Business)"
+      "time": "1:42:00",
+      "item": "Agenda Item 8D: Act 89 Policy Review and Approval"
     },
     {
-      "time": "N/A",
-      "item": "Referendum 2022 Construction Updates"
-    },
-    {
-      "time": "N/A",
-      "item": "Class Size Presentation"
-    },
-    {
-      "time": "N/A",
-      "item": "Act 89 Policies"
-    },
-    {
-      "time": "N/A",
-      "item": "Board Member Professional Growth & Development Report"
-    },
-    {
-      "time": "N/A",
-      "item": "Legislative Liaison"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent Commentary"
-    },
-    {
-      "time": "N/A",
-      "item": "Presiding Officer Commentary"
-    },
-    {
-      "time": "N/A",
-      "item": "Adjourn"
+      "time": "2:08:00",
+      "item": "Agenda Item 9: Professional Growth, Legislative Liaison Update, and Adjournment"
     }
   ],
   "discussions": [
     {
-      "item": "Consent Agenda",
-      "body": "The board was scheduled to approve consent agenda items including appointments and additional staff positions, separations including resignations and terminations, leaves of absence, retirements, minutes from the July 13, 2026 regular session and August 3, 2026 special session and workshop, payment of bills with the July 2026 monthly budget status report, and donations to the district for August 2026."
+      "item": "Public Comment: Rib Mountain Elementary Class Size",
+      "body": "Two speakers addressed class size concerns at Rib Mountain Elementary. Ann Wicklund, a retired Wausau School District director of special education with 50 years in early childhood education, spoke about the developmental importance of K-3 class sizes and the risks of a projected 25-student first grade class, but was cut off slightly over her 3-minute limit. Nate Bartsch, a Rib Mountain parent speaking on behalf of many families present in the audience, argued that as a single-section school Rib Mountain has 'zero flexibility' to balance behavioral or academic needs across classrooms, and asked the board for immediate action for the 2026-27 school year rather than just acknowledgment."
     },
     {
-      "item": "Referendum 2022 Construction Updates",
-      "body": "Nexus was scheduled to present a 10-minute update on current referendum construction projects at John Marshall, Rib Mountain, Franklin, and Lincoln schools. The presentation was expected to provide status updates on these four ongoing school construction initiatives."
+      "item": "Consent Agenda Approval",
+      "body": "Board President Bouché sought a motion to approve the consent agenda covering staff appointments, replacements, contract changes, separations, leaves, retirements, meeting minutes from July 13 and August 3 sessions, payment of bills, budget and investment reports, and donations from Lynn Miller, Nikki O'Neal, and an anonymous donor. The motion was approved, though Bouché acknowledged moving too quickly and noted he heard Vice President Trollop's (participating virtually) vote at the end."
     },
     {
-      "item": "Class Size Presentation",
-      "body": "Katie Colwell and Elizabeth Channel from the Administration were scheduled to present a 20-minute presentation on district class sizes and updated class size guidelines. The administration was expected to provide data and policy information regarding class size management across the district."
+      "item": "Referendum 2022 Construction Updates - Nexus Presentation",
+      "body": "Representatives Chris and Kevin Hickman of Nexus provided updates on construction at John Marshall, Rib Mountain, Franklin, and Lincoln schools, noting occupancy inspections were scheduled for the following week and most classrooms had been turned over for cleaning. Kevin Hickman thanked the district for a 12-year partnership and credited the community-approved referendum with producing 'safer schools, renewed infrastructure, and improving environments.' Board member Pat McKee publicly noted that Nexus president Mike had not appeared before the board since threatening legal action years earlier, calling it a missed opportunity for a 'decent touch,' and asked Hickman to relay that message."
     },
     {
-      "item": "Act 89 Policies",
-      "body": "The board was scheduled to review proposed policy language regarding Act 89 compliance in a 10-minute session. The review was expected to address 10 policies including student supervision and welfare, board member behavior and communications, staff use of personal communication devices, student technology acceptable use and safety, social media use, volunteers, and child abuse and neglect protocols."
+      "item": "District Class Size Presentation and Discussion",
+      "body": "Administration presented current class size guidelines (K-1: max 25; 2-3: max 27; 4-5: max 29; AGR schools K-3: max 18), six years of average class size data showing district average of 20.2 for 2026-27, and modeled an alternative 21-23-25 framework that would require eight additional sections and approximately $1.1 million in staffing costs against a projected $1.36 million budget shortfall for 2027-28. Board members engaged in extensive debate: Pat McKee argued for a 'classroom complexity factor' beyond pure enrollment numbers, drawing applause; Lance Trollop (virtual) pushed back on media framing that class sizes had hit a six-year high, noting the increase was less than one student; Cory Sillars advocated for adding para support to younger grades and requested a school-by-school staffing model; Jennifer Paoli asked about para allocation processes and whether a lower-cost para increase could substitute for new sections; and Nick Crochiere raised the possibility of a future referendum targeted at class size reduction. Administration confirmed Rib Mountain first grade would receive an enrollment para given its enrollment at the maximum, and noted the district is already approximately 40 staff short with two weeks until school starts."
+    },
+    {
+      "item": "Act 89 Policy Review and Approval",
+      "body": "District administrator Tabitha Gundrum (identified as Ms. Gundrum/Mensley in transcript) walked the board through eight updated or new policies required by Wisconsin Act 89, passed in March 2026, covering staff-student communication standards, annual training requirements, and mandatory reporting timelines. Key changes include a statutory prohibition on direct staff-to-student personal device communication, with SportsYou and Google Chat identified as approved platforms; removal of 'preferential treatment' language from policies as unenforceable; new 'grooming' definition sections; and strict reporting deadlines requiring parent notification by 5:00 p.m. the same day if a report is received before end of school day, or by noon the next calendar day if received after hours. Gundrum noted training launched August 1 with a 25-minute attorney-produced video, with roughly 30% of staff already completing it, and that volunteer training remains a significant logistical challenge. The board voted unanimously to approve all eight policy changes."
+    },
+    {
+      "item": "Legislative Liaison Update and CESA 9 Report",
+      "body": "Cory Sillars reported on the CESA 9 annual convention held August 3, noting he chaired the meeting in the absence of regular chair Chris Petronek, that a new member from the Lakeland area joined, and that Larry Schaefer of DC Everest was recognized for 30 years of service. Sillars also mentioned speaking with Secretary Duffy over the weekend about construction costs and energy prices. Superintendent Bushman thanked Rib Mountain families for attending, announced the August 24 staff welcome-back event, and invited board members to attend."
     }
   ],
-  "publicComment": "A public and student comment period was included on this agenda.",
+  "publicComment": "Two speakers addressed the board. Ann Wicklund, 227-350 Bard Owl Avenue, Wausau, a retired Wausau School District director of special education with over 50 years in early childhood education, raised concerns about a projected 25-student first grade class at Rib Mountain Elementary and the importance of class size in early childhood development; she was cut off slightly over the 3-minute limit. Nate Bartsch, 151306 Kingfisher Lane, Rib Mountain, spoke on behalf of many Rib Mountain families present in the audience, arguing the school's single-section structure leaves no flexibility to manage behavioral or academic complexity and asking the board for concrete action for the 2026-27 school year. A third potential speaker, Jess Bartz, declined to speak.",
   "actionItems": [
-    "Board was expected to vote on approval of the consent agenda",
-    "Action was requested for board review and approval of proposed Act 89 policy language"
+    "Administration to return to the board with further analysis, potentially including a classroom complexity factor model for staffing decisions",
+    "Administration to provide a school-by-school staffing model showing all positions (teachers, paras, custodians, food service, etc.) per building",
+    "Administration to explore fiscal impact of modifying para allocation as an alternative or supplement to adding full sections",
+    "Administration to continue vetting approved communication apps to ensure Act 89 compliance for staff-student communication",
+    "Administration to develop a plan to deliver Act 89 training to all district volunteers",
+    "Administration and board to continue preliminary discussions about a possible future referendum; no timeline or final decision made",
+    "Nexus to complete remaining construction punch-list items at John Marshall, Rib Mountain, Franklin, and Lincoln ahead of occupancy inspections",
+    "Cory Sillars to deliver CESA 9 annual report packet to district staff"
   ],
   "topics": [
-    "Staffing",
-    "Budget",
-    "Facilities",
-    "Policy",
-    "Referendum 2022 Construction",
-    "John Marshall Elementary",
-    "Rib Mountain Elementary",
-    "Franklin Elementary",
-    "Lincoln Elementary",
-    "Class Size Guidelines"
+    "Class Size",
+    "School Staffing",
+    "Budget Constraints",
+    "Act 89 Policy Compliance",
+    "Referendum Construction"
   ],
-  "_source": "boardbook_agenda",
+  "votes": [
+    {
+      "item": "Consent agenda including staff actions, meeting minutes, bill payments, and donations",
+      "motion": "Motion to approve the consent agenda",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Eight policy updates required by Wisconsin Act 89",
+      "motion": "Motion to approve the proposed changes to policies related to Act 89",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjournment",
+      "motion": "Motion to adjourn",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "3afd8192aa221e6b",
   "title": "Regular Meeting - 2026-08-10",
-  "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759354",
+  "url": "https://www.youtube.com/watch?v=Dkt72jkA2jo",
   "source": "school_board",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759354",
-  "processed_at": "2026-08-29T22:34:21.151775+00:00"
+  "processed_at": "2026-08-30T03:33:04.116532+00:00"
 }

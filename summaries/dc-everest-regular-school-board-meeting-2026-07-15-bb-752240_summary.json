@@ -1,309 +1,220 @@
 {
-  "overview": "Based on the published agenda, the D.C. Everest Area School District Board of Education was scheduled to hold a regular meeting on July 15, 2026, to address staffing changes, policy updates, budget matters, and curriculum reviews. The agenda included multiple second readings of policy revisions, approval of school handbooks for the 2026-27 school year, and presentations on facilities planning and student screen time, along with routine financial and employment consent items.",
-  "committee": "Regular School Board Meeting",
+  "overview": "The DC Everest School Board held its regular July 2026 meeting, approving several routine annual items including the budget hearing date, academic standards, student handbooks, and independent hearing officers. Notable discussions included a board member's suggestion to implement an AI chatbot for student handbooks, updates on the GTCC cooling/rink project hosting the horseshoe pitching championship, and a facilities study timeline with upcoming community engagement sessions. The board then moved to closed session to discuss personnel matters.",
+  "committee": "DC Everest School Board",
+  "presiding": "Shannon Grabko, President",
   "agenda": [
     {
-      "time": "N/A",
-      "item": "Call to Order"
+      "time": "0:00",
+      "item": "Call to Order and Roll Call"
     },
     {
-      "time": "N/A",
-      "item": "Roll Call"
-    },
-    {
-      "time": "N/A",
+      "time": "1:10",
       "item": "Pledge of Allegiance"
     },
     {
-      "time": "N/A",
+      "time": "1:30",
       "item": "Approval of Agenda"
     },
     {
-      "time": "N/A",
+      "time": "1:55",
       "item": "Public Comment"
     },
     {
-      "time": "N/A",
-      "item": "Approval of Minutes for June 17, 2026"
+      "time": "2:05",
+      "item": "Consent Agenda"
     },
     {
-      "time": "N/A",
-      "item": "Certified Staff Recommended Employment/Resignations/Contract Adjustments"
+      "time": "2:45",
+      "item": "Non-Certified Staff Employment Changes (Informational)"
     },
     {
-      "time": "N/A",
-      "item": "Treasurer's Report - General/Other Fund Bills"
+      "time": "3:05",
+      "item": "WASB Report"
     },
     {
-      "time": "N/A",
-      "item": "Balance Sheet"
+      "time": "5:20",
+      "item": "Curriculum and Instruction Report (Larry Schaefer)"
     },
     {
-      "time": "N/A",
-      "item": "Budget Transfers"
+      "time": "5:45",
+      "item": "Superintendent Report (Dr. Knight) - Certified Staff Compensation, Screen Time Study, Facilities Study, Summer Projects, GTCC Update"
     },
     {
-      "time": "N/A",
-      "item": "Budget Revisions"
+      "time": "18:00",
+      "item": "New Business A: Set Date for Annual Meeting Budget Hearing"
     },
     {
-      "time": "N/A",
-      "item": "Grant Application(s)/Budget(s) Approval"
+      "time": "19:10",
+      "item": "New Business B: Academic Standards 2026-2027"
     },
     {
-      "time": "N/A",
-      "item": "Fundraising Requests"
+      "time": "20:00",
+      "item": "New Business C: Approval of Independent Hearing Officers"
     },
     {
-      "time": "N/A",
-      "item": "Gift/Bequests"
+      "time": "21:10",
+      "item": "New Business D: School Handbook Changes"
     },
     {
-      "time": "N/A",
-      "item": "Bus Accident Report"
+      "time": "25:30",
+      "item": "New Business E: Review of Policy 2261.01 - Parent and Family Engagement in Title One Programs"
     },
     {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po0100 Definitions"
+      "time": "26:30",
+      "item": "New Business F: Annual Evaluation of Reading Curriculum Policy 2131.01 (Informational)"
     },
     {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po0167.3 Public Comment at Board Meetings"
+      "time": "27:10",
+      "item": "New Business G: Senior High Trip to Japan"
     },
     {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po3120 Employment of Professional Staff"
+      "time": "28:00",
+      "item": "New Business H: First Reading of Policies (including Policy 7544 Social Media)"
     },
     {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po3120.05 Employment of Personnel in Community Education Programs"
+      "time": "33:30",
+      "item": "Future Meeting Dates and Announcements"
     },
     {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po3140 Non-Renewal, Resignation, and Termination"
-    },
-    {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po4120.04 Employment of Substitutes"
-    },
-    {
-      "time": "N/A",
-      "item": "Second Reading of Policies: po5200.01 Full-Time Student"
-    },
-    {
-      "time": "N/A",
-      "item": "Non-Certified Staff Employment Changes (Informational Only)"
-    },
-    {
-      "time": "N/A",
-      "item": "WASB Legislative Network Member presentation by Shannon Grabko"
-    },
-    {
-      "time": "N/A",
-      "item": "CESA #9 Representative presentation by Larry Schaefer"
-    },
-    {
-      "time": "N/A",
-      "item": "Superintendent District Update by Dr. Casey Nye"
-    },
-    {
-      "time": "N/A",
-      "item": "Certified Staff Compensation Planning"
-    },
-    {
-      "time": "N/A",
-      "item": "Internal Review of Student Screen Time"
-    },
-    {
-      "time": "N/A",
-      "item": "Facilities Study Learning Focus"
-    },
-    {
-      "time": "N/A",
-      "item": "Responsive Classroom"
-    },
-    {
-      "time": "N/A",
-      "item": "Summer Projects Update"
-    },
-    {
-      "time": "N/A",
-      "item": "2026 World Horseshoe Pitching Championship"
-    },
-    {
-      "time": "N/A",
-      "item": "Unfinished Business"
-    },
-    {
-      "time": "N/A",
-      "item": "Set the Date for Annual Meeting/Budget Hearing"
-    },
-    {
-      "time": "N/A",
-      "item": "Academic Standards"
-    },
-    {
-      "time": "N/A",
-      "item": "Approval of Independent Hearing Officers"
-    },
-    {
-      "time": "N/A",
-      "item": "Elementary Handbook (Riverside Sample) Review"
-    },
-    {
-      "time": "N/A",
-      "item": "Middle School Handbook Review"
-    },
-    {
-      "time": "N/A",
-      "item": "Junior High Handbook Review"
-    },
-    {
-      "time": "N/A",
-      "item": "Senior High Handbook Review"
-    },
-    {
-      "time": "N/A",
-      "item": "Review of po2261.01 - Parent and Family Engagement in Title 1 Programs"
-    },
-    {
-      "time": "N/A",
-      "item": "Annual Evaluation of Reading Curriculum"
-    },
-    {
-      "time": "N/A",
-      "item": "Senior High Trip to Japan"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po1213 Student Supervision and Welfare"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po3120.01 Job Descriptions"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po3213 Student Supervision and Welfare"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po4213 Student Supervision and Welfare"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po7530.02 Staff and School Officials Use of Personal Communication Devices"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po7530.03 Student Technology Acceptable Use and Safety"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po7544 Use of Social Media"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po8120 Volunteers"
-    },
-    {
-      "time": "N/A",
-      "item": "First Reading of Policies: po8462 Reporting of Child Abuse and Neglect and Sexual Misconduct"
-    },
-    {
-      "time": "N/A",
-      "item": "WASB Fall Region Five Meeting Information and Announcements"
-    },
-    {
-      "time": "N/A",
-      "item": "Thank you from C. Thompson for Memorial Tribute"
-    },
-    {
-      "time": "N/A",
-      "item": "Future Meeting Dates"
-    },
-    {
-      "time": "N/A",
-      "item": "Potential Closed Session on Staff Investigation"
+      "time": "34:30",
+      "item": "Adjournment to Closed Session"
     }
   ],
   "discussions": [
     {
-      "item": "WASB Legislative Network Member",
-      "body": "Shannon Grabko was scheduled to present information regarding the WASB Legislative Network and its relevance to the district."
+      "item": "WASB Report",
+      "body": "Grabko reported on the July legal and legislative update, the WASB summer symposium in Stevens Point which included a legislative recap, school safety discussions, and a presentation by Jesse Crow from the Wisconsin Department of Justice on emerging online safety trends for kids. She also highlighted a new WASB social media campaign called 'Setting the Record Straight' aimed at addressing misconceptions about public education, with its first focus on per-pupil spending."
     },
     {
-      "item": "CESA #9 Representative",
-      "body": "Larry Schaefer was scheduled to present as the CESA #9 representative, providing regional cooperative educational services information to the board."
+      "item": "Superintendent Report",
+      "body": "Dr. Knight acknowledged Ellen Suko's name appearing in the employment report, calling her an important district team member without providing further detail. He provided updates on certified staff compensation planning tied to staff survey and town hall feedback, noting that potential insurance increases could limit flexibility; staff will be invited to optional August sessions for feedback with a fall board update planned. He also reported on a facilities study with community engagement meetings beginning with the Village of Weston the following week, and summer projects including ongoing Riverside construction with a 22-week delay on an air handler replacement, new playground equipment at Hatley and Ratchild, and the GTCC cooling and rink project now hosting the World Horseshoe Pitching Championship."
     },
     {
-      "item": "Superintendent Reports",
-      "body": "Dr. Casey Nye was scheduled to present multiple reports including a district update, certified staff compensation planning, internal review of student screen time, facilities study learning focus, information on Responsive Classroom initiatives, summer projects update, and information on the 2026 World Horseshoe Pitching Championship being hosted by the district."
+      "item": "School Handbook Changes",
+      "body": "Dr. Knight noted no significant substantive changes to the handbooks, with updates limited to calendars, meal prices, names, and policy updates. Board member Katie Felch raised the idea of implementing an AI chatbot to help families navigate the 37-page handbook more easily, referencing examples from LNS and UW-Stevens Point. Dr. Knight responded positively and suggested connecting with NTC, calling the handbook the most-referenced single resource for families."
     },
     {
-      "item": "Set the Date for Annual Meeting/Budget Hearing",
-      "body": "The board was expected to establish the date for the district's annual meeting and budget hearing for the upcoming fiscal year."
+      "item": "First Reading of Policies (Policy 7544 - Social Media)",
+      "body": "Larry Schaefer raised a question about Policy 7544 on social media use, specifically whether employees were forbidden from communicating privately one-to-one with students. Felch clarified that the policy prohibits staff from using social media platforms like Instagram, Facebook, Snapchat, or X to privately message students, not from using district-approved communication channels like email. Dr. Knight added that the district is being firmer about prohibiting private messaging through social media platforms even when not used inappropriately, and that platforms like Band are the district-approved alternative for group communications."
     },
     {
-      "item": "Academic Standards",
-      "body": "The board was scheduled to review and consider academic standards for the 2026-27 school year."
-    },
-    {
-      "item": "Approval of Independent Hearing Officers",
-      "body": "The board was expected to approve a list of independent hearing officers for the district."
-    },
-    {
-      "item": "School Handbook Reviews",
-      "body": "The board was scheduled to review handbooks from all school levels including elementary (Riverside sample), middle school, junior high, and senior high for the 2026-27 school year."
-    },
-    {
-      "item": "Review of po2261.01 - Parent and Family Engagement in Title 1 Programs",
-      "body": "The board was expected to review and consider the Parent and Family Engagement in Title 1 Programs policy."
-    },
-    {
-      "item": "Annual Evaluation of Reading Curriculum",
-      "body": "The Reading Specialist was scheduled to present an annual report evaluating the district's reading curriculum, including kindergarten assessment updates and reading instructional goals for July 2026."
+      "item": "Set Date for Annual Meeting Budget Hearing",
+      "body": "Dr. Strike explained that final budget numbers are available October 15th and the district needs time to adjust before adoption by end of October. The board approved October 28th, 2026 as the date for the annual meeting budget hearing without discussion."
     },
     {
       "item": "Senior High Trip to Japan",
-      "body": "The board was expected to consider approval for a senior high trip to Japan."
-    },
-    {
-      "item": "First Reading of Multiple Policies",
-      "body": "The board was scheduled to conduct first readings of nine policies addressing student supervision and welfare, job descriptions, personal communication devices, student technology acceptable use and safety, social media use, and volunteers and abuse reporting procedures."
+      "body": "Dr. Knight explained the trip is designed for students engaged in the district's Chinese language program as an opportunity to experience a different part of the world, noting it is not offered every year. The board approved the senior high trip to Japan scheduled for March 2028."
     }
   ],
-  "publicComment": "A public comment period was included on this agenda.",
+  "publicComment": "No public comment was offered.",
   "actionItems": [
-    "Board was expected to approve the June 17, 2026 meeting minutes",
-    "Board was expected to approve certified staff employment, resignation, and contract adjustment recommendations",
-    "Board was expected to approve the Treasurer's Report and financial documents including balance sheet, budget transfers, and budget revisions",
-    "Board was expected to conduct second readings and vote on seven revised policies",
-    "Board was expected to set the date for the annual meeting and budget hearing",
-    "Board was expected to review and approve academic standards for 2026-27",
-    "Board was expected to approve independent hearing officers",
-    "Board was expected to review and approve school handbooks for elementary, middle, junior high, and senior high schools",
-    "Board was expected to review policy po2261.01 on Parent and Family Engagement in Title 1 Programs",
-    "Board was expected to approve the senior high trip to Japan",
-    "Board was expected to conduct first readings of nine policies",
-    "Board was expected to consider closing session for staff investigation matters"
+    "Annual Meeting Budget Hearing set for October 28th, 2026",
+    "Academic standards approved for 2026-2027 school year",
+    "Steven Pufall and Renee Seby approved as independent expulsion hearing officers; Policy 5610.01 re-adopted",
+    "Student handbooks approved for 2026-2027; staff directed to explore AI chatbot for handbook navigation",
+    "Policy 2261.01 (Parent and Family Engagement in Title One Programs) approved as annual review",
+    "Senior high trip to Japan in March 2028 approved",
+    "First reading of policies approved including updated Policy 7544 on social media",
+    "Board members directed to provide Dr. Knight with community contacts for external perspectives on curriculum/facilities planning (October convening)",
+    "Staff optional feedback sessions on certified compensation to be held in August",
+    "Student screen time data collection to proceed with live data this fall for board report",
+    "Board members to register with Ellen for WASB Region 5 meeting September 29th in Rothschild or November 3rd online workshop",
+    "Board adjourned to closed session for personnel matters"
   ],
   "topics": [
     "Budget",
     "Staffing",
-    "Policy",
-    "Curriculum",
     "Facilities",
-    "Student Supervision",
-    "Technology",
-    "Parent Engagement",
-    "Handbooks",
-    "International Travel"
+    "School Safety",
+    "Curriculum"
   ],
-  "_source": "boardbook_agenda",
+  "votes": [
+    {
+      "item": "Approval of Agenda",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Consent Agenda",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "6-0"
+    },
+    {
+      "item": "Set October 28, 2026 as date for Annual Meeting Budget Hearing",
+      "motion": "Motion to set October 28th, 2026 as the date for the annual meeting budget hearing",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Academic Standards for 2026-2027",
+      "motion": "Motion to approve the academic standards for the 2026-2027 school year",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Approval of Steven Pufall and Renee Seby as expulsion hearing officers and re-adoption of Policy 5610.01",
+      "motion": "Motion to approve Steven Pufall and Renee Seby as expulsion hearing officers and re-adopt policy 5610.01",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Student Handbook Changes for 2026-2027",
+      "motion": "Motion to approve the changes to the student handbooks for 2026-2027",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Policy 2261.01 - Parent and Family Engagement in Title One Programs",
+      "motion": "Motion to approve policy 2261.01 as required annually",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Senior High Trip to Japan in March 2028",
+      "motion": "Motion to approve the senior high trip to Japan in March of 2028",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "First Reading of Policies (including Policy 7544 Social Media)",
+      "motion": "Motion to approve the policies listed in the background on the first reading",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjournment to Closed Session per Wisconsin State Statute 19.851c",
+      "motion": "Motion to adjourn to closed session pursuant to Wisconsin State Statute 19.851c for considering employment, promotion, compensation, or performance evaluation of any public employee",
+      "mover": "Shannon Grabko",
+      "second": null,
+      "outcome": "Approved",
+      "tally": "6-0"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "b7c290ec404a9158",
   "title": "Regular School Board Meeting - 2026-07-15",
-  "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=752240",
+  "url": "https://www.youtube.com/watch?v=emLgeM3YuZ8",
   "source": "dc_everest",
   "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=752240",
-  "processed_at": "2026-08-29T22:39:40.692185+00:00"
+  "processed_at": "2026-08-30T03:30:47.582402+00:00"
 }

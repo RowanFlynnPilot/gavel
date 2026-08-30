@@ -1,0 +1,129 @@
+{
+  "overview": "The Wausau Board of Public Works held a brief meeting on August 25th, approving several routine items including selection of Clark Dietz for a sanitary sewer capacity assessment study, a large pay estimate for lead service line replacement, a street construction pay estimate, and a concrete contractor license. The meeting concluded quickly with no notable debate.",
+  "committee": "Wausau Board of Public Works",
+  "presiding": "Unknown — presiding officer not identified by name in transcript",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to Order / Opening"
+    },
+    {
+      "time": "0:05",
+      "item": "Item 1: Approval of minutes of the preceding meeting"
+    },
+    {
+      "time": "0:20",
+      "item": "Item 2A: Recommendation for sanitary sewer capacity assessment and flow monitoring study"
+    },
+    {
+      "time": "1:10",
+      "item": "Item 2B: Pay Estimate #33 – Community Infrastructure Partners, lead service line replacement"
+    },
+    {
+      "time": "1:45",
+      "item": "Item 2C: Pay Estimate #5 – Stark Street (2026 Street Construction Project A), Switlick and Sons"
+    },
+    {
+      "time": "2:10",
+      "item": "Item 2D: Portland cement concrete license – Antler Concrete"
+    },
+    {
+      "time": "2:30",
+      "item": "Adjournment"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Approval of minutes",
+      "body": "A motion was made and seconded to approve the minutes of the preceding meeting. The motion passed on a voice vote with no discussion."
+    },
+    {
+      "item": "Sanitary sewer capacity assessment and flow monitoring study – vendor selection",
+      "body": "Staff reported that three proposals were received from HDR, Clark Dietz, and Strand, and that four staff members evaluated them. Scores were described as close but Clark Dietz scored highest. A motion was made by a board member to approve Clark Dietz for the study, seconded, and approved unanimously on a voice vote with no further debate."
+    },
+    {
+      "item": "Pay Estimate #33 – Lead service line replacement (Community Infrastructure Partners)",
+      "body": "A pay estimate of $602,642.35 was presented for lead service line replacement construction work. Staff noted the project remains on schedule and is expected to close the following day, August 26th. The motion to approve was made, seconded, and passed unanimously on a voice vote."
+    },
+    {
+      "item": "Pay Estimate #5 – Stark Street, 2026 Street Construction Project A (Switlick and Sons)",
+      "body": "A pay estimate of $596,518.20 from Switlick and Sons for the Stark Street portion of the 2026 street construction project was presented. A motion to approve was made and seconded; the item passed on a voice vote with no discussion."
+    },
+    {
+      "item": "Portland cement concrete license – Antler Concrete",
+      "body": "A license application and bond from Antler Concrete for Portland cement concrete work was reviewed. A board member indicated they had reviewed the materials and moved to approve the application and bond; the motion was seconded and passed unanimously on a voice vote."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Clark Dietz selected and approved to conduct the sanitary sewer capacity assessment and flow monitoring study",
+    "Pay Estimate #33 for $602,642.35 to Community Infrastructure Partners for lead service line replacement approved",
+    "Pay Estimate #5 for $596,518.20 to Switlick and Sons for Stark Street (2026 Street Construction Project A) approved",
+    "Portland cement concrete license and bond for Antler Concrete approved",
+    "Lead service line replacement project scheduled to close August 26, 2025"
+  ],
+  "topics": [
+    "Utilities",
+    "Roads",
+    "Lead Service Lines",
+    "Stark Street",
+    "Contractor Licensing"
+  ],
+  "votes": [
+    {
+      "item": "Approval of minutes of the preceding meeting",
+      "motion": "Move to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Sanitary sewer capacity assessment and flow monitoring study – award to Clark Dietz",
+      "motion": "Motion to approve Clark Dietz",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Pay Estimate #33 – Community Infrastructure Partners, lead service line replacement, $602,642.35",
+      "motion": "Motion to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Pay Estimate #5 – Switlick and Sons, Stark Street, $596,518.20",
+      "motion": "Motion to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Portland cement concrete license and bond – Antler Concrete",
+      "motion": "Move to approve their application and bond",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Adjournment",
+      "motion": "Motion to adjourn",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "0b830b30878e22b8",
+  "title": "Wausau Board of Public Works Meeting",
+  "url": "https://www.youtube.com/watch?v=BsQKUONTuPE",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:10:43.908733+00:00"
+}

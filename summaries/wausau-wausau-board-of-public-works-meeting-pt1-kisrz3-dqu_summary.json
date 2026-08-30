@@ -1,0 +1,117 @@
+{
+  "overview": "The Wausau Board of Public Works held a brief regular meeting on August 12th, approving three contractor pay estimates and a concrete license before moving into closed session to deliberate on claims. All items passed unanimously with minimal discussion.",
+  "committee": "Board of Public Works",
+  "presiding": "Unknown — presiding officer not identified by name in the transcript",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Call to order"
+    },
+    {
+      "time": "0:15",
+      "item": "Item 1: Approval of minutes from August 4th regular Board of Public Works meeting"
+    },
+    {
+      "time": "0:35",
+      "item": "Item 2A: 2026 Asphalt Paving Project — ARC Pavers Pay Estimate No. 3 ($322,718.16)"
+    },
+    {
+      "time": "1:05",
+      "item": "Item 2B: Downtown Utility Project — Haas Sons Incorporated Pay Estimate No. 3 ($136,498.03)"
+    },
+    {
+      "time": "1:35",
+      "item": "Item 2C: Portland Cement Concrete License — Ross Construction"
+    },
+    {
+      "time": "2:05",
+      "item": "Item 3: Motion to enter closed session per Wisconsin Statute 19.85(1)(g) to deliberate on claims"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Approval of August 4th Meeting Minutes",
+      "body": "A board member moved to approve the minutes of the August 4th regular Board of Public Works meeting, which was seconded and passed unanimously with no discussion."
+    },
+    {
+      "item": "2026 Asphalt Paving Project — ARC Pavers Pay Estimate No. 3",
+      "body": "The board considered Pay Estimate No. 3 from ARC Pavers in the amount of $322,718.16 for the 2026 asphalt paving project. A motion to approve was made and seconded, passing unanimously with no additional discussion."
+    },
+    {
+      "item": "Downtown Utility Project — Haas Sons Incorporated Pay Estimate No. 3",
+      "body": "Pay Estimate No. 3 from Haas Sons Incorporated in the amount of $136,498.03 for the downtown utility project was brought before the board. A motion to approve was made and seconded, passing unanimously without debate."
+    },
+    {
+      "item": "Portland Cement Concrete License — Ross Construction",
+      "body": "A board member stated they had reviewed the Portland cement concrete license application from Ross Construction and moved to approve it. The motion was seconded and passed unanimously."
+    },
+    {
+      "item": "Closed Session to Deliberate on Claims",
+      "body": "The board voted unanimously to enter closed session pursuant to Wisconsin Statute 19.85(1)(g) for the purpose of deliberating on claims. No details about the nature of the claims were disclosed in open session."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Approve minutes from the August 4th Board of Public Works meeting",
+    "Authorize payment of $322,718.16 to ARC Pavers (Pay Estimate No. 3, 2026 Asphalt Paving Project)",
+    "Authorize payment of $136,498.03 to Haas Sons Incorporated (Pay Estimate No. 3, Downtown Utility Project)",
+    "Approve Portland Cement Concrete License for Ross Construction",
+    "Convene in closed session to deliberate on claims per Wisconsin Statute 19.85(1)(g)"
+  ],
+  "topics": [
+    "Roads",
+    "Utilities",
+    "Contracts",
+    "Downtown Utility Project",
+    "Asphalt Paving"
+  ],
+  "votes": [
+    {
+      "item": "Approval of August 4th meeting minutes",
+      "motion": "Move to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "ARC Pavers Pay Estimate No. 3 — $322,718.16",
+      "motion": "Move to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Haas Sons Incorporated Pay Estimate No. 3 — $136,498.03",
+      "motion": "Move to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Portland Cement Concrete License — Ross Construction",
+      "motion": "Move to approve",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Enter closed session to deliberate on claims (Wisconsin Statute 19.85(1)(g))",
+      "motion": "Move to go into closed session pursuant to Wisconsin Statute 19.85(1)(g)",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "7f0772c29cc1289c",
+  "title": "Wausau Board of Public Works Meeting Pt.1",
+  "url": "https://www.youtube.com/watch?v=_kisrz3_DQU",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:28:21.480609+00:00"
+}

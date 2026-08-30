@@ -1,0 +1,58 @@
+{
+  "overview": "The Wausau Board of Public Works held a brief second session in which members voted to deny a damage claim filed by Thomas P. Miller in the amount of $1,519.93, then immediately adjourned. The denial of the claim is the sole substantive action recorded in this portion of the meeting.",
+  "committee": "City of Wausau Board of Public Works",
+  "presiding": "Unknown — presiding officer not identified in transcript",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Claim of Thomas P. Miller — $1,519.93"
+    },
+    {
+      "time": "0:20",
+      "item": "Adjournment"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Claim of Thomas P. Miller — $1,519.93",
+      "body": "A board member moved to deny the claim of Thomas P. Miller in the amount of $1,519.93. The motion was seconded and passed with audible 'aye' votes from those present. No debate or public comment on the claim was recorded in the transcript."
+    },
+    {
+      "item": "Adjournment",
+      "body": "Immediately following the vote on the Miller claim, a member moved to adjourn. The motion was seconded and approved by unanimous voice vote, concluding the meeting."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Deny the claim of Thomas P. Miller in the amount of $1,519.93"
+  ],
+  "topics": [
+    "Claims",
+    "Public Works"
+  ],
+  "votes": [
+    {
+      "item": "Denial of claim — Thomas P. Miller, $1,519.93",
+      "motion": "Move to deny the claim of Thomas P. Miller in the amount of $1,519.93",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjournment",
+      "motion": "Motion to adjourn",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "5fc85ab4a0d0eb7f",
+  "title": "Wausau Board of Public Works Meeting Pt.2",
+  "url": "https://www.youtube.com/watch?v=WLE_RyH2jGE",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:27:17.232672+00:00"
+}

@@ -1,11 +1,11 @@
 {
-  "overview": "The Village of Kronenwetter Police and Fire Commission voted 4-0 to continue investigating a complaint dated June 30, 2026, following a closed session that lasted nearly an hour and 45 minutes. The commission also approved revisions to the Citizen Charge Form and accompanying Citizen Charge Procedures, subject to the Village Attorney's review. Both actions were taken unanimously by the four commissioners present.",
-  "committee": "Village of Kronenwetter Police and Fire Commission",
+  "overview": "The Kronenwetter Police and Fire Commission voted 4-0 to continue investigating a complaint dated June 30, 2026, following a closed session that lasted nearly two hours. The commission also approved changes to the Citizen Charge Form and Citizen Charge Procedures, pending Village Attorney review, in a 4-0 vote. Commissioner Chet Rucinski was absent from the July 27 meeting.",
+  "committee": "Police and Fire Commission",
   "presiding": "Alex Vedvik, President",
   "agenda": [
     {
       "time": "5:01 PM",
-      "item": "Call to Order and Roll Call"
+      "item": "Call to Order and Pledge of Allegiance"
     },
     {
       "time": "N/A",
@@ -17,7 +17,7 @@
     },
     {
       "time": "5:03 PM",
-      "item": "Closed Session - Section 19.85(1)(f): Personnel/Disciplinary Matters"
+      "item": "Closed Session - Personnel/Disciplinary Matter under Wis. Stat. § 19.85(1)(f)"
     },
     {
       "time": "6:46 PM",
@@ -38,72 +38,73 @@
   ],
   "discussions": [
     {
-      "item": "Closed Session - Personnel/Disciplinary Matters",
-      "body": "Commissioner Rule moved and Commissioner Udulutch seconded a motion to convene into closed session under Section 19.85(1)(f), regarding financial, medical, social, personal histories, or disciplinary data of specific persons. The motion carried 3-0 by roll call vote, with the session beginning at 5:03 p.m. Vice President Rick Smith arrived during the closed session at 5:06 p.m. The commission reconvened in open session at 6:46 p.m. on a motion by Commissioner Udulutch, seconded by Commissioner Rule, carried 4-0."
+      "item": "Closed Session",
+      "body": "Commissioner Rule moved, seconded by Commissioner Udulutch, to convene into closed session under Wis. Stat. § 19.85(1)(f) to consider personnel or disciplinary matters whose public discussion could adversely affect the reputation of the persons involved. The motion carried 3-0 by roll call vote, with the session beginning at 5:03 p.m. Vice President Rick Smith arrived during the closed session at 5:06 p.m. The commission reconvened into open session at 6:46 p.m. on a 4-0 roll call vote, moved by Commissioner Udulutch and seconded by Commissioner Rule."
     },
     {
       "item": "Action After Closed Session - Complaint dated 06/30/2026",
-      "body": "Vice President Smith moved, seconded by Commissioner Udulutch, to continue investigating the complaint dated June 30, 2026. No additional details about the nature of the complaint or the subject were disclosed in the open session record. The motion carried 4-0 by voice vote."
+      "body": "Following the closed session, Vice President Smith moved, seconded by Commissioner Udulutch, to continue investigating the complaint dated June 30, 2026. The motion carried 4-0 by voice vote. No further details about the nature of the complaint were disclosed in open session."
     },
     {
       "item": "Approval of July 13, 2026 Meeting Minutes",
-      "body": "Vice President Smith moved and Commissioner Rule seconded approval of the July 13, 2026 meeting minutes as written. The motion carried 4-0 by voice vote."
+      "body": "Vice President Smith moved, seconded by Commissioner Rule, to approve the July 13, 2026 meeting minutes as written. The motion carried 4-0 by voice vote."
     },
     {
       "item": "Citizen Charge Form and Procedures",
-      "body": "Vice President Smith moved to approve changes made to the Citizen Charge Form as submitted, conditioned on review and approval by the Village Attorney for both the Citizen Charge Form and the Citizen Charge Procedures. Commissioner Rule seconded the motion. The motion carried 4-0 by voice vote."
+      "body": "Vice President Smith moved, seconded by Commissioner Rule, to approve changes to the Citizen Charge Form as submitted, subject to review and approval by the Village Attorney of both the Citizen Charge Form and Citizen Charge Procedures. The motion carried 4-0 by voice vote."
     }
   ],
   "publicComment": "No public comment was recorded.",
   "actionItems": [
-    "Commission directed continuation of the investigation into the complaint dated June 30, 2026.",
-    "Revised Citizen Charge Form and Citizen Charge Procedures approved, subject to Village Attorney review and approval before taking effect."
+    "Commission directed that the investigation of the complaint dated June 30, 2026 continue.",
+    "Revised Citizen Charge Form and Citizen Charge Procedures approved, subject to Village Attorney review and approval before taking effect.",
+    "July 13, 2026 meeting minutes approved as written."
   ],
   "topics": [
     "Public Safety",
     "Staffing",
-    "Complaint Investigation",
-    "Citizen Charge Form",
-    "Commission Procedures"
+    "Personnel Investigation",
+    "Citizen Complaint Process",
+    "Policy Review"
   ],
   "votes": [
     {
-      "item": "Convene into closed session under Section 19.85(1)(f)",
+      "item": "Convene into closed session under Wis. Stat. § 19.85(1)(f)",
       "motion": "Motion to convene into closed session",
-      "mover": "Commissioner Rule",
-      "second": "Commissioner Udulutch",
+      "mover": "Commissioner Donna Rule",
+      "second": "Commissioner Lucene Udulutch",
       "outcome": "Approved",
       "tally": "3-0"
     },
     {
       "item": "Reconvene into open session",
       "motion": "Motion to reconvene into open session",
-      "mover": "Commissioner Udulutch",
-      "second": "Commissioner Rule",
+      "mover": "Commissioner Lucene Udulutch",
+      "second": "Commissioner Donna Rule",
       "outcome": "Approved",
       "tally": "4-0"
     },
     {
       "item": "Continue investigating the complaint dated 06/30/2026",
       "motion": "Motion to continue investigating the complaint dated 06/30/2026",
-      "mover": "Vice President Smith",
-      "second": "Commissioner Udulutch",
+      "mover": "Vice President Rick Smith",
+      "second": "Commissioner Lucene Udulutch",
       "outcome": "Approved",
       "tally": "4-0"
     },
     {
       "item": "Approve July 13, 2026 meeting minutes",
       "motion": "Motion to approve the 07/13/2026 meeting minutes as written",
-      "mover": "Vice President Smith",
-      "second": "Commissioner Rule",
+      "mover": "Vice President Rick Smith",
+      "second": "Commissioner Donna Rule",
       "outcome": "Approved",
       "tally": "4-0"
     },
     {
-      "item": "Approve revised Citizen Charge Form and Citizen Charge Procedures subject to Village Attorney review",
+      "item": "Approve changes to Citizen Charge Form and Procedures",
       "motion": "Motion to approve the changes made to the Citizen Charge Form as submitted, subject to Village Attorney's review and approval of the Citizen Charge Form and Citizen Charge Procedures",
-      "mover": "Vice President Smith",
-      "second": "Commissioner Rule",
+      "mover": "Vice President Rick Smith",
+      "second": "Commissioner Donna Rule",
       "outcome": "Approved",
       "tally": "4-0"
     }
@@ -113,5 +114,5 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-24",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-a66c13aff7484eba8c841b1d59dcc2b7.pdf",
-  "processed_at": "2026-08-29T22:37:26.148594+00:00"
+  "processed_at": "2026-08-29T21:27:27.356924+00:00"
 }

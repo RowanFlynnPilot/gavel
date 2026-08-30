@@ -1,0 +1,49 @@
+# Marathon County Human Resources, Finances & Property Committee Meeting
+
+**Organization:** Marathon County  
+**Source:** https://www.youtube.com/watch?v=MkXRbY89rWo  
+**Summarized:** 2026-08-30 04:21 UTC
+
+---
+
+## Meeting Overview
+The Marathon County Human Resources, Finances & Property Committee met to address several action items and budget planning updates. Key decisions included tabling a WPS easement at Sunnyville Park for closed-session valuation negotiations, approving an amended donation acceptance policy requiring administrator acceptance with committee ratification at next meeting, and advancing a County Trunk Highway X developer cost-sharing agreement to the full county board. The committee also received an advisory presentation on an incoming conduit financing request from Wausau Hotel Group LLC for $10 million.
+
+## Key Discussions
+### Approval of August 12th Minutes
+Supervisor Hart moved to approve the August 12th minutes; Vice Chair Pool seconded. There was no discussion and the motion carried. The committee noted that joint meeting minutes with the EDC had not yet been approved and would be addressed at a future meeting.
+
+### 2027 Budget Development Update
+County Administrator (Lance, based on context) provided a detailed budget update, noting that compensation and health insurance increases were funded first through a prioritization exercise, allowing departments to focus on holding operations flat. Staff reported that plow blade costs had increased from $300,000 to $600,000 year-over-year, approaching 300% over three years. A $125,000 hole in the District Attorney's office budget was noted due to the State Public Defender unilaterally reducing discovery fee payments. Key budget dates were outlined: budget delivery to committee September 29 at 1:00 p.m., publication approval October 14, public hearing November 2, committee amendment review November 9, and county board adoption November 10. A Wisconsin Counties Association Forward Analytics report was cited showing cumulative CPI rose 49.9% since 2010 while net new construction value rose only 24.1% statewide, underscoring fiscal constraints.
+
+### WPS Easement at Sunnyville Park
+Vice Chair Chris Dickinson presented the WPS request for a natural gas regulator station easement in the northeast corner of Sunnyville Park, roughly three-quarters of an acre, with WPS offering $6,000. The Park Commission had conditionally recommended approval pending landscaping, color, and fencing requirements. Supervisor Gibbs raised concerns that the easement effectively renders the corner unusable and questioned whether the $6,000 reflects fair value, particularly given an adjacent gas line easement further limiting the land. Gibbs moved to postpone for a closed session to discuss negotiation strategy; the motion was seconded and carried unanimously, with the item expected to return in October.
+
+### 2027 Capital Improvement Budget Planning Strategy
+This item had been placed on the agenda but no presentation or materials were prepared. Chair Robinson acknowledged the county is underfunding its capital improvement plan and deferring maintenance, referencing the jail and library situations as cautionary examples. The item was withdrawn from consideration at this meeting with no action taken.
+
+### Claim Disallowance – Hanky/Hunky Lawsuit
+Corporation counsel advised that insurance-appointed legal counsel recommended formally disallowing the Hanky (also referenced as Hunky) claim on the basis that proper notice of claim was not provided by the claimant. A supervisor moved to deny the claim; Dave seconded. The motion carried with no opposition.
+
+### Resolution 5B1: Marathon County Donation Policy
+The policy had been referred back from the county board following concerns from Supervisor Jensen about keeping donation acceptance within a board function rather than delegating fully to the administrator. Supervisor Jensen favored routing donations through this committee for approval; Supervisor Hart agreed and preferred quarterly reporting to this committee over full board reporting. Chair Gibbs moved an amendment allowing the administrator to provisionally accept donations consistent with policy, contingent on ratification by the HR Finance and Property Committee at its next meeting; Hart seconded. The amended motion carried. The item was then pulled from the evening county board agenda to allow staff time to draft clean amended language, with the intent to bring it back in September.
+
+### County Trunk Highway X Developer's Agreement
+Highway Commissioner Kevin presented a cost-sharing agreement with a trucking facility developer (represented by Dave Hall of Rudabush) requiring year-round truck access along County Road X due to a restriction on Business 51 prohibiting trucks over 65 feet. The developer agreed to fund 50% of an estimated $700,000 structural overlay on Highway X and 75% of an estimated $113,000 intersection reconstruction at County Road X and Double X, plus 100% of right-of-way and engineering costs. The county would purchase the full outlot at the northeast corner for future use, with the developer funding 10% of that acquisition cost. A cancellation clause requires the developer to reimburse county expenditures if they cancel. Infrastructure Committee had previously reviewed and directed staff on this approach. Vice Chair Pool moved to recommend approval and advance to the county board; Gibbs seconded. Motion carried unanimously.
+
+### Conduit Financing – Wausau Hotel Group LLC (Informational)
+The administrator provided an advance notice that Wausau Hotel Group LLC is seeking $10 million in conduit financing through the Public Finance Authority. Under county ordinance section 1.51(7), this committee must evaluate and recommend to the full board; the administrator alone cannot consent. The financing would not pledge the county's faith and credit and is not an endorsement of the project. The representative confirmed the September 17th county board meeting timeline is acceptable, so the item will formally appear at the committee's first September meeting. Supervisor Jensen raised a question about whether the ordinance's bond duration limits apply; the administrator committed to researching that for the next meeting.
+
+## Public Comment
+No public comment was offered. The chair noted no one had approached the clerk or himself to provide public comment, though several individuals were present in the audience for later agenda items.
+
+## Action Items
+- WPS Sunnyville Park easement postponed; schedule closed session at next meeting to discuss valuation and negotiation strategy
+- Amended donation policy to be redrafted allowing administrator to provisionally accept donations contingent on ratification at next HR Finance and Property Committee meeting; bring clean language back in September
+- County Trunk Highway X developer's agreement advanced to full county board for action
+- Hanky/Hunky claim formally disallowed; proper notifications to be sent to litigants
+- Budget to be delivered to committee September 29 at 1:00 p.m.; standing committees to review budget first two weeks of October; publication approval October 14
+- Administrator to prepare full presentation and packet materials on Wausau Hotel Group LLC conduit financing request for first September committee meeting
+- Administrator to research whether ordinance bond duration limits apply to PFA conduit financing
+- Joint meeting with Portage County on Central Wisconsin Airport budget scheduled September 14 at 5:00 p.m. at the airport
+- Staff to bring forward recommendations on tax delinquent property fee schedule and updates to ordinance section 3.20 later this year

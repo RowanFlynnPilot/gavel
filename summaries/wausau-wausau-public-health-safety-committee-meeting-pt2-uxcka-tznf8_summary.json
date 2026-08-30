@@ -1,0 +1,66 @@
+{
+  "overview": "The Wausau Public Health and Safety Committee held a brief second session following a closed session deliberation on a rent abatement case. The committee voted unanimously to abate rent by 20% of monthly rent for a tenant at a property with building code violations, covering the period from April 29, 2026 through August 13, 2026. The decision provides retroactive compensation to the tenant for the diminished value of the rented premises due to the landlord's continued code violations.",
+  "committee": "City of Wausau Public Health & Safety Committee",
+  "presiding": "Name not clearly identified in transcript; referred to as 'Mr. Chair'",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Rent abatement motion following closed session deliberation"
+    },
+    {
+      "time": "1:45",
+      "item": "Roll call vote on rent abatement"
+    },
+    {
+      "time": "2:10",
+      "item": "Motion to adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Rent Abatement — Building Code Violation Property",
+      "body": "Following a closed session, Alder Lukens moved to abate rent by 20% of monthly rent retroactive to April 29, 2026 (the date of the initial inspection) through August 13, 2026 (the date the Wausau Inspection and Zoning Division verified the building code violation was corrected). The chair read the formal determination stating the abatement was intended to provide 'fair and equitable compensation to the tenant for the diminished value of the rented premises due to the landlord's continued violation of the City of Wausau's building code.' The motion passed unanimously 4-0 on roll call vote."
+    },
+    {
+      "item": "Adjournment",
+      "body": "Alder Watson moved to adjourn and Alder Trueblood seconded. The motion passed unanimously and the meeting was closed."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Rent abatement of 20% of monthly rent to be applied retroactively from April 29, 2026 through August 13, 2026 for the affected tenant",
+    "Wausau Inspection and Zoning Division verification of building code correction on August 13, 2026 serves as the end date for the abatement period"
+  ],
+  "topics": [
+    "Public Safety",
+    "Building Code Enforcement",
+    "Rent Abatement",
+    "Tenant Protections",
+    "Housing Inspection"
+  ],
+  "votes": [
+    {
+      "item": "Rent abatement of 20% of monthly rent from April 29, 2026 to August 13, 2026",
+      "motion": "Move to abate the rent by 20% of the monthly rent from April 29th, 2026 to August 13th, 2026",
+      "mover": "Alder Lukens",
+      "second": "Alder Trueblood",
+      "outcome": "Approved",
+      "tally": "4-0"
+    },
+    {
+      "item": "Motion to adjourn",
+      "motion": "Move to adjourn",
+      "mover": "Alder Watson",
+      "second": "Alder Trueblood",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "004a7df0c53f6f7a",
+  "title": "Wausau Public Health & Safety Committee Meeting Pt.2",
+  "url": "https://www.youtube.com/watch?v=UXCKA_TZnf8",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:27:06.721800+00:00"
+}

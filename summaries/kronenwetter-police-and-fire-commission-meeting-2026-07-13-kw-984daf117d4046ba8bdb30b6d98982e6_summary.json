@@ -1,5 +1,5 @@
 {
-  "overview": "The Kronenwetter Police and Fire Commission voted 4-0 to advance firefighter/first responder applicant Kristy Isberner in the hiring process following a closed session that included interviews of Fire Department applicants. The commission also voted 4-0 to delay action on updates to its Citizen Charge Procedures and Citizen Charge Form until the next meeting after a motion to approve changes was withdrawn.",
+  "overview": "The Kronenwetter Police and Fire Commission voted 4-0 to advance Kristy Isberner in the firefighter/first responder hiring process following a closed session in which Fire Department applicants were interviewed. The commission also voted 4-0 to seek additional information regarding a personnel incident documented as of June 30, 2026, and tabled updates to its Citizen Charge Procedures and Form until the next meeting after a motion to approve changes was withdrawn.",
   "committee": "Police and Fire Commission",
   "presiding": "President Alex Vedvik",
   "agenda": [
@@ -13,7 +13,7 @@
     },
     {
       "time": "N/A",
-      "item": "Closed session – interview Fire Department applicant(s) and consideration of personnel matters"
+      "item": "Closed session — interview of Fire Department applicant(s) and consideration of personnel matters"
     },
     {
       "time": "N/A",
@@ -21,51 +21,47 @@
     },
     {
       "time": "N/A",
-      "item": "Action after closed session – firefighter/first responder hiring process"
+      "item": "Action after closed session — firefighter/first responder hiring and personnel incident"
     },
     {
       "time": "N/A",
-      "item": "Action after closed session – seek additional information regarding incident received June 30, 2026"
-    },
-    {
-      "time": "N/A",
-      "item": "Discussion and possible action after review of Citizen Charge Form and Procedures"
+      "item": "Discussion and possible action on Citizen Charge Form and Procedures"
     }
   ],
   "discussions": [
     {
-      "item": "Approval of June 22, 2026 Meeting Minutes",
-      "body": "Vice President Rick Smith moved and Commissioner Chet Rucinski seconded approval of the June 22, 2026 minutes as submitted. The motion carried 5-0 by voice vote."
+      "item": "Approval of June 22, 2026 Minutes",
+      "body": "Vice President Smith moved, seconded by Commissioner Rucinski, to approve the June 22, 2026 meeting minutes as submitted. The motion carried 5-0 by voice vote."
     },
     {
-      "item": "Closed Session – Fire Department Applicant Interview and Personnel Matters",
-      "body": "Commissioner Lucene Udulutch moved and Vice President Smith seconded a motion to convene into closed session under Wis. Stat. 19.85(1)(c) and 19.85(1)(f) to interview Fire Department applicants and consider personnel matters. The motion carried 5-0 by roll call vote. The commission entered closed session at 5:03 p.m. with Chief O'Brien invited to participate. Commissioner Udulutch departed the meeting at 6:30 p.m., and the commission reconvened in open session at 7:05 p.m. on a 4-0 roll call vote."
+      "item": "Closed Session — Fire Department Applicant Interviews and Personnel Matters",
+      "body": "Commissioner Udulutch moved, seconded by Vice President Smith, to convene into closed session under Wis. Stat. 19.85(1)(c) and 19.85(1)(f) to interview Fire Department applicants and consider personnel matters. The motion carried 5-0 by roll call vote and the commission convened at 5:03 p.m. with Chief O'Brien invited to participate. Commissioner Udulutch departed the meeting at 6:30 p.m. The commission reconvened in open session at 7:05 p.m. on a motion by Vice President Smith, seconded by Commissioner Rucinski, which carried 4-0."
     },
     {
-      "item": "Action After Closed Session – Firefighter/First Responder Hiring",
-      "body": "Commissioner Rucinski moved and Commissioner Donna Rule seconded a motion to advance Kristy Isberner in the firefighter/first responder hiring process. The motion carried 4-0 by roll call vote."
+      "item": "Action After Closed Session — Firefighter/First Responder Hiring",
+      "body": "Commissioner Rucinski moved, seconded by Commissioner Rule, to advance Kristy Isberner in the firefighter/first responder hiring process. The motion carried 4-0 by roll call vote."
     },
     {
-      "item": "Action After Closed Session – Seek Additional Information Regarding Incident",
-      "body": "President Vedvik moved to seek additional information regarding the incident; Vice President Smith successfully requested that the phrase 'we received June 30, 2026' be added to the end of the motion, which President Vedvik accepted as an amendment. Commissioner Rule seconded the amended motion, which carried 4-0 by roll call vote."
+      "item": "Action After Closed Session — Personnel Incident",
+      "body": "President Vedvik moved to seek additional information regarding the incident. Vice President Smith requested the phrase 'we received June 30, 2026' be added to the end of the motion; President Vedvik accepted the amendment. Commissioner Rule seconded the amended motion, which carried 4-0 by roll call vote."
     },
     {
-      "item": "Citizen Charge Form and Procedures Review",
-      "body": "Vice President Smith moved to approve suggested changes to the Citizen Charge Procedures and Citizen Charge Form as discussed, but withdrew the motion following further discussion about additional changes. President Vedvik then moved to delay action to the next meeting; Vice President Smith seconded, and the motion carried 4-0 by voice vote."
+      "item": "Citizen Charge Form and Procedures",
+      "body": "Vice President Smith moved to approve suggested updates to the Citizen Charge Procedures and Citizen Charge Form as discussed, but withdrew the motion after further discussion indicated additional changes were needed. President Vedvik then moved to delay action to the next meeting, seconded by Vice President Smith; the motion carried 4-0 by voice vote."
     }
   ],
   "publicComment": "No public comment was recorded.",
   "actionItems": [
-    "Kristy Isberner is to be moved forward in the firefighter/first responder hiring process.",
-    "Staff or commission to seek additional information regarding the incident received June 30, 2026.",
-    "Action on updates to the Citizen Charge Procedures and Citizen Charge Form deferred to the next commission meeting."
+    "Kristy Isberner is to be advanced to the next stage of the firefighter/first responder hiring process.",
+    "Commission staff or administration to gather additional information regarding the personnel incident received June 30, 2026, for review at a future meeting.",
+    "Action on updates to the Citizen Charge Procedures and Citizen Charge Form delayed to the next commission meeting."
   ],
   "topics": [
     "Public Safety",
     "Staffing",
     "Firefighter Hiring",
-    "Citizen Charge Procedures",
-    "Personnel Matters"
+    "Personnel Matters",
+    "Citizen Charge Procedures"
   ],
   "votes": [
     {
@@ -93,7 +89,7 @@
       "tally": "4-0"
     },
     {
-      "item": "Advance Kristy Isberner in firefighter/first responder hiring process",
+      "item": "Advance Kristy Isberner in the firefighter/first responder hiring process",
       "motion": "Move Kristy Isberner forward in the firefighter/first responder hiring process",
       "mover": "Commissioner Chet Rucinski",
       "second": "Commissioner Donna Rule",
@@ -101,7 +97,7 @@
       "tally": "4-0"
     },
     {
-      "item": "Seek additional information regarding incident received June 30, 2026",
+      "item": "Seek additional information regarding personnel incident received June 30, 2026",
       "motion": "Seek additional information regarding the incident we received June 30, 2026",
       "mover": "President Alex Vedvik",
       "second": "Commissioner Donna Rule",
@@ -109,7 +105,7 @@
       "tally": "4-0"
     },
     {
-      "item": "Delay action on Citizen Charge Procedures and Form to next meeting",
+      "item": "Delay action on Citizen Charge Form and Procedures to next meeting",
       "motion": "Delay action to the next meeting",
       "mover": "President Alex Vedvik",
       "second": "Vice President Rick Smith",
@@ -122,5 +118,5 @@
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-23",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-984daf117d4046ba8bdb30b6d98982e6.pdf",
-  "processed_at": "2026-08-29T22:39:11.746162+00:00"
+  "processed_at": "2026-07-28T17:25:46.297549+00:00"
 }

@@ -1,43 +1,73 @@
 {
-  "overview": "Based on the published agenda, the Kronenwetter Police and Fire Commission was scheduled to meet on June 22, 2026, to review and approve minutes from previous meetings and discuss possible revisions to the Commission's complaint form. The meeting represented routine governance and procedural matters for the village's public safety oversight body.",
+  "overview": "The Village of Kronenwetter Police and Fire Commission voted 4-0 to delay action on revisions to its Citizen Complaint/Charge Form, pending incorporation of additional changes discussed at the meeting. The commission also reviewed but took no action on a proposed new selection process for hiring fire department members. A community member raised concerns about electric scooters on Village streets during public comment.",
   "committee": "Police and Fire Commission",
-  "presiding": "",
+  "presiding": "Alex Vedvik, President",
   "agenda": [
     {
       "time": "N/A",
-      "item": "Approval of minutes from 04/27/2026 and 06/01/2026 meetings"
+      "item": "Approval of 04/27/2026 and 06/01/2026 meeting minutes"
     },
     {
       "time": "N/A",
-      "item": "Public comment"
+      "item": "Public Comment"
     },
     {
       "time": "N/A",
-      "item": "Discussion and possible action regarding revision to Commission's complaint form"
+      "item": "New Business: Discussion and possible action after review of the Selection Process for Hiring Fire Department Members"
+    },
+    {
+      "time": "N/A",
+      "item": "Old Business: Discussion and possible action regarding revision to Commission's complaint form"
     }
   ],
   "discussions": [
     {
-      "item": "Approval of minutes",
-      "body": "The Commission was scheduled to approve meeting minutes from two previous sessions held on April 27, 2026, and June 1, 2026. This routine item was set for action at the meeting."
+      "item": "Approval of 04/27/2026 and 06/01/2026 meeting minutes",
+      "body": "Vice President Rick Smith moved, seconded by Commissioner Chet Rucinski, to approve the minutes of both prior meetings as submitted. The motion carried 3-0 by voice vote, with Commissioner Lucene Udulutch abstaining."
     },
     {
-      "item": "Revision to Commission's complaint form",
-      "body": "The Commission was scheduled to discuss and consider possible revisions to the complaint form used by the Commission. The agenda indicated this item was set for both discussion and possible action."
+      "item": "Selection Process for Hiring Fire Department Members",
+      "body": "Chief O'Brien presented a proposal to have a fire department chief or fire officer meet with new applicants before their formal interview with the Police and Fire Commission. Commissioners discussed the concept but took no action."
+    },
+    {
+      "item": "Revision to Commission's Citizen Complaint/Charge Form",
+      "body": "Commissioners reviewed attorney-proposed changes to the Citizen Complaint/Charge Form and discussed additional modifications they wished to incorporate. President Vedvik moved, seconded by Vice President Smith, to delay action pending incorporation of the changes discussed. The motion carried 4-0 by voice vote."
     }
   ],
-  "publicComment": "Public comment was on the agenda, limited to 15 minutes total with a three-minute period per person, subject to extension at the presiding officer's discretion.",
+  "publicComment": "William Udulutch of 1859 Kimberly Road, Kronenwetter, addressed the commission with two suggestions: that commissioners participate in ride-alongs with the Kronenwetter Police Department, and that the commission address electric scooters, which he described as a growing problem on Village streets.",
   "actionItems": [
-    "Scheduled to approve minutes from 04/27/2026 and 06/01/2026 meetings",
-    "Expected to consider revisions to the Commission's complaint form"
+    "Staff to incorporate commissioner-discussed changes into the Citizen Complaint/Charge Form before the commission takes final action on the revised document.",
+    "No action taken on fire department hiring selection process; discussion to continue at a future meeting."
   ],
-  "_source": "agenda",
+  "topics": [
+    "Public Safety",
+    "Staffing",
+    "Citizen Complaint Process",
+    "Fire Department Hiring",
+    "Electric Scooters"
+  ],
+  "votes": [
+    {
+      "item": "Approval of 04/27/2026 and 06/01/2026 meeting minutes",
+      "motion": "Approve the 04/27/2026 and 06/01/2026 meeting minutes as submitted",
+      "mover": "Rick Smith",
+      "second": "Chet Rucinski",
+      "outcome": "Approved",
+      "tally": "3-0"
+    },
+    {
+      "item": "Revision to Citizen Complaint/Charge Form",
+      "motion": "Delay action pending incorporating changes as discussed to Citizen Complaint/Charge Form",
+      "mover": "Alex Vedvik",
+      "second": "Rick Smith",
+      "outcome": "Approved",
+      "tally": "4-0"
+    }
+  ],
+  "_source": "minutes",
   "title": "Police and Fire Commission Meeting - 2026-06-22",
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-22",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-8eb365830ccd47e5865e3f22088e7351.pdf",
-  "processed_at": "2026-06-22T03:53:36.687996+00:00",
-  "topics": [
-    "Public Safety"
-  ]
+  "processed_at": "2026-07-14T17:14:29.591981+00:00"
 }

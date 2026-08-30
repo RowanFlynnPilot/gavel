@@ -1,0 +1,42 @@
+# Wausau Public Health & Safety Committee Meeting
+
+**Organization:** City of Wausau  
+**Source:** https://www.youtube.com/watch?v=U6R1v-Sm37Y  
+**Summarized:** 2026-08-30 04:26 UTC
+
+---
+
+## Meeting Overview
+The Wausau Public Health and Safety Committee met on what appeared to be a July evening, approving most license applications while tabling one denial for further review, granting a 60-day business extension to Copper Kettle Steakhouse, and approving an ordinance amendment to allow bicycle traffic on a contested sidewalk stretch near the Thomas Street Bridge. The committee also voted to shift community outreach reports on the unhoused population to a quarterly schedule starting in September, and received informal updates from Bridge Street Mission and city outreach coordinator Tracy.
+
+## Key Discussions
+### Approval of various licenses and disapproval recommendations
+Three applicants were recommended for denial: Zion Miriam, Brent Rafine, and Darius Williams. Williams appeared in person to contest his denial for a bartender license needed to work at Fuel, explaining he has been out of prison over seven years and off parole for 2.5 years and has completed AODA, anger management, and other programs. Captain Melinda Pauls explained that some charges constitute automatic denials under chief's guidelines and that Williams needed to submit formal evidence of rehabilitation. The committee directed Williams to speak with Captain Pauls after the meeting to determine what documentation to bring for reconsideration next month. The committee approved all other license approvals and denials except Williams, whose case was removed from the motion pending further review. The Greater Wausau Chamber of Commerce picnic license was noted as withdrawn, to be resubmitted for the August meeting. A liquor license for the Rec Room was noted as unanimously recommended for approval.
+
+### 90-day extension for Copper Kettle Steakhouse
+Robert Leovic, representing Copper Kettle Steakhouse LLC at 5510 Stewart Avenue, requested an extension, explaining that federal and tax liens on the building delayed closing until May 20, costing him seven to eight weeks of construction time. He said he is approximately three weeks from opening and suggested 45 or 60 days would suffice rather than a full 90. Alder Watson initially moved for 45 days but amended to 60 days at Leovic's preference. The committee approved a 60-day extension unanimously.
+
+### Amending Section 10.40.040 — bicycle ordinance near Thomas Street Bridge
+The proposed amendment would allow bicycle traffic on the sidewalk along River Edge Parkway near the Thomas Street Bridge, an area where cyclists currently use the sidewalk despite it being technically prohibited. City staff Carrie explained the change stems from a bicycle and pedestrian advisory committee recommendation to improve connectivity and safety, noting cyclists coming off the Thomas Street Bridge face a disorienting gap in the multi-use path network. Alder True Blood opposed the change, arguing the sidewalk is narrow and walkers are displaced by cyclists, including fast-moving e-bikes, and that widening the path is the real solution. Alder Sanski and Alder Lukans supported the amendment on safety grounds, noting the steep hill and heavy traffic on Thomas Street make road biking dangerous for that segment. The motion passed 4 to 1, with Alder True Blood casting the dissenting vote.
+
+### Large item drop-off event review
+Chair Larson deferred this item to the next month's meeting because staff member Eric was unavailable. Larson noted concerns about long wait times and street congestion at the large item drop-off events and asked committee members to think about improvements ahead of the next meeting.
+
+### Community outreach reports — frequency and format
+The committee discussed shifting from monthly to quarterly community outreach reports from Tracy (city outreach coordinator) and the Bridge Street Mission, consistent with the schedule used for police and fire department reports. Alder True Blood moved that quarterly reports begin in September and continue every four months, with reports from both Tracy and Bridge Street Mission. Alder Slowski requested that reports include obstacles to keeping people housed and transitioning them to permanent housing. The motion passed unanimously. Tracy was also invited to present next month on the United Way task force's pathway-home strategy after describing a successful collaboration that helped an unhoused man obtain a Greyhound bus ticket back to Arizona.
+
+### Verbal update from Bridge Street Mission and Tracy
+Craig from Bridge Street Mission reported 143 unique guests have stayed in shelter, approximately 35% women, with reduced police involvement compared to prior periods. He noted the facility successfully tested overflow capacity of 72 (up from 60) over the preceding three nights due to heavy smoke and air quality warnings. Tracy reported no major issues, praised Bridge Street Mission's performance, and highlighted the interagency collaboration that helped an unhoused man return to Arizona, involving the mayor, council member Killian, Metro Ride bus drivers, and herself.
+
+## Public Comment
+No public comment was offered. The chair asked three times at the start of the meeting and received no response.
+
+## Action Items
+- Darius Williams directed to meet with Captain Melinda Pauls after the meeting to identify required rehabilitation documentation for resubmission at next month's meeting
+- Greater Wausau Chamber of Commerce picnic license application to be resubmitted for the August meeting for a September event date
+- Copper Kettle Steakhouse granted a 60-day business extension
+- Section 10.40.040 amended to permit bicycle traffic on the sidewalk near the Thomas Street Bridge/River Edge Parkway segment
+- Large item drop-off event review deferred to next month; committee members asked to consider improvements
+- Quarterly community outreach reports from Bridge Street Mission and Tracy to begin in September, every four months thereafter
+- Tracy to present at next month's meeting on United Way task force's pathway-home strategy
+- Tavern reports and police/fire quarterly reports to be resubmitted to Civic Plus for next month's packet

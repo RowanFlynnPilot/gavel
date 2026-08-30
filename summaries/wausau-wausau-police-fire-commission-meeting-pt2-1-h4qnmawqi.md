@@ -1,0 +1,44 @@
+# Wausau Police & Fire Commission Meeting Pt.2
+
+**Organization:** City of Wausau  
+**Source:** https://www.youtube.com/watch?v=1_H4qnMawQI  
+**Summarized:** 2026-08-30 04:03 UTC
+
+---
+
+## Meeting Overview
+The Wausau Police and Fire Commission reconvened in open session following a closed session to act on several personnel matters, including appointing two new firefighter EMTs and beginning planning for a Deputy Chief succession process. The commission also received monthly updates from both the Police and Fire departments highlighting significant staffing challenges, and scheduled a special meeting for August 3rd to address a Fire Department lieutenant vacancy.
+
+## Key Discussions
+### Appointment of Firefighter EMT Candidates
+Following closed session interviews, the commission moved to appoint Jessica Peace and Brody Bleskachek as firefighter EMTs with the Wausau Fire Department, contingent on successful completion of the hiring process including physical and psychological evaluations. The motion carried unanimously and both candidates were present, receiving applause. Chief Cobb noted it will be approximately October or November before they are running solo on ambulances and fire engines.
+
+### Deputy Chief Succession Planning
+The commission announced it will develop a formal internal recruitment and selection process to fill the Deputy Chief position in anticipation of Deputy Chief Todd Batten's retirement in January 2027. The goal is to complete the process before the end of 2026, with more details on the process to follow.
+
+### Cheryl Bar Retirement Recognition
+The commission recognized Cheryl Bar's retirement after 28 years of service on the Police and Fire Commission. The chair noted she was involved in appointing all of the department chiefs during her tenure. The mayor will make an appointment to fill her seat at the next City Council meeting.
+
+### Police Department Monthly Update
+Chief Barnes reported significant staffing challenges including three unanticipated resignations, a large number of officers on injured reserve due to medical conditions ranging from heart surgery to cancer — described as 'almost a whole patrol shift' — and six anticipated retirements in early 2027. An abbreviated hiring process targeting certified candidates yielded only six applicants, none deemed suitable except one under further review, prompting plans for a larger fall hiring effort of eight to ten officers. Barnes also addressed the potential police department relocation to the UW campus on Stewart Avenue, noting that if the county accepts the city's proposal, a council vote on full project approval is expected between April and June 2027, with potential savings described as 'tens of millions of dollars.' Barnes also highlighted a department-wide transition from iron sight to red dot optic handguns and expressed serious concern about illegal e-motos being operated by minors, noting criminal charges and vehicle seizures are underway.
+
+### Bridge Street Mission Call Volume
+A commissioner asked about an earlier period when the Bridge Street Mission was generating approximately four police calls per day over 14 days. Chief Barnes said the situation has smoothed out significantly, attributing the initial spike to a normal 'storm before it norms' transition period as police and Mission management developed shared expectations. He said it is not perfect but much improved due to ongoing collaboration with Mission management and education of their clientele.
+
+### Fire Department Monthly Update and Lieutenant Vacancy
+Chief Cobb reported that following a firefighter paramedic resignation last month, a veteran lieutenant also resigned and will leave in the first week of August, creating an acting position. The commission's existing promotion list has two candidates remaining; promoting one would create an open engineer position. Cobb asked whether the commission should run with acting positions for a month or hold a special meeting, and the commission agreed to schedule a special meeting for Monday, August 3rd at the police department community room. Cobb also reported that new FirstNet scheduling software is being implemented to improve overtime tracking and reduce human error.
+
+### Community Care Paramedic Program
+Chief Cobb highlighted the community care paramedic position held by Matt Gazlawski as a 'tremendous game changer,' noting it has drawn interest from Aspirus and other communities. The three-year trial period enters its third and final phase in October, and Cobb stated he intends to work through the upcoming budget process to permanently secure the position before it expires halfway through the following year.
+
+## Public Comment
+No public comment was offered.
+
+## Action Items
+- Appoint Jessica Peace and Brody Bleskachek as firefighter EMTs contingent on completion of physical and psychological evaluations
+- Develop a formal internal recruitment and selection process for Deputy Chief to be completed before end of 2026
+- Mayor to appoint a replacement for Cheryl Bar on the Police and Fire Commission at the next City Council meeting
+- Schedule special Police and Fire Commission meeting for Monday, August 3rd at the police department community room to address Fire Department lieutenant promotion
+- Police Department to conduct fall hiring process targeting eight to ten new officer recruits for January 2027 academy start
+- City staff to submit proposal to county for potential police department relocation to UW campus on Stewart Avenue
+- Fire Department to use budget process to pursue permanent funding for the Community Care Paramedic position before the three-year trial expires

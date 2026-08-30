@@ -1,0 +1,146 @@
+{
+  "overview": "The Marathon County Board of Supervisors held its adjourned organizational meeting on July 28, 2026, approving several budget amendments and resolutions including state Food Share funding, District Attorney contingency funds, and Sheriff's Office emergency management grants totaling $64,568. A consent agenda item (13A1) was pulled and referred back to the Human Resources Finance and Property Committee after Supervisor Robinson raised questions about it. The meeting was brief, with all contested items passing and the board adjourning after announcements about the Wisconsin Valley Fair and a planned county government day at the fair.",
+  "committee": "Marathon County Board of Supervisors",
+  "presiding": "Kurt Gibbs, Board Chair",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Pledge of Allegiance and moment of reflection"
+    },
+    {
+      "time": "1:10",
+      "item": "Reading of meeting notice"
+    },
+    {
+      "time": "2:05",
+      "item": "Standing committee chairs reports"
+    },
+    {
+      "time": "3:45",
+      "item": "Consent agenda items C8 through C13B (excluding 13A1)"
+    },
+    {
+      "time": "7:20",
+      "item": "Resolution 40-26: Budget amendment to receive state funding for Food Share Quality Assurance Reform Mandates"
+    },
+    {
+      "time": "8:30",
+      "item": "Resolution 41-26: Approving use of District Attorney non-lapsing contingency funds"
+    },
+    {
+      "time": "9:20",
+      "item": "Resolution 42-26: Approving Wisconsin Emergency Management grants for Sheriff's Office and amending 2026 budget by $64,568"
+    },
+    {
+      "time": "10:10",
+      "item": "Resolution 45-26: Establishing 2027 budget priorities and guidelines"
+    },
+    {
+      "time": "11:00",
+      "item": "Announcements and requests"
+    },
+    {
+      "time": "12:30",
+      "item": "Adjournment"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Standing Committee Reports and Consent Agenda Preparation",
+      "body": "Supervisor Robinson reported that the Human Resources Finance and Property Committee received its annual audit report from John Ryder of Baker Tilly, who noted continued improvement in financial preparation quality. Robinson thanked Finance Director Samantha Fensky and her department. He also requested that item 13A1 be pulled from the consent agenda and referred back to committee due to unresolved questions; Board Chair Gibbs confirmed no objection from the board and the item was removed."
+    },
+    {
+      "item": "Consent Agenda Items C8 through C13B (excluding 13A1)",
+      "body": "Supervisor Hopper raised a question about item 12A3, a rezone for Sandra Trembling, noting that a checkbox on page 13 of the paperwork appeared unchecked. The ERC committee chair responded that it was a typographical error and that the applicant had in fact provided the required information reviewed by the committee. The consent agenda passed unanimously."
+    },
+    {
+      "item": "Resolution 40-26: Food Share Quality Assurance Reform Mandates Budget Amendment",
+      "body": "The Health and Human Services Committee and Human Resources Finance and Property Committee jointly brought forward this budget amendment to receive state funding for Food Share Quality Assurance Reform Mandates. The resolution required a two-thirds majority vote as a budget amendment. It was moved by Supervisor Gaul and seconded by Supervisor Greiner, and it passed but was not unanimous."
+    },
+    {
+      "item": "Resolution 41-26: District Attorney Non-Lapsing Contingency Funds",
+      "body": "Moved by Supervisor Arstead and seconded by Supervisor Coil, this resolution approving use of District Attorney non-lapsing contingency funds passed unanimously. Supervisor Greiner cast a verbal 'aye' which the chair noted for the record."
+    },
+    {
+      "item": "Resolution 42-26: Wisconsin Emergency Management Grants for Sheriff's Office",
+      "body": "This resolution approved Wisconsin Emergency Management grants for the Sheriff's Office and amended the 2026 budget by $64,568. Moved by Supervisor Pool and seconded by Supervisor Gao, it required a two-thirds majority as a budget amendment and passed unanimously."
+    },
+    {
+      "item": "Resolution 45-26: 2027 Budget Priorities and Guidelines",
+      "body": "Moved by Supervisor Mask and seconded by Supervisor Robinson, this resolution establishing the 2027 budget priorities and guidelines passed but was not unanimous, indicating some dissent among supervisors regarding the upcoming budget direction."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Item 13A1 pulled from consent agenda and referred back to the Human Resources Finance and Property Committee for further review",
+    "Resolution 40-26 approved: budget amended to receive state Food Share Quality Assurance Reform Mandate funding",
+    "Resolution 41-26 approved: District Attorney non-lapsing contingency funds authorized",
+    "Resolution 42-26 approved: 2026 budget amended by $64,568 for Sheriff's Office emergency management grants",
+    "Resolution 45-26 approved: 2027 budget priorities and guidelines established",
+    "Executive Committee to send email to board members regarding county government day at Wisconsin Valley Fair with available fair tickets"
+  ],
+  "topics": [
+    "Budget",
+    "Public Safety",
+    "Human Services",
+    "Zoning",
+    "Wisconsin Valley Fair"
+  ],
+  "votes": [
+    {
+      "item": "Consent agenda items C8 through C13B excluding 13A1",
+      "motion": null,
+      "mover": "Supervisor Siefeld",
+      "second": "Supervisor Carvelli",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Resolution 40-26: Budget amendment for Food Share Quality Assurance Reform Mandates",
+      "motion": null,
+      "mover": "Supervisor Gaul",
+      "second": "Supervisor Greiner",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Resolution 41-26: District Attorney non-lapsing contingency funds",
+      "motion": null,
+      "mover": "Supervisor Arstead",
+      "second": "Supervisor Coil",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Resolution 42-26: Wisconsin Emergency Management grants for Sheriff's Office, amending 2026 budget by $64,568",
+      "motion": null,
+      "mover": "Supervisor Pool",
+      "second": "Supervisor Gao",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    },
+    {
+      "item": "Resolution 45-26: Establishing 2027 budget priorities and guidelines",
+      "motion": null,
+      "mover": "Supervisor Mask",
+      "second": "Supervisor Robinson",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjournment",
+      "motion": null,
+      "mover": "Supervisor Gau",
+      "second": "Supervisor Covelli",
+      "outcome": "Approved",
+      "tally": "Unanimous"
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "68124bd3110f18b1",
+  "title": "Marathon County Board Meeting",
+  "url": "https://www.youtube.com/watch?v=ThBP_lpEqlM",
+  "source": "marathon",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:26:02.674407+00:00"
+}

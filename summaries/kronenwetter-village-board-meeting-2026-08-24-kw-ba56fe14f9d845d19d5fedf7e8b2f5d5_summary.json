@@ -1,86 +1,155 @@
 {
-  "overview": "Based on the published agenda, the Village of Kronenwetter Board was scheduled to meet to consider the 2027-2036 Capital Improvements Program budget draft, review a preliminary plat for Green Tree Subdivision, and address collective bargaining negotiations with the police association. The meeting also included routine financial reporting and administrative updates.",
-  "committee": "Village Board of Kronenwetter",
-  "presiding": "Not indicated on agenda",
+  "overview": "The Kronenwetter Village Board held its August 24, 2026 regular meeting, covering a range of financial and operational matters including a 10-year capital improvement plan presentation, TID #1 valuation challenges, and a collective bargaining negotiation update. The board convened into closed session to address a police union contract and directed the administrator to continue negotiations before adjourning.",
+  "committee": "Village of Kronenwetter Village Board",
+  "presiding": "Dan Joling, Village President",
   "agenda": [
     {
-      "time": "N/A",
-      "item": "Administrator Report"
+      "time": "0:00",
+      "item": "Call to Order and Pledge of Allegiance"
     },
     {
-      "time": "N/A",
+      "time": "1:10",
+      "item": "Roll Call"
+    },
+    {
+      "time": "2:05",
+      "item": "Motion to Move Agenda Items"
+    },
+    {
+      "time": "2:40",
+      "item": "Chairperson Comments"
+    },
+    {
+      "time": "3:20",
+      "item": "Public Comments"
+    },
+    {
+      "time": "7:00",
+      "item": "Administrative Staff Report"
+    },
+    {
+      "time": "22:00",
       "item": "Public Works Director Report"
     },
     {
-      "time": "N/A",
-      "item": "Finance Director/Treasurer - 7/31/2026 Financial Statements (Budget Status Report)"
+      "time": "30:00",
+      "item": "Finance Director Report - General Fund and TID #1 Update"
     },
     {
-      "time": "N/A",
-      "item": "Update on TID #1 Information from 2026 Equalized Valuation Report - Email Response from Wisconsin Department of Revenue"
+      "time": "55:00",
+      "item": "Consent Agenda - August 10 Minutes and July Check Register"
     },
     {
-      "time": "N/A",
-      "item": "August 10, 2026 Village Board Meeting Minutes"
+      "time": "57:00",
+      "item": "New Business: 2027-2036 Capital Improvement Plan"
     },
     {
-      "time": "N/A",
-      "item": "July 2026 Check Register, ACH Register, and Credit Card Transactions Activity"
+      "time": "1:25:00",
+      "item": "Green Tree Subdivision Update"
     },
     {
-      "time": "N/A",
-      "item": "2027-2036 Capital Improvements Program (CIP) Budget - 1st Draft as of 7/31/2026"
+      "time": "1:30:00",
+      "item": "Closed Session - Police Union Collective Bargaining"
     },
     {
-      "time": "N/A",
-      "item": "Green Tree Subdivision Preliminary Plat"
+      "time": "1:35:00",
+      "item": "Return from Closed Session - Direction to Administrator"
     },
     {
-      "time": "N/A",
-      "item": "Closed Session - Negotiating collective bargaining agreement for Kronenwetter Professional Police Association"
+      "time": "1:37:00",
+      "item": "Adjournment"
     }
   ],
   "discussions": [
     {
-      "item": "Finance Director/Treasurer - 7/31/2026 Financial Statements",
-      "body": "The board was scheduled to review the village's budget status report and financial statements as of July 31, 2026. This routine financial reporting was set to provide an overview of the village's fiscal position through the end of July."
+      "item": "Public Comments",
+      "body": "One speaker, Mr. Cramer, addressed the board regarding a previous special meeting where a trustee took over the chairmanship, calling it unusual and raising accountability concerns. He also cited the village attorney's budget memo noting the village is $1,000 over budget after seven months due to personnel investigation costs, and criticized the ongoing investigation timeline as several months with no public answers, stating 'I think you have a major accountability problem.'"
     },
     {
-      "item": "Update on TID #1 Information from 2026 Equalized Valuation Report",
-      "body": "The board was expected to consider information regarding Tax Increment District #1 from the 2026 equalized valuation report, including an email response from the Wisconsin Department of Revenue. This item was scheduled to update the board on the district's valuation status."
+      "item": "Administrative Staff Report",
+      "body": "The administrator reported on a meeting with the Golden Pond HOA regarding pond level management, noting the village found seven homes still running sump pumps when the HOA claimed only two, and that the village declined to raise the pond level as a result. The administrator also flagged a significant increase in open records requests targeting the police department, particularly records from when Village President Joling was police chief, characterizing them as a personal vendetta. Staff discussed potentially charging for staff time associated with open records requests and updating public comment procedures."
     },
     {
-      "item": "2027-2036 Capital Improvements Program (CIP) Budget - 1st Draft",
-      "body": "The board was scheduled to discuss and take possible action on the first draft of the ten-year Capital Improvements Program budget as of July 31, 2026. This item was set for initial review of the village's planned infrastructure and capital projects for the coming decade."
+      "item": "Public Works Director Report",
+      "body": "Public Works Director Greg reported that a WPS transformer installed for a new electrical panel was the wrong wattage, causing a delay of a few days on Lift Station 2. He also noted that a road contractor is working on drainage and shoulder improvements near the municipal building and bridge areas. A generator battery failure was discovered and addressed in-house, with discussion about the aging generator fleet and the need for a long-term replacement plan."
     },
     {
-      "item": "Green Tree Subdivision Preliminary Plat",
-      "body": "The board was expected to consider and take possible action on the preliminary plat for Green Tree Subdivision. This item was scheduled for development review of the proposed subdivision project."
+      "item": "Finance Director Report - General Fund and TID #1",
+      "body": "Finance Director John Jacobs reported the general fund revenues are tracking nearly identically to 2025 at about 62.7% collected through seven months, with most remaining revenue expected from the state in October. Three expenditure areas flagged as over budget - legal/investigation costs, municipal building operations, and garbage/recycling - are expected to be addressed via a transfer from the $60,000 contingency reserve later in the year. On TID #1, Jacobs explained a combined $2.5 million valuation reduction resulted from local assessor adjustments and a retroactive state correction, worsening the TID's cash flow. He recommended a status quo approach for six to nine months to allow a potential distribution center project to add tax increment, noting debt payments drop significantly starting in 2030 and TID #1 debt is eliminated by 2037-2044."
     },
     {
-      "item": "Collective Bargaining Agreement Negotiation - Kronenwetter Professional Police Association",
-      "body": "The board was scheduled to convene in closed session pursuant to Wisconsin Statute 19.85(1)(e) to negotiate the collective bargaining agreement with the Kronenwetter Professional Police Association. This closed session was set to address compensation and employment terms for the police association."
+      "item": "2027-2036 Capital Improvement Plan",
+      "body": "Finance Director Jacobs and Public Works Director Greg presented the 10-year CIP, noting the village currently has roughly $49 million in remaining borrowing capacity at 70% of the debt limit. The first-year 2027 program totals approximately $4.3 million across equipment, infrastructure, parks, and facilities. Trustee Erin Mishka (Parks Committee Chair) specifically noted that the $200,000 in park donations listed for 2027 is insufficient and that tax dollars should support parks improvements. Staff noted a potential $1.7 million general obligation borrowing target and discussed strategic timing of debt issuance to defer tax impact. No formal vote was taken; the presentation was informational ahead of the fall budget process."
+    },
+    {
+      "item": "Green Tree Subdivision Update",
+      "body": "Administrator Jim reported that the developer of the Green Tree subdivision indicated they expect to move forward within the next month and wants board action. The Plan Commission made a conditional recommendation in June, and staff noted some ordinance timing provisions require the board to act before the approval becomes automatic. A related factor is a pending decision regarding the golf course that may affect the subdivision layout. No vote was taken; the board noted this will return as a formal agenda item."
+    },
+    {
+      "item": "Closed Session and Return - Police Union Negotiations",
+      "body": "The board voted to convene in closed session to deliberate on the collective bargaining agreement with the Kronenwetter Professional Police Association / Wisconsin Professional Police Association. Upon returning to open session, the board voted to direct the administrator to continue negotiations with the union."
     }
   ],
-  "publicComment": "Public comment was on the agenda, limited to 15 minutes total with a three-minute time period per person, with possible time extension at the Chief Presiding Officer's discretion.",
+  "publicComment": "One speaker, identified as Mr. Cramer, addressed the board. He raised concerns about a recent special meeting where a trustee took over the chairmanship, questioned the transparency of an ongoing personnel investigation that has run over budget, and criticized the board for holding 'shadow meetings' without public answers. He stated residents 'expect better' and called it 'a major accountability problem.'",
   "actionItems": [
-    "Scheduled to vote on approval of August 10, 2026 Village Board Meeting Minutes",
-    "Scheduled to vote on July 2026 Check Register, ACH Register, and Credit Card Transactions Activity",
-    "Expected to consider and take possible action on 2027-2036 Capital Improvements Program (CIP) Budget - 1st Draft",
-    "Expected to consider and take possible action on Green Tree Subdivision Preliminary Plat",
-    "Scheduled to convene in closed session to negotiate collective bargaining agreement with Kronenwetter Professional Police Association"
+    "Administrator to bring public comment policy recommendations to a future APC meeting, including whether comments should be tied to agenda items and whether emailed comments should be accepted",
+    "Administrator to develop a schedule for charging for staff time on open records requests",
+    "Public Works to have mechanics inspect and repair municipal building generator battery and fuses",
+    "Finance Director to prepare tax levy affordability scenarios for multiple home values for next board meeting",
+    "Finance Director to update and date-stamp the CIP document monthly as a living document",
+    "Finance Director to research state shared revenue impact from potential Plover Plant 3 closure between 2031-2036",
+    "Administrator to bring Green Tree subdivision to a future board meeting for formal action",
+    "Administrator to continue collective bargaining negotiations with the Kronenwetter Professional Police Association",
+    "Budget amendment for investigation-related legal costs to be prepared once final costs are known, likely later in 2026",
+    "A special meeting was scheduled for Thursday at 4:30 PM"
   ],
   "topics": [
     "Budget",
-    "Capital Improvements",
+    "TID District",
+    "Capital Improvement Plan",
     "Development",
-    "Staffing",
-    "Tax Increment Districts"
+    "Parks",
+    "Police Labor Negotiations"
   ],
-  "_source": "agenda",
+  "votes": [
+    {
+      "item": "Consent Agenda - August 10, 2026 minutes and July 2026 check register and credit card transactions",
+      "motion": "Motion to approve the consent agenda as presented",
+      "mover": "Dan Lesniak",
+      "second": "Jessica Stowell",
+      "outcome": "Approved",
+      "tally": "6-0"
+    },
+    {
+      "item": "Convene in closed session for police union collective bargaining deliberations",
+      "motion": "Motion to move into closed session",
+      "mover": "Kelly Coyle",
+      "second": "Jessica Stowell",
+      "outcome": "Approved",
+      "tally": "6-0"
+    },
+    {
+      "item": "Direct administrator to continue negotiations with the police union",
+      "motion": "Motion to direct the administrator to continue negotiations with the union",
+      "mover": "Kelly Coyle",
+      "second": "Dan Lesniak",
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Adjournment",
+      "motion": null,
+      "mover": "Craig Mortensen",
+      "second": "Aaron Myszka",
+      "outcome": "Approved",
+      "tally": null
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "d16d3b49e543a53c",
   "title": "Village Board Meeting - 2026-08-24",
   "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-65",
   "source": "kronenwetter",
   "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-ba56fe14f9d845d19d5fedf7e8b2f5d5.pdf",
-  "processed_at": "2026-08-29T22:34:50.250247+00:00"
+  "processed_at": "2026-08-30T03:35:05.682096+00:00"
 }

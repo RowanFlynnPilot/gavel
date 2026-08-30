@@ -1,0 +1,60 @@
+{
+  "overview": "This appears to be the tail end of a Wausau Board of Public Works meeting (Part 2), capturing only the final moments of a motion related to several construction companies and an immediate adjournment. The transcript is extremely brief and provides almost no context about the substance of discussions or decisions made earlier in the meeting.",
+  "committee": "City of Wausau Board of Public Works",
+  "presiding": "Unknown — not identifiable from transcript",
+  "agenda": [
+    {
+      "time": "0:00",
+      "item": "Motion involving Wisconsin Incorporated, Nor Con Corporation, Pember Companies Incorporated, and Vinton Construction Company"
+    },
+    {
+      "time": "0:15",
+      "item": "Motion to adjourn"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Motion regarding construction companies",
+      "body": "A motion was made referencing Wisconsin Incorporated, Nor Con Corporation, Pember Companies Incorporated, and Vinton Construction Company. The motion was seconded and approved by voice vote with 'aye.' The nature of the motion — whether it concerned bids, contracts, or another matter — is not discernible from the transcript."
+    },
+    {
+      "item": "Adjournment",
+      "body": "Immediately following the prior vote, a motion to adjourn was made and seconded. The motion passed by voice vote with 'aye.' No further business was conducted."
+    }
+  ],
+  "publicComment": "No public comment was offered.",
+  "actionItems": [
+    "Action related to Wisconsin Incorporated, Nor Con Corporation, Pember Companies Incorporated, and Vinton Construction Company approved — specific nature undetermined from transcript",
+    "Meeting adjourned"
+  ],
+  "topics": [
+    "Construction Contracts",
+    "Procurement",
+    "Public Works"
+  ],
+  "votes": [
+    {
+      "item": "Motion involving Wisconsin Incorporated, Nor Con Corporation, Pember Companies Incorporated, and Vinton Construction Company",
+      "motion": null,
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    },
+    {
+      "item": "Motion to adjourn",
+      "motion": "Motion to adjourn",
+      "mover": null,
+      "second": null,
+      "outcome": "Approved",
+      "tally": null
+    }
+  ],
+  "_source": "transcript",
+  "_transcript_hash": "c92b28db31149e64",
+  "title": "Wausau Board of Public Works Meeting Pt.2",
+  "url": "https://www.youtube.com/watch?v=lZ-KzjYjYKU",
+  "source": "wausau",
+  "doc_url": null,
+  "processed_at": "2026-08-30T04:37:23.829821+00:00"
+}
