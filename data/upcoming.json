@@ -366,6 +366,13 @@
   ],
   "kronenwetter": [
     {
+      "date": "2026-09-01",
+      "time": "5:45 PM",
+      "name": "Utility Committee Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-29",
+      "source": "kronenwetter"
+    },
+    {
       "date": "2026-09-10",
       "time": "6:00 PM",
       "name": "Plan Commission Meeting",
