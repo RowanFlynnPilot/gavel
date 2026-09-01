@@ -119,6 +119,17 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:fab9cf07735d36eb1622@gavel
+DTSTAMP:20260908T000000Z
+DTSTART;TZID=America/Chicago:20260908T163000
+DTEND;TZID=America/Chicago:20260908T180000
+SUMMARY:Village of Kronenwetter: Parks Committee
+URL:https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committe
+ e-3
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:2ec6119c18472c4ccdf9@gavel
 DTSTAMP:20260908T000000Z
 DTSTART;TZID=America/Chicago:20260908T170000
@@ -145,6 +156,18 @@ DTSTART;TZID=America/Chicago:20260908T180000
 DTEND;TZID=America/Chicago:20260908T193000
 SUMMARY:Village of Weston: S.A.F.E.R. Board of Directors
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:7a92407e80df0d9553cf@gavel
+DTSTAMP:20260908T000000Z
+DTSTART;TZID=America/Chicago:20260908T180000
+DTEND;TZID=America/Chicago:20260908T193000
+SUMMARY:Village of Kronenwetter: Community Life\, Infrastructure and Public
+  Property (CLIPP) Committee Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-li
+ fe-infrastructure-and-public-property-clipp-committee-meeting-27
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -287,6 +310,17 @@ DTSTART;TZID=America/Chicago:20260915T170000
 DTEND;TZID=America/Chicago:20260915T183000
 SUMMARY:City of Wausau: Plan Commission Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3519/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:b6679fdd4a23b34b5845@gavel
+DTSTAMP:20260915T000000Z
+DTSTART;TZID=America/Chicago:20260915T173000
+DTEND;TZID=America/Chicago:20260915T190000
+SUMMARY:Village of Kronenwetter: Administrative Policy Committee Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative
+ -policy-committee-meeting-32
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
