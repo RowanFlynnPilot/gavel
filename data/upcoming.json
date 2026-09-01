@@ -115,13 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-08-31",
-      "time": "5:15 PM",
-      "name": "Parks & Recreation Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2456/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-01",
       "time": "11:30 AM",
       "name": "Water Works Commission Meeting",
@@ -217,6 +210,13 @@
       "time": "4:45 PM",
       "name": "Transit Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2183/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-21",
+      "time": "5:15 PM",
+      "name": "Public Health & Safety Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2469/overview",
       "source": "wausau"
     }
   ],

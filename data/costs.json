@@ -328,5 +328,15 @@
     "input_tokens": 3292,
     "output_tokens": 471,
     "usd": 0.016941
+  },
+  {
+    "ts": "2026-09-01T03:17:54.025863+00:00",
+    "meeting_id": "kw_9adb9f79c8f14abe84d5def75546f357",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1079,
+    "output_tokens": 570,
+    "usd": 0.003929
   }
 ]

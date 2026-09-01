@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:eb6a6af94d217fff2525@gavel
-DTSTAMP:20260831T000000Z
-DTSTART;TZID=America/Chicago:20260831T171500
-DTEND;TZID=America/Chicago:20260831T184500
-SUMMARY:City of Wausau: Parks & Recreation Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2456/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:47990f9c0df289d9a8d2@gavel
 DTSTAMP:20260901T000000Z
 DTSTART;TZID=America/Chicago:20260901T113000
@@ -327,6 +317,16 @@ DTSTART;TZID=America/Chicago:20260917T180000
 DTEND;TZID=America/Chicago:20260917T193000
 SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:3223750eba65c54b707d@gavel
+DTSTAMP:20260921T000000Z
+DTSTART;TZID=America/Chicago:20260921T171500
+DTEND;TZID=America/Chicago:20260921T184500
+SUMMARY:City of Wausau: Public Health & Safety Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2469/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

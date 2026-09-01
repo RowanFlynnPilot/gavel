@@ -1697,6 +1697,17 @@
       "video_url": null,
       "processed_at": "2026-08-30T04:49:15.030809+00:00",
       "summary_file": "summaries/weston-community-life-public-safety-committee-zehd-sg4g-0.md"
+    },
+    "kw_9adb9f79c8f14abe84d5def75546f357": {
+      "title": "Utility Committee Meeting - 2026-09-01",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-9adb9f79c8f14abe84d5def75546f357.pdf",
+      "upload_date": "20260901",
+      "meeting_date": "20260901",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-29",
+      "processed_at": "2026-09-01T03:17:54.027239+00:00",
+      "summary_file": "summaries/kronenwetter-utility-committee-meeting-2026-09-01-kw-9adb9f79c8f14abe84d5def75546f357.md"
     }
   }
 }

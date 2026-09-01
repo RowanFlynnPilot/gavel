@@ -1,0 +1,60 @@
+{
+  "overview": "Based on the published agenda, the Village of Kronenwetter Utility Committee was scheduled to meet to address infrastructure and operational matters including a water tower lease renewal, septic tank review, and consideration of a data center ordinance.",
+  "committee": "Utility Committee",
+  "presiding": "",
+  "agenda": [
+    {
+      "time": "N/A",
+      "item": "Director of Public Works and Utilities Report"
+    },
+    {
+      "time": "N/A",
+      "item": "Financial Report"
+    },
+    {
+      "time": "N/A",
+      "item": "AT&T Water Tower Lease"
+    },
+    {
+      "time": "N/A",
+      "item": "Septic Tank Review"
+    },
+    {
+      "time": "N/A",
+      "item": "Data Center Ordinance"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "AT&T Water Tower Lease",
+      "body": "The committee was scheduled to discuss and consider possible action regarding the AT&T water tower lease. This item was listed under old business, indicating it was a continuing matter from a previous meeting."
+    },
+    {
+      "item": "Septic Tank Review",
+      "body": "The committee was scheduled to discuss and consider possible action on a septic tank review. Details regarding the scope or purpose of this review were not specified on the published agenda."
+    },
+    {
+      "item": "Data Center Ordinance",
+      "body": "The committee was set to discuss and consider possible action on a data center ordinance. This new business item was expected to address regulatory or zoning matters related to data center operations in the village."
+    }
+  ],
+  "publicComment": "Public comment was scheduled on the agenda, limited to 15 minutes total with a three-minute time period per person, with possible extension at the Chief Presiding Officer's discretion.",
+  "actionItems": [
+    "Scheduled to consider action on AT&T Water Tower Lease",
+    "Scheduled to consider action on Septic Tank Review",
+    "Scheduled to consider action on Data Center Ordinance"
+  ],
+  "topics": [
+    "Utilities",
+    "Infrastructure",
+    "Water Tower",
+    "Septic Systems",
+    "Data Center Development"
+  ],
+  "_source": "agenda",
+  "title": "Utility Committee Meeting - 2026-09-01",
+  "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-29",
+  "source": "kronenwetter",
+  "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-9adb9f79c8f14abe84d5def75546f357.pdf",
+  "processed_at": "2026-09-01T03:17:54.027092+00:00"
+}
