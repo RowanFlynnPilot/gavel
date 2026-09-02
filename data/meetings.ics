@@ -78,6 +78,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:e8227428939f7e0e97d0@gavel
+DTSTAMP:20260908T000000Z
+DTSTART;VALUE=DATE:20260908
+SUMMARY:Village of Weston: Community\, Life and Public Safety (CLPS) Commit
+ tee
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09082026-1962
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:eb13bc94477676633df9@gavel
 DTSTAMP:20260908T000000Z
 DTSTART;TZID=America/Chicago:20260908T103000
