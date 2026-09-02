@@ -129,18 +129,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:7a92407e80df0d9553cf@gavel
-DTSTAMP:20260908T000000Z
-DTSTART;TZID=America/Chicago:20260908T180000
-DTEND;TZID=America/Chicago:20260908T193000
-SUMMARY:Village of Kronenwetter: Community Life\, Infrastructure and Public
-  Property (CLIPP) Committee Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-li
- fe-infrastructure-and-public-property-clipp-committee-meeting-27
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:19821b45c0da6be7f073@gavel
 DTSTAMP:20260908T000000Z
 DTSTART;TZID=America/Chicago:20260908T183000
