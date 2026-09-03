@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-02",
-      "time": "5:00 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3580/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-02",
-      "time": "5:30 PM",
-      "name": "Committee of the Whole Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3577/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-03",
       "time": "5:00 PM",
       "name": "Sustainability, Energy & Environment Committee Meeting",
@@ -217,6 +203,20 @@
       "time": "5:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2431/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-22",
+      "time": "6:30 PM",
+      "name": "Common Council Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1982/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-23",
+      "time": "4:30 PM",
+      "name": "Historic Preservation Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2502/overview",
       "source": "wausau"
     }
   ],
@@ -337,6 +337,13 @@
       "date": "2026-10-26",
       "time": "6:00 PM",
       "name": "Parks & Recreation Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-11-02",
+      "time": "6:00 PM",
+      "name": "Community Life & Public Safety Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
     }
