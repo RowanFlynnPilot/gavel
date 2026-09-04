@@ -117,6 +117,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:7cfecbe90ffa4de21b88@gavel
+DTSTAMP:20260909T000000Z
+DTSTART;VALUE=DATE:20260909
+SUMMARY:Village of Weston: S.A.F.E.R. Board of Directors
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09092026-1964
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:e06e497e52c8df7cffc4@gavel
 DTSTAMP:20260909T000000Z
 DTSTART;TZID=America/Chicago:20260909T160000
