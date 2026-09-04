@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-09-03",
-      "time": "5:00 PM",
-      "name": "Health & Human Services Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-09-08",
       "time": "5:00 PM",
       "name": "Public Safety Committee",
@@ -115,13 +108,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-03",
-      "time": "5:00 PM",
-      "name": "Sustainability, Energy & Environment Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2172/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-08",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -210,6 +196,13 @@
       "time": "6:30 PM",
       "name": "Common Council Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/1982/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-23",
+      "time": "4:30 PM",
+      "name": "Historic Preservation Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2502/overview",
       "source": "wausau"
     }
   ],
