@@ -46,9 +46,13 @@ archive marathon-meetings.
       (`find_unprocessed_channel_videos` + `GAP_SWEEP_DAYS`) and
       `transcripts/<id>.meta.json` metadata sidecars in
       `engine/fetch_transcripts.py`, sidecar-aware resolution in
-      `engine/ingest_transcript.py`, cookie-expiry detection
-      (CAPTION_HEALTH → report → issue). Context: YouTube blocks cloud
-      IPs from captions AND per-video metadata regardless of cookies.
+      `engine/ingest_transcript.py`, the stuck-video watchdog
+      (`skipped_videos.json` first-seen tracking → `stale_unprocessed` in
+      the run report → "🏠 Residential transcript fetcher may be down"
+      issue step, honoring skip_ids). Context: YouTube blocks cloud IPs
+      from captions AND per-video metadata regardless of cookies; CI runs
+      with CAPTION_FETCH=false (already ported), so the residential
+      fetcher is the only transcript path and must be watched.
 - [ ] Residential fetcher pointed at gavel repo for one cycle
       (`python -m engine.fetch_transcripts --all --push`) upgrades an
       agenda-only meeting end to end
