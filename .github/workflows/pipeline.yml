@@ -96,6 +96,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           YT_COOKIES_FILE: /tmp/yt-cookies.txt
           USE_WHISPER_FALLBACK: "false"
+          # YouTube blocks cloud IPs regardless of cookies (verified Aug 30,
+          # 2026); the residential fetcher is the transcript path.
+          CAPTION_FETCH: "false"
         run: |
           if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
             python -m engine.pipeline --backfill
@@ -140,11 +143,26 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ "$(date -u +%u)" = "1" ] || [ "${{ github.event.inputs.roundup }}" = "true" ]; then
+          # The cron fires ~6x on Mondays — only generate once per day
+          # (checked via the API; the checkout is shallow).
+          RUN=0
+          if [ "${{ github.event.inputs.roundup }}" = "true" ]; then
+            RUN=1
+          elif [ "$(date -u +%u)" = "1" ]; then
+            LAST=$(gh api "repos/${{ github.repository }}/commits?path=data/roundup.txt&per_page=1" \
+              --jq '.[0].commit.committer.date[:10] // empty' 2>/dev/null || echo "")
+            if [ "$LAST" = "$(date -u +%F)" ]; then
+              echo "Roundup already generated today ($LAST) — skipping."
+            else
+              RUN=1
+            fi
+          fi
+          if [ "$RUN" = "1" ]; then
             python -m engine.roundup
           else
-            echo "Not Monday and roundup not requested — skipping."
+            echo "Roundup not due — skipping."
           fi
 
       - name: Generate calendar feed, static pages, digest

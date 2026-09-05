@@ -45,8 +45,14 @@ INSTANCE_JSON = Path(os.environ.get("INSTANCE_JSON", "./instance.json"))
 
 # ── YouTube / yt-dlp / Whisper (operator-side transcript acquisition) ──────────
 COOKIES_FILE = os.environ.get("YT_COOKIES_FILE", "")
+# YouTube blocks caption AND metadata fetches from cloud IPs regardless of
+# cookies (verified Aug 30, 2026). CI sets this false so runs skip the futile
+# attempts; the residential fetcher is the transcript path.
+CAPTION_FETCH = os.environ.get("CAPTION_FETCH", "true").lower() == "true"
 USE_WHISPER_FALLBACK = os.environ.get("USE_WHISPER_FALLBACK", "true").lower() == "true"
-WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "tiny")
+# "small" over "tiny": audio-only bodies (Kronenwetter) feed Sonnet from this
+# text; garbled names/figures degrade summaries. Local CPU is the only cost.
+WHISPER_MODEL = os.environ.get("WHISPER_MODEL", "small")
 WHISPER_SOURCES = [
     s.strip() for s in os.environ.get("WHISPER_SOURCES", "marathon,wausau,weston").split(",")
     if s.strip()

@@ -15,7 +15,8 @@ import tempfile
 from typing import Optional
 
 from .config import (
-    COOKIES_FILE, USE_WHISPER_FALLBACK, WHISPER_MODEL, WHISPER_SOURCES,
+    CAPTION_FETCH, COOKIES_FILE, USE_WHISPER_FALLBACK, WHISPER_MODEL,
+    WHISPER_SOURCES,
 )
 from .errors import TranscriptAuthError
 
@@ -161,6 +162,11 @@ def fetch_transcript(url: str, source_key: str = "", upload_date: str = "",
     needed for this jurisdiction).
     """
     vid_id = _vid_id_from_url(url)
+
+    if not CAPTION_FETCH:
+        raise NoCaptionsError(
+            "Caption fetch disabled on this runner (CAPTION_FETCH=false — YouTube "
+            "blocks cloud IPs regardless of cookies); the residential fetcher handles it.")
 
     if vid_id:
         if COOKIES_FILE and os.path.exists(COOKIES_FILE):
