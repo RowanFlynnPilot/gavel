@@ -598,4 +598,14 @@ URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
+BEGIN:VEVENT
+UID:d23400ff373c7ab51133@gavel
+DTSTAMP:20261105T000000Z
+DTSTART;TZID=America/Chicago:20261105T170000
+DTEND;TZID=America/Chicago:20261105T183000
+SUMMARY:Marathon County: Health & Human Services Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
 END:VCALENDAR
