@@ -338,5 +338,15 @@
     "input_tokens": 1079,
     "output_tokens": 570,
     "usd": 0.003929
+  },
+  {
+    "ts": "2026-09-07T02:38:08.566482+00:00",
+    "meeting_id": "(roundup)",
+    "jurisdiction": "(all)",
+    "purpose": "roundup",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 758,
+    "output_tokens": 197,
+    "usd": 0.005229
   }
 ]
