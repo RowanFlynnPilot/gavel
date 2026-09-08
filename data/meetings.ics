@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:fca22e0a2149c0ad439e@gavel
-DTSTAMP:20260907T000000Z
-DTSTART;TZID=America/Chicago:20260907T180000
-DTEND;TZID=America/Chicago:20260907T193000
-SUMMARY:Village of Weston: Community Life & Public Safety Committee
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:b303bb980413ba4784c0@gavel
 DTSTAMP:20260908T000000Z
 DTSTART;VALUE=DATE:20260908

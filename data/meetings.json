@@ -1,5 +1,84 @@
 [
   {
+    "id": "kw_c7e3c49a63fe42c09c61aa2af3d8adbd",
+    "source": "kronenwetter",
+    "title": "Parks Committee",
+    "date": "September 8, 2026",
+    "shortDate": "SEP 8",
+    "committee": "Parks Committee",
+    "duration": null,
+    "url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee-3",
+    "docUrl": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c7e3c49a63fe42c09c61aa2af3d8adbd.pdf",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Kronenwetter Parks Committee was scheduled to meet to address multiple park-related matters including fundraising components for Buska Park, an upcoming 5K run/walk event, capital improvement project costs, and maintenance items. The meeting was also set to consider a zipline project proposal for Friendship Park.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Approval of August 17, 2026 Parks Committee Meeting Minutes"
+      },
+      {
+        "time": "N/A",
+        "item": "Buska Park Fundraising Components (Bricks, Signage, Etc.)"
+      },
+      {
+        "time": "N/A",
+        "item": "September 12, 2026 Buska Park 5K Run/Walk Fundraiser Event"
+      },
+      {
+        "time": "N/A",
+        "item": "Capital Improvement Projects Costs"
+      },
+      {
+        "time": "N/A",
+        "item": "Quick Fix Item List"
+      },
+      {
+        "time": "N/A",
+        "item": "Friendship Park Zipline"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Buska Park Fundraising Components (Bricks, Signage, Etc.)",
+        "body": "The committee was scheduled to discuss fundraising components for Buska Park, including commemorative bricks and signage options. This new business item was set for consideration as part of ongoing efforts to fund park improvements."
+      },
+      {
+        "item": "September 12, 2026 Buska Park 5K Run/Walk Fundraiser Event",
+        "body": "The committee was set to review details and status updates regarding a scheduled 5K run/walk fundraiser event planned for Buska Park. This item was expected to address logistics and preparation for the September 12 event."
+      },
+      {
+        "item": "Capital Improvement Projects Costs",
+        "body": "The committee was scheduled to review and consider costs associated with capital improvement projects. This discussion was expected to address budgetary impacts of planned park enhancements."
+      },
+      {
+        "item": "Quick Fix Item List",
+        "body": "The committee was set to consider a list of quick fix maintenance or improvement items for parks in Kronenwetter. This agenda item was expected to address smaller-scale repairs or upgrades needed across park facilities."
+      },
+      {
+        "item": "Friendship Park Zipline",
+        "body": "The committee was scheduled to discuss a zipline project proposed for Friendship Park. This old business item was set for continued deliberation on this recreational amenity proposal."
+      }
+    ],
+    "publicComment": "Public comment was indicated on the agenda, with a 15-minute total period and a three-minute time limit per person, subject to extension at the Chief Presiding Officer's discretion.",
+    "actionItems": [
+      "Scheduled to approve August 17, 2026 meeting minutes",
+      "Expected to consider and discuss Buska Park fundraising components including bricks and signage",
+      "Set to review Buska Park 5K Run/Walk Fundraiser Event scheduled for September 12, 2026",
+      "Expected to review capital improvement projects costs",
+      "Set to consider Quick Fix Item List for park maintenance",
+      "Scheduled to discuss Friendship Park Zipline project"
+    ],
+    "topics": [
+      "Parks",
+      "Buska Park",
+      "Fundraising",
+      "Capital Improvements",
+      "Friendship Park"
+    ],
+    "votes": []
+  },
+  {
     "id": "kw_9adb9f79c8f14abe84d5def75546f357",
     "source": "kronenwetter",
     "title": "Utility Committee Meeting",
@@ -6203,77 +6282,5 @@
         "tally": null
       }
     ]
-  },
-  {
-    "id": "kw_3ac7964efee943b284a49f1af88be58d",
-    "source": "kronenwetter",
-    "title": "Utility Committee Meeting",
-    "date": "August 4, 2026",
-    "shortDate": "AUG 4",
-    "committee": "Utility",
-    "duration": null,
-    "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-28",
-    "docUrl": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-3ac7964efee943b284a49f1af88be58d.pdf",
-    "isAgendaOnly": true,
-    "badge": null,
-    "overview": "Based on the published agenda, the Village of Kronenwetter Utility Committee was scheduled to meet on August 4, 2026, to review financial statements, receive a Director of Public Works and Utilities report, and discuss utility infrastructure matters including a water tower cell phone lease, capital improvement planning, and Lift Station 8 information.",
-    "agenda": [
-      {
-        "time": "N/A",
-        "item": "Financial Statements"
-      },
-      {
-        "time": "N/A",
-        "item": "Director of Public Works and Utilities Report"
-      },
-      {
-        "time": "N/A",
-        "item": "Water Tower Cell Phone Lease Information"
-      },
-      {
-        "time": "N/A",
-        "item": "CIP Discussion"
-      },
-      {
-        "time": "N/A",
-        "item": "Lift Station 8 Information"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Financial Statements",
-        "body": "The committee was scheduled to review financial statements as part of standard reports and discussions. This item was set to provide an update on the financial status of Village utility operations."
-      },
-      {
-        "item": "Director of Public Works and Utilities Report",
-        "body": "The committee was expected to receive a report from the Director of Public Works and Utilities. This report was scheduled to cover operational updates and other matters related to public works and utility services."
-      },
-      {
-        "item": "Water Tower Cell Phone Lease Information",
-        "body": "The committee was set to discuss information regarding a cell phone lease arrangement involving the water tower. Details on this lease agreement and any related decisions were scheduled for consideration."
-      },
-      {
-        "item": "CIP Discussion",
-        "body": "The committee was scheduled to discuss Capital Improvement Plan (CIP) matters. This discussion was expected to address planned infrastructure projects and improvements for the Village."
-      },
-      {
-        "item": "Lift Station 8 Information",
-        "body": "The committee was set to review information regarding Lift Station 8. This discussion item was expected to cover updates or concerns related to this wastewater infrastructure component."
-      }
-    ],
-    "publicComment": "Public comment was on the agenda, with a 15-minute total period and a three-minute time limit per person, subject to extension at the Chief Presiding Officer's discretion.",
-    "actionItems": [
-      "Expected to consider water tower cell phone lease information",
-      "Scheduled to discuss Capital Improvement Plan",
-      "Set to review Lift Station 8 information"
-    ],
-    "topics": [
-      "Utilities",
-      "Budget",
-      "Infrastructure",
-      "Water Tower",
-      "Wastewater"
-    ],
-    "votes": []
   }
 ]
