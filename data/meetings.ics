@@ -56,6 +56,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:03d9a1d6890c5e45cea2@gavel
+DTSTAMP:20260910T000000Z
+DTSTART;VALUE=DATE:20260910
+SUMMARY:Village of Weston: Village Board of Trustees
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09102026-1965
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:9b3391b1bc7b0fb3e88e@gavel
 DTSTAMP:20260910T000000Z
 DTSTART;TZID=America/Chicago:20260910T150000
@@ -104,6 +113,15 @@ DTEND;TZID=America/Chicago:20260910T193000
 SUMMARY:Village of Kronenwetter: Plan Commission Meeting
 URL:https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission
  -meeting-30
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:394640f64009a0a818a7@gavel
+DTSTAMP:20260912T000000Z
+DTSTART;VALUE=DATE:20260912
+SUMMARY:Village of Weston: Village Board of Trustees
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09122026-1966
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
