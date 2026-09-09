@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-09-08",
-      "time": "5:00 PM",
-      "name": "Public Safety Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-09-09",
       "time": "5:00 PM",
       "name": "Extension, Education & Econ Dev Committee",
@@ -115,27 +108,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-08",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3569/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-08",
-      "time": "5:15 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2417/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-08",
-      "time": "6:30 PM",
-      "name": "Common Council Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/1969/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-09",
       "time": "4:00 PM",
       "name": "Building Advisory Board",
@@ -211,30 +183,30 @@
       "name": "Historic Preservation Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2502/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "7:30 AM",
+      "name": "Police & Fire Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2486/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "5:00 PM",
+      "name": "Bicycle & Pedestrian Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2126/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-01",
+      "time": "5:00 PM",
+      "name": "Sustainability, Energy & Environment Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2173/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-08",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09082026-1963",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-08",
-      "time": "",
-      "name": "Community, Life and Public Safety (CLPS) Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09082026-1962",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-08",
-      "time": "6:00 PM",
-      "name": "S.A.F.E.R. Board of Directors",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-09-09",
       "time": "",
@@ -379,13 +351,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-09-08",
-      "time": "4:30 PM",
-      "name": "Parks Committee",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-ahc/page/parks-committee-3",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-09-10",
       "time": "5:30 PM",
