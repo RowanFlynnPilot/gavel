@@ -210,6 +210,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:35d11d53cbc6848fe79c@gavel
+DTSTAMP:20260921T000000Z
+DTSTART;TZID=America/Chicago:20260921T170000
+DTEND;TZID=America/Chicago:20260921T183000
+SUMMARY:Wausau School Board: Closed Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=766613
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:3223750eba65c54b707d@gavel
 DTSTAMP:20260921T000000Z
 DTSTART;TZID=America/Chicago:20260921T171500
