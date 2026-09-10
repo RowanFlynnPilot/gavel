@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-09-09",
-      "time": "5:00 PM",
-      "name": "Extension, Education & Econ Dev Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-09-10",
       "time": "3:00 PM",
       "name": "Executive Committee",
@@ -108,13 +101,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-09",
-      "time": "4:00 PM",
-      "name": "Building Advisory Board",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3581/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-10",
       "time": "5:00 PM",
       "name": "Infrastructure & Facilities Committee Meeting",
@@ -204,16 +190,16 @@
       "name": "Sustainability, Energy & Environment Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2173/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-05",
+      "time": "5:15 PM",
+      "name": "Parks & Recreation Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2457/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-09",
-      "time": "",
-      "name": "S.A.F.E.R. Board of Directors",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09092026-1964",
-      "source": "weston"
-    },
     {
       "date": "2026-09-10",
       "time": "",
@@ -332,6 +318,20 @@
       "name": "Community Life & Public Safety Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "6:00 PM",
+      "name": "Plan Commission",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "6:00 PM",
+      "name": "Public Works Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -360,6 +360,13 @@
       "date": "2026-10-26",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "5:00 PM",
+      "name": "Regular Board Meeting",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
     }
