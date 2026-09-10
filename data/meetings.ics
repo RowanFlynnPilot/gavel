@@ -108,6 +108,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:8c327ac073ec5f145436@gavel
+DTSTAMP:20260914T000000Z
+DTSTART;TZID=America/Chicago:20260914T170000
+DTEND;TZID=America/Chicago:20260914T183000
+SUMMARY:Wausau School Board: Regular Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=764202
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:a933acd7e8a1a6451261@gavel
 DTSTAMP:20260914T000000Z
 DTSTART;TZID=America/Chicago:20260914T170000
@@ -123,7 +133,7 @@ DTSTAMP:20260914T000000Z
 DTSTART;TZID=America/Chicago:20260914T180000
 DTEND;TZID=America/Chicago:20260914T193000
 SUMMARY:Village of Weston: Plan Commission
-URL:https://www.westonwi.gov/agendacenter
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1967
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

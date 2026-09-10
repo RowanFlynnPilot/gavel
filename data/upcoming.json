@@ -218,7 +218,7 @@
       "date": "2026-09-14",
       "time": "6:00 PM",
       "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1967",
       "source": "weston"
     },
     {
@@ -335,6 +335,13 @@
     }
   ],
   "school_board": [
+    {
+      "date": "2026-09-14",
+      "time": "5:00 PM",
+      "name": "Regular Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764202",
+      "source": "school_board"
+    },
     {
       "date": "2026-09-14",
       "time": "5:00 PM",
