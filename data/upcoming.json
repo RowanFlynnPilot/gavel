@@ -211,7 +211,7 @@
       "date": "2026-09-14",
       "time": "6:00 PM",
       "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1968",
       "source": "weston"
     },
     {
@@ -401,5 +401,13 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": []
+  "dc_everest": [
+    {
+      "date": "2026-09-16",
+      "time": "6:30 PM",
+      "name": "Regular School Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=762740",
+      "source": "dc_everest"
+    }
+  ]
 }

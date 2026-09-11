@@ -82,7 +82,7 @@ DTSTAMP:20260914T000000Z
 DTSTART;TZID=America/Chicago:20260914T180000
 DTEND;TZID=America/Chicago:20260914T193000
 SUMMARY:Village of Weston: Public Works Committee
-URL:https://www.westonwi.gov/agendacenter
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1968
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -125,6 +125,16 @@ DTEND;TZID=America/Chicago:20260915T190000
 SUMMARY:Village of Kronenwetter: Administrative Policy Committee Meeting
 URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative
  -policy-committee-meeting-32
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:9a14f1d6ebe4605647c1@gavel
+DTSTAMP:20260916T000000Z
+DTSTART;TZID=America/Chicago:20260916T183000
+DTEND;TZID=America/Chicago:20260916T200000
+SUMMARY:DC Everest School Board: Regular School Board Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1315?meeting=762740
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
