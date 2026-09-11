@@ -1,20 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-09-10",
-      "time": "3:00 PM",
-      "name": "Executive Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-09-10",
-      "time": "5:00 PM",
-      "name": "Infrastructure Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-09-17",
       "time": "5:00 PM",
       "name": "HR, Finance & Property Committee",
@@ -97,16 +83,16 @@
       "name": "Health & Human Services Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-11-10",
+      "time": "5:00 PM",
+      "name": "Public Safety Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
-    {
-      "date": "2026-09-10",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2443/overview",
-      "source": "wausau"
-    },
     {
       "date": "2026-09-14",
       "time": "4:45 PM",
@@ -197,16 +183,16 @@
       "name": "Parks & Recreation Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2457/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-05",
+      "time": "6:30 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3582/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-10",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09102026-1965",
-      "source": "weston"
-    },
     {
       "date": "2026-09-12",
       "time": "",
@@ -332,6 +318,13 @@
       "name": "Public Works Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-11-10",
+      "time": "6:00 PM",
+      "name": "S.A.F.E.R. Board of Directors",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -386,20 +379,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-09-10",
-      "time": "5:30 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-67",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-09-10",
-      "time": "6:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-30",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-09-14",
       "time": "6:00 PM",
