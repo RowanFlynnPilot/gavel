@@ -97,6 +97,20 @@
       "name": "Extension, Education & Econ Dev Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-11-12",
+      "time": "3:00 PM",
+      "name": "Executive Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
+    },
+    {
+      "date": "2026-11-12",
+      "time": "5:00 PM",
+      "name": "Infrastructure Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
@@ -200,13 +214,6 @@
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-12",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09122026-1966",
-      "source": "weston"
-    },
     {
       "date": "2026-09-14",
       "time": "6:00 PM",
