@@ -1,5 +1,257 @@
 [
   {
+    "id": "kw_1f4e656e6e184d7982cd10cd0e6f91ca",
+    "source": "kronenwetter",
+    "title": "Village Board Meeting",
+    "date": "September 14, 2026",
+    "shortDate": "SEP 14",
+    "committee": "Village Board",
+    "duration": null,
+    "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-66",
+    "docUrl": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-1f4e656e6e184d7982cd10cd0e6f91ca.pdf",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Village of Kronenwetter Board was scheduled to meet on September 14, 2026, to address a zoning change request, consider a Wisconsin Pollutant Discharge Elimination System memorandum of agreement, and handle staffing matters including an interim clerk appointment. The meeting was set to include administrative reports and public comment.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Chairperson Comments"
+      },
+      {
+        "time": "N/A",
+        "item": "Public Comment"
+      },
+      {
+        "time": "N/A",
+        "item": "Administrator Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Police Chief's Report"
+      },
+      {
+        "time": "N/A",
+        "item": "August 24, 2026 Village Board Meeting Minutes"
+      },
+      {
+        "time": "N/A",
+        "item": "Resolution 2026-012, Wisconsin Pollutant Discharge Elimination System (WPDES) Memorandum of Agreement"
+      },
+      {
+        "time": "N/A",
+        "item": "Zoning Change Request - William Cywinski, 1900 Lea Road, 26.7 acres from AR (Agriculture and Residential) to RR5 (Rural Residential 5)"
+      },
+      {
+        "time": "N/A",
+        "item": "Appointment of interim clerk and set interim wage for position"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Resolution 2026-012, Wisconsin Pollutant Discharge Elimination System (WPDES) Memorandum of Agreement",
+        "body": "The board was scheduled to discuss and consider action on a WPDES Memorandum of Agreement resolution. This item was set for discussion and possible action at the September 14 meeting."
+      },
+      {
+        "item": "Zoning Change Request - William Cywinski, 1900 Lea Road",
+        "body": "The board was scheduled to consider a zoning change request from William Cywinski for 26.7 acres located at 1904 Lea Road, seeking to reclassify the property from AR (Agriculture and Residential) to RR5 (Rural Residential 5). The parcel identification number is 145-2707-124-0977."
+      },
+      {
+        "item": "Appointment of interim clerk and set interim wage for position",
+        "body": "The board was set to address staffing matters by considering the appointment of an interim clerk and establishing an interim wage for the position. This action item was scheduled for discussion and possible action."
+      }
+    ],
+    "publicComment": "Public comment was scheduled on the agenda, with a 15-minute total limit and three-minute per-person time limit, with possible extension at the Chief Presiding Officer's discretion.",
+    "actionItems": [
+      "Expected to consider approval of August 24, 2026 Village Board Meeting Minutes",
+      "Scheduled to vote on Resolution 2026-012 regarding WPDES Memorandum of Agreement",
+      "Scheduled to vote on zoning change request for William Cywinski property at 1904 Lea Road from AR to RR5",
+      "Expected to appoint interim clerk and establish interim wage"
+    ],
+    "topics": [
+      "Zoning",
+      "Development",
+      "Utilities",
+      "Staffing",
+      "Environmental Compliance"
+    ],
+    "votes": []
+  },
+  {
+    "id": "bb_764202",
+    "source": "school_board",
+    "title": "Regular Meeting",
+    "date": "September 14, 2026",
+    "shortDate": "SEP 14",
+    "committee": "Regular Meeting",
+    "duration": null,
+    "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764202",
+    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764202",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Wausau School District Board of Education was scheduled to hold a regular meeting to consider routine personnel and financial matters, approve the 2026-2027 budget and tax levy, and review the 2025-2026 seclusion and restraint report. The meeting was expected to address preliminary budget projections based on a 4.03% estimated increase in equalized property values and set the date for the annual budget hearing.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Call to Order"
+      },
+      {
+        "time": "N/A",
+        "item": "Roll Call"
+      },
+      {
+        "time": "N/A",
+        "item": "Pledge of Allegiance"
+      },
+      {
+        "time": "N/A",
+        "item": "Reading of the Mission Statement"
+      },
+      {
+        "time": "N/A",
+        "item": "Public and Student Comment"
+      },
+      {
+        "time": "N/A",
+        "item": "Excellence in Action: Wausau School Foundation"
+      },
+      {
+        "time": "N/A",
+        "item": "Approve Consent Agenda"
+      },
+      {
+        "time": "N/A",
+        "item": "Appointments (Additional Staff, Replacement Staff, Contract Increases)"
+      },
+      {
+        "time": "N/A",
+        "item": "Separations (Resignations, Contract Decreases, Terminations)"
+      },
+      {
+        "time": "N/A",
+        "item": "Leaves of Absence"
+      },
+      {
+        "time": "N/A",
+        "item": "Retirements"
+      },
+      {
+        "time": "N/A",
+        "item": "Minutes: Regular Session of August 10, 2026, and Special Session of August 24, 2026"
+      },
+      {
+        "time": "N/A",
+        "item": "Payment of Bills/Budget Status and Investment Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Donations to the District"
+      },
+      {
+        "time": "N/A",
+        "item": "Legal Expenses Summary for 2025-2026"
+      },
+      {
+        "time": "N/A",
+        "item": "Approve List of Legal Firms"
+      },
+      {
+        "time": "N/A",
+        "item": "Set Annual Meeting Date and Location"
+      },
+      {
+        "time": "N/A",
+        "item": "Share Equalized Value Estimates"
+      },
+      {
+        "time": "N/A",
+        "item": "Recommendation for 2026-2027 Budget"
+      },
+      {
+        "time": "N/A",
+        "item": "Recommendation for 2026-2027 Tax Levy"
+      },
+      {
+        "time": "N/A",
+        "item": "Seclusion and Restraint Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Board Member Professional Growth & Development Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Legislative Liaison"
+      },
+      {
+        "time": "N/A",
+        "item": "Superintendent Commentary"
+      },
+      {
+        "time": "N/A",
+        "item": "Presiding Officer Commentary"
+      },
+      {
+        "time": "N/A",
+        "item": "Preliminary Discussion Regarding Potential Litigation"
+      },
+      {
+        "time": "N/A",
+        "item": "Reconvene in Open Session"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjourn"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Legal Expenses Summary for 2025-2026",
+        "body": "Dr. Elizabeth Channel, Assistant Superintendent of Operations, was scheduled to present a summary report of legal counsel expenses incurred during 2025-2026, separated by law firm and type of legal advice sought. This was a written report requiring no action and was estimated to take 1 minute to present."
+      },
+      {
+        "item": "Approve List of Legal Firms",
+        "body": "The Board was expected to review and potentially approve a list of legal firms used by the District for various legal needs. The presentation was estimated to take 1 minute."
+      },
+      {
+        "item": "Set Annual Meeting Date and Location",
+        "body": "The Committee of the Whole was expected to recommend a date, time, and location for the budget hearing and annual meeting to ensure compliance with statutory requirements (s.120.08(1)(a)) for an annual meeting between May 15 and October 31. This procedural item was estimated to take 1 minute."
+      },
+      {
+        "item": "Share Equalized Value Estimates",
+        "body": "The District was scheduled to present projected property value changes, with an estimated increase of 4.03% for the 2026-27 mill rate calculation purposes. Since certified property value would not be available until October 1, the projected value was expected to be used for the initial budget and during the annual meeting."
+      },
+      {
+        "item": "Recommendation for 2026-2027 Budget",
+        "body": "Dr. Elizabeth Channel was scheduled to present the 2026-27 Budget Booklet for Board consideration, with a preliminary budget recommendation for use at the Budget Hearing and Annual Meeting. The presentation was estimated to take 2 minutes."
+      },
+      {
+        "item": "Recommendation for 2026-2027 Tax Levy",
+        "body": "The Board was expected to consider the tax levy corresponding to the 2026-27 budget for presentation at the Budget Hearing and Annual Meeting. This presentation was estimated to take 2 minutes."
+      },
+      {
+        "item": "Seclusion and Restraint Report",
+        "body": "An overview presentation of the 2025-26 Seclusion and Restraint report with a brief analysis of data over time was scheduled, with an estimated presentation time of 10 minutes. The full report was included in the meeting attachments."
+      }
+    ],
+    "publicComment": "A public and student comment period was included on this agenda.",
+    "actionItems": [
+      "Action was requested to approve the consent agenda items including appointments, separations, leaves of absence, retirements, minutes, payment of bills, and donations",
+      "Action was requested to approve the list of legal firms for 2026-2027",
+      "Action was requested to set the annual meeting date and location",
+      "Action was requested to approve the 2026-2027 budget recommendation",
+      "Action was requested to approve the 2026-2027 tax levy recommendation",
+      "Action was requested regarding the seclusion and restraint report"
+    ],
+    "topics": [
+      "Budget",
+      "Finance",
+      "Staffing",
+      "Policy",
+      "Student Services"
+    ],
+    "votes": []
+  },
+  {
     "id": "kw_298c0e85a9a64543ad0884f861e78744",
     "source": "kronenwetter",
     "title": "Plan Commission Meeting",
@@ -5952,283 +6204,6 @@
         "second": "Cabelli",
         "outcome": "Approved",
         "tally": "Unanimous"
-      }
-    ]
-  },
-  {
-    "id": "1rmB19yVqak",
-    "source": "marathon",
-    "title": "Infrastructure Committee Meeting",
-    "date": "August 6, 2026",
-    "shortDate": "AUG 6",
-    "committee": "Infrastructure",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=1rmB19yVqak",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Marathon County Infrastructure Committee met to approve several infrastructure and budget items, including a new four-way stop at County Trunk X and Tesh Lane/Turbani Drive, a resolution supporting changes to state trucking restrictions on Business 51, an amendment to the 2026 budget for LRIP funding, and authorization to proceed with design finalization and bidding for a new Marathon County highway shop. The highway shop financing discussion was particularly significant, with staff presenting a strategy to use existing low-interest debt and North Central Healthcare revenues to minimize new borrowing costs to taxpayers on what is currently estimated as a roughly $50 million project.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to Order and Pledge of Allegiance"
-      },
-      {
-        "time": "1:10",
-        "item": "Public Comment"
-      },
-      {
-        "time": "1:30",
-        "item": "Approval of June/July 2, 2026 Infrastructure Committee Meeting Minutes"
-      },
-      {
-        "time": "2:45",
-        "item": "2027 Annual Budget Development and Policy Recommendations - Fee Schedule and New Positions Update"
-      },
-      {
-        "time": "8:20",
-        "item": "Discussion and Recommendation: Four-Way Stop at County Trunk X / Tesh Lane / Turbani Drive (Village of Rothschild and Village of Kronenwetter)"
-      },
-      {
-        "time": "22:10",
-        "item": "Discussion and Recommendation: Resolution Supporting Modification of Trans 276.065 Trucking Length Restrictions on Business 51"
-      },
-      {
-        "time": "30:45",
-        "item": "Approve Amendment to 2026 Budget for Local Road Improvement Program (LRIP) Funding - Highway E Pavement Project"
-      },
-      {
-        "time": "35:00",
-        "item": "Discussion and Consideration: Funding Mechanism and Final Project Approval for Marathon County Highway Shop Construction"
-      },
-      {
-        "time": "1:22:00",
-        "item": "NOTIP Program 2027-2030 Chapter Five - Metropolitan Planning Organization Projects Discussion"
-      },
-      {
-        "time": "1:52:00",
-        "item": "CCIT Projects Update"
-      },
-      {
-        "time": "1:54:00",
-        "item": "Highway Department Operations Projects Update"
-      },
-      {
-        "time": "1:57:00",
-        "item": "Next Meeting Dates, Announcements, Adjournment"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Approval of June/July 2, 2026 Meeting Minutes",
-        "body": "Chair Gibbs called for a motion to approve the minutes. A motion was made by Gregor and seconded by Sterber; Gibbs initially missed Coyle's involvement and apologized. The motion carried unanimously on a voice vote."
-      },
-      {
-        "item": "2027 Budget Development - Fee Schedule and New Positions",
-        "body": "Staff (identified as Mr. Leonard, the county administrator) reported that departments have been circulated the existing fee schedule following the board's direction to apply a standard 3% fee increase, with exceptions being reviewed for statutory limits, areas where costs have not risen, and market-sensitive services like solid waste. Leonard also reported no new position requests or reclassifications were submitted for departments under the Infrastructure Committee's jurisdiction. Chair Gibbs noted that three resolutions from the ERC committee may bring future cost and staffing implications and asked that those be considered during the budget process."
-      },
-      {
-        "item": "Four-Way Stop at County Trunk X / Tesh Lane / Turbani Drive",
-        "body": "Highway Commissioner Kevin presented a traffic study by EMCS showing the intersection met crash warrant criteria (exceeding five crashes in a one-month period), with a majority being right-angle crashes, which are among the most severe. Volume warrants were close to being met, and a speed study was expected to confirm the reduced threshold would apply at the 35 mph posted limit. The Village of Rothschild had previously recommended against stopping major traffic on Double X but lacked crash data at the time; the Village of Kronenwetter had not yet responded. Kevin recommended converting to a four-way stop. Supervisor Kelly moved to recommend the county board modify Section 7.04(6) of the Marathon County Code of Ordinances to create a four-way stop; Chair Gibbs amended the motion to include flashing stop signs on County Trunk X at the committee's request. The motion carried unanimously."
-      },
-      {
-        "item": "Resolution Supporting Modification of Trans 276.065 Trucking Restrictions on Business 51",
-        "body": "Kevin explained that the existing state restriction prohibiting trucks over 65 feet on Business 51 from I-39 to US-51 near Highway K is unenforced and inconsistent with actual use by businesses like Domar Tile using standard 53-foot semi-trailers. Supervisor Coyle moved to recommend the county board support a resolution encouraging the state to modify Trans 276 to allow vehicles exceeding 65 feet on Business 51 from the Rothschild exit up to and including the Highway 29 exit, expanding the original scope. Supervisor Griner questioned whether the limit should extend further north to I-39/51, but Kevin noted uncertainty about downtown Wausau street capacity. The motion was seconded by Griner and carried unanimously."
-      },
-      {
-        "item": "Amendment to 2026 Budget for LRIP Funding - Highway E",
-        "body": "Kevin explained that an unusual pavement failure on Highway E north of Marshfield — where the lower asphalt layer stripped and failed rapidly — forced the project into the 2026 paving program ahead of schedule. LRIP funds from future years were applied to offset costs, but because the decision was made after the budget cycle, those revenues need to be added to the current year budget. Supervisor She moved to approve the budget amendment; Supervisor Griner seconded. The motion carried unanimously on a voice vote."
-      },
-      {
-        "item": "Marathon County Highway Shop Construction - Funding Mechanism and Project Authorization",
-        "body": "Administrator Leonard and Finance Director Sam Fensky presented a detailed financing strategy for the new highway shop, estimated at approximately $50 million (with the actual figure expected to differ). The county has $30 million in highway fund reserves designated for the project. Staff proposed avoiding new long-term debt by instead transitioning existing low-interest debt (issued 2019-2022 at roughly 2% for Lake View campus renovations) currently serviced by North Central Healthcare revenues onto the general debt levy, and redirecting those North Central revenues (ramping from $3 million to $4.1 million annually) to fund the highway shop — saving an estimated $25 million in interest compared to issuing new debt at current 4-5% rates. Chris presented project design progress, noting the design is 90-100% complete, coordinated burns of demolished homes on the Kronenwetter site have been completed with the fire department, and bids are targeted for September with a guaranteed maximum price and final county board approval expected by mid-October. Construction would begin in earnest in spring 2027 due to 10-12 month lead times for pre-cast concrete panels. Geothermal HVAC and enhanced insulation were cited as energy efficiency strategies. Supervisor Griner moved to authorize staff to proceed with phase three construction and finalize construction documents for bidding; Supervisor Coyle seconded. The motion carried unanimously."
-      },
-      {
-        "item": "NOTIP Program 2027-2030 Chapter Five - MPO Projects Discussion",
-        "body": "Chair Gibbs walked through projects in the Metropolitan Planning Organization's long-range plan, including the Evergreen-Decatur Wisconsin River crossing in Wausau, the Bridge Street bridge widening, County Trunk Highway O river crossing to Highway NN, the Oman bridge in Schofield over the Eau Claire River, Military Road Wisconsin River crossing, Gardner Park Road in Kronenwetter, County Trunk Highway X to Sandy Lane in Weston, the Kowalski Road interchange, and the Ryan Street interchange at Highway 29 in Weston. Supervisor Robertson cautioned that many of these are long-standing wish-list items requiring community-led studies and environmental review before advancing, citing the Kowalski Road interchange as an example that keeps being listed without completing required preliminary steps. Kevin emphasized that purpose-and-need justification and environmental impacts — especially wetlands and floodplains along the Wisconsin River — are major hurdles for any new crossings. Administrator Leonard suggested inviting MPO planner Lori Kimmons to a future meeting to provide an overview as those discussions develop, which the committee agreed was a good idea."
-      },
-      {
-        "item": "Bug Tussle Broadband - Joint Meeting Announcement",
-        "body": "Supervisor Robertson noted that at the last executive committee meeting, a discussion was held about Bug Tussle's failure to complete the committed southern fiber loop. A joint meeting between the Infrastructure Committee and the HR, Finance and Property Committee will be scheduled to evaluate next steps regarding the county's agreement with Bug Tussle."
-      }
-    ],
-    "publicComment": "No public comment was offered. Chair Gibbs asked twice if anyone was present for public comment and, seeing none, proceeded to the agenda.",
-    "actionItems": [
-      "Forward recommendation to county board to modify Section 7.04(6) of Marathon County Code of Ordinances to create a four-way stop at County Trunk X / Tesh Lane / Turbani Drive, including flashing stop signs on County Trunk X",
-      "Forward recommendation to county board to adopt a resolution supporting state modification of Trans 276.065 to allow vehicles over 65 feet on Business 51 from the Rothschild exit to the Highway 29 exit",
-      "Approve 2026 budget amendment to add LRIP revenues for the Highway E emergency pavement repair project",
-      "Authorize staff to finalize highway shop construction documents and release for bid in September, targeting guaranteed maximum price and final county board approval by mid-October",
-      "Build 2027 budget by transitioning North Central Healthcare debt service to the general debt levy and redirecting North Central revenues toward highway shop construction costs",
-      "Invite MPO planner Lori Kimmons to a future Infrastructure Committee meeting for an overview of the NOTIP planning process and county project priorities",
-      "Schedule a joint meeting between the Infrastructure Committee and HR Finance and Property Committee to address Bug Tussle's failure to complete the southern fiber loop",
-      "Highway department to work with finance staff to resolve schedule delays on culvert projects and the Town of McMillan box culvert pending LSSIP contract finalization"
-    ],
-    "topics": [
-      "Roads",
-      "Budget",
-      "Utilities",
-      "Highway Shop Construction",
-      "Business 51 Trucking",
-      "County Trunk X Intersection Safety",
-      "Broadband Bug Tussle"
-    ],
-    "votes": [
-      {
-        "item": "Approval of June/July 2, 2026 Infrastructure Committee meeting minutes",
-        "motion": "Move to approve",
-        "mover": "Gregor",
-        "second": "Sterber",
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Recommend county board modify ordinance to create four-way stop with flashing signs at County Trunk X / Tesh Lane / Turbani Drive",
-        "motion": "Motion to recommend to the county board to modify Section 7.04(6) for the creation of a four-way stop affecting County Road X, Turbani Drive and Tesh Lane in the Village of Rothschild and Village of Kronenwetter, including flashing stop signs on County Trunk X",
-        "mover": "Kelly",
-        "second": "Ste [inaudible]",
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Recommend county board adopt resolution supporting state modification of Trans 276 trucking length restrictions on Business 51 from Rothschild exit to Highway 29 exit",
-        "motion": "Motion to recommend to the county board to support a resolution encouraging the state of Wisconsin to modify Trans 276 to allow vehicles exceeding 65 feet in length to travel on Business 51 from the Rothschild exit up to and including the Highway 29 exit",
-        "mover": "Coyle",
-        "second": "Griner",
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Approve amendment to 2026 budget for LRIP funding for Highway E pavement repair",
-        "motion": null,
-        "mover": "She [inaudible]",
-        "second": "Griner",
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Authorize staff to proceed with phase three construction finalization and bidding of proposed new Marathon County highway shop facility, and build 2027 budget per presented financing strategy",
-        "motion": "Move to authorize staff to proceed with phase three construction of the proposed new highway facility",
-        "mover": "Griner",
-        "second": "Coyle",
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      }
-    ]
-  },
-  {
-    "id": "-SFidjEgoHg",
-    "source": "marathon",
-    "title": "Joint Extension, Edu, and Econ Dev  & HR, Finance & Property Comm Pt.1",
-    "date": "August 6, 2026",
-    "shortDate": "AUG 6",
-    "committee": "Marathon County Joint Extension Education and Economic Development & Human Resources Finance and Property Committee",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=-SFidjEgoHg",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "Marathon County's Joint Extension, Education & Economic Development Committee and Human Resources, Finance & Property Committee held a joint meeting to hear a proposal from New Heights Climbing and Fitness co-founder Tia Koval requesting transfer of three River Drive properties (210, 212, and 326 River Drive) for $1 in exchange for an estimated $6 million private investment to create a climbing gym, fitness center, and event venue. After the presentation, public comment, and extensive questioning about the business plan, financing, and competitive market, both committees voted to go into closed session to discuss negotiation strategies for the River Drive properties and divestment of the Thomas Street property.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to Order and Pledge of Allegiance"
-      },
-      {
-        "time": "1:15",
-        "item": "Approval of June 4th, 2026 Extension Education and Economic Development Committee Meeting Minutes"
-      },
-      {
-        "time": "2:30",
-        "item": "Announcement of Joint Meeting Quorum for HR, Finance & Property Committee"
-      },
-      {
-        "time": "3:45",
-        "item": "New Heights Climbing and Fitness Presentation by Tia Koval — River Drive Properties Proposal"
-      },
-      {
-        "time": "35:00",
-        "item": "Committee Questions on Financing, Business Plan, and Feasibility"
-      },
-      {
-        "time": "58:00",
-        "item": "Public Comment — Kim Winterhoff"
-      },
-      {
-        "time": "1:10:00",
-        "item": "Staff Discussion on RFP Process and Property Divestment Options"
-      },
-      {
-        "time": "1:22:00",
-        "item": "Motion to Go Into Closed Session — River Drive Negotiation Strategy and Thomas Street Divestment"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Approval of June 4th, 2026 Meeting Minutes",
-        "body": "A motion was made and seconded by Vice Chair Cavalli to approve the minutes of the June 4th, 2026 Extension Education and Economic Development Committee meeting. The motion passed on a voice vote with no discussion."
-      },
-      {
-        "item": "New Heights Climbing and Fitness River Drive Proposal Presentation",
-        "body": "Co-founder Tia Koval presented a proposal requesting the $1 transfer of 210, 212, and 326 River Drive from Marathon County in exchange for a projected $6 million private investment. The plan includes a bouldering and rope climbing gym, a 24-hour fitness center, the Ethos event venue, and co-working space, with full operations projected by Q4 2027. Koval said the project is primarily financed through an SBA loan with Incredible Bank, supplemented by private equity, potential TIF assistance from the City of Wausau, and WEDC grants. EBITDA projections range from $361,000 in Year 1 to $1.28 million in Year 5."
-      },
-      {
-        "item": "Committee Questions on Financing and Business Plan",
-        "body": "Supervisors raised significant questions about the proposal's financial details. One supervisor asked why EBITDA rather than net income was used in projections and whether capital expenditure plans were complete. Supervisor Nice requested a comprehensive business plan, feasibility study with demographics, detailed financial statements, and preliminary construction plans. Chair Kennedy noted that operating expenses appeared to increase only 1.6% over four years while revenue nearly doubled, calling the figures questionable. Supervisor Krems asked whether Koval would object if a competing facility later sought similar county assistance; Koval said she did not think Wausau's population could support more than one climbing gym. Koval acknowledged that TIF financing had not been advanced due to the lack of a confirmed location, and that committed private investors exist but were not named in the business plan."
-      },
-      {
-        "item": "Public Comment — Kim Winterhoff",
-        "body": "Kim Winterhoff, a local business owner and real estate investor, spoke in strong support of the proposal. She argued the facility should be viewed as a long-term economic anchor and community center rather than just a rock climbing gym, citing demand from Central Wisconsin residents who currently drive to Appleton or Green Bay to climb. She vouched personally for Tia Koval and Steve Arnold's craftsmanship and business competence, and urged the committee to consider long-term tourism revenue, workforce retention, and youth programming benefits rather than treating the property transfer as a simple asset transaction."
-      },
-      {
-        "item": "RFP Process and Property Divestment Discussion",
-        "body": "County staff Chris [Holman] confirmed the RFP was issued April 23rd with a July due date, drew approximately six attendees at the first walk-through, and received only one formal proposal — from New Heights. Outreach included press releases, radio interviews, online posting, and emails to approximately 40 developers. Supervisor Naxer confirmed this was the first RFP issued for these properties. Supervisor Michael raised concerns about the county's obligation to maximize taxpayer return, while county administration explained that the RFP process was designed to evaluate broader community benefit criteria rather than highest dollar value, consistent with direction the board had previously provided. County Administrator Leonard noted that the manner in which properties were acquired can dictate how they are sold, and that closed session was appropriate to discuss negotiation strategy."
-      },
-      {
-        "item": "Motion to Go Into Closed Session",
-        "body": "Board Chair Kurt Gibbs moved to go into closed session under Wisconsin Statute 19.85(1)(e) for competitive or bargaining reasons, to discuss strategies for negotiating a River Drive property contract and divestment of the Thomas Street property. Both the HR Finance & Property Committee and the Extension Education & Economic Development Committee voted separately by roll call to enter closed session. Online supervisors were informed they would be placed in a lobby until the closed session concluded."
-      }
-    ],
-    "publicComment": "One speaker offered public comment. Kim Winterhoff, a local business owner and real estate investor, spoke in favor of the New Heights proposal. She argued Wausau lacks year-round indoor recreation options, that Central Wisconsin residents already drive long distances to climb, and that the facility would serve as a tourism anchor and youth destination. She personally vouched for the quality and competence of proposers Tia Koval and Steve Arnold, and urged the committee to evaluate the proposal on long-term community value rather than short-term asset transaction terms.",
-    "actionItems": [
-      "New Heights Climbing and Fitness to provide a comprehensive business plan for each business entity involved",
-      "New Heights to provide a feasibility study with market demographics",
-      "New Heights to provide more detailed financial statements including net income, depreciation, taxes, and capital expenditures",
-      "New Heights to provide preliminary construction plans and cost estimates",
-      "Both committees to convene in closed session to discuss River Drive negotiation strategy and Thomas Street divestment strategy"
-    ],
-    "topics": [
-      "Economic Development",
-      "Property Divestment",
-      "Recreation Facilities",
-      "Public-Private Partnership",
-      "River Drive Properties",
-      "Thomas Street Property",
-      "Tax Increment Financing"
-    ],
-    "votes": [
-      {
-        "item": "Approval of June 4th, 2026 Extension Education and Economic Development Committee meeting minutes",
-        "motion": "Motion to approve the minutes",
-        "mover": null,
-        "second": "Vice Chair Cavalli",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "HR Finance & Property Committee motion to go into closed session regarding River Drive negotiation strategy and Thomas Street divestment",
-        "motion": "Motion to go into closed session pursuant to Wisconsin Statute 19.85(1)(e) to discuss strategies relative to negotiating a contract for River Drive property RFP and discuss strategies on the divestment of the Thomas Street property",
-        "mover": "Kurt Gibbs",
-        "second": null,
-        "outcome": "Approved",
-        "tally": "5-0 (Watson and Jong absent; Robinson, Pohl, Gibbs, Hart, Niseth all Aye)"
-      },
-      {
-        "item": "Extension Education and Economic Development Committee motion to go into closed session regarding River Drive negotiation strategy and Thomas Street divestment",
-        "motion": "Motion to go into closed session pursuant to Wisconsin Statute 19.85(1)(e) to discuss strategy related to negotiating a contract for River Drive property RFP and discuss strategy for divestment of Thomas Street property",
-        "mover": "Supervisor Lemmer",
-        "second": "Supervisor Foot",
-        "outcome": "Approved",
-        "tally": "6-0 (Morasch, Cavelli, Hagen, Foot, Krems, Lemmer all Aye; Seefeldt excused)"
       }
     ]
   }

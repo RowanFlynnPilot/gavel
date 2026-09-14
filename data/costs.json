@@ -368,5 +368,35 @@
     "input_tokens": 2054,
     "output_tokens": 1425,
     "usd": 0.009179
+  },
+  {
+    "ts": "2026-09-14T03:06:10.451773+00:00",
+    "meeting_id": "bb_764202",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 2847,
+    "output_tokens": 1540,
+    "usd": 0.010547
+  },
+  {
+    "ts": "2026-09-14T03:06:19.016516+00:00",
+    "meeting_id": "kw_1f4e656e6e184d7982cd10cd0e6f91ca",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1272,
+    "output_tokens": 893,
+    "usd": 0.005737
+  },
+  {
+    "ts": "2026-09-14T03:08:31.608524+00:00",
+    "meeting_id": "(roundup)",
+    "jurisdiction": "(all)",
+    "purpose": "roundup",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 1416,
+    "output_tokens": 380,
+    "usd": 0.009948
   }
 ]
