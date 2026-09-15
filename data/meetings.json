@@ -77,6 +77,118 @@
     "votes": []
   },
   {
+    "id": "al28JiolCqg",
+    "source": "weston",
+    "title": "Plan Commission",
+    "date": "September 14, 2026",
+    "shortDate": "SEP 14",
+    "committee": "Plan Commission",
+    "duration": null,
+    "url": "https://www.youtube.com/watch?v=al28JiolCqg",
+    "docUrl": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1967",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Village of Weston Plan Commission was scheduled to meet on September 14, 2026, to consider several land development matters including a preliminary condominium plat review, an amended final plat for a subdivision, and compliance issues with three approved conditional use permits. The meeting was also set to review staff-approved surveys, building permits, and receive a departmental project update.",
+    "agenda": [
+      {
+        "time": "6:00 P.M.",
+        "item": "Call to Order – Roll Call & Declaration of Quorum"
+      },
+      {
+        "time": "N/A",
+        "item": "Open public comment period for items that do not appear on this agenda noted as public hearings"
+      },
+      {
+        "time": "N/A",
+        "item": "Written Communications, Disclosures and Recusals"
+      },
+      {
+        "time": "N/A",
+        "item": "Minutes from August 10, 2026, Plan Commission Meeting"
+      },
+      {
+        "time": "N/A",
+        "item": "Project #20260315 – Preliminary Condominium Plat Review for 4603, 4605, 4607, 4609, 4611 and 4613 Camp Phillips Road"
+      },
+      {
+        "time": "N/A",
+        "item": "Project #20250424 – Amended Final Plat of Bull Junior View Subdivision (Reedy Builders/Vreeland)"
+      },
+      {
+        "time": "N/A",
+        "item": "Discussion and possible action regarding compliance with approved conditional use permits"
+      },
+      {
+        "time": "N/A",
+        "item": "August 2026 Staff-Approved Certified Survey Maps and Site Plans"
+      },
+      {
+        "time": "N/A",
+        "item": "August 2026 Building Permits"
+      },
+      {
+        "time": "N/A",
+        "item": "Planning & Development Department Monthly Project Update Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Announcements & Commissioner Remarks"
+      },
+      {
+        "time": "N/A",
+        "item": "Future Agenda Items or Staff Referrals"
+      },
+      {
+        "time": "N/A",
+        "item": "Next Meeting Dates"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjourn Plan Commission"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Project #20260315 – Preliminary Condominium Plat Review for 4603, 4605, 4607, 4609, 4611 and 4613 Camp Phillips Road",
+        "body": "The Plan Commission was scheduled to review a preliminary condominium plat for six properties on Camp Phillips Road. The commission was expected to consider the plat's compliance with Village zoning requirements and development standards."
+      },
+      {
+        "item": "Project #20250424 – Amended Final Plat of Bull Junior View Subdivision (Reedy Builders/Vreeland)",
+        "body": "The Commission was set to review an amended final plat for the Bull Junior View Subdivision. The agenda indicated the commission was expected to consider modifications to the previously approved subdivision plat."
+      },
+      {
+        "item": "Compliance with Approved Conditional Use Permits",
+        "body": "The Plan Commission was scheduled to discuss identified violations of three approved Conditional Use Permits and consider how to proceed through possible modification, revocation, or other appropriate action for USSAM at 3107 Concord Avenue (CUP No. 20240072), BUG Properties at 6406 Schofield Avenue (CUP No. 1890229), and Tommy's Car Wash at 1611 Schofield Avenue (CUP No. 20191300). The discussion was set to address compliance issues in accordance with Section 94.16.06(11) of the Village of Weston Zoning Code."
+      },
+      {
+        "item": "August 2026 Staff-Approved Certified Survey Maps and Site Plans",
+        "body": "The Commission was scheduled to review certified survey maps and site plans that had been approved by staff during August 2026. This agenda item was set to provide an informational update on staff-level approvals."
+      },
+      {
+        "item": "August 2026 Building Permits",
+        "body": "The Commission was expected to receive information on building permits issued during August 2026. This agenda item was set to inform commissioners of development activity in the Village."
+      },
+      {
+        "item": "Planning & Development Department Monthly Project Update Report",
+        "body": "The Commission was scheduled to receive a monthly project update report from the Planning & Development Department. The report was set to inform commissioners of ongoing departmental activities and project status."
+      }
+    ],
+    "publicComment": "Public comment was indicated on the agenda through two mechanisms: an open public comment period for items not appearing as public hearings, and remote participation instructions via Zoom with a 'Raise Hand' feature for public speakers.",
+    "actionItems": [
+      "Scheduled to review and potentially act on the preliminary condominium plat for 4603, 4605, 4607, 4609, 4611 and 4613 Camp Phillips Road",
+      "Scheduled to review and potentially act on the amended final plat for Bull Junior View Subdivision",
+      "Expected to consider possible modification, revocation, or other appropriate action for conditional use permit violations at three properties (USSAM, BUG Properties, and Tommy's Car Wash)"
+    ],
+    "topics": [
+      "Zoning",
+      "Development",
+      "Conditional Use Permits",
+      "Subdivisions",
+      "Site Plans"
+    ],
+    "votes": []
+  },
+  {
     "id": "flPcB5hel4A",
     "source": "weston",
     "title": "Public Works Committee",
@@ -6092,128 +6204,6 @@
         "second": "Dan Lesniak",
         "outcome": "Approved",
         "tally": "Unanimous"
-      }
-    ]
-  },
-  {
-    "id": "bb_759354",
-    "source": "school_board",
-    "title": "Regular Meeting",
-    "date": "August 10, 2026",
-    "shortDate": "AUG 10",
-    "committee": "Regular Meeting",
-    "duration": "1h 39m",
-    "url": "https://www.youtube.com/watch?v=Dkt72jkA2jo",
-    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=759354",
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau School Board held its regular August 10, 2026 meeting, dominated by a lengthy discussion on elementary class sizes prompted by Rib Mountain Elementary parents concerned about a projected 25-student first grade class with no scheduling flexibility as a single-section school. The board also received a referendum construction update showing projects at John Marshall, Rib Mountain, Franklin, and Lincoln near completion, and unanimously approved eight policy updates required by Wisconsin Act 89, a new law governing staff-student communications and mandatory reporting timelines.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to Order and Roll Call"
-      },
-      {
-        "time": "1:30",
-        "item": "Pledge of Allegiance and Mission Statement"
-      },
-      {
-        "time": "2:15",
-        "item": "Agenda Item 5: Public and Student Comment"
-      },
-      {
-        "time": "14:20",
-        "item": "Agenda Item 6: Consent Agenda Approval"
-      },
-      {
-        "time": "16:10",
-        "item": "Agenda Item 8: Old Business - No items"
-      },
-      {
-        "time": "16:30",
-        "item": "Agenda Item 8 (New Business): Referendum 2022 Construction Updates - Nexus Presentation"
-      },
-      {
-        "time": "28:45",
-        "item": "Agenda Item 8C: Administration Presentation on District Class Size"
-      },
-      {
-        "time": "1:42:00",
-        "item": "Agenda Item 8D: Act 89 Policy Review and Approval"
-      },
-      {
-        "time": "2:08:00",
-        "item": "Agenda Item 9: Professional Growth, Legislative Liaison Update, and Adjournment"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Public Comment: Rib Mountain Elementary Class Size",
-        "body": "Two speakers addressed class size concerns at Rib Mountain Elementary. Ann Wicklund, a retired Wausau School District director of special education with 50 years in early childhood education, spoke about the developmental importance of K-3 class sizes and the risks of a projected 25-student first grade class, but was cut off slightly over her 3-minute limit. Nate Bartsch, a Rib Mountain parent speaking on behalf of many families present in the audience, argued that as a single-section school Rib Mountain has 'zero flexibility' to balance behavioral or academic needs across classrooms, and asked the board for immediate action for the 2026-27 school year rather than just acknowledgment."
-      },
-      {
-        "item": "Consent Agenda Approval",
-        "body": "Board President Bouché sought a motion to approve the consent agenda covering staff appointments, replacements, contract changes, separations, leaves, retirements, meeting minutes from July 13 and August 3 sessions, payment of bills, budget and investment reports, and donations from Lynn Miller, Nikki O'Neal, and an anonymous donor. The motion was approved, though Bouché acknowledged moving too quickly and noted he heard Vice President Trollop's (participating virtually) vote at the end."
-      },
-      {
-        "item": "Referendum 2022 Construction Updates - Nexus Presentation",
-        "body": "Representatives Chris and Kevin Hickman of Nexus provided updates on construction at John Marshall, Rib Mountain, Franklin, and Lincoln schools, noting occupancy inspections were scheduled for the following week and most classrooms had been turned over for cleaning. Kevin Hickman thanked the district for a 12-year partnership and credited the community-approved referendum with producing 'safer schools, renewed infrastructure, and improving environments.' Board member Pat McKee publicly noted that Nexus president Mike had not appeared before the board since threatening legal action years earlier, calling it a missed opportunity for a 'decent touch,' and asked Hickman to relay that message."
-      },
-      {
-        "item": "District Class Size Presentation and Discussion",
-        "body": "Administration presented current class size guidelines (K-1: max 25; 2-3: max 27; 4-5: max 29; AGR schools K-3: max 18), six years of average class size data showing district average of 20.2 for 2026-27, and modeled an alternative 21-23-25 framework that would require eight additional sections and approximately $1.1 million in staffing costs against a projected $1.36 million budget shortfall for 2027-28. Board members engaged in extensive debate: Pat McKee argued for a 'classroom complexity factor' beyond pure enrollment numbers, drawing applause; Lance Trollop (virtual) pushed back on media framing that class sizes had hit a six-year high, noting the increase was less than one student; Cory Sillars advocated for adding para support to younger grades and requested a school-by-school staffing model; Jennifer Paoli asked about para allocation processes and whether a lower-cost para increase could substitute for new sections; and Nick Crochiere raised the possibility of a future referendum targeted at class size reduction. Administration confirmed Rib Mountain first grade would receive an enrollment para given its enrollment at the maximum, and noted the district is already approximately 40 staff short with two weeks until school starts."
-      },
-      {
-        "item": "Act 89 Policy Review and Approval",
-        "body": "District administrator Tabitha Gundrum (identified as Ms. Gundrum/Mensley in transcript) walked the board through eight updated or new policies required by Wisconsin Act 89, passed in March 2026, covering staff-student communication standards, annual training requirements, and mandatory reporting timelines. Key changes include a statutory prohibition on direct staff-to-student personal device communication, with SportsYou and Google Chat identified as approved platforms; removal of 'preferential treatment' language from policies as unenforceable; new 'grooming' definition sections; and strict reporting deadlines requiring parent notification by 5:00 p.m. the same day if a report is received before end of school day, or by noon the next calendar day if received after hours. Gundrum noted training launched August 1 with a 25-minute attorney-produced video, with roughly 30% of staff already completing it, and that volunteer training remains a significant logistical challenge. The board voted unanimously to approve all eight policy changes."
-      },
-      {
-        "item": "Legislative Liaison Update and CESA 9 Report",
-        "body": "Cory Sillars reported on the CESA 9 annual convention held August 3, noting he chaired the meeting in the absence of regular chair Chris Petronek, that a new member from the Lakeland area joined, and that Larry Schaefer of DC Everest was recognized for 30 years of service. Sillars also mentioned speaking with Secretary Duffy over the weekend about construction costs and energy prices. Superintendent Bushman thanked Rib Mountain families for attending, announced the August 24 staff welcome-back event, and invited board members to attend."
-      }
-    ],
-    "publicComment": "Two speakers addressed the board. Ann Wicklund, 227-350 Bard Owl Avenue, Wausau, a retired Wausau School District director of special education with over 50 years in early childhood education, raised concerns about a projected 25-student first grade class at Rib Mountain Elementary and the importance of class size in early childhood development; she was cut off slightly over the 3-minute limit. Nate Bartsch, 151306 Kingfisher Lane, Rib Mountain, spoke on behalf of many Rib Mountain families present in the audience, arguing the school's single-section structure leaves no flexibility to manage behavioral or academic complexity and asking the board for concrete action for the 2026-27 school year. A third potential speaker, Jess Bartz, declined to speak.",
-    "actionItems": [
-      "Administration to return to the board with further analysis, potentially including a classroom complexity factor model for staffing decisions",
-      "Administration to provide a school-by-school staffing model showing all positions (teachers, paras, custodians, food service, etc.) per building",
-      "Administration to explore fiscal impact of modifying para allocation as an alternative or supplement to adding full sections",
-      "Administration to continue vetting approved communication apps to ensure Act 89 compliance for staff-student communication",
-      "Administration to develop a plan to deliver Act 89 training to all district volunteers",
-      "Administration and board to continue preliminary discussions about a possible future referendum; no timeline or final decision made",
-      "Nexus to complete remaining construction punch-list items at John Marshall, Rib Mountain, Franklin, and Lincoln ahead of occupancy inspections",
-      "Cory Sillars to deliver CESA 9 annual report packet to district staff"
-    ],
-    "topics": [
-      "Class Size",
-      "School Staffing",
-      "Budget Constraints",
-      "Act 89 Policy Compliance",
-      "Referendum Construction"
-    ],
-    "votes": [
-      {
-        "item": "Consent agenda including staff actions, meeting minutes, bill payments, and donations",
-        "motion": "Motion to approve the consent agenda",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Eight policy updates required by Wisconsin Act 89",
-        "motion": "Motion to approve the proposed changes to policies related to Act 89",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Adjournment",
-        "motion": "Motion to adjourn",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
       }
     ]
   }

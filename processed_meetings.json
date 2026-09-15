@@ -1774,6 +1774,17 @@
       "video_url": null,
       "processed_at": "2026-09-15T16:09:22.203003+00:00",
       "summary_file": "summaries/weston-public-works-committee-9142026-flpcb5hel4a.md"
+    },
+    "al28JiolCqg": {
+      "title": "Plan Commission - 9/14/2026",
+      "source": "weston",
+      "doc_url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1967",
+      "upload_date": "20260914",
+      "meeting_date": "20260914",
+      "duration": 5905,
+      "video_url": null,
+      "processed_at": "2026-09-15T22:42:44.096365+00:00",
+      "summary_file": "summaries/weston-plan-commission-9142026-al28jiolcqg.md"
     }
   }
 }

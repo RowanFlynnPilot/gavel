@@ -418,5 +418,15 @@
     "input_tokens": 4218,
     "output_tokens": 1561,
     "usd": 0.012023
+  },
+  {
+    "ts": "2026-09-15T22:42:44.094625+00:00",
+    "meeting_id": "al28JiolCqg",
+    "jurisdiction": "weston",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 3793,
+    "output_tokens": 1452,
+    "usd": 0.011053
   }
 ]
