@@ -1752,6 +1752,17 @@
       "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-66",
       "processed_at": "2026-09-14T03:06:19.017677+00:00",
       "summary_file": "summaries/kronenwetter-village-board-meeting-2026-09-14-kw-1f4e656e6e184d7982cd10cd0e6f91ca.md"
+    },
+    "kw_2998b824c4a8402485d7752be7e3630a": {
+      "title": "Administrative Policy Committee Meeting - 2026-09-15",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2998b824c4a8402485d7752be7e3630a.pdf",
+      "upload_date": "20260915",
+      "meeting_date": "20260915",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-32",
+      "processed_at": "2026-09-15T03:08:03.069526+00:00",
+      "summary_file": "summaries/kronenwetter-administrative-policy-committee-meeting-2026-09-15-kw-2998b824c4a8402485d7752be7e3630a.md"
     }
   }
 }

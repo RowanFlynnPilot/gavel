@@ -115,13 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-14",
-      "time": "4:45 PM",
-      "name": "Joint Human Resources Committee and Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3588/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-15",
       "time": "9:30 AM",
       "name": "Board of Public Works Meeting",
@@ -211,23 +204,16 @@
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3582/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "11:30 AM",
+      "name": "Water Works Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2196/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-14",
-      "time": "6:00 PM",
-      "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1967",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-14",
-      "time": "6:00 PM",
-      "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09142026-1968",
-      "source": "weston"
-    },
     {
       "date": "2026-09-17",
       "time": "6:00 PM",
@@ -343,20 +329,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-09-14",
-      "time": "5:00 PM",
-      "name": "Regular Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764202",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-09-14",
-      "time": "5:00 PM",
-      "name": "Regular Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
       "date": "2026-09-21",
       "time": "5:00 PM",
       "name": "Closed Meeting",
@@ -393,13 +365,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-09-14",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-66",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-09-15",
       "time": "5:30 PM",

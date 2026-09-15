@@ -1,0 +1,73 @@
+{
+  "overview": "Based on the published agenda, the Administrative Policy Committee of the Village of Kronenwetter was scheduled to review monthly financial reports, discuss the 2027 operating budget preview, and consider a 10-year capital improvement plan update with funding and debt service analyses. The meeting was set to address fiscal planning and budget development for the upcoming year.",
+  "committee": "Administrative Policy Committee",
+  "presiding": "",
+  "agenda": [
+    {
+      "time": "N/A",
+      "item": "Public Comment"
+    },
+    {
+      "time": "N/A",
+      "item": "Approval of Minutes from August 18, 2026 Administrative Policy Committee Meeting"
+    },
+    {
+      "time": "N/A",
+      "item": "Finance Director Report - Monthly Update"
+    },
+    {
+      "time": "N/A",
+      "item": "August 2026 Budget Status Report"
+    },
+    {
+      "time": "N/A",
+      "item": "2027 Operating Budget Preview"
+    },
+    {
+      "time": "N/A",
+      "item": "2027-2036 Capital Improvement Plan Budget - September 2026 Update"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "August 18, 2026 Meeting Minutes",
+      "body": "The committee was scheduled to review and take action on approval of the minutes from the previous Administrative Policy Committee meeting held on August 18, 2026."
+    },
+    {
+      "item": "Finance Director Report - Monthly Update",
+      "body": "The Finance Director was set to present a monthly update report to the committee. The specific contents were not detailed in the agenda."
+    },
+    {
+      "item": "August 2026 Budget Status Report",
+      "body": "The committee was scheduled to review the budget status report for August 2026 as part of ongoing fiscal monitoring."
+    },
+    {
+      "item": "2027 Operating Budget Preview",
+      "body": "The committee was expected to consider a preview of the village's proposed 2027 operating budget to begin the budget development process for the upcoming fiscal year."
+    },
+    {
+      "item": "2027-2036 Capital Improvement Plan Budget - September 2026 Update",
+      "body": "The committee was set to discuss an update to the 10-year capital improvement plan with components including funding analysis, debt service analysis, and Tax Incremental District projected closer analysis. This review was scheduled to inform long-term capital planning and financing decisions."
+    }
+  ],
+  "publicComment": "Public comment was on the agenda, limited to 15 minutes total with three minutes per person at the Chief Presiding Officer's discretion.",
+  "actionItems": [
+    "Scheduled to vote on approval of August 18, 2026 meeting minutes",
+    "Expected to review Finance Director's monthly report",
+    "Expected to consider August 2026 budget status",
+    "Expected to review 2027 operating budget preview",
+    "Scheduled to discuss 2027-2036 CIP budget update including funding analysis, debt service analysis, and TID projections"
+  ],
+  "topics": [
+    "Budget",
+    "Capital Improvement Plan",
+    "Finance",
+    "Debt Service"
+  ],
+  "_source": "agenda",
+  "title": "Administrative Policy Committee Meeting - 2026-09-15",
+  "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-32",
+  "source": "kronenwetter",
+  "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2998b824c4a8402485d7752be7e3630a.pdf",
+  "processed_at": "2026-09-15T03:08:03.069342+00:00"
+}
