@@ -27,37 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:c1dfedfd35ea09ed265a@gavel
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Chicago:20260915T093000
-DTEND;TZID=America/Chicago:20260915T110000
-SUMMARY:City of Wausau: Board of Public Works Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3571/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:a2266a107be098755541@gavel
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Chicago:20260915T170000
-DTEND;TZID=America/Chicago:20260915T183000
-SUMMARY:City of Wausau: Plan Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3519/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b6679fdd4a23b34b5845@gavel
-DTSTAMP:20260915T000000Z
-DTSTART;TZID=America/Chicago:20260915T173000
-DTEND;TZID=America/Chicago:20260915T190000
-SUMMARY:Village of Kronenwetter: Administrative Policy Committee Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative
- -policy-committee-meeting-32
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:9a14f1d6ebe4605647c1@gavel
 DTSTAMP:20260916T000000Z
 DTSTART;TZID=America/Chicago:20260916T183000
@@ -306,6 +275,36 @@ DTSTART;TZID=America/Chicago:20261006T113000
 DTEND;TZID=America/Chicago:20261006T130000
 SUMMARY:City of Wausau: Water Works Commission Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2196/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:c149e179856ea425e0ed@gavel
+DTSTAMP:20261006T000000Z
+DTSTART;TZID=America/Chicago:20261006T171500
+DTEND;TZID=America/Chicago:20261006T184500
+SUMMARY:City of Wausau: Economic Development Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2405/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:e8f290aa4338dde3b652@gavel
+DTSTAMP:20261006T000000Z
+DTSTART;TZID=America/Chicago:20261006T183000
+DTEND;TZID=America/Chicago:20261006T200000
+SUMMARY:City of Wausau: Finance Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3583/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:743877b7e9dc056b6991@gavel
+DTSTAMP:20261007T000000Z
+DTSTART;TZID=America/Chicago:20261007T170000
+DTEND;TZID=America/Chicago:20261007T183000
+SUMMARY:City of Wausau: Citizen Advisory Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/676/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

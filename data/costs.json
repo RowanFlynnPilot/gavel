@@ -428,5 +428,15 @@
     "input_tokens": 3793,
     "output_tokens": 1452,
     "usd": 0.011053
+  },
+  {
+    "ts": "2026-09-16T03:04:52.312277+00:00",
+    "meeting_id": "bb_762740",
+    "jurisdiction": "dc_everest",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 2454,
+    "output_tokens": 1808,
+    "usd": 0.011494
   }
 ]

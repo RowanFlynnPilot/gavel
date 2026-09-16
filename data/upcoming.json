@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-15",
-      "time": "9:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3571/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-15",
-      "time": "5:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3519/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-17",
       "time": "4:45 PM",
       "name": "Transit Commission Meeting",
@@ -210,6 +196,27 @@
       "time": "11:30 AM",
       "name": "Water Works Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2196/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "5:15 PM",
+      "name": "Economic Development Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2405/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "6:30 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3583/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "5:00 PM",
+      "name": "Citizen Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/676/overview",
       "source": "wausau"
     }
   ],
@@ -365,13 +372,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-09-15",
-      "time": "5:30 PM",
-      "name": "Administrative Policy Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-32",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-09-17",
       "time": "5:30 PM",

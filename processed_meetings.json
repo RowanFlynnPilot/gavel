@@ -1785,6 +1785,17 @@
       "video_url": null,
       "processed_at": "2026-09-15T22:42:44.096365+00:00",
       "summary_file": "summaries/weston-plan-commission-9142026-al28jiolcqg.md"
+    },
+    "bb_762740": {
+      "title": "Regular School Board Meeting - 2026-09-16",
+      "source": "dc_everest",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=762740",
+      "upload_date": "20260916",
+      "meeting_date": "20260916",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-09-16T03:04:52.313525+00:00",
+      "summary_file": "summaries/dc-everest-regular-school-board-meeting-2026-09-16-bb-762740.md"
     }
   }
 }
