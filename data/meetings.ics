@@ -37,6 +37,17 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:525cb8bb5c68d325fdeb@gavel
+DTSTAMP:20260917T000000Z
+DTSTART;TZID=America/Chicago:20260917T163000
+DTEND;TZID=America/Chicago:20260917T180000
+SUMMARY:Village of Kronenwetter: Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
+ eeting-68
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:a11e21954236c08b07b2@gavel
 DTSTAMP:20260917T000000Z
 DTSTART;TZID=America/Chicago:20260917T164500
@@ -57,17 +68,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:525cb8bb5c68d325fdeb@gavel
-DTSTAMP:20260917T000000Z
-DTSTART;TZID=America/Chicago:20260917T173000
-DTEND;TZID=America/Chicago:20260917T190000
-SUMMARY:Village of Kronenwetter: Village Board Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
- eeting-68
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:6974c122251f2a0c1d2c@gavel
 DTSTAMP:20260917T000000Z
 DTSTART;TZID=America/Chicago:20260917T180000
@@ -84,16 +84,6 @@ DTSTART;TZID=America/Chicago:20260921T170000
 DTEND;TZID=America/Chicago:20260921T183000
 SUMMARY:Wausau School Board: Closed Meeting
 URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=766613
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:3223750eba65c54b707d@gavel
-DTSTAMP:20260921T000000Z
-DTSTART;TZID=America/Chicago:20260921T171500
-DTEND;TZID=America/Chicago:20260921T184500
-SUMMARY:City of Wausau: Public Health & Safety Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2469/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -218,6 +208,27 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:d886675427376f961ee8@gavel
+DTSTAMP:20260928T000000Z
+DTSTART;TZID=America/Chicago:20260928T180000
+DTEND;TZID=America/Chicago:20260928T193000
+SUMMARY:Village of Kronenwetter: Village Board Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
+ eeting-69
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:569689c6d708d2015f7d@gavel
+DTSTAMP:20260930T000000Z
+DTSTART;TZID=America/Chicago:20260930T170000
+DTEND;TZID=America/Chicago:20260930T183000
+SUMMARY:City of Wausau: One Time Event
+URL:https://wausauwi.portal.civicclerk.com/event/3601/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:9fcf081d5cae624b9857@gavel
 DTSTAMP:20261001T000000Z
 DTSTART;TZID=America/Chicago:20261001T170000
@@ -295,16 +306,6 @@ DTSTART;TZID=America/Chicago:20261006T183000
 DTEND;TZID=America/Chicago:20261006T200000
 SUMMARY:City of Wausau: Finance Committee Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/3583/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:743877b7e9dc056b6991@gavel
-DTSTAMP:20261007T000000Z
-DTSTART;TZID=America/Chicago:20261007T170000
-DTEND;TZID=America/Chicago:20261007T183000
-SUMMARY:City of Wausau: Citizen Advisory Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/676/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

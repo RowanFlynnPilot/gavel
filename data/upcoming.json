@@ -122,13 +122,6 @@
       "source": "wausau"
     },
     {
-      "date": "2026-09-21",
-      "time": "5:15 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2469/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-22",
       "time": "11:00 AM",
       "name": "Board of Public Works Meeting",
@@ -171,6 +164,13 @@
       "source": "wausau"
     },
     {
+      "date": "2026-09-30",
+      "time": "5:00 PM",
+      "name": "One Time Event",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3601/overview",
+      "source": "wausau"
+    },
+    {
       "date": "2026-10-01",
       "time": "5:00 PM",
       "name": "Sustainability, Energy & Environment Committee Meeting",
@@ -210,13 +210,6 @@
       "time": "6:30 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3583/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-07",
-      "time": "5:00 PM",
-      "name": "Citizen Advisory Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/676/overview",
       "source": "wausau"
     }
   ],
@@ -374,9 +367,16 @@
   "kronenwetter": [
     {
       "date": "2026-09-17",
-      "time": "5:30 PM",
+      "time": "4:30 PM",
       "name": "Village Board Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-68",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "6:00 PM",
+      "name": "Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-69",
       "source": "kronenwetter"
     },
     {
