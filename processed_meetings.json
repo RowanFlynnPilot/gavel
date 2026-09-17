@@ -1796,6 +1796,17 @@
       "video_url": null,
       "processed_at": "2026-09-16T03:04:52.313525+00:00",
       "summary_file": "summaries/dc-everest-regular-school-board-meeting-2026-09-16-bb-762740.md"
+    },
+    "kw_c9c92d2afc2a49afb51ba2b04743793b": {
+      "title": "Village Board Meeting - 2026-09-17",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c9c92d2afc2a49afb51ba2b04743793b.pdf",
+      "upload_date": "20260917",
+      "meeting_date": "20260917",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-68",
+      "processed_at": "2026-09-17T03:08:06.712613+00:00",
+      "summary_file": "summaries/kronenwetter-village-board-meeting-2026-09-17-kw-c9c92d2afc2a49afb51ba2b04743793b.md"
     }
   }
 }

@@ -1,0 +1,63 @@
+{
+  "overview": "Based on the published agenda, the Village of Kronenwetter Board was scheduled to meet on September 17, 2026, to conduct routine business including a closed session for interviewing Village Clerk candidates. The meeting was set to address personnel matters and consider items for future agenda discussion.",
+  "committee": "Village Board of Kronenwetter",
+  "presiding": "",
+  "agenda": [
+    {
+      "time": "04:30 PM",
+      "item": "Call Meeting to Order - Pledge of Allegiance and Roll Call"
+    },
+    {
+      "time": "N/A",
+      "item": "Announcement of Closed Session"
+    },
+    {
+      "time": "N/A",
+      "item": "Public Comment"
+    },
+    {
+      "time": "N/A",
+      "item": "Closed Session - Interviewing Village Clerk Candidates"
+    },
+    {
+      "time": "N/A",
+      "item": "Reconvene Open Session"
+    },
+    {
+      "time": "N/A",
+      "item": "Action After Closed Session"
+    },
+    {
+      "time": "N/A",
+      "item": "Consideration of Items for Future Agenda"
+    },
+    {
+      "time": "N/A",
+      "item": "Adjournment"
+    }
+  ],
+  "discussions": [
+    {
+      "item": "Closed Session - Interviewing Village Clerk Candidates",
+      "body": "The Board was scheduled to convene into closed session pursuant to Wisconsin Statute 19.85(1)(c) for consideration of employment and personnel matters related to Village Clerk candidates. The closed session was set to allow for confidential interviews and discussion of employment-related data without public attendance."
+    }
+  ],
+  "publicComment": "Public comment was on the agenda, with a 15-minute total time limit and three minutes per person, with possible time extension at the Chief Presiding Officer's discretion. No action was scheduled to be taken on public comments received.",
+  "actionItems": [
+    "Scheduled to consider motion to convene into closed session for Village Clerk candidate interviews",
+    "Scheduled to consider motion to reconvene into open session",
+    "Expected to take action following closed session discussion",
+    "Scheduled to consider items for future agenda"
+  ],
+  "topics": [
+    "Staffing",
+    "Village Clerk Position",
+    "Personnel"
+  ],
+  "_source": "agenda",
+  "title": "Village Board Meeting - 2026-09-17",
+  "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-68",
+  "source": "kronenwetter",
+  "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-c9c92d2afc2a49afb51ba2b04743793b.pdf",
+  "processed_at": "2026-09-17T03:08:06.712462+00:00"
+}
