@@ -130,6 +130,13 @@
     },
     {
       "date": "2026-09-22",
+      "time": "12:00 PM",
+      "name": "Community Development Authority Board Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3605/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-22",
       "time": "5:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2431/overview",
@@ -154,6 +161,13 @@
       "time": "5:00 PM",
       "name": "Bicycle & Pedestrian Advisory Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2126/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-29",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3602/overview",
       "source": "wausau"
     },
     {
@@ -189,20 +203,6 @@
       "time": "11:30 AM",
       "name": "Water Works Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2196/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "5:15 PM",
-      "name": "Economic Development Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2405/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "6:30 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3583/overview",
       "source": "wausau"
     }
   ],

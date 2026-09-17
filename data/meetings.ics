@@ -137,6 +137,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:9b058b4c434e44829d0a@gavel
+DTSTAMP:20260922T000000Z
+DTSTART;TZID=America/Chicago:20260922T120000
+DTEND;TZID=America/Chicago:20260922T133000
+SUMMARY:City of Wausau: Community Development Authority Board Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3605/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:1998e5f9840de7337d2b@gavel
 DTSTAMP:20260922T000000Z
 DTSTART;TZID=America/Chicago:20260922T170000
@@ -228,6 +238,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:68f3320ceae79cc63de8@gavel
+DTSTAMP:20260929T000000Z
+DTSTART;TZID=America/Chicago:20260929T103000
+DTEND;TZID=America/Chicago:20260929T120000
+SUMMARY:City of Wausau: Board of Public Works Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3602/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:569689c6d708d2015f7d@gavel
 DTSTAMP:20260930T000000Z
 DTSTART;TZID=America/Chicago:20260930T170000
@@ -295,26 +315,6 @@ DTSTART;TZID=America/Chicago:20261006T113000
 DTEND;TZID=America/Chicago:20261006T130000
 SUMMARY:City of Wausau: Water Works Commission Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2196/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:c149e179856ea425e0ed@gavel
-DTSTAMP:20261006T000000Z
-DTSTART;TZID=America/Chicago:20261006T171500
-DTEND;TZID=America/Chicago:20261006T184500
-SUMMARY:City of Wausau: Economic Development Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2405/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:e8f290aa4338dde3b652@gavel
-DTSTAMP:20261006T000000Z
-DTSTART;TZID=America/Chicago:20261006T183000
-DTEND;TZID=America/Chicago:20261006T200000
-SUMMARY:City of Wausau: Finance Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3583/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
