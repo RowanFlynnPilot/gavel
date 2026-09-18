@@ -27,56 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:278f0c26cc8223db7458@gavel
-DTSTAMP:20260917T000000Z
-DTSTART;VALUE=DATE:20260917
-SUMMARY:Village of Weston: Mountain Bay Metropolitan Police Oversight Board
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09172026-1969
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:525cb8bb5c68d325fdeb@gavel
-DTSTAMP:20260917T000000Z
-DTSTART;TZID=America/Chicago:20260917T163000
-DTEND;TZID=America/Chicago:20260917T180000
-SUMMARY:Village of Kronenwetter: Village Board Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
- eeting-68
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:a11e21954236c08b07b2@gavel
-DTSTAMP:20260917T000000Z
-DTSTART;TZID=America/Chicago:20260917T164500
-DTEND;TZID=America/Chicago:20260917T181500
-SUMMARY:City of Wausau: Transit Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2183/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:be1109be9cbe2029ec5a@gavel
-DTSTAMP:20260917T000000Z
-DTSTART;TZID=America/Chicago:20260917T170000
-DTEND;TZID=America/Chicago:20260917T183000
-SUMMARY:Marathon County: HR\, Finance & Property Committee
-URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:6974c122251f2a0c1d2c@gavel
-DTSTAMP:20260917T000000Z
-DTSTART;TZID=America/Chicago:20260917T180000
-DTEND;TZID=America/Chicago:20260917T193000
-SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:fca7c766e14e1b0b2e72@gavel
 DTSTAMP:20260921T000000Z
 DTSTART;VALUE=DATE:20260921
@@ -315,6 +265,16 @@ DTSTART;TZID=America/Chicago:20261006T113000
 DTEND;TZID=America/Chicago:20261006T130000
 SUMMARY:City of Wausau: Water Works Commission Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2196/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:c149e179856ea425e0ed@gavel
+DTSTAMP:20261006T000000Z
+DTSTART;TZID=America/Chicago:20261006T171500
+DTEND;TZID=America/Chicago:20261006T184500
+SUMMARY:City of Wausau: Economic Development Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2405/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
