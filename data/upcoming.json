@@ -104,6 +104,13 @@
       "name": "Infrastructure Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-11-19",
+      "time": "5:00 PM",
+      "name": "HR, Finance & Property Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
@@ -323,6 +330,13 @@
       "date": "2026-11-16",
       "time": "6:00 PM",
       "name": "Board of Trustees",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-11-19",
+      "time": "6:00 PM",
+      "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
     }
