@@ -448,5 +448,45 @@
     "input_tokens": 1107,
     "output_tokens": 605,
     "usd": 0.004132
+  },
+  {
+    "ts": "2026-09-21T03:03:11.001347+00:00",
+    "meeting_id": "bb_766616",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 798,
+    "output_tokens": 503,
+    "usd": 0.003313
+  },
+  {
+    "ts": "2026-09-21T03:03:14.525178+00:00",
+    "meeting_id": "bb_766613",
+    "jurisdiction": "school_board",
+    "purpose": "boardbook_agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 798,
+    "output_tokens": 524,
+    "usd": 0.003418
+  },
+  {
+    "ts": "2026-09-21T03:03:21.212360+00:00",
+    "meeting_id": "kw_2f716f7f5f6946adac8f233327e64e60",
+    "jurisdiction": "kronenwetter",
+    "purpose": "agenda_summary",
+    "model": "claude-haiku-4-5-20251001",
+    "input_tokens": 1224,
+    "output_tokens": 881,
+    "usd": 0.005629
+  },
+  {
+    "ts": "2026-09-21T03:05:56.358904+00:00",
+    "meeting_id": "(roundup)",
+    "jurisdiction": "(all)",
+    "purpose": "roundup",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 2487,
+    "output_tokens": 491,
+    "usd": 0.014826
   }
 ]

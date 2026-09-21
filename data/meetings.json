@@ -1,5 +1,175 @@
 [
   {
+    "id": "kw_2f716f7f5f6946adac8f233327e64e60",
+    "source": "kronenwetter",
+    "title": "Plan Commission Meeting",
+    "date": "September 21, 2026",
+    "shortDate": "SEP 21",
+    "committee": "Plan Commission",
+    "duration": null,
+    "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-31",
+    "docUrl": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2f716f7f5f6946adac8f233327e64e60.pdf",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Kronenwetter Plan Commission was scheduled to meet on September 21, 2026, to address a land division request, review conditional use permit status for a Marathon County facility, and consider amendments to a preliminary plat recommendation for Green Tree Trails Subdivision. The meeting was also set to include an update on ongoing zoning and subdivision ordinance review.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Public Comment"
+      },
+      {
+        "time": "N/A",
+        "item": "Community Development Director Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Certified Survey Map - Land Division Request by Shaina Daris, 2172 Wood Rd"
+      },
+      {
+        "time": "N/A",
+        "item": "Conditional Use Permit - Marathon County Facility - Highway Garage"
+      },
+      {
+        "time": "N/A",
+        "item": "Green Tree Trails Subdivision Preliminary Plat - Rescind or Amend Prior Recommendation"
+      },
+      {
+        "time": "N/A",
+        "item": "Next Steps in Ongoing Review of Zoning and Subdivision Ordinances"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Certified Survey Map - Land Division Request by Shaina Daris",
+        "body": "The Commission was scheduled to consider a land division request by Shaina Daris involving properties at 2172 Wood Rd and 2208 Tracy Ct in the Glen Arbor development. The proposed Certified Survey Map would change the boundary between the two parcels, with properties identified as Glen Arbor Lot 8 and Glen Arbor Lot 1 located in the N1/2 SW FRL1/4 of Section 7, T27N, R8E."
+      },
+      {
+        "item": "Conditional Use Permit - Marathon County Facility - Highway Garage",
+        "body": "The Commission was set to continue discussion on a conditional use permit application for a Marathon County facility highway garage. The agenda indicated this was old business, suggesting prior consideration of this application."
+      },
+      {
+        "item": "Green Tree Trails Subdivision Preliminary Plat",
+        "body": "The Commission was scheduled to review the Green Tree Trails Subdivision preliminary plat application and consider whether to rescind or amend a prior recommendation. This item was listed as old business requiring possible action."
+      },
+      {
+        "item": "Zoning and Subdivision Ordinances Review",
+        "body": "The Commission was expected to discuss next steps in an ongoing comprehensive review of the Village's zoning and subdivision ordinances. This item indicated continuing work on regulatory updates."
+      }
+    ],
+    "publicComment": "Public comment was on the agenda, limited to 15 minutes total with three minutes per person, with time extension at the Chief Presiding Officer's discretion.",
+    "actionItems": [
+      "Scheduled to vote on or approve the Certified Survey Map land division request by Shaina Daris",
+      "Expected to take action on the Conditional Use Permit for Marathon County Highway Garage",
+      "Scheduled to consider rescinding or amending the prior recommendation on Green Tree Trails Subdivision preliminary plat",
+      "Expected to determine next steps in zoning and subdivision ordinance review"
+    ],
+    "topics": [
+      "Zoning",
+      "Development",
+      "Land Division",
+      "Subdivision Review",
+      "Green Tree Trails Subdivision"
+    ],
+    "votes": []
+  },
+  {
+    "id": "bb_766613",
+    "source": "school_board",
+    "title": "Closed Meeting",
+    "date": "September 21, 2026",
+    "shortDate": "SEP 21",
+    "committee": "Closed Meeting",
+    "duration": null,
+    "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766613",
+    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766613",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Wausau School District Board of Education was scheduled to convene in closed session on September 21, 2026, to hold a pupil expulsion hearing pursuant to Wisconsin Statutes. The Board was expected to hear evidence and arguments related to the expulsion case, deliberate privately, and potentially take action on the matter in closed session.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Call To Order"
+      },
+      {
+        "time": "N/A",
+        "item": "Convene in closed session pursuant to s. 19.85(1)(a), (f), and (g), and s. 118.125 of the Wisconsin Statutes to hold a pupil expulsion hearing"
+      },
+      {
+        "time": "N/A",
+        "item": "Reconvene in open session and take further action if necessary and/or appropriate"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjournment"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Pupil Expulsion Hearing",
+        "body": "The Board was scheduled to convene in closed session to hold a pupil expulsion hearing in accordance with Wisconsin Statutes sections 19.85(1)(a), (f), and (g), and section 118.125. The Board was expected to deliberate privately at the conclusion of the hearing and was authorized to take action in closed session if necessary and/or appropriate before reconvening in open session."
+      }
+    ],
+    "publicComment": "No public comment period was included on this agenda.",
+    "actionItems": [
+      "Board was expected to vote on a motion to convene in closed session for the expulsion hearing",
+      "Board was expected to vote on a motion to reconvene in open session following the closed session",
+      "Board was expected to take action on the expulsion hearing matter if necessary and/or appropriate"
+    ],
+    "topics": [
+      "Policy",
+      "Student Discipline",
+      "Legal Proceedings"
+    ],
+    "votes": []
+  },
+  {
+    "id": "bb_766616",
+    "source": "school_board",
+    "title": "Closed Meeting",
+    "date": "September 21, 2026",
+    "shortDate": "SEP 21",
+    "committee": "Closed Meeting",
+    "duration": null,
+    "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766616",
+    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766616",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Wausau School District Board of Education was scheduled to convene in closed session on September 21, 2026, to hold a pupil expulsion hearing pursuant to Wisconsin Statutes. The Board was expected to deliberate privately and potentially take action regarding student expulsion if necessary and appropriate.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Call To Order"
+      },
+      {
+        "time": "N/A",
+        "item": "Motion to convene in closed session pursuant to s. 19.85(1)(a), (f), and (g), as well as s. 118.125 of the Wisconsin Statutes to hold a pupil expulsion hearing"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjournment"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Pupil Expulsion Hearing",
+        "body": "The Board was scheduled to convene in closed session to hold a pupil expulsion hearing under Wisconsin Statutes s. 19.85(1)(a), (f), and (g), and s. 118.125. The Board was expected to deliberate privately at the conclusion of the hearing and was authorized to take action in closed session if necessary and appropriate. Following the closed session, the Board was expected to entertain a motion to reconvene into open session and consider further action if warranted."
+      }
+    ],
+    "publicComment": "No public comment period was included on this agenda.",
+    "actionItems": [
+      "Board was expected to consider a motion to convene in closed session for pupil expulsion hearing",
+      "Board may have taken action on expulsion determination if necessary and appropriate",
+      "Board was expected to consider a motion to reconvene in open session following closed session deliberation"
+    ],
+    "topics": [
+      "Student Discipline",
+      "Expulsion Hearing",
+      "Legal Compliance",
+      "Board Governance"
+    ],
+    "votes": []
+  },
+  {
     "id": "kw_c9c92d2afc2a49afb51ba2b04743793b",
     "source": "kronenwetter",
     "title": "Village Board Meeting",
@@ -5767,356 +5937,6 @@
         "second": "Gellhar",
         "outcome": "Approved",
         "tally": null
-      }
-    ]
-  },
-  {
-    "id": "tcS9bwi3F08",
-    "source": "marathon",
-    "title": "Public Safety Committee Pt.1",
-    "date": "August 11, 2026",
-    "shortDate": "AUG 11",
-    "committee": "Public Safety",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=tcS9bwi3F08",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Marathon County Public Safety Committee met on August 11, 2026 to discuss 2027 budget development, including nonprofit funding, sheriff's office fleet strategy, jail fees, new position requests, and ordinance updates. The committee approved forwarding several items to the county board, including new position reclassifications, an amendment to the chief deputy appointment ordinance, and creation of a non-lapsing contingency account for the medical examiner's office. A lengthy educational presentation on Flock Safety automated license plate reader (ALPR) technology was underway when the transcript ends.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to order and Pledge of Allegiance"
-      },
-      {
-        "time": "1:30",
-        "item": "Public comment (none offered)"
-      },
-      {
-        "time": "2:00",
-        "item": "Approval of July 7, 2026 Public Safety Committee minutes"
-      },
-      {
-        "time": "3:15",
-        "item": "5A1 - 2027 annual budget development: nonprofit funding review (Women's Community, $55,000 allocation)"
-      },
-      {
-        "time": "12:00",
-        "item": "5A1A - Sheriff's office fleet needs and long-term rolling stock strategy"
-      },
-      {
-        "time": "35:00",
-        "item": "5A1B - Jail stay fees review and collection analysis"
-      },
-      {
-        "time": "52:00",
-        "item": "5A2 - New position requests and reclassifications for 2027 budget (DA's office, Sheriff's office, Clerk of Courts, Medical Examiner)"
-      },
-      {
-        "time": "1:10:00",
-        "item": "5B1 - Update to Marathon County Ordinance 5.09, Chief Deputy Appointment"
-      },
-      {
-        "time": "1:22:00",
-        "item": "5B2 - Creation of non-lapsing contingency account for the Medical Examiner's Office"
-      },
-      {
-        "time": "1:45:00",
-        "item": "6A - Educational presentation: Flock Safety and ALPR technology use by the Sheriff's Office"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Nonprofit Funding - Women's Community ($55,000)",
-        "body": "Jane Graham Jennings, executive director of the Women's Community, presented on how the organization uses its $55,000 annual county contract, noting the funding covers approximately 16% of the $348,822 cost of contracted services and is used to leverage an additional $350,000 in state and federal grants. She highlighted services including lethality assessment protocol screening with the sheriff's department, domestic violence advocacy, sexual assault education in schools, and child advocacy center support. County Administrator Leonard indicated his plan is to keep nonprofit funding flat in the 2027 budget."
-      },
-      {
-        "item": "Sheriff's Office Fleet Strategy and Rolling Stock",
-        "body": "Finance Director Chris (last name not clearly stated) presented a memo outlining a plan developed with Enterprise fleet services to address the gap in vehicle acquisitions caused by flat funding and failure to follow through on a CPI-based increase plan. The plan involves rolling existing leases, extending others with remaining mileage, and moving 17 vehicles into the lease fleet program, with a projected funding gap of $138,876 between existing rolling stock funds and the proposed $456,548 CIP allocation for 2027. Committee members discussed the bottleneck caused by upfitting vehicles at Belco in Columbus, and the sheriff described an effort to pursue a state innovation grant to create a regional upfitting operation involving Wausau, Mountain Bay, and Kronenwetter police departments. Administrator Leonard confirmed outreach to NTC, McDevco, and WATTA workforce organizations to support that effort. No resolution was presented, as fleet funding is not formally approved until November budget adoption."
-      },
-      {
-        "item": "Jail Stay Fees",
-        "body": "Sheriff's Captain Chad (last name not clearly stated) presented a memo explaining that while the jail collected $303,666 in total fees in 2025, the portion attributable specifically to first-day fees ($30) and daily pay-for-stay fees ($20) is much smaller because roughly 90% of the jail population is pre-sentenced and not assessed those charges. Staff noted the population is largely indigent, making collections very difficult, and that even fee increases would not meaningfully increase actual revenue. Administrator Leonard noted a housekeeping amendment will be brought forward to update ordinance section 5.11 to reference the fee schedule rather than listing specific amounts, after an oversight was identified where the old fee remained in the ordinance text."
-      },
-      {
-        "item": "New Position Requests and Reclassifications for 2027 Budget",
-        "body": "Administrator Leonard presented four personnel actions: (1) DA's office - abolish a county-funded restitution specialist position and create a 1.0 victim witness specialist and 0.5 administrative specialist, leveraging state Chapter 950 reimbursement; (2) Sheriff's office - abolish a senior admin position and create a corrections officer position to address jail staffing needs; (3) Clerk of Courts - reclass an administrative assistant to administrative specialist to manage scheduling duties previously defunded; (4) Medical Examiner - abolish the vacant deputy chief medical examiner (physician) position and create a senior administrative assistant, generating significant cost savings. Medical Examiner Director Jess explained the physician position was unsustainable due to lower-than-projected case volumes, noting the office is building volume gradually with new county and hospital contracts. The committee approved forwarding all positions to HR, Finance and Property."
-      },
-      {
-        "item": "Marathon County Ordinance 5.09 - Chief Deputy Appointment Update",
-        "body": "Sheriff Chad presented an ordinance update required by 2025 Wisconsin Act 196, which merged the chief deputy and under sheriff roles so that the chief deputy automatically assumes the sheriff's duties if needed, and removed the chief deputy position from civil service oversight, making it solely the sheriff's appointment. Corporation Counsel Brian Desmond also recommended removing a provision barring the chief deputy from seeking the office of sheriff, citing both practical concerns about limiting the candidate pool and potential legal issues with restricting access to elective office. The committee approved forwarding the ordinance amendment to the county board."
-      },
-      {
-        "item": "Non-Lapsing Contingency Account for Medical Examiner's Office",
-        "body": "Administrator Leonard proposed creating a non-lapsing contingency account capped at $250,000 for the Medical Examiner's office, funded by year-end operating surpluses rather than levy, to cover volatile revenue years and expensive capital equipment needs such as the $300,000 full-body X-ray (Phobus) machine. Supervisor John Robinson expressed support but raised concerns that the $250,000 cap is high compared to other departments' accounts and that frequent periodic reviews should ensure the funds are not used as a budget workaround. Supervisor Jason raised questions about whether building expenses like roofs would draw from this fund, and Leonard confirmed it could serve as a blended funding source with board approval via supermajority vote. The committee approved forwarding the proposal to the county board."
-      },
-      {
-        "item": "6A - Flock Safety ALPR Technology Presentation",
-        "body": "Captain Jeff Stefanic of the sheriff's investigations division began an educational presentation on automated license plate reader (ALPR) technology, explaining the sheriff's office has used Flock Safety systems since 2023. He described how stationary cameras capture and read license plates using infrared illumination and character-recognition software, noting the technology is used commercially in toll systems and car washes. The presentation was ongoing at the end of the transcript and covered what the system is, its capabilities, data retention policies, and public safety outcomes, with the stated goal of educating the committee amid public questions generated by recent news coverage."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "Forward all new position requests and reclassifications (DA's office, Sheriff's office, Clerk of Courts, Medical Examiner) to HR, Finance and Property Committee and inclusion in the proposed 2027 budget",
-      "Forward amended Ordinance 5.09 (Chief Deputy Appointment) to the county board for consideration",
-      "Forward creation of a $250,000 non-lapsing contingency account for the Medical Examiner's office to the county board for consideration",
-      "Administrator Leonard to bring forward a future ordinance amendment removing specific fee amounts from chapter 5 and chapter 12 ordinances, replacing them with references to the fee schedule",
-      "Sheriff's office and administration to develop a business plan and write a state innovation grant application for a regional squad car upfitting operation with municipal partners",
-      "Sheriff's office to provide a cost breakdown of the drone unit for a future agenda item",
-      "Administration and health departments to continue defining costs and funding strategies for expanding mobile crisis services beyond current 8-to-5 Monday-Friday CART operations",
-      "Administration to send committee members the link to the 2026 employee benefit summary regarding FTE benefit eligibility thresholds"
-    ],
-    "topics": [
-      "Budget",
-      "Public Safety",
-      "Staffing",
-      "Fleet Management",
-      "Medical Examiner",
-      "Women's Community Nonprofit",
-      "ALPR Technology",
-      "Jail Operations"
-    ],
-    "votes": [
-      {
-        "item": "Approval of July 7, 2026 Public Safety Committee minutes",
-        "motion": null,
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Forward new position requests and reclassifications to HR, Finance and Property Committee and into the proposed 2027 budget",
-        "motion": "Support inclusion of each of the new positions and reclasses into the proposed budget and move it forward to HR Finance and Property",
-        "mover": "Jennifer",
-        "second": "Deb",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Forward amended Ordinance 5.09 (Chief Deputy Appointment) to the county board",
-        "motion": null,
-        "mover": "Jason",
-        "second": "Deb",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Forward creation of non-lapsing contingency account for Medical Examiner's office to the county board",
-        "motion": null,
-        "mover": "Jen",
-        "second": "Jason",
-        "outcome": "Approved",
-        "tally": null
-      }
-    ]
-  },
-  {
-    "id": "L9DOaVBOkJU",
-    "source": "marathon",
-    "title": "Public Safety Committee Pt.2",
-    "date": "August 11, 2026",
-    "shortDate": "AUG 11",
-    "committee": "Public Safety",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=L9DOaVBOkJU",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Marathon County Public Safety Committee received two informational presentations: a data-driven update on the county's drug treatment court program (2018–2026 year-to-date) and an overview of North Central Health Care's Hope House supportive housing program. No formal votes were taken on substantive matters aside from adjournment. The meeting highlighted that Marathon County's treatment court success rate of 58.8% exceeds the state average of 56.6%, and that lack of supportive housing was identified as the top gap in a recent strategic intercept mapping exercise.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Treatment Court Program Overview — presented by Lori Ari, Justice Programs Coordinator"
-      },
-      {
-        "time": "4:30",
-        "item": "Treatment Court Data Presentation — presented by Michael Schultz, Data Officer"
-      },
-      {
-        "time": "8:00",
-        "item": "Treatment Court referrals, eligibility, admissions, and success rate data (2018–2025)"
-      },
-      {
-        "time": "15:00",
-        "item": "Treatment Court 2026 year-to-date data and state comparison"
-      },
-      {
-        "time": "22:00",
-        "item": "Committee Q&A on Treatment Court — questions from Jason and Kim"
-      },
-      {
-        "time": "28:00",
-        "item": "6C: North Central Health Care Hope House Program Overview — presented by Wendy Peterson"
-      },
-      {
-        "time": "35:00",
-        "item": "Committee Q&A on Hope House — questions on success rates, funding, vetting, and housing for women"
-      },
-      {
-        "time": "44:00",
-        "item": "Future agenda items and next meeting date announcement"
-      },
-      {
-        "time": "45:00",
-        "item": "Motion to adjourn"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Drug Treatment Court Program Overview and Data Presentation",
-        "body": "Justice Programs Coordinator Lori Ari and Data Officer Michael Schultz presented a comprehensive data report on the county's drug treatment court, covering 2018 through August 6, 2026. Schultz used Power BI dashboards connected to the DOJ's CORE system to show referrals, admissions, eligibility breakdowns, days in program, housing and employment status changes, and success rates. A notable highlight was that exactly 100 participants had either graduated, been terminated, or administratively discharged since the program's inception, with Marathon County's 58.8% success rate slightly exceeding the state average of 56.6% for the 2019–2023 period. Ari noted 15 participants have had children returned from out-of-home placement and six drug-free babies have been born to program participants."
-      },
-      {
-        "item": "Committee Q&A on Treatment Court",
-        "body": "Supervisor Jason asked whether graduates stay in contact with the program after completion; Ari explained graduates fill out a questionnaire about desired contact level, are required to check in at court at 30, 60, and 90 days post-graduation, and many continue to volunteer or sponsor new participants. Supervisor Kim asked about the reasons for the 40% termination rate seen in the state comparison data; Ari explained termination typically results from absconding, significant new criminal charges, or long-term failure to show any improvement. A committee member who identified as a former prosecutor noted the visible transformation in participants he had seen at graduations."
-      },
-      {
-        "item": "6C: North Central Health Care Hope House Program Overview",
-        "body": "Wendy Peterson, Director of Acute Care Services at North Central Health Care, presented an overview of Hope House, a supportive sober-living program operating under the Apricity model with two locations: an eight-bed men's facility in Wausau (average daily census 6.5) and an eight-bed women's facility in Antigo (average daily census 5.5), serving Marathon, Lincoln, and Langlade Counties. Residents must have completed treatment, maintained 30 days of sobriety, and engage in 40 hours per week of work, school, volunteering, or programming. Funding comes from resident rent supplemented by Marathon County cash levy for the Wausau location and Langlade County cash levy for the Antigo facility. County Administrator Jason noted that the recent Strategic Intercept Mapping exercise identified lack of supportive housing as the number-one gap in the community's justice and recovery system."
-      },
-      {
-        "item": "Future Agenda Items and Adjournment",
-        "body": "The chair noted that drone statistics were requested as a future agenda item and asked committee members to submit additional ideas to herself or administrator Lance. The next meeting was announced for Tuesday, September 8th at 1:30. Supervisor Joel moved to adjourn; Jen seconded; the motion passed unanimously by voice vote."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "Drone statistics to be added as a future agenda item per chair's direction to the administrator.",
-      "Michael Schultz and Lori Ari to prepare a presentation on treatment court data for the Wisconsin Treatment Court Professionals Conference in the fall.",
-      "Committee members asked to submit ideas for future agenda items to the chair or administrator Lance.",
-      "Next Public Safety Committee meeting scheduled for Tuesday, September 8th at 1:30 p.m."
-    ],
-    "topics": [
-      "Public Safety",
-      "Treatment Court",
-      "Supportive Housing",
-      "Substance Use Recovery",
-      "Hope House"
-    ],
-    "votes": [
-      {
-        "item": "Adjourn the meeting",
-        "motion": "Move to adjourn",
-        "mover": "Joel",
-        "second": "Jen",
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      }
-    ]
-  },
-  {
-    "id": "pWIYd6jS2EI",
-    "source": "wausau",
-    "title": "City Council Human Resources Committee Meeting",
-    "date": "August 10, 2026",
-    "shortDate": "AUG 10",
-    "committee": "City of Wausau Human Resources Committee",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=pWIYd6jS2EI",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau City Council Human Resources Committee met on August 10th and approved two HR-related reclassifications: elevating the HR Specialist position to HR Generalist with a pay increase, and approving a temporary planning intern for the comprehensive plan update. The committee also approved organizational restructuring and succession planning changes for the Department of Public Works and Utilities on a 4-1 vote, over objections from Alderwoman Larson who argued the changes would not address underlying problems in the department.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to Order and Public Comment"
-      },
-      {
-        "time": "0:45",
-        "item": "Approval of Minutes from Preceding Month"
-      },
-      {
-        "time": "1:30",
-        "item": "Discussion and Possible Action: Reclassification of Human Resources Specialist to Human Resources Generalist"
-      },
-      {
-        "time": "22:10",
-        "item": "Discussion and Possible Action: Approval of Creation of Planning Intern Position"
-      },
-      {
-        "time": "44:50",
-        "item": "Discussion and Possible Action: Organizational Structure Changes and Succession Planning for Department of Public Works and Utilities"
-      },
-      {
-        "time": "1:05:00",
-        "item": "Discussion: HR Department Staffing Concerns and Interim Director Workload"
-      },
-      {
-        "time": "1:12:00",
-        "item": "Adjournment"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Approval of Minutes",
-        "body": "A motion to approve the minutes of the preceding month was made by Alder Wiskowski and seconded by Alder Kilian. The motion passed on a voice vote with no opposition noted."
-      },
-      {
-        "item": "Reclassification of Human Resources Specialist to Human Resources Generalist",
-        "body": "Interim HR Director Ann Keenan presented the reclassification, explaining that the incumbent (Jennifer) had long been performing generalist-level duties including workforce planning, labor relations, FMLA, compliance, and HRIS administration — well beyond a specialist's narrow scope. Several committee members, including Alder Kilian and Alder Wiskowski, raised concerns about whether the change should wait until a new HR Director was hired, worried that a new director might want to restructure the department differently. Alderwoman Mertens argued the incumbent deserved to be compensated at the level she was already performing. After debate, Keenan argued the reclassification was already part of former director Lisa's vision and that the employee was doing the work regardless of title. The committee ultimately voted to approve the reclassification, which will carry a wage increase and move to the finance committee."
-      },
-      {
-        "item": "Approval of Creation of Planning Intern Position",
-        "body": "Planner Carrie [last name not stated] presented a request for a temporary part-time planning intern, approximately 15 hours per week at roughly $16/hour for about four months, estimated total cost no more than $5,000, funded from already-budgeted comprehensive plan funds. The intern would assist with public engagement data collection and aggregation for the city's comprehensive plan update. Alder Kilian questioned whether the incoming administrative assistant could handle the work, and Alder Wiskowski asked about measurable benefits to the city. Alderwoman Mertens clarified the cost would come from already-allocated comprehensive plan funds — not new budget dollars — which resolved some concerns. The committee approved the position on a voice vote."
-      },
-      {
-        "item": "Organizational Structure Changes and Succession Planning for Department of Public Works and Utilities",
-        "body": "DPW Director Eric Lindman presented proposed reclassifications: building inspector reclassification, fleet manager to fleet superintendent, and traffic maintainers to traffic control specialists. He also proposed eliminating a difficult-to-fill part-time facilities maintenance position and reassigning two equipment operators from streets to report directly under the facilities manager, projecting a net savings of approximately $9,000 per year. Alderwoman Larson opposed the item, arguing it would not address what she described as serious ongoing problems in the DPW department that she said were expected to come before the committee in the future; she moved to table until the next meeting. A point of order was raised and debated. Alder Kilian argued the succession planning was not related to broader departmental issues and supported moving forward. The motion to approve passed 4-1, with Alderwoman Larson casting the dissenting vote."
-      },
-      {
-        "item": "HR Department Staffing Concerns",
-        "body": "Following the DPW vote, Alder Wiskowski raised concerns about the HR department operating with only two staff members while Interim Director Keenan and specialist Jennifer manage an overwhelming workload including firefighter hiring, crossing guard recruitment, benefits expansion, and Workday system administration. Keenan acknowledged the department was 'at critical' staffing levels and noted that one FMLA event would leave them with a single employee. She said she planned to bring a request to the full City Council on Wednesday to accelerate hiring of the HR coordinator position rather than waiting for a new director. The committee encouraged Keenan not to suffer in silence and asked whether a temp hire might help bridge the gap."
-      }
-    ],
-    "publicComment": "No public comment was offered. The chair called for public comment three times and received no response.",
-    "actionItems": [
-      "HR Specialist-to-Generalist reclassification with pay increase forwarded to Finance Committee for budget consideration",
-      "Planning intern position (temporary, part-time, ~$16/hour, ~4 months, funded from existing comprehensive plan budget) approved and authorized to recruit",
-      "DPW organizational restructuring approved: reclassify building inspector, fleet manager to fleet superintendent, traffic maintainers to traffic control specialists; eliminate part-time facilities maintenance position; move two equipment operators from streets to facilities supervision",
-      "Interim HR Director Ann Keenan to present request to full City Council on Wednesday to accelerate hiring of HR coordinator position",
-      "HR Director position to be posted for recruitment this week per Mayor's office"
-    ],
-    "topics": [
-      "Staffing",
-      "Human Resources",
-      "Reclassification",
-      "Comprehensive Plan",
-      "Public Works Reorganization"
-    ],
-    "votes": [
-      {
-        "item": "Approval of minutes from preceding month",
-        "motion": null,
-        "mover": "Alder Wiskowski",
-        "second": "Alder Kilian",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Reclassification of Human Resources Specialist to Human Resources Generalist",
-        "motion": "Motion to approve the reclassification of a Human Resources Specialist to a Human Resources Generalist",
-        "mover": null,
-        "second": "Alder Kilian",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Creation of temporary part-time Planning Intern position",
-        "motion": "Motion to hire a planning intern on a temporary basis to assist the community development department",
-        "mover": "Alderwoman Larson",
-        "second": "Alderwoman Wisniewski",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Organizational structure changes and succession planning for Department of Public Works and Utilities",
-        "motion": "Motion to approve the organizational structure changes and succession planning for the Department of Public Works and Utilities",
-        "mover": "Alder Kilian",
-        "second": "Alder Wiskowski",
-        "outcome": "Approved",
-        "tally": "4-1"
       }
     ]
   }

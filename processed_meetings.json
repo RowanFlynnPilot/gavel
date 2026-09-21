@@ -1807,6 +1807,39 @@
       "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-68",
       "processed_at": "2026-09-17T03:08:06.712613+00:00",
       "summary_file": "summaries/kronenwetter-village-board-meeting-2026-09-17-kw-c9c92d2afc2a49afb51ba2b04743793b.md"
+    },
+    "bb_766616": {
+      "title": "Closed Meeting - 2026-09-21",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766616",
+      "upload_date": "20260921",
+      "meeting_date": "20260921",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-09-21T03:03:11.002742+00:00",
+      "summary_file": "summaries/school-board-closed-meeting-2026-09-21-bb-766616.md"
+    },
+    "bb_766613": {
+      "title": "Closed Meeting - 2026-09-21",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766613",
+      "upload_date": "20260921",
+      "meeting_date": "20260921",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-09-21T03:03:14.526359+00:00",
+      "summary_file": "summaries/school-board-closed-meeting-2026-09-21-bb-766613.md"
+    },
+    "kw_2f716f7f5f6946adac8f233327e64e60": {
+      "title": "Plan Commission Meeting - 2026-09-21",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2f716f7f5f6946adac8f233327e64e60.pdf",
+      "upload_date": "20260921",
+      "meeting_date": "20260921",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-31",
+      "processed_at": "2026-09-21T03:03:21.213659+00:00",
+      "summary_file": "summaries/kronenwetter-plan-commission-meeting-2026-09-21-kw-2f716f7f5f6946adac8f233327e64e60.md"
     }
   }
 }
