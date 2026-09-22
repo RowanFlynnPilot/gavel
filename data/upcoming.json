@@ -204,30 +204,16 @@
       "name": "Economic Development Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2405/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-06",
+      "time": "6:30 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3583/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-21",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09212026-1971",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-21",
-      "time": "5:30 PM",
-      "name": "Finance & Human Resources Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-21",
-      "time": "6:00 PM",
-      "name": "Board of Trustees",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-09-28",
       "time": "6:00 PM",
@@ -343,13 +329,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-09-21",
-      "time": "5:00 PM",
-      "name": "Closed Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=766613",
-      "source": "school_board"
-    },
-    {
       "date": "2026-09-28",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
@@ -379,13 +358,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-09-21",
-      "time": "6:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-31",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-09-28",
       "time": "5:00 PM",
