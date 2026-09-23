@@ -37,6 +37,25 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:c73510f9a72129c8f64a@gavel
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20260928
+SUMMARY:Village of Weston: Comprehensive Plan Steering Committee (Village B
+ oard and Plan Commission)
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1972
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:d85d3d9a4c7a9fdc8997@gavel
+DTSTAMP:20260928T000000Z
+DTSTART;VALUE=DATE:20260928
+SUMMARY:Village of Weston: Park and Recreation Committee
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1973
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:24062f720bba847e0698@gavel
 DTSTAMP:20260928T000000Z
 DTSTART;TZID=America/Chicago:20260928T073000
@@ -119,12 +138,12 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:569689c6d708d2015f7d@gavel
+UID:99e1c27f0d19cc99f7cf@gavel
 DTSTAMP:20260930T000000Z
 DTSTART;TZID=America/Chicago:20260930T170000
 DTEND;TZID=America/Chicago:20260930T183000
-SUMMARY:City of Wausau: One Time Event
-URL:https://wausauwi.portal.civicclerk.com/event/3601/overview
+SUMMARY:City of Wausau: Citizen Advisory Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3609/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

@@ -138,8 +138,8 @@
     {
       "date": "2026-09-30",
       "time": "5:00 PM",
-      "name": "One Time Event",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3601/overview",
+      "name": "Citizen Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3609/overview",
       "source": "wausau"
     },
     {
@@ -207,6 +207,20 @@
     }
   ],
   "weston": [
+    {
+      "date": "2026-09-28",
+      "time": "",
+      "name": "Comprehensive Plan Steering Committee (Village Board and Plan Commission)",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1972",
+      "source": "weston"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "",
+      "name": "Park and Recreation Committee",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1973",
+      "source": "weston"
+    },
     {
       "date": "2026-09-28",
       "time": "6:00 PM",
