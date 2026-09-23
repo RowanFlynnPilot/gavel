@@ -1,20 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-09-22",
-      "time": "5:00 PM",
-      "name": "Environmental Resources Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-09-22",
-      "time": "7:00 PM",
-      "name": "County Board Meeting",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-10-01",
       "time": "5:00 PM",
       "name": "Health & Human Services Committee",
@@ -115,27 +101,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-22",
-      "time": "11:00 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3572/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-22",
-      "time": "12:00 PM",
-      "name": "Community Development Authority Board Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3605/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-22",
-      "time": "5:15 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2431/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-23",
       "time": "4:30 PM",
       "name": "Historic Preservation Commission Meeting",
@@ -154,6 +119,13 @@
       "time": "5:00 PM",
       "name": "Bicycle & Pedestrian Advisory Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2126/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-09-28",
+      "time": "5:30 PM",
+      "name": "Public Health & Safety Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3608/overview",
       "source": "wausau"
     },
     {
@@ -210,6 +182,27 @@
       "time": "6:30 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3583/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "5:00 PM",
+      "name": "Citizen Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/676/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-07",
+      "time": "6:30 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3584/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "5:00 PM",
+      "name": "Infrastructure & Facilities Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2444/overview",
       "source": "wausau"
     }
   ],

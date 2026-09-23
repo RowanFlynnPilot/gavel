@@ -27,56 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:256f1aec4490f9d25f9b@gavel
-DTSTAMP:20260922T000000Z
-DTSTART;TZID=America/Chicago:20260922T110000
-DTEND;TZID=America/Chicago:20260922T123000
-SUMMARY:City of Wausau: Board of Public Works Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3572/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:9b058b4c434e44829d0a@gavel
-DTSTAMP:20260922T000000Z
-DTSTART;TZID=America/Chicago:20260922T120000
-DTEND;TZID=America/Chicago:20260922T133000
-SUMMARY:City of Wausau: Community Development Authority Board Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3605/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:1998e5f9840de7337d2b@gavel
-DTSTAMP:20260922T000000Z
-DTSTART;TZID=America/Chicago:20260922T170000
-DTEND;TZID=America/Chicago:20260922T183000
-SUMMARY:Marathon County: Environmental Resources Committee
-URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:d705465db9857d2412d8@gavel
-DTSTAMP:20260922T000000Z
-DTSTART;TZID=America/Chicago:20260922T171500
-DTEND;TZID=America/Chicago:20260922T184500
-SUMMARY:City of Wausau: Finance Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2431/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:d53b2edf7a92670ef770@gavel
-DTSTAMP:20260922T000000Z
-DTSTART;TZID=America/Chicago:20260922T190000
-DTEND;TZID=America/Chicago:20260922T203000
-SUMMARY:Marathon County: County Board Meeting
-URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:3425a651532660155b89@gavel
 DTSTAMP:20260923T000000Z
 DTSTART;TZID=America/Chicago:20260923T163000
@@ -124,6 +74,16 @@ DTEND;TZID=America/Chicago:20260928T183000
 SUMMARY:Village of Kronenwetter: Police and Fire Commission Meeting
 URL:https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fir
  e-commission-meeting-27
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:07f63ef00405f3b4312a@gavel
+DTSTAMP:20260928T000000Z
+DTSTART;TZID=America/Chicago:20260928T173000
+DTEND;TZID=America/Chicago:20260928T190000
+SUMMARY:City of Wausau: Public Health & Safety Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3608/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -250,6 +210,26 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:743877b7e9dc056b6991@gavel
+DTSTAMP:20261007T000000Z
+DTSTART;TZID=America/Chicago:20261007T170000
+DTEND;TZID=America/Chicago:20261007T183000
+SUMMARY:City of Wausau: Citizen Advisory Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/676/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:99c7efbc1c600aacb9da@gavel
+DTSTAMP:20261007T000000Z
+DTSTART;TZID=America/Chicago:20261007T183000
+DTEND;TZID=America/Chicago:20261007T200000
+SUMMARY:City of Wausau: Finance Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3584/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:dec1146f2dc67a1b62d8@gavel
 DTSTAMP:20261008T000000Z
 DTSTART;TZID=America/Chicago:20261008T150000
@@ -266,6 +246,16 @@ DTSTART;TZID=America/Chicago:20261008T170000
 DTEND;TZID=America/Chicago:20261008T183000
 SUMMARY:Marathon County: Infrastructure Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:1da897b31351c7422f3f@gavel
+DTSTAMP:20261008T000000Z
+DTSTART;TZID=America/Chicago:20261008T170000
+DTEND;TZID=America/Chicago:20261008T183000
+SUMMARY:City of Wausau: Infrastructure & Facilities Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2444/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
