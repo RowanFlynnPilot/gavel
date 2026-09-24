@@ -101,13 +101,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-23",
-      "time": "4:30 PM",
-      "name": "Historic Preservation Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2502/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-28",
       "time": "7:30 AM",
       "name": "Police & Fire Commission Meeting",
@@ -203,6 +196,13 @@
       "time": "5:00 PM",
       "name": "Infrastructure & Facilities Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2444/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "6:30 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3585/overview",
       "source": "wausau"
     }
   ],
@@ -332,6 +332,13 @@
       "name": "Mountain Bay Metro Police Oversight",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "6:00 PM",
+      "name": "Parks & Recreation Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -360,6 +367,13 @@
       "date": "2026-11-09",
       "time": "5:00 PM",
       "name": "Regular Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-11-23",
+      "time": "5:00 PM",
+      "name": "Education & Operations Committee",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
     }
