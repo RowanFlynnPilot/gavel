@@ -53,6 +53,17 @@ archive marathon-meetings.
       from captions AND per-video metadata regardless of cookies; CI runs
       with CAPTION_FETCH=false (already ported), so the residential
       fetcher is the only transcript path and must be watched.
+- [ ] Port the Sept 2026 production fixes (marathon-meetings commit "fix:
+      Kronenwetter audio matching, upcoming-feed blanks, alarm accuracy"):
+      Kronenwetter SoundCloud `YYYY MM DD` title dates + duplicate-upload
+      collapsing (`engine/fetch_transcripts.py`); `_get` retries +
+      last-known-good upcoming per source (`engine/upcoming.py`); the
+      overdue-upgrade check replacing the standing agenda-only issue
+      (`check_overdue.py` + workflow step); private/removed video handling
+      (`transcripts/unavailable.json` + dismissing skipped videos missing
+      from the channel listing); `MAX_AUDIO_JOBS` with audio jobs last;
+      the rewritten `scripts/refresh-transcripts.ps1` (log file, weekly
+      yt-dlp update, commit-everything-under-transcripts push).
 - [ ] Residential fetcher pointed at gavel repo for one cycle
       (`python -m engine.fetch_transcripts --all --push`) upgrades an
       agenda-only meeting end to end

@@ -5,7 +5,10 @@ on:
     # Every 4 hours — same cadence as the reference instance. Freshly
     # uploaded videos get ~6 caption attempts in the first 24 hours before
     # falling back to agenda-only.
-    - cron: '0 */4 * * *'
+    # Off the top of the hour — GitHub drops scheduled runs under load and
+    # names :00 as its busiest time (the reference instance got ~4.7 of 6
+    # daily runs at :00, Sept 2026). Offset from the reference's :17.
+    - cron: '41 */4 * * *'
   workflow_dispatch:
     inputs:
       backfill:

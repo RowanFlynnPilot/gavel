@@ -34,11 +34,15 @@ jobs:
           PROBLEMS=""
 
           # 1) Hours since the last successful pipeline run (12h = 3 missed
-          #    4-hour cycles; normal gaps are ~4h).
-          LAST_SUCCESS=$(gh api "repos/$REPO/actions/workflows/$PIPELINE_WORKFLOW/runs?status=success&per_page=1" \
-            --jq '.workflow_runs[0].updated_at // empty')
+          #    4-hour cycles; normal gaps are ~4-6h). Query UNFILTERED and
+          #    pick the newest success ourselves: the API's ?status=success
+          #    filter sometimes serves stale cached results — on the reference
+          #    instance it reported a Sept 5 run as the latest success on Sept
+          #    16, 17 and 24, 2026, three false alarms.
+          LAST_SUCCESS=$(gh api "repos/$REPO/actions/workflows/$PIPELINE_WORKFLOW/runs?per_page=50" \
+            --jq '[.workflow_runs[] | select(.conclusion == "success")][0].updated_at // empty')
           if [ -z "$LAST_SUCCESS" ]; then
-            PROBLEMS="- No successful pipeline run found at all."$'\n'
+            PROBLEMS="- No successful pipeline run among the last 50 runs."$'\n'
           else
             AGE_H=$(( (NOW - $(date -u -d "$LAST_SUCCESS" +%s)) / 3600 ))
             echo "Last successful run: $LAST_SUCCESS (${AGE_H}h ago)"
@@ -48,12 +52,16 @@ jobs:
           fi
 
           # 2) Runs wedged in queued/waiting for over 2 hours (the August
-          #    failure mode: a zombie holding the concurrency group).
+          #    failure mode: a zombie holding the concurrency group). The
+          #    status filter is the only way to find an old zombie, but its
+          #    results can be stale, so confirm each candidate's live status.
           for STATUS in queued waiting; do
             STUCK=$(gh api "repos/$REPO/actions/workflows/$PIPELINE_WORKFLOW/runs?status=$STATUS&per_page=5" \
               --jq '.workflow_runs[] | "\(.id) \(.created_at)"')
             while read -r RUN_ID CREATED; do
               [ -z "$RUN_ID" ] && continue
+              LIVE=$(gh api "repos/$REPO/actions/runs/$RUN_ID" --jq '.status')
+              [ "$LIVE" = "$STATUS" ] || continue
               AGE_H=$(( (NOW - $(date -u -d "$CREATED" +%s)) / 3600 ))
               if [ "$AGE_H" -ge 2 ]; then
                 PROBLEMS="${PROBLEMS}- Run [$RUN_ID](https://github.com/$REPO/actions/runs/$RUN_ID) has been **$STATUS for ${AGE_H} hours** — likely wedged and blocking the queue. Cancel it: \`gh run cancel $RUN_ID\`"$'\n'
