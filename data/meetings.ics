@@ -390,6 +390,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:9ac801b83b37ef0c81ae@gavel
+DTSTAMP:20261015T000000Z
+DTSTART;VALUE=DATE:20261015
+SUMMARY:Village of Weston: Election Notices
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10152026-1975
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:77f111ab692cffd4c858@gavel
 DTSTAMP:20261015T000000Z
 DTSTART;TZID=America/Chicago:20261015T170000
