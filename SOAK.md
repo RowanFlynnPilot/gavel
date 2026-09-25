@@ -64,6 +64,16 @@ archive marathon-meetings.
       from the channel listing); `MAX_AUDIO_JOBS` with audio jobs last;
       the rewritten `scripts/refresh-transcripts.ps1` (log file, weekly
       yt-dlp update, commit-everything-under-transcripts push).
+- [ ] Port the Sept 25, 2026 production polish: multi-part meeting
+      grouping (one card per meeting + part switcher in the detail view;
+      PARTS_BY_ID in marathon-meetings.jsx), "CLOSED SESSION" labels and
+      notice, the detail tab-reset guard (stale Votes tab rendered blank),
+      DC Everest 3rd-Wednesday rule + rule/posted dedupe (`_name_tokens`),
+      running-time backfill from channel listings (LISTED_DURATIONS) +
+      `duration` in metadata sidecars, the early-return fix in main() (upgrade
+      passes and the run report must run on quiet runs), and the spending
+      alarm (the engine already has costs.json; port the `--check` alarm and
+      its workflow step from cost_ledger.py).
 - [ ] Residential fetcher pointed at gavel repo for one cycle
       (`python -m engine.fetch_transcripts --all --push`) upgrades an
       agenda-only meeting end to end
