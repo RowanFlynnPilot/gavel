@@ -1,0 +1,26 @@
+# Police and Fire Commission Meeting - 2026-09-28
+
+**Organization:** Village of Kronenwetter  
+**Source:** https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-27  
+**Documents:** https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2fd54e3e6ac4461bb316c1b084abbaed.pdf  
+**Summarized:** 2026-09-28 05:53 UTC
+
+---
+
+## Meeting Overview
+Based on the published agenda, the Kronenwetter Police and Fire Commission was scheduled to meet to approve previous meeting minutes, receive public comment, and conduct a closed session to interview a Fire Department applicant regarding employment matters.
+
+## Key Discussions
+### Approval of Previous Meeting Minutes
+The commission was scheduled to approve minutes from the August 24, 2026 meeting.
+
+### Fire Department Applicant Interview
+The commission was set to convene in closed session pursuant to Wisconsin Statute 19.85(1)(c) to interview a Fire Department applicant and consider employment-related matters. The closed session was designed to discuss employment, promotion, compensation, or performance evaluation data for public employees under the commission's jurisdiction.
+
+## Public Comment
+Public comment was on the agenda, limited to 15 minutes total with a three-minute time limit per person, subject to extension at the presiding officer's discretion.
+
+## Action Items
+- Scheduled to approve 08/24/2026 meeting minutes
+- Scheduled to convene in closed session to interview Fire Department applicant
+- Expected to reconvene in open session and take any necessary action following closed session discussion

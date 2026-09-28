@@ -1,5 +1,398 @@
 [
   {
+    "id": "kw_2fd54e3e6ac4461bb316c1b084abbaed",
+    "source": "kronenwetter",
+    "title": "Police and Fire Commission Meeting",
+    "date": "September 28, 2026",
+    "shortDate": "SEP 28",
+    "committee": "Police & Fire Commission",
+    "duration": null,
+    "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-27",
+    "docUrl": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2fd54e3e6ac4461bb316c1b084abbaed.pdf",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Kronenwetter Police and Fire Commission was scheduled to meet to approve previous meeting minutes, receive public comment, and conduct a closed session to interview a Fire Department applicant regarding employment matters.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Approve 08/24/2026 meeting minutes"
+      },
+      {
+        "time": "N/A",
+        "item": "Public Comment"
+      },
+      {
+        "time": "N/A",
+        "item": "Closed Session - Consideration of employment, promotion, compensation or performance evaluation data of public employee - interview Fire Department applicant"
+      },
+      {
+        "time": "N/A",
+        "item": "Reconvene into open session"
+      },
+      {
+        "time": "N/A",
+        "item": "Action after closed session"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Approval of Previous Meeting Minutes",
+        "body": "The commission was scheduled to approve minutes from the August 24, 2026 meeting."
+      },
+      {
+        "item": "Fire Department Applicant Interview",
+        "body": "The commission was set to convene in closed session pursuant to Wisconsin Statute 19.85(1)(c) to interview a Fire Department applicant and consider employment-related matters. The closed session was designed to discuss employment, promotion, compensation, or performance evaluation data for public employees under the commission's jurisdiction."
+      }
+    ],
+    "publicComment": "Public comment was on the agenda, limited to 15 minutes total with a three-minute time limit per person, subject to extension at the presiding officer's discretion.",
+    "actionItems": [
+      "Scheduled to approve 08/24/2026 meeting minutes",
+      "Scheduled to convene in closed session to interview Fire Department applicant",
+      "Expected to reconvene in open session and take any necessary action following closed session discussion"
+    ],
+    "topics": [
+      "Public Safety",
+      "Staffing",
+      "Fire Department"
+    ],
+    "votes": []
+  },
+  {
+    "id": "kw_e9a1b3cffe95400f8dedac37aa676107",
+    "source": "kronenwetter",
+    "title": "Village Board Meeting",
+    "date": "September 28, 2026",
+    "shortDate": "SEP 28",
+    "committee": "Village Board",
+    "duration": null,
+    "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-69",
+    "docUrl": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-e9a1b3cffe95400f8dedac37aa676107.pdf",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Village of Kronenwetter Board was scheduled to address staff reports, consider licensing and financial matters, and review significant planning and budgetary items including a preliminary subdivision plat, zoning code amendments, and the 2027 budget preview with a 10-year capital improvements program.",
+    "agenda": [
+      {
+        "time": "06:00 PM",
+        "item": "Administrator Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Director of Public Works and Utilities Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Finance Director/Treasurer Report - Monthly Report and August 2026 Financial Statements (Budget Status Report)"
+      },
+      {
+        "time": "N/A",
+        "item": "August 2026 Financial Statistical Report from Wisconsin Policy Forum"
+      },
+      {
+        "time": "N/A",
+        "item": "Operator Bartender License - Michelle Gee"
+      },
+      {
+        "time": "N/A",
+        "item": "August 2026 Check Register, ACH Register, and Credit Card Transactions Activity"
+      },
+      {
+        "time": "N/A",
+        "item": "Green Tree Trails Subdivision Preliminary Plat"
+      },
+      {
+        "time": "N/A",
+        "item": "Text Amendment of Chapter 520 of the General Code of Ordinances: Zero Lot Line Structures"
+      },
+      {
+        "time": "N/A",
+        "item": "2027 Budget Preview - State Aids Listing, Refuse/Recycling Fee, and Debt Service Fund Tax Levy"
+      },
+      {
+        "time": "N/A",
+        "item": "2027-2036 Capital Improvements Program (CIP) Budget - 2nd Draft: Focus on Funding Sources"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Green Tree Trails Subdivision Preliminary Plat",
+        "body": "The Board was scheduled to discuss and consider action on the preliminary plat for the Green Tree Trails subdivision development. This item was set for review as part of the land development approval process."
+      },
+      {
+        "item": "Text Amendment of Chapter 520 of the General Code of Ordinances: Zero Lot Line Structures",
+        "body": "The Board was expected to consider a text amendment to the village ordinances regarding zero lot line structures. This zoning code modification was set for discussion and possible action."
+      },
+      {
+        "item": "2027 Budget Preview",
+        "body": "The Board was scheduled to review the 2027 budget preview including state aids listings, proposed refuse/recycling fees, and debt service fund tax levy considerations. This preliminary review was set to inform discussions ahead of formal budget adoption."
+      },
+      {
+        "item": "2027-2036 Capital Improvements Program (CIP) Budget - 2nd Draft",
+        "body": "The Board was expected to examine the second draft of the 10-year capital improvements program with a focus on funding sources. This item was scheduled to guide long-term infrastructure and financial planning decisions."
+      },
+      {
+        "item": "Operator Bartender License - Michelle Gee",
+        "body": "The Board was scheduled to consider and act on an operator bartender license application for Michelle Gee. This licensing matter was set for approval or denial as part of consent agenda items."
+      },
+      {
+        "item": "August 2026 Financial Reports",
+        "body": "The Finance Director was scheduled to present monthly financial statements, budget status reports, and a financial statistical analysis comparing Kronenwetter to other North Central Wisconsin communities. These reports were set to provide fiscal oversight and accountability."
+      }
+    ],
+    "publicComment": "Public comment was on the agenda, limited to 15 minutes total with three minutes per person, at the Chief Presiding Officer's discretion.",
+    "actionItems": [
+      "Scheduled to vote on Operator Bartender License for Michelle Gee",
+      "Expected to consider and act on Green Tree Trails Subdivision Preliminary Plat",
+      "Scheduled to vote on Text Amendment of Chapter 520 regarding Zero Lot Line Structures",
+      "Expected to review and discuss 2027 Budget Preview",
+      "Scheduled to review 2027-2036 Capital Improvements Program 2nd Draft with focus on funding sources",
+      "Expected to consider 2027 refuse/recycling fees and debt service fund tax levy"
+    ],
+    "topics": [
+      "Budget",
+      "Zoning",
+      "Development",
+      "Capital Improvements Program",
+      "Green Tree Trails Subdivision"
+    ],
+    "votes": []
+  },
+  {
+    "id": "bb_764221",
+    "source": "school_board",
+    "title": "Annual Meeting Budget Hearing",
+    "date": "September 28, 2026",
+    "shortDate": "SEP 28",
+    "committee": "Annual Meeting",
+    "duration": null,
+    "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764221",
+    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764221",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Wausau School District's Annual Meeting and Budget Hearing on September 28, 2026, was scheduled to address the proposed 2026-2027 budget, consider eight resolutions for voter approval, and review the district's financial position including the Treasurer's Report and Other Post Employment Benefits. Key action items included voting on tax levies, school lunch provisions, board member compensation, and establishing the 2027 annual meeting date.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Call to Order/Pledge of Allegiance"
+      },
+      {
+        "time": "N/A",
+        "item": "Public Hearing for Resolution Requesting Starting School Prior to September 1 for 2027-2028"
+      },
+      {
+        "time": "N/A",
+        "item": "Election of Chairperson"
+      },
+      {
+        "time": "N/A",
+        "item": "Designate Secretary for Minutes"
+      },
+      {
+        "time": "N/A",
+        "item": "Designate Vote Counters"
+      },
+      {
+        "time": "N/A",
+        "item": "Enter the Thirty-Third Annual Meeting Minutes into the Record"
+      },
+      {
+        "time": "N/A",
+        "item": "State of the District Presentation"
+      },
+      {
+        "time": "N/A",
+        "item": "Treasurer's Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Other Post Employment Benefits Report"
+      },
+      {
+        "time": "N/A",
+        "item": "Budget Hearing - Review Proposed 2026-2027 Budget"
+      },
+      {
+        "time": "N/A",
+        "item": "Old Business"
+      },
+      {
+        "time": "N/A",
+        "item": "New Business"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjournment"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Public Hearing for Resolution Requesting Starting School Prior to September 1 for 2027-2028",
+        "body": "The board was scheduled to hold a public hearing regarding a resolution that would request authorization for the school district to begin the 2027-2028 school year prior to September 1. This hearing would allow community members to provide input on the proposed early start date before any action was taken."
+      },
+      {
+        "item": "State of the District Presentation",
+        "body": "Superintendent Bushman was scheduled to present a brief State of the District update to provide an overview of the district's current condition and initiatives to the board and assembled stakeholders."
+      },
+      {
+        "item": "Treasurer's Report",
+        "body": "The board was expected to review the Treasurer's Report covering financial activities through June 2026, providing an overview of the district's fiscal position and expenditures."
+      },
+      {
+        "item": "Other Post Employment Benefits Report",
+        "body": "The board was scheduled to review the OPEB Annual Report for June 2026, which addresses the district's long-term liabilities related to post-employment healthcare and other benefits."
+      },
+      {
+        "item": "Budget Hearing - Review Proposed 2026-2027 Budget",
+        "body": "Dr. Elizabeth Channel, Assistant Superintendent of Operations, was scheduled to present the proposed 2026-2027 budget, which included a detailed Budget Booklet and a summary presentation highlighting the financial plan for the upcoming fiscal year."
+      },
+      {
+        "item": "New Business - Eight Resolutions for Voter Consideration",
+        "body": "The board was scheduled to consider eight separate motions and resolutions for the electorate to vote on, including matters related to tax levies, school lunch operations, board member compensation and reimbursement, real estate authorizations, and the establishment of the 2027 annual meeting date."
+      }
+    ],
+    "publicComment": "A public comment period was included as part of the Public Hearing for the Resolution Requesting Starting School Prior to September 1 for 2027-2028; no other public comment period was specified on the agenda.",
+    "actionItems": [
+      "Board was expected to vote on the Tax Levy for General Fund and Community Service Fund",
+      "Board was expected to vote on the Tax Levy for Debt Service Fund",
+      "Board was expected to vote on authorizing school lunch operations",
+      "Board was expected to vote on authorizing reimbursement of expenses for school board members",
+      "Board was expected to vote on salaries of school board members",
+      "Board was expected to vote on the Resolution Regarding Continuing Authorization to Lease Suitable Buildings and/or Land for School Sites",
+      "Board was expected to vote on the Resolution Regarding Continuing Authorizations to Convey Partial Interests in Real Estate",
+      "Board was expected to vote on establishing the 2027 Annual Meeting date"
+    ],
+    "topics": [
+      "Budget",
+      "Policy",
+      "Finance",
+      "Early Start Resolution",
+      "Tax Levy"
+    ],
+    "votes": []
+  },
+  {
+    "id": "bb_764225",
+    "source": "school_board",
+    "title": "Special Meeting",
+    "date": "September 28, 2026",
+    "shortDate": "SEP 28",
+    "committee": "Special Meeting",
+    "duration": null,
+    "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764225",
+    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764225",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Wausau School District Board of Education was scheduled to hold a special meeting to consider an early start resolution for the 2027-2028 school year and approve a consent agenda covering personnel matters including appointments, separations, leaves of absence, and retirements. The early start resolution was the primary substantive item on the agenda.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Call to Order"
+      },
+      {
+        "time": "N/A",
+        "item": "Resolution of Starting School Prior to September 1 for the 2027-2028 School Year (Action Requested)"
+      },
+      {
+        "time": "N/A",
+        "item": "Approve Consent Agenda (Action Requested)"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjourn"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "Resolution of Starting School Prior to September 1 for the 2027-2028 School Year",
+        "body": "Diana White was scheduled to present an early start resolution for the 2027-2028 school year for board consideration. The presentation was estimated to take 5 minutes. The board was expected to vote on whether to authorize the school district to begin classes before September 1 in that school year."
+      },
+      {
+        "item": "Approve Consent Agenda",
+        "body": "The board was expected to approve a consent agenda encompassing four personnel categories: appointments of additional and replacement staff with contract increases, separations including resignations and contract decreases, leaves of absence, and retirements. The consent agenda was compiled and presented for a single vote on all items."
+      }
+    ],
+    "publicComment": "No public comment period was included on this agenda.",
+    "actionItems": [
+      "Board was expected to vote on the Early Start Resolution for the 2027-2028 school year",
+      "Board was expected to approve the consent agenda covering staff appointments, separations, leaves of absence, and retirements"
+    ],
+    "topics": [
+      "Staffing",
+      "Policy",
+      "Calendar"
+    ],
+    "votes": []
+  },
+  {
+    "id": "bb_764224",
+    "source": "school_board",
+    "title": "Committee of the Whole Meeting",
+    "date": "September 28, 2026",
+    "shortDate": "SEP 28",
+    "committee": "Committee of the Whole",
+    "duration": null,
+    "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764224",
+    "docUrl": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764224",
+    "isAgendaOnly": true,
+    "badge": null,
+    "overview": "Based on the published agenda, the Wausau School District Board of Education's Committee of the Whole meeting on September 28, 2026, was scheduled to address two action items: approval of the 2027-28 school calendar and recognition of the Wisconsin Seal of Biliteracy program through a policy update. The meeting also included an Excellence in Action segment featuring Wausau East and a public comment period.",
+    "agenda": [
+      {
+        "time": "N/A",
+        "item": "Call to Order"
+      },
+      {
+        "time": "N/A",
+        "item": "Approve the Minutes"
+      },
+      {
+        "time": "N/A",
+        "item": "Excellence in Action: Wausau East"
+      },
+      {
+        "time": "N/A",
+        "item": "Public and Student Comment"
+      },
+      {
+        "time": "N/A",
+        "item": "Audit of the Bills"
+      },
+      {
+        "time": "N/A",
+        "item": "2027-28 School Calendar (Action Requested)"
+      },
+      {
+        "time": "N/A",
+        "item": "Policy 2370 - Educational Opportunities (Wisconsin Seal of Biliteracy) (Action Requested)"
+      },
+      {
+        "time": "N/A",
+        "item": "Adjourn"
+      }
+    ],
+    "discussions": [
+      {
+        "item": "2027-28 School Calendar",
+        "body": "Diana White, Communications Coordinator, and Dr. Katie Colwell, Assistant Superintendent of Academics, were scheduled to present the proposed school calendar for the 2027-2028 school year, with an estimated presentation time of 10 minutes. The board was expected to request action on the calendar proposal."
+      },
+      {
+        "item": "Policy 2370 - Educational Opportunities (Wisconsin Seal of Biliteracy)",
+        "body": "The board was scheduled to receive information regarding the Wisconsin Seal of Biliteracy program, with an estimated presentation time of 10 minutes. Action was requested to recognize the seal as an educational opportunity offered in the district by updating Policy 2370."
+      }
+    ],
+    "publicComment": "A public and student comment period was included on this agenda.",
+    "actionItems": [
+      "Board was expected to vote on approval of the 2027-28 school calendar",
+      "Board was expected to vote on updating Policy 2370 to recognize the Wisconsin Seal of Biliteracy as an educational opportunity"
+    ],
+    "topics": [
+      "Policy",
+      "Curriculum",
+      "Biliteracy",
+      "Wausau East"
+    ],
+    "votes": []
+  },
+  {
     "id": "kw_2f716f7f5f6946adac8f233327e64e60",
     "source": "kronenwetter",
     "title": "Plan Commission Meeting",
@@ -5426,515 +5819,6 @@
         "motion": "Motion to disallow the Schillinger claim",
         "mover": "Kurt Gibbs",
         "second": null,
-        "outcome": "Approved",
-        "tally": null
-      }
-    ]
-  },
-  {
-    "id": "ldxNN_ifwu8",
-    "source": "wausau",
-    "title": "Presentation",
-    "date": "August 12, 2026",
-    "shortDate": "AUG 12",
-    "committee": "City Council",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=ldxNN_ifwu8",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau Common Council was unable to hold its regularly scheduled meeting due to a lack of quorum — fewer than the required eight members were present due to last-minute call-ins. Instead, the council held an informal presentation to honor Sheryl Bahr (referred to as 'Cheryl Barr' on her certificate) for 28 years of service on the Wausau Police and Fire Commission, from 1998 to 2026. No official council business was conducted and no votes were taken.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Announcement that quorum was not met and regular meeting would not be called to order"
-      },
-      {
-        "time": "0:45",
-        "item": "Informal retirement presentation honoring Sheryl Bahr for 28 years on the Wausau Police and Fire Commission"
-      },
-      {
-        "time": "1:30",
-        "item": "Historical context remarks by Mayor Diny about 1998, the year Bahr joined the commission"
-      },
-      {
-        "time": "3:20",
-        "item": "Remarks by Police Chief Matt Barnes"
-      },
-      {
-        "time": "5:30",
-        "item": "Remarks by Fire Chief"
-      },
-      {
-        "time": "7:30",
-        "item": "Presentation of commemorative certificate and plaque to Sheryl Bahr"
-      },
-      {
-        "time": "9:00",
-        "item": "Remarks by Sheryl Bahr"
-      },
-      {
-        "time": "10:30",
-        "item": "Conclusion of informal presentation"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Quorum Failure",
-        "body": "Mayor Diny opened by announcing that due to last-minute call-ins, the council did not have the required quorum of eight members and therefore the regular Common Council meeting would not be called to order. No official business was transacted."
-      },
-      {
-        "item": "Retirement Presentation for Sheryl Bahr",
-        "body": "Mayor Diny provided historical context about Wausau in 1998 when Bahr joined the Police and Fire Commission. Police Chief Matt Barnes spoke, noting that every sworn member of the Wausau Police Department — including himself — had been interviewed by Bahr, and praised her ability to put candidates at ease. The fire chief also spoke, noting that Bahr had participated in interviews for nearly every member of the fire department as well as all promotions in both departments, emphasizing her attentiveness and follow-up questions. Bahr received a certificate of recognition and a plaque and offered brief remarks praising Wausau as 'one of the greatest cities in the United States' and lauding the integrity of the police and fire departments."
-      },
-      {
-        "item": "Certificate Presentation",
-        "body": "Mayor Diny read aloud the certificate: 'City of Wausau, Wisconsin recognizes Cheryl Bar in recognition and appreciation of your leadership, insight, and dedication as a commissioner of the Wausau Police and Fire Commission from 1998 to 2026.' A plaque and a signed card from fire department members were also presented. The event concluded with applause and the informal meeting was adjourned."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "No official action items — meeting did not achieve quorum and no formal business was conducted"
-    ],
-    "topics": [
-      "Public Safety",
-      "Police and Fire Commission",
-      "Retirement Recognition",
-      "Wausau Police Department",
-      "Wausau Fire Department"
-    ],
-    "votes": []
-  },
-  {
-    "id": "_kisrz3_DQU",
-    "source": "wausau",
-    "title": "Board of Public Works Meeting Pt.1",
-    "date": "August 12, 2026",
-    "shortDate": "AUG 12",
-    "committee": "Board of Public Works",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=_kisrz3_DQU",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau Board of Public Works held a brief regular meeting on August 12th, approving three contractor pay estimates and a concrete license before moving into closed session to deliberate on claims. All items passed unanimously with minimal discussion.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to order"
-      },
-      {
-        "time": "0:15",
-        "item": "Item 1: Approval of minutes from August 4th regular Board of Public Works meeting"
-      },
-      {
-        "time": "0:35",
-        "item": "Item 2A: 2026 Asphalt Paving Project — ARC Pavers Pay Estimate No. 3 ($322,718.16)"
-      },
-      {
-        "time": "1:05",
-        "item": "Item 2B: Downtown Utility Project — Haas Sons Incorporated Pay Estimate No. 3 ($136,498.03)"
-      },
-      {
-        "time": "1:35",
-        "item": "Item 2C: Portland Cement Concrete License — Ross Construction"
-      },
-      {
-        "time": "2:05",
-        "item": "Item 3: Motion to enter closed session per Wisconsin Statute 19.85(1)(g) to deliberate on claims"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Approval of August 4th Meeting Minutes",
-        "body": "A board member moved to approve the minutes of the August 4th regular Board of Public Works meeting, which was seconded and passed unanimously with no discussion."
-      },
-      {
-        "item": "2026 Asphalt Paving Project — ARC Pavers Pay Estimate No. 3",
-        "body": "The board considered Pay Estimate No. 3 from ARC Pavers in the amount of $322,718.16 for the 2026 asphalt paving project. A motion to approve was made and seconded, passing unanimously with no additional discussion."
-      },
-      {
-        "item": "Downtown Utility Project — Haas Sons Incorporated Pay Estimate No. 3",
-        "body": "Pay Estimate No. 3 from Haas Sons Incorporated in the amount of $136,498.03 for the downtown utility project was brought before the board. A motion to approve was made and seconded, passing unanimously without debate."
-      },
-      {
-        "item": "Portland Cement Concrete License — Ross Construction",
-        "body": "A board member stated they had reviewed the Portland cement concrete license application from Ross Construction and moved to approve it. The motion was seconded and passed unanimously."
-      },
-      {
-        "item": "Closed Session to Deliberate on Claims",
-        "body": "The board voted unanimously to enter closed session pursuant to Wisconsin Statute 19.85(1)(g) for the purpose of deliberating on claims. No details about the nature of the claims were disclosed in open session."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "Approve minutes from the August 4th Board of Public Works meeting",
-      "Authorize payment of $322,718.16 to ARC Pavers (Pay Estimate No. 3, 2026 Asphalt Paving Project)",
-      "Authorize payment of $136,498.03 to Haas Sons Incorporated (Pay Estimate No. 3, Downtown Utility Project)",
-      "Approve Portland Cement Concrete License for Ross Construction",
-      "Convene in closed session to deliberate on claims per Wisconsin Statute 19.85(1)(g)"
-    ],
-    "topics": [
-      "Roads",
-      "Utilities",
-      "Contracts",
-      "Downtown Utility Project",
-      "Asphalt Paving"
-    ],
-    "votes": [
-      {
-        "item": "Approval of August 4th meeting minutes",
-        "motion": "Move to approve",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "ARC Pavers Pay Estimate No. 3 — $322,718.16",
-        "motion": "Move to approve",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Haas Sons Incorporated Pay Estimate No. 3 — $136,498.03",
-        "motion": "Move to approve",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Portland Cement Concrete License — Ross Construction",
-        "motion": "Move to approve",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      },
-      {
-        "item": "Enter closed session to deliberate on claims (Wisconsin Statute 19.85(1)(g))",
-        "motion": "Move to go into closed session pursuant to Wisconsin Statute 19.85(1)(g)",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": "Unanimous"
-      }
-    ]
-  },
-  {
-    "id": "Zcds2pV8DB4",
-    "source": "wausau",
-    "title": "Finance Committee Meeting",
-    "date": "August 12, 2026",
-    "shortDate": "AUG 12",
-    "committee": "Finance",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=Zcds2pV8DB4",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau Finance Committee met on August 12, 2026 and approved five action items in a brief session, including hiring an insurance consultant to competitively bid the city's property and casualty coverage for the first time since 2007, two sole-source equipment purchases for Public Works and the Municipal Airport, and two bond issuances totaling nearly $6.8 million to fund the 2026 lead service line replacement program. The meeting was significant for residents as the bond financing at a 0.25% interest rate — with a forgivable portion — represents a favorable deal for both the water utility and property owners with private lateral replacements.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to Order"
-      },
-      {
-        "time": "0:30",
-        "item": "Public Comment on Agenda Items"
-      },
-      {
-        "time": "0:50",
-        "item": "Approval of July 28, 2026 Regular Finance Committee Minutes"
-      },
-      {
-        "time": "1:30",
-        "item": "Item 3A: Authorizing Engagement of Gander Consulting Group for Insurance Consulting Services — 2027 Property and Casualty Insurance Renewal"
-      },
-      {
-        "time": "8:45",
-        "item": "Item 3B: Sole Source Request — Stacking Conveyor from Kafka Conveyors and Equipment Inc. for Department of Public Works"
-      },
-      {
-        "time": "13:10",
-        "item": "Item 3C: Sole Source Request — Jet A Refueler from Wheels on behalf of Phillips 66 for Wausau Municipal Airport"
-      },
-      {
-        "time": "21:00",
-        "item": "Item 3D: Authorizing Issuance and Sale of Up to $3,469,102 Water System Revenue Bond Series 2026 (Lead Service Line Replacement — Utility Side)"
-      },
-      {
-        "time": "36:00",
-        "item": "Item 3E: Authorizing Issuance and Sale of Up to $3,331,289 Taxable General Obligation Promissory Notes Series 2026B (Lead Service Line Replacement — Private Side)"
-      },
-      {
-        "time": "42:30",
-        "item": "Adjournment"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Approval of July 28, 2026 Finance Committee Minutes",
-        "body": "A committee member moved to approve the minutes as recorded, with Henke providing the second. No discussion was held and the motion carried on a voice vote."
-      },
-      {
-        "item": "Gander Consulting Group — Insurance Consulting Services for 2027 Renewal",
-        "body": "Finance staff (identified as Mary Ann) explained the city has been with SIVIC since 2007 without competitive review. She noted Gander Consulting would issue an RFP, review proposals, and recommend the best deal while accounting for ancillary services SIVIC provides, including NeoGov learning used by HR at no cost. The likely competitor would be the League policy. Staff recommended keeping MPIC for property insurance since the city switched to them only two years ago. A committee member noted '20 years is a long time to be with a single carrier.' The motion to authorize the engagement carried unanimously on a voice vote, moved by Neil and seconded by Henke."
-      },
-      {
-        "item": "Sole Source — Stacking Conveyor from Kafka Conveyors and Equipment Inc.",
-        "body": "Solomon from Public Works confirmed the conveyor is at end of life, heavily corroded from years of stacking salt, and that Kafka holds the original design plans, making sole source appropriate and cost-effective. Finance director Mary Ann concurred with the sole source justification. Alder Neale raised the question of written justification to the finance director, which was addressed. The motion carried unanimously, moved by Neale and seconded by Henke."
-      },
-      {
-        "item": "Sole Source — Jet A Refueler from Wheels/Phillips 66 for Wausau Municipal Airport",
-        "body": "Solomon explained the current refueler dates to 1996 and that purchasing this used unit conforms to Phillips 66 contract requirements with Wausau Flying Service and saves significant money over new procurement. He noted bids were obtained from Garsite, Westmore, and Skymark through Phillips 66 but all came in significantly higher. A committee member asked clarifying questions about the sole source justification and expressed satisfaction with the due diligence. The chair noted the prior arrangement involved the city reimbursing Wausau Flying Service and Phillips 66, making direct ownership cleaner. The motion carried unanimously, moved by Neale and seconded by [inaudible]."
-      },
-      {
-        "item": "Water System Revenue Bond Series 2026 — Up to $3,469,102 (Lead Service Line — Utility Side)",
-        "body": "Mary Ann explained this 0.25% fixed-rate Safe Drinking Water loan with a forgivable portion funds the utility side of the 2026 lead service line replacement program, with Five Star already performing work under a previously authorized contract. A committee member asked about the impact on water rates, and staff indicated Ehlers will return to the commission in September with a financial analysis; a rate case may be forthcoming. Total water utility debt was estimated at approximately $145 million as of December 31, 2025. Staff noted the loan is drawn down like a construction loan rather than paid out in a lump sum, with the DNR reviewing each draw for eligibility. The motion carried, moved by Henke and seconded by Neale."
-      },
-      {
-        "item": "General Obligation Promissory Notes Series 2026B — Up to $3,331,289 (Lead Service Line — Private Side)",
-        "body": "This taxable GO note covers the private lateral replacement side of the same lead service line program at 0.25% interest, structured as a 10-year note resulting in approximately $340,000 in annual repayments. Staff confirmed the city expects to draw close to the full amount with some contingency. Mary Ann flagged that 2027 lead service line funding applications are already submitted and a similar financing gap will need to come before the committee. The motion carried, moved by Henke and seconded by Neale."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "Authorize engagement of Gander Consulting Group to conduct RFP process for 2027 property and casualty insurance renewal, excluding MPIC property coverage",
-      "Approve sole source purchase of stacking conveyor from Kafka Conveyors and Equipment Inc. for the Department of Public Works",
-      "Approve sole source purchase of used Jet A refueler from Wheels/Phillips 66 for Wausau Municipal Airport",
-      "Authorize issuance and sale of up to $3,469,102 Water System Revenue Bond Series 2026 for lead service line replacement (utility side); forward to full Council",
-      "Authorize issuance and sale of up to $3,331,289 Taxable General Obligation Promissory Notes Series 2026B for lead service line replacement (private side); forward to full Council",
-      "Staff to prepare 2027 lead service line financing gap analysis for future Finance Committee consideration"
-    ],
-    "topics": [
-      "Budget",
-      "Utilities",
-      "Lead Service Line Replacement",
-      "Airport",
-      "Insurance"
-    ],
-    "votes": [
-      {
-        "item": "Approval of July 28, 2026 Finance Committee minutes",
-        "motion": "Motion to approve as recorded",
-        "mover": null,
-        "second": "Henke",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Authorize Gander Consulting Group for 2027 insurance consulting services",
-        "motion": "Motion to approve moving ahead with this",
-        "mover": "Neil",
-        "second": "Henke",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Sole source purchase of stacking conveyor from Kafka Conveyors and Equipment Inc.",
-        "motion": "Motion to move ahead with the sole source request",
-        "mover": "Neale",
-        "second": "Henke",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Sole source purchase of Jet A refueler from Wheels/Phillips 66 for Wausau Municipal Airport",
-        "motion": "Motion to move forward with this sole source request",
-        "mover": "Neil",
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Water System Revenue Bond Series 2026 — up to $3,469,102",
-        "motion": "So moved",
-        "mover": "Henke",
-        "second": "Neil",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Taxable General Obligation Promissory Notes Series 2026B — up to $3,331,289",
-        "motion": "Motion to approve",
-        "mover": "Henke",
-        "second": "Neil",
-        "outcome": "Approved",
-        "tally": null
-      }
-    ]
-  },
-  {
-    "id": "WLE_RyH2jGE",
-    "source": "wausau",
-    "title": "Board of Public Works Meeting Pt.2",
-    "date": "August 12, 2026",
-    "shortDate": "AUG 12",
-    "committee": "Board of Public Works",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=WLE_RyH2jGE",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau Board of Public Works held a brief second session in which members voted to deny a damage claim filed by Thomas P. Miller in the amount of $1,519.93, then immediately adjourned. The denial of the claim is the sole substantive action recorded in this portion of the meeting.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Claim of Thomas P. Miller — $1,519.93"
-      },
-      {
-        "time": "0:20",
-        "item": "Adjournment"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Claim of Thomas P. Miller — $1,519.93",
-        "body": "A board member moved to deny the claim of Thomas P. Miller in the amount of $1,519.93. The motion was seconded and passed with audible 'aye' votes from those present. No debate or public comment on the claim was recorded in the transcript."
-      },
-      {
-        "item": "Adjournment",
-        "body": "Immediately following the vote on the Miller claim, a member moved to adjourn. The motion was seconded and approved by unanimous voice vote, concluding the meeting."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "Deny the claim of Thomas P. Miller in the amount of $1,519.93"
-    ],
-    "topics": [
-      "Claims",
-      "Public Works"
-    ],
-    "votes": [
-      {
-        "item": "Denial of claim — Thomas P. Miller, $1,519.93",
-        "motion": "Move to deny the claim of Thomas P. Miller in the amount of $1,519.93",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Adjournment",
-        "motion": "Motion to adjourn",
-        "mover": null,
-        "second": null,
-        "outcome": "Approved",
-        "tally": null
-      }
-    ]
-  },
-  {
-    "id": "PRds_P-9bfk",
-    "source": "wausau",
-    "title": "Water Works Commission Meeting",
-    "date": "August 12, 2026",
-    "shortDate": "AUG 12",
-    "committee": "Water Works",
-    "duration": null,
-    "url": "https://www.youtube.com/watch?v=PRds_P-9bfk",
-    "docUrl": null,
-    "isAgendaOnly": false,
-    "badge": null,
-    "overview": "The Wausau Water Works Commission held its August 12, 2026 meeting, covering a fluoride supply shortage that has prompted the utility to cut dosing to half normal levels, ongoing GAC carbon vessel change-outs for PFAS treatment, and a detailed corrosion control treatment study presentation from CDM Smith recommending addition of orthophosphate at 1 mg/L to reduce lead levels ahead of new federal regulations. The commission voted to approve a proposal for a PFAS process waste tank and chemical room addition project estimated at approximately $2.5 million, to be partially funded by $1.667 million in federal grant funds.",
-    "agenda": [
-      {
-        "time": "0:00",
-        "item": "Call to order"
-      },
-      {
-        "time": "0:30",
-        "item": "Item 1: Consideration and approval of minutes from July 14, 2026 meeting"
-      },
-      {
-        "time": "1:10",
-        "item": "Item 2: Director's report — fluoride supply shortage update"
-      },
-      {
-        "time": "3:45",
-        "item": "Item 2 continued: GAC carbon vessel change-out update and PFAS performance"
-      },
-      {
-        "time": "10:20",
-        "item": "Item 2 continued: Headwater screening and Cherry Street lift station update (wastewater)"
-      },
-      {
-        "time": "11:30",
-        "item": "Item 3: Presentation by CDM Smith on Wausau Waterworks Corrosion Control Treatment Study"
-      },
-      {
-        "time": "53:00",
-        "item": "Item 4: Discussion and possible action — PFAS process waste tank and chemical room project proposal"
-      },
-      {
-        "time": "1:08:00",
-        "item": "Motion to adjourn"
-      }
-    ],
-    "discussions": [
-      {
-        "item": "Approval of July 14, 2026 Meeting Minutes",
-        "body": "The chair called for a motion to approve the minutes. A motion was made by Gellhar and seconded by Hadley. The minutes were approved by voice vote with no corrections noted."
-      },
-      {
-        "item": "Fluoride Supply Shortage",
-        "body": "Staff identified as Scott reported that the utility received a fluoride shipment last month but was advised the next shipment may not arrive until late next month, prompting a reduction of fluoride dosing to approximately half the normal level, consistent with actions taken by larger communities facing the same shortage. Staff noted the DNR has approved the approach and that staff is attempting to reach the county health department director for guidance on whether to notify dental offices, schools, and other entities of the reduction. One commissioner noted the CDC has been working on fluoride elimination since April, to which the chair responded the commission had previously heard public debate on fluoride."
-      },
-      {
-        "item": "GAC Carbon Vessel Change-Out and PFAS Performance",
-        "body": "Scott reported that the first GAC carbon change-out on August 5–6 went well, with Carbon Activated Corporation praised for professionalism, and that the next change-out is scheduled for September 3 using regenerated carbon from the first vessel. Staff noted that carbon saturation is occurring faster than anticipated — the vessels are not lasting the expected two years on regenerated carbon — and that change-outs will need to be expedited. Staff explained they are monitoring influent PFAS levels, which have remained stable, and are working to find the operational 'sweet spot' to maximize carbon longevity while staying under the 4 parts per trillion PFAS limit required by 2029. A commissioner asked whether influent PFAS concentrations are increasing; staff confirmed they are not."
-      },
-      {
-        "item": "CDM Smith Corrosion Control Treatment Study Presentation",
-        "body": "CDM Smith representatives Amu Itasi and Javier Lockson presented findings from a roughly year-and-a-half pipe loop study required by the Wisconsin DNR due to Wausau's treatment process change. Key findings included: the new treatment plant did not significantly change lead mineral phases on pipe scale; fifth-liter sampling (required under the new Lead and Copper Rule Improvements effective 2028) showed a 90th percentile lead concentration of 19.2 micrograms per liter, exceeding both current and upcoming action levels, versus 14.2 for first-liter sampling which would have kept the system in compliance; and orthophosphate at 1 mg/L produced the best results, reducing lead concentrations and variability without the particulate lead release seen at 3 mg/L. The DNR accepted the study and directed Wausau to begin dosing orthophosphate at 1 mg/L with the system operational by July 2028, though CDM Smith recommended having it online by spring 2026 to allow 8–12 months for the treatment to take effect before new sampling requirements begin. Commissioners asked about health effects of orthophosphate (deemed safe and widely used since the 1990s), impacts on wastewater phosphorus loads (existing plant already designed to handle phosphorus removal), biological growth risks in the distribution system, and whether the existing sodium silicate corrosion control would continue alongside orthophosphate (confirmed yes, for now)."
-      },
-      {
-        "item": "PFAS Process Waste Tank and Chemical Room Project Proposal",
-        "body": "Director Eric explained that $1.667 million in federal grant funds originally earmarked for carbon change-outs can no longer be used for that purpose and must be applied to a capital project. The proposal calls for an underground process waste tank — needed because the existing 100,000-gallon tank causes plant operational lockouts during frequent carbon change-out backwashing — plus a chemical room addition for orthophosphate dosing and a storage room convertible to a future chemical room. The total project is estimated at approximately $2.5 million, leaving a projected shortfall of $700,000–$800,000 after the grant. Susan from Donahue Engineering confirmed the estimate. Staff noted a pending EPA verification on the competitive procurement process used to select Donahue. Commissioners were told an updated capital plan would be presented by Aylers on September 1st. Motion to approve was made by Hadley and seconded by Van Craig; the proposal was approved by voice vote."
-      }
-    ],
-    "publicComment": "No public comment was offered.",
-    "actionItems": [
-      "Staff to continue monitoring fluoride supply chain and report back; seek guidance from county health department on communications to dental offices, schools, and other affected parties regarding reduced fluoride levels",
-      "Staff to work with Carbon Activated Corporation to expedite GAC carbon change-out schedule and explore agreement for the next six vessels",
-      "Wausau Waterworks to proceed with design and construction of orthophosphate dosing system targeting 1 mg/L, with system online by spring 2027 (ahead of July 2028 DNR deadline)",
-      "Await EPA verification that existing competitive procurement with Donahue Engineering satisfies grant procurement requirements for the PFAS process waste tank and chemical room project",
-      "Financial update on capital plan impacts to be presented by Aylers at the September 1, 2026 commission meeting",
-      "Commission to meet next on Tuesday, September 1, 2026 at 11:30 a.m. in City Hall Council Chambers"
-    ],
-    "topics": [
-      "Utilities",
-      "PFAS Treatment",
-      "Lead and Copper Rule",
-      "Fluoride Supply",
-      "Corrosion Control"
-    ],
-    "votes": [
-      {
-        "item": "Approval of July 14, 2026 meeting minutes",
-        "motion": "Motion to approve the minutes",
-        "mover": "Gellhar",
-        "second": "Hadley",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "PFAS process waste tank and chemical room project proposal",
-        "motion": "Motion to approve the PFAS process waste tank and chemical room project proposal as presented",
-        "mover": "Hadley",
-        "second": "Van Craig",
-        "outcome": "Approved",
-        "tally": null
-      },
-      {
-        "item": "Adjournment",
-        "motion": "Motion to adjourn",
-        "mover": "Martins",
-        "second": "Gellhar",
         "outcome": "Approved",
         "tally": null
       }

@@ -1,0 +1,43 @@
+# Annual Meeting Budget Hearing - 2026-09-28
+
+**Organization:** Wausau School Board  
+**Source:** https://meetings.boardbook.org/Public/Agenda/1360?meeting=764221  
+**Documents:** https://meetings.boardbook.org/Public/Agenda/1360?meeting=764221  
+**Summarized:** 2026-09-28 05:52 UTC
+
+---
+
+## Meeting Overview
+Based on the published agenda, the Wausau School District's Annual Meeting and Budget Hearing on September 28, 2026, was scheduled to address the proposed 2026-2027 budget, consider eight resolutions for voter approval, and review the district's financial position including the Treasurer's Report and Other Post Employment Benefits. Key action items included voting on tax levies, school lunch provisions, board member compensation, and establishing the 2027 annual meeting date.
+
+## Key Discussions
+### Public Hearing for Resolution Requesting Starting School Prior to September 1 for 2027-2028
+The board was scheduled to hold a public hearing regarding a resolution that would request authorization for the school district to begin the 2027-2028 school year prior to September 1. This hearing would allow community members to provide input on the proposed early start date before any action was taken.
+
+### State of the District Presentation
+Superintendent Bushman was scheduled to present a brief State of the District update to provide an overview of the district's current condition and initiatives to the board and assembled stakeholders.
+
+### Treasurer's Report
+The board was expected to review the Treasurer's Report covering financial activities through June 2026, providing an overview of the district's fiscal position and expenditures.
+
+### Other Post Employment Benefits Report
+The board was scheduled to review the OPEB Annual Report for June 2026, which addresses the district's long-term liabilities related to post-employment healthcare and other benefits.
+
+### Budget Hearing - Review Proposed 2026-2027 Budget
+Dr. Elizabeth Channel, Assistant Superintendent of Operations, was scheduled to present the proposed 2026-2027 budget, which included a detailed Budget Booklet and a summary presentation highlighting the financial plan for the upcoming fiscal year.
+
+### New Business - Eight Resolutions for Voter Consideration
+The board was scheduled to consider eight separate motions and resolutions for the electorate to vote on, including matters related to tax levies, school lunch operations, board member compensation and reimbursement, real estate authorizations, and the establishment of the 2027 annual meeting date.
+
+## Public Comment
+A public comment period was included as part of the Public Hearing for the Resolution Requesting Starting School Prior to September 1 for 2027-2028; no other public comment period was specified on the agenda.
+
+## Action Items
+- Board was expected to vote on the Tax Levy for General Fund and Community Service Fund
+- Board was expected to vote on the Tax Levy for Debt Service Fund
+- Board was expected to vote on authorizing school lunch operations
+- Board was expected to vote on authorizing reimbursement of expenses for school board members
+- Board was expected to vote on salaries of school board members
+- Board was expected to vote on the Resolution Regarding Continuing Authorization to Lease Suitable Buildings and/or Land for School Sites
+- Board was expected to vote on the Resolution Regarding Continuing Authorizations to Convey Partial Interests in Real Estate
+- Board was expected to vote on establishing the 2027 Annual Meeting date

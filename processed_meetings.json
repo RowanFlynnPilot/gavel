@@ -1840,6 +1840,61 @@
       "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-31",
       "processed_at": "2026-09-21T03:03:21.213659+00:00",
       "summary_file": "summaries/kronenwetter-plan-commission-meeting-2026-09-21-kw-2f716f7f5f6946adac8f233327e64e60.md"
+    },
+    "bb_764224": {
+      "title": "Committee of the Whole Meeting - 2026-09-28",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764224",
+      "upload_date": "20260928",
+      "meeting_date": "20260928",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-09-28T05:52:41.967730+00:00",
+      "summary_file": "summaries/school-board-committee-of-the-whole-meeting-2026-09-28-bb-764224.md"
+    },
+    "bb_764225": {
+      "title": "Special Meeting - 2026-09-28",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764225",
+      "upload_date": "20260928",
+      "meeting_date": "20260928",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-09-28T05:52:45.925063+00:00",
+      "summary_file": "summaries/school-board-special-meeting-2026-09-28-bb-764225.md"
+    },
+    "bb_764221": {
+      "title": "Annual Meeting Budget Hearing - 2026-09-28",
+      "source": "school_board",
+      "doc_url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764221",
+      "upload_date": "20260928",
+      "meeting_date": "20260928",
+      "duration": null,
+      "video_url": null,
+      "processed_at": "2026-09-28T05:52:55.675636+00:00",
+      "summary_file": "summaries/school-board-annual-meeting-budget-hearing-2026-09-28-bb-764221.md"
+    },
+    "kw_e9a1b3cffe95400f8dedac37aa676107": {
+      "title": "Village Board Meeting - 2026-09-28",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-e9a1b3cffe95400f8dedac37aa676107.pdf",
+      "upload_date": "20260928",
+      "meeting_date": "20260928",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-69",
+      "processed_at": "2026-09-28T05:53:05.561580+00:00",
+      "summary_file": "summaries/kronenwetter-village-board-meeting-2026-09-28-kw-e9a1b3cffe95400f8dedac37aa676107.md"
+    },
+    "kw_2fd54e3e6ac4461bb316c1b084abbaed": {
+      "title": "Police and Fire Commission Meeting - 2026-09-28",
+      "source": "kronenwetter",
+      "doc_url": "https://mccmeetings.blob.core.usgovcloudapi.net/krnwtrwi-pubu/MEET-Agenda-2fd54e3e6ac4461bb316c1b084abbaed.pdf",
+      "upload_date": "20260928",
+      "meeting_date": "20260928",
+      "duration": null,
+      "video_url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-27",
+      "processed_at": "2026-09-28T05:53:10.354906+00:00",
+      "summary_file": "summaries/kronenwetter-police-and-fire-commission-meeting-2026-09-28-kw-2fd54e3e6ac4461bb316c1b084abbaed.md"
     }
   }
 }
