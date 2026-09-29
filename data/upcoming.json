@@ -115,27 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-28",
-      "time": "7:30 AM",
-      "name": "Police & Fire Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2486/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "5:00 PM",
-      "name": "Bicycle & Pedestrian Advisory Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2126/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "5:30 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3608/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-29",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -211,30 +190,37 @@
       "name": "Infrastructure & Facilities Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2444/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-08",
+      "time": "6:30 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3585/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-12",
+      "time": "4:45 PM",
+      "name": "Human Resources Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2034/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-12",
+      "time": "5:00 PM",
+      "name": "Citizen Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/677/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3606/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-28",
-      "time": "",
-      "name": "Comprehensive Plan Steering Committee (Village Board and Plan Commission)",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1972",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "",
-      "name": "Park and Recreation Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09282026-1973",
-      "source": "weston"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "6:00 PM",
-      "name": "Parks & Recreation Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-09-29",
       "time": "",
@@ -364,34 +350,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-09-28",
-      "time": "5:00 PM",
-      "name": "Annual Meeting Budget Hearing",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764221",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "5:00 PM",
-      "name": "Education & Operations Committee",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "5:15 PM",
-      "name": "Special Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764225",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "5:20 PM",
-      "name": "Committee of the Whole Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=764224",
-      "source": "school_board"
-    },
-    {
       "date": "2026-10-12",
       "time": "5:00 PM",
       "name": "Regular Board Meeting",
@@ -421,20 +379,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-09-28",
-      "time": "5:00 PM",
-      "name": "Police and Fire Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-27",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-09-28",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-69",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-10-12",
       "time": "6:00 PM",
