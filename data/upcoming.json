@@ -115,13 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-29",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3602/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-09-30",
       "time": "5:00 PM",
       "name": "Citizen Advisory Committee Meeting",
@@ -218,16 +211,16 @@
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3606/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "5:15 PM",
+      "name": "Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2418/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-09-29",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_09292026-1974",
-      "source": "weston"
-    },
     {
       "date": "2026-10-05",
       "time": "6:00 PM",
