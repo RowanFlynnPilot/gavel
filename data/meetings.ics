@@ -78,6 +78,18 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:ada9e0d2f10da929ee1c@gavel
+DTSTAMP:20261005T000000Z
+DTSTART;TZID=America/Chicago:20261005T180000
+DTEND;TZID=America/Chicago:20261005T193000
+SUMMARY:Village of Kronenwetter: Community Life\, Infrastructure and Public
+  Property (CLIPP) Committee Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-li
+ fe-infrastructure-and-public-property-clipp-committee-meeting-27
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:cb238e67dc951a6af677@gavel
 DTSTAMP:20261005T000000Z
 DTSTART;TZID=America/Chicago:20261005T183000
@@ -104,6 +116,17 @@ DTSTART;TZID=America/Chicago:20261006T171500
 DTEND;TZID=America/Chicago:20261006T184500
 SUMMARY:City of Wausau: Economic Development Committee Meeting
 URL:https://wausauwi.portal.civicclerk.com/event/2405/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:8a4472181fdea768b58d@gavel
+DTSTAMP:20261006T000000Z
+DTSTART;TZID=America/Chicago:20261006T174500
+DTEND;TZID=America/Chicago:20261006T191500
+SUMMARY:Village of Kronenwetter: Utility Committee Meeting
+URL:https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committ
+ ee-meeting-30
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
