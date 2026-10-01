@@ -115,13 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-09-30",
-      "time": "5:00 PM",
-      "name": "Citizen Advisory Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3609/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-10-01",
       "time": "5:00 PM",
       "name": "Sustainability, Energy & Environment Committee Meeting",
@@ -217,6 +210,13 @@
       "time": "5:15 PM",
       "name": "Finance Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2418/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-13",
+      "time": "6:30 PM",
+      "name": "Common Council Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/1970/overview",
       "source": "wausau"
     }
   ],
