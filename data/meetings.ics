@@ -78,6 +78,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:c881053e4f0d4f32d79e@gavel
+DTSTAMP:20261006T000000Z
+DTSTART;VALUE=DATE:20261006
+SUMMARY:Village of Weston: Mountain Bay Metropolitan Police Oversight Board
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10062026-1977
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:ebb0fab034b11456c86e@gavel
 DTSTAMP:20261006T000000Z
 DTSTART;TZID=America/Chicago:20261006T113000
