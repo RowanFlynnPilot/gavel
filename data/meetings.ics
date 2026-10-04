@@ -598,4 +598,14 @@ URL:https://www.marathoncounty.gov/about-us/county-calendar
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
+BEGIN:VEVENT
+UID:0af3eaa4714af56a16f9@gavel
+DTSTAMP:20261203T000000Z
+DTSTART;TZID=America/Chicago:20261203T170000
+DTEND;TZID=America/Chicago:20261203T183000
+SUMMARY:Marathon County: Health & Human Services Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
 END:VCALENDAR
