@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-10-05",
-      "time": "5:15 PM",
-      "name": "Parks & Recreation Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2457/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-05",
-      "time": "6:30 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3582/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-10-06",
       "time": "11:30 AM",
       "name": "Water Works Commission Meeting",
@@ -218,14 +204,28 @@
       "name": "Airport Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/1957/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-15",
+      "time": "4:45 PM",
+      "name": "Transit Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2184/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "7:30 AM",
+      "name": "Police & Fire Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2487/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
     {
-      "date": "2026-10-05",
-      "time": "6:00 PM",
-      "name": "Community Life & Public Safety Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "date": "2026-10-06",
+      "time": "",
+      "name": "Mountain Bay Metropolitan Police Oversight Board",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10062026-1977",
       "source": "weston"
     },
     {
@@ -247,6 +247,13 @@
       "time": "6:00 PM",
       "name": "S.A.F.E.R. Board of Directors",
       "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-10-15",
+      "time": "",
+      "name": "Election Notices",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10152026-1975",
       "source": "weston"
     },
     {
@@ -365,13 +372,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-10-05",
-      "time": "6:00 PM",
-      "name": "Community Life, Infrastructure and Public Property (CLIPP) Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-life-infrastructure-and-public-property-clipp-committee-meeting-27",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-10-06",
       "time": "5:45 PM",

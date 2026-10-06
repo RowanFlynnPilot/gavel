@@ -27,44 +27,11 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:3353039c269e7bfe39e0@gavel
-DTSTAMP:20261005T000000Z
-DTSTART;TZID=America/Chicago:20261005T171500
-DTEND;TZID=America/Chicago:20261005T184500
-SUMMARY:City of Wausau: Parks & Recreation Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2457/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:0bc020317ee1a8f7b25f@gavel
-DTSTAMP:20261005T000000Z
-DTSTART;TZID=America/Chicago:20261005T180000
-DTEND;TZID=America/Chicago:20261005T193000
-SUMMARY:Village of Weston: Community Life & Public Safety Committee
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:ada9e0d2f10da929ee1c@gavel
-DTSTAMP:20261005T000000Z
-DTSTART;TZID=America/Chicago:20261005T180000
-DTEND;TZID=America/Chicago:20261005T193000
-SUMMARY:Village of Kronenwetter: Community Life\, Infrastructure and Public
-  Property (CLIPP) Committee Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-clipp/page/community-li
- fe-infrastructure-and-public-property-clipp-committee-meeting-27
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:cb238e67dc951a6af677@gavel
-DTSTAMP:20261005T000000Z
-DTSTART;TZID=America/Chicago:20261005T183000
-DTEND;TZID=America/Chicago:20261005T200000
-SUMMARY:City of Wausau: Finance Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3582/overview
+UID:c881053e4f0d4f32d79e@gavel
+DTSTAMP:20261006T000000Z
+DTSTART;VALUE=DATE:20261006
+SUMMARY:Village of Weston: Mountain Bay Metropolitan Police Oversight Board
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10062026-1977
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -312,6 +279,25 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:9ac801b83b37ef0c81ae@gavel
+DTSTAMP:20261015T000000Z
+DTSTART;VALUE=DATE:20261015
+SUMMARY:Village of Weston: Election Notices
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10152026-1975
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:f895dbd19c922a38c77b@gavel
+DTSTAMP:20261015T000000Z
+DTSTART;TZID=America/Chicago:20261015T164500
+DTEND;TZID=America/Chicago:20261015T181500
+SUMMARY:City of Wausau: Transit Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2184/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:77f111ab692cffd4c858@gavel
 DTSTAMP:20261015T000000Z
 DTSTART;TZID=America/Chicago:20261015T170000
@@ -328,6 +314,16 @@ DTSTART;TZID=America/Chicago:20261015T180000
 DTEND;TZID=America/Chicago:20261015T193000
 SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:94af7f8e1275b4234656@gavel
+DTSTAMP:20261019T000000Z
+DTSTART;TZID=America/Chicago:20261019T073000
+DTEND;TZID=America/Chicago:20261019T090000
+SUMMARY:City of Wausau: Police & Fire Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2487/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
