@@ -248,16 +248,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:f895dbd19c922a38c77b@gavel
-DTSTAMP:20261015T000000Z
-DTSTART;TZID=America/Chicago:20261015T164500
-DTEND;TZID=America/Chicago:20261015T181500
-SUMMARY:City of Wausau: Transit Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2184/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:77f111ab692cffd4c858@gavel
 DTSTAMP:20261015T000000Z
 DTSTART;TZID=America/Chicago:20261015T170000
