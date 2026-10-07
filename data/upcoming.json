@@ -115,27 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-10-06",
-      "time": "11:30 AM",
-      "name": "Water Works Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2196/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "5:15 PM",
-      "name": "Economic Development Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2405/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-06",
-      "time": "6:30 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3583/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-10-07",
       "time": "5:00 PM",
       "name": "Citizen Advisory Committee Meeting",
@@ -218,16 +197,30 @@
       "name": "Transit Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2184/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "7:30 AM",
+      "name": "Police & Fire Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2487/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-19",
+      "time": "5:15 PM",
+      "name": "Public Health & Safety Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2470/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-20",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3607/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-10-06",
-      "time": "",
-      "name": "Mountain Bay Metropolitan Police Oversight Board",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10062026-1977",
-      "source": "weston"
-    },
     {
       "date": "2026-10-12",
       "time": "6:00 PM",
@@ -372,13 +365,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-10-06",
-      "time": "5:45 PM",
-      "name": "Utility Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-uc/page/utility-committee-meeting-30",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-10-12",
       "time": "6:00 PM",
