@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:99c7efbc1c600aacb9da@gavel
-DTSTAMP:20261007T000000Z
-DTSTART;TZID=America/Chicago:20261007T183000
-DTEND;TZID=America/Chicago:20261007T200000
-SUMMARY:City of Wausau: Finance Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3584/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:dec1146f2dc67a1b62d8@gavel
 DTSTAMP:20261008T000000Z
 DTSTART;TZID=America/Chicago:20261008T150000
@@ -318,6 +308,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:b54f0cb4ce3d2426a9ce@gavel
+DTSTAMP:20261021T000000Z
+DTSTART;TZID=America/Chicago:20261021T170000
+DTEND;TZID=America/Chicago:20261021T183000
+SUMMARY:City of Wausau: Citizen Advisory Committee - PUBLIC HEARING
+URL:https://wausauwi.portal.civicclerk.com/event/3616/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:b876c8b2345c99c9ceeb@gavel
 DTSTAMP:20261026T000000Z
 DTSTART;TZID=America/Chicago:20261026T170000
@@ -544,6 +544,16 @@ DTSTART;TZID=America/Chicago:20261203T170000
 DTEND;TZID=America/Chicago:20261203T183000
 SUMMARY:Marathon County: Health & Human Services Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:c2d7d5f70a51023c78b9@gavel
+DTSTAMP:20261207T000000Z
+DTSTART;TZID=America/Chicago:20261207T180000
+DTEND;TZID=America/Chicago:20261207T193000
+SUMMARY:Village of Weston: Community Life & Public Safety Committee
+URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

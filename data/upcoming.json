@@ -115,13 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-10-07",
-      "time": "6:30 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3584/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-10-08",
       "time": "5:00 PM",
       "name": "Infrastructure & Facilities Committee Meeting",
@@ -210,6 +203,13 @@
       "time": "5:00 PM",
       "name": "Plan Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3520/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "5:00 PM",
+      "name": "Citizen Advisory Committee - PUBLIC HEARING",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3616/overview",
       "source": "wausau"
     }
   ],
@@ -323,6 +323,13 @@
       "date": "2026-11-23",
       "time": "6:00 PM",
       "name": "Parks & Recreation Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-12-07",
+      "time": "6:00 PM",
+      "name": "Community Life & Public Safety Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
     }
