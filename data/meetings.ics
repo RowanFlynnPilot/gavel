@@ -278,6 +278,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:796a8dd6240aab8a08a2@gavel
+DTSTAMP:20261021T000000Z
+DTSTART;TZID=America/Chicago:20261021T160000
+DTEND;TZID=America/Chicago:20261021T173000
+SUMMARY:City of Wausau: Board of Zoning Appeals Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3642/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:b54f0cb4ce3d2426a9ce@gavel
 DTSTAMP:20261021T000000Z
 DTSTART;TZID=America/Chicago:20261021T170000
@@ -294,16 +304,6 @@ DTSTART;TZID=America/Chicago:20261021T170000
 DTEND;TZID=America/Chicago:20261021T183000
 SUMMARY:Wausau School Board: Closed Meeting
 URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=771083
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:1b978c3de5531071a0bf@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T160000
-DTEND;TZID=America/Chicago:20261026T173000
-SUMMARY:City of Wausau: Room Tax Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2338/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
