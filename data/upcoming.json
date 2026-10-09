@@ -1,20 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-10-08",
-      "time": "3:00 PM",
-      "name": "Executive Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-10-08",
-      "time": "5:00 PM",
-      "name": "Infrastructure Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-10-13",
       "time": "5:00 PM",
       "name": "Public Safety Committee",
@@ -111,16 +97,16 @@
       "name": "Health & Human Services Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2026-12-08",
+      "time": "5:00 PM",
+      "name": "Public Safety Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
-    {
-      "date": "2026-10-08",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2444/overview",
-      "source": "wausau"
-    },
     {
       "date": "2026-10-12",
       "time": "4:30 PM",
@@ -203,6 +189,20 @@
       "time": "5:00 PM",
       "name": "Plan Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3520/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-21",
+      "time": "5:00 PM",
+      "name": "Citizen Advisory Committee - PUBLIC HEARING",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3616/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "4:00 PM",
+      "name": "Room Tax Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2338/overview",
       "source": "wausau"
     }
   ],
@@ -323,6 +323,13 @@
       "date": "2026-12-07",
       "time": "6:00 PM",
       "name": "Community Life & Public Safety Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2026-12-08",
+      "time": "6:00 PM",
+      "name": "S.A.F.E.R. Board of Directors",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
     }
