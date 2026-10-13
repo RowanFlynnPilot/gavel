@@ -129,27 +129,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-10-12",
-      "time": "4:30 PM",
-      "name": "Historic Preservation Commission Ad Hoc Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3641/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-12",
-      "time": "4:45 PM",
-      "name": "Human Resources Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2034/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-12",
-      "time": "5:00 PM",
-      "name": "Citizen Advisory Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/677/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-10-13",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -225,23 +204,30 @@
       "name": "Citizen Advisory Committee - PUBLIC HEARING",
       "url": "https://wausauwi.portal.civicclerk.com/event/3616/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "4:00 PM",
+      "name": "Room Tax Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2338/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "5:00 PM",
+      "name": "Bicycle & Pedestrian Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2127/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3612/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-10-12",
-      "time": "6:00 PM",
-      "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10122026-1978",
-      "source": "weston"
-    },
-    {
-      "date": "2026-10-12",
-      "time": "6:00 PM",
-      "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10122026-1979",
-      "source": "weston"
-    },
     {
       "date": "2026-10-13",
       "time": "6:00 PM",
@@ -357,20 +343,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-10-12",
-      "time": "5:00 PM",
-      "name": "Regular Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=769562",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-10-12",
-      "time": "5:00 PM",
-      "name": "Regular Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
       "date": "2026-10-21",
       "time": "5:00 PM",
       "name": "Closed Meeting",
@@ -400,13 +372,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-10-12",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-64",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-10-13",
       "time": "5:30 PM",
