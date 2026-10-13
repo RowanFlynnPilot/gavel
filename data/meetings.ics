@@ -157,6 +157,18 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:c30cc87e36b63f56c64a@gavel
+DTSTAMP:20261019T000000Z
+DTSTART;TZID=America/Chicago:20261019T150000
+DTEND;TZID=America/Chicago:20261019T163000
+SUMMARY:Village of Kronenwetter: Administrative Policy Committee and Villag
+ e Board - Budget Workshop 1
+URL:https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative
+ -policy-committee-and-village-board-budget-workshop-1
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:41fe0dac1ef5b826b4f7@gavel
 DTSTAMP:20261019T000000Z
 DTSTART;TZID=America/Chicago:20261019T171500
