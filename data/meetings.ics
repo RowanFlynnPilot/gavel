@@ -86,6 +86,15 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:5d2ee8ccea0eb242ca49@gavel
+DTSTAMP:20261019T000000Z
+DTSTART;VALUE=DATE:20261019
+SUMMARY:Village of Weston: Village Board of Trustees
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10192026-1982
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:3af0979936252bfdb5ec@gavel
 DTSTAMP:20261019T000000Z
 DTSTART;VALUE=DATE:20261019
