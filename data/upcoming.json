@@ -232,7 +232,7 @@
       "date": "2026-10-19",
       "time": "",
       "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10192026-1982",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10192026-1983",
       "source": "weston"
     },
     {
@@ -361,6 +361,13 @@
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-11-02",
+      "time": "5:00 PM",
+      "name": "Closed Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=772792",
       "source": "school_board"
     },
     {
