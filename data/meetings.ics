@@ -589,4 +589,24 @@ URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
+BEGIN:VEVENT
+UID:fd823a99637d9e9e5d45@gavel
+DTSTAMP:20261217T000000Z
+DTSTART;TZID=America/Chicago:20261217T170000
+DTEND;TZID=America/Chicago:20261217T183000
+SUMMARY:Marathon County: HR\, Finance & Property Committee
+URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:fe54fa3f99b7b5ac32df@gavel
+DTSTAMP:20261217T000000Z
+DTSTART;TZID=America/Chicago:20261217T180000
+DTEND;TZID=America/Chicago:20261217T193000
+SUMMARY:Village of Weston: Mountain Bay Metro Police Oversight
+URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
 END:VCALENDAR
