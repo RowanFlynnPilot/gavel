@@ -190,16 +190,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:6a2076136f3eb5124033@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T170000
-DTEND;TZID=America/Chicago:20261026T183000
-SUMMARY:City of Wausau: Bicycle & Pedestrian Advisory Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2127/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:b876c8b2345c99c9ceeb@gavel
 DTSTAMP:20261026T000000Z
 DTSTART;TZID=America/Chicago:20261026T170000
