@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-10-19",
-      "time": "7:30 AM",
-      "name": "Police & Fire Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2487/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-10-19",
-      "time": "5:15 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2470/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-10-20",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -211,37 +197,16 @@
       "name": "Board of Public Works Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3613/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-11-04",
+      "time": "11:30 AM",
+      "name": "Water Works Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2197/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-10-19",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10192026-1983",
-      "source": "weston"
-    },
-    {
-      "date": "2026-10-19",
-      "time": "",
-      "name": "Tourism Commission",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10192026-1981",
-      "source": "weston"
-    },
-    {
-      "date": "2026-10-19",
-      "time": "5:30 PM",
-      "name": "Finance & Human Resources Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
-    {
-      "date": "2026-10-19",
-      "time": "6:00 PM",
-      "name": "Board of Trustees",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-10-26",
       "time": "6:00 PM",
@@ -386,20 +351,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-10-19",
-      "time": "3:00 PM",
-      "name": "Administrative Policy Committee and Village Board - Budget Workshop 1",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-and-village-board-budget-workshop-1",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-10-19",
-      "time": "6:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-32",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-10-20",
       "time": "6:00 PM",
