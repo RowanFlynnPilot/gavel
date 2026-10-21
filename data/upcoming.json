@@ -357,6 +357,14 @@
       "source": "school_board"
     }
   ],
-  "kronenwetter": [],
+  "kronenwetter": [
+    {
+      "date": "2026-10-26",
+      "time": "6:00 PM",
+      "name": "Village Board Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-70",
+      "source": "kronenwetter"
+    }
+  ],
   "dc_everest": []
 }
