@@ -157,13 +157,6 @@
       "source": "wausau"
     },
     {
-      "date": "2026-10-28",
-      "time": "4:30 PM",
-      "name": "Historic Preservation Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2503/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-11-02",
       "time": "5:15 PM",
       "name": "Parks & Recreation Committee Meeting",
@@ -207,6 +200,20 @@
     }
   ],
   "weston": [
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "name": "Community, Life and Public Safety (CLPS) Committee",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10262026-1985",
+      "source": "weston"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "name": "Park and Recreation Committee",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10262026-1984",
+      "source": "weston"
+    },
     {
       "date": "2026-10-26",
       "time": "6:00 PM",
@@ -350,14 +357,6 @@
       "source": "school_board"
     }
   ],
-  "kronenwetter": [
-    {
-      "date": "2026-10-26",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-70",
-      "source": "kronenwetter"
-    }
-  ],
+  "kronenwetter": [],
   "dc_everest": []
 }

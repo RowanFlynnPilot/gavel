@@ -57,6 +57,25 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:b6f20e7d9eb7db18d3ef@gavel
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261026
+SUMMARY:Village of Weston: Community\, Life and Public Safety (CLPS) Commit
+ tee
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10262026-1985
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:b3edfe6a31755b8f09e2@gavel
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261026
+SUMMARY:Village of Weston: Park and Recreation Committee
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10262026-1984
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:bfb4275bf05e22496b8d@gavel
 DTSTAMP:20261026T000000Z
 DTSTART;TZID=America/Chicago:20261026T160000
@@ -84,17 +103,6 @@ DTSTART;TZID=America/Chicago:20261026T180000
 DTEND;TZID=America/Chicago:20261026T193000
 SUMMARY:Village of Weston: Parks & Recreation Committee
 URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:e727442161284823691e@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T180000
-DTEND;TZID=America/Chicago:20261026T193000
-SUMMARY:Village of Kronenwetter: Village Board Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-m
- eeting-70
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -145,16 +153,6 @@ DTSTART;TZID=America/Chicago:20261027T190000
 DTEND;TZID=America/Chicago:20261027T203000
 SUMMARY:Marathon County: County Board Meeting
 URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:61df1b9047b479f35c56@gavel
-DTSTAMP:20261028T000000Z
-DTSTART;TZID=America/Chicago:20261028T163000
-DTEND;TZID=America/Chicago:20261028T180000
-SUMMARY:City of Wausau: Historic Preservation Commission Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2503/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
