@@ -179,13 +179,6 @@
     },
     {
       "date": "2026-11-05",
-      "time": "9:00 AM",
-      "name": "Police and Fire Commission",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3647/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-05",
       "time": "5:00 PM",
       "name": "Sustainability, Energy & Environment Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2174/overview",
@@ -196,6 +189,13 @@
       "time": "4:45 PM",
       "name": "Human Resources Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2035/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-10",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3614/overview",
       "source": "wausau"
     }
   ],
