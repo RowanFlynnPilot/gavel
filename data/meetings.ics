@@ -208,6 +208,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:87e3b093257a98058c89@gavel
+DTSTAMP:20261105T000000Z
+DTSTART;TZID=America/Chicago:20261105T090000
+DTEND;TZID=America/Chicago:20261105T103000
+SUMMARY:City of Wausau: Police and Fire Commission
+URL:https://wausauwi.portal.civicclerk.com/event/3647/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:d23400ff373c7ab51133@gavel
 DTSTAMP:20261105T000000Z
 DTSTART;TZID=America/Chicago:20261105T170000
@@ -265,16 +275,6 @@ DTSTART;TZID=America/Chicago:20261109T180000
 DTEND;TZID=America/Chicago:20261109T193000
 SUMMARY:Village of Weston: Public Works Committee
 URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b044e01693b588f6d2d6@gavel
-DTSTAMP:20261110T000000Z
-DTSTART;TZID=America/Chicago:20261110T103000
-DTEND;TZID=America/Chicago:20261110T120000
-SUMMARY:City of Wausau: Board of Public Works Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3614/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
