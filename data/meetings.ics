@@ -57,12 +57,32 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:b4ef9dce00a4bd3d3780@gavel
+DTSTAMP:20261026T000000Z
+DTSTART;TZID=America/Chicago:20261026T170000
+DTEND;TZID=America/Chicago:20261026T183000
+SUMMARY:Wausau School Board: Committee of the Whole Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=773225
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:b876c8b2345c99c9ceeb@gavel
 DTSTAMP:20261026T000000Z
 DTSTART;TZID=America/Chicago:20261026T170000
 DTEND;TZID=America/Chicago:20261026T183000
 SUMMARY:Wausau School Board: Education & Operations Committee
 URL:https://meetings.boardbook.org/Public/Organization/1360
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:7e19afec9aa38d1281d7@gavel
+DTSTAMP:20261026T000000Z
+DTSTART;TZID=America/Chicago:20261026T173000
+DTEND;TZID=America/Chicago:20261026T190000
+SUMMARY:Wausau School Board: Special Meeting
+URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=773231
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
@@ -134,6 +154,16 @@ DTSTART;TZID=America/Chicago:20261027T190000
 DTEND;TZID=America/Chicago:20261027T203000
 SUMMARY:Marathon County: County Board Meeting
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:17bb075974a11a1f2e13@gavel
+DTSTAMP:20261028T000000Z
+DTSTART;TZID=America/Chicago:20261028T180000
+DTEND;TZID=America/Chicago:20261028T193000
+SUMMARY:DC Everest School Board: Annual Meeting/Budget Hearing
+URL:https://meetings.boardbook.org/Public/Agenda/1315?meeting=763081
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

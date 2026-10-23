@@ -345,8 +345,22 @@
     {
       "date": "2026-10-26",
       "time": "5:00 PM",
+      "name": "Committee of the Whole Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=773225",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "5:00 PM",
       "name": "Education & Operations Committee",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "5:30 PM",
+      "name": "Special Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=773231",
       "source": "school_board"
     },
     {
@@ -387,5 +401,13 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": []
+  "dc_everest": [
+    {
+      "date": "2026-10-28",
+      "time": "6:00 PM",
+      "name": "Annual Meeting/Budget Hearing",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=763081",
+      "source": "dc_everest"
+    }
+  ]
 }
