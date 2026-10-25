@@ -82,8 +82,9 @@ def fetch_meeting_data(agendas_cfg: dict, doc_url: str) -> dict | None:
 
 
 def fetch_agenda_text(agendas_cfg: dict, doc_url: str) -> str | None:
-    """Fetch the agenda's plain text via the published-files blob URL —
-    no PDF parsing needed."""
+    """Fetch the agenda's plain text via GetMeetingFileStream — no PDF
+    parsing needed. (GetMeetingFile, the blob-URL route, returns 404 as of
+    Oct 2026; ported from marathon-meetings dfe04a9.)"""
     base = agendas_cfg["api_base"]
     event_id_m = re.search(r"/event/(\d+)", doc_url)
     if not event_id_m:
@@ -110,17 +111,11 @@ def fetch_agenda_text(agendas_cfg: dict, doc_url: str) -> str | None:
         if not file_id:
             return None
         r3 = requests.get(
-            f"{base}/Meetings/GetMeetingFile(fileId={file_id},plainText=true)",
-            headers=_HEADERS, timeout=10,
+            f"{base}/Meetings/GetMeetingFileStream(fileId={file_id},plainText=true)",
+            headers=_HEADERS, timeout=15,
         )
-        if r3.status_code != 200:
-            return None
-        blob_url = r3.json().get("blobUri", "")
-        if not blob_url:
-            return None
-        r4 = requests.get(blob_url, timeout=15)
-        if r4.status_code == 200 and len(r4.text) > 100:
-            return r4.text.strip()
+        if r3.status_code == 200 and len(r3.text) > 100:
+            return r3.text.strip()
     except Exception as e:
         print(f"       CivicClerk agenda fetch failed: {e}")
     return None

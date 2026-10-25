@@ -74,6 +74,10 @@ archive marathon-meetings.
       passes and the run report must run on quiet runs), and the spending
       alarm (the engine already has costs.json; port the `--check` alarm and
       its workflow step from cost_ledger.py).
+- [x] Port the Oct 23, 2026 production fix (marathon-meetings dfe04a9):
+      CivicClerk agenda text via `GetMeetingFileStream(plainText=true)`;
+      `GetMeetingFile` (blob URL) returns 404, which left agenda-only
+      CivicClerk meetings with no text (`engine/adapters/civicclerk.py`).
 - [ ] Residential fetcher pointed at gavel repo for one cycle
       (`python -m engine.fetch_transcripts --all --push`) upgrades an
       agenda-only meeting end to end
