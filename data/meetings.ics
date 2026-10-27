@@ -27,87 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:b6f20e7d9eb7db18d3ef@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;VALUE=DATE:20261026
-SUMMARY:Village of Weston: Community\, Life and Public Safety (CLPS) Commit
- tee
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10262026-1985
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b3edfe6a31755b8f09e2@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;VALUE=DATE:20261026
-SUMMARY:Village of Weston: Park and Recreation Committee
-URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_10262026-1984
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:bfb4275bf05e22496b8d@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T160000
-DTEND;TZID=America/Chicago:20261026T173000
-SUMMARY:City of Wausau: Joint Room Tax Commission and Finance Committee Mee
- ting
-URL:https://wausauwi.portal.civicclerk.com/event/2338/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b4ef9dce00a4bd3d3780@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T170000
-DTEND;TZID=America/Chicago:20261026T183000
-SUMMARY:Wausau School Board: Committee of the Whole Meeting
-URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=773225
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:b876c8b2345c99c9ceeb@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T170000
-DTEND;TZID=America/Chicago:20261026T183000
-SUMMARY:Wausau School Board: Education & Operations Committee
-URL:https://meetings.boardbook.org/Public/Organization/1360
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:7e19afec9aa38d1281d7@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T173000
-DTEND;TZID=America/Chicago:20261026T190000
-SUMMARY:Wausau School Board: Special Meeting
-URL:https://meetings.boardbook.org/Public/Agenda/1360?meeting=773231
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:eb344c27dfc727a45f90@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T180000
-DTEND;TZID=America/Chicago:20261026T193000
-SUMMARY:Village of Weston: Parks & Recreation Committee
-URL:https://www.westonwi.gov/agendacenter
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
-UID:1999e3c8f1e2d321437d@gavel
-DTSTAMP:20261026T000000Z
-DTSTART;TZID=America/Chicago:20261026T180000
-DTEND;TZID=America/Chicago:20261026T193000
-SUMMARY:Village of Kronenwetter: Revised Village Board Meeting
-URL:https://kronenwetter-wi.municodemeetings.com/bc-vb/page/revised-village
- -board-meeting-6
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:e13c864c3460fc786ba1@gavel
 DTSTAMP:20261027T000000Z
 DTSTART;TZID=America/Chicago:20261027T103000
@@ -341,12 +260,32 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:5f067cc29c6b2c0b32b4@gavel
+DTSTAMP:20261110T000000Z
+DTSTART;TZID=America/Chicago:20261110T171500
+DTEND;TZID=America/Chicago:20261110T184500
+SUMMARY:City of Wausau: Finance Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2419/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:95b3bb276862ef75d53c@gavel
 DTSTAMP:20261110T000000Z
 DTSTART;TZID=America/Chicago:20261110T180000
 DTEND;TZID=America/Chicago:20261110T193000
 SUMMARY:Village of Weston: S.A.F.E.R. Board of Directors
 URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:9e59151f63d6d4aaa91d@gavel
+DTSTAMP:20261110T000000Z
+DTSTART;TZID=America/Chicago:20261110T183000
+DTEND;TZID=America/Chicago:20261110T200000
+SUMMARY:City of Wausau: Common Council Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/1971/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
