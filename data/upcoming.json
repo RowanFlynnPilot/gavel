@@ -204,6 +204,13 @@
       "name": "Liquor License Review Subcommittee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3652/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-11-16",
+      "time": "5:15 PM",
+      "name": "Public Health & Safety Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2471/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
@@ -311,6 +318,13 @@
       "name": "Board of Trustees",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2026-12-28",
+      "time": "6:00 PM",
+      "name": "Parks & Recreation Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -341,6 +355,13 @@
       "name": "Regular Board Meeting",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
+    },
+    {
+      "date": "2026-12-28",
+      "time": "5:00 PM",
+      "name": "Education & Operations Committee",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
     }
   ],
   "kronenwetter": [
@@ -366,13 +387,5 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": [
-    {
-      "date": "2026-10-28",
-      "time": "6:00 PM",
-      "name": "Annual Meeting/Budget Hearing",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=763081",
-      "source": "dc_everest"
-    }
-  ]
+  "dc_everest": []
 }
