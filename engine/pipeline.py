@@ -79,6 +79,14 @@ def _fetch_agenda_text(cfg: InstanceConfig, source_key: str,
 
 # ── Video processing (YouTube-first jurisdictions) ────────────────────────────
 
+def _has_votes(items: list) -> bool:
+    """True when CivicClerk has recorded a vote on any agenda item or sub-item.
+    Votes are posted with the minutes, often after a meeting is processed;
+    until then the vote prompt can only say, item by item, that none was
+    recorded, so the agenda prompt summarizes it instead."""
+    return any(i["votes"] or _has_votes(i["children"]) for i in items)
+
+
 def process_video(cfg: InstanceConfig, video: dict,
                   auth_failures: list) -> str | None:
     vid_id, title, url, source_key = (
@@ -127,12 +135,13 @@ def process_video(cfg: InstanceConfig, video: dict,
         print("    Fetching CivicClerk vote data...")
         civic_data = civicclerk.fetch_meeting_data(jur.agendas, doc_url)
         if civic_data:
-            print(f"  [ok]  Got {len(civic_data.get('items', []))} agenda items with votes")
+            print(f"  [ok]  Got {len(civic_data.get('items', []))} agenda items, "
+                  f"{'votes recorded' if _has_votes(civic_data.get('items', [])) else 'no votes recorded yet'}")
 
     if summary is None:
         agenda_text = _fetch_agenda_text(cfg, source_key, doc_url, title, description)
         if agenda_text:
-            if civic_data and civic_data.get("items"):
+            if civic_data and _has_votes(civic_data.get("items", [])):
                 print("  [claude]  Summarizing from agenda + CivicClerk vote data...")
                 summary = summarize.summarize_from_agenda_with_votes(
                     agenda_text, title, url, civic_data, org_label=jur.name,
