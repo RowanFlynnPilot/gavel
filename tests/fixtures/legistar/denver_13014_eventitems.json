@@ -1,0 +1,60 @@
+[
+ {
+  "EventItemId": 239628,
+  "EventItemAgendaNumber": null,
+  "EventItemTitle": "A Proclamation of the City and County of Denver in Opposition to Amendment 82 (“Constitutional Right to Purchase and Sell Natural Gas”)",
+  "EventItemActionName": "adopted",
+  "EventItemActionText": "A motion offered by Council member Kashmann, duly seconded by Council member Hinds, that Council Proclamation 26-1539 be adopted, carried by the following vote:",
+  "EventItemPassedFlag": 1,
+  "EventItemPassedFlagName": "Pass",
+  "EventItemMover": "Paul Kashmann",
+  "EventItemSeconder": "Chris Hinds",
+  "EventItemTally": null,
+  "EventItemRollCallFlag": 0,
+  "EventItemConsent": 0,
+  "EventItemMatterFile": "26-1539",
+  "EventItemMatterName": null,
+  "EventItemMatterType": "Proclamation",
+  "EventItemMatterAttachments": [
+   {
+    "MatterAttachmentName": "Proclamation Against Amendment 82.docx",
+    "MatterAttachmentHyperlink": "https://denver.legistar1.com/denver/attachments/cfbf234a-4335-4430-9c98-14f03d2fb963.docx",
+    "MatterAttachmentFileName": "cfbf234a-4335-4430-9c98-14f03d2fb963.docx"
+   },
+   {
+    "MatterAttachmentName": "Amendment 82 Committee Presentation.pdf",
+    "MatterAttachmentHyperlink": "https://denver.legistar1.com/denver/attachments/31c4e7c7-b902-478f-bbd0-2209ab08bc55.pdf",
+    "MatterAttachmentFileName": "31c4e7c7-b902-478f-bbd0-2209ab08bc55.pdf"
+   }
+  ]
+ },
+ {
+  "EventItemId": 239623,
+  "EventItemAgendaNumber": null,
+  "EventItemTitle": "Minutes of Monday, October 19, 2026",
+  "EventItemActionName": "approved",
+  "EventItemActionText": "Minutes 26-1616 were approved.",
+  "EventItemPassedFlag": null,
+  "EventItemPassedFlagName": null,
+  "EventItemMover": null,
+  "EventItemSeconder": null,
+  "EventItemTally": null,
+  "EventItemRollCallFlag": 0,
+  "EventItemConsent": 0,
+  "EventItemMatterFile": "26-1616",
+  "EventItemMatterName": null,
+  "EventItemMatterType": "Approved Minutes",
+  "EventItemMatterAttachments": [
+   {
+    "MatterAttachmentName": "Minutes_10-19-2026",
+    "MatterAttachmentHyperlink": "https://denver.legistar1.com/denver/attachments/46d07f34-bf4a-4e1a-abf4-ecf7e72eff22.pdf",
+    "MatterAttachmentFileName": "46d07f34-bf4a-4e1a-abf4-ecf7e72eff22.pdf"
+   },
+   {
+    "MatterAttachmentName": "Minutes_10-19-2026 SIGNED",
+    "MatterAttachmentHyperlink": "https://denver.legistar1.com/denver/attachments/c993639d-87f9-441a-b336-0a54962424fb.pdf",
+    "MatterAttachmentFileName": "c993639d-87f9-441a-b336-0a54962424fb.pdf"
+   }
+  ]
+ }
+]

@@ -30,8 +30,8 @@ from . import publish as publish_mod
 from . import summarize, upcoming
 from .adapters import boardbook as bb_adapter
 from .adapters import get_adapter, youtube
-from .config import (AGENDA_RETRY_DAYS, InstanceConfig, load_instance,
-                     setup_logging)
+from .config import (AGENDA_RETRY_DAYS, VOTE_ADAPTERS, InstanceConfig,
+                     load_instance, setup_logging)
 from .errors import AdapterStructureError, TranscriptAuthError
 from .output import save_summary
 from .state import (clear_injected, load_state, mark_processed,
@@ -53,11 +53,10 @@ def _fetch_agenda_text(cfg: InstanceConfig, source_key: str,
     adapter_name = jur.agendas_adapter
     print("  [agenda]  Trying agenda document fallback...")
 
-    if adapter_name == "civicclerk" and doc_url:
-        from .adapters import civicclerk
-        text = civicclerk.fetch_agenda_text(jur.agendas, doc_url)
+    if adapter_name in VOTE_ADAPTERS and doc_url:
+        text = get_adapter(adapter_name).fetch_agenda_text(jur.agendas, doc_url)
         if text:
-            print(f"       Agenda text from CivicClerk ({len(text)} chars)")
+            print(f"       Agenda text from {adapter_name} ({len(text)} chars)")
             return text
 
     if adapter_name == "agendacenter":
@@ -80,10 +79,10 @@ def _fetch_agenda_text(cfg: InstanceConfig, source_key: str,
 # ── Video processing (YouTube-first jurisdictions) ────────────────────────────
 
 def _has_votes(items: list) -> bool:
-    """True when CivicClerk has recorded a vote on any agenda item or sub-item.
-    Votes are posted with the minutes, often after a meeting is processed;
-    until then the vote prompt can only say, item by item, that none was
-    recorded, so the agenda prompt summarizes it instead."""
+    """True when the portal (CivicClerk, Legistar) has recorded a vote on any
+    agenda item or sub-item. Votes are posted with the minutes, often after a
+    meeting is processed; until then the vote prompt can only say, item by
+    item, that none was recorded, so the agenda prompt summarizes it instead."""
     return any(i["votes"] or _has_votes(i["children"]) for i in items)
 
 
@@ -130,10 +129,9 @@ def process_video(cfg: InstanceConfig, video: dict,
             print(f"    Found: {doc_url}")
 
     civic_data = None
-    if jur.agendas_adapter == "civicclerk" and doc_url:
-        from .adapters import civicclerk
-        print("    Fetching CivicClerk vote data...")
-        civic_data = civicclerk.fetch_meeting_data(jur.agendas, doc_url)
+    if jur.agendas_adapter in VOTE_ADAPTERS and doc_url:
+        print(f"    Fetching {jur.agendas_adapter} vote data...")
+        civic_data = get_adapter(jur.agendas_adapter).fetch_meeting_data(jur.agendas, doc_url)
         if civic_data:
             print(f"  [ok]  Got {len(civic_data.get('items', []))} agenda items, "
                   f"{'votes recorded' if _has_votes(civic_data.get('items', [])) else 'no votes recorded yet'}")
@@ -142,7 +140,7 @@ def process_video(cfg: InstanceConfig, video: dict,
         agenda_text = _fetch_agenda_text(cfg, source_key, doc_url, title, description)
         if agenda_text:
             if civic_data and _has_votes(civic_data.get("items", [])):
-                print("  [claude]  Summarizing from agenda + CivicClerk vote data...")
+                print("  [claude]  Summarizing from agenda + vote data...")
                 summary = summarize.summarize_from_agenda_with_votes(
                     agenda_text, title, url, civic_data, org_label=jur.name,
                     region=cfg.region, jurisdiction=source_key, meeting_id=vid_id)
