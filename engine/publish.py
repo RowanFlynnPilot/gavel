@@ -9,7 +9,7 @@ The published PAST-MEETING RECORD (one element of data/meetings.json):
      committee, duration ("1h 20m"|null), url, docUrl, isAgendaOnly,
      badge ("new"|null), overview, agenda: [{time, item}],
      discussions: [{item, body}], publicComment, actionItems: [str],
-     civicItems?: [...] (CivicClerk jurisdictions only)}
+     civicItems?: [...] (CivicClerk and Legistar jurisdictions only)}
 """
 
 from __future__ import annotations
@@ -20,7 +20,7 @@ import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from .config import InstanceConfig, MEETINGS_JSON, STATE_FILE
+from .config import InstanceConfig, MEETINGS_JSON, STATE_FILE, VOTE_ADAPTERS
 from .state import load_injected, load_state, save_injected
 
 logger = logging.getLogger(__name__)
@@ -263,12 +263,12 @@ def build_meeting(cfg: InstanceConfig, video_id: str, info: dict,
         "publicComment": summary.get("publicComment", "No public comment was offered."),
         "actionItems": summary.get("actionItems", []),
         "topics": summary.get("topics", []),
-        # Structured votes from transcript/minutes summaries; CivicClerk
-        # jurisdictions get richer civicItems below (frontend prefers those).
+        # Structured votes from transcript/minutes summaries; CivicClerk and
+        # Legistar jurisdictions get richer civicItems below (frontend prefers those).
         "votes": summary.get("votes", []),
     }
 
-    if civic_data and jur.agendas_adapter == "civicclerk":
+    if civic_data and jur.agendas_adapter in VOTE_ADAPTERS:
         items = civic_data.get("items", [])
         if items:
             meeting["civicItems"] = items

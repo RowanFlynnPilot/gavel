@@ -132,7 +132,7 @@ Rules:
 
 
 def _format_civic_votes_for_prompt(civic_data: dict) -> str:
-    """Format CivicClerk vote data into text for inclusion in a prompt."""
+    """Format portal vote data (CivicClerk, Legistar) into text for inclusion in a prompt."""
     lines = []
     for item in civic_data.get("items", []):
         name = item.get("name", "").strip()
@@ -177,14 +177,14 @@ def summarize_from_agenda_with_votes(agenda_text: str, title: str, url: str,
                                      civic_data: dict, *, org_label: str,
                                      region: str, jurisdiction: str,
                                      meeting_id: str) -> dict:
-    """Agenda + official CivicClerk vote records — actual outcomes known."""
+    """Agenda + official vote records (CivicClerk, Legistar) — actual outcomes known."""
     vote_text = _format_civic_votes_for_prompt(civic_data)
 
     prompt = f"""You are a local government reporter covering {region}.
 
 Meeting title: {title}
 Organization: {org_label}
-Source: Agenda document + official vote records from CivicClerk
+Source: Agenda document + official vote records
 YouTube: {url}
 
 Below is the meeting agenda AND the official vote/action records. The vote records show what ACTUALLY HAPPENED — motions made, who voted yes/no, and whether items passed or failed. Use this to report actual outcomes.

@@ -24,7 +24,9 @@ logger = logging.getLogger(__name__)
 
 # ── Adapter registry names (modules live in engine/adapters/) ─────────────────
 VIDEO_ADAPTERS = {"youtube"}
-AGENDA_ADAPTERS = {"civicclerk", "boardbook", "agendacenter", "municode", "rule_schedule"}
+AGENDA_ADAPTERS = {"civicclerk", "legistar", "boardbook", "agendacenter", "municode", "rule_schedule"}
+# Agenda adapters whose API gives structured items with recorded votes (fetch_meeting_data).
+VOTE_ADAPTERS = {"civicclerk", "legistar"}
 
 # ── Anthropic client (two-tier model strategy, env-overridable) ───────────────
 CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6")
@@ -130,6 +132,8 @@ class Jurisdiction:
         if adapter == "civicclerk":
             _require(self.agendas, "api_base", f"{ctx}.agendas")
             _require(self.agendas, "portal", f"{ctx}.agendas")
+        elif adapter == "legistar":
+            _require(self.agendas, "client", f"{ctx}.agendas")
         elif adapter == "boardbook":
             _require(self.agendas, "base", f"{ctx}.agendas")
             _require(self.agendas, "org_id", f"{ctx}.agendas")

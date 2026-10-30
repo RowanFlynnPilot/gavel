@@ -22,6 +22,7 @@ from ..errors import UnknownAdapterError
 _ADAPTER_MODULES = {
     "youtube": "engine.adapters.youtube",
     "civicclerk": "engine.adapters.civicclerk",
+    "legistar": "engine.adapters.legistar",
     "boardbook": "engine.adapters.boardbook",
     "agendacenter": "engine.adapters.agendacenter",
     "municode": "engine.adapters.municode",
