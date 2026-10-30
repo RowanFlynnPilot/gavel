@@ -30,8 +30,8 @@ from . import publish as publish_mod
 from . import summarize, upcoming
 from .adapters import boardbook as bb_adapter
 from .adapters import get_adapter, youtube
-from .config import (AGENDA_RETRY_DAYS, VOTE_ADAPTERS, InstanceConfig,
-                     load_instance, setup_logging)
+from .config import (AGENDA_RETRY_DAYS, PORTAL_ADAPTERS, VOTE_ADAPTERS,
+                     InstanceConfig, load_instance, setup_logging)
 from .errors import AdapterStructureError, TranscriptAuthError
 from .output import save_summary
 from .state import (clear_injected, load_state, mark_processed,
@@ -53,7 +53,7 @@ def _fetch_agenda_text(cfg: InstanceConfig, source_key: str,
     adapter_name = jur.agendas_adapter
     print("  [agenda]  Trying agenda document fallback...")
 
-    if adapter_name in VOTE_ADAPTERS and doc_url:
+    if adapter_name in PORTAL_ADAPTERS and doc_url:
         text = get_adapter(adapter_name).fetch_agenda_text(jur.agendas, doc_url)
         if text:
             print(f"       Agenda text from {adapter_name} ({len(text)} chars)")

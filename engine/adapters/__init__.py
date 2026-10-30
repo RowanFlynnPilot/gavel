@@ -23,6 +23,7 @@ _ADAPTER_MODULES = {
     "youtube": "engine.adapters.youtube",
     "civicclerk": "engine.adapters.civicclerk",
     "legistar": "engine.adapters.legistar",
+    "primegov": "engine.adapters.primegov",
     "boardbook": "engine.adapters.boardbook",
     "agendacenter": "engine.adapters.agendacenter",
     "municode": "engine.adapters.municode",

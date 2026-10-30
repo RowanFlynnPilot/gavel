@@ -1,0 +1,155 @@
+[
+ {
+  "id": 2728,
+  "title": "City Council Regular Meeting",
+  "dateTime": "2026-11-02T18:30:00",
+  "date": "Nov 02, 2026",
+  "time": "06:30 PM",
+  "documentList": [
+   {
+    "id": 8884,
+    "language": "en-US",
+    "compileOutputType": 3,
+    "publishStatus": 1,
+    "publishDate": "2026-10-29T18:24:05.39",
+    "templateId": 11309,
+    "meetingId": 2728,
+    "sortOrder": 1,
+    "templateSortOrder": 1,
+    "link": null,
+    "templateName": "HTML Agenda"
+   },
+   {
+    "id": 8874,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-29T11:47:05.907",
+    "templateId": 11309,
+    "meetingId": 2728,
+    "sortOrder": 2,
+    "templateSortOrder": 1,
+    "link": null,
+    "templateName": "Agenda"
+   },
+   {
+    "id": 8885,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-29T18:24:07.733",
+    "templateId": 11311,
+    "meetingId": 2728,
+    "sortOrder": 2,
+    "templateSortOrder": 3,
+    "link": null,
+    "templateName": "Packet"
+   }
+  ]
+ },
+ {
+  "id": 2741,
+  "title": "Police Pension Board",
+  "dateTime": "2026-11-03T18:00:00",
+  "date": "Nov 03, 2026",
+  "time": "06:00 PM",
+  "documentList": [
+   {
+    "id": 8877,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-27T16:50:53.46",
+    "templateId": 11361,
+    "meetingId": 2741,
+    "sortOrder": 2,
+    "templateSortOrder": 1,
+    "link": null,
+    "templateName": "Agenda"
+   },
+   {
+    "id": 8879,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-28T14:45:41.403",
+    "templateId": 11363,
+    "meetingId": 2741,
+    "sortOrder": 2,
+    "templateSortOrder": 3,
+    "link": null,
+    "templateName": "Packet"
+   }
+  ]
+ },
+ {
+  "id": 5149,
+  "title": "Regular City Council & Special Housing Authority Meeting - Versión en Español",
+  "dateTime": "2026-10-20T16:00:00",
+  "date": "Oct 20, 2026",
+  "time": "04:00 PM",
+  "documentList": [
+   {
+    "id": 55987,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-14T01:55:56.01",
+    "templateId": 25732,
+    "meetingId": 5149,
+    "sortOrder": 2,
+    "templateSortOrder": 1,
+    "link": null,
+    "templateName": "Agenda"
+   }
+  ]
+ },
+ {
+  "id": 5138,
+  "title": "Regular City Council & Special Housing Authority Meeting",
+  "dateTime": "2026-10-20T16:00:00",
+  "date": "Oct 20, 2026",
+  "time": "04:00 PM",
+  "documentList": [
+   {
+    "id": 56101,
+    "language": "en-US",
+    "compileOutputType": 3,
+    "publishStatus": 1,
+    "publishDate": "2026-10-20T21:16:25.04",
+    "templateId": 25666,
+    "meetingId": 5138,
+    "sortOrder": 1,
+    "templateSortOrder": 1,
+    "link": null,
+    "templateName": "HTML Agenda"
+   },
+   {
+    "id": 55994,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-15T18:30:46.08",
+    "templateId": 25666,
+    "meetingId": 5138,
+    "sortOrder": 2,
+    "templateSortOrder": 1,
+    "link": null,
+    "templateName": "Agenda"
+   },
+   {
+    "id": 55995,
+    "language": "en-US",
+    "compileOutputType": 1,
+    "publishStatus": 1,
+    "publishDate": "2026-10-15T18:30:48.68",
+    "templateId": 25668,
+    "meetingId": 5138,
+    "sortOrder": 2,
+    "templateSortOrder": 2,
+    "link": null,
+    "templateName": "Agenda Packet"
+   }
+  ]
+ }
+]

@@ -1,7 +1,7 @@
 """Upcoming step — build data/upcoming.json, keyed by jurisdiction key.
 
 Each jurisdiction's upcoming list is the union of:
-  - its agendas adapter's posted future meetings (civicclerk / legistar API, boardbook /
+  - its agendas adapter's posted future meetings (civicclerk / legistar / primegov API, boardbook /
     agendacenter / municode scrape), which handle their own fallback_rules
   - the rule_schedule projection, for rule_schedule jurisdictions
   - an optional YouTube description scan (video.scan_descriptions_for_upcoming)
