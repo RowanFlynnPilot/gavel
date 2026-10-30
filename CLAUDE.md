@@ -75,7 +75,8 @@ engine/
     ├── __init__.py      registry — get_adapter(name), fail loud on unknown
     ├── youtube.py       channel listing (flat-playlist), title-date parsing
     ├── civicclerk.py    OData API: votes, agenda text, upcoming
-    ├── legistar.py      Legistar Web API: items + roll calls, agenda PDF, upcoming
+    ├── legistar.py      Legistar Web API: items + roll calls, agenda item list, upcoming
+    ├── primegov.py      PrimeGov public portal: HTML agenda text, upcoming (no votes)
     ├── boardbook.py     org-page scrape, agenda scrape, recording matcher
     ├── agendacenter.py  CivicPlus AgendaCenter scrape (Weston-style)
     ├── municode.py      Municode Meetings hub (Kronenwetter-style)
@@ -92,11 +93,12 @@ WPR `instance.json` in this repo for the reference schema; notable blocks
 per jurisdiction:
 - `video` (nullable): `{adapter: "youtube", channel_url, doc_pattern?,
   upgrade_window_days?, scan_descriptions_for_upcoming?}`
-- `agendas`: `{adapter: civicclerk|legistar|boardbook|agendacenter|municode|
+- `agendas`: `{adapter: civicclerk|legistar|primegov|boardbook|agendacenter|municode|
   rule_schedule, ...adapter-specific fields, days_ahead?, fallback_rules?}`.
-  civicclerk and legistar (`client`: the city's Legistar name, e.g. `sanjose`)
-  also give structured items with recorded votes (`VOTE_ADAPTERS`); a
-  meeting's doc_url is its portal page.
+  civicclerk, legistar and primegov (`client`: the city's Legistar or PrimeGov
+  name, e.g. `sanjose`, `cityofoviedo`) read a meeting's agenda from its portal
+  page, its doc_url (`PORTAL_ADAPTERS`); civicclerk and legistar also give
+  structured items with recorded votes (`VOTE_ADAPTERS`).
 - `committee_map`: substring (lowercased, "and"→"&" normalized) → display
   name for badges
 - `title_strip_patterns`: regexes removed from display titles (the source
