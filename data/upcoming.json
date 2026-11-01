@@ -387,5 +387,13 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": []
+  "dc_everest": [
+    {
+      "date": "2026-11-09",
+      "time": "5:00 PM",
+      "name": "Special School Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=771386",
+      "source": "dc_everest"
+    }
+  ]
 }
