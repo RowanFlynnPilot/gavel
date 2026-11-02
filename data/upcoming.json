@@ -366,6 +366,13 @@
   ],
   "kronenwetter": [
     {
+      "date": "2026-11-04",
+      "time": "6:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-33",
+      "source": "kronenwetter"
+    },
+    {
       "date": "2026-11-09",
       "time": "6:00 PM",
       "name": "Administrative Policy Committee Meeting",
