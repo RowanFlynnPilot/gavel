@@ -204,23 +204,16 @@
       "name": "Public Health & Safety Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2471/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-11-17",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3650/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-11-02",
-      "time": "",
-      "name": "Mountain Bay Metropolitan Police Oversight Board",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_11022026-1986",
-      "source": "weston"
-    },
-    {
-      "date": "2026-11-02",
-      "time": "6:00 PM",
-      "name": "Community Life & Public Safety Committee",
-      "url": "https://www.westonwi.gov/agendacenter",
-      "source": "weston"
-    },
     {
       "date": "2026-11-09",
       "time": "6:00 PM",
@@ -328,13 +321,6 @@
     }
   ],
   "school_board": [
-    {
-      "date": "2026-11-02",
-      "time": "5:00 PM",
-      "name": "Closed Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=772792",
-      "source": "school_board"
-    },
     {
       "date": "2026-11-09",
       "time": "5:00 PM",
