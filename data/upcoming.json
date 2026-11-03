@@ -151,9 +151,23 @@
     },
     {
       "date": "2026-11-09",
+      "time": "4:00 PM",
+      "name": "Wausau Arts Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3654/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-09",
       "time": "4:45 PM",
       "name": "Human Resources Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2035/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-09",
+      "time": "5:30 PM",
+      "name": "Rules Review Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3653/overview",
       "source": "wausau"
     },
     {
@@ -196,20 +210,6 @@
       "time": "4:45 PM",
       "name": "Liquor License Review Subcommittee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3652/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-16",
-      "time": "5:15 PM",
-      "name": "Public Health & Safety Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2471/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-17",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3650/overview",
       "source": "wausau"
     }
   ],
@@ -370,6 +370,13 @@
       "time": "6:00 PM",
       "name": "Village Board Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-67",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-11-10",
+      "time": "5:00 PM",
+      "name": "Police and Fire Commission Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-28",
       "source": "kronenwetter"
     },
     {
