@@ -312,6 +312,16 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
+UID:ac9f41820b29e86f4d97@gavel
+DTSTAMP:20261116T000000Z
+DTSTART;TZID=America/Chicago:20261116T171500
+DTEND;TZID=America/Chicago:20261116T184500
+SUMMARY:City of Wausau: Public Health & Safety Committee Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/2471/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
 UID:9241ff177837c9c67d2b@gavel
 DTSTAMP:20261116T000000Z
 DTSTART;TZID=America/Chicago:20261116T173000
