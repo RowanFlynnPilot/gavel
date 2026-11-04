@@ -109,16 +109,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:a8d177ccf4d295c9bf82@gavel
-DTSTAMP:20261109T000000Z
-DTSTART;TZID=America/Chicago:20261109T164500
-DTEND;TZID=America/Chicago:20261109T181500
-SUMMARY:City of Wausau: Human Resources Committee Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/2035/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:5fd82f95cae13d246014@gavel
 DTSTAMP:20261109T000000Z
 DTSTART;TZID=America/Chicago:20261109T170000
