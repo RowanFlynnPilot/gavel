@@ -115,27 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-11-04",
-      "time": "10:30 AM",
-      "name": "Board of Public Works Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3613/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-04",
-      "time": "11:30 AM",
-      "name": "Water Works Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2197/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-04",
-      "time": "5:15 PM",
-      "name": "Economic Development Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3629/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-11-05",
       "time": "7:30 AM",
       "name": "Police & Fire Commission Special Meeting",
@@ -147,6 +126,13 @@
       "time": "5:00 PM",
       "name": "Sustainability, Energy & Environment Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2174/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-06",
+      "time": "4:00 PM",
+      "name": "Municipal Board of Canvassers Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3656/overview",
       "source": "wausau"
     },
     {
@@ -173,8 +159,8 @@
     {
       "date": "2026-11-10",
       "time": "5:15 PM",
-      "name": "Finance Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2419/overview",
+      "name": "Joint Finance Committee and the Human Resources Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3655/overview",
       "source": "wausau"
     },
     {
@@ -211,6 +197,20 @@
       "name": "Public Health & Safety Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2471/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-11-17",
+      "time": "10:30 AM",
+      "name": "Board of Public Works Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3650/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-17",
+      "time": "3:00 PM",
+      "name": "Police and Fire Commission Listening Session",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3651/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
@@ -218,7 +218,7 @@
       "date": "2026-11-09",
       "time": "6:00 PM",
       "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/agendacenter",
+      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_11092026-1987",
       "source": "weston"
     },
     {
@@ -318,6 +318,13 @@
       "name": "Parks & Recreation Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2027-01-04",
+      "time": "6:00 PM",
+      "name": "Community Life & Public Safety Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -352,20 +359,6 @@
   ],
   "kronenwetter": [
     {
-      "date": "2026-11-04",
-      "time": "6:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-pc/page/plan-commission-meeting-33",
-      "source": "kronenwetter"
-    },
-    {
-      "date": "2026-11-09",
-      "time": "6:00 PM",
-      "name": "Administrative Policy Committee Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-apc/page/administrative-policy-committee-meeting-34",
-      "source": "kronenwetter"
-    },
-    {
       "date": "2026-11-09",
       "time": "6:00 PM",
       "name": "Village Board Meeting",
@@ -377,6 +370,13 @@
       "time": "5:00 PM",
       "name": "Police and Fire Commission Meeting",
       "url": "https://kronenwetter-wi.municodemeetings.com/bc-pfc/page/police-and-fire-commission-meeting-28",
+      "source": "kronenwetter"
+    },
+    {
+      "date": "2026-11-12",
+      "time": "5:15 PM",
+      "name": "Redevelopment Authority Meeting",
+      "url": "https://kronenwetter-wi.municodemeetings.com/bc-ra/page/redevelopment-authority-meeting-6",
       "source": "kronenwetter"
     },
     {
