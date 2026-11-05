@@ -89,3 +89,28 @@ def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
         if m.get("dateTime", "")[:10] <= end and not _SPANISH.search(m.get("title") or "") and "CANCEL" not in (m.get("title") or "").upper()]
     print(f"  [ok]  {jurisdiction_key}: {len(results)} upcoming events from PrimeGov")
     return results
+
+
+def list_recent(agendas_cfg: dict, since: date) -> list[dict]:
+    """Past meetings with an HTML agenda, from `since` through today, newest
+    first: {id, name, date, url}. For a portal-first jurisdiction (no video
+    channel), whose meetings are created from this list. The archive is
+    listed by year; today's meetings can still sit in the upcoming list, so
+    that's read too."""
+    today = date.today()
+    paths = [f"ListArchivedMeetings?year={y}" for y in range(since.year, today.year + 1)] + ["ListUpcomingMeetings"]
+    meetings = []
+    for path in paths:
+        r = requests.get(f"{_portal(agendas_cfg)}/api/v2/PublicPortal/{path}", headers=_HEADERS, timeout=30)
+        r.raise_for_status()
+        meetings += r.json()
+    seen, results = set(), []
+    for m in sorted(meetings, key=lambda x: x.get("dateTime") or "", reverse=True):
+        d, title = (m.get("dateTime") or "")[:10], (m.get("title") or "").strip()
+        url = agenda_url(agendas_cfg, m)
+        if not (since.isoformat() <= d <= today.isoformat()) or not url or m["id"] in seen \
+                or _SPANISH.search(title) or "CANCEL" in title.upper():
+            continue
+        seen.add(m["id"])
+        results.append({"id": str(m["id"]), "name": title, "date": d, "url": url})
+    return results

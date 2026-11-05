@@ -73,6 +73,8 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
 
     provenance = ("Summary based on the published agenda — outcomes were not yet "
                   "available when this was written." if m.get("isAgendaOnly") else
+                  "Summary generated from the published agenda and the official vote records."
+                  if m.get("civicItems") and not m.get("duration") else
                   "Summary generated from the meeting recording or official minutes.")
 
     ld = json.dumps({
@@ -129,7 +131,7 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
   <p>{E(m.get('overview', ''))}</p>
   <p>
     <a class="cta" href="{E(tracker)}">Open the interactive tracker</a>
-    {f'<a class="cta alt" href="{E(m.get("url", ""))}">Watch / source</a>' if m.get('url') else ''}
+    {f'<a class="cta alt" href="{E(m.get("url", ""))}">{"Watch / source" if m.get("duration") else "Meeting page"}</a>' if m.get('url') else ''}
     {f'<a class="cta alt" href="{E(m.get("docUrl", ""))}">Agenda &amp; documents</a>' if m.get('docUrl') else ''}
   </p>
   <div class="prov">{provenance} These AI-assisted summaries review the public record and are not a substitute for official minutes.</div>

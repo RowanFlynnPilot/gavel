@@ -23,7 +23,7 @@ import logging
 import os
 import re
 import sys
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import publish as publish_mod
@@ -314,6 +314,114 @@ def fetch_municode_new(cfg: InstanceConfig, source_key: str, state: dict,
 
 
 # ── Upgrade passes ────────────────────────────────────────────────────────────
+
+# ── Portal-first (meeting-creating) processing ────────────────────────────────
+# A CivicClerk, Legistar or PrimeGov jurisdiction with no video channel. Its
+# meetings are created from the portal's own listing and summarized from the
+# agenda as soon as it's posted; where the portal records votes (CivicClerk,
+# Legistar), the meeting is summarized again from the agenda and the votes once
+# they're posted. A jurisdiction with a video channel keeps the YouTube-first
+# path, where the portal supplies agenda text and votes for each recording.
+
+PORTAL_PREFIX = {"civicclerk": "cc", "legistar": "lg", "primegov": "pg"}
+PORTAL_WINDOW_DAYS = 30  # how far back a run without --days looks, and how long votes are waited for
+
+
+def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
+                           state: dict) -> bool:
+    jur = cfg.jurisdiction(source_key)
+    adapter = get_adapter(jur.agendas_adapter)
+    meeting_id = f"{PORTAL_PREFIX[jur.agendas_adapter]}_{m['id']}"
+    title = f"{m['name']} - {m['date']}"
+    print(f"  [agenda]  Reading the {jur.agendas_adapter} agenda for: {title}")
+    agenda_text = adapter.fetch_agenda_text(jur.agendas, m["url"])
+    if not agenda_text:
+        # Not marked processed: the agenda may be posted later, and the next run tries again.
+        print(f"  [skip]  No agenda text: {title}")
+        return False
+
+    civic_data = None
+    if jur.agendas_adapter in VOTE_ADAPTERS:
+        civic_data = adapter.fetch_meeting_data(jur.agendas, m["url"])
+    if civic_data and _has_votes(civic_data.get("items", [])):
+        print("  [claude]  Summarizing from agenda + vote data...")
+        summary = summarize.summarize_from_agenda_with_votes(
+            agenda_text, title, m["url"], civic_data, org_label=jur.name,
+            region=cfg.region, jurisdiction=source_key, meeting_id=meeting_id)
+    else:
+        print("  [claude]  Summarizing from agenda document...")
+        summary = summarize.summarize_from_agenda(
+            agenda_text, title, m["url"], org_label=jur.name,
+            region=cfg.region, jurisdiction=source_key, meeting_id=meeting_id)
+
+    path = save_summary(title, m["url"], source_key, jur.name, summary,
+                        doc_url=m["url"], civic_data=civic_data, video_id=meeting_id)
+    d = m["date"].replace("-", "")
+    mark_processed(state, meeting_id, title, source_key, path,
+                   doc_url=m["url"], upload_date=d, meeting_date=d)
+    print(f"  [ok]  Saved: {path}")
+    return True
+
+
+def fetch_portal_new(cfg: InstanceConfig, source_key: str, state: dict,
+                     days: int, dry_run: bool = False) -> int:
+    jur = cfg.jurisdiction(source_key)
+    since = date.today() - timedelta(days=days)
+    if cfg.date_cutoff:
+        since = max(since, date(int(cfg.date_cutoff[:4]), int(cfg.date_cutoff[4:6]),
+                                int(cfg.date_cutoff[6:8])))
+    print(f"[fetch]  Checking {jur.agendas_adapter} for {jur.name} meetings since {since}...")
+    count = 0
+    for m in get_adapter(jur.agendas_adapter).list_recent(jur.agendas, since):
+        meeting_id = f"{PORTAL_PREFIX[jur.agendas_adapter]}_{m['id']}"
+        if meeting_id in state.get("processed", {}) or meeting_id in cfg.skip_ids:
+            continue
+        print(f"  [new]  New meeting: {m['name']} on {m['date']}")
+        if not dry_run and process_portal_meeting(cfg, source_key, m, state):
+            count += 1
+    return count
+
+
+def upgrade_portal_from_votes(cfg: InstanceConfig, source_key: str,
+                              state: dict) -> list[str]:
+    """Re-summarize recent agenda-only portal-first meetings once the portal
+    records their votes (CivicClerk and Legistar post them with the minutes,
+    days to weeks after the meeting). Returns the upgraded IDs."""
+    jur = cfg.jurisdiction(source_key)
+    if jur.agendas_adapter not in VOTE_ADAPTERS:
+        return []
+    adapter = get_adapter(jur.agendas_adapter)
+    prefix = PORTAL_PREFIX[jur.agendas_adapter] + "_"
+    window = int(jur.agendas.get("votes_upgrade_window_days", PORTAL_WINDOW_DAYS))
+    since = (date.today() - timedelta(days=window)).strftime("%Y%m%d")
+    candidates = [(vid, info) for vid, info in state["processed"].items()
+                  if vid.startswith(prefix) and info.get("source") == source_key
+                  and (info.get("meeting_date") or "") >= since
+                  and _summary_source(info)[0] == "agenda"]
+    if not candidates:
+        return []
+    print(f"\n[votes]  {len(candidates)} {source_key} agenda-only meeting(s) "
+          f"within {window} days; checking the portal for recorded votes...")
+    upgraded = []
+    for vid, info in candidates:
+        civic_data = adapter.fetch_meeting_data(jur.agendas, info["doc_url"])
+        if not (civic_data and _has_votes(civic_data.get("items", []))):
+            continue
+        agenda_text = adapter.fetch_agenda_text(jur.agendas, info["doc_url"])
+        if not agenda_text:
+            continue
+        print(f"  [claude]  Votes recorded; summarizing again: {info['title']}")
+        summary = summarize.summarize_from_agenda_with_votes(
+            agenda_text, info["title"], info["doc_url"], civic_data, org_label=jur.name,
+            region=cfg.region, jurisdiction=source_key, meeting_id=vid)
+        path = save_summary(info["title"], info["doc_url"], source_key, jur.name, summary,
+                            doc_url=info["doc_url"], civic_data=civic_data, video_id=vid)
+        mark_processed(state, vid, info["title"], source_key, path, doc_url=info["doc_url"])
+        save_state(state)
+        upgraded.append(vid)
+        print(f"  [ok]  Saved: {path}")
+    return upgraded
+
 
 def _summary_source(info: dict) -> tuple[str | None, Path | None]:
     """Return (existing summary's _source tag, sidecar path) or (None, None)."""
@@ -654,6 +762,9 @@ def main() -> None:
                      and cfg.by_key[k].agendas_adapter not in ("boardbook", "municode")]
     meeting_creating = [k for k in sources
                         if cfg.by_key[k].agendas_adapter in ("boardbook", "municode")]
+    portal_first = [k for k in sources
+                    if cfg.by_key[k].video is None
+                    and cfg.by_key[k].agendas_adapter in PORTAL_ADAPTERS]
 
     # ── Single URL mode ────────────────────────────────────────────────────
     if args.url:
@@ -728,13 +839,16 @@ def main() -> None:
 
     # Meeting-creating scrapers. Isolate failures so one upstream outage
     # doesn't abort other sources.
-    for src in meeting_creating:
+    for src in meeting_creating + portal_first:
         adapter_name = cfg.by_key[src].agendas_adapter
         try:
             if adapter_name == "boardbook":
                 n = fetch_boardbook_new(cfg, src, state, dry_run=args.dry_run)
-            else:
+            elif adapter_name == "municode":
                 n = fetch_municode_new(cfg, src, state, dry_run=args.dry_run)
+            else:
+                n = fetch_portal_new(cfg, src, state, args.days or PORTAL_WINDOW_DAYS,
+                                     dry_run=args.dry_run)
             print(f"   {src}: {n} new meeting(s) processed")
         except AdapterStructureError as e:
             logger.error("%s structure drift: %s", src, e)
@@ -793,6 +907,8 @@ def main() -> None:
                 cfg, src, state, auth_failures)
         else:
             upgraded_ids += upgrade_municode_from_minutes(cfg, src, state)
+    for src in portal_first:
+        upgraded_ids += upgrade_portal_from_votes(cfg, src, state)
 
     if upgraded_ids:
         clear_injected(upgraded_ids)

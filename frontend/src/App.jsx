@@ -206,6 +206,9 @@ function _applyConfig(config, meetings, upcoming) {
       short:   j.short,
       accent:  j.accent,
       channel: (j.video && j.video.channel_url) || j.calendar_url,
+      // Portal-first jurisdictions have no recordings: their agenda-only
+      // summaries are updated from the portal's vote records, not captions.
+      hasVideo: !!(j.video && j.video.channel_url),
       docHost: j.doc_host,
       avatar:  BASE_URL + j.avatar,
     };
@@ -746,7 +749,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
                   fontFamily: "'Source Sans 3', sans-serif", fontSize: "12px",
                   color: "#7a6a00", letterSpacing: "0.03em",
                 }}>
-                  <strong>AGENDA PREVIEW ONLY</strong> - This summary reflects the published agenda. Actual votes, decisions, and discussion outcomes may differ. A full transcript-based summary will be available once video captions are processed.
+                  <strong>AGENDA PREVIEW ONLY</strong> - This summary reflects the published agenda. Actual votes, decisions, and discussion outcomes may differ. {src.hasVideo ? "A full transcript-based summary will be available once video captions are processed." : "Where the portal records the votes, this summary is updated once they're posted."}
                 </div>
               )}
           </div>

@@ -158,12 +158,19 @@ def _synthetic_fallback_url(cfg: InstanceConfig, video_id: str,
     a = jur.agendas
     if jur.agendas_adapter == "boardbook":
         return f"{a['base']}/Public/Organization/{a['org_id']}"
+    if jur.agendas_adapter == "civicclerk":
+        return a["portal"]
+    if jur.agendas_adapter == "legistar":
+        return f"https://{a['client']}.legistar.com"
+    if jur.agendas_adapter == "primegov":
+        return f"https://{a['client']}.primegov.com/public/portal"
     return a.get("base", "")
 
 
 def _is_synthetic(video_id: str) -> bool:
-    # bb_ = BoardBook; anything with a <prefix>_<32-hex-guid> shape = municode.
-    return video_id.startswith("bb_") or bool(
+    # bb_ = BoardBook; cc_/lg_/pg_ = a portal-first CivicClerk, Legistar or
+    # PrimeGov meeting; anything with a <prefix>_<32-hex-guid> shape = municode.
+    return bool(re.match(r"^(bb|cc|lg|pg)_\d+$", video_id)) or bool(
         re.match(r"^[a-z]{2,8}_[0-9a-f]{32}$", video_id))
 
 
@@ -238,10 +245,11 @@ def build_meeting(cfg: InstanceConfig, video_id: str, info: dict,
 
     agenda_items = summary.get("agenda") or [{"time": "0:00", "item": "Meeting convened"}]
     # Synthetic entries are agenda-only by default, but the upgrade passes
-    # can re-summarize from real outcomes: a recording transcript (boardbook)
-    # or official minutes (municode).
+    # can re-summarize from real outcomes: a recording transcript (boardbook),
+    # official minutes (municode) or the portal's vote records (civicclerk,
+    # legistar).
     is_agenda_only = (summary.get("_source") == "agenda") or \
-                     (is_synthetic and summary.get("_source") not in ("transcript", "minutes"))
+                     (is_synthetic and summary.get("_source") not in ("transcript", "minutes", "agenda_with_votes"))
 
     duration_str = None if is_agenda_only else _fmt_duration_secs(info.get("duration"))
 
