@@ -156,3 +156,21 @@ def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
     } for e in events if not _cancelled(e)]
     print(f"  [ok]  {jurisdiction_key}: {len(results)} upcoming events from Legistar")
     return results
+
+
+def list_recent(agendas_cfg: dict, since: date) -> list[dict]:
+    """Past meetings with a posted agenda, from `since` through today, newest
+    first: {id, name, date, url}. For a portal-first jurisdiction (no video
+    channel), whose meetings are created from this list. url is the meeting's
+    Legistar page, the doc_url this adapter reads."""
+    today = date.today()
+    flt = quote(f"EventDate ge datetime'{since}' and EventDate le datetime'{today}'")
+    events = _get(f"{_api(agendas_cfg)}/events?$filter={flt}&$orderby={quote('EventDate desc')}&$top=100")
+    if events is None:
+        raise RuntimeError(f"Legistar events request failed for {agendas_cfg['client']}")
+    return [{
+        "id": str(e["EventId"]),
+        "name": (e.get("EventBodyName") or "").strip(),
+        "date": e["EventDate"][:10],
+        "url": e["EventInSiteURL"],
+    } for e in events if e.get("EventAgendaFile") and e.get("EventInSiteURL") and not _cancelled(e)]

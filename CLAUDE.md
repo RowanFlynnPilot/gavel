@@ -95,6 +95,14 @@ per jurisdiction:
   upgrade_window_days?, scan_descriptions_for_upcoming?}`
 - `agendas`: `{adapter: civicclerk|legistar|primegov|boardbook|agendacenter|municode|
   rule_schedule, ...adapter-specific fields, days_ahead?, fallback_rules?}`.
+  A civicclerk, legistar or primegov jurisdiction with `video: null` is
+  **portal-first**: its meetings are created from the portal's own listing
+  (`list_recent`, ids `cc_`/`lg_`/`pg_<portal id>`), summarized from the agenda
+  as soon as it's posted (last 30 days on a first run, or `--days`), and
+  summarized again from the agenda and the votes once CivicClerk or Legistar
+  records them (`votes_upgrade_window_days`, default 30; PrimeGov posts none).
+  With a video channel, the same adapters supply agenda text and votes for
+  each recording instead.
   civicclerk, legistar and primegov (`client`: the city's Legistar or PrimeGov
   name, e.g. `sanjose`, `cityofoviedo`) read a meeting's agenda from its portal
   page, its doc_url (`PORTAL_ADAPTERS`); civicclerk and legistar also give

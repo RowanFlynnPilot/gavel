@@ -165,3 +165,36 @@ def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
         })
     print(f"  [ok]  {jurisdiction_key}: {len(results)} upcoming events from CivicClerk")
     return results
+
+
+def list_recent(agendas_cfg: dict, since: date) -> list[dict]:
+    """Past events with a posted agenda, from `since` through today, newest first:
+    {id, name, date, url}. For a portal-first jurisdiction (no video channel),
+    whose meetings are created from this list. url is the event's portal page,
+    the doc_url fetch_agenda_text and fetch_meeting_data read. Raises on a
+    failed request, so the pipeline reports the outage instead of a quiet
+    empty run."""
+    base = agendas_cfg["api_base"]
+    portal = agendas_cfg["portal"].rstrip("/")
+    today = date.today()
+    url = (
+        f"{base}/Events"
+        f"?%24filter=eventDate%20ge%20{since}T00%3A00%3A00Z"
+        f"%20and%20eventDate%20le%20{today}T23%3A59%3A59Z"
+        "%20and%20isDeleted%20eq%20false"
+        "&%24orderby=eventDate%20desc&%24top=100"
+    )
+    r = requests.get(url, headers=_HEADERS, timeout=15)
+    r.raise_for_status()
+    results = []
+    for e in r.json().get("value", []):
+        name = e.get("eventName", "")
+        if not e.get("hasAgenda") or "CANCEL" in name.upper() or "POSSIBLE QUORUM" in name.upper():
+            continue
+        results.append({
+            "id": str(e["id"]),
+            "name": name,
+            "date": (e.get("eventDate") or "")[:10],
+            "url": f"{portal}/event/{e['id']}/files",
+        })
+    return results
