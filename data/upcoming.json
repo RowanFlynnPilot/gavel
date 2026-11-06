@@ -144,6 +144,13 @@
     },
     {
       "date": "2026-11-10",
+      "time": "4:00 PM",
+      "name": "Ad Hoc Subcommittee of the Historic Preservation Commission",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3658/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-10",
       "time": "5:15 PM",
       "name": "Joint Finance Committee and the Human Resources Committee Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3655/overview",
@@ -196,13 +203,6 @@
       "time": "3:00 PM",
       "name": "Police and Fire Commission Listening Session",
       "url": "https://wausauwi.portal.civicclerk.com/event/3651/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-17",
-      "time": "5:00 PM",
-      "name": "Plan Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3521/overview",
       "source": "wausau"
     }
   ],
@@ -321,6 +321,13 @@
     }
   ],
   "school_board": [
+    {
+      "date": "2026-11-09",
+      "time": "5:00 PM",
+      "name": "Regular Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=774423",
+      "source": "school_board"
+    },
     {
       "date": "2026-11-09",
       "time": "5:00 PM",
