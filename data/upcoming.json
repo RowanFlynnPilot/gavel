@@ -108,13 +108,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-11-06",
-      "time": "4:00 PM",
-      "name": "Municipal Board of Canvassers Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3656/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-11-09",
       "time": "4:00 PM",
       "name": "Wausau Arts Commission Meeting",
@@ -203,6 +196,13 @@
       "time": "3:00 PM",
       "name": "Police and Fire Commission Listening Session",
       "url": "https://wausauwi.portal.civicclerk.com/event/3651/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-17",
+      "time": "5:00 PM",
+      "name": "Plan Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3521/overview",
       "source": "wausau"
     }
   ],

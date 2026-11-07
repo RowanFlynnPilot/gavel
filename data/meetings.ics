@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:322f691667b59fe743a6@gavel
-DTSTAMP:20261106T000000Z
-DTSTART;TZID=America/Chicago:20261106T160000
-DTEND;TZID=America/Chicago:20261106T173000
-SUMMARY:City of Wausau: Municipal Board of Canvassers Meeting
-URL:https://wausauwi.portal.civicclerk.com/event/3656/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:654d02a90186a221c5aa@gavel
 DTSTAMP:20261109T000000Z
 DTSTART;TZID=America/Chicago:20261109T160000
@@ -319,6 +309,16 @@ DTSTART;TZID=America/Chicago:20261117T150000
 DTEND;TZID=America/Chicago:20261117T163000
 SUMMARY:City of Wausau: Police and Fire Commission Listening Session
 URL:https://wausauwi.portal.civicclerk.com/event/3651/overview
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:b449f17c5ac036458dcd@gavel
+DTSTAMP:20261117T000000Z
+DTSTART;TZID=America/Chicago:20261117T170000
+DTEND;TZID=America/Chicago:20261117T183000
+SUMMARY:City of Wausau: Plan Commission Meeting
+URL:https://wausauwi.portal.civicclerk.com/event/3521/overview
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
