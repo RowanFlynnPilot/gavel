@@ -108,17 +108,6 @@ DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
 BEGIN:VEVENT
-UID:378e51bb7b3b0edb7121@gavel
-DTSTAMP:20261110T000000Z
-DTSTART;TZID=America/Chicago:20261110T080000
-DTEND;TZID=America/Chicago:20261110T093000
-SUMMARY:City of Wausau: Community Development Authority Finance Committee M
- eeting
-URL:https://wausauwi.portal.civicclerk.com/event/3657/overview
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:b044e01693b588f6d2d6@gavel
 DTSTAMP:20261110T000000Z
 DTSTART;TZID=America/Chicago:20261110T103000
@@ -177,7 +166,7 @@ DTSTAMP:20261110T000000Z
 DTSTART;TZID=America/Chicago:20261110T180000
 DTEND;TZID=America/Chicago:20261110T193000
 SUMMARY:Village of Weston: S.A.F.E.R. Board of Directors
-URL:https://www.westonwi.gov/agendacenter
+URL:https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_11102026-1989
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT
