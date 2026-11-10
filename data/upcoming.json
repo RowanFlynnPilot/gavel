@@ -115,20 +115,6 @@
   ],
   "wausau": [
     {
-      "date": "2026-11-09",
-      "time": "4:00 PM",
-      "name": "Wausau Arts Commission Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3654/overview",
-      "source": "wausau"
-    },
-    {
-      "date": "2026-11-09",
-      "time": "5:30 PM",
-      "name": "Rules Review Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/3653/overview",
-      "source": "wausau"
-    },
-    {
       "date": "2026-11-10",
       "time": "10:30 AM",
       "name": "Board of Public Works Meeting",
@@ -204,23 +190,30 @@
       "name": "Plan Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/3521/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "8:00 AM",
+      "name": "Rescheduled - Community Development Authority Finance Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3659/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-18",
+      "time": "5:00 PM",
+      "name": "Citizen Advisory Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/678/overview",
+      "source": "wausau"
+    },
+    {
+      "date": "2026-11-19",
+      "time": "4:45 PM",
+      "name": "Transit Commission Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/2185/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-11-09",
-      "time": "6:00 PM",
-      "name": "Plan Commission",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_11092026-1987",
-      "source": "weston"
-    },
-    {
-      "date": "2026-11-09",
-      "time": "6:00 PM",
-      "name": "Public Works Committee",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_11092026-1988",
-      "source": "weston"
-    },
     {
       "date": "2026-11-10",
       "time": "6:00 PM",
@@ -322,20 +315,6 @@
   ],
   "school_board": [
     {
-      "date": "2026-11-09",
-      "time": "5:00 PM",
-      "name": "Regular Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1360?meeting=774423",
-      "source": "school_board"
-    },
-    {
-      "date": "2026-11-09",
-      "time": "5:00 PM",
-      "name": "Regular Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Organization/1360",
-      "source": "school_board"
-    },
-    {
       "date": "2026-11-23",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
@@ -359,13 +338,6 @@
   ],
   "kronenwetter": [
     {
-      "date": "2026-11-09",
-      "time": "6:00 PM",
-      "name": "Village Board Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-vb/page/village-board-meeting-67",
-      "source": "kronenwetter"
-    },
-    {
       "date": "2026-11-10",
       "time": "5:00 PM",
       "name": "Police and Fire Commission Meeting",
@@ -387,13 +359,5 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": [
-    {
-      "date": "2026-11-09",
-      "time": "5:00 PM",
-      "name": "Special School Board Meeting",
-      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=771386",
-      "source": "dc_everest"
-    }
-  ]
+  "dc_everest": []
 }
