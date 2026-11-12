@@ -27,16 +27,6 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:8ec4c4ede1f642dcdcab@gavel
-DTSTAMP:20261111T000000Z
-DTSTART;TZID=America/Chicago:20261111T170000
-DTEND;TZID=America/Chicago:20261111T183000
-SUMMARY:Marathon County: Extension\, Education & Econ Dev Committee
-URL:https://www.marathoncounty.gov/about-us/county-calendar
-DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
- ndreview.com/central-wisconsin-meeting-tracker/
-END:VEVENT
-BEGIN:VEVENT
 UID:7a2ab061593cbf9d5a93@gavel
 DTSTAMP:20261112T000000Z
 DTSTART;VALUE=DATE:20261112
@@ -525,6 +515,36 @@ DTSTART;TZID=America/Chicago:20270107T170000
 DTEND;TZID=America/Chicago:20270107T183000
 SUMMARY:Marathon County: Health & Human Services Committee
 URL:https://www.marathoncounty.gov/about-us/county-calendar
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:6284e2b4183f34f81178@gavel
+DTSTAMP:20270111T000000Z
+DTSTART;TZID=America/Chicago:20270111T170000
+DTEND;TZID=America/Chicago:20270111T183000
+SUMMARY:Wausau School Board: Regular Board Meeting
+URL:https://meetings.boardbook.org/Public/Organization/1360
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:e49f78b9a2fc2de29f4c@gavel
+DTSTAMP:20270111T000000Z
+DTSTART;TZID=America/Chicago:20270111T180000
+DTEND;TZID=America/Chicago:20270111T193000
+SUMMARY:Village of Weston: Plan Commission
+URL:https://www.westonwi.gov/agendacenter
+DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
+ ndreview.com/central-wisconsin-meeting-tracker/
+END:VEVENT
+BEGIN:VEVENT
+UID:df1d180b6aadfda11d36@gavel
+DTSTAMP:20270111T000000Z
+DTSTART;TZID=America/Chicago:20270111T180000
+DTEND;TZID=America/Chicago:20270111T193000
+SUMMARY:Village of Weston: Public Works Committee
+URL:https://www.westonwi.gov/agendacenter
 DESCRIPTION:Agendas\, documents and meeting summaries: https://wausaupilota
  ndreview.com/central-wisconsin-meeting-tracker/
 END:VEVENT

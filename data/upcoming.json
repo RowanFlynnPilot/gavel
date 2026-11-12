@@ -1,13 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-11-11",
-      "time": "5:00 PM",
-      "name": "Extension, Education & Econ Dev Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-11-12",
       "time": "3:00 PM",
       "name": "Executive Committee",
@@ -311,6 +304,20 @@
       "name": "Community Life & Public Safety Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2027-01-11",
+      "time": "6:00 PM",
+      "name": "Plan Commission",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
+    },
+    {
+      "date": "2027-01-11",
+      "time": "6:00 PM",
+      "name": "Public Works Committee",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -332,6 +339,13 @@
       "date": "2026-12-28",
       "time": "5:00 PM",
       "name": "Education & Operations Committee",
+      "url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "source": "school_board"
+    },
+    {
+      "date": "2027-01-11",
+      "time": "5:00 PM",
+      "name": "Regular Board Meeting",
       "url": "https://meetings.boardbook.org/Public/Organization/1360",
       "source": "school_board"
     }
