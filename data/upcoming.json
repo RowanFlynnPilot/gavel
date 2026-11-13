@@ -1,20 +1,6 @@
 {
   "marathon": [
     {
-      "date": "2026-11-12",
-      "time": "3:00 PM",
-      "name": "Executive Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
-      "date": "2026-11-12",
-      "time": "5:00 PM",
-      "name": "Infrastructure Committee",
-      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
-      "source": "marathon"
-    },
-    {
       "date": "2026-11-19",
       "time": "5:00 PM",
       "name": "HR, Finance & Property Committee",
@@ -97,16 +83,16 @@
       "name": "Health & Human Services Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2027-01-12",
+      "time": "5:00 PM",
+      "name": "Public Safety Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
-    {
-      "date": "2026-11-12",
-      "time": "5:00 PM",
-      "name": "Infrastructure & Facilities Committee Meeting",
-      "url": "https://wausauwi.portal.civicclerk.com/event/2445/overview",
-      "source": "wausau"
-    },
     {
       "date": "2026-11-16",
       "time": "4:45 PM",
@@ -197,16 +183,16 @@
       "name": "Water Works Commission Meeting",
       "url": "https://wausauwi.portal.civicclerk.com/event/2198/overview",
       "source": "wausau"
+    },
+    {
+      "date": "2026-12-01",
+      "time": "5:15 PM",
+      "name": "Economic Development Committee Meeting",
+      "url": "https://wausauwi.portal.civicclerk.com/event/3589/overview",
+      "source": "wausau"
     }
   ],
   "weston": [
-    {
-      "date": "2026-11-12",
-      "time": "",
-      "name": "Village Board of Trustees",
-      "url": "https://www.westonwi.gov/AgendaCenter/ViewFile/Agenda/_11122026-1990",
-      "source": "weston"
-    },
     {
       "date": "2026-11-16",
       "time": "",
@@ -318,6 +304,13 @@
       "name": "Public Works Committee",
       "url": "https://www.westonwi.gov/agendacenter",
       "source": "weston"
+    },
+    {
+      "date": "2027-01-12",
+      "time": "6:00 PM",
+      "name": "S.A.F.E.R. Board of Directors",
+      "url": "https://www.westonwi.gov/agendacenter",
+      "source": "weston"
     }
   ],
   "school_board": [
@@ -351,13 +344,6 @@
     }
   ],
   "kronenwetter": [
-    {
-      "date": "2026-11-12",
-      "time": "5:15 PM",
-      "name": "Redevelopment Authority Meeting",
-      "url": "https://kronenwetter-wi.municodemeetings.com/bc-ra/page/redevelopment-authority-meeting-6",
-      "source": "kronenwetter"
-    },
     {
       "date": "2026-11-16",
       "time": "6:00 PM",
