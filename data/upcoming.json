@@ -97,6 +97,20 @@
       "name": "Extension, Education & Econ Dev Committee",
       "url": "https://www.marathoncounty.gov/about-us/county-calendar",
       "source": "marathon"
+    },
+    {
+      "date": "2027-01-14",
+      "time": "3:00 PM",
+      "name": "Executive Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
+    },
+    {
+      "date": "2027-01-14",
+      "time": "5:00 PM",
+      "name": "Infrastructure Committee",
+      "url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "source": "marathon"
     }
   ],
   "wausau": [
@@ -366,5 +380,13 @@
       "source": "kronenwetter"
     }
   ],
-  "dc_everest": []
+  "dc_everest": [
+    {
+      "date": "2026-11-18",
+      "time": "6:30 PM",
+      "name": "Regular School Board Meeting",
+      "url": "https://meetings.boardbook.org/Public/Agenda/1315?meeting=773904",
+      "source": "dc_everest"
+    }
+  ]
 }
