@@ -221,6 +221,20 @@ class AgendaTextTest(unittest.TestCase):
         self.assertEqual(fetch.call_args.args[1], "4321")
         self.assertIn("2027-28 calendar", text)
 
+    def test_boardbook_attachment_lists_are_dropped(self):
+        posted = _entry(source="schools", url="https://bb.example/Public/Agenda/7?meeting=4321")
+        items = [f"VI.K.{n}. po55{n:02d} Student Policy Attachments: ( 1 ) po55{n:02d} POLICY "
+                 f"10/31/2026 at 4:16 PM | [Attachment: This is the policy text.]" for n in range(40)]
+        items += ["X.A. Budget Calendar Presenter: Business Manager Attachments: ( 2 ) Memo.docx",
+                  "XIII. The Board will consider adjournment to Closed Session", "[Detail: Description]"]
+        with mock.patch("engine.adapters.boardbook.fetch_agenda", return_value={"items": items}):
+            text = previews.agenda_text_for(self.cfg, posted)
+        self.assertNotIn("Attachment", text)
+        self.assertNotIn("[Detail:", text)
+        self.assertIn("VI.K.39. po5539 Student Policy", text)
+        self.assertTrue(text.endswith("XIII. The Board will consider adjournment to Closed Session"))
+        self.assertLess(len(text), 2000)
+
     def test_municode_agenda_is_found_by_date_and_name(self):
         e = _entry(source="village", name="Village Board Meeting", url="https://elm.example/bc-vb/page/x")
         rows = [{"guid": "aa" * 16, "date": e["date"].replace("-", ""), "name": "Plan Commission"},
@@ -246,6 +260,24 @@ class PromptTest(unittest.TestCase):
         self.assertIn("Do not predict outcomes", prompt)
         self.assertIn("City of Oak", prompt)
         self.assertIn("street paving contract", prompt)
+        self.assertNotIn("cut off here", prompt)
+
+    def test_a_very_long_agenda_is_cut_and_the_model_is_told(self):
+        long_agenda = "Item of business. " * 3000 + "LAST ITEM: closed session"
+        prompt = previews.build_prompt(make_config(), _entry(), long_agenda)
+        self.assertNotIn("LAST ITEM", prompt)
+        self.assertIn("agenda cut off here for length", prompt)
+
+
+class PromptVersionTest(PreviewTestCase):
+    def test_a_prompt_change_rewrites_cached_previews_once(self):
+        self.attach({"city": [_entry()]})
+        later = NOW + timedelta(hours=previews.PREVIEW_RECHECK_HOURS + 1)
+        with mock.patch.object(previews, "PROMPT_VERSION", "next"):
+            _, _, claude = self.attach({"city": [_entry()]}, now=later)
+            self.assertEqual(claude.call_count, 1)
+            _, _, claude = self.attach({"city": [_entry()]}, now=later + timedelta(days=1))
+            claude.assert_not_called()
 
 
 class UpcomingWiringTest(unittest.TestCase):

@@ -55,6 +55,27 @@ class AddressScrubTest(unittest.TestCase):
         self.assertEqual(self.s.text("USM Storage (3107 Elm Street)", public_comment=True),
                          "USM Storage (3107 Elm Street)", "a listed business word still wins")
 
+    def test_public_comment_address_without_a_street_suffix(self):
+        """Captions drop the suffix or the street itself; after a speaker's
+        name in public comment the parenthetical is still their address."""
+        for before, after in [
+            ("Jane Doe (1206 Elm) opposed it.", "Jane Doe opposed it."),
+            ("Jane Doe (412 [street name inaudible]) spoke.", "Jane Doe spoke."),
+            ("Jane Doe (3305 Oak Hill, Springfield) spoke.", "Jane Doe spoke."),
+            ("Jane Doe (2153 [inaudible] Trail) spoke.", "Jane Doe spoke."),
+            ("Jane Doe (address given as 2026 [inaudible]) spoke.", "Jane Doe spoke."),
+        ]:
+            self.assertEqual(self.s.text(before, public_comment=True), after, before)
+            self.assertEqual(self.s.text(before), before, "only inside public comment")
+        for text in [
+            "Jane Doe (51 years a resident) spoke.",
+            "Jane Doe (2027 Budget Committee) spoke.",
+            "Jane Doe (100 per capita, 90% residential) spoke.",
+            "Jane Doe (1206 Elm Church) spoke.",
+            "Jane Doe (District 10) spoke.",
+        ]:
+            self.assertEqual(self.s.text(text, public_comment=True), text)
+
     def test_place_names_come_from_the_instance(self):
         text = "Jane Doe of 123 Elm Street, Springfield"
         self.assertEqual(scrub.Scrubber([]).text(text), "Jane Doe, Springfield",
@@ -184,6 +205,23 @@ class CorrectionsTest(unittest.TestCase):
         self.assertEqual(scrub.scrub_files(["Springfield"], self.pages),
                          {"summaries": 0, "mirrors": 0, "meetings": 0, "pages": 0, "corrections": 3},
                          "a second run changes nothing")
+
+    def test_mirror_public_comment_section_gets_the_speaker_rules(self):
+        sjson, md = self._seed()
+        summary = json.loads(sjson.read_text(encoding="utf-8"))
+        summary["overview"] = "Jane Doe (1206 Elm) is a committee, not a speaker, out here."
+        summary["publicComment"] = "Two spoke. John Roe (1206 Elm) opposed it."
+        sjson.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+        md.write_text("# Regular Meeting\n\nJane Doe (1206 Elm) is out here.\n\n"
+                      "## Public Comment\nTwo spoke. John Roe (1206 Elm) opposed it.\n\n"
+                      "## Action Items\n- Hire John Roe (1206 Elm)\n", encoding="utf-8")
+        scrub.scrub_files(["Springfield"], self.pages)
+        self.assertEqual(json.loads(sjson.read_text(encoding="utf-8"))["publicComment"],
+                         "Two spoke. John Roe opposed it.")
+        self.assertEqual(md.read_text(encoding="utf-8"),
+                         "# Regular Meeting\n\nJane Doe (1206 Elm) is out here.\n\n"
+                         "## Public Comment\nTwo spoke. John Roe opposed it.\n\n"
+                         "## Action Items\n- Hire John Roe (1206 Elm)\n")
 
     def test_check_reports_without_writing(self):
         sjson, _md = self._seed()

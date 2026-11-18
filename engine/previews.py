@@ -44,6 +44,12 @@ PREVIEW_MAX_PER_RUN = int(os.environ.get("PREVIEW_MAX_PER_RUN", "10"))
 PREVIEW_RECHECK_HOURS = int(os.environ.get("PREVIEW_RECHECK_HOURS", "12"))
 MAX_GENERATIONS = 3
 MIN_AGENDA_CHARS = 200
+# Agenda text sent to the model. Long agendas put new business and closed
+# sessions last, so this is generous: 30,000 characters is about a cent.
+MAX_AGENDA_CHARS = int(os.environ.get("PREVIEW_MAX_AGENDA_CHARS", "30000"))
+# Part of every cached agenda hash: bump it when the prompt changes in a way
+# that should rewrite previews already cached (still capped per meeting).
+PROMPT_VERSION = "2"
 ACTIONS = ("vote", "hearing", "discussion", "report")
 
 
@@ -74,12 +80,18 @@ def _save_cache(cache: dict, p: Path) -> None:
 
 # ── Agenda text for an upcoming record, per agenda platform ────────────────
 
+_BB_ATTACHMENTS = re.compile(r"\s*Attachments:\s*\(\s*\d+\s*\).*$", re.DOTALL)
+
 def _boardbook_text(agendas_cfg: dict, entry: dict) -> str | None:
     m = re.search(r"[?&]meeting=(\d+)", entry.get("url") or "")
     if not m:
         return None          # a rule-projected meeting: nothing posted yet
     agenda = get_adapter("boardbook").fetch_agenda(agendas_cfg, m.group(1))
-    return "\n".join(agenda.get("items") or []) or None
+    # Each item carries its attachment list (file names, upload times); on a
+    # policy-heavy agenda those run to thousands of characters before the
+    # first item of substance. The preview needs the items, not the files.
+    items = [_BB_ATTACHMENTS.sub("", i).strip() for i in agenda.get("items") or []]
+    return "\n".join(i for i in items if i and not i.startswith("[Detail:")) or None
 
 
 def _municode_text(agendas_cfg: dict, entry: dict) -> str | None:
@@ -153,7 +165,7 @@ Return a JSON object with this exact structure and nothing else - no markdown, n
 }}
 
 Rules:
-- items: at most 6, the most consequential first. Skip procedural items (call to order, roll call, approval of minutes, adjournment). An empty list is right for a purely procedural agenda; say so in the overview.
+- items: at most 6, the most consequential first, drawn from the WHOLE agenda: new business, unfinished business and reports usually come after long consent and policy lists. Skip procedural items (call to order, roll call, approval of minutes, adjournment). Policy readings, budgets, contracts, hires, studies and course or program proposals are not procedural; group a long list of them into one item ("Second reading of 44 district policies"). An empty list is right only when the agenda has nothing but procedure; say so in the overview.
 - action: "vote" when the agenda asks for a decision (approve, adopt, award, deny); "hearing" for a public hearing; "report" for updates and presentations; otherwise "discussion".
 - publicComment: true only if the agenda lists a public comment period or a public hearing where residents can speak.
 - closedSession: true only if the agenda lists a closed or executive session.
@@ -162,8 +174,8 @@ Rules:
 - {RESIDENT_PRIVACY_RULES}
 
 --- AGENDA ---
-{agenda_text[:12000]}
---- END ---"""
+{agenda_text[:MAX_AGENDA_CHARS]}
+--- END{" (agenda cut off here for length; say the preview covers the first part only)" if len(agenda_text) > MAX_AGENDA_CHARS else ""} ---"""
 
 
 def parse_preview(raw: str) -> dict | None:
@@ -243,7 +255,7 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
                                    entry["source"], entry["name"], e)
                     text = None
                 if text:
-                    digest = hashlib.sha1(text.encode("utf-8")).hexdigest()
+                    digest = hashlib.sha1(f"{PROMPT_VERSION}\n{text}".encode("utf-8")).hexdigest()
                     rec.update(source=entry["source"], date=entry["date"], name=entry["name"])
                     if digest == rec.get("hash") or rec.get("generations", 0) >= MAX_GENERATIONS:
                         rec["checked"] = stamp
