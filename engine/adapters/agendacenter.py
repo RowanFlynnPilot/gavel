@@ -16,7 +16,8 @@ from datetime import date, timedelta
 
 import requests
 
-from ..errors import AdapterStructureError
+from .. import net
+from ..errors import AdapterStructureError, UpstreamUnavailableError
 from ..pdftext import fetch_pdf_text
 
 logger = logging.getLogger(__name__)
@@ -29,10 +30,9 @@ def _fetch_page(base: str) -> str:
     if base in _page_cache:
         return _page_cache[base]
     try:
-        r = requests.get(f"{base}/agendacenter",
-                         headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
-        _page_cache[base] = r.text
-    except Exception as e:
+        _page_cache[base] = net.get(f"{base}/agendacenter",
+                                    headers={"User-Agent": "Mozilla/5.0"}).text
+    except UpstreamUnavailableError as e:
         print(f"   [warn]  AgendaCenter fetch failed: {e}")
         _page_cache[base] = ""
     return _page_cache[base]

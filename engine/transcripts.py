@@ -14,6 +14,7 @@ import subprocess
 import tempfile
 from typing import Optional
 
+from .adapters.youtube import ytdlp_base
 from .config import (
     CAPTION_FETCH, COOKIES_FILE, USE_WHISPER_FALLBACK, WHISPER_MODEL,
     WHISPER_SOURCES,
@@ -185,7 +186,7 @@ def fetch_transcript(url: str, source_key: str = "", upload_date: str = "",
     with tempfile.TemporaryDirectory() as tmpdir:
         out = os.path.join(tmpdir, "meeting")
         cmd = [
-            "yt-dlp",
+            *ytdlp_base(),
             "--no-check-certificate",
             # Some channels (e.g. DC Everest) return "video unavailable" on the
             # default web client but extract fine via the android client.
@@ -274,7 +275,7 @@ def _fetch_transcript_whisper(url: str, source_key: str = "",
         # Format 18 = 360p mp4 with audio — legacy format that doesn't need
         # JS runtime decryption, always available on YouTube videos.
         dl_cmd = [
-            "yt-dlp",
+            *ytdlp_base(),
             "--no-check-certificate",
             "--extractor-args", "youtube:player_client=default,android",
             "-f", "18",

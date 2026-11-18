@@ -9,6 +9,9 @@ instance.tracker_page_url (falls back to newsroom_url).
 
 Deterministic output — UIDs hash from (source, date, name) and DTSTAMP
 derives from the event date, so the file only changes when the data does.
+UIDs end in @<instance.ics_uid_domain> (default "gavel"); an instance taking
+over an existing feed sets it to that feed's suffix so subscribers' events
+keep their identity.
 Timezone: America/Chicago only for v1 (the VTIMEZONE block below); any
 other instance.timezone is a named ConfigError rather than silently-wrong
 event times.
@@ -87,7 +90,7 @@ def build_events(cfg: InstanceConfig, days_ahead: int) -> list[dict]:
             if "CANCEL" in name.upper():
                 continue
             uid_src = f"{src}|{e.get('date')}|{name.lower()}"
-            uid = hashlib.sha1(uid_src.encode()).hexdigest()[:20] + "@gavel"
+            uid = hashlib.sha1(uid_src.encode()).hexdigest()[:20] + "@" + cfg.ics_uid_domain
             start_dt = None
             if e.get("time"):
                 try:
@@ -118,8 +121,9 @@ def render(cfg: InstanceConfig, events: list[dict]) -> str:
         f"PRODID:-//{cfg.newsroom}//{cfg.name}//EN",
         "CALSCALE:GREGORIAN",
         "METHOD:PUBLISH",
-        f"X-WR-CALNAME:{_escape(cfg.name)}",
-        f"X-WR-CALDESC:Upcoming public meetings for {juris} - from {cfg.newsroom}.",
+        f"X-WR-CALNAME:{_escape(cfg.calendar_name or cfg.name)}",
+        "X-WR-CALDESC:" + (_escape(cfg.calendar_description) if cfg.calendar_description else
+                           f"Upcoming public meetings for {juris} - from {cfg.newsroom}."),
         f"X-WR-TIMEZONE:{_SUPPORTED_TZ}",
         "REFRESH-INTERVAL;VALUE=DURATION:PT12H",
     ]

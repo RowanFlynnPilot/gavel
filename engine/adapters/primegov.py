@@ -20,6 +20,8 @@ from datetime import date, timedelta
 
 import requests
 
+from .. import net
+
 logger = logging.getLogger(__name__)
 
 _HEADERS = {"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
@@ -70,14 +72,11 @@ def fetch_agenda_text(agendas_cfg: dict, doc_url: str) -> str | None:
 
 def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
                    days_ahead: int) -> list[dict]:
-    """Posted future meetings from ListUpcomingMeetings."""
+    """Posted future meetings from ListUpcomingMeetings. Raises
+    UpstreamUnavailableError when PrimeGov doesn't answer."""
     end = (date.today() + timedelta(days=days_ahead)).isoformat()
-    try:
-        r = requests.get(f"{_portal(agendas_cfg)}/api/v2/PublicPortal/ListUpcomingMeetings", headers=_HEADERS, timeout=15)
-        meetings = r.json() if r.status_code == 200 else []
-    except Exception as e:
-        logger.warning("%s PrimeGov fetch failed: %s", jurisdiction_key, e)
-        return []
+    meetings = net.get_json(f"{_portal(agendas_cfg)}/api/v2/PublicPortal/ListUpcomingMeetings",
+                            headers=_HEADERS) or []
 
     results = [{
         "date": m["dateTime"][:10],

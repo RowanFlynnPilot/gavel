@@ -11,7 +11,9 @@
 
 Steps: validate instance.json → scrape per jurisdiction → summarize new
 meetings → upgrade passes (caption retry, BoardBook recordings, Municode
-minutes) → publish data/meetings.json → refresh data/upcoming.json.
+minutes) → run report → publish data/meetings.json → refresh
+data/upcoming.json. The upgrade passes and the run report run on every
+non-dry run, including one with no new meetings.
 Costs are recorded per Anthropic call in data/costs.json (engine.claude).
 """
 
@@ -27,11 +29,12 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import publish as publish_mod
-from . import summarize, upcoming
+from . import summarize, upcoming, watchdog
 from .adapters import boardbook as bb_adapter
 from .adapters import get_adapter, youtube
-from .config import (AGENDA_RETRY_DAYS, PORTAL_ADAPTERS, VOTE_ADAPTERS,
-                     InstanceConfig, load_instance, setup_logging)
+from .config import (AGENDA_RETRY_DAYS, PORTAL_ADAPTERS, RUN_REPORT,
+                     STALE_VIDEO_HOURS, VOTE_ADAPTERS, InstanceConfig,
+                     load_instance, setup_logging)
 from .errors import AdapterStructureError, TranscriptAuthError
 from .output import save_summary
 from .state import (clear_injected, load_state, mark_processed,
@@ -151,6 +154,7 @@ def process_video(cfg: InstanceConfig, video: dict,
                     region=cfg.region, jurisdiction=source_key, meeting_id=vid_id)
         else:
             print("  [err]  No transcript or agenda available - skipping.")
+            watchdog.note_skipped_video(vid_id, title, source_key)
             return None
 
     path = save_summary(title, url, source_key, jur.name, summary,
@@ -668,9 +672,26 @@ def upgrade_municode_from_minutes(cfg: InstanceConfig, source_key: str,
     return upgraded
 
 
-# ── Agenda-only report (CI creates a GitHub Issue from this) ──────────────────
+# ── Running-time backfill ─────────────────────────────────────────────────────
 
-def write_agenda_only_report(cfg: InstanceConfig, state: dict, ok: int) -> None:
+def fill_missing_durations(state: dict, listed_durations: dict[str, int]) -> int:
+    """Give processed meetings that lack a running time the one their channel
+    listing reported (seconds). Meetings ingested from residential transcripts
+    often have none recorded; publish re-reads durations from state for
+    carried-over cards, so this alone restores the "1h 20m" line. Returns the
+    number filled."""
+    filled = [vid for vid, info in state["processed"].items()
+              if not info.get("duration") and listed_durations.get(vid)]
+    for vid in filled:
+        state["processed"][vid]["duration"] = listed_durations[vid]
+    return len(filled)
+
+
+# ── Run report (the workflow's watchdog steps read this) ──────────────────────
+
+def write_run_report(cfg: InstanceConfig, state: dict, ok: int) -> None:
+    """Written on every run, also with nothing agenda-only: `stale_unprocessed`
+    drives the residential-fetcher issue, which must be able to close."""
     agenda_only, transcript_based = [], []
     for vid, info in state.get("processed", {}).items():
         src_tag, sjson = _summary_source(info)
@@ -686,28 +707,35 @@ def write_agenda_only_report(cfg: InstanceConfig, state: dict, ok: int) -> None:
 
     if not agenda_only:
         print(f"\n[ok]  All {ok} meetings have transcripts — no agenda-only fallbacks.")
-        return
+    else:
+        print(f"\n{'='*60}")
+        print(f"[warn]  AGENDA-ONLY MEETINGS ({len(agenda_only)}):")
+        print("   These meetings lack transcripts — summaries are based on")
+        print("   agenda documents only. Paste a transcript to improve them.")
+        for m in agenda_only:
+            label = cfg.by_key.get(m["source"])
+            label = label.name if label else m["source"]
+            vote_note = " (has vote data)" if m["_source"] == "agenda_with_votes" else ""
+            print(f"   [{label}] {m['title']}{vote_note}")
+            print(f"            {m['url']}")
 
-    print(f"\n{'='*60}")
-    print(f"[warn]  AGENDA-ONLY MEETINGS ({len(agenda_only)}):")
-    print("   These meetings lack transcripts — summaries are based on")
-    print("   agenda documents only. Paste a transcript to improve them.")
-    for m in agenda_only:
-        label = cfg.by_key.get(m["source"])
-        label = label.name if label else m["source"]
-        vote_note = " (has vote data)" if m["_source"] == "agenda_with_votes" else ""
-        print(f"   [{label}] {m['title']}{vote_note}")
-        print(f"            {m['url']}")
+    stale = watchdog.stale_skipped_videos(state.get("processed", {}), cfg.skip_ids,
+                                          youtube.LISTED_IDS)
+    if stale:
+        print(f"\n[warn]  {len(stale)} video(s) unprocessed for {STALE_VIDEO_HOURS}h+ — "
+              f"is the residential fetcher running?")
+        for s in stale:
+            print(f"   [{s['source']}] {s['title']} ({s['age_hours']}h)")
 
     report = {
         "agenda_only": agenda_only,
         "transcript_based": [{"id": m["id"], "title": m["title"], "source": m["source"]}
                              for m in transcript_based],
         "total_processed": ok,
+        "stale_unprocessed": stale,
     }
-    report_path = Path("./agenda_only_report.json")
-    report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
-    print(f"\n   Report saved: {report_path.resolve()}")
+    RUN_REPORT.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    print(f"\n   Report saved: {RUN_REPORT.resolve()}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -858,6 +886,13 @@ def main() -> None:
         finally:
             save_state(state)
 
+    if not args.dry_run:
+        filled = fill_missing_durations(state, youtube.LISTED_DURATIONS)
+        if filled:
+            save_state(state)
+            print(f"[duration]  Filled running time for {filled} meeting(s) "
+                  f"from channel listings")
+
     ok = 0
     failed = 0
     if all_pending:
@@ -918,7 +953,7 @@ def main() -> None:
     print(f"\n{'='*60}")
     print(f"[ok]  Done. {ok}/{len(all_pending)} processed.")
 
-    write_agenda_only_report(cfg, state, ok)
+    write_run_report(cfg, state, ok)
     prune_orphan_summaries(state)
 
     # ── Publish + upcoming ─────────────────────────────────────────────────

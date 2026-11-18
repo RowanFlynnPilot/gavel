@@ -18,7 +18,8 @@ from datetime import date, timedelta
 
 import requests
 
-from ..errors import AdapterStructureError
+from .. import net
+from ..errors import AdapterStructureError, UpstreamUnavailableError
 
 logger = logging.getLogger(__name__)
 
@@ -30,15 +31,19 @@ def list_meetings(agendas_cfg: dict, max_pages: int = 2) -> list[dict]:
     Returns [{guid, date (YYYYMMDD), time, name, agenda_pdf, packet_pdf,
               minutes_pdf, detail_url, cancelled}].
     Meetings without a posted agenda yet have guid=None.
-    Raises AdapterStructureError if page 0 fetched OK but zero rows parsed."""
+    Raises AdapterStructureError if page 0 fetched OK but zero rows parsed,
+    and UpstreamUnavailableError if page 0 didn't answer (later pages are
+    older meetings; losing one only shortens the list)."""
     base = agendas_cfg["base"]
     meetings = []
     seen_keys = set()
     for page in range(max_pages):
         url = base + (f"/?page={page}" if page else "/")
         try:
-            r = requests.get(url, headers=_HEADERS, timeout=20)
-        except Exception as e:
+            r = net.get(url, headers=_HEADERS)
+        except UpstreamUnavailableError as e:
+            if page == 0:
+                raise
             print(f"   [warn]  Municode hub page {page} fetch failed: {e}")
             break
         rows = re.findall(r"<tr[^>]*>(.*?)</tr>", r.text, re.DOTALL)
@@ -76,7 +81,7 @@ def list_meetings(agendas_cfg: dict, max_pages: int = 2) -> list[dict]:
                 continue
             seen_keys.add(key)
             meetings.append(entry)
-        if page == 0 and r.status_code == 200 and page_hits == 0:
+        if page == 0 and page_hits == 0:
             raise AdapterStructureError(
                 f"Municode hub at {base}: page fetched but no meeting rows "
                 f"matched — upstream HTML structure changed")
@@ -108,19 +113,12 @@ def fetch_agenda_text(agendas_cfg: dict, guid: str) -> str | None:
 def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
                    days_ahead: int) -> list[dict]:
     """Posted future meetings from the hub (the portal lists meetings weeks
-    ahead on page 0)."""
+    ahead on page 0). Raises UpstreamUnavailableError when the hub doesn't
+    answer."""
     today = date.today()
     end_date = today + timedelta(days=days_ahead)
     results = {}
-    try:
-        meetings = list_meetings(agendas_cfg, max_pages=1)
-    except AdapterStructureError:
-        raise
-    except Exception as e:
-        logger.warning("%s Municode hub scrape failed: %s", jurisdiction_key, e)
-        return []
-
-    for m in meetings:
+    for m in list_meetings(agendas_cfg, max_pages=1):
         if m["cancelled"]:
             continue
         try:

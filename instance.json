@@ -15,6 +15,10 @@
       "bb_748413"
     ],
     "tracker_page_url": "https://wausaupilotandreview.com/central-wisconsin-meeting-tracker/",
+    "ics_uid_domain": "marathon-meetings",
+    "calendar_name": "Central Wisconsin Government Meetings",
+    "calendar_description": "Upcoming public meetings for Marathon County, Wausau, Weston, Kronenwetter, and area school boards - from the Wausau Pilot & Review Meeting Tracker.",
+    "corrections_email": "editor@wausaupilotandreview.com",
     "tagline": "MORE NEWS. LESS FLUFF. ALL LOCAL."
   },
   "seo": {
@@ -24,6 +28,14 @@
   "analytics": {
     "plausible_domain": "wausaupilotandreview.com"
   },
+  "place_names": [
+    "Wausau", "Weston", "Mosinee", "Brokaw", "Kronenwetter", "Rothschild",
+    "Schofield", "Rib Mountain", "Ringle", "Marathon City", "Marathon",
+    "Hatley", "Maine", "Stettin", "Texas", "Wien", "Easton", "Bergen",
+    "Knowlton", "Guenther", "Reid", "Elderon", "Edgar", "Athens",
+    "Stratford", "Spencer", "Colby", "Abbotsford", "Merrill",
+    "WI", "Wisconsin"
+  ],
   "theme": {
     "primary": "#4aaba7",
     "primary_dark": "#3e847a",
@@ -138,7 +150,8 @@
         "Chris Dickinson (Vice Chair)",
         "Aaron Griner (Supervisor, District 5)"
       ],
-      "calendar_url": "https://www.marathoncounty.gov/about-us/county-calendar"
+      "calendar_url": "https://www.marathoncounty.gov/about-us/county-calendar",
+      "expected_lag_days": 3
     },
     {
       "key": "wausau",
@@ -179,7 +192,8 @@
         "Terry Kilian (Council President, District 3)",
         "Aaron Griner (Alderperson)"
       ],
-      "calendar_url": "https://wausauwi.portal.civicclerk.com/"
+      "calendar_url": "https://wausauwi.portal.civicclerk.com/",
+      "expected_lag_days": 3
     },
     {
       "key": "weston",
@@ -272,7 +286,8 @@
         "Lisa Beck (Trustee)",
         "Mark Kern (Trustee)"
       ],
-      "calendar_url": "https://www.westonwi.gov/agendacenter"
+      "calendar_url": "https://www.westonwi.gov/agendacenter",
+      "expected_lag_days": 3
     },
     {
       "key": "school_board",
@@ -326,7 +341,8 @@
         "Nick Crochiere (Board Member)",
         "Pat McKee (Board Member)"
       ],
-      "calendar_url": "https://meetings.boardbook.org/Public/Organization/1360"
+      "calendar_url": "https://meetings.boardbook.org/Public/Organization/1360",
+      "expected_lag_days": 21
     },
     {
       "key": "kronenwetter",
@@ -369,7 +385,8 @@
         "Mary Solheim (Trustee)",
         "Erin Mishka (Parks Committee Chair)"
       ],
-      "calendar_url": "https://kronenwetter-wi.municodemeetings.com/"
+      "calendar_url": "https://kronenwetter-wi.municodemeetings.com/",
+      "expected_lag_days": 5
     },
     {
       "key": "dc_everest",
@@ -389,7 +406,15 @@
         "base": "https://meetings.boardbook.org",
         "org_id": 1315,
         "label": "D.C. Everest Area School District Board of Education",
-        "days_ahead": 60
+        "days_ahead": 60,
+        "fallback_rules": [
+          {
+            "name": "Regular School Board Meeting",
+            "weekday": 2,
+            "nth": 3,
+            "time": "6:30 PM"
+          }
+        ]
       },
       "title_strip_patterns": [
         "^D\\.?C\\.?\\s*Everest( Area)?( School)?( District)?\\s+"
@@ -410,7 +435,8 @@
         "Lindsey Lewitzke (Board Member)",
         "Larry Schaefer (Board Member)"
       ],
-      "calendar_url": "https://meetings.boardbook.org/Public/Organization/1315"
+      "calendar_url": "https://meetings.boardbook.org/Public/Organization/1315",
+      "expected_lag_days": 7
     }
   ],
   "committee_styles": {

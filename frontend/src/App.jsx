@@ -38,6 +38,11 @@ let JURISDICTIONS = [];   // instance.json "jurisdictions" array
 let MEETINGS      = [];   // data/meetings.json (newest first)
 let UPCOMING      = {};   // data/upcoming.json (keyed by jurisdiction key)
 
+let PARTS_BY_ID   = {};   // meeting id -> all parts of that meeting (sorted), for meetings with 2+ parts
+// Meetings as readers count them: all parts of a meeting share one array.
+let MEETING_COUNT = 0;
+let NEW_COUNT     = 0;
+
 let SOURCE_CONFIG          = {};
 let COMMITTEE_STYLES       = {};
 let _COMMITTEE_STYLES_NORM = {};
@@ -57,6 +62,9 @@ let BUILD_STAMP   = "";
 let TITLE_LINE_1  = "";
 let TITLE_LINE_2  = "";
 let GOV_COUNT_WORD = "";
+
+// Mirrors PORTAL_ADAPTERS in engine/config.py.
+const _PORTAL_ADAPTERS = ["civicclerk", "legistar", "primegov"];
 
 const _NUMBER_WORDS = ["zero", "one", "two", "three", "four", "five", "six",
   "seven", "eight", "nine", "ten", "eleven", "twelve"];
@@ -105,6 +113,10 @@ function _applyConfig(config, meetings, upcoming) {
   JURISDICTIONS = config.jurisdictions;
   MEETINGS      = Array.isArray(meetings) ? meetings : [];
   UPCOMING      = upcoming || {};
+
+  PARTS_BY_ID   = _groupParts(MEETINGS);
+  MEETING_COUNT = new Set(MEETINGS.map(m => PARTS_BY_ID[m.id] || m)).size;
+  NEW_COUNT     = new Set(MEETINGS.filter(m => m.badge).map(m => PARTS_BY_ID[m.id] || m)).size;
 
   // Theme tokens → CSS custom properties on the root element.
   const root = document.documentElement;
@@ -208,7 +220,8 @@ function _applyConfig(config, meetings, upcoming) {
       channel: (j.video && j.video.channel_url) || j.calendar_url,
       // Portal-first jurisdictions have no recordings: their agenda-only
       // summaries are updated from the portal's vote records, not captions.
-      hasVideo: !!(j.video && j.video.channel_url),
+      portalFirst: !(j.video && j.video.channel_url)
+        && _PORTAL_ADAPTERS.includes(j.agendas && j.agendas.adapter),
       docHost: j.doc_host,
       avatar:  BASE_URL + j.avatar,
     };
@@ -307,6 +320,66 @@ function matchSearch(m, query) {
   return q.split(/\s+/).every(term => _searchBlob(m).includes(term));
 }
 
+// Readers report errors to the newsroom's editor (instance.corrections_email;
+// no link without one). The permalink is built from the page's own location,
+// so it points at whichever deployment the reader is on.
+function correctionMailto(m) {
+  const subject = `Correction request: ${m.title} (${m.date})`;
+  const body = [
+    `Meeting: ${m.title}, ${m.date}`,
+    `Link: ${window.location.origin}${window.location.pathname}#m/${m.id}`,
+    "",
+    "What's wrong, and what the record shows instead:",
+    "",
+  ].join("\n");
+  return `mailto:${INSTANCE.corrections_email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// Closed sessions are never recorded, so "agenda only" is final for them —
+// say so instead of implying a transcript is on the way.
+function isClosedSession(m) {
+  return /\bclosed\b/i.test(m.title || "");
+}
+
+// Multi-part meetings (one recording split across uploads: "... Pt.1",
+// "... Pt.2") stay separate records, so permalinks keep working per part,
+// but a reader sees one meeting: one card in the list and a part switcher in
+// the detail view.
+const _PART_RE = /\s*Pt\.?\s*(\d+)\s*$/i;
+function _partInfo(m) {
+  const t = (m.title || "").trim();
+  const hit = t.match(_PART_RE);
+  return hit ? { base: t.slice(0, hit.index).trim(), part: Number(hit[1]) } : { base: t, part: null };
+}
+
+function _groupParts(meetings) {
+  const groups = {};
+  for (const m of meetings) {
+    const { base, part } = _partInfo(m);
+    if (part == null) continue;
+    const key = `${m.source}|${m.date}|${base.toLowerCase()}`;
+    (groups[key] = groups[key] || []).push(m);
+  }
+  const byId = {};
+  for (const parts of Object.values(groups)) {
+    if (parts.length < 2) continue;
+    parts.sort((a, b) => _partInfo(a).part - _partInfo(b).part);
+    for (const p of parts) byId[p.id] = parts;
+  }
+  return byId;
+}
+
+function _minutes(duration) {
+  const h = /(\d+)\s*h/.exec(duration || "");
+  const m = /(\d+)\s*m/.exec(duration || "");
+  return (h ? Number(h[1]) * 60 : 0) + (m ? Number(m[1]) : 0);
+}
+
+function _fmtMinutes(total) {
+  const h = Math.floor(total / 60), m = total % 60;
+  return h ? `${h}h ${m}m` : `${m}m`;
+}
+
 // Normalize a committee name for fuzzy lookup: lowercase, "and"↔"&",
 // strip trailing "Committee"/"Commission"/"Board" since the badge already
 // shows the full label.
@@ -323,10 +396,17 @@ function getCommitteeStyle(committee) {
       || { bg: "#555", text: "#fff" };
 }
 
-function MeetingCard({ meeting, onClick, active }) {
+function MeetingCard({ meeting, parts, onClick, active }) {
   const cs  = getCommitteeStyle(meeting.committee);
   const src = SOURCE_CONFIG[meeting.source];
   const [hov, setHov] = useState(false);
+
+  const title      = parts ? _partInfo(meeting).base : meeting.title;
+  const duration   = parts && parts.every(p => p.duration)
+    ? _fmtMinutes(parts.reduce((sum, p) => sum + _minutes(p.duration), 0))
+    : meeting.duration;
+  const agendaOnly = parts ? parts.every(p => p.isAgendaOnly) : meeting.isAgendaOnly;
+  const isNew      = parts ? parts.some(p => p.badge) : meeting.badge;
 
   return (
     <button
@@ -362,15 +442,15 @@ function MeetingCard({ meeting, onClick, active }) {
           }}>{meeting.committee.toUpperCase()}</span>
         </div>
         <div style={{ display: "flex", gap: "4px", alignItems: "center" }}>
-          {meeting.isAgendaOnly && (
+          {agendaOnly && (
             <span style={{
               background: "rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)",
               fontSize: "8px", fontWeight: 700,
               letterSpacing: "0.1em", padding: "1px 4px", borderRadius: "1px",
               border: "1px solid rgba(255,255,255,0.2)",
-            }}>AGENDA ONLY</span>
+            }}>{isClosedSession(meeting) ? "CLOSED SESSION" : "AGENDA ONLY"}</span>
           )}
-          {meeting.badge && (
+          {isNew && (
             <span style={{
               background: "#FFE566", color: "#111",
               fontSize: "9px", fontWeight: 900,
@@ -413,7 +493,7 @@ function MeetingCard({ meeting, onClick, active }) {
               fontFamily: FONT_HEADLINE,
               fontSize: "13px", fontWeight: 700, color: INK,
               lineHeight: 1.25, flex: 1, minWidth: 0,
-            }}>{meeting.title}</div>
+            }}>{title}</div>
             <img
               src={src.avatar}
               alt={src.label}
@@ -429,9 +509,11 @@ function MeetingCard({ meeting, onClick, active }) {
               }}
             />
           </div>
-          {meeting.duration && (
+          {(duration || parts) && (
             <div style={{ fontFamily: FONT_BODY, fontSize: "11px", color: "#666" }}>
-              <span aria-hidden="true">{"›"}</span> {meeting.duration}
+              {duration && <><span aria-hidden="true">{"›"}</span> {duration}</>}
+              {duration && parts && <span aria-hidden="true">{" · "}</span>}
+              {parts && `${parts.length} parts`}
             </div>
           )}
         </div>
@@ -489,10 +571,12 @@ function VoteChip({ passed }) {
   );
 }
 
-function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
+function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }) {
   const [tab, setTab] = useState("summary");
   const cs  = getCommitteeStyle(meeting.committee);
   const src = SOURCE_CONFIG[meeting.source];
+  const parts  = PARTS_BY_ID[meeting.id];
+  const closed = isClosedSession(meeting);
 
   const hasCivic = !!(meeting.civicItems && meeting.civicItems.length);
   // Structured votes extracted from transcripts/minutes (non-CivicClerk
@@ -508,6 +592,13 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
     ...voteTab,
     { id: "documents",  label: "Documents"  },
   ];
+
+  // The selected tab survives switching meetings (or parts); fall back to
+  // Summary when the new meeting doesn't have it, e.g. no Votes tab —
+  // otherwise the pane renders blank.
+  useEffect(() => {
+    if (!tabs.some(t => t.id === tab)) setTab("summary");
+  }, [meeting.id]);
 
   return (
     <div style={{ height: "100%", display: "flex", flexDirection: "column" }}>
@@ -568,9 +659,28 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
                 background: "#F5E6C8", color: "#8B6914",
                 fontSize: "9px", fontWeight: 700, letterSpacing: "0.1em", padding: "2px 6px",
                 borderRadius: "1px",
-              }}>AGENDA ONLY</span>
+              }}>{closed ? "CLOSED SESSION" : "AGENDA ONLY"}</span>
             )}
           </div>
+
+          {parts && (
+            <div role="group" aria-label="Meeting parts" style={{ display: "flex", gap: "6px", marginBottom: "10px", flexWrap: "wrap" }}>
+              {parts.map(p => {
+                const on = p.id === meeting.id;
+                return (
+                  <button key={p.id} aria-pressed={on} onClick={() => { if (!on) onSelectPart(p); }}
+                    style={{
+                      fontFamily: FONT_DISPLAY, fontSize: "11px", letterSpacing: "0.14em",
+                      padding: "4px 10px", cursor: on ? "default" : "pointer",
+                      border: `1px solid ${on ? src.accent : RULE}`,
+                      background: on ? src.accent : "#fff", color: on ? "#fff" : "#5a5a5a",
+                    }}>
+                    PART {_partInfo(p).part}{p.duration ? ` · ${p.duration.toUpperCase()}` : ""}
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           {meeting.isAgendaOnly && (
             <div style={{
@@ -579,8 +689,11 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
               fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
               fontSize: "12px", color: "#6B5A1E", lineHeight: 1.4,
             }}>
-              This summary is based on the published agenda, not a recording of the meeting.
-              It shows what was scheduled to be discussed, not necessarily what occurred or how votes were cast.
+              {closed
+                ? <>This was a closed session, which isn&rsquo;t open to the public or recorded.
+                    The summary reflects the published agenda: the topics the board was scheduled to take up.</>
+                : <>This summary is based on the published agenda, not a recording of the meeting.
+                    It shows what was scheduled to be discussed, not necessarily what occurred or how votes were cast.</>}
             </div>
           )}
 
@@ -742,14 +855,14 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
           <div style={{ borderLeft: `4px solid ${src.accent}`, paddingLeft: "20px", marginBottom: "26px" }}>
             <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.18em", color: src.accent, marginBottom: "8px" }}>MEETING OVERVIEW</div>
             <p style={{ fontFamily: FONT_BODY, fontSize: "15px", lineHeight: 1.8, color: INK, margin: 0, fontStyle: "italic" }}>{meeting.overview}</p>
-              {meeting.isAgendaOnly && (
+              {meeting.isAgendaOnly && !closed && (
                 <div style={{
                   background: "#fffbea", border: "1px solid #e8d87a",
                   padding: "8px 14px", marginTop: "16px",
                   fontFamily: "'Source Sans 3', sans-serif", fontSize: "12px",
                   color: "#7a6a00", letterSpacing: "0.03em",
                 }}>
-                  <strong>AGENDA PREVIEW ONLY</strong> - This summary reflects the published agenda. Actual votes, decisions, and discussion outcomes may differ. {src.hasVideo ? "A full transcript-based summary will be available once video captions are processed." : "Where the portal records the votes, this summary is updated once they're posted."}
+                  <strong>AGENDA PREVIEW ONLY</strong> - This summary reflects the published agenda. Actual votes, decisions, and discussion outcomes may differ. {src.portalFirst ? "Where the portal records the votes, this summary is updated once they're posted." : "A full summary will replace it once the meeting’s recording or official minutes are available."}
                 </div>
               )}
           </div>
@@ -1184,6 +1297,16 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick }) {
             <p style={{ ...bodyStyle, color: "#5a5a5a", fontStyle: "italic" }}>No documents linked for this meeting.</p>
           )}
         </>}
+
+        {INSTANCE.corrections_email && (
+          <div style={{ borderTop: `1px solid ${RULE}`, marginTop: "30px", paddingTop: "14px", fontFamily: FONT_BODY, fontSize: "12px", color: "#5a5a5a", lineHeight: 1.6 }}>
+            See something wrong in this summary?{" "}
+            <a href={correctionMailto(meeting)}
+              onClick={() => track("Correction Link", { source: meeting.source })}
+              style={{ color: src.accent, fontWeight: 600 }}>Request a correction</a>
+            . An editor reviews every request, and fixes are logged.
+          </div>
+        )}
       </div>
     </div>
   );
@@ -1829,9 +1952,23 @@ function Tracker() {
     })
     .sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
+  // One card per meeting. A multi-part meeting shows up if any part matches
+  // the filter/search, represented by its first matching part.
+  const filteredIds = new Set(filtered.map(m => m.id));
+  const seenParts   = new Set();
+  const cards = [];
+  for (const m of filtered) {
+    const parts = PARTS_BY_ID[m.id];
+    if (!parts) {
+      cards.push({ meeting: m, parts: null });
+    } else if (!seenParts.has(parts)) {
+      seenParts.add(parts);
+      cards.push({ meeting: parts.find(p => filteredIds.has(p.id)), parts });
+    }
+  }
+
   const showList   = !isMobile || !selected;
   const showDetail = !isMobile || !!selected;
-  const newCount   = MEETINGS.filter(m => m.badge).length;
 
   return (
     <>
@@ -2047,7 +2184,7 @@ function Tracker() {
 
 
               <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch", minHeight: 0 }}>
-                {filtered.length === 0
+                {cards.length === 0
                   ? (
                     <div style={{ padding: "32px 18px", color: "#5a5a5a", fontFamily: FONT_BODY, fontSize: "14px", lineHeight: 1.55, textAlign: "center" }}>
                       <div style={{ fontFamily: FONT_DISPLAY, fontSize: "13px", letterSpacing: "0.14em", color: "#5a5a5a", marginBottom: "8px" }}>NO MATCHES</div>
@@ -2058,9 +2195,18 @@ function Tracker() {
                           : <>No recent meetings have been summarized yet.</>}
                     </div>
                   )
-                  : filtered.map(m => (
-                    <MeetingCard key={m.id} meeting={m} onClick={(mm) => { track("Meeting Opened", { source: mm.source, committee: mm.committee }); setSelected(mm); }} active={!isMobile && selected?.id === m.id} />
-                  ))
+                  : cards.map(({ meeting: m, parts }) => {
+                    const holdsSelection = parts ? parts.some(p => p.id === selected?.id) : selected?.id === m.id;
+                    return (
+                      <MeetingCard key={m.id} meeting={m} parts={parts}
+                        onClick={(mm) => {
+                          track("Meeting Opened", { source: mm.source, committee: mm.committee });
+                          // Re-clicking a multi-part card keeps the part being read.
+                          if (!holdsSelection) setSelected(mm);
+                        }}
+                        active={!isMobile && holdsSelection} />
+                    );
+                  })
                 }
               </div>
 
@@ -2073,7 +2219,7 @@ function Tracker() {
 
               <div style={{ padding: "10px 14px 12px", borderTop: `1px solid ${RULE}`, background: CREAM }}>
                 <div style={{ fontFamily: FONT_DISPLAY, fontSize: "9px", letterSpacing: "0.12em", color: "#5a5a5a", marginBottom: "5px" }}>
-                  {newCount} NEW <span aria-hidden="true">·</span> {MEETINGS.length} TOTAL
+                  {NEW_COUNT} NEW <span aria-hidden="true">·</span> {MEETING_COUNT} TOTAL
                   {BUILD_STAMP && <> <span aria-hidden="true">·</span> UPDATED {BUILD_STAMP}</>}
                 </div>
                 <div style={{ fontFamily: FONT_BODY, fontSize: "10px", color: "#666", lineHeight: 1.55 }}>
@@ -2097,6 +2243,7 @@ function Tracker() {
             <section aria-label="Meeting summary" style={{ flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }}>
               {selected
                 ? <SummaryDetail meeting={selected} onBack={() => setSelected(null)} isMobile={isMobile}
+                    onSelectPart={setSelected}
                     onTopicClick={(t) => {
                       // Topic chip → filter the whole tracker by that topic via
                       // full-text search. Reset the source filter so matches

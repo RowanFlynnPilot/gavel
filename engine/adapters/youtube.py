@@ -6,6 +6,12 @@ Given a jurisdiction's video config block, returns normalized video records:
 
 Transcript acquisition itself lives in engine.transcripts (it's shared by
 the ingest tool and the upgrade passes, not adapter-specific).
+
+list_videos also records what each channel listing returned this run, before
+any date filtering: LISTED_IDS (jurisdiction key -> every video ID, set only
+when the listing completed) and LISTED_DURATIONS (video ID -> seconds). The
+pipeline reads them to dismiss watched videos that left their channel and to
+fill running times missing from state.
 """
 
 from __future__ import annotations
@@ -13,6 +19,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import sys
 
 _MONTHS = {
     "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
@@ -21,6 +28,28 @@ _MONTHS = {
     "jan": 1, "feb": 2, "mar": 3, "apr": 4, "jun": 6, "jul": 7, "aug": 8,
     "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12,
 }
+
+LISTED_IDS: dict[str, set[str]] = {}
+LISTED_DURATIONS: dict[str, int] = {}
+
+_YTDLP_BASE: list[str] | None = None
+
+
+def ytdlp_base() -> list[str]:
+    """The yt-dlp invocation as an argv prefix. CI has the binary on PATH; a
+    residential Windows machine often has a module-only install (Scripts/ not
+    on PATH), where a bare "yt-dlp" raises FileNotFoundError. If the module is
+    missing too, the caller's subprocess surfaces "No module named yt_dlp"."""
+    global _YTDLP_BASE
+    if _YTDLP_BASE is None:
+        try:
+            r = subprocess.run(["yt-dlp", "--version"], capture_output=True, timeout=10)
+            _YTDLP_BASE = ["yt-dlp"] if r.returncode == 0 else None
+        except FileNotFoundError:
+            _YTDLP_BASE = None
+        if _YTDLP_BASE is None:
+            _YTDLP_BASE = [sys.executable, "-m", "yt_dlp"]
+    return _YTDLP_BASE
 
 
 def parse_date_from_title(title: str) -> str:
@@ -54,7 +83,7 @@ def list_videos(video_cfg: dict, jurisdiction_key: str, label: str,
     dateafter (YYYYMMDD) filters client-side by that parsed date."""
     channel_url = video_cfg["channel_url"]
     print(f"\U0001f4e1  Fetching {label} video list...")
-    cmd = ["yt-dlp", "--no-check-certificate", "--flat-playlist",
+    cmd = [*ytdlp_base(), "--no-check-certificate", "--flat-playlist",
            "--dump-json", channel_url]
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
     if result.returncode != 0 and not result.stdout.strip():
@@ -89,6 +118,11 @@ def list_videos(video_cfg: dict, jurisdiction_key: str, label: str,
             "description": desc,
         })
 
+    # A failed or empty listing proves nothing about which videos still exist.
+    if result.returncode == 0 and videos:
+        LISTED_IDS[jurisdiction_key] = {v["id"] for v in videos}
+    LISTED_DURATIONS.update({v["id"]: v["duration"] for v in videos if v.get("duration")})
+
     if dateafter:
         total = len(videos)
         videos = [v for v in videos
@@ -110,7 +144,7 @@ def scan_descriptions_for_upcoming(video_cfg: dict, jurisdiction_key: str,
     results = {}
     try:
         out = subprocess.run(
-            ["yt-dlp", "--no-check-certificate", "--flat-playlist",
+            [*ytdlp_base(), "--no-check-certificate", "--flat-playlist",
              "--dump-json", video_cfg["channel_url"]],
             capture_output=True, text=True, timeout=30,
         )

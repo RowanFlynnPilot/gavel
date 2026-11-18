@@ -16,6 +16,18 @@ from .claude import call_claude, parse_summary_json
 from .config import CLAUDE_MODEL, CLAUDE_MODEL_AGENDA, MAX_TRANSCRIPT_CHARS
 
 
+# How summaries treat private residents: officials are named; a resident only
+# when the record is clear, never with a home address; students never. Shared
+# by the transcript and minutes prompts; engine.scrub is the backstop for the
+# address rule and cleans anything published before it.
+RESIDENT_PRIVACY_RULES = """Privacy rules for private residents (these override "be specific"):
+- Elected officials, government staff, and people appearing in a professional role (consultants, applicants' representatives, presenters) are named normally.
+- A resident who speaks at public comment or is mentioned as a private individual is named ONLY when the source states the name clearly. If the name or its spelling is uncertain in any way, write "a resident" (or "a second resident") and never guess, never write [inaudible] next to a name.
+- NEVER give a private person's home address, house number, street of residence, or say where they live ("of 123 Elm St", "who lives on Elm Street"). Say "a resident" or "a nearby resident" instead. A property address that is itself the subject of an agenda item (a rezoning, permit, or sale at that address) may be given.
+- NEVER name a student or any minor; write "a student".
+- NEVER connect a named private person to a health or medical condition; describe the point without the name."""
+
+
 def _roster_block(officials: list[str] | None) -> str:
     """Prompt fragment giving Claude authoritative name spellings. Auto
     transcripts and audio garble names; the jurisdiction's `officials` list
@@ -53,10 +65,10 @@ Produce a JSON object with this exact structure and nothing else - no markdown, 
   "discussions": [
     {{
       "item": "agenda item title",
-      "body": "2-4 sentences describing what ACTUALLY occurred: who spoke, what positions they took, how votes went, what was approved or rejected, any notable debate or public input. Be specific - name names, cite vote counts, quote key statements if clear in the transcript."
+      "body": "2-4 sentences describing what ACTUALLY occurred: who spoke, what positions they took, how votes went, what was approved or rejected, any notable debate or public input. Be specific - name the officials involved, cite vote counts, quote key statements if clear in the transcript."
     }}
   ],
-  "publicComment": "Describe actual public comment offered - who spoke, what they said, how many speakers. Or 'No public comment was offered.'",
+  "publicComment": "Describe actual public comment offered - how many speakers and what each said, following the privacy rules below. Or 'No public comment was offered.'",
   "actionItems": ["specific decisions made or next steps directed by the committee"],
   "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places discussed (e.g. Highway J Extension, Riverlife District)"],
   "votes": [
@@ -70,8 +82,9 @@ Rules:
 - discussions: focus on WHAT WAS DECIDED or DEBATED, not just what the topic was.
 - Include vote results where mentioned (e.g. "Approved 5-2", "Passed unanimously").
 - votes: ONLY votes actually taken — empty array if none. Never invent movers, seconders, or tallies; use null for anything not stated in the transcript.
-- Name specific people who spoke or voted when identifiable from transcript.
-- Note unclear audio as [inaudible] rather than guessing.
+- Name officials who spoke or voted when identifiable from transcript.
+- Note unclear audio as [inaudible] rather than guessing at what was said.
+- {RESIDENT_PRIVACY_RULES}
 - Return ONLY the JSON object.
 
 --- TRANSCRIPT ---
@@ -302,9 +315,9 @@ Produce a JSON object with this exact structure - no markdown, no preamble, just
     {{"time": "N/A", "item": "agenda item description"}}
   ],
   "discussions": [
-    {{"item": "agenda item title", "body": "2-4 sentences reporting the ACTUAL OUTCOME: motion text, who moved/seconded, the vote result (e.g. 'carried 6-0', 'failed 3-4'), and any recorded discussion or public input. Name names."}}
+    {{"item": "agenda item title", "body": "2-4 sentences reporting the ACTUAL OUTCOME: motion text, who moved/seconded, the vote result (e.g. 'carried 6-0', 'failed 3-4'), and any recorded discussion or public input. Name the officials involved."}}
   ],
-  "publicComment": "Describe public comment as recorded in the minutes — who spoke and on what. Or 'No public comment was recorded.'",
+  "publicComment": "Describe public comment as recorded in the minutes — how many spoke and on what, following the privacy rules below. Or 'No public comment was recorded.'",
   "actionItems": ["specific decisions made and directed next steps from the minutes"],
   "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"],
   "votes": [
@@ -318,6 +331,7 @@ Rules:
 - votes: ONLY votes actually recorded — empty array if none. Use null for movers/seconders/tallies the minutes don't state.
 - Skip purely procedural items (call to order, roll call, adjournment) in discussions.
 - NEVER use placeholder text like [AGENDA_ITEM_NAME], [TBD], [INSERT], etc.
+- {RESIDENT_PRIVACY_RULES}
 - Return ONLY the JSON object.
 
 --- MINUTES ---

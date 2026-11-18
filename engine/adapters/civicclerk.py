@@ -14,6 +14,8 @@ from datetime import date, timedelta
 
 import requests
 
+from .. import net
+
 logger = logging.getLogger(__name__)
 
 _HEADERS = {"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
@@ -123,7 +125,8 @@ def fetch_agenda_text(agendas_cfg: dict, doc_url: str) -> str | None:
 
 def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
                    days_ahead: int) -> list[dict]:
-    """Posted future events from the OData Events endpoint."""
+    """Posted future events from the OData Events endpoint. Raises
+    UpstreamUnavailableError when CivicClerk doesn't answer."""
     base = agendas_cfg["api_base"]
     portal = agendas_cfg["portal"].rstrip("/")
     today = date.today()
@@ -136,12 +139,7 @@ def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
         "%20and%20isDeleted%20eq%20false"
         "&%24orderby=eventDate&%24top=30"
     )
-    try:
-        r = requests.get(url, headers=_HEADERS, timeout=10)
-        events = r.json().get("value", [])
-    except Exception as e:
-        logger.warning("%s CivicClerk fetch failed: %s", jurisdiction_key, e)
-        return []
+    events = net.get_json(url, headers=_HEADERS).get("value", [])
 
     results = []
     for e in events:

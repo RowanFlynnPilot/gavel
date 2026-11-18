@@ -15,6 +15,12 @@ archive marathon-meetings.
       (user-side; until set, runs deploy fine but go red at the
       fail-loud "Surface pipeline failures" step)
 - [ ] Optional: `gh secret set YOUTUBE_COOKIES --repo RowanFlynnPilot/gavel`
+- [ ] **Reset the ANTHROPIC_API_KEY secret.** As of Nov 17, 2026 every Claude
+      call in gavel's scheduled runs returns `401 invalid x-api-key`; the last
+      meeting gavel summarized was Sept 28 (`processed_meetings.json` and
+      `data/costs.json` have not changed since). The runs stay green because
+      per-source and per-video failures are logged and the pipeline exits 0.
+      Parity cannot hold until this is fixed.
 
 ## Daily (automated-friendly)
 - [ ] `python tools/parity_diff.py` → PARITY OK
@@ -32,7 +38,10 @@ archive marathon-meetings.
 - [ ] Detail tabs incl. Votes (non-CivicClerk) and civicItems (Wausau)
 - [ ] Topic chips → full-text search across jurisdictions
 - [ ] Upcoming panel grouping, FULL CALENDAR links per filter
-- [ ] webcal subscribe + `meetings.ics` served at site root
+- [ ] webcal subscribe + `meetings.ics` served at site root; event UIDs
+      identical to production's (`instance.ics_uid_domain` is
+      `marathon-meetings`, so subscribers' events keep their identity at
+      cutover)
 - [ ] `digest.png` renders identically to production's
 - [ ] Bookmark button + hint, hash permalinks (`#m/<id>`), compact
       (<960px) and two-pane layouts
@@ -40,40 +49,71 @@ archive marathon-meetings.
       present (soak safety — do NOT remove until cutover)
 
 ## Transcript path
-- [ ] Port the Aug 2026 production additions to the engine (required
-      before cutover — the residential fetcher points at gavel after the
-      swap): gap sweep of unprocessed channel videos
-      (`find_unprocessed_channel_videos` + `GAP_SWEEP_DAYS`) and
-      `transcripts/<id>.meta.json` metadata sidecars in
-      `engine/fetch_transcripts.py`, sidecar-aware resolution in
-      `engine/ingest_transcript.py`, the stuck-video watchdog
-      (`skipped_videos.json` first-seen tracking → `stale_unprocessed` in
-      the run report → "🏠 Residential transcript fetcher may be down"
-      issue step, honoring skip_ids). Context: YouTube blocks cloud IPs
-      from captions AND per-video metadata regardless of cookies; CI runs
-      with CAPTION_FETCH=false (already ported), so the residential
-      fetcher is the only transcript path and must be watched.
-- [ ] Port the Sept 2026 production fixes (marathon-meetings commit "fix:
-      Kronenwetter audio matching, upcoming-feed blanks, alarm accuracy"):
-      Kronenwetter SoundCloud `YYYY MM DD` title dates + duplicate-upload
-      collapsing (`engine/fetch_transcripts.py`); `_get` retries +
-      last-known-good upcoming per source (`engine/upcoming.py`); the
-      overdue-upgrade check replacing the standing agenda-only issue
-      (`check_overdue.py` + workflow step); private/removed video handling
-      (`transcripts/unavailable.json` + dismissing skipped videos missing
-      from the channel listing); `MAX_AUDIO_JOBS` with audio jobs last;
+Ports of the Aug-Nov 2026 production additions (required before cutover —
+the residential fetcher points at gavel after the swap). Context: YouTube
+blocks cloud IPs from captions AND per-video metadata regardless of cookies;
+CI runs with CAPTION_FETCH=false, so the residential fetcher is the only
+transcript path and must be watched.
+
+Engine and CI (ported Nov 17, 2026; unit-tested, not yet run in CI):
+- [x] Stuck-video watchdog: `skipped_videos.json` first-seen tracking
+      (`engine/watchdog.py`) → `stale_unprocessed` in the run report →
+      "🏠 Residential transcript fetcher may be down" issue step. Dismisses
+      videos in `instance.skip_ids`, in `transcripts/unavailable.json`, or
+      gone from their channel listing (`youtube.LISTED_IDS`).
+- [x] Upcoming feed: 3-attempt fetches (`engine/net.py`) and last-known-good
+      per jurisdiction when an upstream doesn't answer (`engine/upcoming.py`).
+- [x] Overdue-upgrade check (`engine/overdue.py`, lags in instance.json
+      `expected_lag_days`) replacing the standing agenda-only issue.
+- [x] DC Everest 3rd-Wednesday `fallback_rules` entry + rule/posted dedupe
+      (`rule_schedule.covered_by_posted`).
+- [x] Running-time backfill from channel listings
+      (`pipeline.fill_missing_durations`, `youtube.LISTED_DURATIONS`).
+- [x] Quiet runs: the engine never had production's early return; the run
+      report is now written on every non-dry run (it used to be skipped when
+      nothing was agenda-only).
+- [x] Spending alarm (`python -m engine.costs --check`) + workflow step.
+- [x] Residents' privacy (marathon-meetings 1564236): prompt rules, address
+      scrub + corrections applier (`engine/scrub.py`, `corrections.json`,
+      `place_names`), workflow step before publish.
+- [x] Static pages: `#m/<id>` permalink, "Request a correction" link
+      (`instance.corrections_email`), archive footer refresh.
+- [x] Calendar feed UIDs end in `@marathon-meetings`
+      (`instance.ics_uid_domain`), matching production.
+- [x] yt-dlp launcher falls back to `python -m yt_dlp`
+      (`youtube.ytdlp_base`; marathon-meetings 6f22d67) — the residential
+      machine has a module-only install.
+- [x] Workflow: frontend `BASE_PATH` from the repository name; commit
+      `skipped_videos.json` and `corrections.json`; rebase before push.
+
+Residential fetcher and ingest (`engine/fetch_transcripts.py`,
+`engine/ingest_transcript.py`, `scripts/`):
+- [ ] Gap sweep of unprocessed channel videos
+      (`find_unprocessed_channel_videos` + `GAP_SWEEP_DAYS`),
+      `transcripts/<id>.meta.json` metadata sidecars (incl. `duration`), and
+      sidecar-aware resolution in ingest.
+- [ ] Kronenwetter SoundCloud `YYYY MM DD` title dates + duplicate-upload
+      collapsing; private/removed videos recorded in
+      `transcripts/unavailable.json`; `MAX_AUDIO_JOBS` with audio jobs last;
       the rewritten `scripts/refresh-transcripts.ps1` (log file, weekly
       yt-dlp update, commit-everything-under-transcripts push).
-- [ ] Port the Sept 25, 2026 production polish: multi-part meeting
-      grouping (one card per meeting + part switcher in the detail view;
-      PARTS_BY_ID in marathon-meetings.jsx), "CLOSED SESSION" labels and
-      notice, the detail tab-reset guard (stale Votes tab rendered blank),
-      DC Everest 3rd-Wednesday rule + rule/posted dedupe (`_name_tokens`),
-      running-time backfill from channel listings (LISTED_DURATIONS) +
-      `duration` in metadata sidecars, the early-return fix in main() (upgrade
-      passes and the run report must run on quiet runs), and the spending
-      alarm (the engine already has costs.json; port the `--check` alarm and
-      its workflow step from cost_ledger.py).
+
+Frontend (`frontend/`):
+- [ ] Multi-part meeting grouping (one card per meeting + part switcher in
+      the detail view; PARTS_BY_ID in marathon-meetings.jsx), "CLOSED
+      SESSION" labels and notice, the detail tab-reset guard (stale Votes tab
+      rendered blank), and the "Request a correction" link in the detail view.
+
+First CI run after these ports (expect, then confirm):
+- [ ] The scrub step cleans what gavel already published: a local
+      `python -m engine.scrub --check` on Nov 17 reported 27 summaries, 28
+      mirrors, 6 displayed meetings and 5 pages (12 corrections on file).
+- [ ] The static-pages step rewrites the footer of every archive page
+      (`#<id>` → `#m/<id>` + correction link).
+- [ ] While the residential fetcher still pushes to marathon-meetings, gavel
+      receives no transcripts: expect the "🏠 Residential transcript fetcher
+      may be down" and "⏰ Meeting summaries overdue" issues to open in the
+      gavel repo and stay open until cutover step 6. They close themselves.
 - [x] Port the Oct 23, 2026 production fix (marathon-meetings dfe04a9):
       CivicClerk agenda text via `GetMeetingFileStream(plainText=true)`;
       `GetMeetingFile` (blob URL) returns 404, which left agenda-only

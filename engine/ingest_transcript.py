@@ -7,6 +7,10 @@ Re-summarizes the meeting from the real transcript (Sonnet tier), updates
 state, and re-publishes data/meetings.json. A sha256 hash of the transcript
 is stored in the summary sidecar so unchanged files are skipped on
 subsequent runs (no wasted API calls).
+
+Title, jurisdiction and dates come from state, then from the residential
+fetcher's transcripts/<id>.meta.json sidecar; YouTube is queried only for
+what is still missing, because CI cannot reach it.
 """
 
 from __future__ import annotations
@@ -26,8 +30,37 @@ from .adapters import boardbook as bb_adapter
 from .adapters import youtube
 from .config import (MEETINGS_JSON, STATE_FILE, SUMMARIES_DIR, load_instance,
                      setup_logging)
+from .fetch_transcripts import meta_sidecar_path
 from .output import save_summary
 from .state import clear_injected, prune_orphan_summaries
+
+
+def _apply_sidecar(meta: dict, vid_id: str, source_key: str | None, title: str,
+                   meeting_date: str | None, upload_date: str | None) -> tuple:
+    """Fill what the CLI and state left empty from the residential fetcher's
+    metadata sidecar. Returns (source_key, title, meeting_date, upload_date)."""
+    if not source_key and meta.get("source"):
+        source_key = meta["source"]
+        print(f"[ok]  Source from sidecar: {source_key}")
+    if title == vid_id and meta.get("title"):
+        title = re.sub(r'(\s*-\s*\d{1,2}[/-]\d{1,2}[/-]\d{2,4})+$', '',
+                       meta["title"]).strip()
+        title = re.sub(r'\s*-\s*\d{4}-\d{2}-\d{2}$', '', title).strip()
+        print(f"[ok]  Title from sidecar: {title}")
+    if not meeting_date and meta.get("meeting_date"):
+        meeting_date = meta["meeting_date"]
+        print(f"[ok]  meeting_date from sidecar: {meeting_date}")
+    if not upload_date and meta.get("upload_date"):
+        upload_date = meta["upload_date"]
+    return source_key, title, meeting_date, upload_date
+
+
+def _needs_youtube_query(vid_id: str, title: str, meeting_date: str | None) -> bool:
+    """CI cannot query YouTube for per-video metadata (cloud IPs are blocked
+    regardless of cookies), so ask only when the title or date is still
+    unknown after state and the sidecar."""
+    is_synthetic = "_" in vid_id and not re.match(r"^[A-Za-z0-9_-]{11}$", vid_id)
+    return not is_synthetic and (not meeting_date or title == vid_id)
 
 
 def main() -> None:
@@ -184,8 +217,19 @@ def main() -> None:
         except json.JSONDecodeError:
             pass
 
-    is_synthetic = "_" in vid_id and not re.match(r"^[A-Za-z0-9_-]{11}$", vid_id)
-    if not is_synthetic:
+    sidecar_duration = None
+    meta_path = meta_sidecar_path(vid_id)
+    if meta_path.exists():
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            print(f"Error: Metadata sidecar {meta_path} is not valid JSON: {e}")
+            sys.exit(1)
+        source_key, title, meeting_date, upload_date = _apply_sidecar(
+            meta, vid_id, source_key, title, meeting_date, upload_date)
+        sidecar_duration = meta.get("duration")
+
+    if _needs_youtube_query(vid_id, title, meeting_date):
         print("[fetch] Querying YouTube for authoritative title and date...")
         try:
             r = subprocess.run(
@@ -299,7 +343,7 @@ def main() -> None:
         "doc_url": doc_url,
         "upload_date": upload_date or prior.get("upload_date"),
         "meeting_date": meeting_date or prior.get("meeting_date"),
-        "duration": video_duration or prior.get("duration"),
+        "duration": video_duration or sidecar_duration or prior.get("duration"),
         "video_url": video_url or prior.get("video_url"),
         # Preserve the original processed_at so re-running over the same
         # transcript doesn't drift the meeting date to "now".

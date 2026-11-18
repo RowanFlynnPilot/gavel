@@ -14,6 +14,12 @@ Sources per meeting kind:
   - BoardBook (bb_) entries: recording matched on the district channel
   - Municode entries with a jurisdiction audio_url (e.g. Kronenwetter's
     SoundCloud): audio download → local Whisper transcription
+  - Channel videos CI never created an entry for (gap sweep): captions plus
+    a transcripts/<id>.meta.json sidecar, since CI cannot ask YouTube for
+    per-video metadata either
+
+Exits 1, after doing everything else, when yt-dlp is unavailable or a gap
+sweep channel listing fails.
 """
 
 from __future__ import annotations
@@ -25,40 +31,97 @@ import re
 import subprocess
 import sys
 import tempfile
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .adapters import boardbook as bb_adapter
 from .adapters import youtube
 from .config import (MEETINGS_JSON, STATE_FILE, WHISPER_MODEL, InstanceConfig,
                      load_instance, setup_logging)
+from .state import load_state
 from .transcripts import (_fetch_via_youtube_transcript_api, build_whisper_hint,
                           parse_vtt)
 
 TRANSCRIPTS_DIR = Path("./transcripts")
+# Videos YouTube reports as private/removed. Committed with the transcripts so
+# CI's stuck-video watchdog can dismiss them and later runs stop retrying.
+UNAVAILABLE_FILE = TRANSCRIPTS_DIR / "unavailable.json"
 WORKFLOW_FILE = "pipeline.yml"
+
+# The display window is max_meetings wide, so older gaps can never surface and
+# summarizing them is pure API spend. Widen for one run to recover from a
+# longer outage.
+GAP_SWEEP_DAYS = int(os.environ.get("GAP_SWEEP_DAYS", "45"))
+# Whisper jobs take ~15+ minutes each; a backlog must not push a scheduled run
+# past its time limit and lose everything before the push.
+MAX_AUDIO_JOBS = int(os.environ.get("MAX_AUDIO_JOBS", "3"))
+
+# Only explicit, permanent signals. A bare "Video unavailable" is NOT one:
+# yt-dlp's default web client returns it spuriously for videos that extract
+# fine through the android client.
+_GONE_SIGNALS = (
+    "private video",
+    "has been removed",
+    "no longer available",
+    "account associated with this video has been terminated",
+)
+
+
+class VideoGone(Exception):
+    """YouTube says the video is private or removed — retrying won't help."""
+
+
+def _is_gone(ytdlp_output: str) -> bool:
+    text = ytdlp_output.lower()
+    return any(sig in text for sig in _GONE_SIGNALS)
+
+
+def _load_unavailable() -> dict:
+    if not UNAVAILABLE_FILE.exists():
+        return {}
+    return json.loads(UNAVAILABLE_FILE.read_text(encoding="utf-8"))
+
+
+def _mark_unavailable(video_id: str, reason: str, title: str = "") -> None:
+    gone = _load_unavailable()
+    gone[video_id] = {
+        "reason": reason[:200],
+        "title": title,
+        "detected": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    UNAVAILABLE_FILE.write_text(json.dumps(gone, indent=2, sort_keys=True),
+                                encoding="utf-8")
+
+
+def meta_sidecar_path(meeting_id: str) -> Path:
+    return TRANSCRIPTS_DIR / f"{meeting_id}.meta.json"
 
 
 def _ytdlp_cmd() -> list[str] | None:
     """yt-dlp invocation, handling both PATH and module installs."""
+    # Both probes must see exit code 0: `python -m yt_dlp` on an interpreter
+    # without the module exits 1 but doesn't raise.
     try:
-        subprocess.run(["yt-dlp", "--version"], capture_output=True, timeout=5)
-        return ["yt-dlp"]
+        r = subprocess.run(["yt-dlp", "--version"], capture_output=True, timeout=5)
+        if r.returncode == 0:
+            return ["yt-dlp"]
     except FileNotFoundError:
         pass
     try:
-        subprocess.run([sys.executable, "-m", "yt_dlp", "--version"],
-                       capture_output=True, timeout=5)
-        return [sys.executable, "-m", "yt_dlp"]
+        r = subprocess.run([sys.executable, "-m", "yt_dlp", "--version"],
+                           capture_output=True, timeout=5)
+        if r.returncode == 0:
+            return [sys.executable, "-m", "yt_dlp"]
     except Exception:
         pass
+    print("  [err]  yt-dlp not available (neither on PATH nor as a module of "
+          f"{sys.executable}) — run: python -m pip install yt-dlp")
     return None
 
 
 def fetch_transcript_ytdlp(video_id: str) -> str | None:
     ytdlp = _ytdlp_cmd()
     if not ytdlp:
-        print("  yt-dlp: not installed (python -m pip install yt-dlp)")
         return None
 
     url = f"https://www.youtube.com/watch?v={video_id}"
@@ -87,6 +150,10 @@ def fetch_transcript_ytdlp(video_id: str) -> str | None:
             "subtitles are disabled", "no captions", "there are no captions",
         ]
         combined = (r.stdout + r.stderr).lower()
+        if _is_gone(combined):
+            err = next((ln for ln in r.stderr.splitlines() if "ERROR" in ln),
+                       r.stderr.strip())
+            raise VideoGone(err.strip()[:200])
         if any(sig in combined for sig in no_caption_signals):
             print("  yt-dlp: no captions available")
             return None
@@ -234,13 +301,20 @@ def find_boardbook_video_matches(cfg: InstanceConfig) -> list[dict]:
 def _parse_audio_track_date(title: str) -> str:
     """Parse YYYYMMDD from an audio track title. Formats seen on the
     Kronenwetter SoundCloud: 'June 8, 2026 ...', 'May 19th 2026 ...',
-    '05052026 UC ...', 'April  30, 2026 ...'."""
+    '05052026 UC ...', 'April  30, 2026 ...', '2026 09 21 PC Meeting Recording'."""
     t = re.sub(r"\s+", " ", title)
     m = re.search(r"([A-Z][a-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(20\d{2})", t)
     if m:
         try:
             return datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}",
                                      "%B %d %Y").strftime("%Y%m%d")
+        except ValueError:
+            pass
+    m = re.search(r"\b(20\d{2})[ ._-]+(\d{1,2})[ ._-]+(\d{1,2})\b", t)   # YYYY MM DD
+    if m:
+        try:
+            return datetime(int(m.group(1)), int(m.group(2)),
+                            int(m.group(3))).strftime("%Y%m%d")
         except ValueError:
             pass
     m = re.search(r"\b(\d{2})(\d{2})(20\d{2})\b", t)   # MMDDYYYY
@@ -274,6 +348,14 @@ def _municipal_meeting_type(text: str) -> tuple:
     else:
         body = "other"
     return (body, "special" in t, "reschedul" in t)
+
+
+def _pick_audio_track(cands: list[dict]) -> dict | None:
+    """The recording among same-date, same-type tracks, or None when they are
+    different recordings. Identical titles are one recording uploaded twice;
+    the listing is newest-first, so the first is the latest upload."""
+    titles = {re.sub(r"\s+", " ", c["title"]).strip().lower() for c in cands}
+    return cands[0] if len(titles) == 1 else None
 
 
 def find_audio_matches(cfg: InstanceConfig) -> list[dict]:
@@ -321,18 +403,88 @@ def find_audio_matches(cfg: InstanceConfig) -> list[dict]:
             print(f"  audio list fetch failed: {str(e)[:100]}")
             continue
 
+        # A title-format change shows up in the newest uploads; older
+        # oddities aren't news.
+        undated = [t["title"] for t in tracks[:5] if not t["date"]]
+        if undated:
+            print(f"  [warn] {jur.key}: {len(undated)} of the 5 newest audio titles "
+                  f"have no recognizable date (format change?) e.g. {undated[0]!r}")
+
         for m in cands:
             try:
                 mdate = datetime.strptime(m.get("date", ""), "%B %d, %Y").strftime("%Y%m%d")
             except ValueError:
                 continue
             mtype = _municipal_meeting_type(f"{m.get('title','')} {m.get('committee','')}")
-            hits = [t for t in tracks if t["date"] == mdate and t["type"] == mtype]
-            if len(hits) == 1:
-                out.append({"id": m["id"], "fetch_url": hits[0]["url"],
+            hit = _pick_audio_track(
+                [t for t in tracks if t["date"] == mdate and t["type"] == mtype])
+            if hit:
+                out.append({"id": m["id"], "fetch_url": hit["url"],
                             "title": m.get("title") or m["id"],
                             "whisper_hint": build_whisper_hint(jur.name, jur.officials)})
     return out
+
+
+def find_unprocessed_channel_videos(cfg: InstanceConfig,
+                                    failures: list[str]) -> list[dict]:
+    """Channel videos that never made it into the tracker at all.
+
+    CI creates YouTube-first meetings from captions or an agenda fallback;
+    when both fail the video is skipped WITHOUT creating an entry, so the
+    agenda-only scans above never see it. Sweeping the channel listings
+    against processed state catches those gaps. A channel that can't be
+    listed is appended to `failures`; the other channels still sweep.
+    """
+    processed = load_state().get("processed", {})
+    window_start = (datetime.now() - timedelta(days=GAP_SWEEP_DAYS)).strftime("%Y%m%d")
+    cutoff = max(cfg.date_cutoff, window_start)
+
+    out = []
+    for jur in cfg.jurisdictions:
+        # Must stay the same test as youtube_first in engine.pipeline.main.
+        if jur.video is None or jur.agendas_adapter in ("boardbook", "municode"):
+            continue
+        try:
+            videos = youtube.list_videos(jur.video, jur.key, jur.name)
+        except Exception as e:
+            print(f"  [err]  {jur.key} channel fetch failed: {str(e)[:120]}")
+            failures.append(f"{jur.key}: gap sweep could not list the channel "
+                            f"({str(e)[:120]})")
+            continue
+        for v in videos:
+            vid = v.get("id", "")
+            if not vid or vid in processed or vid in cfg.skip_ids:
+                continue
+            # Undated videos can't be placed in the tracker.
+            date = v.get("meeting_date") or v.get("upload_date") or ""
+            if not date or date < cutoff:
+                continue
+            out.append({"id": vid, "title": v.get("title") or vid,
+                        "source": jur.key,
+                        "meeting_date": v.get("meeting_date") or "",
+                        "upload_date": v.get("upload_date") or "",
+                        "duration": v.get("duration")})
+    return out
+
+
+def _write_meta_sidecar(job: dict) -> None:
+    """Ship what the channel listing knows alongside a gap-swept transcript;
+    engine.ingest_transcript reads it instead of asking YouTube."""
+    meta = job.get("meta")
+    if not meta:
+        return
+    mpath = meta_sidecar_path(job["save"])
+    if not mpath.exists():
+        mpath.write_text(json.dumps(meta, indent=2), encoding="utf-8")
+        print(f"[meta] Wrote {mpath.name}")
+
+
+def _cap_audio_jobs(jobs: list[dict], max_audio: int) -> tuple[list[dict], int]:
+    """Run order (caption jobs, then at most max_audio audio jobs) and the
+    number of audio jobs left for the next run."""
+    audio = [j for j in jobs if j.get("method") == "whisper"]
+    captions = [j for j in jobs if j.get("method") != "whisper"]
+    return captions + audio[:max_audio], max(0, len(audio) - max_audio)
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -344,14 +496,32 @@ def main() -> None:
     parser.add_argument("video_ids", nargs="*",
                         help="YouTube video IDs to fetch transcripts for")
     parser.add_argument("--all", action="store_true",
-                        help="Fetch for ALL agenda-only meetings with recordings")
+                        help="Fetch for ALL agenda-only meetings with recordings, "
+                             "plus channel videos the pipeline never ingested")
     parser.add_argument("--push", action="store_true",
                         help="Git commit + push after fetching, then trigger CI")
     args = parser.parse_args()
+    if not args.all and not args.video_ids:
+        parser.print_help()
+        return
 
     cfg = load_instance()
     TRANSCRIPTS_DIR.mkdir(exist_ok=True)
 
+    failures: list[str] = []
+    if _ytdlp_cmd() is None:
+        failures.append(f"yt-dlp is not available to {sys.executable}")
+    _run(args, cfg, failures)
+    if failures:
+        print(f"\n{'!'*60}")
+        print(f"[FETCHER FAILURE]  {len(failures)} problem(s) kept this run "
+              f"from covering everything:")
+        for f in failures:
+            print(f"   - {f}")
+        sys.exit(1)
+
+
+def _run(args: argparse.Namespace, cfg: InstanceConfig, failures: list[str]) -> None:
     # Each job: save (transcript filename / meeting ID) + fetch (video ID or
     # audio URL). They differ for BoardBook meetings, whose bb_ IDs are
     # matched to recordings on the district channel.
@@ -364,6 +534,12 @@ def main() -> None:
                   "method": "whisper", "title": m["title"],
                   "whisper_hint": m.get("whisper_hint", "")}
                  for m in find_audio_matches(cfg)]
+        jobs += [{"save": m["id"], "fetch": m["id"], "title": m["title"],
+                  "meta": {"title": m["title"], "source": m["source"],
+                           "meeting_date": m["meeting_date"],
+                           "upload_date": m["upload_date"],
+                           "duration": m["duration"]}}
+                 for m in find_unprocessed_channel_videos(cfg, failures)]
         if not jobs:
             print("No agenda-only meetings with available recordings found.")
             return
@@ -376,19 +552,28 @@ def main() -> None:
             else:
                 via = ""
             print(f"  [{j['save']}] {j['title']}{via}")
-    elif args.video_ids:
-        jobs = [{"save": v, "fetch": v, "title": v} for v in args.video_ids]
     else:
-        parser.print_help()
-        return
+        jobs = [{"save": v, "fetch": v, "title": v} for v in args.video_ids]
 
+    gone_ids = set(_load_unavailable())
     to_fetch = []
     for j in jobs:
         tpath = TRANSCRIPTS_DIR / f"{j['save']}.txt"
+        if j.get("method") != "whisper" and j["fetch"] in gone_ids:
+            print(f"\n[skip] {j['save']} — video is private/removed ({UNAVAILABLE_FILE})")
+            continue
+        # Before the exists check: transcripts fetched before sidecars existed
+        # still need one.
+        _write_meta_sidecar(j)
         if tpath.exists():
             print(f"\n[skip] {j['save']} — transcript already exists ({tpath})")
         else:
             to_fetch.append(j)
+
+    to_fetch, deferred = _cap_audio_jobs(to_fetch, MAX_AUDIO_JOBS)
+    if deferred:
+        print(f"\n[defer] {deferred} audio transcription(s) left for the next run "
+              f"(MAX_AUDIO_JOBS={MAX_AUDIO_JOBS})")
 
     if not to_fetch:
         print("\nAll transcripts already fetched. Nothing to do.")
@@ -404,7 +589,13 @@ def main() -> None:
                                                 whisper_hint=j.get("whisper_hint", ""))
         else:
             print(f"  https://www.youtube.com/watch?v={j['fetch']}")
-            text = fetch_transcript(j["fetch"])
+            try:
+                text = fetch_transcript(j["fetch"])
+            except VideoGone as e:
+                print(f"  [gone] {e} — recorded in {UNAVAILABLE_FILE}")
+                _mark_unavailable(j["fetch"], str(e), j.get("title", ""))
+                failed.append(j["save"])
+                continue
         if text:
             tpath = TRANSCRIPTS_DIR / f"{j['save']}.txt"
             tpath.write_text(text, encoding="utf-8")
@@ -427,8 +618,8 @@ def main() -> None:
 
     if args.push and fetched:
         print("\nPushing to GitHub...")
-        files = [str(TRANSCRIPTS_DIR / f"{vid}.txt") for vid in fetched]
-        subprocess.run(["git", "add"] + files, check=True)
+        # The whole directory: metadata sidecars and unavailable.json ship too.
+        subprocess.run(["git", "add", str(TRANSCRIPTS_DIR)], check=True)
         msg = f"chore: add {len(fetched)} transcript(s) for re-summarization"
         subprocess.run(["git", "commit", "-m", msg], check=True)
 

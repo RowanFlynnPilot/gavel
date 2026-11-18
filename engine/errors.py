@@ -23,6 +23,18 @@ class AdapterStructureError(Exception):
     """
 
 
+class UpstreamUnavailableError(Exception):
+    """An upstream site or API didn't answer after retries (timeout,
+    connection failure, HTTP error, unparseable JSON). Distinct from "it
+    answered with nothing": callers keep last-known-good data instead of
+    publishing an empty result."""
+
+
+class CorrectionsFileError(Exception):
+    """corrections.json is malformed or an entry is missing a required
+    field — a logged fix must never be skipped silently."""
+
+
 class TranscriptAuthError(Exception):
     """A transcript fetch failed in a way that indicates bot-blocking or
     expired cookies (not "this video has no captions"). Identifies which

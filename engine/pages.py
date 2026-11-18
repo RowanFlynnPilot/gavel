@@ -13,7 +13,12 @@ deployments so they never compete with the production site for ranking).
 
 Pages are written for currently-displayed meetings and never deleted —
 the pages directory becomes the instance's permanent archive; the sitemap
-covers everything on disk.
+covers everything on disk. Archive pages are never re-rendered, so their
+footers are brought up to date in place (refresh_archive_footers).
+
+Each footer links back to the meeting in the tracker (#m/<id>, the hash the
+frontend reads) and, when instance.corrections_email is set, carries a
+"Request a correction" mailto.
 """
 
 from __future__ import annotations
@@ -24,6 +29,7 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import quote
 
 from .config import MEETINGS_JSON, InstanceConfig, load_instance, setup_logging
 
@@ -35,6 +41,39 @@ def _iso(date_str):
         return datetime.strptime(date_str, "%B %d, %Y").date().isoformat()
     except (ValueError, TypeError):
         return None
+
+
+def _footer_links(cfg: InstanceConfig, base_url: str, meeting_id: str, what: str) -> str:
+    """The footer's tracker permalink, plus the correction link when the
+    instance has a corrections address."""
+    links = f'<a href="{base_url}/#m/{meeting_id}">Permalink in the tracker</a>'
+    if cfg.corrections_email:
+        subject = f"Correction request: {what}"
+        body = (f"Page: {base_url}/meetings/{meeting_id}/\n\n"
+                "What's wrong, and what the record shows instead:\n\n")
+        mailto = f"mailto:{cfg.corrections_email}?subject={quote(subject)}&body={quote(body)}"
+        links += f' · <a href="{E(mailto)}">Request a correction</a>'
+    return links
+
+
+_FOOTER_LINKS = re.compile(
+    r'<a href="[^"]*/#(?:m/)?[\w-]+">Permalink in the tracker</a></footer>')
+
+
+def refresh_archive_footers(cfg: InstanceConfig, pages_dir: Path, base_url: str) -> int:
+    """Rewrite the footer links of pages already on disk to the current form.
+    Returns the number of pages changed. A page that already has a correction
+    link is left alone."""
+    n = 0
+    for page in pages_dir.glob("*/index.html"):
+        text = page.read_text(encoding="utf-8")
+        mid = page.parent.name
+        links = _footer_links(cfg, base_url, mid, f"meeting {mid}")
+        new = _FOOTER_LINKS.sub(lambda _m: links + "</footer>", text)
+        if new != text:
+            page.write_text(new, encoding="utf-8")
+            n += 1
+    return n
 
 
 def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> str:
@@ -50,7 +89,7 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
     title = f"{m['title']} — {label} — {m['date']}"
     desc = (m.get("overview") or "")[:300]
     page_url = f"{base_url}/meetings/{m['id']}/"
-    app_url = f"{base_url}/#{m['id']}"
+    footer_links = _footer_links(cfg, base_url, m["id"], f"{m['title']} ({m['date']})")
 
     topics = "".join(f'<span class="tag">{E(t)}</span>' for t in (m.get("topics") or []))
     disc = "".join(
@@ -139,7 +178,7 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
   <h2>Discussion</h2>
   {disc or '<p><em>No detailed discussion summary available.</em></p>'}
   {actions_html}
-  <footer>Published by <a href="{E(cfg.newsroom_url)}">{E(cfg.newsroom)}</a> · <a href="{app_url}">Permalink in the tracker</a></footer>
+  <footer>Published by <a href="{E(cfg.newsroom_url)}">{E(cfg.newsroom)}</a> · {footer_links}</footer>
 </div>
 </body>
 </html>
@@ -174,6 +213,10 @@ def main() -> None:
         (d / "index.html").write_text(render_page(cfg, m, base_url, noindex),
                                       encoding="utf-8")
         written += 1
+
+    refreshed = refresh_archive_footers(cfg, pages_dir, base_url)
+    if refreshed:
+        print(f"[pages] updated the footer of {refreshed} archive page(s)")
 
     all_pages = sorted(p.parent.name for p in pages_dir.glob("*/index.html"))
     urls = [f"{base_url}/"] + [f"{base_url}/meetings/{pid}/" for pid in all_pages]

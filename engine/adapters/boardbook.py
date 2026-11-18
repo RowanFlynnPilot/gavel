@@ -17,7 +17,9 @@ from datetime import date, datetime, timedelta
 
 import requests
 
+from .. import net
 from ..errors import AdapterStructureError
+from .rule_schedule import covered_by_posted
 from .youtube import parse_date_from_title
 
 logger = logging.getLogger(__name__)
@@ -29,15 +31,15 @@ def list_meetings(agendas_cfg: dict) -> list[dict]:
     """Scrape the organization page for all meetings (newest first).
     Returns [{meeting_id, date (ISO), time, name, url, packet_url}].
     Raises AdapterStructureError if the page parses to zero agenda rows —
-    that's HTML drift, not an empty schedule."""
+    that's HTML drift, not an empty schedule — and UpstreamUnavailableError
+    if BoardBook doesn't answer."""
     base = agendas_cfg["base"]
     org = agendas_cfg["org_id"]
-    r = requests.get(f"{base}/Public/Organization/{org}", headers=_HEADERS,
-                     timeout=15)
+    r = net.get(f"{base}/Public/Organization/{org}", headers=_HEADERS)
     rows = re.findall(r"<tr[^>]*>(.*?)</tr>", r.text, re.DOTALL)
     agenda_rows = [row for row in rows
                    if re.search(r"/Public/Agenda/\d+\?meeting=(\d+)", row)]
-    if r.status_code == 200 and not agenda_rows:
+    if not agenda_rows:
         raise AdapterStructureError(
             f"BoardBook org {org}: page fetched but no agenda rows matched — "
             f"upstream HTML structure changed")
@@ -164,7 +166,10 @@ def match_recording(info: dict, videos: list[dict]) -> dict | None:
 def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
                    days_ahead: int) -> list[dict]:
     """Posted future meetings, plus the fallback_rules projection for months
-    the org hasn't posted yet."""
+    the org hasn't posted yet. A BoardBook outage propagates as
+    UpstreamUnavailableError rather than falling back to rules alone: the
+    last published list (posted meetings with their real times) beats a
+    rules-only projection."""
     from .rule_schedule import project
 
     base = agendas_cfg["base"]
@@ -173,29 +178,26 @@ def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
     end_date = today + timedelta(days=days_ahead)
     results = {}
 
-    try:
-        meetings = list_meetings(agendas_cfg)
-        for m in meetings:
-            dt = date.fromisoformat(m["date"])
-            if today <= dt <= end_date:
-                key = (m["date"], m["name"][:30])
-                results[key] = {
-                    "date": m["date"],
-                    "time": m["time"],
-                    "name": m["name"],
-                    "url": m["url"],
-                    "source": jurisdiction_key,
-                }
-        print(f"  [ok]  {jurisdiction_key} BoardBook: {len(results)} posted future meetings")
-    except Exception as e:
-        logger.warning("BoardBook scrape failed for %s: %s", jurisdiction_key, e)
+    for m in list_meetings(agendas_cfg):
+        dt = date.fromisoformat(m["date"])
+        if today <= dt <= end_date:
+            key = (m["date"], m["name"][:30])
+            results[key] = {
+                "date": m["date"],
+                "time": m["time"],
+                "name": m["name"],
+                "url": m["url"],
+                "source": jurisdiction_key,
+            }
+    print(f"  [ok]  {jurisdiction_key} BoardBook: {len(results)} posted future meetings")
 
+    posted = list(results.values())
     rules = agendas_cfg.get("fallback_rules") or []
     rule_added = 0
     for entry in project(rules, jurisdiction_key, days_ahead,
                          default_url=f"{base}/Public/Organization/{org}"):
         key = (entry["date"], entry["name"][:30])
-        if key not in results:
+        if key not in results and not covered_by_posted(entry, posted):
             results[key] = entry
             rule_added += 1
     if rules:

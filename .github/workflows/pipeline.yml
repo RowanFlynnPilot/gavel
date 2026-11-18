@@ -137,9 +137,18 @@ jobs:
             exit 1
           fi
 
+      - name: Scrub residents' addresses and apply corrections
+        # Backstop for the prompts' privacy rules (a resident's home address
+        # never appears in a summary) and the step that re-applies every
+        # logged fix in corrections.json, so re-summarizing can't undo one.
+        # Runs after the last summarization and before the data file and
+        # pages are rebuilt, so nothing unscrubbed is committed or deployed.
+        # No API calls.
+        run: python -m engine.scrub
+
       - name: Re-publish data
         # Ingest may have cleared injected IDs; publish-only is cheap and
-        # idempotent.
+        # idempotent. It builds from the sidecars the scrub just cleaned.
         run: python -m engine.pipeline --publish-only
 
       - name: Generate weekly newsletter roundup
@@ -180,11 +189,17 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -f processed_meetings.json injected_meetings.json || true
+          git add -f skipped_videos.json 2>/dev/null || true
+          git add -f corrections.json 2>/dev/null || true
           git add -f summaries/ || true
           git add -f data/ || true
           git add -f frontend/public/meetings/ frontend/public/sitemap.xml frontend/public/robots.txt 2>/dev/null || true
           git status --short | head -20
           git diff --staged --quiet || git commit -m "chore: update meetings data [skip ci]"
+          # Rebase before pushing: the residential fetcher pushes transcripts
+          # between runs, and a rejected push here would discard this run's
+          # state (re-summarizing everything next run = double API spend).
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME" || git rebase --abort || true
           git push || true
 
       - name: Stage runtime config + data for the frontend
@@ -200,8 +215,16 @@ jobs:
 
       - name: Build frontend
         env:
-          BASE_PATH: '/gavel/'
-        run: npm run build
+          # GitHub Pages serves a project site under /<repository name>/.
+          BASE_PATH: '/${{ github.event.repository.name }}/'
+        run: |
+          # An event payload without the repository would build every asset
+          # URL under "//" and deploy a blank site.
+          if [ "$BASE_PATH" = "//" ]; then
+            echo "::error::github.event.repository.name is empty for this event; cannot derive BASE_PATH."
+            exit 1
+          fi
+          npm run build
         working-directory: frontend
 
       - name: Upload Pages artifact
@@ -213,40 +236,93 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Maintain agenda-only status issue
+      - name: Maintain spending-alarm issue
+        # data/costs.json records every Claude call (engine.claude). A
+        # regression like the reference instance's June 2026 re-summarization
+        # loop surfaces within a day instead of on the monthly bill.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SPEND_ALARM_DAY_USD: '2.00'
+          SPEND_ALARM_DAY_CALLS: '40'
+        run: |
+          read -r STATUS DAY_USD <<< "$(python -m engine.costs --check --print-status --markdown spend_body.md)"
+          echo "Claude spend, last 24h: \$${DAY_USD} (${STATUS})"
+          EXISTING=$(gh issue list --state open --search "Unusual Claude API spend in:title" --json number --jq '.[0].number // empty')
+          if [ "$STATUS" = "TRIPPED" ]; then
+            TITLE="💸 Unusual Claude API spend (\$${DAY_USD} in the last 24h, checked $(date +%Y-%m-%d))"
+            if [ -n "$EXISTING" ]; then
+              gh issue edit "$EXISTING" --title "$TITLE" --body-file spend_body.md
+            else
+              gh issue create --title "$TITLE" --body-file spend_body.md
+            fi
+          elif [ "$STATUS" = "OK" ] && [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "Claude spend over the last 24 hours is back under the alarm thresholds (\$${DAY_USD}). Auto-closing."
+          fi
+
+      - name: Maintain overdue-upgrade issue
+        # Agenda-only is the normal first state for most meetings; only an
+        # upgrade that's LATE for its jurisdiction signals a break (on the
+        # reference instance a title-format change stranded one body for four
+        # weeks while a list-everything issue signaled nothing). The expected
+        # lags are instance.json expected_lag_days. One issue; closes itself.
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT=$(python -m engine.overdue --print-count --markdown overdue_body.md)
+          EXISTING=$(gh issue list --state open --search "Meeting summaries overdue in:title" --json number --jq '.[0].number // empty')
+          if [ "$COUNT" -gt 0 ]; then
+            TITLE="⏰ Meeting summaries overdue for an upgrade (${COUNT}, checked $(date +%Y-%m-%d))"
+            if [ -n "$EXISTING" ]; then
+              gh issue edit "$EXISTING" --title "$TITLE" --body-file overdue_body.md
+              echo "Updated overdue issue #$EXISTING"
+            else
+              gh issue create --title "$TITLE" --body-file overdue_body.md
+              echo "Opened overdue issue"
+            fi
+          elif [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "Nothing is overdue anymore — every displayed agenda-only meeting is within its jurisdiction's normal recording window. Auto-closing."
+          else
+            echo "No overdue upgrades."
+          fi
+          # The standing list this step replaced never closed itself.
+          OLD=$(gh issue list --state open --search "Agenda-only meetings need transcripts in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$OLD" ]; then
+            gh issue close "$OLD" --comment "Replaced by the overdue-upgrade issue, which lists only meetings past their jurisdiction's normal recording lag."
+          fi
+
+      - name: Maintain residential-fetcher issue
+        # The residential machine is the only transcript path (CI can't reach
+        # YouTube), and its scheduled task exits 0 even when the script fails
+        # internally. The pipeline records when it first saw each video it
+        # could not process (skipped_videos.json); one lingering past
+        # STALE_VIDEO_HOURS (36h; normal lag is ~12h) means the residential
+        # fetcher has probably stopped. No run report (the pipeline died
+        # before writing it) leaves the issue untouched.
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ ! -f agenda_only_report.json ]; then
-            echo "No agenda-only report — skipping."
+            echo "No run report — skipping."
             exit 0
           fi
-          COUNT=$(python -c "import json; d=json.load(open('agenda_only_report.json')); print(len(d.get('agenda_only',[])))")
-          if [ "$COUNT" = "0" ]; then
-            echo "No agenda-only meetings — skipping."
-            exit 0
-          fi
-          BODY=$(python -c "
-          import json
-          d = json.load(open('agenda_only_report.json'))
-          lines = ['## Agenda-Only Meetings Need Transcripts\n']
-          lines.append(f'{len(d[\"agenda_only\"])} meeting(s) were summarized from agenda documents only.')
-          lines.append('Run the residential fetcher (python -m engine.fetch_transcripts --all --push) to upgrade them.\n')
-          lines.append('| Meeting | Source | Status |')
-          lines.append('|---------|--------|--------|')
-          for m in d['agenda_only']:
-              vote = ' (has votes)' if m.get('_source') == 'agenda_with_votes' else ''
-              lines.append(f'| [{m[\"title\"]}]({m[\"url\"]}) | {m[\"source\"]} | Agenda only{vote} |')
-          print('\n'.join(lines))
-          ")
-          EXISTING=$(gh issue list --state open --search "Agenda-only meetings need transcripts in:title" --json number --jq '.[0].number // empty')
-          TITLE="📋 Agenda-only meetings need transcripts (updated $(date +%Y-%m-%d))"
-          if [ -n "$EXISTING" ]; then
-            gh issue edit "$EXISTING" --title "$TITLE" --body "$BODY"
+          STALE=$(python -m engine.watchdog --print-count --markdown stale_body.md)
+          EXISTING=$(gh issue list --state open --search "Residential transcript fetcher may be down in:title" --json number --jq '.[0].number // empty')
+          if [ "$STALE" -gt 0 ]; then
+            TITLE="🏠 Residential transcript fetcher may be down (${STALE} video(s) stuck, checked $(date +%Y-%m-%d))"
+            if [ -n "$EXISTING" ]; then
+              gh issue edit "$EXISTING" --title "$TITLE" --body-file stale_body.md
+              echo "Updated residential-fetcher issue #$EXISTING"
+            else
+              gh issue create --title "$TITLE" --body-file stale_body.md
+              echo "Opened residential-fetcher issue"
+            fi
+          elif [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "No videos stuck past the threshold anymore — the residential fetcher is delivering again. Auto-closing."
           else
-            gh issue create --title "$TITLE" --body "$BODY" --label "transcript-needed" 2>/dev/null || \
-            gh issue create --title "$TITLE" --body "$BODY"
+            echo "No stale videos."
           fi
 
       - name: Surface pipeline failures

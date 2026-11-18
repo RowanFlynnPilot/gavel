@@ -49,6 +49,30 @@ WPR is Instance Zero and the permanent reference deployment.
   meeting pages + sitemap/robots. Gated by seo.pages_base_url; seo.noindex
   emits robots Disallow + per-page noindex (REQUIRED for parity-soak
   deployments). Pages persist after cards rotate off (permanent archive).
+  Each footer carries the tracker permalink (`#m/<id>`, the hash the frontend
+  reads) and, when `instance.corrections_email` is set, a "Request a
+  correction" mailto; `refresh_archive_footers` brings pages already on disk
+  up to date in place.
+- `python -m engine.scrub [--check] [--pages-dir frontend/public/meetings]` —
+  removes residents' home addresses from summaries/, data/meetings.json and
+  archive pages, and re-applies every fix logged in corrections.json.
+  Idempotent, no API calls. CI runs it after the last summarization and before
+  the data file and pages are rebuilt. `--check` reports without writing.
+- `python -m engine.overdue [--print-count] [--markdown FILE] [--today
+  YYYY-MM-DD] [--source KEY]` — displayed meetings still agenda-only past
+  their jurisdiction's `expected_lag_days` (closed sessions and jurisdictions
+  with nothing to upgrade from are excluded). CI turns a nonzero count into
+  one self-closing "⏰ Meeting summaries overdue" issue — several overdue from
+  one jurisdiction usually means a matcher broke upstream.
+- `python -m engine.costs --summary` — measured Claude spend (24h / 7d / 30d,
+  by purpose and model) from data/costs.json. `--check --print-status
+  [--markdown FILE]` is the spending alarm: TRIPPED when the last 24h exceed
+  `SPEND_ALARM_DAY_USD` (default 2.00) or `SPEND_ALARM_DAY_CALLS` (default
+  40). CI keeps one self-closing "💸 Unusual Claude API spend" issue.
+- `python -m engine.watchdog --print-count [--markdown FILE]` — reads the run
+  report's `stale_unprocessed` (videos the pipeline could not process for
+  `STALE_VIDEO_HOURS`, default 36) and writes the body of the self-closing
+  "🏠 Residential transcript fetcher may be down" issue.
 
 ## Architecture
 
@@ -56,9 +80,13 @@ WPR is Instance Zero and the permanent reference deployment.
 engine/
 ├── config.py            instance.json loader/validator + env-level knobs
 ├── errors.py            named errors (ConfigError, AdapterStructureError,
+│                        UpstreamUnavailableError, CorrectionsFileError,
 │                        TranscriptAuthError, UnknownModelPricingError)
+├── net.py               shared HTTP GET for adapters: 3 attempts, then
+│                        UpstreamUnavailableError ("no answer")
 ├── state.py             processed_meetings.json / injected_meetings.json
-├── costs.py             pricing constants + data/costs.json ledger
+├── costs.py             pricing constants + data/costs.json ledger +
+│                        spending alarm CLI
 ├── claude.py            Anthropic retry wrapper — ALL calls flow through
 │                        call_claude(), which records costs
 ├── summarize.py         the 5 prompts: transcript / agenda / agenda+votes /
@@ -67,20 +95,26 @@ engine/
 │                        Whisper), parse_vtt
 ├── output.py            summary .md + _summary.json/_votes.json sidecars
 ├── publish.py           state + sidecars → data/meetings.json
-├── upcoming.py          adapters → data/upcoming.json
+├── upcoming.py          adapters → data/upcoming.json (last-known-good
+│                        per jurisdiction when an upstream doesn't answer)
+├── watchdog.py          skipped_videos.json first-seen tracking → stale list
+├── overdue.py           agenda-only meetings past expected_lag_days
+├── scrub.py             residents' address scrub + corrections.json applier
 ├── pipeline.py          orchestrator + CLI (python -m engine.pipeline)
 ├── ingest_transcript.py manual transcript injection tool
 ├── pdftext.py           shared pdfplumber helper
 └── adapters/
     ├── __init__.py      registry — get_adapter(name), fail loud on unknown
-    ├── youtube.py       channel listing (flat-playlist), title-date parsing
+    ├── youtube.py       channel listing (flat-playlist), title-date parsing,
+    │                    LISTED_IDS / LISTED_DURATIONS per run, ytdlp_base()
     ├── civicclerk.py    OData API: votes, agenda text, upcoming
     ├── legistar.py      Legistar Web API: items + roll calls, agenda item list, upcoming
     ├── primegov.py      PrimeGov public portal: HTML agenda text, upcoming (no votes)
     ├── boardbook.py     org-page scrape, agenda scrape, recording matcher
     ├── agendacenter.py  CivicPlus AgendaCenter scrape (Weston-style)
     ├── municode.py      Municode Meetings hub (Kronenwetter-style)
-    └── rule_schedule.py nth-weekday recurring meeting projection
+    └── rule_schedule.py nth-weekday recurring meeting projection;
+                         covered_by_posted (rule/posted dedupe)
 ```
 
 ## Contracts
@@ -95,6 +129,11 @@ per jurisdiction:
   upgrade_window_days?, scan_descriptions_for_upcoming?}`
 - `agendas`: `{adapter: civicclerk|legistar|primegov|boardbook|agendacenter|municode|
   rule_schedule, ...adapter-specific fields, days_ahead?, fallback_rules?}`.
+  `rules` / `fallback_rules` entries are `{name, weekday 0-6 (0=Monday), nth
+  1-5, time, url?}`, validated at load. A BoardBook fallback projection is
+  dropped when a posted meeting on the same date covers it under different
+  wording (the rule's name words, minus filler like "school board meeting",
+  all appear in the posted name).
   A civicclerk, legistar or primegov jurisdiction with `video: null` is
   **portal-first**: its meetings are created from the portal's own listing
   (`list_recent`, ids `cc_`/`lg_`/`pg_<portal id>`), summarized from the agenda
@@ -116,10 +155,27 @@ per jurisdiction:
   vocabulary hints. **Update after each spring election.**
 - `calendar_url` (optional): the jurisdiction's official calendar page
   (frontend FULL CALENDARS link)
+- `expected_lag_days` (optional, positive integer, default 7): how long a
+  meeting here normally stays agenda-only before its recording, audio,
+  minutes or votes arrive. `engine.overdue` flags anything later.
 
 Top-level optional blocks: `instance.tracker_page_url` (reader-facing embed
 page; ics/roundup/pages link there), `seo` {pages_base_url, noindex},
 `analytics` {plausible_domain}, `sponsor` {prompt, button, email, subject}.
+
+Other optional fields, all validated at load:
+- `instance.ics_uid_domain` (default `"gavel"`; letters, digits, dots,
+  hyphens): suffix of every calendar-feed UID (`<hash>@<domain>`).
+  Subscribers' calendars key events on the UID — **never change it on a live
+  feed**; an instance taking over an existing feed sets it to that feed's
+  suffix (WPR: `marathon-meetings`).
+- `instance.corrections_email` (an email address): where readers send
+  correction requests. Without it, static pages and the frontend show no
+  "Request a correction" link.
+- `place_names` (top level, list of non-empty strings): municipality and state
+  names that may trail a street address (", Wausau, WI"). `engine.scrub`
+  removes up to two along with a resident's address; with none listed only
+  the address itself is removed.
 
 ### Normalized PAST-MEETING record (element of data/meetings.json)
 ```
@@ -138,6 +194,12 @@ ID, `bb_<meeting_id>` (BoardBook), or `<id_prefix>_<guid>` (Municode).
 ```
 {date "2026-07-08", time "5:00 PM"|"", name, url, source}
 ```
+Adapters' `fetch_upcoming` raises UpstreamUnavailableError when the portal
+doesn't answer (after `engine.net`'s 3 attempts); `engine.upcoming` then keeps
+that jurisdiction's previously published meetings dated today or later
+instead of writing an empty list. An empty list means the upstream answered
+with no meetings. AgendaCenter is the exception: a failed page fetch falls
+through to its `fallback_rules` projection.
 
 ### Cost ledger entry (data/costs.json)
 ```
@@ -146,6 +208,37 @@ ID, `bb_<meeting_id>` (BoardBook), or `<id_prefix>_<guid>` (Municode).
 Priced per call from `PRICING_PER_MTOK` in `engine/costs.py` (the pipeline
 is two-tier: Sonnet for transcript/minutes, Haiku for agenda-only). An
 unknown model raises UnknownModelPricingError — never silently unpriced.
+
+### Residents' privacy (binding)
+Officials are named; a private resident only when the record states the name
+clearly, never with a home address; students and minors never; no named
+private person is tied to a health condition. The transcript and minutes
+prompts carry the rules (`summarize.RESIDENT_PRIVACY_RULES`); `engine.scrub`
+is the backstop for the address rule. It leaves an address that is the
+subject of business ("Rezoning of 123 Elm Street") and the government's own
+wording (`item`, `title`, `motion` keys).
+
+### corrections.json (repo root, committed)
+```
+[{id, find, replace, date "2026-11-17", kind "correction"|"privacy", note}]
+```
+The public log of fixes. `id` is the meeting ID; `find` → `replace` is an
+exact string replacement re-applied to that meeting's summary, mirror, data
+record and static page on every run, so a re-summarization can't undo it.
+`correction` = an error fixed; `privacy` = a name or detail withheld under the
+residents rule. A malformed log raises CorrectionsFileError.
+
+### Run report (agenda_only_report.json, written every non-dry run, not committed)
+```
+{agenda_only: [...], transcript_based: [...], total_processed,
+ stale_unprocessed: [{id, title, source, age_hours}]}
+```
+`stale_unprocessed` comes from `skipped_videos.json`: the pipeline records
+when it first saw each YouTube video it had neither a transcript nor an
+agenda for. A video leaves the watch list when it is processed, listed in
+`instance.skip_ids`, recorded in `transcripts/unavailable.json` (the
+residential fetcher saw YouTube report it private or removed), or absent from
+its channel's listing this run.
 
 ### Summary sidecar `_source` tag (drives upgrade passes)
 `transcript` | `minutes` (outcome-based, final) vs `agenda` |
@@ -160,12 +253,20 @@ caption retry (14 days), BoardBook recording match
 - `injected_meetings.json` — which IDs are already in data/meetings.json.
   Upgrade passes clear their IDs to force re-publication.
 - `summaries/` — `.md` + `_summary.json` / `_votes.json` sidecars.
+- `skipped_videos.json` — `{video_id: {first_seen, title, source}}`, the
+  stuck-video watch list. Committed back by CI.
+- `corrections.json` — the corrections log (hand-edited; CI commits it back
+  unchanged so it travels with the data).
 
 ## Failure semantics (binding)
 - Unknown adapter / invalid config → ConfigError at startup, exit non-zero.
 - Scrape page fetched OK but zero rows matched → AdapterStructureError
   (HTML drift must never read as "no new meetings"). Other jurisdictions
   still complete; pipeline exits 1 AFTER writing outputs.
+- Upstream didn't answer an upcoming fetch → UpstreamUnavailableError, caught
+  once in `engine.upcoming`: that jurisdiction keeps its last-known-good
+  future meetings and the run continues (an outage is not drift, exit 0).
+  Structure drift also keeps last-known-good, then still exits 1.
 - YouTube bot-block/cookie expiry → TranscriptAuthError naming the
   jurisdiction; reported in a loud block at the end; exit 1. Distinct from
   NoCaptionsError (→ agenda fallback, normal).
@@ -202,6 +303,19 @@ caption retry (14 days), BoardBook recording match
   channel (was: silently assume marathon).
 - Transcript auth failures and scrape structure drift now exit 1 with named
   errors (was: indistinguishable from quiet runs).
+- Overdue lags, the corrections address, the scrub's place names and the ICS
+  UID suffix are instance.json values (were: constants in check_overdue.py,
+  generate_pages.py, scrub_summaries.py, generate_ics.py).
+- The overdue check skips jurisdictions with nothing to upgrade from (no
+  video channel, vote records or minutes) — every production source has one.
+- Cost ledger entries carry `purpose` + `meeting_id` instead of `script`; the
+  spending-alarm issue breaks spend down by purpose and lists meetings
+  summarized more than once in the window. The ledger is not pruned (was: 120
+  days) and unknown models raise instead of being priced at the top rate.
+- No caption-health counters in the run report and no cookie-expiry issue: CI
+  runs with CAPTION_FETCH=false, and a bot-block is a TranscriptAuthError.
+- BoardBook and Municode listings raise on an HTTP error instead of parsing
+  the error page (was: silently zero meetings).
 
 ## Phase status
 - Phase 1 (engine extraction): COMPLETE July 2026. Acceptance passed:

@@ -5,11 +5,13 @@ Rules come from instance.json as
      "url": optional link target}
 Used directly for jurisdictions whose agendas adapter is rule_schedule
 (e.g. Marathon County) and as the fallback_rules projection for scrape-based
-adapters (AgendaCenter, BoardBook).
+adapters (AgendaCenter, BoardBook). BoardBook drops a projection that a
+posted meeting on the same date already covers (covered_by_posted).
 """
 
 from __future__ import annotations
 
+import re
 from calendar import monthrange
 from datetime import date, timedelta
 
@@ -38,6 +40,24 @@ def months_between(start: date, end: date) -> list[tuple[int, int]]:
         else:
             d = d.replace(month=d.month + 1)
     return sorted(seen)
+
+
+_NAME_FILLER = {"meeting", "board", "school", "of", "the", "and", "a"}
+
+
+def name_tokens(name: str) -> set[str]:
+    """The words that identify a meeting, without the filler every name shares."""
+    return {w for w in re.findall(r"[a-z]+", name.lower()) if w not in _NAME_FILLER}
+
+
+def covered_by_posted(projected: dict, posted: list[dict]) -> bool:
+    """True when a posted meeting on the same date covers a rule projection
+    under different wording: the portal's "Regular Meeting" or "Regular School
+    Board Meeting Including a Public Hearing" is the rule's "Regular School
+    Board Meeting", not a second meeting that day."""
+    want = name_tokens(projected["name"])
+    return any(p["date"] == projected["date"] and want <= name_tokens(p["name"])
+               for p in posted)
 
 
 def project(rules: list[dict], jurisdiction_key: str, days_ahead: int,

@@ -22,6 +22,8 @@ from urllib.parse import quote, urlparse
 
 import requests
 
+from .. import net
+
 logger = logging.getLogger(__name__)
 
 _HEADERS = {"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
@@ -137,15 +139,13 @@ def _cancelled(e: dict) -> bool:
 
 def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
                    days_ahead: int) -> list[dict]:
-    """Posted future meetings from the Events endpoint."""
+    """Posted future meetings from the Events endpoint. Raises
+    UpstreamUnavailableError when Legistar doesn't answer."""
     today = date.today()
     end = today + timedelta(days=days_ahead)
     flt = quote(f"EventDate ge datetime'{today}' and EventDate le datetime'{end}'")
-    try:
-        events = _get(f"{_api(agendas_cfg)}/events?$filter={flt}&$orderby=EventDate&$top=30") or []
-    except Exception as e:
-        logger.warning("%s Legistar fetch failed: %s", jurisdiction_key, e)
-        return []
+    events = net.get_json(f"{_api(agendas_cfg)}/events?$filter={flt}&$orderby=EventDate&$top=30",
+                          headers=_HEADERS) or []
 
     results = [{
         "date": e["EventDate"][:10],

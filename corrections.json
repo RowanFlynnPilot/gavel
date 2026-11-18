@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bb_742658",
+    "find": "Student Representative Report (Ava)",
+    "replace": "Student Representative Report",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "Senior Drum Major Amelia",
+    "replace": "the senior drum major",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "Senior Eric Winger introduced",
+    "replace": "A senior introduced",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "Certificates of Competence: Ella Budleski, Lana Gorski, Anna Jacobson, and Ava Schuler.",
+    "replace": "Certificates of Competence.",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "projects: Ella ran",
+    "replace": "projects: one ran",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "; Lana hosted",
+    "replace": "; one hosted",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "; Anna led",
+    "replace": "; one led",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_742658",
+    "find": "; and Ava co-led",
+    "replace": "; and one co-led",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_762740",
+    "find": "Student Representative Report - Bin Campman, Student Council President",
+    "replace": "Student Representative Report - Student Council President",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_762740",
+    "find": "New student council president Bin Campman, a senior",
+    "replace": "The new student council president, a senior",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "bb_747929",
+    "find": "Student Dakota shared",
+    "replace": "A student shared",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Student named in a summary; WP&R summaries don't name students."
+  },
+  {
+    "id": "u4JqC0FMt8U",
+    "find": "24-year-old Officer Rafael 'Buddy' Carey, who is battling",
+    "replace": "an officer who is battling",
+    "date": "2026-11-17",
+    "kind": "privacy",
+    "note": "Named person tied to a health condition; the summary keeps the fundraiser, not the name."
+  }
+]

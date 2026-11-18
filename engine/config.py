@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -46,6 +47,23 @@ MEETINGS_JSON = DATA_DIR / "meetings.json"
 UPCOMING_JSON = DATA_DIR / "upcoming.json"
 COSTS_JSON = DATA_DIR / "costs.json"
 INSTANCE_JSON = Path(os.environ.get("INSTANCE_JSON", "./instance.json"))
+# The public log of fixes (engine.scrub re-applies it every run).
+CORRECTIONS_FILE = Path(os.environ.get("CORRECTIONS_FILE", "./corrections.json"))
+# Written by every pipeline run for the workflow's watchdog steps; not committed.
+RUN_REPORT = Path(os.environ.get("RUN_REPORT", "./agenda_only_report.json"))
+
+# ── Stuck-video watchdog (engine.watchdog) ─────────────────────────────────────
+# When the pipeline first saw each video it could not process. Committed by CI.
+SKIPPED_FILE = Path(os.environ.get("SKIPPED_FILE", "./skipped_videos.json"))
+# Written by the residential fetcher when YouTube reports a video private or
+# removed; keyed by video ID.
+UNAVAILABLE_FILE = Path(os.environ.get("UNAVAILABLE_FILE", "./transcripts/unavailable.json"))
+# The residential fetcher normally clears a video within ~12 hours.
+STALE_VIDEO_HOURS = int(os.environ.get("STALE_VIDEO_HOURS", "36"))
+
+# Days a meeting may stay agenda-only before its upgrade counts as late, for a
+# jurisdiction that doesn't set expected_lag_days (engine.overdue).
+DEFAULT_EXPECTED_LAG_DAYS = 7
 
 # ── YouTube / yt-dlp / Whisper (operator-side transcript acquisition) ──────────
 COOKIES_FILE = os.environ.get("YT_COOKIES_FILE", "")
@@ -66,13 +84,19 @@ WHISPER_SOURCES = [
 AGENDA_RETRY_DAYS = int(os.environ.get("AGENDA_RETRY_DAYS", "14"))
 
 
-def setup_logging(level: int = logging.INFO) -> None:
-    """Configure the root logger once with a CI-friendly, UTF-8-safe format."""
+def utf8_console() -> None:
+    """Make stdout/stderr UTF-8 (Windows consoles default to a legacy code
+    page that can't print every meeting title)."""
     try:
         sys.stdout.reconfigure(encoding="utf-8")
         sys.stderr.reconfigure(encoding="utf-8")
     except (AttributeError, OSError):
         pass
+
+
+def setup_logging(level: int = logging.INFO) -> None:
+    """Configure the root logger once with a CI-friendly, UTF-8-safe format."""
+    utf8_console()
     root = logging.getLogger()
     if root.handlers:
         return
@@ -91,6 +115,25 @@ def _require(obj: dict, key: str, ctx: str):
     if key not in obj:
         raise ConfigError(f"instance.json: missing required field '{key}' in {ctx}")
     return obj[key]
+
+
+def _validate_rules(rules, ctx: str) -> None:
+    """nth-weekday rules: {name, weekday 0-6 (0=Mon), nth 1-5, time, url?}."""
+    if not isinstance(rules, list):
+        raise ConfigError(f"{ctx}: must be a list of rules")
+    for i, rule in enumerate(rules):
+        rctx = f"{ctx}[{i}]"
+        if not isinstance(rule, dict):
+            raise ConfigError(f"{rctx}: must be an object")
+        for field in ("name", "time"):
+            if not isinstance(_require(rule, field, rctx), str):
+                raise ConfigError(f"{rctx}: '{field}' must be a string")
+        for field, lo, hi in (("weekday", 0, 6), ("nth", 1, 5)):
+            v = _require(rule, field, rctx)
+            if isinstance(v, bool) or not isinstance(v, int) or not lo <= v <= hi:
+                raise ConfigError(
+                    f"{rctx}: '{field}' must be an integer {lo}-{hi}"
+                    f"{' (0=Monday)' if field == 'weekday' else ''}, got {v!r}")
 
 
 class Jurisdiction:
@@ -148,7 +191,18 @@ class Jurisdiction:
             _require(self.agendas, "blob_base", f"{ctx}.agendas")
             _require(self.agendas, "id_prefix", f"{ctx}.agendas")
         elif adapter == "rule_schedule":
-            _require(self.agendas, "rules", f"{ctx}.agendas")
+            _validate_rules(_require(self.agendas, "rules", f"{ctx}.agendas"),
+                            f"{ctx}.agendas.rules")
+        if "fallback_rules" in self.agendas:
+            _validate_rules(self.agendas["fallback_rules"], f"{ctx}.agendas.fallback_rules")
+
+        # Days a meeting here normally stays agenda-only before its recording,
+        # audio, minutes or votes arrive; engine.overdue flags anything later.
+        lag = raw.get("expected_lag_days", DEFAULT_EXPECTED_LAG_DAYS)
+        if isinstance(lag, bool) or not isinstance(lag, int) or lag < 1:
+            raise ConfigError(
+                f"{ctx}: 'expected_lag_days' must be a positive integer, got {lag!r}")
+        self.expected_lag_days: int = lag
 
     @property
     def video_adapter(self) -> str | None:
@@ -177,6 +231,32 @@ class InstanceConfig:
         # ics feed, roundup, and static pages point here). Optional; modules
         # fall back to newsroom_url.
         self.tracker_page_url: str = inst.get("tracker_page_url", "")
+        # Suffix of every calendar-feed UID ("<hash>@<domain>"). Subscribers'
+        # calendars key events on the UID, so changing this on a live feed
+        # duplicates every event they hold.
+        self.ics_uid_domain: str = inst.get("ics_uid_domain", "gavel")
+        if not isinstance(self.ics_uid_domain, str) or \
+                not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9.-]*", self.ics_uid_domain):
+            raise ConfigError(
+                "instance.ics_uid_domain must be letters, digits, dots and hyphens "
+                f"(e.g. 'gavel'), got {self.ics_uid_domain!r}")
+        # The calendar feed's display name and description, as subscribers'
+        # calendar apps show them. Optional; default to the instance name and
+        # a description built from the jurisdictions.
+        self.calendar_name: str = inst.get("calendar_name", "")
+        self.calendar_description: str = inst.get("calendar_description", "")
+        for field in ("calendar_name", "calendar_description"):
+            if not isinstance(getattr(self, field), str):
+                raise ConfigError(f"instance.{field} must be a string")
+        # Where readers send correction requests. Optional: with none, static
+        # pages and the frontend show no "Request a correction" link.
+        self.corrections_email: str = inst.get("corrections_email", "")
+        if not isinstance(self.corrections_email, str) or (
+                self.corrections_email
+                and not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", self.corrections_email)):
+            raise ConfigError(
+                "instance.corrections_email must be an email address, "
+                f"got {self.corrections_email!r}")
 
         self.theme: dict = _require(raw, "theme", "top level")
         self.committee_styles: dict = raw.get("committee_styles", {})
@@ -185,6 +265,13 @@ class InstanceConfig:
         # deployments must not compete with production for search ranking).
         self.seo: dict = raw.get("seo", {})
         self.analytics: dict = raw.get("analytics", {})
+        # Optional: municipality and state names that may trail a street
+        # address (", Springfield, IL"). engine.scrub removes one along with a
+        # resident's address; with none listed, only the address itself goes.
+        self.place_names: list[str] = raw.get("place_names", [])
+        if not isinstance(self.place_names, list) or \
+                not all(isinstance(p, str) and p.strip() for p in self.place_names):
+            raise ConfigError("instance.json: 'place_names' must be a list of non-empty strings")
 
         jur_raw = _require(raw, "jurisdictions", "top level")
         if not isinstance(jur_raw, list) or not jur_raw:

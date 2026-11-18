@@ -6,6 +6,10 @@ Each jurisdiction's upcoming list is the union of:
   - the rule_schedule projection, for rule_schedule jurisdictions
   - an optional YouTube description scan (video.scan_descriptions_for_upcoming)
 
+Adapters fetch through engine.net (3 attempts). When an upstream still doesn't
+answer, that jurisdiction keeps its previously published future meetings
+(last-known-good) instead of going blank.
+
 UPCOMING RECORD: {date ("2026-07-08"), time ("5:00 PM"|""), name, url, source}
 """
 
@@ -13,16 +17,19 @@ from __future__ import annotations
 
 import json
 import logging
+from datetime import date
 from pathlib import Path
 
 from .adapters import get_adapter
 from .config import InstanceConfig, UPCOMING_JSON
-from .errors import AdapterStructureError
+from .errors import AdapterStructureError, UpstreamUnavailableError
 
 logger = logging.getLogger(__name__)
 
 
-def fetch_for_jurisdiction(cfg: InstanceConfig, key: str) -> list[dict]:
+def fetch_for_jurisdiction(cfg: InstanceConfig, key: str) -> list[dict] | None:
+    """A jurisdiction's upcoming meetings, or None when its upstream didn't
+    answer (an empty list means it answered with no meetings)."""
     jur = cfg.jurisdiction(key)
     a = jur.agendas
     days_ahead = a.get("days_ahead", 60)
@@ -49,28 +56,54 @@ def fetch_for_jurisdiction(cfg: InstanceConfig, key: str) -> list[dict]:
         entries = sorted(results.values(), key=lambda x: (x["date"], x["time"]))
     else:
         adapter = get_adapter(adapter_name)
-        entries = adapter.fetch_upcoming(a, key, days_ahead)
+        try:
+            entries = adapter.fetch_upcoming(a, key, days_ahead)
+        except UpstreamUnavailableError as e:
+            logger.warning("%s upcoming: %s", key, e)
+            return None
 
     return entries
+
+
+def _load_previous(data_path: Path) -> dict:
+    if not data_path.exists():
+        return {}
+    try:
+        return json.loads(data_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        logger.warning("Existing %s is not valid JSON — no last-known-good fallback", data_path)
+        return {}
+
+
+def _last_known_good(key: str, previous: dict) -> list[dict]:
+    today = date.today().isoformat()
+    kept = [e for e in previous.get(key, []) if e.get("date", "") >= today]
+    print(f"  [warn]  {key}: no fresh upcoming list — keeping {len(kept)} "
+          f"last-known-good upcoming meeting(s)")
+    return kept
 
 
 def update_upcoming(cfg: InstanceConfig, data_path: Path | None = None,
                     sources: list[str] | None = None) -> dict[str, list]:
     """Refresh data/upcoming.json for all (or the given) jurisdictions.
     A structural scrape failure in one jurisdiction is re-raised after the
-    others complete — fail loud without losing the healthy sources."""
+    others complete — fail loud without losing the healthy sources. A
+    jurisdiction with no fresh list (upstream didn't answer, or its structure
+    drifted) keeps its last published future meetings."""
     data_path = data_path or UPCOMING_JSON
     keys = sources or [j.key for j in cfg.jurisdictions]
+    previous = _load_previous(data_path)
 
     payload: dict[str, list] = {}
     structure_errors: list[AdapterStructureError] = []
     for key in keys:
         try:
-            payload[key] = fetch_for_jurisdiction(cfg, key)
+            fresh = fetch_for_jurisdiction(cfg, key)
         except AdapterStructureError as e:
             logger.error("%s upcoming failed on structure drift: %s", key, e)
             structure_errors.append(e)
-            payload[key] = []
+            fresh = None
+        payload[key] = fresh if fresh is not None else _last_known_good(key, previous)
 
     data_path.parent.mkdir(parents=True, exist_ok=True)
     data_path.write_text(
