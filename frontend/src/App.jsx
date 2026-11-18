@@ -1315,9 +1315,160 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
 const labelStyle = { fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.18em", color: "#5a5a5a", marginBottom: "12px", paddingBottom: "5px", borderBottom: `1px solid ${RULE}` };
 const bodyStyle  = { fontFamily: FONT_BODY, fontSize: "14px", lineHeight: 1.8, color: "#2A2015", margin: 0 };
 
+// ─── Agenda previews (Upcoming panel) ────────────────────────────────────────
+// The engine attaches an optional `preview` to an upcoming record once its
+// agenda is posted (engine/previews.py). Vote and hearing tags are filled,
+// discussion and report tags outlined — the difference is fill and the word
+// itself, never hue. Text colours here are ink and fixed dark greys rather
+// than the jurisdiction accent, which doesn't reliably clear AA on the page
+// background (the accent is only the decorative left rule).
+const _PREVIEW_ACTIONS = {
+  vote:       { label: "VOTE",       strong: true  },
+  hearing:    { label: "HEARING",    strong: true  },
+  discussion: { label: "DISCUSSION", strong: false },
+  report:     { label: "REPORT",     strong: false },
+};
+
+// Whole days from today to the meeting date (both "YYYY-MM-DD"); 0 for today.
+function _daysBefore(dateStr, todayStr) {
+  const ms = Date.parse(dateStr + "T00:00:00Z") - Date.parse(todayStr + "T00:00:00Z");
+  return Number.isFinite(ms) ? Math.max(0, Math.round(ms / 86400000)) : 0;
+}
+
+// "November 17" in the instance timezone, or "" for a missing/unparseable stamp.
+function _previewDraftedOn(iso) {
+  const d = new Date(iso);
+  if (!iso || isNaN(d)) return "";
+  return d.toLocaleDateString("en-US", {
+    timeZone: INSTANCE.timezone || "UTC", month: "long", day: "numeric",
+  });
+}
+
+// A meeting's stable identity across filter changes (list indexes shift).
+function _previewKey(ev) {
+  return [ev.source, ev.date, ev.time, ev.name].join("|");
+}
+
+function AgendaPreview({ preview, url, accent, open, onToggle, panelId, describedBy }) {
+  const items     = Array.isArray(preview.items) ? preview.items : [];
+  const draftedOn = _previewDraftedOn(preview.generated);
+  return (
+    <div style={{ borderBottom: `1px solid ${RULE}`, background: "#fff" }}>
+      <button
+        type="button"
+        data-agenda-preview="toggle"
+        aria-expanded={open}
+        aria-controls={panelId}
+        aria-describedby={describedBy}
+        onClick={onToggle}
+        onMouseEnter={e => { e.currentTarget.style.background = `${accent}12`; }}
+        onMouseLeave={e => { e.currentTarget.style.background = open ? `${accent}12` : "transparent"; }}
+        style={{
+          width: "100%", minHeight: "40px",
+          // 52px = row padding + avatar + gap, so the label sits under the name.
+          padding: "0 14px 0 52px",
+          // Tinted while open (as the row is while its calendar menu is open),
+          // so the state doesn't hang on a hover that touch screens never clear.
+          background: open ? `${accent}12` : "transparent",
+          border: "none", cursor: "pointer",
+          display: "flex", alignItems: "center", gap: "7px",
+          fontFamily: FONT_DISPLAY,
+          fontSize: "11px", letterSpacing: "0.14em",
+          color: INK, textAlign: "left",
+          outlineOffset: "-2px",   // full-width: keep the focus ring inside the scroller
+          transition: "background 0.12s",
+        }}
+      >
+        {"WHAT'S ON THE AGENDA"}
+        <svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10"
+          style={{ flexShrink: 0, transform: open ? "rotate(180deg)" : "none", transition: "transform 0.15s" }}>
+          <path d="M1.5 3.25 5 6.75 8.5 3.25" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
+      </button>
+
+      {/* Always in the DOM so aria-controls resolves; `hidden` does the hiding,
+          so this element must not set `display`. */}
+      <div id={panelId} hidden={!open} style={{
+        background: CREAM,
+        borderTop: `1px solid ${RULE}`,
+        borderLeft: `3px solid ${accent}`,
+        padding: "12px 14px 14px",
+        overflowWrap: "anywhere",
+      }}>
+        <p style={{ fontFamily: FONT_BODY, fontSize: "14px", lineHeight: 1.6, color: "#2A2015" }}>
+          {preview.overview}
+        </p>
+
+        {items.length > 0 && (
+          <ul style={{ listStyle: "none", marginTop: "12px" }}>
+            {items.map((it, k) => {
+              const action = _PREVIEW_ACTIONS[it.action] || _PREVIEW_ACTIONS.discussion;
+              return (
+                <li key={k} style={{
+                  display: "flex", alignItems: "flex-start", gap: "10px",
+                  padding: "9px 0", borderTop: `1px solid ${RULE}`,
+                }}>
+                  <span style={{
+                    flexShrink: 0, minWidth: "76px", marginTop: "1px",
+                    padding: "3px 6px 2px",
+                    fontFamily: FONT_DISPLAY,
+                    fontSize: "11px", letterSpacing: "0.1em", lineHeight: 1.2,
+                    textAlign: "center", whiteSpace: "nowrap",
+                    background: action.strong ? INK : "transparent",
+                    color:      action.strong ? "#fff" : "#4a4a4a",
+                    border:     `1px solid ${action.strong ? INK : "#5a5a5a"}`,
+                  }}>{action.label}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontFamily: FONT_BODY, fontSize: "14px", fontWeight: 600, lineHeight: 1.4, color: INK }}>
+                      {it.item}
+                    </div>
+                    {it.why && (
+                      <div style={{ fontFamily: FONT_BODY, fontSize: "13px", lineHeight: 1.55, color: "#2A2015", marginTop: "2px" }}>
+                        {it.why}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+
+        {(preview.publicComment || preview.closedSession) && (
+          <div style={{
+            borderTop: `1px solid ${RULE}`,
+            marginTop: items.length > 0 ? 0 : "12px", paddingTop: "10px",
+            fontFamily: FONT_BODY, fontSize: "13px", fontWeight: 600, lineHeight: 1.6, color: INK,
+          }}>
+            {preview.publicComment && <p>Residents can speak at this meeting</p>}
+            {preview.closedSession && <p>Includes a closed session</p>}
+          </div>
+        )}
+
+        <p style={{
+          borderTop: `1px solid ${RULE}`,
+          marginTop: (items.length > 0 && !preview.publicComment && !preview.closedSession) ? 0 : "10px",
+          paddingTop: "10px",
+          fontFamily: FONT_BODY, fontSize: "12px", lineHeight: 1.6, color: "#5a5a5a",
+        }}>
+          Drafted by software from the posted agenda{draftedOn ? ` on ${draftedOn}` : ""}. Agendas change; check{" "}
+          {url
+            ? <a href={url} target="_blank" rel="noopener noreferrer"
+                data-agenda-preview="link"
+                // Inline vertical padding grows the tap area without moving lines.
+                style={{ color: INK, fontWeight: 600, textDecoration: "underline", padding: "13px 0" }}>the official agenda</a>
+            : "the official agenda"}
+          .
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function UpcomingMeetings({ isMobile }) {
   const [upFilter, setUpFilter]       = useState("all");
   const [calOpen,  setCalOpen]        = useState(null);  // ev key with open dropdown
+  const [openPreviews, setOpenPreviews] = useState({});  // _previewKey(ev) -> true
   // Local date, not toISOString() — the UTC date rolls over at 7 PM Central,
   // which made today's (mostly evening!) meetings vanish from Upcoming.
   const today = new Date().toLocaleDateString("en-CA");
@@ -1342,6 +1493,18 @@ function UpcomingMeetings({ isMobile }) {
     if (dateStr === tomorrow) return "TOMORROW";
     const d = new Date(dateStr + "T00:00:00");
     return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }).toUpperCase();
+  };
+
+  // "Agenda Preview" is a grant-reporting metric: it fires here, in the click
+  // handler, on the closed → open transition only — never from an effect or a
+  // state updater (StrictMode runs both twice) and never on close.
+  const togglePreview = (ev) => {
+    const key     = _previewKey(ev);
+    const opening = !openPreviews[key];
+    if (opening) {
+      track("Agenda Preview", { source: ev.source, days_before: _daysBefore(ev.date, today) });
+    }
+    setOpenPreviews(prev => ({ ...prev, [key]: opening }));
   };
 
   return (
@@ -1516,15 +1679,20 @@ function UpcomingMeetings({ isMobile }) {
                   };
                 };
                 const urls = calcUrls();
+                const preview = ev.preview && ev.preview.overview ? ev.preview : null;
+                const nameId  = `upcoming-name-${date}-${i}`;
                 return (
-                      <div key={i} style={{ position: "relative" }}>
+                    <div key={i}>
+                      <div style={{ position: "relative" }}>
 
                         <a href={ev.url} target="_blank" rel="noreferrer"
                           style={{ textDecoration: "none", display: "block" }}>
                           <div
                             style={{
                               padding: "10px 14px",
-                              borderBottom: `1px solid ${RULE}`,
+                              // With a preview, the rule moves below its toggle
+                              // so the toggle reads as part of this meeting.
+                              borderBottom: preview ? "none" : `1px solid ${RULE}`,
                               background: isOpen ? `${src.accent}12` : "#fff",
                               display: "flex", alignItems: "center", gap: "10px",
                               transition: "background 0.12s",
@@ -1548,7 +1716,7 @@ function UpcomingMeetings({ isMobile }) {
 
 
                             <div style={{ flex: 1, minWidth: 0 }}>
-                              <div style={{
+                              <div id={nameId} style={{
                                 fontFamily: FONT_HEADLINE,
                                 fontSize: "13px", fontWeight: 600,
                                 color: INK, lineHeight: 1.3,
@@ -1654,6 +1822,19 @@ function UpcomingMeetings({ isMobile }) {
                           </div>
                         )}
                       </div>
+
+                      {preview && (
+                        <AgendaPreview
+                          preview={preview}
+                          url={ev.url}
+                          accent={src.accent}
+                          open={!!openPreviews[_previewKey(ev)]}
+                          onToggle={() => togglePreview(ev)}
+                          panelId={`agenda-preview-${date}-${i}`}
+                          describedBy={nameId}
+                        />
+                      )}
+                    </div>
                 );
               })}
             </div>
@@ -1990,6 +2171,9 @@ function Tracker() {
           outline-offset: 2px;
           border-radius: 1px;
         }
+        /* Agenda-preview controls sit on white and on the page background,
+           where the primary ring is too faint; use ink there. */
+        [data-agenda-preview]:focus-visible { outline-color: ${INK} !important; }
         button:focus:not(:focus-visible),
         a:focus:not(:focus-visible),
         input:focus:not(:focus-visible) { outline: none; }

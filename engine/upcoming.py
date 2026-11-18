@@ -84,12 +84,17 @@ def _last_known_good(key: str, previous: dict) -> list[dict]:
 
 
 def update_upcoming(cfg: InstanceConfig, data_path: Path | None = None,
-                    sources: list[str] | None = None) -> dict[str, list]:
+                    sources: list[str] | None = None,
+                    previews: str = "cached") -> dict[str, list]:
     """Refresh data/upcoming.json for all (or the given) jurisdictions.
     A structural scrape failure in one jurisdiction is re-raised after the
     others complete — fail loud without losing the healthy sources. A
     jurisdiction with no fresh list (upstream didn't answer, or its structure
-    drifted) keeps its last published future meetings."""
+    drifted) keeps its last published future meetings.
+
+    previews: "generate" writes agenda previews for meetings whose agenda is
+    newly posted or changed (Claude calls, capped per run); "cached" attaches
+    only previews already written; "off" attaches none."""
     data_path = data_path or UPCOMING_JSON
     keys = sources or [j.key for j in cfg.jurisdictions]
     previous = _load_previous(data_path)
@@ -104,6 +109,14 @@ def update_upcoming(cfg: InstanceConfig, data_path: Path | None = None,
             structure_errors.append(e)
             fresh = None
         payload[key] = fresh if fresh is not None else _last_known_good(key, previous)
+
+    if previews != "off":
+        from . import previews as previews_mod
+        try:
+            previews_mod.attach(cfg, payload, generate=(previews == "generate"),
+                                cache_file=data_path.parent / "previews.json")
+        except Exception as e:      # previews are an extra; the schedule is not
+            logger.error("agenda previews skipped this run: %s", e)
 
     data_path.parent.mkdir(parents=True, exist_ok=True)
     data_path.write_text(

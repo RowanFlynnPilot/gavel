@@ -276,6 +276,13 @@ def build_meeting(cfg: InstanceConfig, video_id: str, info: dict,
         "votes": summary.get("votes", []),
     }
 
+    # How many residents spoke, when the summary counted them (summaries made
+    # before the prompts asked for it have no count, and the key is left off).
+    speakers = summary.get("publicCommentSpeakers")
+    if isinstance(speakers, int) and not isinstance(speakers, bool) and speakers >= 0 \
+            and not is_agenda_only:
+        meeting["publicCommentSpeakers"] = speakers
+
     if civic_data and jur.agendas_adapter in VOTE_ADAPTERS:
         items = civic_data.get("items", [])
         if items:

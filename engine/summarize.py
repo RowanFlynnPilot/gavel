@@ -69,6 +69,7 @@ Produce a JSON object with this exact structure and nothing else - no markdown, 
     }}
   ],
   "publicComment": "Describe actual public comment offered - how many speakers and what each said, following the privacy rules below. Or 'No public comment was offered.'",
+  "publicCommentSpeakers": "a whole number: how many members of the public spoke or had a written comment read during public comment and public hearings (officials, staff and presenters do not count). 0 if none. null only if the transcript does not let you count them.",
   "actionItems": ["specific decisions made or next steps directed by the committee"],
   "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places discussed (e.g. Highway J Extension, Riverlife District)"],
   "votes": [
@@ -318,6 +319,7 @@ Produce a JSON object with this exact structure - no markdown, no preamble, just
     {{"item": "agenda item title", "body": "2-4 sentences reporting the ACTUAL OUTCOME: motion text, who moved/seconded, the vote result (e.g. 'carried 6-0', 'failed 3-4'), and any recorded discussion or public input. Name the officials involved."}}
   ],
   "publicComment": "Describe public comment as recorded in the minutes — how many spoke and on what, following the privacy rules below. Or 'No public comment was recorded.'",
+  "publicCommentSpeakers": "a whole number: how many members of the public the minutes record as speaking or submitting a comment during public comment and public hearings (officials, staff and presenters do not count). 0 if none. null only if the minutes do not let you count them.",
   "actionItems": ["specific decisions made and directed next steps from the minutes"],
   "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"],
   "votes": [

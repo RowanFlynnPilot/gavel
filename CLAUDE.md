@@ -73,6 +73,54 @@ WPR is Instance Zero and the permanent reference deployment.
   report's `stale_unprocessed` (videos the pipeline could not process for
   `STALE_VIDEO_HOURS`, default 36) and writes the body of the self-closing
   "🏠 Residential transcript fetcher may be down" issue.
+- `python -m engine.tipsheet [--date YYYY-MM-DD] [--stdout]` — the reporter
+  tip sheet → data/tipsheet.md + data/tipsheet.html (deployed at
+  `/tipsheet.html`, noindex). No API calls; sorts data/meetings.json and
+  data/upcoming.json into leads: votes and hearings on next week's agendas,
+  failed/tabled/split votes, meetings where 3+ residents spoke, named topics
+  recurring across meetings, overdue upgrades, next week's meetings with no
+  preview. Reports speaker counts only, never who spoke. CI writes it every run.
+- `python -m engine.report [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--out FILE]
+  [--json]` — the funder report for a period (default: last 180 days), counted
+  from the state file, summary sidecars, corrections.json and the cost ledger:
+  meetings by board and by what they were summarized from, residents speaking
+  per meeting next to the prior equal-length period, corrections by kind,
+  agenda previews written, spend. No API calls. Run on demand; reader numbers
+  (Plausible) and alert subscribers are named in the report as not included.
+
+## Agenda previews
+
+The normal pipeline run attaches a `preview` to upcoming meetings in the next
+`PREVIEW_DAYS` (8) whose agenda is posted: `{overview, items: [{item, why,
+action: vote|hearing|discussion|report}], publicComment, closedSession,
+generated}`, one Haiku call each (`purpose=agenda_preview`), through
+`engine.previews.attach` inside `update_upcoming(previews="generate")`.
+`--publish-only` attaches cached previews and never calls Claude.
+
+- `data/previews.json` is the cache: one entry per meeting (key =
+  sha1 of source|date|name) holding the agenda text's hash. An unchanged
+  agenda never costs a second call; an agenda is re-read at most every
+  `PREVIEW_RECHECK_HOURS` (12); a meeting is previewed at most 3 times however
+  often its agenda is revised; at most `PREVIEW_MAX_PER_RUN` (10) calls per run,
+  the rest deferred to the next run.
+- A Claude failure stops preview generation for that run and charges no
+  attempt; an agenda that isn't posted yet is looked for again every run. A
+  preview failure never holds up the upcoming list.
+- Agenda text per platform is in `previews._AGENDA_TEXT`. `rule_schedule`
+  jurisdictions have no posted agenda and get no previews; a new agendas
+  adapter needs an entry there to get them.
+- The frontend's Upcoming panel expands a preview and fires the Plausible
+  event `Agenda Preview` with `{source, days_before}` — the "agenda views
+  before the meeting" number in funder reports. Add it as a Goal in Plausible.
+
+## Speaker counts
+
+The transcript and minutes prompts return `publicCommentSpeakers` (residents
+who spoke; null when it can't be counted). `engine.speakers.speaker_count`
+uses that field, and for summaries written before it existed reads the count
+out of the `publicComment` prose where one is stated. Unknown stays unknown:
+reports leave those meetings out of the average rather than counting zero.
+`publish` carries the field onto the meeting record when present.
 
 ## Architecture
 
@@ -97,6 +145,11 @@ engine/
 ├── publish.py           state + sidecars → data/meetings.json
 ├── upcoming.py          adapters → data/upcoming.json (last-known-good
 │                        per jurisdiction when an upstream doesn't answer)
+├── previews.py          agenda previews on upcoming meetings (Haiku, cached
+│                        in data/previews.json by agenda hash)
+├── speakers.py          public-comment speaker counts (field, else prose)
+├── report.py            funder report for a period (no API calls)
+├── tipsheet.py          weekly reporter tip sheet (no API calls)
 ├── watchdog.py          skipped_videos.json first-seen tracking → stale list
 ├── overdue.py           agenda-only meetings past expected_lag_days
 ├── scrub.py             residents' address scrub + corrections.json applier

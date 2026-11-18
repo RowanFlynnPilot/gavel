@@ -960,7 +960,7 @@ def main() -> None:
     publish_mod.publish(cfg)
     if not args.skip_upcoming:
         try:
-            upcoming.update_upcoming(cfg, sources=sources)
+            upcoming.update_upcoming(cfg, sources=sources, previews="generate")
         except AdapterStructureError as e:
             structure_failures.append(e)
 

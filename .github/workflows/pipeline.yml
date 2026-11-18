@@ -184,6 +184,12 @@ jobs:
           python -m engine.pages --out-dir frontend/public
           python -m engine.digest --out frontend/public/digest.png
 
+      - name: Write the reporter tip sheet
+        # Sorted from data/meetings.json and data/upcoming.json; no API calls.
+        # Same inputs give the same file, so it commits only when a lead changes.
+        continue-on-error: true
+        run: python -m engine.tipsheet
+
       - name: Commit state and data
         run: |
           git config --local user.email "action@github.com"
@@ -211,6 +217,7 @@ jobs:
           cp data/meetings.json data/upcoming.json frontend/public/data/
           cp data/meetings.ics frontend/public/meetings.ics 2>/dev/null || true
           cp data/roundup.txt data/roundup.html frontend/public/ 2>/dev/null || true
+          cp data/tipsheet.html frontend/public/ 2>/dev/null || true
           cp -r assets frontend/public/assets
 
       - name: Build frontend
