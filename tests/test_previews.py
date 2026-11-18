@@ -272,12 +272,24 @@ class PromptTest(unittest.TestCase):
 class PromptVersionTest(PreviewTestCase):
     def test_a_prompt_change_rewrites_cached_previews_once(self):
         self.attach({"city": [_entry()]})
-        later = NOW + timedelta(hours=previews.PREVIEW_RECHECK_HOURS + 1)
+        soon = NOW + timedelta(minutes=30)           # well inside the recheck window
         with mock.patch.object(previews, "PROMPT_VERSION", "next"):
-            _, _, claude = self.attach({"city": [_entry()]}, now=later)
+            _, _, claude = self.attach({"city": [_entry()]}, now=soon)
             self.assertEqual(claude.call_count, 1)
-            _, _, claude = self.attach({"city": [_entry()]}, now=later + timedelta(days=1))
+            _, fetch, claude = self.attach({"city": [_entry()]}, now=soon + timedelta(minutes=30))
+            fetch.assert_not_called()
             claude.assert_not_called()
+
+    def test_a_meeting_at_its_cap_is_not_refetched_every_run_after_a_prompt_change(self):
+        when = NOW
+        for n in range(previews.MAX_GENERATIONS):
+            self.attach({"city": [_entry()]}, now=when, text=AGENDA + f"\nAddendum {n}")
+            when += timedelta(hours=previews.PREVIEW_RECHECK_HOURS + 1)
+        with mock.patch.object(previews, "PROMPT_VERSION", "next"):
+            _, fetch, claude = self.attach({"city": [_entry()]}, now=when)
+            self.assertEqual((fetch.call_count, claude.call_count), (1, 0))
+            _, fetch, _ = self.attach({"city": [_entry()]}, now=when + timedelta(minutes=30))
+            fetch.assert_not_called()
 
 
 class UpcomingWiringTest(unittest.TestCase):

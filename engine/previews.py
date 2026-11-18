@@ -247,7 +247,11 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
             key = preview_key(entry)
             rec = cache.get(key) or {}
             checked = datetime.fromisoformat(rec["checked"]) if rec.get("checked") else None
-            if generate and not claude_down and (checked is None or now - checked >= recheck):
+            # A preview written under an older prompt is redone at the next
+            # run instead of waiting out the recheck window.
+            old_prompt = bool(rec.get("preview")) and rec.get("prompt") != PROMPT_VERSION
+            if generate and not claude_down and (
+                    checked is None or old_prompt or now - checked >= recheck):
                 try:
                     text = agenda_text_for(cfg, entry)
                 except Exception as e:          # one board's portal being down
@@ -259,6 +263,7 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
                     rec.update(source=entry["source"], date=entry["date"], name=entry["name"])
                     if digest == rec.get("hash") or rec.get("generations", 0) >= MAX_GENERATIONS:
                         rec["checked"] = stamp
+                        rec["prompt"] = PROMPT_VERSION      # settled under this prompt
                     elif stats["generated"] >= PREVIEW_MAX_PER_RUN:
                         stats["deferred"] += 1  # not marked checked: first in line next run
                     else:
@@ -273,6 +278,7 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
                             claude_down = True
                         else:
                             rec["checked"] = stamp
+                            rec["prompt"] = PROMPT_VERSION
                             rec["generations"] = rec.get("generations", 0) + 1
                             if preview:
                                 preview["generated"] = stamp
