@@ -194,6 +194,13 @@ def main() -> int:
     (target / "data/costs.json").write_text(
         json.dumps(convert_ledger(ledger), indent=2) + "\n", encoding="utf-8", newline="\n")
 
+    # 4b. assets/rosters.json, which other tools read for name spellings, is
+    #     from here on an export of instance.json's officials.
+    r = subprocess.run([sys.executable, "-m", "engine.rosters"], cwd=target,
+                       capture_output=True, text=True, encoding="utf-8")
+    if r.returncode != 0:
+        sys.exit(f"engine.rosters failed in the converted tree:\n{r.stdout}{r.stderr}")
+
     # 5. instance.json: this deployment's address, indexing on.
     inst_path = target / "instance.json"
     text = inst_path.read_text(encoding="utf-8")

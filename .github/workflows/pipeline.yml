@@ -23,6 +23,10 @@ on:
         description: 'Generate the weekly newsletter roundup now (also auto-runs Mondays)'
         required: false
         default: 'false'
+      resummarize:
+        description: 'Comma-separated video IDs whose transcript summaries to redo (python -m engine.audit_votes lists them)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -64,6 +68,14 @@ jobs:
 
       - name: Install Python dependencies
         run: python -m pip install -r requirements.txt
+
+      - name: Snapshot reel-ready meetings
+        # Which meetings already have transcript-built summaries, before this
+        # run adds any. The hand-off step after the commit compares against it
+        # so only meetings that became reel-ready in this run get a reel draft.
+        # Does nothing for an instance with no `reels` block in instance.json.
+        continue-on-error: true
+        run: python -m engine.reels --snapshot /tmp/reel_ready.json
 
       - name: Set up Deno
         # yt-dlp needs a JavaScript runtime to solve YouTube's "n challenge".
@@ -118,6 +130,8 @@ jobs:
         continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Meetings to re-summarize though their transcript is unchanged.
+          RESUMMARIZE_IDS: ${{ github.event.inputs.resummarize }}
         run: |
           if [ ! -d transcripts ] || [ -z "$(ls transcripts/*.txt 2>/dev/null)" ]; then
             echo "No transcript files — skipping."
@@ -192,6 +206,13 @@ jobs:
         continue-on-error: true
         run: python -m engine.tipsheet
 
+      - name: Export officials rosters
+        # assets/rosters.json, written from instance.json's officials for
+        # tools that read the name spellings without the whole config (the
+        # reference instance's reel drafter checks on-screen names against it).
+        continue-on-error: true
+        run: python -m engine.rosters
+
       - name: Commit state and data
         run: |
           git config --local user.email "action@github.com"
@@ -199,6 +220,7 @@ jobs:
           git add -f processed_meetings.json injected_meetings.json || true
           git add -f skipped_videos.json 2>/dev/null || true
           git add -f corrections.json 2>/dev/null || true
+          git add -f assets/rosters.json 2>/dev/null || true
           git add -f summaries/ || true
           git add -f data/ || true
           git add -f frontend/public/meetings/ frontend/public/sitemap.xml frontend/public/robots.txt 2>/dev/null || true
@@ -210,6 +232,45 @@ jobs:
           git pull --rebase --autostash origin "$GITHUB_REF_NAME" || git rebase --abort || true
           git push || true
 
+      - name: Ask the reels repo to draft reels
+        # Meetings of the bodies named in instance.json `reels.bodies` that
+        # became transcript-built in this run get a `transcript-ingested`
+        # dispatch to `reels.repo`, whose own workflow drafts a reel. Sends the
+        # commit just pushed, so the draft is built from exactly this data.
+        # Needs the REELS_DISPATCH_TOKEN secret (fine-grained, that repo,
+        # Contents: read and write); skips quietly without it or without a
+        # `reels` block. Never fails the run. Main only.
+        if: github.ref == 'refs/heads/main'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.REELS_DISPATCH_TOKEN }}
+        run: |
+          REELS_REPO=$(python -m engine.reels --repo)
+          if [ -z "$REELS_REPO" ]; then
+            echo "No reels hand-off configured in instance.json; skipping."
+            exit 0
+          fi
+          if [ -z "$GH_TOKEN" ]; then
+            echo "No REELS_DISPATCH_TOKEN secret; skipping reel drafts."
+            exit 0
+          fi
+          SHA=$(git rev-parse HEAD)
+          if ! git branch -r --contains "$SHA" | grep -q "origin/main"; then
+            echo "::warning::This run's commit didn't reach main; no reel drafts sent."
+            exit 0
+          fi
+          python -m engine.reels --since /tmp/reel_ready.json | while read -r VID; do
+            case "$VID" in
+              *[!A-Za-z0-9_-]*|"") echo "::warning::skipping malformed video id '$VID'"; continue ;;
+            esac
+            echo "Requesting a reel draft for $VID"
+            gh api "repos/$REELS_REPO/dispatches" \
+              -f event_type=transcript-ingested \
+              -f "client_payload[video_id]=$VID" \
+              -f "client_payload[tracker_sha]=$SHA" \
+              || echo "::warning::reel draft request failed for $VID"
+          done
+
       - name: Stage runtime config + data for the frontend
         # The frontend fetches instance.json and data/*.json at runtime;
         # assets (avatars, logo) are referenced by instance.json paths.
@@ -219,7 +280,6 @@ jobs:
           cp data/meetings.json data/upcoming.json frontend/public/data/
           cp data/meetings.ics frontend/public/meetings.ics 2>/dev/null || true
           cp data/roundup.txt data/roundup.html frontend/public/ 2>/dev/null || true
-          cp data/tipsheet.html frontend/public/ 2>/dev/null || true
           cp -r assets frontend/public/assets
 
       - name: Build frontend

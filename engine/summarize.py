@@ -12,8 +12,13 @@ Model tiering (binding, cost-driven):
 
 from __future__ import annotations
 
+import logging
+
+from . import vote_announcements
 from .claude import call_claude, parse_summary_json
 from .config import CLAUDE_MODEL, CLAUDE_MODEL_AGENDA, MAX_TRANSCRIPT_CHARS
+
+logger = logging.getLogger(__name__)
 
 
 # How summaries treat private residents: officials are named; a resident only
@@ -45,6 +50,11 @@ def summarize_meeting(transcript: str, title: str, url: str, *,
                       org_label: str, region: str, jurisdiction: str,
                       meeting_id: str, officials: list[str] | None = None) -> dict:
     """Full-transcript summary — the flagship product."""
+    if len(transcript) > MAX_TRANSCRIPT_CHARS:
+        logger.warning("Transcript for %s is %d chars; only the first %d reach the model",
+                       title, len(transcript), MAX_TRANSCRIPT_CHARS)
+    # Found by code over the WHOLE transcript, so a result is listed even past a cut.
+    announced = vote_announcements.prompt_block(transcript)
     prompt = f"""You are a local government reporter covering {region}.
 
 Meeting title: {title}
@@ -87,7 +97,7 @@ Rules:
 - Note unclear audio as [inaudible] rather than guessing at what was said.
 - {RESIDENT_PRIVACY_RULES}
 - Return ONLY the JSON object.
-
+{announced}
 --- TRANSCRIPT ---
 {transcript[:MAX_TRANSCRIPT_CHARS]}
 --- END ---"""
@@ -95,7 +105,10 @@ Rules:
     raw = call_claude(model=CLAUDE_MODEL, max_tokens=4096, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="transcript_summary")
-    return parse_summary_json(raw, "transcript")
+    result = parse_summary_json(raw, "transcript")
+    # How much of the transcript the model saw (engine.audit_votes reports a cut).
+    result["_transcript_chars"] = min(len(transcript), MAX_TRANSCRIPT_CHARS)
+    return result
 
 
 def summarize_from_agenda(agenda_text: str, title: str, url: str, *,

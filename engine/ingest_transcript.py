@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import subprocess
 import sys
@@ -85,6 +86,12 @@ def main() -> None:
 
     cfg = load_instance()
     vid_id = args.video_id
+    # The workflow's "resummarize" input names meetings to redo even though
+    # their transcript hasn't changed (a prompt or limit fix; engine.audit_votes
+    # lists the ones that need it).
+    if vid_id in {i.strip() for i in os.environ.get("RESUMMARIZE_IDS", "").split(",") if i.strip()}:
+        print(f"[force] {vid_id} is in RESUMMARIZE_IDS")
+        args.force = True
 
     # ── Skip-guard: resolve existing summary via state, compare hashes ───────
     transcript_hash = None

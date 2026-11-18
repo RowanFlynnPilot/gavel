@@ -36,7 +36,13 @@ CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6")
 CLAUDE_MODEL_AGENDA = os.environ.get("CLAUDE_MODEL_AGENDA", "claude-haiku-4-5-20251001")
 ANTHROPIC_TIMEOUT_SECONDS = int(os.environ.get("ANTHROPIC_TIMEOUT_SECONDS", "180"))
 ANTHROPIC_MAX_RETRIES = int(os.environ.get("ANTHROPIC_MAX_RETRIES", "4"))
-MAX_TRANSCRIPT_CHARS = int(os.environ.get("MAX_TRANSCRIPT_CHARS", "90000"))
+# Transcript characters sent to Claude in one call. It was 90,000 until
+# Oct. 2026, which cut the reference instance's longest meetings (every council
+# and county board meeting among them) right where the night's big votes come:
+# one summary called an ordinance "Approved" because the chair's "Motion
+# failed. 5 to six." at character 95,595 never reached the model. The longest
+# transcript there is ~184,000 characters (~46k tokens, ~$0.14 on Sonnet).
+MAX_TRANSCRIPT_CHARS = int(os.environ.get("MAX_TRANSCRIPT_CHARS", "300000"))
 
 # ── Filesystem layout ──────────────────────────────────────────────────────────
 SUMMARIES_DIR = Path(os.environ.get("SUMMARIES_DIR", "./summaries"))
@@ -265,6 +271,20 @@ class InstanceConfig:
         # deployments must not compete with production for search ranking).
         self.seo: dict = raw.get("seo", {})
         self.analytics: dict = raw.get("analytics", {})
+        # Optional hand-off to a companion repo that drafts video reels from
+        # newly transcribed meetings (engine.reels): {repo: "owner/name",
+        # bodies: regex a meeting's title must match}. Absent = no hand-off.
+        self.reels: dict = raw.get("reels", {})
+        if not isinstance(self.reels, dict):
+            raise ConfigError("instance.json: 'reels' must be an object")
+        if self.reels:
+            repo = self.reels.get("repo", "")
+            if not isinstance(repo, str) or not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repo):
+                raise ConfigError(f"instance.json: reels.repo must be 'owner/name', got {repo!r}")
+            try:
+                re.compile(self.reels.get("bodies", ""))
+            except (re.error, TypeError) as e:
+                raise ConfigError(f"instance.json: reels.bodies is not a valid pattern: {e}") from e
         # Optional: municipality and state names that may trail a street
         # address (", Springfield, IL"). engine.scrub removes one along with a
         # resident's address; with none listed, only the address itself goes.

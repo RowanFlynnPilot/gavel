@@ -74,8 +74,8 @@ WPR is Instance Zero and the permanent reference deployment.
   `STALE_VIDEO_HOURS`, default 36) and writes the body of the self-closing
   "🏠 Residential transcript fetcher may be down" issue.
 - `python -m engine.tipsheet [--date YYYY-MM-DD] [--stdout]` — the reporter
-  tip sheet → data/tipsheet.md + data/tipsheet.html (deployed at
-  `/tipsheet.html`, noindex). No API calls; sorts data/meetings.json and
+  tip sheet → data/tipsheet.md + data/tipsheet.html (committed with the data;
+  not copied onto the deployed site). No API calls; sorts data/meetings.json and
   data/upcoming.json into leads: votes and hearings on next week's agendas,
   failed/tabled/split votes, meetings where 3+ residents spoke, named topics
   recurring across meetings, overdue upgrades, next week's meetings with no
@@ -87,6 +87,42 @@ WPR is Instance Zero and the permanent reference deployment.
   per meeting next to the prior equal-length period, corrections by kind,
   agenda previews written, spend. No API calls. Run on demand; reader numbers
   (Plausible) and alert subscribers are named in the report as not included.
+
+- `python -m engine.audit_votes [--json] [--root DIR]` — check every transcript
+  summary's `votes` against the results the chair announced with a tally
+  (`engine.vote_announcements`, found by code): lists announced results a
+  summary is missing or contradicts and transcripts that were cut before
+  reaching the model, then prints the IDs to redo. Redo them by running the
+  workflow with `resummarize` set to those IDs (one Sonnet call each, ~$0.15
+  for a long meeting; `RESUMMARIZE_IDS` forces them in `ingest_transcript`).
+  Changes nothing itself.
+- `python -m engine.rosters [--out assets/rosters.json]` — exports the
+  officials from instance.json for tools that read name spellings without the
+  whole config. CI writes and commits it every run; edit instance.json, never
+  the export.
+- `python -m engine.reels --snapshot FILE | --since FILE | --repo` — optional
+  hand-off to a companion repo that drafts video reels (instance.json `reels`
+  {repo, bodies}). CI snapshots the transcript-built meetings before the run
+  and, after the commit reaches main, sends one `transcript-ingested`
+  dispatch (video ID + commit) per newly transcript-built full meeting of the
+  named bodies. Needs the `REELS_DISPATCH_TOKEN` secret; skips quietly
+  without it. Committees, educational sessions and split meetings are left
+  to a person.
+- Tests: `python -m unittest discover tests`, or `python -m pytest tests` to
+  include the pytest-style `tests/test_vote_announcements.py`.
+
+## Transcript summaries and announced votes
+
+Transcript summaries see the whole transcript (`MAX_TRANSCRIPT_CHARS`,
+300,000). Each records `_transcript_chars`, what the model saw. The transcript
+prompt also lists the results the chair announced with a tally ("Motion passes
+9 to2", "motion failed. 5 to six"), found by code over the whole transcript
+(`vote_announcements.prompt_block`), and tells the model each belongs in
+`votes` with that outcome and tally. A tally followed by a unit ("the past 3
+to 5 years") or by where an earlier vote happened ("That passed five to zero
+at finance") isn't a result; a self-correction takes the second tally; a pass
+with yes ≤ no is left out as unclear. Bodies that don't say tallies aloud
+still get their votes from the model alone.
 
 ## Agenda previews
 
