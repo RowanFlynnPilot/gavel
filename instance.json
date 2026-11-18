@@ -23,7 +23,11 @@
   },
   "seo": {
     "pages_base_url": "https://rowanflynnpilot.github.io/gavel",
-    "noindex": true
+    "noindex": true,
+    "description": "AI-assisted summaries of Marathon County, Wausau, Weston, Kronenwetter and area school board meetings: agendas, votes and documents in one place.",
+    "og_image": "assets/og-image.jpg",
+    "favicon": "assets/favicon.png",
+    "touch_icon": "assets/apple-touch-icon.png"
   },
   "analytics": {
     "plausible_domain": "wausaupilotandreview.com"

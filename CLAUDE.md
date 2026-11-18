@@ -213,7 +213,10 @@ per jurisdiction:
   minutes or votes arrive. `engine.overdue` flags anything later.
 
 Top-level optional blocks: `instance.tracker_page_url` (reader-facing embed
-page; ics/roundup/pages link there), `seo` {pages_base_url, noindex},
+page; ics/roundup/pages link there), `seo` {pages_base_url, noindex,
+description, og_image, favicon, touch_icon — the last four are written into
+index.html's head at build time by the `gavel-instance-head` plugin in
+`frontend/vite.config.js`, for link previews and crawlers that don't run JS},
 `analytics` {plausible_domain}, `sponsor` {prompt, button, email, subject}.
 
 Other optional fields, all validated at load:

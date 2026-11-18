@@ -31,7 +31,9 @@ permissions:
   issues: write
 
 concurrency:
-  group: 'pages'
+  # A manual run on any other branch is a rehearsal: it gets its own group so
+  # it neither cancels nor is cancelled by the scheduled run on main.
+  group: ${{ github.ref == 'refs/heads/main' && 'pages' || format('rehearsal-{0}', github.ref_name) }}
   # A newer scheduled run supersedes an older one — in August 2026 the
   # reference instance had a run wedge in "waiting" state and hold this
   # group for 23 days while every later run was silently cancelled.
@@ -221,33 +223,38 @@ jobs:
           cp -r assets frontend/public/assets
 
       - name: Build frontend
-        env:
-          # GitHub Pages serves a project site under /<repository name>/.
-          BASE_PATH: '/${{ github.event.repository.name }}/'
         run: |
-          # An event payload without the repository would build every asset
-          # URL under "//" and deploy a blank site.
+          # GitHub Pages serves a project site under /<repository name>/.
+          # GITHUB_REPOSITORY ("owner/name") is set for every event, scheduled
+          # runs included.
+          export BASE_PATH="/${GITHUB_REPOSITORY#*/}/"
           if [ "$BASE_PATH" = "//" ]; then
-            echo "::error::github.event.repository.name is empty for this event; cannot derive BASE_PATH."
+            echo "::error::could not derive BASE_PATH from GITHUB_REPOSITORY; every asset URL would be wrong."
             exit 1
           fi
+          echo "BASE_PATH=$BASE_PATH"
           npm run build
         working-directory: frontend
 
+      # Only main deploys and maintains issues. A run dispatched on another
+      # branch is a rehearsal: it scrapes, summarizes, commits to its own
+      # branch and builds, and leaves the live site and the issues alone.
       - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: './frontend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
+        if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v4
 
       - name: Maintain spending-alarm issue
         # data/costs.json records every Claude call (engine.claude). A
         # regression like the reference instance's June 2026 re-summarization
         # loop surfaces within a day instead of on the monthly bill.
-        if: always()
+        if: always() && github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SPEND_ALARM_DAY_USD: '2.00'
@@ -273,7 +280,7 @@ jobs:
         # reference instance a title-format change stranded one body for four
         # weeks while a list-everything issue signaled nothing). The expected
         # lags are instance.json expected_lag_days. One issue; closes itself.
-        if: always()
+        if: always() && github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -307,7 +314,7 @@ jobs:
         # STALE_VIDEO_HOURS (36h; normal lag is ~12h) means the residential
         # fetcher has probably stopped. No run report (the pipeline died
         # before writing it) leaves the issue untouched.
-        if: always()
+        if: always() && github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
