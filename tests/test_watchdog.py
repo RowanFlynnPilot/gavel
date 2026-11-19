@@ -83,7 +83,9 @@ class WatchdogTest(unittest.TestCase):
 
     def test_run_report_is_written_with_no_agenda_only_meetings(self):
         report = Path(self.skipped.parent) / "report.json"
-        self._write({"stuck": {"first_seen": _seen(0) , "title": "Fresh", "source": "county"}})
+        # write_run_report reads the real clock, so "moments ago" must too.
+        just_now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        self._write({"stuck": {"first_seen": just_now, "title": "Fresh", "source": "county"}})
         with mock.patch.object(pipeline, "RUN_REPORT", report), \
                 mock.patch.object(youtube, "LISTED_IDS", {}):
             pipeline.write_run_report(make_config(), {"processed": {}}, ok=0)
