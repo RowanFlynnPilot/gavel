@@ -1,0 +1,90 @@
+{
+ "id": 129138,
+ "pid": "me_01m23v5xa15anqxy4fp2nh33sa",
+ "title": "Plan Commission/Public Hearing",
+ "notes": null,
+ "status": "publish",
+ "type": "regular",
+ "starts_at": "2026-09-15T05:00:00.000Z",
+ "categories": [
+  1704
+ ],
+ "agenda_status": "public",
+ "agenda_file_path": "townofwestonwi.com/meetings/me_01m23v5xa15anqxy4fp2nh33sa/01-mtgpc260915agenda.pdf",
+ "minutes_status": "public",
+ "meeting_minutes_file_path": "townofwestonwi.com/meetings/me_01m23v5xa15anqxy4fp2nh33sa/pc-town-of-weston-minutes-09152026.docx",
+ "agenda_items": [
+  {
+   "id": 1877497,
+   "meeting_id": 129138,
+   "parent_id": 0,
+   "title": "Meeting Called to Order",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 1877502,
+   "meeting_id": 129138,
+   "parent_id": 1877500,
+   "title": "December 17, 2024 – Regular Meeting",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 1877496,
+   "meeting_id": 129138,
+   "parent_id": 0,
+   "title": "Roll Call of Town Plan Commission by Secretary",
+   "order": 1,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 1877503,
+   "meeting_id": 129138,
+   "parent_id": 1877500,
+   "title": "August 18, 2026 – Comprehensive Plan Update Public Hearing",
+   "order": 1,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 1877500,
+   "meeting_id": 129138,
+   "parent_id": 0,
+   "title": "Approval of Minutes from the Previous Regular Meeting",
+   "order": 2,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 1877501,
+   "meeting_id": 129138,
+   "parent_id": 0,
+   "title": "Visitors/Public Comments",
+   "order": 3,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 1877498,
+   "meeting_id": 129138,
+   "parent_id": 0,
+   "title": "Project #20260273 – Proposed Rezoning of 3.012 Acres at 156955 Townline Road from RR-5 Rural Residential – 5 Acre to RR-2 Rural Residential – 2 Acre",
+   "order": 4,
+   "text": "Public Hearing and Plan Commission Recommendation: Consider the request of Dustin Vreeland, on behalf of Baumann Dairy Farm, LLC, to rezone approximately 3.012 acres identified as proposed Lot 1 at 156955 Townline Road from RR-5 Rural Residential – 5 Acre to RR-2 Rural Residential – 2 Acre, in conjunction with a proposed Certified Survey Map (CSM).",
+   "status": "ok"
+  },
+  {
+   "id": 1877499,
+   "meeting_id": 129138,
+   "parent_id": 0,
+   "title": "Adjournment of Town Plan Commission",
+   "order": 5,
+   "text": null,
+   "status": "ok"
+  }
+ ]
+}

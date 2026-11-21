@@ -1,0 +1,96 @@
+{
+ "events": [
+  {
+   "id": 1865,
+   "url": "https://villageofmaine.org/event/plan-commission-2/",
+   "title": "Plan Commission",
+   "all_day": false,
+   "start_date": "2026-09-21 18:00:00",
+   "end_date": "2026-09-21 20:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1869,
+   "url": "https://villageofmaine.org/event/municipal-projects-public-property/",
+   "title": "Municipal Projects &#038; Public Property",
+   "all_day": false,
+   "start_date": "2026-09-22 17:00:00",
+   "end_date": "2026-09-22 19:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1867,
+   "url": "https://villageofmaine.org/event/board-of-trustees-meeting-3/",
+   "title": "Board of Trustees Meeting",
+   "all_day": false,
+   "start_date": "2026-09-28 18:00:00",
+   "end_date": "2026-09-28 20:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1879,
+   "url": "https://villageofmaine.org/event/finance-committee-meeting/",
+   "title": "Cancelled &#8211; Finance Committee Meeting",
+   "all_day": false,
+   "start_date": "2026-10-05 18:00:00",
+   "end_date": "2026-10-05 20:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1883,
+   "url": "https://villageofmaine.org/event/board-of-trustees-meeting-8/",
+   "title": "Canceled &#8211; Board of Trustees Meeting",
+   "all_day": false,
+   "start_date": "2026-10-12 18:00:00",
+   "end_date": "2026-10-12 20:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1891,
+   "url": "https://villageofmaine.org/event/board-of-trustees-meeting-5/",
+   "title": "Board of Trustees Meeting",
+   "all_day": false,
+   "start_date": "2026-10-22 17:30:00",
+   "end_date": "2026-10-22 19:30:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1895,
+   "url": "https://villageofmaine.org/event/finance-meeting/",
+   "title": "Finance Meeting",
+   "all_day": false,
+   "start_date": "2026-10-26 18:00:00",
+   "end_date": "2026-10-26 20:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1900,
+   "url": "https://villageofmaine.org/event/board-of-trustees-meeting-9/",
+   "title": "Board of Trustees Meeting",
+   "all_day": false,
+   "start_date": "2026-11-09 17:30:00",
+   "end_date": "2026-11-09 20:45:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1910,
+   "url": "https://villageofmaine.org/event/board-of-trustees-meeting-10/",
+   "title": "Board of Trustees Meeting",
+   "all_day": false,
+   "start_date": "2026-11-16 18:00:00",
+   "end_date": "2026-11-16 20:00:00",
+   "timezone": "America/Chicago"
+  },
+  {
+   "id": 1914,
+   "url": "https://villageofmaine.org/event/municipal-projects-public-property-2/",
+   "title": "Municipal Projects &#038; Public Property",
+   "all_day": false,
+   "start_date": "2026-11-18 17:30:00",
+   "end_date": "2026-11-18 19:00:00",
+   "timezone": "America/Chicago"
+  }
+ ],
+ "total": 10,
+ "total_pages": 1
+}

@@ -1,0 +1,45 @@
+{
+  "key": "town_weston",
+  "name": "Town of Weston",
+  "filter_label": "Town of Weston",
+  "short": "TOWN",
+  "accent": "#5E4A8C",
+  "doc_host": "app.heygov.com",
+  "avatar": "assets/avatars/town_weston-avatar.jpg",
+  "video": null,
+  "agendas": {
+    "adapter": "heygov",
+    "site": "townofwestonwi.com",
+    "portal": "https://townofwestonwi.com/agendas-minutes",
+    "bodies": [
+      "Town Board",
+      "Plan Commission"
+    ],
+    "days_ahead": 60,
+    "fallback_rules": [
+      {
+        "name": "Town Board Meeting",
+        "weekday": 1,
+        "nth": 3,
+        "time": "6:30 PM"
+      }
+    ]
+  },
+  "title_strip_patterns": [],
+  "committee_map": {
+    "board of review": "Board of Review",
+    "annual meeting": "Annual Town Meeting",
+    "plan commission": "Plan Commission",
+    "town board": "Town Board"
+  },
+  "officials": [
+    "Dave Phelps (Town Chairman)",
+    "Tom Salzman (Supervisor)",
+    "Tom Costa (Supervisor)",
+    "Jim King (Supervisor)",
+    "Rock Christiansen (Supervisor)",
+    "Robin Huempfner (Clerk/Treasurer)"
+  ],
+  "calendar_url": "https://townofwestonwi.com/calendar",
+  "expected_lag_days": 35
+}

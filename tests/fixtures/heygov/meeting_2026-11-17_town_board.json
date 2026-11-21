@@ -1,0 +1,207 @@
+{
+ "id": 144395,
+ "pid": "me_01m78f4t8j1qe1t0pe443n49tt",
+ "title": "Public Hearing Budget/Special mtg of Electors/Town Board Meeting",
+ "notes": null,
+ "status": "publish",
+ "type": "regular",
+ "starts_at": "2026-11-17T06:00:00.000Z",
+ "categories": [
+  1703
+ ],
+ "agenda_status": "public",
+ "agenda_file_path": "townofwestonwi.com/meetings/me_01m78f4t8j1qe1t0pe443n49tt/november-17-2026-budget-public-hearing-agenda.doc",
+ "minutes_status": "missing",
+ "meeting_minutes_file_path": null,
+ "agenda_items": [
+  {
+   "id": 2092094,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Call To Order",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092114,
+   "meeting_id": 144395,
+   "parent_id": 2092101,
+   "title": "Vouchers",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092111,
+   "meeting_id": 144395,
+   "parent_id": 2092100,
+   "title": "Public Roads/Tom Salzman, Rock Christiansen",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092107,
+   "meeting_id": 144395,
+   "parent_id": 2092098,
+   "title": "Update On ATV/UTV Ordinance To Open All Of Hwy J In The Town",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092105,
+   "meeting_id": 144395,
+   "parent_id": 2092096,
+   "title": "Approval Of October 20, 2026, Town Board Meeting Minutes",
+   "order": 0,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092096,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Minutes Of Previous Town Meetings",
+   "order": 1,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092112,
+   "meeting_id": 144395,
+   "parent_id": 2092100,
+   "title": "Public Safety/Tom Costa, Jim King",
+   "order": 1,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092110,
+   "meeting_id": 144395,
+   "parent_id": 2092098,
+   "title": "Boundaries Signage/Purchase. Update From Jim",
+   "order": 1,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092095,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Visitors/Public Comments",
+   "order": 2,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092113,
+   "meeting_id": 144395,
+   "parent_id": 2092100,
+   "title": "Plan Commission/Dave Phelps",
+   "order": 2,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092106,
+   "meeting_id": 144395,
+   "parent_id": 2092098,
+   "title": "Municipal Codes Review/Adopt Revisions. Update From Dave",
+   "order": 2,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092109,
+   "meeting_id": 144395,
+   "parent_id": 2092098,
+   "title": "Budget Work/Adopt 2027 General Account Budget",
+   "order": 3,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092097,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Fire Report",
+   "order": 3,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092108,
+   "meeting_id": 144395,
+   "parent_id": 2092098,
+   "title": "EMPD Payout Not Per Contract And Less Than Valued/Invested. Possible Close Session Per 19.85(1)g To Meet With Town Attorney To Discuss A Settlement For The Value Of The Assets From The EMPD",
+   "order": 4,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092099,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Police Report",
+   "order": 4,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092098,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Unfinished Business",
+   "order": 5,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092100,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Committee Reports",
+   "order": 6,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092101,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "New Business",
+   "order": 7,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092102,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Clerk’s Report",
+   "order": 8,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092104,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Chairman’s Report",
+   "order": 9,
+   "text": null,
+   "status": "ok"
+  },
+  {
+   "id": 2092103,
+   "meeting_id": 144395,
+   "parent_id": 0,
+   "title": "Adjourn",
+   "order": 10,
+   "text": null,
+   "status": "ok"
+  }
+ ]
+}

@@ -1,0 +1,290 @@
+[
+ {
+  "id": "me_01m78f4t8j1qe1t0pe443n49tt",
+  "starts_at": "2026-11-17T06:00:00.000Z",
+  "title": "Public Hearing Budget/Special mtg of Electors/Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "missing",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m78f4t8j1qe1t0pe443n49tt/november-17-2026-budget-public-hearing-agenda.doc",
+  "meeting_minutes_file_url": null,
+  "public_url": "https://heygov.co/me_01m78f4t8j1qe1t0pe443n49tt",
+  "starts_at_local": "2026-11-17T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 2092094,
+    "meeting_id": 144395
+   }
+  ]
+ },
+ {
+  "id": "me_01m4v446q075cqmgf26xhnhhfw",
+  "starts_at": "2026-10-20T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m4v446q075cqmgf26xhnhhfw/oct-20-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m4v446q075cqmgf26xhnhhfw/october-20-2026-town-board-minutes.doc",
+  "public_url": "https://heygov.co/me_01m4v446q075cqmgf26xhnhhfw",
+  "starts_at_local": "2026-10-20T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1998545,
+    "meeting_id": 137799
+   }
+  ]
+ },
+ {
+  "id": "me_01m23vb9h8a9wwwjsdv6hb833r",
+  "starts_at": "2026-09-15T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m23vb9h8a9wwwjsdv6hb833r/sept-15-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m23vb9h8a9wwwjsdv6hb833r/september-15-2026-town-board-minutes.pdf",
+  "public_url": "https://heygov.co/me_01m23vb9h8a9wwwjsdv6hb833r",
+  "starts_at_local": "2026-09-15T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1877550,
+    "meeting_id": 129140
+   }
+  ]
+ },
+ {
+  "id": "me_01m23v5xa15anqxy4fp2nh33sa",
+  "starts_at": "2026-09-15T05:00:00.000Z",
+  "title": "Plan Commission/Public Hearing",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1704
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m23v5xa15anqxy4fp2nh33sa/01-mtgpc260915agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m23v5xa15anqxy4fp2nh33sa/pc-town-of-weston-minutes-09152026.docx",
+  "public_url": "https://heygov.co/me_01m23v5xa15anqxy4fp2nh33sa",
+  "starts_at_local": "2026-09-15T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1877496,
+    "meeting_id": 129138
+   }
+  ]
+ },
+ {
+  "id": "me_01m08ahh4k0cv8f2v8wwzvkfwj",
+  "starts_at": "2026-08-18T05:00:00.000Z",
+  "title": "Public Hearing",
+  "notes": null,
+  "status": "publish",
+  "type": "public_hearing",
+  "categories": [
+   1704
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m08ahh4k0cv8f2v8wwzvkfwj/aug-18-2026-plan-commission-agenda-public-hearing-copy.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01m08ahh4k0cv8f2v8wwzvkfwj/aug-18-2026-plan-commission-agenda-public-hearing-minutes.doc",
+  "public_url": "https://heygov.co/me_01m08ahh4k0cv8f2v8wwzvkfwj",
+  "starts_at_local": "2026-08-18T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1815778,
+    "meeting_id": 125236
+   }
+  ]
+ },
+ {
+  "id": "me_01kzs3v1d73zj9j4ywr6wgg7m7",
+  "starts_at": "2026-08-18T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kzs3v1d73zj9j4ywr6wgg7m7/august-18-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kzs3v1d73zj9j4ywr6wgg7m7/august-18-2026-town-board-minutes.doc",
+  "public_url": "https://heygov.co/me_01kzs3v1d73zj9j4ywr6wgg7m7",
+  "starts_at_local": "2026-08-18T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1794561,
+    "meeting_id": 123867
+   }
+  ]
+ },
+ {
+  "id": "me_01ky2gyndt8xts7501s2vsdgwk",
+  "starts_at": "2026-07-21T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01ky2gyndt8xts7501s2vsdgwk/july-21-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01ky2gyndt8xts7501s2vsdgwk/julu-21-2026-town-board-minutes.pdf",
+  "public_url": "https://heygov.co/me_01ky2gyndt8xts7501s2vsdgwk",
+  "starts_at_local": "2026-07-21T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1725414,
+    "meeting_id": 119699
+   }
+  ]
+ },
+ {
+  "id": "me_01kts5skw4z3wnpv9fsp8p5651",
+  "starts_at": "2026-06-16T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kts5skw4z3wnpv9fsp8p5651/june-16-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kts5skw4z3wnpv9fsp8p5651/june-16-2026-town-board-minutes.pdf",
+  "public_url": "https://heygov.co/me_01kts5skw4z3wnpv9fsp8p5651",
+  "starts_at_local": "2026-06-16T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1601998,
+    "meeting_id": 112375
+   }
+  ]
+ },
+ {
+  "id": "me_01kt4gf36c0wmxmmdrxfeac63h",
+  "starts_at": "2026-06-08T05:00:00.000Z",
+  "title": "Board of Review",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kt4gf36c0wmxmmdrxfeac63h/june-8-2026-board-of-review-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kt4gf36c0wmxmmdrxfeac63h/june-08-2026-board-of-review-minutes.doc",
+  "public_url": "https://heygov.co/me_01kt4gf36c0wmxmmdrxfeac63h",
+  "starts_at_local": "2026-06-08T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1554945,
+    "meeting_id": 109602
+   }
+  ]
+ },
+ {
+  "id": "me_01krvms63np5cyvbems6rr969e",
+  "starts_at": "2026-05-19T05:00:00.000Z",
+  "title": "Plan Commission",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1704
+  ],
+  "agenda_status": "public",
+  "minutes_status": "missing",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01krvms63np5cyvbems6rr969e/may-19-2026-town-plan-commission-agenda.pdf",
+  "meeting_minutes_file_url": null,
+  "public_url": "https://heygov.co/me_01krvms63np5cyvbems6rr969e",
+  "starts_at_local": "2026-05-19T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1505566,
+    "meeting_id": 106496
+   }
+  ]
+ },
+ {
+  "id": "me_01krkkmagw4b1t3n6fcyv9j585",
+  "starts_at": "2026-05-19T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01krkkmagw4b1t3n6fcyv9j585/may-19-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01krkkmagw4b1t3n6fcyv9j585/may-192026-town-board-minutes.pdf",
+  "public_url": "https://heygov.co/me_01krkkmagw4b1t3n6fcyv9j585",
+  "starts_at_local": "2026-05-19T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1499184,
+    "meeting_id": 106071
+   }
+  ]
+ },
+ {
+  "id": "me_01kpbfwygwvrk3s7zbvz3h0tzq",
+  "starts_at": "2026-04-21T05:00:00.000Z",
+  "title": "Town Board Meeting",
+  "notes": null,
+  "status": "publish",
+  "type": "regular",
+  "categories": [
+   1703
+  ],
+  "agenda_status": "public",
+  "minutes_status": "public",
+  "state": "past",
+  "agenda_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kpbfwygwvrk3s7zbvz3h0tzq/april-21-2026-town-board-agenda.pdf",
+  "meeting_minutes_file_url": "https://files.heygov.com/townofwestonwi.com/meetings/me_01kpbfwygwvrk3s7zbvz3h0tzq/april-21-2026-town-board-minutes.pdf",
+  "public_url": "https://heygov.co/me_01kpbfwygwvrk3s7zbvz3h0tzq",
+  "starts_at_local": "2026-04-21T00:00:00.000Z",
+  "agenda_items": [
+   {
+    "id": 1376147,
+    "meeting_id": 98686
+   }
+  ]
+ }
+]
