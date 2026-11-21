@@ -20,16 +20,23 @@ import logging
 from datetime import date
 from pathlib import Path
 
-from .adapters import get_adapter
+from . import health
+from .adapters import for_jurisdiction
 from .config import InstanceConfig, UPCOMING_JSON
 from .errors import AdapterStructureError, UpstreamUnavailableError
 
 logger = logging.getLogger(__name__)
 
 
+# key -> why its last fetch_for_jurisdiction returned None (for source health).
+NO_ANSWER: dict[str, str] = {}
+
+
 def fetch_for_jurisdiction(cfg: InstanceConfig, key: str) -> list[dict] | None:
     """A jurisdiction's upcoming meetings, or None when its upstream didn't
-    answer (an empty list means it answered with no meetings)."""
+    answer (an empty list means it answered with no meetings). The reason
+    for a None is left in NO_ANSWER[key]."""
+    NO_ANSWER.pop(key, None)
     jur = cfg.jurisdiction(key)
     a = jur.agendas
     days_ahead = a.get("days_ahead", 60)
@@ -55,11 +62,12 @@ def fetch_for_jurisdiction(cfg: InstanceConfig, key: str) -> list[dict] | None:
         print(f"  [ok]  {key} rule-based: {rule_added} meetings projected")
         entries = sorted(results.values(), key=lambda x: (x["date"], x["time"]))
     else:
-        adapter = get_adapter(adapter_name)
+        adapter = for_jurisdiction(jur)
         try:
             entries = adapter.fetch_upcoming(a, key, days_ahead)
         except UpstreamUnavailableError as e:
             logger.warning("%s upcoming: %s", key, e)
+            NO_ANSWER[key] = str(e)
             return None
 
     return entries
@@ -95,6 +103,7 @@ def update_upcoming(cfg: InstanceConfig, data_path: Path | None = None,
     previews: "generate" writes agenda previews for meetings whose agenda is
     newly posted or changed (Claude calls, capped per run); "cached" attaches
     only previews already written; "off" attaches none."""
+    track_health = data_path is None
     data_path = data_path or UPCOMING_JSON
     keys = sources or [j.key for j in cfg.jurisdictions]
     previous = _load_previous(data_path)
@@ -107,7 +116,11 @@ def update_upcoming(cfg: InstanceConfig, data_path: Path | None = None,
         except AdapterStructureError as e:
             logger.error("%s upcoming failed on structure drift: %s", key, e)
             structure_errors.append(e)
+            NO_ANSWER[key] = str(e)
             fresh = None
+        # Source health is kept for real runs only (the default data file).
+        if track_health and cfg.jurisdiction(key).agendas_adapter != "rule_schedule":
+            health.note(key, "upcoming", None if fresh is not None else NO_ANSWER.get(key, "no answer"))
         payload[key] = fresh if fresh is not None else _last_known_good(key, previous)
 
     if previews != "off":

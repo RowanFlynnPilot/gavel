@@ -47,6 +47,17 @@ _ADAPTER_MODULES = {
 }
 
 
+def for_jurisdiction(jur):
+    """The agendas adapter to use for a jurisdiction in the pipeline: its
+    module, or, for one whose site is fetched from a residential connection
+    (agendas.fetch_from), a reader of the documents that fetcher committed.
+    engine.fetch_portals itself always uses the real module."""
+    from ..portal_cache import CachedPortal, is_residential
+    if is_residential(jur):
+        return CachedPortal(jur.key)
+    return get_adapter(jur.agendas_adapter)
+
+
 def get_adapter(name: str):
     if name not in _ADAPTER_MODULES:
         raise UnknownAdapterError(

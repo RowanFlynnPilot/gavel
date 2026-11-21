@@ -108,6 +108,19 @@ WPR is Instance Zero and the permanent reference deployment.
   named bodies. Needs the `REELS_DISPATCH_TOKEN` secret; skips quietly
   without it. Committees, educational sessions and split meetings are left
   to a person.
+- `python -m engine.fetch_portals [--source KEY] [--dry-run]` — residential
+  fetcher for boards whose sites refuse cloud servers (`agendas.fetch_from:
+  "residential"`). Runs the real adapter from the operator's machine and writes
+  `portal_cache/<key>.json` (listings plus the agenda/minutes text of meetings
+  still pending); `scripts/refresh-transcripts.ps1` runs it and commits the
+  result. In CI `adapters.for_jurisdiction` hands the pipeline a `CachedPortal`
+  that answers from that file with no network. A cache older than 72 hours
+  reads as "no answer". See `engine/portal_cache.py`.
+- `python -m engine.health [--print-count] [--markdown FILE] [--hours N]` —
+  boards whose sites have not answered for `UNREACHABLE_HOURS` (12), from
+  `source_health.json` (per board and job: "meetings", "upcoming"; an entry
+  exists only while failing). CI keeps one self-closing "📡 A board's site is
+  not answering the tracker" issue.
 - Tests: `python -m unittest discover tests`, or `python -m pytest tests` to
   include the pytest-style `tests/test_vote_announcements.py`.
 
@@ -187,6 +200,9 @@ engine/
 ├── report.py            funder report for a period (no API calls)
 ├── tipsheet.py          weekly reporter tip sheet (no API calls)
 ├── watchdog.py          skipped_videos.json first-seen tracking → stale list
+├── health.py            source_health.json: which boards' sites stopped answering
+├── portal_cache.py      CachedPortal + look_back for boards fetched residentially
+├── fetch_portals.py     residential fetcher that fills portal_cache/
 ├── overdue.py           agenda-only meetings past expected_lag_days
 ├── scrub.py             residents' address scrub + corrections.json applier
 ├── pipeline.py          orchestrator + CLI (python -m engine.pipeline)

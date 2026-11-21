@@ -29,9 +29,11 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import publish as publish_mod
-from . import summarize, upcoming, watchdog
+from . import health, summarize, upcoming, watchdog
 from .adapters import boardbook as bb_adapter
-from .adapters import get_adapter, youtube
+from .adapters import for_jurisdiction, get_adapter, youtube
+from .portal_cache import MINUTES_WINDOW_DAYS as PORTAL_CACHE_MINUTES_WINDOW_DAYS
+from .portal_cache import look_back
 from .config import (AGENDA_RETRY_DAYS, MINUTES_ADAPTERS, PORTAL_ADAPTERS, PORTAL_PREFIX, RUN_REPORT,
                      STALE_VIDEO_HOURS, VOTE_ADAPTERS, InstanceConfig,
                      load_instance, setup_logging)
@@ -57,7 +59,7 @@ def _fetch_agenda_text(cfg: InstanceConfig, source_key: str,
     print("  [agenda]  Trying agenda document fallback...")
 
     if adapter_name in PORTAL_ADAPTERS and doc_url:
-        text = get_adapter(adapter_name).fetch_agenda_text(jur.agendas, doc_url)
+        text = for_jurisdiction(jur).fetch_agenda_text(jur.agendas, doc_url)
         if text:
             print(f"       Agenda text from {adapter_name} ({len(text)} chars)")
             return text
@@ -329,13 +331,14 @@ def fetch_municode_new(cfg: InstanceConfig, source_key: str, state: dict,
 # path, where the portal supplies agenda text and votes for each recording.
 
 PORTAL_WINDOW_DAYS = 30  # how far back a run without --days looks, and how long votes are waited for
-MINUTES_WINDOW_DAYS = 75  # how long a portal-first meeting's minutes are waited for (approved at the next meeting or two)
+# How long a portal-first meeting's minutes are waited for (approved at the next meeting or two).
+MINUTES_WINDOW_DAYS = PORTAL_CACHE_MINUTES_WINDOW_DAYS
 
 
 def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
                            state: dict) -> bool:
     jur = cfg.jurisdiction(source_key)
-    adapter = get_adapter(jur.agendas_adapter)
+    adapter = for_jurisdiction(jur)
     meeting_id = f"{PORTAL_PREFIX[jur.agendas_adapter]}_{m['id']}"
     title = f"{m['name']} - {m['date']}"
     d = m["date"].replace("-", "")
@@ -389,23 +392,13 @@ def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
 def fetch_portal_new(cfg: InstanceConfig, source_key: str, state: dict,
                      days: int, dry_run: bool = False) -> int:
     jur = cfg.jurisdiction(source_key)
-    since = date.today() - timedelta(days=days)
     # A meeting whose agenda can't be read (a scanned PDF) is created when its
-    # minutes appear, usually after `days` have passed. With a start_date as
-    # the floor, a board that posts minutes is looked back the whole minutes
-    # window; meetings already processed are skipped, so this costs a request
-    # or two per run for each meeting still waiting.
-    if jur.start_date and jur.agendas_adapter in MINUTES_ADAPTERS:
-        window = int(jur.agendas.get("minutes_upgrade_window_days", MINUTES_WINDOW_DAYS))
-        since = min(since, date.today() - timedelta(days=window))
-    if jur.start_date:
-        since = max(since, jur.start_date)
-    if cfg.date_cutoff:
-        since = max(since, date(int(cfg.date_cutoff[:4]), int(cfg.date_cutoff[4:6]),
-                                int(cfg.date_cutoff[6:8])))
+    # minutes appear, usually after `days` have passed; look_back widens the
+    # range for boards that post minutes and have a start_date as the floor.
+    since = look_back(jur, days, cfg.date_cutoff)
     print(f"[fetch]  Checking {jur.agendas_adapter} for {jur.name} meetings since {since}...")
     count = 0
-    for m in get_adapter(jur.agendas_adapter).list_recent(jur.agendas, since):
+    for m in for_jurisdiction(jur).list_recent(jur.agendas, since):
         meeting_id = f"{PORTAL_PREFIX[jur.agendas_adapter]}_{m['id']}"
         if meeting_id in state.get("processed", {}) or meeting_id in cfg.skip_ids:
             continue
@@ -465,7 +458,7 @@ def upgrade_portal_from_minutes(cfg: InstanceConfig, source_key: str,
     jur = cfg.jurisdiction(source_key)
     if jur.agendas_adapter not in MINUTES_ADAPTERS:
         return []
-    adapter = get_adapter(jur.agendas_adapter)
+    adapter = for_jurisdiction(jur)
     prefix = PORTAL_PREFIX[jur.agendas_adapter] + "_"
     window = int(jur.agendas.get("minutes_upgrade_window_days", MINUTES_WINDOW_DAYS))
     since = (date.today() - timedelta(days=window)).strftime("%Y%m%d")
@@ -958,11 +951,17 @@ def main() -> None:
                 n = fetch_portal_new(cfg, src, state, args.days or PORTAL_WINDOW_DAYS,
                                      dry_run=args.dry_run)
             print(f"   {src}: {n} new meeting(s) processed")
+            if not args.dry_run:
+                health.note(src, "meetings", None)
         except AdapterStructureError as e:
             logger.error("%s structure drift: %s", src, e)
             structure_failures.append(e)
+            if not args.dry_run:
+                health.note(src, "meetings", str(e))
         except Exception as e:
             logger.error("%s processing failed: %s", src, e)
+            if not args.dry_run:
+                health.note(src, "meetings", str(e))
         finally:
             save_state(state)
 

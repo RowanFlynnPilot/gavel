@@ -224,6 +224,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -f processed_meetings.json injected_meetings.json || true
           git add -f skipped_videos.json 2>/dev/null || true
+          git add -f source_health.json 2>/dev/null || true
           git add -f corrections.json 2>/dev/null || true
           git add -f assets/rosters.json 2>/dev/null || true
           git add -f summaries/ || true
@@ -416,6 +417,34 @@ jobs:
             gh issue close "$EXISTING" --comment "No videos stuck past the threshold anymore — the residential fetcher is delivering again. Auto-closing."
           else
             echo "No stale videos."
+          fi
+
+      - name: Maintain unreachable-board issue
+        # A board whose site refuses the pipeline (an outage, a new bot wall,
+        # a redesign) leaves the run green and simply gets no new meetings.
+        # engine.health records per board whether its site answered; one that
+        # hasn't for UNREACHABLE_HOURS (12) gets one issue, which closes
+        # itself when every site answers again. A board fetched from the
+        # residential machine shows up here when that machine stops delivering.
+        if: always() && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT=$(python -m engine.health --print-count --markdown unreachable_body.md)
+          EXISTING=$(gh issue list --state open --search "site is not answering in:title" --json number --jq '.[0].number // empty')
+          if [ "$COUNT" -gt 0 ]; then
+            TITLE="📡 A board's site is not answering the tracker (${COUNT}, checked $(date +%Y-%m-%d))"
+            if [ -n "$EXISTING" ]; then
+              gh issue edit "$EXISTING" --title "$TITLE" --body-file unreachable_body.md
+              echo "Updated unreachable-board issue #$EXISTING"
+            else
+              gh issue create --title "$TITLE" --body-file unreachable_body.md
+              echo "Opened unreachable-board issue"
+            fi
+          elif [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "Every board's site is answering again. Auto-closing."
+          else
+            echo "Every board's site answered."
           fi
 
       - name: Surface pipeline failures

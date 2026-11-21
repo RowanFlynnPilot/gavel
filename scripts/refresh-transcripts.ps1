@@ -103,17 +103,32 @@ if ($fetchExit -ne 0) {
     $exitCode = 1
 }
 
-# Commit everything new or changed under transcripts/, not just what this run
-# created: a run killed at the time limit leaves finished transcripts on disk
-# that a before/after comparison would never push.
+# Boards whose sites refuse cloud servers (agendas.fetch_from "residential"
+# in instance.json) are read from this connection too: their agendas and
+# minutes go to portal_cache/ for CI to summarize. A no-op when no board is
+# set that way.
+Write-Log "[fetch] python -m engine.fetch_portals"
+$portalExit = Invoke-Logged "`"$Python`" -m engine.fetch_portals"
+if ($portalExit -ne 0) {
+    Write-Log "[error] engine.fetch_portals exited $portalExit (details above)"
+    $exitCode = 1
+}
+
+# Commit everything new or changed under transcripts/ and portal_cache/, not
+# just what this run created: a run killed at the time limit leaves finished
+# transcripts on disk that a before/after comparison would never push.
 Invoke-Logged "git add transcripts/" | Out-Null
-$staged = @(git diff --cached --name-only -- transcripts/)
+if (Test-Path (Join-Path $ProjectRoot "portal_cache")) {
+    Invoke-Logged "git add portal_cache/" | Out-Null
+}
+$staged = @(git diff --cached --name-only -- transcripts/ portal_cache/)
 if ($staged.Count -eq 0) {
-    Write-Log "[done] Nothing new under transcripts/."
+    Write-Log "[done] Nothing new under transcripts/ or portal_cache/."
     exit $exitCode
 }
-$txt = @($staged | Where-Object { $_ -like "*.txt" })
-Write-Log "[ok] $($staged.Count) changed file(s) under transcripts/, $($txt.Count) transcript(s)"
+$txt = @($staged | Where-Object { $_ -like "transcripts/*.txt" })
+$portal = @($staged | Where-Object { $_ -like "portal_cache/*" })
+Write-Log "[ok] $($staged.Count) changed file(s): $($txt.Count) transcript(s), $($portal.Count) portal file(s)"
 $staged | ForEach-Object { Write-Log "       $_" }
 
 if ($NoPush) {
@@ -125,6 +140,8 @@ $MsgFile = Join-Path $LogDir ".commit-msg"
 if ($txt.Count -gt 0) {
     $names = ($txt | ForEach-Object { Split-Path $_ -Leaf }) -join "`n"
     $msg = "chore: fetch transcripts for $($txt.Count) stuck meeting(s) [skip ci]`n`n$names"
+} elseif ($portal.Count -eq $staged.Count) {
+    $msg = "chore: update portal documents [skip ci]"
 } else {
     $msg = "chore: update transcript metadata [skip ci]"
 }

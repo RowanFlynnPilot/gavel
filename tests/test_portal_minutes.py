@@ -119,9 +119,10 @@ class PipelineTestCase(unittest.TestCase):
         return f"summaries/{kw.get('video_id')}.md"
 
     def use(self, adapter):
-        p = mock.patch.object(pipeline, "get_adapter", return_value=adapter)
-        p.start()
-        self.addCleanup(p.stop)
+        for name in ("get_adapter", "for_jurisdiction"):
+            p = mock.patch.object(pipeline, name, return_value=adapter)
+            p.start()
+            self.addCleanup(p.stop)
         return adapter
 
 

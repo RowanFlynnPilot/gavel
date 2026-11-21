@@ -10,6 +10,7 @@
   "video": null,
   "agendas": {
     "adapter": "townweb",
+    "fetch_from": "residential",
     "base": "https://villageofmaine.org",
     "portal": "https://villageofmaine.org/agendas-minutes/",
     "minutes_upgrade_window_days": 90,

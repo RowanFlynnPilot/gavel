@@ -250,6 +250,17 @@ class Jurisdiction:
         elif adapter == "rule_schedule":
             _validate_rules(_require(self.agendas, "rules", f"{ctx}.agendas"),
                             f"{ctx}.agendas.rules")
+        # "residential": the site refuses cloud servers, so the operator's
+        # machine fetches its documents (engine.fetch_portals) and CI reads
+        # them from portal_cache/. Only for portal-first boards without a
+        # vote API, which is every board that has needed it.
+        fetch_from = self.agendas.get("fetch_from")
+        if fetch_from is not None and (
+                fetch_from != "residential" or adapter not in PORTAL_ADAPTERS - VOTE_ADAPTERS
+                or self.video is not None):
+            raise ConfigError(
+                f"{ctx}.agendas.fetch_from must be \"residential\", on a portal adapter "
+                f"without vote records and with video: null; got {fetch_from!r} on '{adapter}'")
         if "fallback_rules" in self.agendas:
             _validate_rules(self.agendas["fallback_rules"], f"{ctx}.agendas.fallback_rules")
 

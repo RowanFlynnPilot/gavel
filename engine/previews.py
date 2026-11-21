@@ -32,7 +32,8 @@ import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from .adapters import get_adapter
+from .adapters import for_jurisdiction, get_adapter
+from .portal_cache import is_residential
 from .claude import call_claude
 from .config import CLAUDE_MODEL_AGENDA, InstanceConfig, UPCOMING_JSON
 from .summarize import RESIDENT_PRIVACY_RULES
@@ -141,7 +142,11 @@ def agenda_text_for(cfg: InstanceConfig, entry: dict) -> str | None:
     fetch = _AGENDA_TEXT.get(jur.agendas_adapter)
     if fetch is None:
         return None
-    text = fetch(jur.agendas, entry)
+    if is_residential(jur):
+        # Fetched from a residential connection: read what that fetcher committed.
+        text = for_jurisdiction(jur).fetch_agenda_text(jur.agendas, entry.get("url") or "")
+    else:
+        text = fetch(jur.agendas, entry)
     return text if text and len(text.strip()) >= MIN_AGENDA_CHARS else None
 
 
