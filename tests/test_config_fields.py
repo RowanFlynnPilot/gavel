@@ -70,9 +70,11 @@ class ValidationTest(unittest.TestCase):
 class ReferenceInstanceTest(unittest.TestCase):
     def test_wpr_values(self):
         cfg = load_instance(Path(__file__).parent.parent / "instance.json")
-        self.assertEqual({j.key: j.expected_lag_days for j in cfg.jurisdictions},
-                         {"marathon": 3, "wausau": 3, "weston": 3, "school_board": 21,
-                          "kronenwetter": 5, "dc_everest": 7})
+        lags = {j.key: j.expected_lag_days for j in cfg.jurisdictions}
+        # The original six; boards added since carry their own lags.
+        for key, lag in {"marathon": 3, "wausau": 3, "weston": 3, "school_board": 21,
+                         "kronenwetter": 5, "dc_everest": 7}.items():
+            self.assertEqual(lags[key], lag, key)
         self.assertEqual(cfg.ics_uid_domain, "marathon-meetings")
         self.assertTrue(cfg.corrections_email)
         self.assertIn("Rib Mountain", cfg.place_names)

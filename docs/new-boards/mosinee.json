@@ -20,6 +20,7 @@
     ],
     "minutes_upgrade_window_days": 120,
     "days_ahead": 60,
+    "request_gap_seconds": 60,
     "fallback_rules": [
       {
         "name": "Common Council - Regular Meeting",

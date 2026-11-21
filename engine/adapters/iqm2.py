@@ -3,7 +3,10 @@
 Config block: {"adapter": "iqm2", "base": "https://<client>.iqm2.com",
                "portal": ".../Citizens/Default.aspx", "bodies": [...],
                "minutes_upgrade_window_days": N, "days_ahead": N,
-               "fallback_rules": [...]}
+               "fallback_rules": [...], "request_gap_seconds": N}
+`request_gap_seconds` (optional) spaces this adapter's requests to the portal
+that many seconds apart; set it to the Crawl-delay in the portal's robots.txt
+(60 on Granicus-hosted portals as of Nov. 2026).
 `bodies` (optional) keeps only the listed boards, by the portal's own name
 for each ("Common Council"); without it every board on the portal is included.
 A meeting's doc_url is its portal page,
@@ -117,6 +120,7 @@ def _calendar(agendas_cfg: dict, start: date, end: date) -> list[dict]:
     if held is None or start < held["start"] or end > held["end"]:
         if held:
             start, end = min(start, held["start"]), max(end, held["end"])
+        _pace(agendas_cfg)
         r = net.get(f"{base}/Citizens/Calendar.aspx?From={start.month}/{start.day}/{start.year}"
                     f"&To={end.month}/{end.day}/{end.year}", headers=_HEADERS)
         held = _CALENDARS[base] = {"start": start, "end": end, "rows": parse_calendar(r.text, base)}
@@ -134,7 +138,12 @@ def _wanted(agendas_cfg: dict, m: dict) -> bool:
     return not m["cancelled"] and (not bodies or m["body"] in bodies)
 
 
-def _page(url: str) -> str | None:
+def _pace(agendas_cfg: dict) -> None:
+    net.pace(_base(agendas_cfg), float(agendas_cfg.get("request_gap_seconds", 0)))
+
+
+def _page(agendas_cfg: dict, url: str) -> str | None:
+    _pace(agendas_cfg)
     try:
         r = requests.get(url, headers=_HEADERS, timeout=30)
         return r.text if r.status_code == 200 else None
@@ -176,7 +185,7 @@ def fetch_agenda_text(agendas_cfg: dict, doc_url: str) -> str | None:
     listed = _listed(agendas_cfg, meeting_id)
     if listed and not listed["agenda"]:
         return None
-    page = _page(doc_url)
+    page = _page(agendas_cfg, doc_url)
     return agenda_text(page) if page else None
 
 
@@ -191,7 +200,10 @@ def fetch_minutes_text(agendas_cfg: dict, doc_url: str) -> str | None:
     if listed:
         minutes_url = listed["minutes_url"]
     else:
-        minutes_url = _minutes_pdf(_base(agendas_cfg), _MINUTES_LINK.search(_page(doc_url) or ""))
+        minutes_url = _minutes_pdf(_base(agendas_cfg),
+                                   _MINUTES_LINK.search(_page(agendas_cfg, doc_url) or ""))
+    if minutes_url:
+        _pace(agendas_cfg)
     text = fetch_pdf_text(minutes_url, timeout=60) if minutes_url else None
     # Each PDF page ends with a "Page N" line, sometimes in the middle of an item's vote.
     return re.sub(r"(?m)^Page \d+\n?", "", text).strip() if text else None

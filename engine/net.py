@@ -19,6 +19,24 @@ from .errors import UpstreamUnavailableError
 ATTEMPTS = 3
 TIMEOUT_SECONDS = 30
 
+# site -> time.monotonic() of the last paced request to it.
+_LAST_REQUEST: dict[str, float] = {}
+
+
+def pace(site: str, gap_seconds: float) -> None:
+    """Call before a request to a site that asks crawlers to space their
+    requests (a robots.txt Crawl-delay): waits until gap_seconds have passed
+    since the last paced request to that site. The first request of a run
+    never waits; a gap of 0 turns pacing off."""
+    if gap_seconds <= 0:
+        return
+    last = _LAST_REQUEST.get(site)
+    if last is not None:
+        wait = gap_seconds - (time.monotonic() - last)
+        if wait > 0:
+            time.sleep(wait)
+    _LAST_REQUEST[site] = time.monotonic()
+
 
 def get(url: str, *, timeout: int = TIMEOUT_SECONDS, attempts: int = ATTEMPTS,
         **kwargs) -> requests.Response:
