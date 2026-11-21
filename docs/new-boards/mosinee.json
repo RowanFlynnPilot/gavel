@@ -1,0 +1,60 @@
+{
+  "key": "mosinee",
+  "name": "City of Mosinee",
+  "filter_label": "Mosinee",
+  "short": "CITY",
+  "accent": "#2C4F7C",
+  "doc_host": "mosineecitywi.iqm2.com",
+  "avatar": "assets/avatars/mosinee-avatar.jpg",
+  "video": null,
+  "agendas": {
+    "adapter": "iqm2",
+    "base": "https://mosineecitywi.iqm2.com",
+    "portal": "https://mosineecitywi.iqm2.com/Citizens/Default.aspx",
+    "bodies": [
+      "Common Council",
+      "Plan Commission",
+      "Parks and Recreation Commission",
+      "Zoning Board of Appeals",
+      "Tourism Commission"
+    ],
+    "minutes_upgrade_window_days": 120,
+    "days_ahead": 60,
+    "fallback_rules": [
+      {
+        "name": "Common Council - Regular Meeting",
+        "weekday": 0,
+        "nth": 2,
+        "time": "7:30 PM"
+      }
+    ]
+  },
+  "title_strip_patterns": [],
+  "committee_map": {
+    "common council": "City Council",
+    "plan commission": "Plan Commission",
+    "parks & recreation commission": "Parks & Recreation",
+    "zoning board of appeals": "Zoning Board of Appeals",
+    "tourism commission": "Tourism Commission",
+    "public works committee": "Public Works",
+    "building committee": "Building",
+    "personnel & finance committee": "Personnel & Finance",
+    "public safety committee": "Public Safety",
+    "fire commission": "Fire Commission",
+    "fire district": "Fire District",
+    "police commission": "Police Commission",
+    "board of review": "Board of Review",
+    "joint review board": "Joint Review Board"
+  },
+  "officials": [
+    "Tom Helbach (Mayor)",
+    "Mark Gewiss (Alderperson, Ward 1 & 8)",
+    "Nelson Pasha Jr. (Alderperson, Ward 2)",
+    "Robert Stephens (Alderperson, Ward 3)",
+    "Todd Priest (Alderperson, Ward 4)",
+    "Mark Viau (Alderperson, Ward 5)",
+    "Doug Mielke (Alderperson, Ward 6 & 7)"
+  ],
+  "calendar_url": "https://mosineecitywi.iqm2.com/Citizens/Calendar.aspx",
+  "expected_lag_days": 70
+}
