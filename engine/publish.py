@@ -473,10 +473,17 @@ def publish(cfg: InstanceConfig, data_path: Path | None = None) -> int:
             return datetime.min
     combined.sort(key=_sort_key, reverse=True)
 
-    if len(combined) > cfg.max_meetings:
-        n = len(combined) - cfg.max_meetings
-        combined = combined[:cfg.max_meetings]
+    # max_meetings is the size of the public list. A hidden board's meetings
+    # ride along outside that count (readers never see them, and they must
+    # not push published meetings off the list while the board is reviewed).
+    hidden = cfg.hidden_keys
+    shown = [m for m in combined if m.get("source") not in hidden]
+    held = [m for m in combined if m.get("source") in hidden][:cfg.max_meetings]
+    if len(shown) > cfg.max_meetings:
+        n = len(shown) - cfg.max_meetings
+        shown = shown[:cfg.max_meetings]
         print(f"   [prune] pruned {n} old meeting(s) (kept {cfg.max_meetings})")
+    combined = sorted(shown + held, key=_sort_key, reverse=True)
 
     # An entry built this run that is too old for the displayed list (a
     # re-summarized or backfilled meeting) never reaches engine.pages through
