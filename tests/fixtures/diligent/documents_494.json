@@ -1,0 +1,46 @@
+{
+ "Documents": [
+  {
+   "AgendaCover": "",
+   "DocumentType": 1,
+   "Format": "docx",
+   "Html": "",
+   "Id": 14118,
+   "IsPublic": true,
+   "LastModified": 639305472202670000,
+   "MeetingId": 494,
+   "Name": "Regular School Board Meeting  - Nov 17 2026",
+   "PublicReleaseDelayDateString": "",
+   "Type": 1
+  },
+  {
+   "AgendaCover": "",
+   "DocumentType": 4,
+   "Format": "pdf",
+   "Html": "",
+   "Id": 14120,
+   "IsPublic": false,
+   "LastModified": 639305472204770000,
+   "MeetingId": 494,
+   "Name": "Regular School Board Meeting  - Nov 17 2026",
+   "PublicReleaseDelayDateString": "",
+   "Type": 1
+  },
+  {
+   "AgendaCover": "",
+   "DocumentType": 10,
+   "Format": "pdf",
+   "Html": "",
+   "Id": 14346,
+   "IsPublic": false,
+   "LastModified": 639306157412530000,
+   "MeetingId": 494,
+   "Name": "Regular School Board Meeting  - Nov 17 2026",
+   "PublicReleaseDelayDateString": "",
+   "Type": 2
+  }
+ ],
+ "MeetingDateFormatted": "November 17, 2026",
+ "MeetingIncludeMinutesAttachments": true,
+ "MeetingOnPublishShowDraftMinutes": true
+}

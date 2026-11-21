@@ -1,0 +1,47 @@
+{
+  "key": "mosinee_schools",
+  "name": "Mosinee School Board",
+  "filter_label": "Mosinee Schools",
+  "short": "SCHOOL",
+  "accent": "#34407A",
+  "doc_host": "mosineeschools.community.highbond.com",
+  "avatar": "assets/avatars/mosinee_schools-avatar.jpg",
+  "video": null,
+  "agendas": {
+    "adapter": "diligent",
+    "base": "https://mosineeschools.community.highbond.com",
+    "portal": "https://mosineeschools.community.highbond.com/Portal/MeetingTypeList.aspx",
+    "days_ahead": 60,
+    "fallback_rules": [
+      {
+        "name": "Regular School Board Meeting",
+        "weekday": 1,
+        "nth": 3,
+        "time": "6:00 PM"
+      }
+    ]
+  },
+  "title_strip_patterns": [],
+  "committee_map": {
+    "regular school board": "Regular Meeting",
+    "special school board": "Special Meeting",
+    "reorganizational": "Reorganizational Meeting",
+    "annual meeting": "Annual Meeting",
+    "personnel committee": "Personnel Committee",
+    "finance & building": "Finance & Building Committee",
+    "instructional programs": "Instructional Programs Committee"
+  },
+  "officials": [
+    "Paul Nievinski (President)",
+    "Donna Kaiser (Clerk)",
+    "Megan Stankowski (Board Member)",
+    "Derek Nest (Board Member)",
+    "Diane Gorman (Board Member)",
+    "Calandra Zebro (Board Member)",
+    "Jessica Maple (Board Member)",
+    "David Bauer (Board Member)",
+    "Joseph Knoedler (Board Member)"
+  ],
+  "calendar_url": "https://mosineeschools.community.highbond.com/Portal/MeetingSchedule.aspx",
+  "expected_lag_days": 35
+}
