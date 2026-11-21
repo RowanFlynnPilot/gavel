@@ -13,6 +13,7 @@ Model tiering (binding, cost-driven):
 from __future__ import annotations
 
 import logging
+from datetime import datetime
 
 from . import vote_announcements
 from .claude import call_claude, parse_summary_json
@@ -33,6 +34,19 @@ RESIDENT_PRIVACY_RULES = """Privacy rules for private residents (these override 
 - NEVER connect a named private person to a health or medical condition; describe the point without the name."""
 
 
+def _date_line(meeting_date: str | None) -> str:
+    """Prompt line stating when the meeting was held (from YYYYMMDD). A
+    recording almost never says the year aloud, and with no date in the prompt
+    the model supplies one: six reference-instance summaries opened "met on
+    November 19, 2024" and the like for 2026 meetings."""
+    try:
+        d = datetime.strptime(meeting_date or "", "%Y%m%d")
+    except ValueError:
+        return ""
+    return (f"Meeting date: {d.strftime('%A, %B')} {d.day}, {d.year} (the day this meeting was "
+            f"held; if you state the meeting's date, use exactly this one)\n")
+
+
 def _roster_block(officials: list[str] | None) -> str:
     """Prompt fragment giving Claude authoritative name spellings. Auto
     transcripts and audio garble names; the jurisdiction's `officials` list
@@ -48,8 +62,10 @@ def _roster_block(officials: list[str] | None) -> str:
 
 def summarize_meeting(transcript: str, title: str, url: str, *,
                       org_label: str, region: str, jurisdiction: str,
-                      meeting_id: str, officials: list[str] | None = None) -> dict:
-    """Full-transcript summary — the flagship product."""
+                      meeting_id: str, officials: list[str] | None = None,
+                      meeting_date: str | None = None) -> dict:
+    """Full-transcript summary — the flagship product. meeting_date is
+    YYYYMMDD when known."""
     if len(transcript) > MAX_TRANSCRIPT_CHARS:
         logger.warning("Transcript for %s is %d chars; only the first %d reach the model",
                        title, len(transcript), MAX_TRANSCRIPT_CHARS)
@@ -58,7 +74,7 @@ def summarize_meeting(transcript: str, title: str, url: str, *,
     prompt = f"""You are a local government reporter covering {region}.
 
 Meeting title: {title}
-Organization: {org_label}
+{_date_line(meeting_date)}Organization: {org_label}
 YouTube link:  {url}
 {_roster_block(officials)}
 Below is the auto-generated transcript of the ACTUAL meeting recording. Your job is to report what ACTUALLY HAPPENED - votes taken, decisions made, who said what, outcomes, not just what was planned.
@@ -95,6 +111,7 @@ Rules:
 - votes: ONLY votes actually taken — empty array if none. Never invent movers, seconders, or tallies; use null for anything not stated in the transcript.
 - Name officials who spoke or voted when identifiable from transcript.
 - Note unclear audio as [inaudible] rather than guessing at what was said.
+- Never supply a date or year the transcript and the lines above don't give. Speakers say "this year" and "next month" without the year; don't turn those into a year of your own.
 - {RESIDENT_PRIVACY_RULES}
 - Return ONLY the JSON object.
 {announced}
@@ -308,12 +325,13 @@ Rules:
 
 def summarize_from_minutes(minutes_text: str, title: str, url: str, *,
                            org_label: str, region: str, jurisdiction: str,
-                           meeting_id: str, officials: list[str] | None = None) -> dict:
+                           meeting_id: str, officials: list[str] | None = None,
+                           meeting_date: str | None = None) -> dict:
     """Official-minutes summary — authoritative outcomes, Sonnet tier."""
     prompt = f"""You are a local government reporter covering {region}.
 
 Meeting title: {title}
-Organization: {org_label}
+{_date_line(meeting_date)}Organization: {org_label}
 Source: Official meeting minutes
 Meeting page: {url}
 {_roster_block(officials)}

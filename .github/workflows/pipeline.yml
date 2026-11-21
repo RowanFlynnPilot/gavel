@@ -92,7 +92,12 @@ jobs:
         run: npm install
         working-directory: frontend
 
-      - name: Write YouTube cookies
+      - name: Write YouTube cookies (unused, see note)
+        # CI does not fetch from YouTube: it blocks cloud IPs whatever cookies
+        # are sent, so CAPTION_FETCH is false below and transcripts come from
+        # the residential fetcher, which needs no cookies. This step and the
+        # YOUTUBE_COOKIES secret are kept only so that turning CAPTION_FETCH
+        # back on is a one-line change; an expired or missing secret is harmless.
         run: |
           if [ -n "$YOUTUBE_COOKIES" ]; then
             echo "$YOUTUBE_COOKIES" > /tmp/yt-cookies.txt
@@ -308,6 +313,20 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         if: github.ref == 'refs/heads/main'
+        # The artifact uploaded a moment earlier is occasionally not listed yet
+        # (Nov. 20, 2026: "Found 0 artifact(s)" 0.4 seconds after a successful
+        # upload failed the run and left that cycle's data undeployed). One
+        # failure here is retried below; only a second failure fails the run.
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait before a second deploy attempt
+        if: github.ref == 'refs/heads/main' && steps.deployment.outcome == 'failure'
+        run: sleep 45
+
+      - name: Deploy to GitHub Pages (second attempt)
+        id: deployment_retry
+        if: github.ref == 'refs/heads/main' && steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       - name: Maintain spending-alarm issue

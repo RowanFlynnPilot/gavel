@@ -127,6 +127,20 @@ class PromptRulesTest(unittest.TestCase):
         self.assertIn("NEVER name a student", summarize.RESIDENT_PRIVACY_RULES)
         self.assertIn("home address", summarize.RESIDENT_PRIVACY_RULES)
 
+    def test_transcript_and_minutes_prompts_state_the_meeting_date(self):
+        """A recording rarely says the year; without the date the model
+        invents one ("met on November 19, 2024" for a 2026 meeting)."""
+        for fn in (summarize.summarize_meeting, summarize.summarize_from_minutes):
+            dated = self._prompt(fn, "text", "Transit Commission", "https://v.example",
+                                 meeting_date="20261119")
+            self.assertIn("Meeting date: Thursday, November 19, 2026", dated)
+            self.assertLess(dated.index("Meeting date:"), dated.index("Organization:"))
+            for unknown in (None, "", "2026-11-19", "20261340"):
+                self.assertNotIn("Meeting date:", self._prompt(
+                    fn, "text", "Transit Commission", "https://v.example", meeting_date=unknown))
+        self.assertIn("Never supply a date or year", self._prompt(
+            summarize.summarize_meeting, "text", "Board", "https://v.example"))
+
 
 class CorrectionsTest(unittest.TestCase):
     def setUp(self):

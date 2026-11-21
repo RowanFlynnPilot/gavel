@@ -114,7 +114,8 @@ def process_video(cfg: InstanceConfig, video: dict,
         print("  [claude]  Summarizing from transcript...")
         summary = summarize.summarize_meeting(
             transcript, title, url, org_label=jur.name, region=cfg.region,
-            jurisdiction=source_key, meeting_id=vid_id, officials=jur.officials)
+            jurisdiction=source_key, meeting_id=vid_id, officials=jur.officials,
+            meeting_date=video.get("meeting_date") or upload_date)
     except TranscriptAuthError as e:
         print(f"  [AUTH]  {e}")
         auth_failures.append(e)
@@ -270,7 +271,7 @@ def process_municode_meeting(cfg: InstanceConfig, source_key: str, m: dict,
             summary = summarize.summarize_from_minutes(
                 minutes_text, title, m["detail_url"], org_label=jur.name,
                 region=cfg.region, jurisdiction=source_key, meeting_id=video_id,
-                officials=jur.officials)
+                officials=jur.officials, meeting_date=m["date"])
     if summary is None:
         print(f"  [agenda]  Fetching ADA agenda text for: {title}")
         agenda_text = municode.fetch_agenda_text(jur.agendas, m["guid"])
@@ -506,7 +507,8 @@ def retry_agenda_only_captions(cfg: InstanceConfig, state: dict,
             summary = summarize.summarize_meeting(
                 transcript, v["title"], v["url"], org_label=jur.name,
                 region=cfg.region, jurisdiction=v["source"], meeting_id=v["id"],
-                officials=jur.officials)
+                officials=jur.officials,
+                meeting_date=v.get("meeting_date") or v.get("upload_date"))
         except Exception as e:
             logger.warning("retry: summarization crashed for %s: %s", v["id"], e)
             continue
@@ -583,7 +585,7 @@ def upgrade_boardbook_from_recordings(cfg: InstanceConfig, source_key: str,
             summary = summarize.summarize_meeting(
                 transcript, info["title"], video["url"], org_label=jur.name,
                 region=cfg.region, jurisdiction=source_key, meeting_id=vid_id,
-                officials=jur.officials)
+                officials=jur.officials, meeting_date=info.get("meeting_date"))
         except Exception as e:
             logger.warning("bb-video: summarization failed for %s: %s", vid_id, e)
             continue
@@ -654,7 +656,8 @@ def upgrade_municode_from_minutes(cfg: InstanceConfig, source_key: str,
             summary = summarize.summarize_from_minutes(
                 minutes_text, info["title"], m["detail_url"], org_label=jur.name,
                 region=cfg.region, jurisdiction=source_key, meeting_id=vid_id,
-                officials=jur.officials)
+                officials=jur.officials,
+                meeting_date=info.get("meeting_date") or m.get("date"))
         except Exception as e:
             logger.warning("minutes: summarization failed for %s: %s", vid_id, e)
             continue
