@@ -20,7 +20,8 @@ import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from .config import (ARCHIVE_UPDATES_JSON, InstanceConfig, MEETINGS_JSON, PORTAL_PREFIX,
+from .config import (ARCHIVE_UPDATES_JSON, InstanceConfig, MEETINGS_JSON, MINUTES_ADAPTERS,
+                     PORTAL_PREFIX,
                      STATE_FILE, VOTE_ADAPTERS)
 from .state import load_injected, load_state, save_injected
 
@@ -56,6 +57,17 @@ def infer_committee(cfg: InstanceConfig, title: str, source_key: str,
 
     def normalize(s):
         return s.lower().replace(" and ", " & ").replace("  ", " ")
+
+    # A portal-first board's title is the portal's own name for the body and
+    # meeting; it beats the model's wording, which tends to restate the
+    # jurisdiction ("Mosinee School Board" for a "Regular School Board Meeting").
+    if jur.agendas_adapter in MINUTES_ADAPTERS:
+        lower = normalize(title)
+        for key, display in jur.committee_map.items():
+            if key in lower:
+                return display
+        clean = re.sub(r"\s*-\s*20\d{2}-\d{2}-\d{2}$", "", title).strip()
+        return re.sub(r"\s+-\s+(?:Regular|Special)\s+Meeting$", "", clean).strip() or clean
 
     if committee_from_json and len(committee_from_json) > 3:
         lower = normalize(committee_from_json)

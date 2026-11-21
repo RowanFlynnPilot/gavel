@@ -75,6 +75,23 @@ class RegistryTest(unittest.TestCase):
         jur = _config().jurisdiction("district")
         self.assertIn("minutes", overdue._upgrade_path(jur))
 
+    def test_committee_badge_comes_from_the_portals_meeting_name(self):
+        raw = raw_instance()
+        raw["jurisdictions"].append({
+            "key": "district", "name": "Elm School District", "short": "SCHOOL", "accent": "#666666",
+            "video": None, "committee_map": {"regular school board": "Regular Meeting"},
+            "agendas": {"adapter": "diligent", "base": "https://schools.example",
+                        "portal": "https://schools.example/Portal"}})
+        cfg = InstanceConfig(raw, Path("instance.json"))
+        for title, model_said, want in (
+                ("Regular School Board Meeting - 2026-11-17", "Elm School Board", "Regular Meeting"),
+                ("Personnel Committee Meeting - 2026-11-17", "Personnel", "Personnel Committee Meeting"),
+                ("Common Council - Special Meeting - 2026-11-02", "", "Common Council")):
+            self.assertEqual(publish.infer_committee(cfg, title, "district", model_said), want, title)
+        # A board with recordings keeps the existing order: the model's wording, mapped.
+        self.assertEqual(publish.infer_committee(cfg, "County Board 11/17/26", "county", "Board of Supervisors"),
+                         "Board of Supervisors")
+
     def test_card_links_to_the_public_portal(self):
         self.assertEqual(publish._synthetic_fallback_url(_config(), "dg_77", "district"),
                          "https://schools.example/Portal")
