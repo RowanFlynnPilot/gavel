@@ -1,0 +1,464 @@
+[
+ {
+  "id": 1913,
+  "date": "2026-11-12T09:53:51",
+  "link": "https://villageofmaine.org/twd_repository/municipal-projects-public-property-3/",
+  "title": {
+   "rendered": "Municipal Projects &#038; Public Property"
+  },
+  "twd_repository_cat": [
+   22
+  ],
+  "meeting_date": "2026-11-18",
+  "agenda": {
+   "ID": 1915,
+   "post_date": "2026-11-12 09:54:30",
+   "post_title": "2026 11 18 Municipal Projects & Public Property Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-11-18-Municipal-Projects-Public-Property-Agenda.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": {
+   "ID": 1918,
+   "post_date": "2026-11-12 10:46:48",
+   "post_title": "2026 11 18 Muni Projects Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-11-18-Muni-Projects-Packet-1.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 22,
+      "name": "Municipal Projects &amp; Public Property",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1909,
+  "date": "2026-11-12T09:50:35",
+  "link": "https://villageofmaine.org/twd_repository/board-of-trustees-meeting-56/",
+  "title": {
+   "rendered": "Board of Trustees Meeting"
+  },
+  "twd_repository_cat": [
+   7
+  ],
+  "meeting_date": "2026-11-16",
+  "agenda": {
+   "ID": 1911,
+   "post_date": "2026-11-12 09:50:52",
+   "post_title": "2026 11 16 Village Board Agenda_Budget Hearing",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-11-16-Village-Board-Agenda_Budget-Hearing.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": {
+   "ID": 1916,
+   "post_date": "2026-11-12 10:46:14",
+   "post_title": "2026 11 16 website packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-11-16-website-packet-1.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "Public Hearing - Budget",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 7,
+      "name": "Board of Trustees",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1899,
+  "date": "2026-11-05T13:16:26",
+  "link": "https://villageofmaine.org/twd_repository/board-of-trustees-meeting-55/",
+  "title": {
+   "rendered": "Board of Trustees Meeting"
+  },
+  "twd_repository_cat": [
+   7
+  ],
+  "meeting_date": "2026-11-09",
+  "agenda": {
+   "ID": 1901,
+   "post_date": "2026-11-05 13:16:42",
+   "post_title": "2026 11 09 Village Board Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-11-09-Village-Board-Agenda.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": {
+   "ID": 1902,
+   "post_date": "2026-11-05 13:17:08",
+   "post_title": "2026 11 09 Website Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-11-09-Website-Packet.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 7,
+      "name": "Board of Trustees",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1894,
+  "date": "2026-10-22T16:44:39",
+  "link": "https://villageofmaine.org/twd_repository/finance-meeting/",
+  "title": {
+   "rendered": "Finance Meeting"
+  },
+  "twd_repository_cat": [
+   18
+  ],
+  "meeting_date": "2026-10-26",
+  "agenda": {
+   "ID": 1896,
+   "post_date": "2026-10-22 16:45:18",
+   "post_title": "2026 10 26 Finance Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/10/2026-10-26-Finance-Packet.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": "",
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 18,
+      "name": "Finance",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1890,
+  "date": "2026-10-19T12:42:55",
+  "link": "https://villageofmaine.org/twd_repository/board-of-trustees-meeting-54/",
+  "title": {
+   "rendered": "Board of Trustees Meeting"
+  },
+  "twd_repository_cat": [
+   7
+  ],
+  "meeting_date": "2026-10-22",
+  "agenda": {
+   "ID": 1892,
+   "post_date": "2026-10-19 12:43:14",
+   "post_title": "2026 10 22 Village Board Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/10/2026-10-22-Village-Board-Agenda.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": {
+   "ID": 1903,
+   "post_date": "2026-11-12 08:02:49",
+   "post_title": "2026 10 22 Village Board minutes",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-10-22-Village-Board-minutes.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "agenda_pack": {
+   "ID": 1893,
+   "post_date": "2026-10-20 08:36:38",
+   "post_title": "2026 10 22 BOT Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/10/2026-10-22-BOT-Packet.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 7,
+      "name": "Board of Trustees",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1881,
+  "date": "2026-10-02T08:16:55",
+  "link": "https://villageofmaine.org/twd_repository/board-of-trustees-meeting-53/",
+  "title": {
+   "rendered": "Board of Trustees Meeting"
+  },
+  "twd_repository_cat": [
+   7
+  ],
+  "meeting_date": "2026-10-12",
+  "agenda": "",
+  "meeting_minutes": "",
+  "agenda_pack": "",
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 7,
+      "name": "Board of Trustees",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1878,
+  "date": "2026-10-02T08:15:22",
+  "link": "https://villageofmaine.org/twd_repository/finance-committee-meeting-3/",
+  "title": {
+   "rendered": "Finance Committee Meeting"
+  },
+  "twd_repository_cat": [
+   18
+  ],
+  "meeting_date": "2026-10-05",
+  "agenda": {
+   "ID": 1884,
+   "post_date": "2026-10-05 14:23:32",
+   "post_title": "2026 10 05 Finance Committee Agenda_cancelled",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/10/2026-10-05-Finance-Committee-Agenda_cancelled.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": "",
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 18,
+      "name": "Finance",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1866,
+  "date": "2026-09-15T13:54:46",
+  "link": "https://villageofmaine.org/twd_repository/board-of-trustees-meeting-52/",
+  "title": {
+   "rendered": "Board of Trustees Meeting"
+  },
+  "twd_repository_cat": [
+   7
+  ],
+  "meeting_date": "2026-09-28",
+  "agenda": {
+   "ID": 1874,
+   "post_date": "2026-09-24 11:59:35",
+   "post_title": "2026 09 28 Village Board Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-28-Village-Board-Agenda.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": {
+   "ID": 1904,
+   "post_date": "2026-11-12 08:03:33",
+   "post_title": "2026 09 28 Village Board minutes",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-09-28-Village-Board-minutes.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "agenda_pack": {
+   "ID": 1875,
+   "post_date": "2026-09-24 11:59:49",
+   "post_title": "2026 09 28 BOT Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-28-BOT-Packet.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 7,
+      "name": "Board of Trustees",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1868,
+  "date": "2026-09-15T13:56:36",
+  "link": "https://villageofmaine.org/twd_repository/municipal-projects-public-property-2/",
+  "title": {
+   "rendered": "Municipal Projects &#038; Public Property"
+  },
+  "twd_repository_cat": [
+   22
+  ],
+  "meeting_date": "2026-09-22",
+  "agenda": {
+   "ID": 1872,
+   "post_date": "2026-09-17 15:53:49",
+   "post_title": "2026 09 22 Municipal Projects & Public Property Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-22-Municipal-Projects-Public-Property-Agenda.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": {
+   "ID": 1873,
+   "post_date": "2026-09-17 15:54:20",
+   "post_title": "2026 09 22 Municipal Projects Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-22-Municipal-Projects-Packet.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 22,
+      "name": "Municipal Projects &amp; Public Property",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1858,
+  "date": "2026-09-14T12:33:58",
+  "link": "https://villageofmaine.org/twd_repository/plan-commission-9/",
+  "title": {
+   "rendered": "Plan Commission"
+  },
+  "twd_repository_cat": [
+   8
+  ],
+  "meeting_date": "2026-09-21",
+  "agenda": {
+   "ID": 1859,
+   "post_date": "2026-09-14 12:36:21",
+   "post_title": "2026 09 21 Plan Commission",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-21-Plan-Commission.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": "",
+  "agenda_pack": {
+   "ID": 1860,
+   "post_date": "2026-09-14 12:36:35",
+   "post_title": "2026 09 21 PC Packet",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-21-PC-Packet.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 8,
+      "name": "Plan Commission",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1855,
+  "date": "2026-09-10T12:52:36",
+  "link": "https://villageofmaine.org/twd_repository/board-of-trustees-meeting-51/",
+  "title": {
+   "rendered": "Board of Trustees Meeting"
+  },
+  "twd_repository_cat": [
+   7
+  ],
+  "meeting_date": "2026-09-14",
+  "agenda": {
+   "ID": 1856,
+   "post_date": "2026-09-10 12:52:51",
+   "post_title": "2026 09 14 Village Board Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-14-Village-Board-Agenda.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": {
+   "ID": 1905,
+   "post_date": "2026-11-12 08:03:58",
+   "post_title": "2026 09 14 Village Board minutes",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/11/2026-09-14-Village-Board-minutes.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "agenda_pack": {
+   "ID": 1857,
+   "post_date": "2026-09-10 12:55:42",
+   "post_title": "2026 09 14 BOT packet website resize",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-14-BOT-packet-website-resize.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 7,
+      "name": "Board of Trustees",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ },
+ {
+  "id": 1852,
+  "date": "2026-09-03T14:43:38",
+  "link": "https://villageofmaine.org/twd_repository/municipal-projects-public-property/",
+  "title": {
+   "rendered": "Municipal Projects &#038; Public Property"
+  },
+  "twd_repository_cat": [
+   22
+  ],
+  "meeting_date": "2026-09-08",
+  "agenda": {
+   "ID": 1854,
+   "post_date": "2026-09-03 14:45:06",
+   "post_title": "2026 09 08 Municipal Projects & Public Property Agenda",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-08-Municipal-Projects-Public-Property-Agenda-1.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "meeting_minutes": {
+   "ID": 1876,
+   "post_date": "2026-09-24 12:00:34",
+   "post_title": "2026 09 08 Municipal Projects minutes",
+   "guid": "https://villageofmaine.org/wp-content/uploads/2026/09/2026-09-08-Municipal-Projects-minutes.pdf",
+   "post_mime_type": "application/pdf"
+  },
+  "agenda_pack": "",
+  "notes": "",
+  "_embedded": {
+   "wp:term": [
+    [
+     {
+      "id": 22,
+      "name": "Municipal Projects &amp; Public Property",
+      "taxonomy": "twd_repository_cat"
+     }
+    ]
+   ]
+  }
+ }
+]

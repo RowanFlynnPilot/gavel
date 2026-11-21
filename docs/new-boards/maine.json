@@ -1,0 +1,34 @@
+{
+  "key": "maine",
+  "name": "Village of Maine",
+  "filter_label": "Village of Maine",
+  "short": "VILLAGE",
+  "accent": "#2F5D8A",
+  "doc_host": "villageofmaine.org",
+  "avatar": "assets/avatars/maine-avatar.jpg",
+  "video": null,
+  "agendas": {
+    "adapter": "townweb",
+    "base": "https://villageofmaine.org",
+    "portal": "https://villageofmaine.org/agendas-minutes/",
+    "minutes_upgrade_window_days": 90,
+    "days_ahead": 60
+  },
+  "title_strip_patterns": [],
+  "committee_map": {
+    "board of trustees": "Board of Trustees",
+    "plan commission": "Plan Commission",
+    "municipal projects": "Municipal Projects & Public Property",
+    "finance": "Finance"
+  },
+  "officials": [
+    "Judith Hase (Village President)",
+    "Wes Schoepke (Trustee)",
+    "Bruce Reynolds (Trustee)",
+    "Ben Seidler (Trustee)",
+    "Dan Brandenburg (Trustee)",
+    "Jamie Heindl (Village Clerk)"
+  ],
+  "calendar_url": "https://villageofmaine.org/events/",
+  "expected_lag_days": 45
+}

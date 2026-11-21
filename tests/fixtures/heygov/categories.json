@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1705,
+  "name": "Elections",
+  "slug": "elections",
+  "meetings_count": 3
+ },
+ {
+  "id": 1704,
+  "name": "Plan Commission",
+  "slug": "plan-commission",
+  "meetings_count": 12
+ },
+ {
+  "id": 1703,
+  "name": "Town Board",
+  "slug": "town-board",
+  "meetings_count": 74
+ }
+]
