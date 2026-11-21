@@ -3,6 +3,7 @@
   "name": "City of Mosinee",
   "filter_label": "Mosinee",
   "short": "CITY",
+  "start_date": "2026-11-01",
   "accent": "#2C4F7C",
   "doc_host": "mosineecitywi.iqm2.com",
   "avatar": "assets/avatars/mosinee-avatar.jpg",

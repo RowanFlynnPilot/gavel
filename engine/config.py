@@ -17,6 +17,7 @@ import logging
 import os
 import re
 import sys
+from datetime import date
 from pathlib import Path
 
 from .errors import ConfigError, UnknownAdapterError
@@ -173,6 +174,17 @@ class Jurisdiction:
         self.accent: str = _require(raw, "accent", ctx)
         self.doc_host: str = raw.get("doc_host", "")
         self.avatar: str = raw.get("avatar", "")
+        # Optional "YYYY-MM-DD": the first meeting date this jurisdiction is
+        # tracked from. A portal-first board never creates a meeting held
+        # before it, which is what lets the pipeline keep looking back as far
+        # as minutes take to arrive without backfilling the board's history.
+        self.start_date: date | None = None
+        if raw.get("start_date"):
+            try:
+                self.start_date = date.fromisoformat(raw["start_date"])
+            except (TypeError, ValueError):
+                raise ConfigError(
+                    f"{ctx}: 'start_date' must be YYYY-MM-DD, got {raw['start_date']!r}") from None
         # Shown in place of an avatar image when there is none: 1-3 characters
         # on the accent colour. Optional; derived from the name when absent.
         self.monogram: str = raw.get("monogram", "") or derive_monogram(

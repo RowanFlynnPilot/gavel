@@ -136,6 +136,39 @@ class ProcessTest(PipelineTestCase):
         self.assertEqual(self.state["processed"], {})
 
 
+class LookBackTest(PipelineTestCase):
+    """How far back fetch_portal_new asks the portal to list."""
+
+    def since(self, days=14, **jurisdiction):
+        raw = raw_instance()
+        raw["jurisdictions"].append({
+            "key": "district", "name": "Elm School District", "short": "SCHOOL", "accent": "#666666",
+            "video": None, "agendas": {"adapter": "diligent", "base": "https://schools.example",
+                                       "portal": "https://schools.example/Portal"}, **jurisdiction})
+        cfg = InstanceConfig(raw, Path("instance.json"))
+        adapter = mock.Mock()
+        adapter.list_recent.return_value = []
+        self.use(adapter)
+        pipeline.fetch_portal_new(cfg, "district", self.state, days)
+        return adapter.list_recent.call_args.args[1]
+
+    def test_without_a_start_date_only_the_days_asked_for(self):
+        self.assertEqual(self.since(), date.today() - timedelta(days=14))
+
+    def test_with_a_start_date_the_whole_minutes_window_floored_at_the_start(self):
+        long_ago = (date.today() - timedelta(days=400)).isoformat()
+        self.assertEqual(self.since(start_date=long_ago),
+                         date.today() - timedelta(days=pipeline.MINUTES_WINDOW_DAYS),
+                         "a scanned agenda's meeting is still listed when its minutes arrive")
+        recent = date.today() - timedelta(days=20)
+        self.assertEqual(self.since(start_date=recent.isoformat()), recent,
+                         "nothing before the board was added is ever created")
+
+    def test_a_bad_start_date_is_refused(self):
+        with self.assertRaises(ConfigError):
+            self.since(start_date="Nov. 1")
+
+
 class UpgradeTest(PipelineTestCase):
     def seed(self, vid="dg_77", days_ago=10, source_tag="agenda", source="district"):
         d = (date.today() - timedelta(days=days_ago)).strftime("%Y%m%d")

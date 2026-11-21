@@ -390,6 +390,16 @@ def fetch_portal_new(cfg: InstanceConfig, source_key: str, state: dict,
                      days: int, dry_run: bool = False) -> int:
     jur = cfg.jurisdiction(source_key)
     since = date.today() - timedelta(days=days)
+    # A meeting whose agenda can't be read (a scanned PDF) is created when its
+    # minutes appear, usually after `days` have passed. With a start_date as
+    # the floor, a board that posts minutes is looked back the whole minutes
+    # window; meetings already processed are skipped, so this costs a request
+    # or two per run for each meeting still waiting.
+    if jur.start_date and jur.agendas_adapter in MINUTES_ADAPTERS:
+        window = int(jur.agendas.get("minutes_upgrade_window_days", MINUTES_WINDOW_DAYS))
+        since = min(since, date.today() - timedelta(days=window))
+    if jur.start_date:
+        since = max(since, jur.start_date)
     if cfg.date_cutoff:
         since = max(since, date(int(cfg.date_cutoff[:4]), int(cfg.date_cutoff[4:6]),
                                 int(cfg.date_cutoff[6:8])))

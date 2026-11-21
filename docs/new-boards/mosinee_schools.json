@@ -3,6 +3,7 @@
   "name": "Mosinee School Board",
   "filter_label": "Mosinee Schools",
   "short": "SCHOOL",
+  "start_date": "2026-11-01",
   "accent": "#34407A",
   "doc_host": "mosineeschools.community.highbond.com",
   "avatar": "assets/avatars/mosinee_schools-avatar.jpg",

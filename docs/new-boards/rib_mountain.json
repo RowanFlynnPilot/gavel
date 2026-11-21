@@ -3,6 +3,7 @@
   "name": "Village of Rib Mountain",
   "filter_label": "Rib Mountain",
   "short": "VILLAGE",
+  "start_date": "2026-11-01",
   "accent": "#2E5A88",
   "doc_host": "www.ribmountainwi.gov",
   "avatar": "assets/avatars/rib_mountain-avatar.jpg",

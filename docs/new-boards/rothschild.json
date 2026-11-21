@@ -3,6 +3,7 @@
   "name": "Village of Rothschild",
   "filter_label": "Rothschild",
   "short": "VILLAGE",
+  "start_date": "2026-11-01",
   "accent": "#5B3F8C",
   "doc_host": "www.rothschildwi.com",
   "avatar": "assets/avatars/rothschild-avatar.jpg",
