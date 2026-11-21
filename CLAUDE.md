@@ -116,6 +116,16 @@ WPR is Instance Zero and the permanent reference deployment.
   result. In CI `adapters.for_jurisdiction` hands the pipeline a `CachedPortal`
   that answers from that file with no network. A cache older than 72 hours
   reads as "no answer". See `engine/portal_cache.py`.
+- `python -m engine.visibility --out frontend/public --preview-dir
+  frontend/public/preview` — stages the frontend's runtime files. A
+  jurisdiction with `"hidden": true` is scraped and summarized as usual but
+  left out of everything readers get: the site's instance.json and data, the
+  calendar feed, the newsletter image, the roundup draft, static pages and the
+  sitemap. While anything is hidden, the full data is also written under
+  `preview/`, and `<site>/preview/` serves the same app over it (banner,
+  noindex, no analytics) for an editor to review. New boards are added
+  hidden and published by removing the flag. The preview address is unlisted,
+  not secret.
 - `python -m engine.health [--print-count] [--markdown FILE] [--hours N]` —
   boards whose sites have not answered for `UNREACHABLE_HOURS` (12), from
   `source_health.json` (per board and job: "meetings", "upcoming"; an entry

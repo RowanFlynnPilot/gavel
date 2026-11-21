@@ -77,6 +77,8 @@ def build_events(cfg: InstanceConfig, days_ahead: int) -> list[dict]:
     end = today + timedelta(days=days_ahead)
     events = []
     for src, evs in data.items():
+        if src in cfg.hidden_keys:
+            continue                    # not published yet: stays out of subscribers' calendars
         jur = cfg.by_key.get(src)
         label = jur.name if jur else src
         for e in evs:

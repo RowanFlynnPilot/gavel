@@ -65,7 +65,7 @@ class Theme:
         # jurisdiction key → (label, accent rgb, avatar path or None, monogram)
         self.sources = {
             j.key: (j.name, _rgb(j.accent), (root / j.avatar) if j.avatar else None, j.monogram)
-            for j in cfg.jurisdictions
+            for j in cfg.jurisdictions if not j.hidden      # hidden boards stay off the image
         }
         self.wordmark = cfg.name.upper()
         self.domain = (cfg.newsroom_url.split("//", 1)[-1]

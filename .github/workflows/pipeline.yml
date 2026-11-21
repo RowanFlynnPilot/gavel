@@ -281,9 +281,10 @@ jobs:
         # The frontend fetches instance.json and data/*.json at runtime;
         # assets (avatars, logo) are referenced by instance.json paths.
         run: |
-          cp instance.json frontend/public/
-          mkdir -p frontend/public/data
-          cp data/meetings.json data/upcoming.json frontend/public/data/
+          # Hidden boards (instance.json "hidden": true) are left out of the
+          # public copies; when any exist, full copies go under preview/ for
+          # an editor to review at <site>/preview/.
+          python -m engine.visibility --out frontend/public --preview-dir frontend/public/preview
           cp data/meetings.ics frontend/public/meetings.ics 2>/dev/null || true
           cp data/roundup.txt data/roundup.html frontend/public/ 2>/dev/null || true
           cp -r assets frontend/public/assets
@@ -301,6 +302,11 @@ jobs:
           echo "BASE_PATH=$BASE_PATH"
           npm run build
         working-directory: frontend
+
+      - name: Add the preview page
+        # Only does anything when a board is hidden: <site>/preview/ then
+        # serves the same app over the full data, marked noindex.
+        run: python -m engine.visibility --preview-index frontend/dist
 
       # Only main deploys and maintains issues. A run dispatched on another
       # branch is a rehearsal: it scrapes, summarizes, commits to its own

@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
 const BASE_URL = import.meta.env.BASE_URL;
+// <site>/preview/ is the editor's view: the same app over preview/ data, which
+// includes boards still hidden from the public site (engine.visibility).
+const IS_PREVIEW = typeof window !== "undefined"
+  && /\/preview\/(index\.html)?$/.test(window.location.pathname);
+const DATA_URL = BASE_URL + (IS_PREVIEW ? "preview/" : "");
 
 // Plausible custom-event helper. No-op if the script hasn't loaded (it's queued
 // by the stub injected at boot) or is blocked. Each event name used here should
@@ -215,7 +220,7 @@ function _applyConfig(config, meetings, upcoming) {
   // Parity-soak deployments must never compete with the production tracker in
   // search: robots.txt already disallows crawling, and this covers the SPA
   // shell itself. Turns off automatically when seo.noindex flips at cutover.
-  if (config.seo && config.seo.noindex) {
+  if ((config.seo && config.seo.noindex) || IS_PREVIEW) {
     _injectOnce("gavel-noindex", () => {
       const m = document.createElement("meta");
       m.name = "robots";
@@ -231,7 +236,8 @@ function _applyConfig(config, meetings, upcoming) {
   // Bookmark, Outbound Link) must be added as Goals in Plausible → Site
   // Settings → Goals to appear in reports.
   const plausibleDomain = config.analytics && config.analytics.plausible_domain;
-  if (plausibleDomain) {
+  // The editor's preview is not readership: it reports nothing.
+  if (plausibleDomain && !IS_PREVIEW) {
     window.plausible = window.plausible || function () {
       (window.plausible.q = window.plausible.q || []).push(arguments);
     };
@@ -2582,7 +2588,7 @@ export default function App() {
     let cancelled = false;
     const load = async (path) => {
       let res;
-      try { res = await fetch(BASE_URL + path); } catch { throw new Error(path); }
+      try { res = await fetch(DATA_URL + path); } catch { throw new Error(path); }
       if (!res.ok) throw new Error(path);
       try { return await res.json(); } catch { throw new Error(path); }
     };
@@ -2606,5 +2612,19 @@ export default function App() {
 
   if (boot.status === "error") return <BootError file={boot.file} />;
   if (boot.status === "loading") return <BootLoading />;
-  return <Tracker />;
+  if (!IS_PREVIEW) return <Tracker />;
+  return (
+    <>
+      <Tracker />
+      <div role="status" style={{
+        position: "fixed", bottom: "10px", left: "50%", transform: "translateX(-50%)",
+        zIndex: 1000, pointerEvents: "none", whiteSpace: "nowrap",
+        background: THEME.ink, color: THEME.background,
+        fontFamily: "var(--font-display)", fontSize: "13px", letterSpacing: "0.12em",
+        padding: "7px 14px", borderRadius: "4px", boxShadow: "0 1px 8px rgba(0,0,0,0.4)",
+      }}>
+        PREVIEW · NOT PUBLISHED · INCLUDES BOARDS UNDER REVIEW
+      </div>
+    </>
+  );
 }

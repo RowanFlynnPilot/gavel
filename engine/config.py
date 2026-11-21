@@ -174,6 +174,11 @@ class Jurisdiction:
         self.accent: str = _require(raw, "accent", ctx)
         self.doc_host: str = raw.get("doc_host", "")
         self.avatar: str = raw.get("avatar", "")
+        # true = tracked but kept off the public site (engine.visibility):
+        # how a new board is reviewed before it is published.
+        self.hidden = raw.get("hidden", False)
+        if not isinstance(self.hidden, bool):
+            raise ConfigError(f"{ctx}: 'hidden' must be true or false, got {self.hidden!r}")
         # Optional "YYYY-MM-DD": the first meeting date this jurisdiction is
         # tracked from. A portal-first board never creates a meeting held
         # before it, which is what lets the pipeline keep looking back as far
@@ -363,6 +368,11 @@ class InstanceConfig:
         if len(keys) != len(set(keys)):
             raise ConfigError(f"instance.json: duplicate jurisdiction keys in {keys}")
         self.by_key: dict[str, Jurisdiction] = {j.key: j for j in self.jurisdictions}
+
+    @property
+    def hidden_keys(self) -> frozenset[str]:
+        """Jurisdictions tracked but not published to readers."""
+        return frozenset(j.key for j in self.jurisdictions if j.hidden)
 
     def jurisdiction(self, key: str) -> Jurisdiction:
         if key not in self.by_key:

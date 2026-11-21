@@ -26,8 +26,11 @@ from .config import (CLAUDE_MODEL, MEETINGS_JSON, UPCOMING_JSON,
 
 
 def collect(cfg: InstanceConfig, days_back: int):
-    meetings = json.loads(Path(MEETINGS_JSON).read_text(encoding="utf-8"))
-    upcoming = json.loads(Path(UPCOMING_JSON).read_text(encoding="utf-8"))
+    # A hidden board isn't published yet, so the newsletter draft leaves it out.
+    meetings = [m for m in json.loads(Path(MEETINGS_JSON).read_text(encoding="utf-8"))
+                if m.get("source") not in cfg.hidden_keys]
+    upcoming = {k: v for k, v in json.loads(Path(UPCOMING_JSON).read_text(encoding="utf-8")).items()
+                if k not in cfg.hidden_keys}
     today = date.today()
     start = today - timedelta(days=days_back)
 

@@ -27,12 +27,14 @@ import argparse
 import html
 import json
 import re
+import shutil
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
 
 from .config import (ARCHIVE_UPDATES_JSON, MEETINGS_JSON, InstanceConfig, load_instance,
                      setup_logging)
+from .state import load_state
 
 E = html.escape
 
@@ -200,7 +202,8 @@ def render_archive_updates(cfg: InstanceConfig, pages_dir: Path, base_url: str, 
     written = 0
     for m in records if isinstance(records, list) else []:
         mid = m.get("id", "") if isinstance(m, dict) else ""
-        if not re.fullmatch(r"[A-Za-z0-9_-]+", mid) or mid in displayed_ids:
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", mid) or mid in displayed_ids \
+                or m.get("source") in cfg.hidden_keys:
             continue
         d = pages_dir / mid
         d.mkdir(exist_ok=True)
@@ -227,7 +230,17 @@ def main() -> None:
     pages_dir = out_root / "meetings"
     pages_dir.mkdir(parents=True, exist_ok=True)
 
-    meetings = json.loads(Path(MEETINGS_JSON).read_text(encoding="utf-8"))
+    # A hidden board has no public pages: none are written, and any written
+    # before it was hidden are removed (and so drop out of the sitemap).
+    hidden = cfg.hidden_keys
+    if hidden:
+        for mid, info in load_state().get("processed", {}).items():
+            if info.get("source") in hidden and re.fullmatch(r"[A-Za-z0-9_-]+", mid) \
+                    and (pages_dir / mid).is_dir():
+                shutil.rmtree(pages_dir / mid)
+
+    meetings = [m for m in json.loads(Path(MEETINGS_JSON).read_text(encoding="utf-8"))
+                if m.get("source") not in hidden]
     written = 0
     for m in meetings:
         mid = m.get("id", "")
