@@ -662,6 +662,9 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
   const src = SOURCE_CONFIG[meeting.source];
   const parts  = PARTS_BY_ID[meeting.id];
   const closed = isClosedSession(meeting);
+  // Room the avatar and its ring take in the header's top-right corner, plus
+  // a gap. Rows that sit beside the avatar stop this far short of the edge.
+  const avatarClear = isMobile ? "64px" : "88px";
 
   const hasCivic = !!(meeting.civicItems && meeting.civicItems.length);
   // Structured votes extracted from transcripts/minutes (non-CivicClerk
@@ -711,7 +714,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
           )}
 
 
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px", flexWrap: "wrap", paddingRight: avatarClear }}>
             <span style={{
               background: src.accent,
               fontFamily: FONT_DISPLAY,
@@ -749,7 +752,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
           </div>
 
           {parts && (
-            <div role="group" aria-label="Meeting parts" style={{ display: "flex", gap: "6px", marginBottom: "10px", flexWrap: "wrap" }}>
+            <div role="group" aria-label="Meeting parts" style={{ display: "flex", gap: "6px", marginBottom: "10px", flexWrap: "wrap", marginRight: isMobile ? 0 : avatarClear }}>
               {parts.map(p => {
                 const on = p.id === meeting.id;
                 return (
@@ -771,6 +774,9 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
             <div style={{
               background: "#FFF8E7", borderLeft: "3px solid #D4A017",
               padding: "8px 12px", marginBottom: "10px",
+              // On wide layouts this note sits beside the avatar; on compact
+              // ones the badge row above pushes it below.
+              marginRight: isMobile ? 0 : avatarClear,
               fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
               fontSize: "12px", color: "#6B5A1E", lineHeight: 1.4,
             }}>
@@ -1791,7 +1797,9 @@ function UpcomingMeetings({ isMobile }) {
                             />
 
 
-                            <div style={{ flex: 1, minWidth: 0 }}>
+                            {/* paddingRight keeps the name clear of the + CAL
+                                button, which is positioned over this row. */}
+                            <div style={{ flex: 1, minWidth: 0, paddingRight: "48px" }}>
                               <div id={nameId} style={{
                                 fontFamily: FONT_HEADLINE,
                                 fontSize: "13px", fontWeight: 600,
