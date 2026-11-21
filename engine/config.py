@@ -155,6 +155,13 @@ def _validate_rules(rules, ctx: str) -> None:
                     f"{' (0=Monday)' if field == 'weekday' else ''}, got {v!r}")
 
 
+def derive_monogram(label: str) -> str:
+    """Initials for a jurisdiction with no avatar image: "Village of Rib
+    Mountain" -> "RM", "Mosinee" -> "M". The frontend derives the same."""
+    words = re.sub(r"^(?:City|Village|Town|County) of\s+", "", label.strip(), flags=re.I).split()
+    return "".join(w[0] for w in words[:2]).upper() or "?"
+
+
 class Jurisdiction:
     """One jurisdiction block from instance.json, validated."""
 
@@ -166,6 +173,12 @@ class Jurisdiction:
         self.accent: str = _require(raw, "accent", ctx)
         self.doc_host: str = raw.get("doc_host", "")
         self.avatar: str = raw.get("avatar", "")
+        # Shown in place of an avatar image when there is none: 1-3 characters
+        # on the accent colour. Optional; derived from the name when absent.
+        self.monogram: str = raw.get("monogram", "") or derive_monogram(
+            raw.get("filter_label") or raw.get("name", ""))
+        if not isinstance(self.monogram, str) or not 1 <= len(self.monogram) <= 3:
+            raise ConfigError(f"{ctx}: 'monogram' must be 1-3 characters, got {self.monogram!r}")
         self.audio_url: str = raw.get("audio_url", "")
         self.title_strip_patterns: list[str] = raw.get("title_strip_patterns", [])
         self.committee_map: dict[str, str] = raw.get("committee_map", {})

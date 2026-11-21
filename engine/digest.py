@@ -62,9 +62,9 @@ class Theme:
             if not p.exists():
                 raise ConfigError(f"digest font not found: {p}")
 
-        # jurisdiction key → (label, accent rgb, avatar path)
+        # jurisdiction key → (label, accent rgb, avatar path or None, monogram)
         self.sources = {
-            j.key: (j.name, _rgb(j.accent), root / j.avatar)
+            j.key: (j.name, _rgb(j.accent), (root / j.avatar) if j.avatar else None, j.monogram)
             for j in cfg.jurisdictions
         }
         self.wordmark = cfg.name.upper()
@@ -134,13 +134,21 @@ def _wrap_lines(draw, text, font, max_w, max_lines=2):
     return lines or [""]
 
 
-def _circle_avatar(path, d):
-    """Return a circular RGBA avatar of diameter d (1x)."""
+def _circle_avatar(path, d, accent=None, monogram="", font=None):
+    """Return a circular RGBA avatar of diameter d (1x). With no image to
+    open, a jurisdiction gets its monogram in white on its accent colour."""
     dd = d * SCALE
     try:
+        if path is None:
+            raise FileNotFoundError("no avatar configured")
         img = Image.open(path).convert("RGBA").resize((dd, dd), Image.LANCZOS)
     except Exception:
-        img = Image.new("RGBA", (dd, dd), (230, 226, 218, 255))
+        img = Image.new("RGBA", (dd, dd), (*accent, 255) if accent else (230, 226, 218, 255))
+        if accent and monogram and font is not None:
+            draw = ImageDraw.Draw(img)
+            left, top, right, bottom = draw.textbbox((0, 0), monogram, font=font)
+            draw.text(((dd - (right - left)) / 2 - left, (dd - (bottom - top)) / 2 - top),
+                      monogram, font=font, fill=(255, 255, 255, 255))
     mask = Image.new("L", (dd, dd), 0)
     ImageDraw.Draw(mask).ellipse((0, 0, dd - 1, dd - 1), fill=255)
     img.putalpha(mask)
@@ -270,12 +278,13 @@ def render(cfg: InstanceConfig, today, days=7, out="digest.png"):
         y += DAY_H
 
         for ev in evs:
-            label, accent, avatar_path = theme.sources[ev["source"]]
+            label, accent, avatar_path, monogram = theme.sources[ev["source"]]
             row_h = ev["_row_h"]
             row_cy = y + row_h / 2
 
             av_d = 38
-            av = _circle_avatar(avatar_path, av_d)
+            av = _circle_avatar(avatar_path, av_d, accent, monogram,
+                                theme.display(17 if len(monogram) < 3 else 13))
             img.paste(av, (int(MARGIN * SCALE), int((row_cy - av_d / 2) * SCALE)), av)
 
             text_x = MARGIN + av_d + 14
