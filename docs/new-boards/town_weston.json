@@ -3,6 +3,7 @@
   "name": "Town of Weston",
   "filter_label": "Town of Weston",
   "short": "TOWN",
+  "start_date": "2026-11-01",
   "accent": "#6E5A1E",
   "doc_host": "app.heygov.com",
   "avatar": "assets/avatars/town_weston-avatar.jpg",

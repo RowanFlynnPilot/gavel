@@ -3,6 +3,7 @@
   "name": "Village of Maine",
   "filter_label": "Village of Maine",
   "short": "VILLAGE",
+  "start_date": "2026-11-01",
   "accent": "#1F5673",
   "doc_host": "villageofmaine.org",
   "avatar": "assets/avatars/maine-avatar.jpg",
