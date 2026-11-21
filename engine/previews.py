@@ -126,6 +126,11 @@ _AGENDA_TEXT = {
     "civicclerk": _portal_text("civicclerk"),
     "legistar": _portal_text("legistar"),
     "primegov": _portal_text("primegov"),
+    "diligent": _portal_text("diligent"),
+    "iqm2": _portal_text("iqm2"),
+    "revize": _portal_text("revize"),
+    "townweb": _portal_text("townweb"),
+    "heygov": _portal_text("heygov"),
 }
 
 

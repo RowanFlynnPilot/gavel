@@ -10,6 +10,17 @@ Adapter responsibilities (duck-typed per module):
                      - list_meetings(...)      meeting-creating (boardbook, municode)
                      - fetch_agenda_text(...)  summarization fallback text
                      - fetch_upcoming(...)     posted future meetings
+  portal adapters  : (config.PORTAL_ADAPTERS) create meetings from the portal
+                     when the jurisdiction has no video channel:
+                     - list_recent(agendas_cfg, since: date) -> [{id, name,
+                       date "YYYY-MM-DD", url}], past meetings with a posted
+                       agenda, newest first; id is digits only; url is the
+                       meeting's public page and the doc_url the two fetch
+                       functions below accept. Raises on a failed request.
+                     - fetch_agenda_text(agendas_cfg, doc_url) -> str | None
+                     - fetch_upcoming(agendas_cfg, key, days_ahead)
+                     - fetch_minutes_text(agendas_cfg, doc_url) -> str | None
+                       (config.MINUTES_ADAPTERS; None until minutes are posted)
   rule_schedule    : project(...) nth-weekday recurring meetings
 """
 
@@ -28,6 +39,11 @@ _ADAPTER_MODULES = {
     "agendacenter": "engine.adapters.agendacenter",
     "municode": "engine.adapters.municode",
     "rule_schedule": "engine.adapters.rule_schedule",
+    "diligent": "engine.adapters.diligent",
+    "iqm2": "engine.adapters.iqm2",
+    "revize": "engine.adapters.revize",
+    "townweb": "engine.adapters.townweb",
+    "heygov": "engine.adapters.heygov",
 }
 
 

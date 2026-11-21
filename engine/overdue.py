@@ -30,7 +30,7 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 
-from .config import (DEFAULT_EXPECTED_LAG_DAYS, MEETINGS_JSON, VOTE_ADAPTERS,
+from .config import (DEFAULT_EXPECTED_LAG_DAYS, MEETINGS_JSON, MINUTES_ADAPTERS, VOTE_ADAPTERS,
                      InstanceConfig, Jurisdiction, load_instance, utf8_console)
 
 _CLOSED = re.compile(r"\bclosed\b", re.IGNORECASE)
@@ -48,6 +48,8 @@ def _upgrade_path(jur: Jurisdiction) -> str | None:
         return "residential caption sweep (`python -m engine.fetch_transcripts --all`)"
     if jur.agendas_adapter in VOTE_ADAPTERS:
         return "the portal's vote records (`votes_upgrade_window_days`)"
+    if jur.agendas_adapter in MINUTES_ADAPTERS:
+        return "posted minutes (`minutes_upgrade_window_days`)"
     return None
 
 

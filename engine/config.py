@@ -25,11 +25,20 @@ logger = logging.getLogger(__name__)
 
 # ── Adapter registry names (modules live in engine/adapters/) ─────────────────
 VIDEO_ADAPTERS = {"youtube"}
-AGENDA_ADAPTERS = {"civicclerk", "legistar", "primegov", "boardbook", "agendacenter", "municode", "rule_schedule"}
+AGENDA_ADAPTERS = {"civicclerk", "legistar", "primegov", "boardbook", "agendacenter", "municode", "rule_schedule",
+                   "diligent", "iqm2", "revize", "townweb", "heygov"}
 # Agenda adapters that read a meeting's agenda from its portal page (fetch_agenda_text(agendas_cfg, doc_url)).
-PORTAL_ADAPTERS = {"civicclerk", "legistar", "primegov"}
+PORTAL_ADAPTERS = {"civicclerk", "legistar", "primegov", "diligent", "iqm2", "revize", "townweb", "heygov"}
 # Of those, the ones whose API also gives structured items with recorded votes (fetch_meeting_data).
 VOTE_ADAPTERS = {"civicclerk", "legistar"}
+# Portal adapters that can also read a meeting's posted minutes
+# (fetch_minutes_text(agendas_cfg, doc_url) -> text, or None until they're posted).
+# A portal-first meeting here is summarized again from the minutes when they appear.
+MINUTES_ADAPTERS = {"diligent", "iqm2", "revize", "townweb", "heygov"}
+# ID prefix of a portal-first meeting: "<prefix>_<digits>". Digits only, so an
+# ID can't be mistaken for a YouTube video ID.
+PORTAL_PREFIX = {"civicclerk": "cc", "legistar": "lg", "primegov": "pg", "diligent": "dg",
+                 "iqm2": "iq", "revize": "rv", "townweb": "tw", "heygov": "hg"}
 
 # ── Anthropic client (two-tier model strategy, env-overridable) ───────────────
 CLAUDE_MODEL = os.environ.get("CLAUDE_MODEL", "claude-sonnet-4-6")
@@ -189,6 +198,19 @@ class Jurisdiction:
             _require(self.agendas, "portal", f"{ctx}.agendas")
         elif adapter in ("legistar", "primegov"):
             _require(self.agendas, "client", f"{ctx}.agendas")
+        elif adapter in ("diligent", "iqm2", "townweb"):
+            _require(self.agendas, "base", f"{ctx}.agendas")
+            _require(self.agendas, "portal", f"{ctx}.agendas")
+        elif adapter == "heygov":
+            _require(self.agendas, "site", f"{ctx}.agendas")
+            _require(self.agendas, "portal", f"{ctx}.agendas")
+        elif adapter == "revize":
+            _require(self.agendas, "portal", f"{ctx}.agendas")
+            pages = _require(self.agendas, "pages", f"{ctx}.agendas")
+            if not isinstance(pages, list) or not pages or not all(
+                    isinstance(p, dict) and p.get("body") and p.get("url") for p in pages):
+                raise ConfigError(
+                    f"{ctx}.agendas.pages must be a non-empty list of {{body, url}} entries")
         elif adapter == "boardbook":
             _require(self.agendas, "base", f"{ctx}.agendas")
             _require(self.agendas, "org_id", f"{ctx}.agendas")

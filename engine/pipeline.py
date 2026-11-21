@@ -32,7 +32,7 @@ from . import publish as publish_mod
 from . import summarize, upcoming, watchdog
 from .adapters import boardbook as bb_adapter
 from .adapters import get_adapter, youtube
-from .config import (AGENDA_RETRY_DAYS, PORTAL_ADAPTERS, RUN_REPORT,
+from .config import (AGENDA_RETRY_DAYS, MINUTES_ADAPTERS, PORTAL_ADAPTERS, PORTAL_PREFIX, RUN_REPORT,
                      STALE_VIDEO_HOURS, VOTE_ADAPTERS, InstanceConfig,
                      load_instance, setup_logging)
 from .errors import AdapterStructureError, TranscriptAuthError
@@ -328,8 +328,8 @@ def fetch_municode_new(cfg: InstanceConfig, source_key: str, state: dict,
 # they're posted. A jurisdiction with a video channel keeps the YouTube-first
 # path, where the portal supplies agenda text and votes for each recording.
 
-PORTAL_PREFIX = {"civicclerk": "cc", "legistar": "lg", "primegov": "pg"}
 PORTAL_WINDOW_DAYS = 30  # how far back a run without --days looks, and how long votes are waited for
+MINUTES_WINDOW_DAYS = 75  # how long a portal-first meeting's minutes are waited for (approved at the next meeting or two)
 
 
 def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
@@ -338,6 +338,25 @@ def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
     adapter = get_adapter(jur.agendas_adapter)
     meeting_id = f"{PORTAL_PREFIX[jur.agendas_adapter]}_{m['id']}"
     title = f"{m['name']} - {m['date']}"
+    d = m["date"].replace("-", "")
+
+    # A meeting first seen after its minutes are posted (a first run, a
+    # backfill) is summarized from them directly: outcomes, not the schedule.
+    if jur.agendas_adapter in MINUTES_ADAPTERS:
+        minutes_text = adapter.fetch_minutes_text(jur.agendas, m["url"])
+        if minutes_text:
+            print(f"  [claude]  Summarizing from minutes ({len(minutes_text):,} chars): {title}")
+            summary = summarize.summarize_from_minutes(
+                minutes_text, title, m["url"], org_label=jur.name, region=cfg.region,
+                jurisdiction=source_key, meeting_id=meeting_id, officials=jur.officials,
+                meeting_date=d)
+            path = save_summary(title, m["url"], source_key, jur.name, summary,
+                                doc_url=m["url"], video_id=meeting_id)
+            mark_processed(state, meeting_id, title, source_key, path,
+                           doc_url=m["url"], upload_date=d, meeting_date=d)
+            print(f"  [ok]  Saved: {path}")
+            return True
+
     print(f"  [agenda]  Reading the {jur.agendas_adapter} agenda for: {title}")
     agenda_text = adapter.fetch_agenda_text(jur.agendas, m["url"])
     if not agenda_text:
@@ -361,7 +380,6 @@ def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
 
     path = save_summary(title, m["url"], source_key, jur.name, summary,
                         doc_url=m["url"], civic_data=civic_data, video_id=meeting_id)
-    d = m["date"].replace("-", "")
     mark_processed(state, meeting_id, title, source_key, path,
                    doc_url=m["url"], upload_date=d, meeting_date=d)
     print(f"  [ok]  Saved: {path}")
@@ -428,6 +446,54 @@ def upgrade_portal_from_votes(cfg: InstanceConfig, source_key: str,
     return upgraded
 
 
+def upgrade_portal_from_minutes(cfg: InstanceConfig, source_key: str,
+                                state: dict) -> list[str]:
+    """Re-summarize recent agenda-only portal-first meetings once their
+    minutes are posted (boards approve them at the next meeting or two).
+    Minutes are the record of what happened; they replace the agenda summary
+    for good. Returns the upgraded IDs."""
+    jur = cfg.jurisdiction(source_key)
+    if jur.agendas_adapter not in MINUTES_ADAPTERS:
+        return []
+    adapter = get_adapter(jur.agendas_adapter)
+    prefix = PORTAL_PREFIX[jur.agendas_adapter] + "_"
+    window = int(jur.agendas.get("minutes_upgrade_window_days", MINUTES_WINDOW_DAYS))
+    since = (date.today() - timedelta(days=window)).strftime("%Y%m%d")
+    candidates = [(vid, info) for vid, info in state["processed"].items()
+                  if vid.startswith(prefix) and info.get("source") == source_key
+                  and (info.get("meeting_date") or "") >= since
+                  and _summary_source(info)[0] == "agenda"]
+    if not candidates:
+        return []
+    print(f"\n[minutes]  {len(candidates)} {source_key} agenda-only meeting(s) "
+          f"within {window} days; checking for posted minutes...")
+    upgraded = []
+    for vid, info in candidates:
+        try:
+            minutes_text = adapter.fetch_minutes_text(jur.agendas, info["doc_url"])
+        except Exception as e:      # one meeting's page failing must not stop the rest
+            logger.warning("minutes: fetch failed for %s: %s", vid, e)
+            continue
+        if not minutes_text:
+            continue
+        print(f"  [claude]  Minutes posted; summarizing again: {info['title']}")
+        try:
+            summary = summarize.summarize_from_minutes(
+                minutes_text, info["title"], info["doc_url"], org_label=jur.name,
+                region=cfg.region, jurisdiction=source_key, meeting_id=vid,
+                officials=jur.officials, meeting_date=info.get("meeting_date"))
+        except Exception as e:
+            logger.warning("minutes: summarization failed for %s: %s", vid, e)
+            continue
+        path = save_summary(info["title"], info["doc_url"], source_key, jur.name, summary,
+                            doc_url=info["doc_url"], video_id=vid)
+        mark_processed(state, vid, info["title"], source_key, path, doc_url=info["doc_url"])
+        save_state(state)
+        upgraded.append(vid)
+        print(f"  [ok]  Saved: {path}")
+    return upgraded
+
+
 def _summary_source(info: dict) -> tuple[str | None, Path | None]:
     """Return (existing summary's _source tag, sidecar path) or (None, None)."""
     sf = info.get("summary_file", "")
@@ -446,8 +512,9 @@ def retry_agenda_only_captions(cfg: InstanceConfig, state: dict,
     """Re-try transcript fetch for recently-uploaded agenda-only YouTube
     entries — auto-captions can take hours/days to appear."""
     synthetic_prefixes = tuple(
-        {"bb_"} | {f"{j.agendas['id_prefix']}_" for j in cfg.jurisdictions
-                   if j.agendas_adapter == "municode"})
+        {"bb_"} | {f"{p}_" for p in PORTAL_PREFIX.values()}
+        | {f"{j.agendas['id_prefix']}_" for j in cfg.jurisdictions
+           if j.agendas_adapter == "municode"})
     candidates = []
     for vid_id, info in list(state.get("processed", {}).items()):
         if vid_id.startswith(synthetic_prefixes):
@@ -947,6 +1014,7 @@ def main() -> None:
             upgraded_ids += upgrade_municode_from_minutes(cfg, src, state)
     for src in portal_first:
         upgraded_ids += upgrade_portal_from_votes(cfg, src, state)
+        upgraded_ids += upgrade_portal_from_minutes(cfg, src, state)
 
     if upgraded_ids:
         clear_injected(upgraded_ids)
