@@ -81,6 +81,50 @@ class ArchiveFooterTest(unittest.TestCase):
         self.assertEqual(pages.refresh_archive_footers(make_config(), self.dir, BASE), 0)
 
 
+class ArchiveUpdatesTest(unittest.TestCase):
+    """A meeting rebuilt this run but too old for the displayed list still
+    gets its archive page rewritten."""
+
+    def setUp(self):
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        self.root = Path(tmp.name)
+        self.pages_dir = self.root / "meetings"
+        self.pages_dir.mkdir()
+        self.queue = self.root / "archive_updates.json"
+
+    def test_queued_meetings_get_their_page_rewritten_and_the_queue_is_cleared(self):
+        from engine import publish
+        old = {**MEETING, "id": "old_meeting", "overview": "The ordinance failed 5-6.", "badge": "new"}
+        shown = {**MEETING, "id": "shown", "overview": "Displayed; rendered from meetings.json."}
+        (self.pages_dir / "old_meeting").mkdir()
+        (self.pages_dir / "old_meeting" / "index.html").write_text(
+            "<p>The ordinance passed.</p>", encoding="utf-8")
+        publish.queue_archive_updates(self.queue, [old])
+        publish.queue_archive_updates(self.queue, [shown, {**old, "overview": "The ordinance failed, 5-6."}])
+        queued = json.loads(self.queue.read_text(encoding="utf-8"))
+        self.assertEqual([m["id"] for m in queued], ["old_meeting", "shown"], "merged by ID")
+        self.assertIsNone(queued[0]["badge"])
+
+        n = pages.render_archive_updates(make_config(), self.pages_dir, BASE, False, self.queue, {"shown"})
+        self.assertEqual(n, 1)
+        page = (self.pages_dir / "old_meeting" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("The ordinance failed, 5-6.", page)
+        self.assertNotIn("The ordinance passed.", page)
+        self.assertFalse((self.pages_dir / "shown").exists(), "displayed meetings are rendered elsewhere")
+        self.assertFalse(self.queue.exists())
+
+    def test_no_queue_or_a_broken_one_writes_nothing(self):
+        cfg = make_config()
+        self.assertEqual(pages.render_archive_updates(cfg, self.pages_dir, BASE, False, self.queue, set()), 0)
+        self.queue.write_text("{not json", encoding="utf-8")
+        self.assertEqual(pages.render_archive_updates(cfg, self.pages_dir, BASE, False, self.queue, set()), 0)
+        self.assertFalse(self.queue.exists())
+        self.queue.write_text(json.dumps([{"id": "../escape", "title": "x"}, "junk"]), encoding="utf-8")
+        self.assertEqual(pages.render_archive_updates(cfg, self.pages_dir, BASE, False, self.queue, set()), 0)
+        self.assertEqual(list(self.pages_dir.iterdir()), [])
+
+
 class IcsUidTest(unittest.TestCase):
     def _uids(self, cfg) -> list[str]:
         day = (date.today() + timedelta(days=3)).isoformat()

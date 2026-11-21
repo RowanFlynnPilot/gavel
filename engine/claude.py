@@ -16,6 +16,7 @@ import anthropic
 
 from . import costs
 from .config import ANTHROPIC_MAX_RETRIES, ANTHROPIC_TIMEOUT_SECONDS
+from .errors import TruncatedResponseError
 
 logger = logging.getLogger(__name__)
 
@@ -77,6 +78,12 @@ def call_claude(*, model: str, max_tokens: int, prompt: str,
         input_tokens=getattr(usage, "input_tokens", 0) or 0,
         output_tokens=getattr(usage, "output_tokens", 0) or 0,
     )
+    # The call is paid for and ledgered either way; a cut-off answer is not
+    # passed on to be parsed, half-parsed or published.
+    if getattr(msg, "stop_reason", None) == "max_tokens":
+        raise TruncatedResponseError(
+            f"{purpose} for {meeting_id} stopped at max_tokens={max_tokens}; "
+            f"the answer is incomplete and was discarded")
     return msg.content[0].text.strip()
 
 

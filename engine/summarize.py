@@ -21,6 +21,11 @@ from .config import CLAUDE_MODEL, CLAUDE_MODEL_AGENDA, MAX_TRANSCRIPT_CHARS
 
 logger = logging.getLogger(__name__)
 
+# Output cap for transcript and minutes summaries. At 4,096 three summaries of
+# the reference instance's long meetings were cut off mid-JSON; whole-transcript
+# summaries list more votes and run longer still.
+RECORD_MAX_TOKENS = 8192
+
 
 # How summaries treat private residents: officials are named; a resident only
 # when the record is clear, never with a home address; students never. Shared
@@ -119,7 +124,7 @@ Rules:
 {transcript[:MAX_TRANSCRIPT_CHARS]}
 --- END ---"""
 
-    raw = call_claude(model=CLAUDE_MODEL, max_tokens=4096, prompt=prompt,
+    raw = call_claude(model=CLAUDE_MODEL, max_tokens=RECORD_MAX_TOKENS, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="transcript_summary")
     result = parse_summary_json(raw, "transcript")
@@ -371,7 +376,7 @@ Rules:
 {minutes_text[:40000]}
 --- END ---"""
 
-    raw = call_claude(model=CLAUDE_MODEL, max_tokens=4096, prompt=prompt,
+    raw = call_claude(model=CLAUDE_MODEL, max_tokens=RECORD_MAX_TOKENS, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="minutes_summary")
     return parse_summary_json(raw, "minutes")

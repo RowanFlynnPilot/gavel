@@ -51,6 +51,10 @@ INJECTED_FILE = Path(os.environ.get("INJECTED_FILE", "./injected_meetings.json")
 DATA_DIR = Path(os.environ.get("DATA_DIR", "./data"))
 MEETINGS_JSON = DATA_DIR / "meetings.json"
 UPCOMING_JSON = DATA_DIR / "upcoming.json"
+# Meeting records rebuilt this run that are too old for the displayed list;
+# publish queues them here and pages rewrites their archive pages, then
+# removes the file.
+ARCHIVE_UPDATES_JSON = DATA_DIR / "archive_updates.json"
 COSTS_JSON = DATA_DIR / "costs.json"
 INSTANCE_JSON = Path(os.environ.get("INSTANCE_JSON", "./instance.json"))
 # The public log of fixes (engine.scrub re-applies it every run).

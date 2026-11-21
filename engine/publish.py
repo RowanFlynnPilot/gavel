@@ -20,7 +20,8 @@ import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from .config import InstanceConfig, MEETINGS_JSON, STATE_FILE, VOTE_ADAPTERS
+from .config import (ARCHIVE_UPDATES_JSON, InstanceConfig, MEETINGS_JSON, STATE_FILE,
+                     VOTE_ADAPTERS)
 from .state import load_injected, load_state, save_injected
 
 logger = logging.getLogger(__name__)
@@ -337,6 +338,22 @@ def _title_is_future(info: dict) -> bool:
     return False
 
 
+def queue_archive_updates(path: Path, entries: list[dict]) -> None:
+    """Add meeting records to the archive-page queue (newest record per ID
+    wins). Publish can run more than once before pages does, so this merges."""
+    queued: dict[str, dict] = {}
+    if path.exists():
+        try:
+            queued = {m["id"]: m for m in json.loads(path.read_text(encoding="utf-8"))
+                      if isinstance(m, dict) and m.get("id")}
+        except (json.JSONDecodeError, TypeError):
+            logger.warning("%s is not a valid queue; starting it over", path)
+    for e in entries:
+        queued[e["id"]] = {**e, "badge": None}
+    path.write_text(json.dumps(list(queued.values()), indent=2, ensure_ascii=False) + "\n",
+                    encoding="utf-8")
+
+
 def publish(cfg: InstanceConfig, data_path: Path | None = None) -> int:
     """Rebuild data/meetings.json from state + sidecars. Returns the number
     of newly built entries."""
@@ -445,6 +462,16 @@ def publish(cfg: InstanceConfig, data_path: Path | None = None) -> int:
         n = len(combined) - cfg.max_meetings
         combined = combined[:cfg.max_meetings]
         print(f"   [prune] pruned {n} old meeting(s) (kept {cfg.max_meetings})")
+
+    # An entry built this run that is too old for the displayed list (a
+    # re-summarized or backfilled meeting) never reaches engine.pages through
+    # meetings.json, so its archive page would keep the old text. Queue it;
+    # engine.pages rewrites those pages and clears the queue.
+    shown = {m["id"] for m in combined}
+    off_list = [e for e in new_entries if e["id"] not in shown and not _is_future(e)]
+    if off_list:
+        queue_archive_updates(data_path.parent / ARCHIVE_UPDATES_JSON.name, off_list)
+        print(f"   [archive] queued {len(off_list)} rebuilt meeting(s) for their archive pages")
 
     # Badge sweep: only this run's new entries keep badge=new. (badge=null
     # instead of a missing key keeps the JSON diff minimal between runs.)

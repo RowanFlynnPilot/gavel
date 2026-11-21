@@ -47,6 +47,13 @@ class TranscriptAuthError(Exception):
         super().__init__(f"[{jurisdiction}] transcript auth failure: {detail}")
 
 
+class TruncatedResponseError(Exception):
+    """Claude stopped at max_tokens. Every prompt here asks for one JSON
+    object, and a cut-off object is unusable: before this error existed the
+    reference instance published four summaries whose "overview" was 16,000
+    characters of raw, unfinished JSON."""
+
+
 class UnknownModelPricingError(Exception):
     """An Anthropic call used a model with no pricing entry in costs.py —
     the cost ledger would silently under-report, so refuse to proceed."""

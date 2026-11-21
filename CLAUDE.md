@@ -352,6 +352,12 @@ caption retry (14 days), BoardBook recording match
 
 ## Failure semantics (binding)
 - Unknown adapter / invalid config → ConfigError at startup, exit non-zero.
+- Claude stopped at max_tokens → TruncatedResponseError from `call_claude`
+  (after the cost is ledgered). A cut-off JSON answer is never parsed or
+  published. Transcript and minutes summaries get `RECORD_MAX_TOKENS` (8192).
+- A meeting rebuilt this run that is too old for the displayed list (a
+  `resummarize` or a backfill) is queued in `data/archive_updates.json` by
+  publish; `engine.pages` rewrites its archive page and removes the queue.
 - Scrape page fetched OK but zero rows matched → AdapterStructureError
   (HTML drift must never read as "no new meetings"). Other jurisdictions
   still complete; pipeline exits 1 AFTER writing outputs.

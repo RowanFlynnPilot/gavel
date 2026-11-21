@@ -31,7 +31,8 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
 
-from .config import MEETINGS_JSON, InstanceConfig, load_instance, setup_logging
+from .config import (ARCHIVE_UPDATES_JSON, MEETINGS_JSON, InstanceConfig, load_instance,
+                     setup_logging)
 
 E = html.escape
 
@@ -185,6 +186,30 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
 """
 
 
+def render_archive_updates(cfg: InstanceConfig, pages_dir: Path, base_url: str, noindex: bool,
+                           queue: Path, displayed_ids: set) -> int:
+    """Rewrite the archive pages of meetings publish rebuilt but could not
+    display (re-summarized or backfilled meetings older than the displayed
+    list), then clear the queue. Returns the number of pages written."""
+    if not queue.exists():
+        return 0
+    try:
+        records = json.loads(queue.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        records = []
+    written = 0
+    for m in records if isinstance(records, list) else []:
+        mid = m.get("id", "") if isinstance(m, dict) else ""
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", mid) or mid in displayed_ids:
+            continue
+        d = pages_dir / mid
+        d.mkdir(exist_ok=True)
+        (d / "index.html").write_text(render_page(cfg, m, base_url, noindex), encoding="utf-8")
+        written += 1
+    queue.unlink()
+    return written
+
+
 def main() -> None:
     setup_logging()
     ap = argparse.ArgumentParser(description="Render static meeting pages + sitemap.")
@@ -213,6 +238,12 @@ def main() -> None:
         (d / "index.html").write_text(render_page(cfg, m, base_url, noindex),
                                       encoding="utf-8")
         written += 1
+
+    rewritten = render_archive_updates(
+        cfg, pages_dir, base_url, noindex,
+        Path(MEETINGS_JSON).parent / ARCHIVE_UPDATES_JSON.name, {m.get("id") for m in meetings})
+    if rewritten:
+        print(f"[pages] rewrote {rewritten} archive page(s) for rebuilt meetings")
 
     refreshed = refresh_archive_footers(cfg, pages_dir, base_url)
     if refreshed:
