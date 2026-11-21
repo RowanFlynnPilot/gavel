@@ -17,14 +17,14 @@
     "tracker_page_url": "https://wausaupilotandreview.com/central-wisconsin-meeting-tracker/",
     "ics_uid_domain": "marathon-meetings",
     "calendar_name": "Central Wisconsin Government Meetings",
-    "calendar_description": "Upcoming public meetings for Marathon County, Wausau, Weston, Kronenwetter, Mosinee, Rothschild and area school boards - from the Wausau Pilot & Review Meeting Tracker.",
+    "calendar_description": "Upcoming public meetings for Marathon County, Wausau, Weston, Kronenwetter, Mosinee, Rothschild, the Village of Maine and area school boards - from the Wausau Pilot & Review Meeting Tracker.",
     "corrections_email": "editor@wausaupilotandreview.com",
     "tagline": "MORE NEWS. LESS FLUFF. ALL LOCAL."
   },
   "seo": {
     "pages_base_url": "https://rowanflynnpilot.github.io/gavel",
     "noindex": true,
-    "description": "AI-assisted summaries of Marathon County, Wausau, Weston, Kronenwetter, Mosinee, Rothschild and area school board meetings: agendas, votes and documents in one place.",
+    "description": "AI-assisted summaries of Marathon County, Wausau, Weston, Kronenwetter, Mosinee, Rothschild, the Village of Maine and area school board meetings: agendas, votes and documents in one place.",
     "og_image": "assets/og-image.jpg",
     "favicon": "assets/favicon.png",
     "touch_icon": "assets/apple-touch-icon.png"
@@ -673,6 +673,42 @@
       ],
       "calendar_url": "https://www.rothschildwi.com/calendar.php",
       "expected_lag_days": 55
+    },
+    {
+      "key": "maine",
+      "name": "Village of Maine",
+      "filter_label": "Village of Maine",
+      "short": "VILLAGE",
+      "start_date": "2026-11-01",
+      "accent": "#1F5673",
+      "monogram": "MA",
+      "doc_host": "villageofmaine.org",
+      "video": null,
+      "agendas": {
+        "adapter": "townweb",
+        "fetch_from": "residential",
+        "base": "https://villageofmaine.org",
+        "portal": "https://villageofmaine.org/agendas-minutes/",
+        "minutes_upgrade_window_days": 90,
+        "days_ahead": 60
+      },
+      "title_strip_patterns": [],
+      "committee_map": {
+        "board of trustees": "Board of Trustees",
+        "plan commission": "Plan Commission",
+        "municipal projects": "Municipal Projects & Public Property",
+        "finance": "Finance"
+      },
+      "officials": [
+        "Judith Hase (Village President)",
+        "Wes Schoepke (Trustee)",
+        "Bruce Reynolds (Trustee)",
+        "Ben Seidler (Trustee)",
+        "Dan Brandenburg (Trustee)",
+        "Jamie Heindl (Village Clerk)"
+      ],
+      "calendar_url": "https://villageofmaine.org/events/",
+      "expected_lag_days": 45
     }
   ],
   "committee_styles": {
