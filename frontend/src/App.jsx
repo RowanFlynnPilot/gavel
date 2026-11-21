@@ -76,6 +76,39 @@ function _darkenHex(hex, factor) {
   return "#" + [c(0), c(2), c(4)].map(v => v.toString(16).padStart(2, "0")).join("");
 }
 
+// WCAG 2 relative luminance of "#rgb" / "#rrggbb"; null for anything else.
+function _luminance(hex) {
+  let n = (hex || "").trim().replace("#", "");
+  if (/^[0-9a-f]{3}$/i.test(n)) n = n.replace(/./g, "$&$&");
+  if (!/^[0-9a-f]{6}$/i.test(n)) return null;
+  const lin = (i) => {
+    const v = parseInt(n.slice(i, i + 2), 16) / 255;
+    return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+  };
+  return 0.2126 * lin(0) + 0.7152 * lin(2) + 0.0722 * lin(4);
+}
+
+// WCAG contrast ratio (1 to 21) of two hex colours; null if either isn't hex.
+function _contrast(a, b) {
+  const la = _luminance(a), lb = _luminance(b);
+  if (la === null || lb === null) return null;
+  return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+
+// Initials for a jurisdiction drawn without a logo image: its `monogram`
+// (1-3 characters) when set, else the first letter of each of the first two
+// words of its chip label after a leading "City of" / "Village of" /
+// "Town of" / "County of" ("Village of Rib Mountain" → "RM", "Mosinee" → "M").
+function _monogramText(j) {
+  const set = typeof j.monogram === "string" ? j.monogram.trim() : "";
+  if (set) return Array.from(set).slice(0, 3).join("");
+  return (j.filter_label || j.name || "").trim()
+    .replace(/^(city|village|town|county)\s+of\s+/i, "")
+    .split(/\s+/)
+    .map(w => (w.match(/[\p{L}\p{N}]/u) || [""])[0])
+    .filter(Boolean).slice(0, 2).join("").toUpperCase();
+}
+
 function _isMonoFont(name) {
   return !name || name.trim().toLowerCase() === "monospace";
 }
@@ -223,7 +256,12 @@ function _applyConfig(config, meetings, upcoming) {
       portalFirst: !(j.video && j.video.channel_url)
         && _PORTAL_ADAPTERS.includes(j.agendas && j.agendas.adapter),
       docHost: j.doc_host,
-      avatar:  BASE_URL + j.avatar,
+      // No image (or one that fails to load) and <SourceAvatar> draws the
+      // monogram: initials on the accent. The initials are white unless the
+      // accent is too light for white (under 3:1, WCAG AA large text); then ink.
+      avatar:        j.avatar ? BASE_URL + j.avatar : null,
+      monogram:      _monogramText(j),
+      monogramColor: (_contrast("#ffffff", j.accent) ?? 21) < 3 ? THEME.ink : "#fff",
     };
   }
 
@@ -236,12 +274,11 @@ function _applyConfig(config, meetings, upcoming) {
   // instance shorten chip labels ("Wausau" vs "City of Wausau") for parity
   // with production's hand-tuned list.
   FILTER_OPTIONS = [
-    { key: "all", label: "All Sources", color: INK_RAW, avatar: null },
+    { key: "all", label: "All Sources", color: INK_RAW },
     ...JURISDICTIONS.map(j => ({
       key:    j.key,
       label:  j.filter_label || j.name,
       color:  j.accent,
-      avatar: BASE_URL + j.avatar,
     })),
   ];
 
@@ -396,6 +433,57 @@ function getCommitteeStyle(committee) {
       || { bg: "#555", text: "#fff" };
 }
 
+// A jurisdiction's avatar: its logo image or, when it has none or the image
+// fails to load, a monogram (a circle in its accent with its initials in the
+// label face). `source` is the jurisdiction key; `label` is the accessible
+// name, the text the image carries as `alt`. Each call site passes its own
+// size and the styles that differ between them (border, opacity, shadow).
+const _MONOGRAM_FONT_SIZE = { 1: 68, 2: 60, 3: 48 }; // by character count, in a 100-unit circle
+const _LABEL_CAP_HEIGHT   = 0.7;                     // em; Bebas Neue, and near enough for most sans faces
+
+function SourceAvatar({ source, label, size, style, ...rest }) {
+  const sc = SOURCE_CONFIG[source];
+  const [failedSrc, setFailedSrc] = useState(null);
+  const circle = { width: size, height: size, borderRadius: "50%" };
+
+  if (sc.avatar && failedSrc !== sc.avatar) {
+    return (
+      <img
+        src={sc.avatar}
+        alt={label}
+        onError={() => setFailedSrc(sc.avatar)}
+        style={{ ...circle, objectFit: "cover", ...style }}
+        {...rest}
+      />
+    );
+  }
+
+  // Drawn as SVG so the capitals are centred on the circle by their own height
+  // (baseline = centre + half the cap height). Centring an HTML line box
+  // instead leaves them about a pixel high at the 16-22px sizes.
+  const fontSize = _MONOGRAM_FONT_SIZE[Array.from(sc.monogram).length] || 60;
+  return (
+    <svg
+      role="img"
+      aria-label={label}
+      viewBox="0 0 100 100"
+      style={{
+        ...circle,
+        background: sc.accent, color: sc.monogramColor,
+        fontFamily: FONT_DISPLAY, userSelect: "none",
+        ...style,
+      }}
+      {...rest}
+    >
+      <text
+        aria-hidden="true"
+        x="50" y={50 + (_LABEL_CAP_HEIGHT / 2) * fontSize}
+        textAnchor="middle" fontSize={fontSize} fill="currentColor"
+      >{sc.monogram}</text>
+    </svg>
+  );
+}
+
 function MeetingCard({ meeting, parts, onClick, active }) {
   const cs  = getCommitteeStyle(meeting.committee);
   const src = SOURCE_CONFIG[meeting.source];
@@ -494,14 +582,11 @@ function MeetingCard({ meeting, parts, onClick, active }) {
               fontSize: "13px", fontWeight: 700, color: INK,
               lineHeight: 1.25, flex: 1, minWidth: 0,
             }}>{title}</div>
-            <img
-              src={src.avatar}
-              alt={src.label}
-              onError={e => { e.currentTarget.style.visibility = "hidden"; }}
+            <SourceAvatar
+              source={meeting.source}
+              label={src.label}
+              size={22}
               style={{
-                width: "22px", height: "22px",
-                borderRadius: "50%",
-                objectFit: "cover",
                 flexShrink: 0,
                 border: `1.5px solid ${src.accent}`,
                 opacity: active || hov ? 1 : 0.75,
@@ -577,6 +662,9 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
   const src = SOURCE_CONFIG[meeting.source];
   const parts  = PARTS_BY_ID[meeting.id];
   const closed = isClosedSession(meeting);
+  // Room the avatar and its ring take in the header's top-right corner, plus
+  // a gap. Rows that sit beside the avatar stop this far short of the edge.
+  const avatarClear = isMobile ? "64px" : "88px";
 
   const hasCivic = !!(meeting.civicItems && meeting.civicItems.length);
   // Structured votes extracted from transcripts/minutes (non-CivicClerk
@@ -626,7 +714,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
           )}
 
 
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px", flexWrap: "wrap", paddingRight: avatarClear }}>
             <span style={{
               background: src.accent,
               fontFamily: FONT_DISPLAY,
@@ -664,7 +752,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
           </div>
 
           {parts && (
-            <div role="group" aria-label="Meeting parts" style={{ display: "flex", gap: "6px", marginBottom: "10px", flexWrap: "wrap" }}>
+            <div role="group" aria-label="Meeting parts" style={{ display: "flex", gap: "6px", marginBottom: "10px", flexWrap: "wrap", marginRight: isMobile ? 0 : avatarClear }}>
               {parts.map(p => {
                 const on = p.id === meeting.id;
                 return (
@@ -686,6 +774,9 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
             <div style={{
               background: "#FFF8E7", borderLeft: "3px solid #D4A017",
               padding: "8px 12px", marginBottom: "10px",
+              // On wide layouts this note sits beside the avatar; on compact
+              // ones the badge row above pushes it below.
+              marginRight: isMobile ? 0 : avatarClear,
               fontFamily: "'Source Sans 3', 'Source Sans Pro', sans-serif",
               fontSize: "12px", color: "#6B5A1E", lineHeight: 1.4,
             }}>
@@ -707,24 +798,21 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
               top: isMobile ? "12px" : "16px",
               right: isMobile ? "14px" : "24px",
               lineHeight: 0, display: "block", zIndex: 2,
+              textDecoration: "none", // a monogram is text; no link underline through it
             }}
           >
-            <img
-              src={src.avatar}
-              alt={src.label}
+            <SourceAvatar
+              source={meeting.source}
+              label={src.label}
+              size={isMobile ? 56 : 80}
               style={{
-                width: isMobile ? "56px" : "80px",
-                height: isMobile ? "56px" : "80px",
-                borderRadius: "50%",
                 border: `2px solid ${src.accent}`,
-                objectFit: "cover",
                 display: "block",
                 boxShadow: `0 0 0 3px #fff, 0 0 0 5px ${src.accent}`,
                 transition: "transform 0.15s, box-shadow 0.15s",
               }}
-              onMouseEnter={e => { e.target.style.transform="scale(1.08)"; e.target.style.boxShadow=`0 0 0 3px #fff, 0 0 0 6px ${src.accent}`; }}
-              onMouseLeave={e => { e.target.style.transform="scale(1)";    e.target.style.boxShadow=`0 0 0 3px #fff, 0 0 0 5px ${src.accent}`; }}
-              onError={e => { e.currentTarget.style.visibility = "hidden"; }}
+              onMouseEnter={e => { e.currentTarget.style.transform="scale(1.08)"; e.currentTarget.style.boxShadow=`0 0 0 3px #fff, 0 0 0 6px ${src.accent}`; }}
+              onMouseLeave={e => { e.currentTarget.style.transform="scale(1)";    e.currentTarget.style.boxShadow=`0 0 0 3px #fff, 0 0 0 5px ${src.accent}`; }}
             />
           </a>
 
@@ -1515,7 +1603,7 @@ function UpcomingMeetings({ isMobile }) {
 
 
         <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "10px" }}>
-          {FILTER_OPTIONS.map(({ key, label, color, avatar }) => {
+          {FILTER_OPTIONS.map(({ key, label, color }) => {
             const active = upFilter === key;
             return (
               <button
@@ -1539,15 +1627,12 @@ function UpcomingMeetings({ isMobile }) {
                   whiteSpace:    "nowrap",
                 }}
               >
-                {avatar && (
-                  <img
-                    src={avatar}
-                    alt={label}
-                    onError={e => { e.currentTarget.style.visibility = "hidden"; }}
+                {key !== "all" && (
+                  <SourceAvatar
+                    source={key}
+                    label={label}
+                    size={18}
                     style={{
-                      width: "18px", height: "18px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
                       flexShrink: 0,
                       opacity: active ? 1 : 0.7,
                       border: active ? "1.5px solid rgba(255,255,255,0.5)" : "1.5px solid transparent",
@@ -1701,21 +1786,20 @@ function UpcomingMeetings({ isMobile }) {
                             onMouseLeave={e => { if (!isOpen) e.currentTarget.style.background = "#fff"; }}
                           >
 
-                            <img
-                              src={src.avatar}
-                              alt={src.label}
-                              onError={e => { e.currentTarget.style.visibility = "hidden"; }}
+                            <SourceAvatar
+                              source={ev.source}
+                              label={src.label}
+                              size={28}
                               style={{
-                                width: "28px", height: "28px",
-                                borderRadius: "50%",
-                                objectFit: "cover",
                                 flexShrink: 0,
                                 border: `1.5px solid ${src.accent}`,
                               }}
                             />
 
 
-                            <div style={{ flex: 1, minWidth: 0 }}>
+                            {/* paddingRight keeps the name clear of the + CAL
+                                button, which is positioned over this row. */}
+                            <div style={{ flex: 1, minWidth: 0, paddingRight: "48px" }}>
                               <div id={nameId} style={{
                                 fontFamily: FONT_HEADLINE,
                                 fontSize: "13px", fontWeight: 600,
@@ -2288,7 +2372,7 @@ function Tracker() {
               <div style={{ padding: "12px 14px 10px", borderBottom: `2px solid ${RULE}`, background: CREAM }}>
                 <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.18em", color: "#5a5a5a", marginBottom: "10px" }}>RECENT MEETINGS</div>
                 <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
-                  {FILTER_OPTIONS.map(({ key, label, color, avatar }) => {
+                  {FILTER_OPTIONS.map(({ key, label, color }) => {
                     const active = sourceFilter === key;
                     return (
                       <button
@@ -2311,15 +2395,12 @@ function Tracker() {
                           whiteSpace:    "nowrap",
                         }}
                       >
-                        {avatar && (
-                          <img
-                            src={avatar}
-                            alt={label}
-                            onError={e => { e.currentTarget.style.visibility = "hidden"; }}
+                        {key !== "all" && (
+                          <SourceAvatar
+                            source={key}
+                            label={label}
+                            size={16}
                             style={{
-                              width: "16px", height: "16px",
-                              borderRadius: "50%",
-                              objectFit: "cover",
                               flexShrink: 0,
                               opacity: active ? 1 : 0.75,
                               border: active ? "1px solid rgba(255,255,255,0.5)" : "1px solid transparent",
