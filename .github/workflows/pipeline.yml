@@ -311,6 +311,14 @@ jobs:
         with:
           path: './frontend/dist'
 
+      - name: Let the Pages artifact register
+        # deploy-pages looks the artifact up through the API the moment it
+        # starts, and an artifact finalized under a second earlier is often
+        # not listed yet: three production runs in a row needed the second
+        # attempt below (Nov. 20-21, 2026). A short wait makes the first one work.
+        if: github.ref == 'refs/heads/main'
+        run: sleep 20
+
       - name: Deploy to GitHub Pages
         id: deployment
         if: github.ref == 'refs/heads/main'
