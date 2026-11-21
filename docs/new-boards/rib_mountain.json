@@ -1,0 +1,106 @@
+{
+  "key": "rib_mountain",
+  "name": "Village of Rib Mountain",
+  "filter_label": "Rib Mountain",
+  "short": "VILLAGE",
+  "accent": "#2E5A88",
+  "doc_host": "www.ribmountainwi.gov",
+  "avatar": "assets/avatars/rib_mountain-avatar.jpg",
+  "video": null,
+  "agendas": {
+    "adapter": "revize",
+    "portal": "https://www.ribmountainwi.gov/government/meetings/index.php",
+    "pages": [
+      {
+        "body": "Village Board",
+        "url": "https://www.ribmountainwi.gov/government/meetings/town_board.php"
+      },
+      {
+        "body": "Plan Commission",
+        "url": "https://www.ribmountainwi.gov/government/meetings/plan_commission.php"
+      },
+      {
+        "body": "Park Commission",
+        "url": "https://www.ribmountainwi.gov/government/meetings/park_commission.php"
+      },
+      {
+        "body": "Finance & Economic Committee",
+        "url": "https://www.ribmountainwi.gov/government/meetings/finance___personnel_committee.php"
+      },
+      {
+        "body": "Public Works Committee",
+        "url": "https://www.ribmountainwi.gov/government/meetings/public_works_committee.php"
+      },
+      {
+        "body": "Public Safety Committee",
+        "url": "https://www.ribmountainwi.gov/government/meetings/public_safety_committee.php"
+      },
+      {
+        "body": "Pedestrian & Bicycle Safety Subcommittee",
+        "url": "https://www.ribmountainwi.gov/government/meetings/pedestrian___bicycle_safety_subcommittee.php"
+      },
+      {
+        "body": "Tourism Commission",
+        "url": "https://www.ribmountainwi.gov/government/meetings/tourism_commission.php"
+      },
+      {
+        "body": "Joint Review Board",
+        "url": "https://www.ribmountainwi.gov/government/meetings/joint_review_board.php"
+      }
+    ],
+    "minutes_upgrade_window_days": 120,
+    "days_ahead": 45,
+    "fallback_rules": [
+      {
+        "name": "Village Board Regular Meeting",
+        "weekday": 1,
+        "nth": 1,
+        "time": "6:00 PM",
+        "url": "https://www.ribmountainwi.gov/government/meetings/town_board.php"
+      },
+      {
+        "name": "Village Board Regular Meeting",
+        "weekday": 1,
+        "nth": 3,
+        "time": "6:00 PM",
+        "url": "https://www.ribmountainwi.gov/government/meetings/town_board.php"
+      },
+      {
+        "name": "Plan Commission Regular Meeting",
+        "weekday": 2,
+        "nth": 2,
+        "time": "5:00 PM",
+        "url": "https://www.ribmountainwi.gov/government/meetings/plan_commission.php"
+      },
+      {
+        "name": "Park Commission Regular Meeting",
+        "weekday": 0,
+        "nth": 2,
+        "time": "5:00 PM",
+        "url": "https://www.ribmountainwi.gov/government/meetings/park_commission.php"
+      }
+    ]
+  },
+  "title_strip_patterns": [],
+  "committee_map": {
+    "joint review board": "Joint Review Board",
+    "board of review": "Board of Review",
+    "village board": "Village Board",
+    "plan commission": "Plan Commission",
+    "park commission": "Park Commission",
+    "finance & economic": "Finance & Economic",
+    "public works committee": "Public Works",
+    "public safety committee": "Public Safety",
+    "pedestrian & bicycle": "Pedestrian & Bicycle Safety",
+    "tourism commission": "Tourism Commission"
+  },
+  "officials": [
+    "Allen Opall (Village President)",
+    "Fred Schaefer (Trustee)",
+    "Gerry Klein (Trustee)",
+    "Cory Sillars (Trustee)",
+    "Barb Newton (Trustee)"
+  ],
+  "calendar_url": "https://www.ribmountainwi.gov/government/meetings/index.php",
+  "expected_lag_days": 45
+}
