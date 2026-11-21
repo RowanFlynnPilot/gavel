@@ -17,14 +17,14 @@
     "tracker_page_url": "https://wausaupilotandreview.com/central-wisconsin-meeting-tracker/",
     "ics_uid_domain": "marathon-meetings",
     "calendar_name": "Central Wisconsin Government Meetings",
-    "calendar_description": "Upcoming public meetings for Marathon County, Wausau, Weston, Kronenwetter, and area school boards - from the Wausau Pilot & Review Meeting Tracker.",
+    "calendar_description": "Upcoming public meetings for Marathon County, Wausau, Weston, Kronenwetter, Mosinee, Rothschild and area school boards - from the Wausau Pilot & Review Meeting Tracker.",
     "corrections_email": "editor@wausaupilotandreview.com",
     "tagline": "MORE NEWS. LESS FLUFF. ALL LOCAL."
   },
   "seo": {
     "pages_base_url": "https://rowanflynnpilot.github.io/gavel",
     "noindex": true,
-    "description": "AI-assisted summaries of Marathon County, Wausau, Weston, Kronenwetter and area school board meetings: agendas, votes and documents in one place.",
+    "description": "AI-assisted summaries of Marathon County, Wausau, Weston, Kronenwetter, Mosinee, Rothschild and area school board meetings: agendas, votes and documents in one place.",
     "og_image": "assets/og-image.jpg",
     "favicon": "assets/favicon.png",
     "touch_icon": "assets/apple-touch-icon.png"
