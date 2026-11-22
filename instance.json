@@ -5,7 +5,7 @@
     "newsroom_url": "https://wausaupilotandreview.com",
     "region": "the Wausau, Wisconsin area",
     "timezone": "America/Chicago",
-    "max_meetings": 50,
+    "max_meetings": 80,
     "date_cutoff": "20260428",
     "skip_ids": [
       "eIjwnwe6aBE",
