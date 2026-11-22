@@ -103,7 +103,11 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
     for v in (m.get("votes") or []):
         who = " · ".join(x for x in [
             f"Moved by {v['mover']}" if v.get("mover") else "",
-            f"Seconded by {v['second']}" if v.get("second") else ""] if x)
+            f"Seconded by {v['second']}" if v.get("second") else "",
+            # Named only where the record says who (summarize.member_vote_rules).
+            f"Voted no: {', '.join(v['no'])}" if isinstance(v.get("no"), list) and v["no"] else "",
+            f"Abstained: {', '.join(v['abstain'])}"
+            if isinstance(v.get("abstain"), list) and v["abstain"] else ""] if x)
         votes_rows += (
             f"<li><strong>{E(v.get('item', ''))}</strong> — "
             f"{E(v.get('outcome', ''))}{(' ' + E(v['tally'])) if v.get('tally') else ''}"

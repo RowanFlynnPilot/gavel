@@ -309,7 +309,7 @@ def main() -> None:
     print(f"\n[claude] Summarizing from transcript ({len(transcript):,} chars)...")
     summary = summarize.summarize_meeting(
         transcript, title, url, org_label=jur.name, region=cfg.region,
-        jurisdiction=source_key, meeting_id=vid_id, officials=jur.officials,
+        issues=cfg.issues, jurisdiction=source_key, meeting_id=vid_id, officials=jur.officials,
         meeting_date=meeting_date or upload_date)
     if not summary:
         print("Error: Claude returned no summary.")

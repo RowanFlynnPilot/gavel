@@ -359,6 +359,30 @@ class InstanceConfig:
         if not isinstance(self.place_names, list) or \
                 not all(isinstance(p, str) and p.strip() for p in self.place_names):
             raise ConfigError("instance.json: 'place_names' must be a list of non-empty strings")
+        # Optional: the newsroom's fixed list of issues. Every summary and
+        # agenda preview is filed under up to three of them (`issues` on the
+        # record), which is what alerts "by issue" subscribe to. The free-form
+        # `topics` tags are not it: they almost never repeat. Absent = no
+        # issues asked for.
+        self.issues: list[dict] = raw.get("issues", [])
+        if not isinstance(self.issues, list):
+            raise ConfigError("instance.json: 'issues' must be a list")
+        for i, issue in enumerate(self.issues):
+            ictx = f"instance.json: issues[{i}]"
+            if not isinstance(issue, dict):
+                raise ConfigError(f"{ictx} must be an object")
+            key = _require(issue, "key", ictx)
+            if not isinstance(key, str) or not re.fullmatch(r"[a-z][a-z0-9_]*", key):
+                raise ConfigError(f"{ictx}: 'key' must be lowercase letters, digits and "
+                                  f"underscores, got {key!r}")
+            for field in ("label", "about"):
+                value = _require(issue, field, ictx) if field == "label" else issue.get(field, "")
+                if not isinstance(value, str) or (field == "label" and not value.strip()):
+                    raise ConfigError(f"{ictx}: '{field}' must be "
+                                      f"{'a non-empty string' if field == 'label' else 'a string'}")
+        issue_keys = [i["key"] for i in self.issues]
+        if len(issue_keys) != len(set(issue_keys)):
+            raise ConfigError(f"instance.json: duplicate issue keys in {issue_keys}")
 
         jur_raw = _require(raw, "jurisdictions", "top level")
         if not isinstance(jur_raw, list) or not jur_raw:

@@ -1408,6 +1408,16 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
                     {v.mover ? `Moved by ${v.mover}` : ""}{v.mover && v.second ? " · " : ""}{v.second ? `Seconded by ${v.second}` : ""}
                   </div>
                 )}
+                {/* Who voted no or abstained: only where the record names them. */}
+                {[["Voted no", v.no], ["Abstained", v.abstain]].map(([label, names]) =>
+                  Array.isArray(names) && names.length > 0 && (
+                    <div key={label} style={{ fontFamily: FONT_BODY, fontSize: "12.5px", color: "#444", marginTop: "6px" }}>
+                      <span style={{ fontFamily: FONT_DISPLAY, fontSize: "11px", letterSpacing: "0.1em", color: "#5a5a5a" }}>
+                        {label.toUpperCase()}:
+                      </span>{" "}
+                      {names.join(", ")}
+                    </div>
+                  ))}
               </div>
             ))}
           </>

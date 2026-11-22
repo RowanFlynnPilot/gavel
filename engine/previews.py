@@ -36,7 +36,8 @@ from .adapters import for_jurisdiction, get_adapter
 from .portal_cache import is_residential
 from .claude import call_claude
 from .config import CLAUDE_MODEL_AGENDA, InstanceConfig, UPCOMING_JSON
-from .summarize import RESIDENT_PRIVACY_RULES
+from .summarize import (PLAIN_LANGUAGE_RULES, RESIDENT_PRIVACY_RULES, clean_issues,
+                        issues_block, issues_field)
 
 logger = logging.getLogger(__name__)
 
@@ -50,7 +51,7 @@ MIN_AGENDA_CHARS = 200
 MAX_AGENDA_CHARS = int(os.environ.get("PREVIEW_MAX_AGENDA_CHARS", "30000"))
 # Part of every cached agenda hash: bump it when the prompt changes in a way
 # that should rewrite previews already cached (still capped per meeting).
-PROMPT_VERSION = "2"
+PROMPT_VERSION = "3"
 ACTIONS = ("vote", "hearing", "discussion", "report")
 
 
@@ -174,7 +175,7 @@ Below is the posted agenda for an UPCOMING public meeting. Nothing on it has hap
 
 Meeting: {entry['name']}
 Body: {jur.name}
-When: {when}
+When: {when}{issues_block(cfg.issues)}
 
 Return a JSON object with this exact structure and nothing else - no markdown, no preamble:
 
@@ -183,9 +184,11 @@ Return a JSON object with this exact structure and nothing else - no markdown, n
   "items": [
     {{"item": "the agenda item in plain language, 12 words or fewer", "why": "one sentence: what it is and what the body is being asked to do", "action": "vote | hearing | discussion | report"}}
   ],
-  "publicComment": true,
+  {issues_field(cfg.issues)}"publicComment": true,
   "closedSession": false
 }}
+
+{PLAIN_LANGUAGE_RULES}
 
 Rules:
 - items: at most 6, the most consequential first, drawn from the WHOLE agenda: new business, unfinished business and reports usually come after long consent and policy lists. Skip procedural items (call to order, roll call, approval of minutes, adjournment). Policy readings, budgets, contracts, hires, studies and course or program proposals are not procedural; group a long list of them into one item ("Second reading of 44 district policies"). An empty list is right only when the agenda has nothing but procedure; say so in the overview.
@@ -193,7 +196,7 @@ Rules:
 - publicComment: true only if the agenda lists a public comment period or a public hearing where residents can speak.
 - closedSession: true only if the agenda lists a closed or executive session.
 - Use ONLY what the agenda says. Do not predict outcomes. Do not invent dollar amounts, names, or background the agenda does not give.
-- Write for a resident, not an insider: spell out what an ordinance, resolution or permit would do when the agenda says.
+- Spell out what an ordinance, resolution or permit would do when the agenda says.
 - {RESIDENT_PRIVACY_RULES}
 
 --- AGENDA ---
@@ -201,8 +204,9 @@ Rules:
 --- END{" (agenda cut off here for length; say the preview covers the first part only)" if len(agenda_text) > MAX_AGENDA_CHARS else ""} ---"""
 
 
-def parse_preview(raw: str) -> dict | None:
-    """Validate Claude's reply into a preview, or None when it isn't one."""
+def parse_preview(raw: str, issues: list[dict] | None = None) -> dict | None:
+    """Validate Claude's reply into a preview, or None when it isn't one.
+    `issues` is the instance's issue list; keys not on it are dropped."""
     raw = re.sub(r"^```(?:json)?\s*", "", raw.strip())
     raw = re.sub(r"\s*```$", "", raw)
     try:
@@ -222,12 +226,15 @@ def parse_preview(raw: str) -> dict | None:
             "why": str(it.get("why") or "").strip(),
             "action": action if action in ACTIONS else "discussion",
         })
-    return {
+    preview = {
         "overview": data["overview"].strip(),
         "items": items[:6],
         "publicComment": data.get("publicComment") is True,
         "closedSession": data.get("closedSession") is True,
     }
+    if issues:
+        preview["issues"] = clean_issues(data.get("issues"), issues)
+    return preview
 
 
 def _due(entry: dict, today: date) -> bool:
@@ -242,7 +249,7 @@ def _write_one(cfg: InstanceConfig, entry: dict, key: str, text: str) -> dict | 
     raw = call_claude(model=CLAUDE_MODEL_AGENDA, max_tokens=1500,
                       prompt=build_prompt(cfg, entry, text), meeting_id=key,
                       jurisdiction=entry["source"], purpose="agenda_preview")
-    return parse_preview(raw)
+    return parse_preview(raw, cfg.issues)
 
 
 def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,

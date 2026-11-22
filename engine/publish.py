@@ -299,6 +299,17 @@ def build_meeting(cfg: InstanceConfig, video_id: str, info: dict,
             and not is_agenda_only:
         meeting["publicCommentSpeakers"] = speakers
 
+    # The instance's fixed issues this meeting is filed under, and who was at
+    # the table, where the summary has them (summaries made before the prompts
+    # asked carry neither, and the keys are left off).
+    issues = summary.get("issues")
+    if isinstance(issues, list) and issues:
+        meeting["issues"] = issues
+    attendance = summary.get("attendance")
+    if isinstance(attendance, dict) and not is_agenda_only \
+            and (attendance.get("present") or attendance.get("absent")):
+        meeting["attendance"] = attendance
+
     if civic_data and jur.agendas_adapter in VOTE_ADAPTERS:
         items = civic_data.get("items", [])
         if items:

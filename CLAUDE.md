@@ -165,7 +165,7 @@ still get their votes from the model alone.
 
 The normal pipeline run attaches a `preview` to upcoming meetings in the next
 `PREVIEW_DAYS` (8) whose agenda is posted: `{overview, items: [{item, why,
-action: vote|hearing|discussion|report}], publicComment, closedSession,
+action: vote|hearing|discussion|report}], issues?, publicComment, closedSession,
 generated}`, one Haiku call each (`purpose=agenda_preview`), through
 `engine.previews.attach` inside `update_upcoming(previews="generate")`.
 `--publish-only` attaches cached previews and never calls Claude.
@@ -185,6 +185,24 @@ generated}`, one Haiku call each (`purpose=agenda_preview`), through
 - The frontend's Upcoming panel expands a preview and fires the Plausible
   event `Agenda Preview` with `{source, days_before}` — the "agenda views
   before the meeting" number in funder reports. Add it as a Goal in Plausible.
+
+## Plain language, issues, votes by member
+
+Every summarizing prompt and the agenda preview carry
+`summarize.PLAIN_LANGUAGE_RULES`: short sentences, everyday words, government
+terms explained on first use, every name and number kept exact. Summaries
+written before it read at about a college level.
+
+`instance.json` `issues` (optional) is the newsroom's fixed list:
+`[{key, label, about?}]`, validated at load. With it, every summary and
+preview is filed under up to three keys (`issues`); keys not on the list are
+dropped in code. This is what alerts "by issue" will subscribe to. `topics`
+stays free-form and is not a substitute: its tags almost never repeat.
+Changing a key orphans the summaries filed under it, so add or relabel rather
+than rename.
+
+The transcript and minutes prompts also ask who voted no or abstained on each
+vote and who was present, by name, and only when the record says so.
 
 ## Speaker counts
 
@@ -317,9 +335,16 @@ Other optional fields, all validated at load:
  overview, agenda: [{time, item}], discussions: [{item, body}],
  publicComment, actionItems: [str],
  topics: [str],                       # 3-5 Title Case tags from all prompts
- votes: [{item, motion, mover, second, outcome, tally}],  # transcript/minutes
+ issues?: [key],                      # up to 3 keys from instance.json `issues`
+ votes: [{item, motion, mover, second, outcome, tally,
+          no: [name], abstain: [name]}],                  # transcript/minutes
+ attendance?: {present: [name], absent: [name]},          # transcript/minutes
  civicItems?: [...]}
 ```
+`no` / `abstain` name a member only when the record says how that member
+voted (`summarize.member_vote_rules`); names that disagree with a numeric
+tally are dropped in code (`summarize._finish`). Summaries written before
+Nov. 2026 have neither those lists, `attendance` nor `issues`.
 Newest-first, pruned to `instance.max_meetings`. `id` is the YouTube video
 ID, `bb_<meeting_id>` (BoardBook), or `<id_prefix>_<guid>` (Municode).
 

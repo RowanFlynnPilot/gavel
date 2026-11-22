@@ -116,7 +116,7 @@ def process_video(cfg: InstanceConfig, video: dict,
         print("  [claude]  Summarizing from transcript...")
         summary = summarize.summarize_meeting(
             transcript, title, url, org_label=jur.name, region=cfg.region,
-            jurisdiction=source_key, meeting_id=vid_id, officials=jur.officials,
+            issues=cfg.issues, jurisdiction=source_key, meeting_id=vid_id, officials=jur.officials,
             meeting_date=video.get("meeting_date") or upload_date)
     except TranscriptAuthError as e:
         print(f"  [AUTH]  {e}")
@@ -149,12 +149,12 @@ def process_video(cfg: InstanceConfig, video: dict,
                 print("  [claude]  Summarizing from agenda + vote data...")
                 summary = summarize.summarize_from_agenda_with_votes(
                     agenda_text, title, url, civic_data, org_label=jur.name,
-                    region=cfg.region, jurisdiction=source_key, meeting_id=vid_id)
+                    region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=vid_id)
             else:
                 print("  [claude]  Summarizing from agenda document...")
                 summary = summarize.summarize_from_agenda(
                     agenda_text, title, url, org_label=jur.name,
-                    region=cfg.region, jurisdiction=source_key, meeting_id=vid_id)
+                    region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=vid_id)
         else:
             print("  [err]  No transcript or agenda available - skipping.")
             watchdog.note_skipped_video(vid_id, title, source_key)
@@ -194,7 +194,7 @@ def process_boardbook_meeting(cfg: InstanceConfig, source_key: str,
     print(f"  [claude]  Summarizing {len(agenda['items'])} agenda items...")
     summary = summarize.summarize_from_boardbook(
         agenda, title, district_label=jur.agendas["label"],
-        newsroom=cfg.newsroom, jurisdiction=source_key, meeting_id=video_id)
+        newsroom=cfg.newsroom, issues=cfg.issues, jurisdiction=source_key, meeting_id=video_id)
 
     doc_url = bb_meeting.get("url", bb_meeting.get("agenda_url", ""))
     path = save_summary(title, doc_url, source_key, jur.name, summary,
@@ -272,7 +272,7 @@ def process_municode_meeting(cfg: InstanceConfig, source_key: str, m: dict,
             print(f"  [claude]  Summarizing from minutes ({len(minutes_text):,} chars)...")
             summary = summarize.summarize_from_minutes(
                 minutes_text, title, m["detail_url"], org_label=jur.name,
-                region=cfg.region, jurisdiction=source_key, meeting_id=video_id,
+                region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=video_id,
                 officials=jur.officials, meeting_date=m["date"])
     if summary is None:
         print(f"  [agenda]  Fetching ADA agenda text for: {title}")
@@ -283,7 +283,7 @@ def process_municode_meeting(cfg: InstanceConfig, source_key: str, m: dict,
         print(f"  [claude]  Summarizing from agenda ({len(agenda_text):,} chars)...")
         summary = summarize.summarize_from_agenda(
             agenda_text, title, m["detail_url"], org_label=jur.name,
-            region=cfg.region, jurisdiction=source_key, meeting_id=video_id)
+            region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=video_id)
 
     path = save_summary(title, m["detail_url"], source_key, jur.name, summary,
                         doc_url=m.get("agenda_pdf"), video_id=video_id)
@@ -351,7 +351,7 @@ def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
             print(f"  [claude]  Summarizing from minutes ({len(minutes_text):,} chars): {title}")
             summary = summarize.summarize_from_minutes(
                 minutes_text, title, m["url"], org_label=jur.name, region=cfg.region,
-                jurisdiction=source_key, meeting_id=meeting_id, officials=jur.officials,
+                issues=cfg.issues, jurisdiction=source_key, meeting_id=meeting_id, officials=jur.officials,
                 meeting_date=d)
             path = save_summary(title, m["url"], source_key, jur.name, summary,
                                 doc_url=m["url"], video_id=meeting_id)
@@ -374,12 +374,12 @@ def process_portal_meeting(cfg: InstanceConfig, source_key: str, m: dict,
         print("  [claude]  Summarizing from agenda + vote data...")
         summary = summarize.summarize_from_agenda_with_votes(
             agenda_text, title, m["url"], civic_data, org_label=jur.name,
-            region=cfg.region, jurisdiction=source_key, meeting_id=meeting_id)
+            region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=meeting_id)
     else:
         print("  [claude]  Summarizing from agenda document...")
         summary = summarize.summarize_from_agenda(
             agenda_text, title, m["url"], org_label=jur.name,
-            region=cfg.region, jurisdiction=source_key, meeting_id=meeting_id)
+            region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=meeting_id)
 
     path = save_summary(title, m["url"], source_key, jur.name, summary,
                         doc_url=m["url"], civic_data=civic_data, video_id=meeting_id)
@@ -439,7 +439,7 @@ def upgrade_portal_from_votes(cfg: InstanceConfig, source_key: str,
         print(f"  [claude]  Votes recorded; summarizing again: {info['title']}")
         summary = summarize.summarize_from_agenda_with_votes(
             agenda_text, info["title"], info["doc_url"], civic_data, org_label=jur.name,
-            region=cfg.region, jurisdiction=source_key, meeting_id=vid)
+            region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=vid)
         path = save_summary(info["title"], info["doc_url"], source_key, jur.name, summary,
                             doc_url=info["doc_url"], civic_data=civic_data, video_id=vid)
         mark_processed(state, vid, info["title"], source_key, path, doc_url=info["doc_url"])
@@ -483,7 +483,7 @@ def upgrade_portal_from_minutes(cfg: InstanceConfig, source_key: str,
         try:
             summary = summarize.summarize_from_minutes(
                 minutes_text, info["title"], info["doc_url"], org_label=jur.name,
-                region=cfg.region, jurisdiction=source_key, meeting_id=vid,
+                region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=vid,
                 officials=jur.officials, meeting_date=info.get("meeting_date"))
         except Exception as e:
             logger.warning("minutes: summarization failed for %s: %s", vid, e)
@@ -576,7 +576,7 @@ def retry_agenda_only_captions(cfg: InstanceConfig, state: dict,
         try:
             summary = summarize.summarize_meeting(
                 transcript, v["title"], v["url"], org_label=jur.name,
-                region=cfg.region, jurisdiction=v["source"], meeting_id=v["id"],
+                region=cfg.region, issues=cfg.issues, jurisdiction=v["source"], meeting_id=v["id"],
                 officials=jur.officials,
                 meeting_date=v.get("meeting_date") or v.get("upload_date"))
         except Exception as e:
@@ -654,7 +654,7 @@ def upgrade_boardbook_from_recordings(cfg: InstanceConfig, source_key: str,
         try:
             summary = summarize.summarize_meeting(
                 transcript, info["title"], video["url"], org_label=jur.name,
-                region=cfg.region, jurisdiction=source_key, meeting_id=vid_id,
+                region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=vid_id,
                 officials=jur.officials, meeting_date=info.get("meeting_date"))
         except Exception as e:
             logger.warning("bb-video: summarization failed for %s: %s", vid_id, e)
@@ -725,7 +725,7 @@ def upgrade_municode_from_minutes(cfg: InstanceConfig, source_key: str,
         try:
             summary = summarize.summarize_from_minutes(
                 minutes_text, info["title"], m["detail_url"], org_label=jur.name,
-                region=cfg.region, jurisdiction=source_key, meeting_id=vid_id,
+                region=cfg.region, issues=cfg.issues, jurisdiction=source_key, meeting_id=vid_id,
                 officials=jur.officials,
                 meeting_date=info.get("meeting_date") or m.get("date"))
         except Exception as e:

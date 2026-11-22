@@ -13,6 +13,7 @@ Model tiering (binding, cost-driven):
 from __future__ import annotations
 
 import logging
+import re
 from datetime import datetime
 
 from . import vote_announcements
@@ -37,6 +38,108 @@ RESIDENT_PRIVACY_RULES = """Privacy rules for private residents (these override 
 - NEVER give a private person's home address, house number, street of residence, or say where they live ("of 123 Elm St", "who lives on Elm Street"). Say "a resident" or "a nearby resident" instead. A property address that is itself the subject of an agenda item (a rezoning, permit, or sale at that address) may be given.
 - NEVER name a student or any minor; write "a student".
 - NEVER connect a named private person to a health or medical condition; describe the point without the name."""
+
+
+# Plain language. Summaries written before this rule read at a college level
+# (a median Flesch-Kincaid grade of 13 to 15 across the reference instance);
+# news writing aims near grade 9. In every prompt, and in the agenda preview.
+PLAIN_LANGUAGE_RULES = """Write for a neighbor, not an insider. This governs every sentence you write:
+- Short sentences, one idea each, most of them under 20 words.
+- Everyday words: "pay for" not "appropriate funds for"; "approved" not "adopted a resolution authorizing"; "rules" not "ordinance provisions"; "about" not "regarding".
+- The first time a government term or acronym comes up (TIF district, CIP, RFP, conditional use permit, consent agenda, closed session, levy), say in a few plain words what it is. Never leave an acronym unexplained.
+- Use active sentences that name who acts: "The board voted 5-2 to raise water rates" (or "is scheduled to vote on"), not "A rate increase was approved".
+- Say what changes for residents when the source gives it: the cost, the date, the place.
+- Plain is not vague. Keep every name, number, date, dollar amount and vote count exactly as the source gives it, and keep the official names of boards, projects and agenda items."""
+
+
+def member_vote_rules(source: str) -> str:
+    """Rules for the votes[].no / votes[].abstain and attendance fields.
+    `source` is "transcript" or "minutes". A wrong name on a no vote is the
+    worst error these summaries can make about an official, so a name is
+    recorded only when the record itself says how that member voted."""
+    says = "the transcript says" if source == "transcript" else "the minutes record"
+    return (
+        f"- votes[].no and votes[].abstain: name a member ONLY when {says} how that member "
+        f"voted: a roll call by name, the chair or clerk naming who was opposed, or the member "
+        f"saying so. Never work out who voted no from the tally, from who argued against the "
+        f"item, or from how a member usually votes. A 5-2 vote whose two are not named gets "
+        f"\"no\": []. A member who recuses counts under abstain.\n"
+        f"- attendance: members of this body only, from the roll call or a statement of who is "
+        f"present, absent or excused - not from who happened to speak. Empty lists when "
+        f"{'no roll call is heard' if source == 'transcript' else 'the minutes list no attendance'}.\n"
+        f"- In no, abstain and attendance, give each name as the KNOWN OFFICIALS list spells it, "
+        f"without the title.")
+
+
+def issues_field(issues: list[dict] | None) -> str:
+    """The "issues" line of a prompt's JSON template, or nothing when the
+    instance has no issue list."""
+    if not issues:
+        return ""
+    return '"issues": ["one to three keys from the ISSUES list below; [] if none fits"],\n  '
+
+
+def issues_block(issues: list[dict] | None) -> str:
+    """The instance's fixed issue list, for the prompt."""
+    if not issues:
+        return ""
+    lines = "\n".join(f"- {i['key']}: {i['label']}" + (f" ({i['about']})" if i.get("about") else "")
+                      for i in issues)
+    return ("\n\nISSUES (for the \"issues\" field; use the keys exactly as written):\n" + lines
+            + "\nPick the one to three issues this meeting spends real time on or acts on. A "
+              "passing mention does not count. Use [] when none fits; never invent a key.")
+
+
+def clean_issues(got, issues: list[dict] | None) -> list[str]:
+    """The model's issue keys, kept only where they are on the instance's list."""
+    valid = {i["key"] for i in issues or []}
+    if not isinstance(got, list):
+        return []
+    out = []
+    for k in got:
+        if isinstance(k, str) and k in valid and k not in out:
+            out.append(k)
+    return out[:3]
+
+
+_NUMERIC_TALLY = re.compile(r"^\s*(\d+)\s*(?:-|–|to)\s*(\d+)(?:\s*(?:-|–|,)\s*(\d+)\b.*)?\s*$", re.I)
+
+
+def _names(value) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    return [n.strip() for n in value if isinstance(n, str) and n.strip()]
+
+
+def _finish(result: dict, issues: list[dict] | None, member_votes: bool = False) -> dict:
+    """Hold a parsed summary to what its prompt allowed: issue keys from the
+    list only, and member names on a vote only where they agree with the
+    tally. A "5-2" with three names under "no" is a mistake somewhere, and
+    no name is published from it."""
+    if issues:
+        result["issues"] = clean_issues(result.get("issues"), issues)
+    else:
+        result.pop("issues", None)
+    if not member_votes:
+        return result
+    votes = result.get("votes")
+    for v in votes if isinstance(votes, list) else []:
+        if not isinstance(v, dict):
+            continue
+        v["no"], v["abstain"] = _names(v.get("no")), _names(v.get("abstain"))
+        tally = str(v.get("tally") or "")
+        m = _NUMERIC_TALLY.match(tally)
+        if v["no"] and ((m and int(m.group(2)) != len(v["no"])) or re.search(r"unanim", tally, re.I)):
+            logger.warning("vote %r: names under 'no' (%d) disagree with the tally %r; names dropped",
+                           v.get("item"), len(v["no"]), tally)
+            v["no"] = []
+    att = result.get("attendance")
+    if isinstance(att, dict):
+        result["attendance"] = {"present": _names(att.get("present")),
+                                "absent": _names(att.get("absent"))}
+    else:
+        result.pop("attendance", None)
+    return result
 
 
 def _date_line(meeting_date: str | None) -> str:
@@ -68,7 +171,8 @@ def _roster_block(officials: list[str] | None) -> str:
 def summarize_meeting(transcript: str, title: str, url: str, *,
                       org_label: str, region: str, jurisdiction: str,
                       meeting_id: str, officials: list[str] | None = None,
-                      meeting_date: str | None = None) -> dict:
+                      meeting_date: str | None = None,
+                      issues: list[dict] | None = None) -> dict:
     """Full-transcript summary — the flagship product. meeting_date is
     YYYYMMDD when known."""
     if len(transcript) > MAX_TRANSCRIPT_CHARS:
@@ -81,7 +185,7 @@ def summarize_meeting(transcript: str, title: str, url: str, *,
 Meeting title: {title}
 {_date_line(meeting_date)}Organization: {org_label}
 YouTube link:  {url}
-{_roster_block(officials)}
+{_roster_block(officials)}{issues_block(issues)}
 Below is the auto-generated transcript of the ACTUAL meeting recording. Your job is to report what ACTUALLY HAPPENED - votes taken, decisions made, who said what, outcomes, not just what was planned.
 
 Produce a JSON object with this exact structure and nothing else - no markdown, no preamble, just valid JSON:
@@ -102,11 +206,14 @@ Produce a JSON object with this exact structure and nothing else - no markdown, 
   "publicComment": "Describe actual public comment offered - how many speakers and what each said, following the privacy rules below. Or 'No public comment was offered.'",
   "publicCommentSpeakers": "a whole number: how many members of the public spoke or had a written comment read during public comment and public hearings (officials, staff and presenters do not count). 0 if none. null only if the transcript does not let you count them.",
   "actionItems": ["specific decisions made or next steps directed by the committee"],
-  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places discussed (e.g. Highway J Extension, Riverlife District)"],
+  {issues_field(issues)}"topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places discussed (e.g. Highway J Extension, Riverlife District)"],
+  "attendance": {{"present": ["members of this body present"], "absent": ["members absent or excused"]}},
   "votes": [
-    {{"item": "what was voted on, concisely", "motion": "the motion as made, if stated", "mover": "who moved it, or null", "second": "who seconded, or null", "outcome": "Approved | Failed | Tabled", "tally": "e.g. 6-0, 5-2, Unanimous, or null if not stated"}}
+    {{"item": "what was voted on, concisely", "motion": "the motion as made, if stated", "mover": "who moved it, or null", "second": "who seconded, or null", "outcome": "Approved | Failed | Tabled", "tally": "e.g. 6-0, 5-2, Unanimous, or null if not stated", "no": ["members who voted no"], "abstain": ["members who abstained"]}}
   ]
 }}
+
+{PLAIN_LANGUAGE_RULES}
 
 Rules:
 - This is a transcript of a REAL meeting. Report outcomes, not plans.
@@ -114,6 +221,7 @@ Rules:
 - discussions: focus on WHAT WAS DECIDED or DEBATED, not just what the topic was.
 - Include vote results where mentioned (e.g. "Approved 5-2", "Passed unanimously").
 - votes: ONLY votes actually taken — empty array if none. Never invent movers, seconders, or tallies; use null for anything not stated in the transcript.
+{member_vote_rules("transcript")}
 - Name officials who spoke or voted when identifiable from transcript.
 - Note unclear audio as [inaudible] rather than guessing at what was said.
 - Never supply a date or year the transcript and the lines above don't give. Speakers say "this year" and "next month" without the year; don't turn those into a year of your own.
@@ -127,7 +235,7 @@ Rules:
     raw = call_claude(model=CLAUDE_MODEL, max_tokens=RECORD_MAX_TOKENS, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="transcript_summary")
-    result = parse_summary_json(raw, "transcript")
+    result = _finish(parse_summary_json(raw, "transcript"), issues, member_votes=True)
     # How much of the transcript the model saw (engine.audit_votes reports a cut).
     result["_transcript_chars"] = min(len(transcript), MAX_TRANSCRIPT_CHARS)
     return result
@@ -135,14 +243,14 @@ Rules:
 
 def summarize_from_agenda(agenda_text: str, title: str, url: str, *,
                           org_label: str, region: str, jurisdiction: str,
-                          meeting_id: str) -> dict:
+                          meeting_id: str, issues: list[dict] | None = None) -> dict:
     """Agenda-only summary (no recording) — tentative language, Haiku tier."""
     prompt = f"""You are a local government reporter covering {region}.
 
 Meeting title: {title}
 Organization: {org_label}
 Source: Agenda document only (no video recording or transcript available)
-YouTube: {url}
+YouTube: {url}{issues_block(issues)}
 
 Below is the text of the official meeting agenda. Produce a JSON object with this exact structure - no markdown, no preamble, just valid JSON:
 
@@ -158,8 +266,10 @@ Below is the text of the official meeting agenda. Produce a JSON object with thi
   ],
   "publicComment": "Note whether public comment was on the agenda, or 'Not indicated on agenda.'",
   "actionItems": ["expected action items based on agenda - use 'scheduled to vote on', 'expected to consider', etc."],
-  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places on the agenda"]
+  {issues_field(issues)}"topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places on the agenda"]
 }}
+
+{PLAIN_LANGUAGE_RULES}
 
 Rules:
 - CRITICAL: This is an AGENDA, not a transcript. You do NOT know what actually happened. Use tentative/scheduled language throughout.
@@ -177,7 +287,7 @@ Rules:
     raw = call_claude(model=CLAUDE_MODEL_AGENDA, max_tokens=4096, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="agenda_summary")
-    return parse_summary_json(raw, "agenda")
+    return _finish(parse_summary_json(raw, "agenda"), issues)
 
 
 def _format_civic_votes_for_prompt(civic_data: dict) -> str:
@@ -225,7 +335,7 @@ def _format_civic_votes_for_prompt(civic_data: dict) -> str:
 def summarize_from_agenda_with_votes(agenda_text: str, title: str, url: str,
                                      civic_data: dict, *, org_label: str,
                                      region: str, jurisdiction: str,
-                                     meeting_id: str) -> dict:
+                                     meeting_id: str, issues: list[dict] | None = None) -> dict:
     """Agenda + official vote records (CivicClerk, Legistar) — actual outcomes known."""
     vote_text = _format_civic_votes_for_prompt(civic_data)
 
@@ -234,7 +344,7 @@ def summarize_from_agenda_with_votes(agenda_text: str, title: str, url: str,
 Meeting title: {title}
 Organization: {org_label}
 Source: Agenda document + official vote records
-YouTube: {url}
+YouTube: {url}{issues_block(issues)}
 
 Below is the meeting agenda AND the official vote/action records. The vote records show what ACTUALLY HAPPENED — motions made, who voted yes/no, and whether items passed or failed. Use this to report actual outcomes.
 
@@ -252,8 +362,10 @@ Produce a JSON object with this exact structure - no markdown, no preamble, just
   ],
   "publicComment": "Note whether public comment was on the agenda, or 'Not indicated on agenda.'",
   "actionItems": ["specific decisions made and next steps based on actual vote outcomes"],
-  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"]
+  {issues_field(issues)}"topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"]
 }}
+
+{PLAIN_LANGUAGE_RULES}
 
 Rules:
 - Use the VOTE RECORDS to report actual outcomes — this is real data, not speculation
@@ -275,12 +387,12 @@ Rules:
     raw = call_claude(model=CLAUDE_MODEL_AGENDA, max_tokens=4096, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="agenda_with_votes_summary")
-    return parse_summary_json(raw, "agenda_with_votes")
+    return _finish(parse_summary_json(raw, "agenda_with_votes"), issues)
 
 
 def summarize_from_boardbook(agenda: dict, title: str, *, district_label: str,
                              newsroom: str, jurisdiction: str,
-                             meeting_id: str) -> dict:
+                             meeting_id: str, issues: list[dict] | None = None) -> dict:
     """BoardBook agenda summary (agenda-only, Haiku tier)."""
     items_text = "\n".join(f"  {item}" for item in agenda["items"])
 
@@ -311,8 +423,11 @@ Produce a JSON object with this exact structure and nothing else:
   ],
   "publicComment": "description of public comment if the agenda includes one, or 'No public comment period was included on this agenda.'",
   "actionItems": ["expected action items using tentative language — 'Board was expected to vote on...', 'Action was requested for...'"],
-  "topics": ["3-5 short Title Case topic tags: recurring school-district themes (Budget, Curriculum, Facilities, Staffing, Policy, Athletics) plus specific named schools, programs, or projects on the agenda"]
+  {issues_field(issues)}"topics": ["3-5 short Title Case topic tags: recurring school-district themes (Budget, Curriculum, Facilities, Staffing, Policy, Athletics) plus specific named schools, programs, or projects on the agenda"]
 }}
+{issues_block(issues)}
+
+{PLAIN_LANGUAGE_RULES}
 
 Rules:
 - agenda: include ALL top-level items. Use "N/A" for time since there's no recording.
@@ -325,13 +440,14 @@ Rules:
     raw = call_claude(model=CLAUDE_MODEL_AGENDA, max_tokens=4096, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="boardbook_agenda_summary")
-    return parse_summary_json(raw, "boardbook_agenda")
+    return _finish(parse_summary_json(raw, "boardbook_agenda"), issues)
 
 
 def summarize_from_minutes(minutes_text: str, title: str, url: str, *,
                            org_label: str, region: str, jurisdiction: str,
                            meeting_id: str, officials: list[str] | None = None,
-                           meeting_date: str | None = None) -> dict:
+                           meeting_date: str | None = None,
+                           issues: list[dict] | None = None) -> dict:
     """Official-minutes summary — authoritative outcomes, Sonnet tier."""
     prompt = f"""You are a local government reporter covering {region}.
 
@@ -339,7 +455,7 @@ Meeting title: {title}
 {_date_line(meeting_date)}Organization: {org_label}
 Source: Official meeting minutes
 Meeting page: {url}
-{_roster_block(officials)}
+{_roster_block(officials)}{issues_block(issues)}
 Below are the official minutes of this meeting. Minutes are the authoritative record of what ACTUALLY HAPPENED — motions made, votes taken, who moved and seconded, what passed or failed. Report actual outcomes.
 
 Produce a JSON object with this exact structure - no markdown, no preamble, just valid JSON:
@@ -357,16 +473,20 @@ Produce a JSON object with this exact structure - no markdown, no preamble, just
   "publicComment": "Describe public comment as recorded in the minutes — how many spoke and on what, following the privacy rules below. Or 'No public comment was recorded.'",
   "publicCommentSpeakers": "a whole number: how many members of the public the minutes record as speaking or submitting a comment during public comment and public hearings (officials, staff and presenters do not count). 0 if none. null only if the minutes do not let you count them.",
   "actionItems": ["specific decisions made and directed next steps from the minutes"],
-  "topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"],
+  {issues_field(issues)}"topics": ["3-5 short Title Case topic tags: recurring civic themes (Budget, Roads, Public Safety, Zoning, Staffing, Parks, Utilities, Development) plus specific named projects or places acted on"],
+  "attendance": {{"present": ["members of this body present"], "absent": ["members absent or excused"]}},
   "votes": [
-    {{"item": "what was voted on, concisely", "motion": "the motion as recorded", "mover": "who moved it, or null", "second": "who seconded, or null", "outcome": "Approved | Failed | Tabled", "tally": "e.g. 6-0, 5-2, Unanimous, or null if not recorded"}}
+    {{"item": "what was voted on, concisely", "motion": "the motion as recorded", "mover": "who moved it, or null", "second": "who seconded, or null", "outcome": "Approved | Failed | Tabled", "tally": "e.g. 6-0, 5-2, Unanimous, or null if not recorded", "no": ["members who voted no"], "abstain": ["members who abstained"]}}
   ]
 }}
+
+{PLAIN_LANGUAGE_RULES}
 
 Rules:
 - Minutes record REAL outcomes — report them as fact, in past tense.
 - Include vote counts and mover/seconder names wherever the minutes record them.
 - votes: ONLY votes actually recorded — empty array if none. Use null for movers/seconders/tallies the minutes don't state.
+{member_vote_rules("minutes")}
 - Skip purely procedural items (call to order, roll call, adjournment) in discussions.
 - NEVER use placeholder text like [AGENDA_ITEM_NAME], [TBD], [INSERT], etc.
 - {RESIDENT_PRIVACY_RULES}
@@ -379,4 +499,4 @@ Rules:
     raw = call_claude(model=CLAUDE_MODEL, max_tokens=RECORD_MAX_TOKENS, prompt=prompt,
                       meeting_id=meeting_id, jurisdiction=jurisdiction,
                       purpose="minutes_summary")
-    return parse_summary_json(raw, "minutes")
+    return _finish(parse_summary_json(raw, "minutes"), issues, member_votes=True)
