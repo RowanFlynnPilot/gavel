@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 const BASE_URL = import.meta.env.BASE_URL;
 // <site>/preview/ is the editor's view: the same app over preview/ data, which
@@ -446,6 +446,57 @@ function getCommitteeStyle(committee) {
 // size and the styles that differ between them (border, opacity, shadow).
 const _MONOGRAM_FONT_SIZE = { 1: 68, 2: 60, 3: 48 }; // by character count, in a 100-unit circle
 const _LABEL_CAP_HEIGHT   = 0.7;                     // em; Bebas Neue, and near enough for most sans faces
+
+// The source filter chips, one per board. A dozen boards wrap to six rows on a
+// phone and push the list below the fold, so with `scroll` the chips sit in one
+// row that scrolls sideways: a fade marks each edge that has more, and the
+// chosen chip is brought into view. The row is moved by setting scrollLeft,
+// never scrollIntoView, which would also scroll the page the tracker is
+// embedded in. EDGE is the panel's side padding, which the row bleeds across.
+function ChipRow({ scroll, activeKey, style, children }) {
+  const EDGE = 14;
+  const ref = useRef(null);
+  const [more, setMore] = useState({ left: false, right: false });
+  const measure = useCallback(() => {
+    const el = ref.current;
+    if (!el) return;
+    const left = el.scrollLeft > 4, right = el.scrollLeft + el.clientWidth < el.scrollWidth - 4;
+    setMore(m => (m.left === left && m.right === right ? m : { left, right }));
+  }, []);
+  useEffect(() => {
+    if (!scroll) return undefined;
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [scroll, measure]);
+  useEffect(() => {
+    const el = ref.current;
+    const chip = scroll && el && el.querySelector('[aria-pressed="true"]');
+    if (!chip) return;
+    const start = chip.offsetLeft - EDGE, end = chip.offsetLeft + chip.offsetWidth + EDGE;
+    if (start < el.scrollLeft) el.scrollLeft = start;
+    else if (end > el.scrollLeft + el.clientWidth) el.scrollLeft = end - el.clientWidth;
+    measure();
+  }, [scroll, activeKey, measure]);
+
+  if (!scroll) return <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", ...style }}>{children}</div>;
+  const fade = side => ({
+    position: "absolute", top: 0, bottom: 0, [side]: -EDGE, width: "34px", pointerEvents: "none",
+    background: `linear-gradient(to ${side}, transparent, ${CREAM})`,
+    opacity: more[side] ? 1 : 0, transition: "opacity 0.15s",
+  });
+  return (
+    <div style={{ position: "relative", ...style }}>
+      <div ref={ref} className="chip-scroll" onScroll={measure} style={{
+        position: "relative", display: "flex", gap: "6px", flexWrap: "nowrap",
+        overflowX: "auto", WebkitOverflowScrolling: "touch", scrollbarWidth: "none",
+        margin: `0 -${EDGE}px`, padding: `0 ${EDGE}px`,
+      }}>{children}</div>
+      <div aria-hidden="true" style={fade("left")} />
+      <div aria-hidden="true" style={fade("right")} />
+    </div>
+  );
+}
 
 function SourceAvatar({ source, label, size, style, ...rest }) {
   const sc = SOURCE_CONFIG[source];
@@ -1608,7 +1659,7 @@ function UpcomingMeetings({ isMobile }) {
       <div style={{ padding: "12px 14px 10px", borderBottom: `2px solid ${RULE}`, background: CREAM }}>
 
 
-        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "10px" }}>
+        <ChipRow scroll={isMobile} activeKey={upFilter} style={{ marginBottom: "10px" }}>
           {FILTER_OPTIONS.map(({ key, label, color }) => {
             const active = upFilter === key;
             return (
@@ -1650,7 +1701,7 @@ function UpcomingMeetings({ isMobile }) {
               </button>
             );
           })}
-        </div>
+        </ChipRow>
 
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -2251,6 +2302,9 @@ function Tracker() {
         ::-webkit-scrollbar { width: 4px; height: 4px; }
         ::-webkit-scrollbar-thumb { background: #ccc; border-radius: 2px; }
         * { scrollbar-width: thin; scrollbar-color: #ccc transparent; }
+        /* The one-row source chips on a phone scroll by touch, with no bar. */
+        .chip-scroll::-webkit-scrollbar { display: none; }
+        .chip-scroll > button { flex-shrink: 0; }
         /* Visible keyboard focus ring on every interactive element. Inline
            styles override default outlines, so this needs !important. */
         button:focus-visible,
@@ -2377,7 +2431,7 @@ function Tracker() {
 
               <div style={{ padding: "12px 14px 10px", borderBottom: `2px solid ${RULE}`, background: CREAM }}>
                 <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.18em", color: "#5a5a5a", marginBottom: "10px" }}>RECENT MEETINGS</div>
-                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+                <ChipRow scroll={isMobile} activeKey={sourceFilter}>
                   {FILTER_OPTIONS.map(({ key, label, color }) => {
                     const active = sourceFilter === key;
                     return (
@@ -2418,7 +2472,7 @@ function Tracker() {
                       </button>
                     );
                   })}
-                </div>
+                </ChipRow>
                 <div style={{ position: "relative" }}>
                   <input
                     type="search"
