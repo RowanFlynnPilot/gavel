@@ -79,6 +79,19 @@ def _save_cache(cache: dict, p: Path) -> None:
                  encoding="utf-8")
 
 
+def seen_path(cache_file: Path | None = None) -> Path:
+    """The lasting record of agendas read before their meetings. The preview
+    cache forgets a meeting two days after it is held; this file never does,
+    and engine.coverage reads it."""
+    return (cache_file or cache_path()).parent / "agendas_seen.json"
+
+
+def load_seen(p: Path | None = None) -> dict:
+    """{preview key: {source, date, name, seen}}: `seen` is when the tracker
+    first read that meeting's posted agenda."""
+    return _load_cache(p or seen_path())
+
+
 # ── Agenda text for an upcoming record, per agenda platform ────────────────
 
 _BB_ATTACHMENTS = re.compile(r"\s*Attachments:\s*\(\s*\d+\s*\).*$", re.DOTALL)
@@ -245,6 +258,7 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
     today = date.today()
     cache_file = cache_file or cache_path()
     cache = _load_cache(cache_file)
+    seen = load_seen(seen_path(cache_file)) if generate else {}
     stats = {"attached": 0, "generated": 0, "deferred": 0, "failed": 0}
     recheck = timedelta(hours=PREVIEW_RECHECK_HOURS)
     claude_down = False
@@ -271,6 +285,8 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
                 if text:
                     digest = hashlib.sha1(f"{PROMPT_VERSION}\n{text}".encode("utf-8")).hexdigest()
                     rec.update(source=entry["source"], date=entry["date"], name=entry["name"])
+                    seen.setdefault(key, {"source": entry["source"], "date": entry["date"],
+                                          "name": entry["name"], "seen": stamp})
                     if digest == rec.get("hash") or rec.get("generations", 0) >= MAX_GENERATIONS:
                         rec["checked"] = stamp
                         rec["prompt"] = PROMPT_VERSION      # settled under this prompt
@@ -306,6 +322,7 @@ def attach(cfg: InstanceConfig, payload: dict[str, list], generate: bool = True,
         cutoff = (today - timedelta(days=2)).isoformat()
         _save_cache({k: v for k, v in cache.items() if v.get("date", "9999") >= cutoff},
                     cache_file)
+        _save_cache(seen, seen_path(cache_file))
     print(f"[previews]  {stats['attached']} upcoming meeting(s) carry a preview; "
           f"{stats['generated']} written this run, {stats['deferred']} deferred, "
           f"{stats['failed']} failed")

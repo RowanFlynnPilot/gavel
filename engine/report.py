@@ -104,9 +104,17 @@ def summary_kind(meeting_id: str, summary: dict | None) -> str:
     return "agenda"
 
 
+def _first_processed(info: dict) -> date | None:
+    try:
+        return datetime.fromisoformat((info.get("processed_at") or "").replace("Z", "+00:00")).date()
+    except ValueError:
+        return None
+
+
 def load_records(state: dict | None = None) -> list[dict]:
     """One row per meeting in the state file:
-    {id, source, title, day, kind, speakers}. speakers is None when the
+    {id, source, title, day, processed, kind, speakers}. `processed` is the
+    day the tracker first summarized it (UTC). speakers is None when the
     summary doesn't state a count (and always for agenda-only summaries)."""
     state = state if state is not None else load_state()
     rows = []
@@ -118,6 +126,7 @@ def load_records(state: dict | None = None) -> list[dict]:
             "source": info.get("source", ""),
             "title": info.get("title", ""),
             "day": meeting_day(info),
+            "processed": _first_processed(info),
             "kind": kind,
             "speakers": speaker_count({**summary, "_source": "transcript"})
             if summary and kind in ("recording", "minutes") else None,
@@ -144,10 +153,15 @@ def _in(rows: list[dict], start: date, end: date) -> list[dict]:
 def build(cfg: InstanceConfig, start: date, end: date, *, today: date | None = None,
           state: dict | None = None, ledger: list[dict] | None = None,
           corrections: list[dict] | None = None,
-          displayed: list[dict] | None = None) -> dict:
-    """The report's numbers for [start, end], inclusive."""
+          displayed: list[dict] | None = None, include_hidden: bool = False) -> dict:
+    """The report's numbers for [start, end], inclusive. Boards that are
+    tracked but not yet published (`hidden`) are left out of every count
+    except spend, unless include_hidden is set."""
     today = today or date.today()
-    rows = load_records(state)
+    hidden = set() if include_hidden else set(cfg.hidden_keys)
+    every_row = load_records(state)
+    hidden_ids = {r["id"] for r in every_row if r["source"] in hidden}
+    rows = [r for r in every_row if r["source"] not in hidden]
     span = (end - start).days + 1
     prior_start, prior_end = start - timedelta(days=span), start - timedelta(days=1)
     now_rows, prior_rows = _in(rows, start, end), _in(rows, prior_start, prior_end)
@@ -159,6 +173,8 @@ def build(cfg: InstanceConfig, start: date, end: date, *, today: date | None = N
 
     boards = []
     for jur in cfg.jurisdictions:
+        if jur.key in hidden:
+            continue
         mine = [r for r in now_rows if r["source"] == jur.key]
         kinds = Counter(r["kind"] for r in mine)
         boards.append({
@@ -175,6 +191,7 @@ def build(cfg: InstanceConfig, start: date, end: date, *, today: date | None = N
         })
 
     corr = corrections if corrections is not None else load_corrections()
+    corr = [c for c in corr if c.get("id") not in hidden_ids]
     corr_now = [c for c in corr if start.isoformat() <= str(c.get("date", "")) <= end.isoformat()]
 
     led = ledger if ledger is not None else costs.load_ledger()
@@ -184,13 +201,15 @@ def build(cfg: InstanceConfig, start: date, end: date, *, today: date | None = N
         p = by_purpose[r.get("purpose") or r.get("script") or "(untagged)"]
         p[0] += 1
         p[1] += r.get("usd", 0)
-    previews = [r for r in led_now if r.get("purpose") == "agenda_preview"]
+    previews = [r for r in led_now if r.get("purpose") == "agenda_preview"
+                and r.get("jurisdiction") not in hidden]
 
     if displayed is None:
         try:
             displayed = json.loads(MEETINGS_JSON.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             displayed = []
+    displayed = [m for m in displayed if isinstance(m, dict) and m.get("source") not in hidden]
 
     return {
         "instance": cfg.name,
@@ -199,8 +218,9 @@ def build(cfg: InstanceConfig, start: date, end: date, *, today: date | None = N
         "prior_start": prior_start.isoformat(), "prior_end": prior_end.isoformat(),
         "generated": today.isoformat(),
         "boards": boards,
+        "not_published": [j.name for j in cfg.jurisdictions if j.key in hidden],
         "totals": {
-            "boards": len(cfg.jurisdictions),
+            "boards": len(boards),
             "boards_added": sum(1 for b in boards if b["added_this_period"]),
             "meetings": len(now_rows),
             "from_record": sum(b["from_record"] for b in boards),
@@ -361,6 +381,10 @@ def render_markdown(d: dict) -> str:
             "- **Alert subscribers** are in the mailing service.",
             f"- **Right now**, {d['overdue_now']} displayed meeting(s) are still summarized from "
             f"the agenda past the point their recording or minutes normally arrive."]
+    if d["not_published"]:
+        out.append(f"- **Tracked but not yet published:** {', '.join(d['not_published'])}. "
+                   f"Readers can't see these yet, so nothing above counts them except the spend. "
+                   f"Run with --include-hidden to count them.")
     if t["undated"]:
         out.append(f"- {t['undated']} meeting(s) in the state file have no usable date and are "
                    f"in no period.")
@@ -374,6 +398,8 @@ def main() -> int:
     ap.add_argument("--to", dest="end", help="last day, YYYY-MM-DD (default: today)")
     ap.add_argument("--out", help="write the report here instead of stdout")
     ap.add_argument("--json", action="store_true", help="print the numbers as JSON")
+    ap.add_argument("--include-hidden", action="store_true",
+                    help="count boards that are tracked but not yet published")
     args = ap.parse_args()
 
     end = date.fromisoformat(args.end) if args.end else date.today()
@@ -381,7 +407,7 @@ def main() -> int:
     if start > end:
         print("[err]  --from is after --to")
         return 1
-    data = build(load_instance(), start, end)
+    data = build(load_instance(), start, end, include_hidden=args.include_hidden)
     text = json.dumps(data, indent=2) + "\n" if args.json else render_markdown(data)
     if args.out:
         Path(args.out).write_text(text, encoding="utf-8")

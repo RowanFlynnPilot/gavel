@@ -121,6 +121,30 @@ class AttachTest(PreviewTestCase):
         _, fetch, _ = self.attach({"city": [_entry()]}, now=NOW + timedelta(minutes=5), text=None)
         self.assertEqual(fetch.call_count, 1)
 
+    def test_a_read_agenda_is_recorded_once_and_outlives_the_cache(self):
+        seen_file = previews.seen_path(self.cache)
+        self.attach({"city": [_entry()]}, text=None)             # not posted yet: nothing recorded
+        self.assertEqual(previews.load_seen(seen_file), {})
+        self.attach({"city": [_entry()]}, now=NOW + timedelta(minutes=5))
+        rec, = previews.load_seen(seen_file).values()
+        self.assertEqual((rec["source"], rec["date"], rec["name"]), ("city", _day(2), "Common Council"))
+        first = rec["seen"]
+        # A later read of a revised agenda keeps the first time it was seen.
+        self.attach({"city": [_entry()]}, now=NOW + timedelta(days=1), text=AGENDA + "\nrevised")
+        self.assertEqual(next(iter(previews.load_seen(seen_file).values()))["seen"], first)
+        # A run with other meetings drops the passed one from the cache, not from the record.
+        cache = json.loads(self.cache.read_text(encoding="utf-8"))
+        key, = cache
+        cache[key]["date"] = _day(-5)
+        self.cache.write_text(json.dumps(cache), encoding="utf-8")
+        self.attach({"city": [_entry(name="Plan Commission")]}, now=NOW + timedelta(days=2))
+        self.assertNotIn(key, json.loads(self.cache.read_text(encoding="utf-8")))
+        self.assertIn(key, previews.load_seen(seen_file))
+        # Cached mode (--publish-only) reads no agenda and records nothing.
+        seen_file.unlink()
+        self.attach({"city": [_entry()]}, generate=False)
+        self.assertFalse(seen_file.exists())
+
     def test_claude_outage_stops_the_run_and_charges_no_attempt(self):
         entries = [_entry(name="A"), _entry(name="B"), _entry(name="C")]
         stats, _, claude = self.attach({"city": entries}, reply=RuntimeError("401"))

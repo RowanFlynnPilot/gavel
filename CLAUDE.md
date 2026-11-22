@@ -87,6 +87,20 @@ WPR is Instance Zero and the permanent reference deployment.
   per meeting next to the prior equal-length period, corrections by kind,
   agenda previews written, spend. No API calls. Run on demand; reader numbers
   (Plausible) and alert subscribers are named in the report as not included.
+  Hidden boards are left out of every count except spend unless
+  `--include-hidden` is given.
+- `python -m engine.coverage [--month YYYY-MM | --from D --to D] [--out FILE]
+  [--json] [--include-hidden]` — the monthly coverage check (default: last
+  calendar month). Per board and per meeting: was it on the tracker (and, for a
+  board with `rules` / `fallback_rules`, was each regular meeting), was its
+  agenda read before it was held, and is there a summary of what happened or
+  is it waiting / overdue against `expected_lag_days`. "Agenda before" comes
+  from `data/agendas_seen.json` (written by `engine.previews` the first time it
+  reads a meeting's posted agenda; never pruned, committed with the data) or
+  from a card made from the agenda on or before the day. A regular meeting is
+  matched to a card only when the card's title has every word of the rule's
+  name; anything else is listed under "Needs a look", never guessed. No API
+  calls.
 
 - `python -m engine.audit_votes [--json] [--root DIR]` — check every transcript
   summary's `votes` against the results the chair announced with a tally
@@ -208,6 +222,7 @@ engine/
 │                        in data/previews.json by agenda hash)
 ├── speakers.py          public-comment speaker counts (field, else prose)
 ├── report.py            funder report for a period (no API calls)
+├── coverage.py          monthly coverage check: agenda before, summary after
 ├── tipsheet.py          weekly reporter tip sheet (no API calls)
 ├── watchdog.py          skipped_videos.json first-seen tracking → stale list
 ├── health.py            source_health.json: which boards' sites stopped answering

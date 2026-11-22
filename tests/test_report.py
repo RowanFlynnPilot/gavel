@@ -13,7 +13,8 @@ from datetime import date
 from pathlib import Path
 
 from engine import report
-from helpers import make_config
+from engine.config import InstanceConfig
+from helpers import make_config, raw_instance
 
 START, END = date(2027, 1, 1), date(2027, 6, 30)
 
@@ -140,6 +141,29 @@ class ReportTest(unittest.TestCase):
         self.assertIn("**0 meetings** summarized", md)
         self.assertIn("No meeting in this period has a public-comment count yet.", md)
         self.assertIn("No corrections were logged", md)
+
+    def test_boards_not_yet_published_are_counted_only_when_asked(self):
+        raw = raw_instance()
+        raw["jurisdictions"][3]["hidden"] = True                    # "city" is under review
+        self.cfg = InstanceConfig(raw, Path("instance.json"))
+        self.meeting("vid00000001", "county", "20270112", {"_source": "transcript"})
+        self.meeting("cc_1", "city", "20270302", {"_source": "agenda_with_votes"})
+        ledger = [{"ts": "2027-03-01T00:00:00+00:00", "purpose": "agenda_preview",
+                   "meeting_id": "k1", "jurisdiction": "city", "usd": 0.01},
+                  {"ts": "2027-03-01T00:00:00+00:00", "purpose": "agenda_preview",
+                   "meeting_id": "k2", "jurisdiction": "county", "usd": 0.01}]
+        corrections = [{"id": "cc_1", "date": "2027-03-05", "kind": "correction"},
+                       {"id": "vid00000001", "date": "2027-03-05", "kind": "privacy"}]
+        d = self.build(ledger=ledger, corrections=corrections)
+        self.assertEqual((d["totals"]["boards"], d["totals"]["meetings"]), (4, 1))
+        self.assertNotIn("city", [b["key"] for b in d["boards"]])
+        self.assertEqual(d["not_published"], ["City of Oak"])
+        self.assertEqual((d["previews"]["written"], d["corrections"]["total"]), (1, 1))
+        self.assertEqual(d["spend"]["usd"], 0.02)                   # the money was spent either way
+        self.assertIn("Tracked but not yet published:** City of Oak", report.render_markdown(d))
+        full = self.build(ledger=ledger, corrections=corrections, include_hidden=True)
+        self.assertEqual((full["totals"]["boards"], full["totals"]["meetings"]), (5, 2))
+        self.assertEqual(full["not_published"], [])
 
     def test_meeting_day_precedence(self):
         self.assertEqual(report.meeting_day({"meeting_date": "20270309", "title": "Board - 1/1/2027"}),
