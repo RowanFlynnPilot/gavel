@@ -44,12 +44,13 @@ RESIDENT_PRIVACY_RULES = """Privacy rules for private residents (these override 
 # (a median Flesch-Kincaid grade of 13 to 15 across the reference instance);
 # news writing aims near grade 9. In every prompt, and in the agenda preview.
 PLAIN_LANGUAGE_RULES = """Write for a neighbor, not an insider. This governs every sentence you write:
-- Short sentences, one idea each, most of them under 20 words.
+- Short sentences: one idea each, 20 words at most. One vote or decision per sentence. No semicolons. A sentence that needs a second comma is two sentences.
 - Everyday words: "pay for" not "appropriate funds for"; "approved" not "adopted a resolution authorizing"; "rules" not "ordinance provisions"; "about" not "regarding".
 - The first time a government term or acronym comes up (TIF district, CIP, RFP, conditional use permit, consent agenda, closed session, levy), say in a few plain words what it is. Never leave an acronym unexplained.
 - Use active sentences that name who acts: "The board voted 5-2 to raise water rates" (or "is scheduled to vote on"), not "A rate increase was approved".
 - Say what changes for residents when the source gives it: the cost, the date, the place.
-- Plain is not vague. Keep every name, number, date, dollar amount and vote count exactly as the source gives it, and keep the official names of boards, projects and agenda items."""
+- Plain is not vague. Keep every name, number, date, dollar amount and vote count exactly as the source gives it, and keep the official names of boards, projects and agenda items.
+- Before you answer, reread what you wrote and split every sentence longer than 20 words."""
 
 
 def member_vote_rules(source: str) -> str:
@@ -191,7 +192,7 @@ Below is the auto-generated transcript of the ACTUAL meeting recording. Your job
 Produce a JSON object with this exact structure and nothing else - no markdown, no preamble, just valid JSON:
 
 {{
-  "overview": "2-3 sentence summary of what actually happened at this meeting and its significance to residents - include key decisions or votes if any",
+  "overview": "3-5 short sentences on what actually happened at this meeting and why it matters to residents - the key decisions and votes, one per sentence",
   "committee": "exact committee or board name",
   "presiding": "name and title of person who chaired the meeting if mentioned",
   "agenda": [
@@ -200,7 +201,7 @@ Produce a JSON object with this exact structure and nothing else - no markdown, 
   "discussions": [
     {{
       "item": "agenda item title",
-      "body": "2-4 sentences describing what ACTUALLY occurred: who spoke, what positions they took, how votes went, what was approved or rejected, any notable debate or public input. Be specific - name the officials involved, cite vote counts, quote key statements if clear in the transcript."
+      "body": "3-6 short sentences describing what ACTUALLY occurred: who spoke, what positions they took, how votes went, what was approved or rejected, any notable debate or public input. Be specific - name the officials involved, cite vote counts, quote key statements if clear in the transcript."
     }}
   ],
   "publicComment": "Describe actual public comment offered - how many speakers and what each said, following the privacy rules below. Or 'No public comment was offered.'",
@@ -255,14 +256,14 @@ YouTube: {url}{issues_block(issues)}
 Below is the text of the official meeting agenda. Produce a JSON object with this exact structure - no markdown, no preamble, just valid JSON:
 
 {{
-  "overview": "2-3 sentence factual summary starting with 'Based on the published agenda,' describing what this meeting was scheduled to address and its significance to the community.",
+  "overview": "2-4 short sentences, factual, starting with 'Based on the published agenda,' describing what this meeting was scheduled to address and its significance to the community.",
   "committee": "exact committee or board name",
   "presiding": "",
   "agenda": [
     {{"time": "N/A", "item": "agenda item description"}}
   ],
   "discussions": [
-    {{"item": "agenda item title", "body": "2-3 sentence description of what this item involves. Use tentative language: 'was scheduled to discuss', 'was expected to consider', 'was set to review' - NOT past tense like 'discussed' or 'approved'."}}
+    {{"item": "agenda item title", "body": "2-4 short sentences on what this item involves. Use tentative language: 'was scheduled to discuss', 'was expected to consider', 'was set to review' - NOT past tense like 'discussed' or 'approved'."}}
   ],
   "publicComment": "Note whether public comment was on the agenda, or 'Not indicated on agenda.'",
   "actionItems": ["expected action items based on agenda - use 'scheduled to vote on', 'expected to consider', etc."],
@@ -351,14 +352,14 @@ Below is the meeting agenda AND the official vote/action records. The vote recor
 Produce a JSON object with this exact structure - no markdown, no preamble, just valid JSON:
 
 {{
-  "overview": "2-3 sentence factual summary of actual outcomes. Report what was decided: items approved/denied, vote counts, key decisions. Start with the most significant action taken.",
+  "overview": "3-5 short sentences, factual, on actual outcomes. Report what was decided: items approved/denied, vote counts, key decisions. Start with the most significant action taken.",
   "committee": "exact committee or board name",
   "presiding": "",
   "agenda": [
     {{"time": "N/A", "item": "agenda item description"}}
   ],
   "discussions": [
-    {{"item": "agenda item title", "body": "2-3 sentences reporting the ACTUAL OUTCOME: was it approved or denied? What was the vote count? Who moved/seconded? Include specific names and numbers from the vote records."}}
+    {{"item": "agenda item title", "body": "2-4 short sentences reporting the ACTUAL OUTCOME: was it approved or denied? What was the vote count? Who moved/seconded? Include specific names and numbers from the vote records."}}
   ],
   "publicComment": "Note whether public comment was on the agenda, or 'Not indicated on agenda.'",
   "actionItems": ["specific decisions made and next steps based on actual vote outcomes"],
@@ -413,13 +414,13 @@ IMPORTANT: This is an AGENDA only — no recording exists. Use tentative languag
 Produce a JSON object with this exact structure and nothing else:
 
 {{
-  "overview": "2-3 sentence summary starting with 'Based on the published agenda,' describing what this meeting was scheduled to address and its significance for the school district. Mention key action items and any notable topics.",
+  "overview": "2-4 short sentences starting with 'Based on the published agenda,' describing what this meeting was scheduled to address and its significance for the school district. Mention key action items and any notable topics.",
   "committee": "the meeting type (e.g. Regular Meeting, Committee of the Whole, Special Meeting)",
   "agenda": [
     {{"time": "N/A", "item": "agenda item description"}}
   ],
   "discussions": [
-    {{"item": "agenda item title", "body": "2-3 sentence description incorporating any presenter names, time estimates, and detail text from the agenda. Use tentative language: 'was scheduled to present', 'was expected to request approval for'."}}
+    {{"item": "agenda item title", "body": "2-4 short sentences incorporating any presenter names, time estimates, and detail text from the agenda. Use tentative language: 'was scheduled to present', 'was expected to request approval for'."}}
   ],
   "publicComment": "description of public comment if the agenda includes one, or 'No public comment period was included on this agenda.'",
   "actionItems": ["expected action items using tentative language — 'Board was expected to vote on...', 'Action was requested for...'"],
@@ -461,14 +462,14 @@ Below are the official minutes of this meeting. Minutes are the authoritative re
 Produce a JSON object with this exact structure - no markdown, no preamble, just valid JSON:
 
 {{
-  "overview": "2-3 sentence summary of the meeting's actual outcomes and their significance to residents. Lead with the most consequential action taken. Include vote results.",
+  "overview": "3-5 short sentences on the meeting's actual outcomes and why they matter to residents. Lead with the most consequential action taken. Include vote results.",
   "committee": "exact committee or board name",
   "presiding": "name and title of who chaired, if recorded",
   "agenda": [
     {{"time": "N/A", "item": "agenda item description"}}
   ],
   "discussions": [
-    {{"item": "agenda item title", "body": "2-4 sentences reporting the ACTUAL OUTCOME: motion text, who moved/seconded, the vote result (e.g. 'carried 6-0', 'failed 3-4'), and any recorded discussion or public input. Name the officials involved."}}
+    {{"item": "agenda item title", "body": "3-6 short sentences reporting the ACTUAL OUTCOME: motion text, who moved/seconded, the vote result (e.g. 'carried 6-0', 'failed 3-4'), and any recorded discussion or public input. Name the officials involved."}}
   ],
   "publicComment": "Describe public comment as recorded in the minutes — how many spoke and on what, following the privacy rules below. Or 'No public comment was recorded.'",
   "publicCommentSpeakers": "a whole number: how many members of the public the minutes record as speaking or submitting a comment during public comment and public hearings (officials, staff and presenters do not count). 0 if none. null only if the minutes do not let you count them.",
