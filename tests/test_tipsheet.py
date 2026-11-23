@@ -131,9 +131,67 @@ class RenderTest(unittest.TestCase):
     def test_an_empty_week_says_so_in_every_section(self):
         d = tipsheet.build(self.cfg, today=TODAY, meetings=[], upcoming={})
         md = tipsheet.render_markdown(d)
-        self.assertEqual(md.count("## "), 6)
+        self.assertEqual(md.count("## "), 8)
         self.assertIn("Nothing is overdue.", md)
         self.assertIn("Every meeting in the next week has a preview.", md)
+
+    def test_a_vote_names_who_voted_no_where_the_record_does(self):
+        split = _meeting("v1", votes=[
+            {"item": "Written comment policy", "outcome": "Approved", "tally": "4-3",
+             "no": ["Lisa Beck", "Brent Olson", "Katrina Clark"], "abstain": []},
+            {"item": "Site plan", "outcome": "Approved", "tally": "5-2"},          # names not on record
+            {"item": "Minutes", "outcome": "Approved", "tally": "7-0", "no": []}])
+        d = tipsheet.build(self.cfg, today=TODAY, meetings=[split], upcoming={})
+        self.assertEqual([(v["item"], v["who"]) for v in d["votes"]],
+                         [("Written comment policy", " (no: Lisa Beck, Brent Olson, Katrina Clark)"),
+                          ("Site plan", "")])
+        md = tipsheet.render_markdown(d)
+        self.assertIn("SPLIT 4-3: Written comment policy (no: Lisa Beck, Brent Olson, Katrina Clark)", md)
+
+    def test_portal_vote_records_are_used_when_a_meeting_has_them(self):
+        portal = [{"name": '<span style="background-color: rgb(250, 197, 28);">Lead service lines</span>', "votes": [
+                       {"motion": "Adopt", "passed": False, "yes": ["A", "B"], "no": ["C", "D", "E"], "abstain": []}],
+                   "children": [{"name": "Bond issue", "children": [], "votes": [
+                       {"motion": "Approve", "passed": True, "yes": ["A", "B", "C", "D"], "no": ["E"], "abstain": ["F"]}]}]},
+                  {"name": "Minutes", "children": [], "votes": [
+                      {"motion": "Approve", "passed": True, "yes": ["A", "B", "C", "D", "E"], "no": [], "abstain": []}]},
+                  # Listed in the portal with nobody recorded either way: never entered, not failed.
+                  {"name": "Reconvene into open session", "children": [], "votes": [
+                      {"motion": "", "passed": False, "yes": [], "no": [], "abstain": []}]}]
+        m = _meeting("c1", source="city", civicItems=portal,
+                     votes=[{"item": "Lead pipes (from the recording)", "outcome": "Failed", "tally": "2-3"}])
+        twin = {**m, "id": "c2", "title": "Board c1 Pt.2"}                         # same meeting, second recording
+        d = tipsheet.build(self.cfg, today=TODAY, meetings=[m, twin], upcoming={})
+        self.assertEqual([(v["item"], v["why"], v["who"]) for v in d["votes"]],
+                         [("Lead service lines [Adopt]", "failed 2-3", " (yes: A, B; no: C, D, E)"),
+                          ("Bond issue [Approve]", "split 4-1", " (no: E; abstained: F)")])
+        # E voted no twice in the month, counted once per vote though two recordings carry it.
+        self.assertEqual([(o["member"], o["count"]) for o in d["opposed"]], [("E", 2)])
+        self.assertIn("E (City of Oak): 2 no votes", tipsheet.render_markdown(d))
+
+    def test_meetings_are_grouped_under_the_instances_issues(self):
+        from pathlib import Path
+        from engine.config import InstanceConfig
+        from helpers import raw_instance
+        raw = raw_instance()
+        raw["issues"] = [{"key": "budget_taxes", "label": "Budgets & Taxes"},
+                         {"key": "public_safety", "label": "Public Safety"},
+                         {"key": "parks_recreation", "label": "Parks & Recreation"}]
+        cfg = InstanceConfig(raw, Path("instance.json"))
+        meetings = [_meeting("a1", issues=["budget_taxes", "public_safety"]),
+                    _meeting("a2", issues=["budget_taxes", "not_on_the_list"], isAgendaOnly=True),
+                    _meeting("old", days_ago=20, issues=["parks_recreation"])]
+        upcoming = {"city": [_upcoming(preview={"overview": "x", "items": [], "issues": ["public_safety"],
+                                                "hearings": ["Rezoning 12 acres for apartments"]})]}
+        d = tipsheet.build(cfg, today=TODAY, meetings=meetings, upcoming=upcoming)
+        self.assertEqual([(b["issue"], len(b["ahead"]), len(b["past"])) for b in d["by_issue"]],
+                         [("Budgets & Taxes", 0, 2), ("Public Safety", 1, 1)])
+        md = tipsheet.render_markdown(d)
+        self.assertIn("- Public Safety: 1 ahead, 1 in the past week", md)
+        self.assertIn("  - AHEAD: Wednesday, Mar 17: City of Oak, Common Council", md)
+        # A hearing the preview lists is a decision coming up even when it is not among its items.
+        self.assertEqual(d["decisions"][0]["items"],
+                         [{"item": "Rezoning 12 acres for apartments", "why": "", "action": "hearing"}])
 
     def test_same_inputs_same_bytes(self):
         m = [_meeting("a", topics=["Pool Referendum"]), _meeting("b", topics=["Pool Referendum"])]

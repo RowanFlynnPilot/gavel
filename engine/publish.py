@@ -24,6 +24,7 @@ from .config import (ARCHIVE_UPDATES_JSON, InstanceConfig, MEETINGS_JSON, MINUTE
                      PORTAL_PREFIX,
                      STATE_FILE, VOTE_ADAPTERS)
 from .state import load_injected, load_state, save_injected
+from .textutil import plain_items
 
 logger = logging.getLogger(__name__)
 
@@ -311,7 +312,7 @@ def build_meeting(cfg: InstanceConfig, video_id: str, info: dict,
         meeting["attendance"] = attendance
 
     if civic_data and jur.agendas_adapter in VOTE_ADAPTERS:
-        items = civic_data.get("items", [])
+        items = plain_items(civic_data.get("items", []))
         if items:
             meeting["civicItems"] = items
 
@@ -527,6 +528,9 @@ def publish(cfg: InstanceConfig, data_path: Path | None = None,
     # missing key keeps the JSON diff minimal between runs.)
     for m in combined:
         m["badge"] = "new" if is_new(processed.get(m["id"]), now) else None
+        # Portal records published before item names were cleaned of markup.
+        if m.get("civicItems"):
+            m["civicItems"] = plain_items(m["civicItems"])
 
     # Backfill missing doc URLs by date for agendacenter jurisdictions.
     from .adapters import agendacenter

@@ -87,9 +87,13 @@ WPR is Instance Zero and the permanent reference deployment.
   tip sheet → data/tipsheet.md + data/tipsheet.html (committed with the data;
   not copied onto the deployed site). No API calls; sorts data/meetings.json and
   data/upcoming.json into leads: votes and hearings on next week's agendas,
-  failed/tabled/split votes, meetings where 3+ residents spoke, named topics
-  recurring across meetings, overdue upgrades, next week's meetings with no
-  preview. Reports speaker counts only, never who spoke. CI writes it every run.
+  failed/tabled/split votes with the members who voted no where the record
+  names them (the portal's vote records when a meeting has them, else the
+  recording or minutes), members with two or more no votes in 30 days,
+  meetings where 3+ residents spoke, next week's and last week's meetings
+  under each issue, named topics recurring across meetings, overdue upgrades,
+  next week's meetings with no preview. Reports speaker counts only, never
+  which residents spoke. CI writes it every run.
 - `python -m engine.report [--from YYYY-MM-DD] [--to YYYY-MM-DD] [--out FILE]
   [--json]` — the funder report for a period (default: last 180 days), counted
   from the state file, summary sidecars, corrections.json and the cost ledger:
@@ -292,6 +296,7 @@ engine/
 ├── pipeline.py          orchestrator + CLI (python -m engine.pipeline)
 ├── ingest_transcript.py manual transcript injection tool
 ├── pdftext.py           shared pdfplumber helper
+├── textutil.py          plain(): markup out of text pasted into portal item names
 └── adapters/
     ├── __init__.py      registry — get_adapter(name), fail loud on unknown
     ├── youtube.py       channel listing (flat-playlist), title-date parsing,

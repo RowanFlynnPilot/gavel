@@ -15,6 +15,7 @@ from datetime import date, timedelta
 import requests
 
 from .. import net
+from ..textutil import plain
 
 logger = logging.getLogger(__name__)
 
@@ -70,7 +71,7 @@ def fetch_meeting_data(agendas_cfg: dict, doc_url: str) -> dict | None:
             votes = []
             for v in item.get("minutesItemVotes", []):
                 votes.append({
-                    "motion": v.get("motionName", ""),
+                    "motion": plain(v.get("motionName", "")),
                     "passed": v.get("passFail") == 1,
                     "initiator": v.get("initiatedBy", ""),
                     "seconder": v.get("secondedBy", ""),
@@ -91,8 +92,9 @@ def fetch_meeting_data(agendas_cfg: dict, doc_url: str) -> dict | None:
             children = [parse_item(c) for c in item.get("childItems", [])]
             return {
                 "number": item.get("agendaObjectItemOutlineNumber", ""),
-                "name": item.get("agendaObjectItemName", ""),
-                "desc": item.get("agendaObjectItemDescription", "") or "",
+                # Clerks paste formatted text into these; readers get plain text.
+                "name": plain(item.get("agendaObjectItemName", "")),
+                "desc": plain(item.get("agendaObjectItemDescription", "") or ""),
                 "votes": votes,
                 "docs": docs,
                 "children": children,

@@ -177,6 +177,29 @@ class CivicClerkTest(unittest.TestCase):
         self.assertIn("eventDate%20le%202026-11-10T23", get.call_args.args[0])
 
 
+class MarkupTest(unittest.TestCase):
+    def test_item_names_pasted_with_formatting_come_out_as_plain_text(self):
+        from engine import publish, textutil
+        marked = '<span style="background-color: rgb(250, 197, 28);">Resolution &amp; report:  Flock cameras</span>'
+        self.assertEqual(textutil.plain(marked), "Resolution & report: Flock cameras")
+        self.assertEqual(textutil.plain(None), "")
+        items = [{"number": "1", "name": marked, "desc": "<p>From the committee</p>", "docs": [],
+                  "votes": [{"motion": "<b>Adopt</b>", "passed": True, "yes": ["A"], "no": [], "abstain": []}],
+                  "children": [{"name": "<i>Sub-item</i>", "desc": "", "votes": [], "docs": [], "children": []}]}]
+        clean = textutil.plain_items(items)
+        self.assertEqual((clean[0]["name"], clean[0]["desc"], clean[0]["votes"][0]["motion"]),
+                         ("Resolution & report: Flock cameras", "From the committee", "Adopt"))
+        self.assertEqual(clean[0]["children"][0]["name"], "Sub-item")
+        self.assertEqual(clean[0]["votes"][0]["yes"], ["A"])
+        self.assertEqual(textutil.plain_items(clean), clean, "running it again changes nothing")
+        # publish puts the cleaned items on the record.
+        info = {"title": "City Council - 2026-11-10", "source": "city", "meeting_date": "20261110",
+                "doc_url": "https://oak.portal.example/event/9/files"}
+        m = publish.build_meeting(make_config(), "cc_9", info,
+                                  {"overview": "x", "_source": "agenda_with_votes", "agenda": []}, {"items": items})
+        self.assertEqual(m["civicItems"][0]["name"], "Resolution & report: Flock cameras")
+
+
 class PageTest(unittest.TestCase):
     def test_archive_page_lists_each_members_vote_from_the_portal(self):
         m = {"id": "vid00000001", "source": "city", "title": "City Council", "date": "November 10, 2026",
