@@ -28,7 +28,7 @@ on:
         required: false
         default: ''
       backfill_issues:
-        description: 'File displayed summaries that have no issues yet under the issue list (true/false; one cheap call each)'
+        description: 'File summaries that have no issues yet under the issue list, one cheap call each: true = the displayed list; all = every summary, hidden boards included'
         required: false
         default: 'false'
 
@@ -182,10 +182,13 @@ jobs:
         # own text, one cheap call each, and writes the keys into the sidecars
         # and data/meetings.json in place. After the last publish so nothing
         # is re-published; safe to run again (filed summaries are skipped).
-        if: github.event.inputs.backfill_issues == 'true'
+        # `all` also files summaries that have rotated off the list and those
+        # of boards not yet published.
+        if: github.event.inputs.backfill_issues == 'true' || github.event.inputs.backfill_issues == 'all'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m engine.backfill_issues
+          BACKFILL_SCOPE: ${{ github.event.inputs.backfill_issues == 'all' && '--all --include-hidden' || '' }}
+        run: python -m engine.backfill_issues $BACKFILL_SCOPE
 
       - name: Generate weekly newsletter roundup
         continue-on-error: true
