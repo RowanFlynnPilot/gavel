@@ -155,6 +155,21 @@ class CoverageTest(unittest.TestCase):
         self.assertIn("**No regular schedule on file** for Village of Elm, City of Oak, Town of Ash", text)
         self.assertIn("**No agenda source** for Riverton County", text)
 
+    def test_one_file_a_month_for_this_month_and_the_ones_before(self):
+        self.assertEqual(coverage.months_back(date(2027, 1, 15), 3),
+                         [(date(2026, 11, 1), date(2026, 11, 30)), (date(2026, 12, 1), date(2026, 12, 31)),
+                          (date(2027, 1, 1), date(2027, 1, 31))])
+        self.meeting("vid00000001", "county", "20270323", "Riverton County Board Meeting")
+        out = self.dir / "coverage"
+        files = coverage.write_months(self.cfg, out, months=2, today=date(2027, 4, 20),
+                                      state=self.state, seen=self.seen)
+        self.assertEqual([p.name for p in files], ["2027-03.md", "2027-04.md"])
+        march = (out / "2027-03.md").read_text(encoding="utf-8")
+        self.assertIn("coverage check, March 1, 2027 to March 31, 2027", march)
+        self.assertIn("| Riverton County | 1 | 1 | 1 |", march)
+        # The month in progress stops at today.
+        self.assertIn("coverage check, April 1, 2027 to April 20, 2027", (out / "2027-04.md").read_text(encoding="utf-8"))
+
     def test_default_period_is_the_last_calendar_month(self):
         class Args:
             start = end = month = None

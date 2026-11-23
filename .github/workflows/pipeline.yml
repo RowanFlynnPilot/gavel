@@ -230,6 +230,14 @@ jobs:
         continue-on-error: true
         run: python -m engine.tipsheet
 
+      - name: Write the monthly coverage check
+        # For each board and meeting: was it on the tracker, was its agenda read
+        # before it was held, is there a summary of what happened. One file per
+        # month in data/coverage/, this month so far and the two before; no API
+        # calls. Committed with the data, not copied onto the deployed site.
+        continue-on-error: true
+        run: python -m engine.coverage --write-dir data/coverage
+
       - name: Export officials rosters
         # assets/rosters.json, written from instance.json's officials for
         # tools that read the name spellings without the whole config (the

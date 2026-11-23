@@ -114,7 +114,10 @@ WPR is Instance Zero and the permanent reference deployment.
   from a card made from the agenda on or before the day. A regular meeting is
   matched to a card only when the card's title has every word of the rule's
   name; anything else is listed under "Needs a look", never guessed. No API
-  calls.
+  calls. `--write-dir data/coverage [--months 3]` writes one file per month
+  (`<YYYY-MM>.md`), this month so far and the ones before it; CI runs that
+  every run and commits the files with the data (not copied onto the deployed
+  site).
 
 - `python -m engine.audit_votes [--json] [--root DIR]` — check every transcript
   summary's `votes` against the results the chair announced with a tally

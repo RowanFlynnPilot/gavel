@@ -4,6 +4,13 @@
     python -m engine.coverage --month 2026-12
     python -m engine.coverage --from 2026-12-01 --to 2026-12-31 --out coverage.md
     python -m engine.coverage --json
+    python -m engine.coverage --write-dir data/coverage      # what CI runs
+
+With --write-dir it writes one file per month, <dir>/<YYYY-MM>.md, for this
+month so far and the two before it (--months). The earlier months are written
+again each time because their answers keep changing: minutes for a meeting
+held six weeks ago turn "waiting" into "summary". A month older than that
+keeps the last file written for it.
 
 For each board and each meeting in the period it answers three questions from
 files the pipeline already keeps, with no network and no Claude calls:
@@ -285,10 +292,38 @@ def _period(args, today: date) -> tuple[date, date]:
     return first, nxt - timedelta(days=1)
 
 
+def months_back(today: date, count: int) -> list[tuple[date, date]]:
+    """(first day, last day) of this month and the count-1 before it, oldest first."""
+    out, first = [], today.replace(day=1)
+    for _ in range(max(count, 1)):
+        nxt = (first.replace(day=28) + timedelta(days=4)).replace(day=1)
+        out.append((first, nxt - timedelta(days=1)))
+        first = (first - timedelta(days=1)).replace(day=1)
+    return out[::-1]
+
+
+def write_months(cfg: InstanceConfig, out_dir: Path, *, months: int = 3, today: date | None = None,
+                 include_hidden: bool = False, state: dict | None = None,
+                 seen: dict | None = None) -> list[Path]:
+    """Write <out_dir>/<YYYY-MM>.md for the last `months` months. Returns the files."""
+    today = today or date.today()
+    out_dir.mkdir(parents=True, exist_ok=True)
+    written = []
+    for start, end in months_back(today, months):
+        data = build(cfg, start, end, today=today, state=state, seen=seen,
+                     include_hidden=include_hidden)
+        path = out_dir / f"{start.strftime('%Y-%m')}.md"
+        path.write_text(render_markdown(data), encoding="utf-8")
+        written.append(path)
+    return written
+
+
 def main() -> int:
     utf8_console()
     ap = argparse.ArgumentParser(
         description="Check each meeting for an agenda before and a summary after.")
+    ap.add_argument("--write-dir", help="write one file per month here, for this month and the ones before")
+    ap.add_argument("--months", type=int, default=3, help="with --write-dir: how many months (default 3)")
     ap.add_argument("--month", help="a calendar month, YYYY-MM (default: last month)")
     ap.add_argument("--from", dest="start", help="first day, YYYY-MM-DD (with --to)")
     ap.add_argument("--to", dest="end", help="last day, YYYY-MM-DD (with --from)")
@@ -297,6 +332,11 @@ def main() -> int:
     ap.add_argument("--include-hidden", action="store_true",
                     help="check boards that are tracked but not yet published")
     args = ap.parse_args()
+    if args.write_dir:
+        files = write_months(load_instance(), Path(args.write_dir), months=args.months,
+                             include_hidden=args.include_hidden)
+        print(f"[coverage]  wrote {', '.join(p.name for p in files)} in {args.write_dir}")
+        return 0
     try:
         start, end = _period(args, date.today())
     except ValueError as e:
