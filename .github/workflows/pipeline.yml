@@ -221,6 +221,7 @@ jobs:
         run: |
           python -m engine.ics --out data/meetings.ics
           python -m engine.pages --out-dir frontend/public
+          python -m engine.archive
           python -m engine.digest --out frontend/public/digest.png
 
       - name: Write the reporter tip sheet

@@ -52,6 +52,7 @@ let SOURCE_CONFIG          = {};
 let COMMITTEE_STYLES       = {};
 let _COMMITTEE_STYLES_NORM = {};
 let FILTER_OPTIONS         = []; // "All Sources" first, then one per jurisdiction
+let ISSUES                 = []; // instance.json `issues`: [{key, label, about}]
 let CAL_URLS               = {}; // FULL CALENDAR(S) destination per source filter
 
 // Raw hex mirror of the ink token — the filter chips build "#RRGGBB15" alpha
@@ -149,6 +150,7 @@ function _applyConfig(config, meetings, upcoming) {
   INSTANCE      = config.instance;
   THEME         = config.theme;
   JURISDICTIONS = config.jurisdictions;
+  ISSUES        = Array.isArray(config.issues) ? config.issues : [];
   // A meeting or an upcoming list from a board that isn't in instance.json
   // has no name, color or avatar to draw with, and one such record used to
   // blank the whole page. It is left out and the rest is shown.
@@ -1631,6 +1633,153 @@ function AgendaPreview({ preview, url, accent, open, onToggle, panelId, describe
   );
 }
 
+// Older meetings. The list above holds the newest meetings; every earlier one
+// keeps its own page, and data/archive.json has one short row for each. That
+// file is fetched the first time a reader searches or asks to browse, never on
+// page load, and the same search terms, board filter and an issue filter run
+// over it. A row opens the meeting's permanent page.
+const OLDER_STEP = 25;
+let _archiveLoad = null;                     // one fetch per visit
+
+function _loadArchive() {
+  if (!_archiveLoad) {
+    _archiveLoad = fetch(DATA_URL + "data/archive.json")
+      .then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then(rows => (Array.isArray(rows) ? rows : []))
+      .catch(e => { _archiveLoad = null; throw e; });
+  }
+  return _archiveLoad;
+}
+
+function _archiveBlob(r, issueLabels) {
+  if (!r._blob) {
+    const src = SOURCE_CONFIG[r.source];
+    r._blob = [
+      r.title, r.committee, r.overview, r.text, (r.topics || []).join(" "),
+      (r.issues || []).map(k => issueLabels[k] || "").join(" "), src ? src.label : "",
+      new Date(r.date + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+    ].filter(Boolean).join(" \n ").toLowerCase();
+  }
+  return r._blob;
+}
+
+function OlderMeetings({ search, sourceFilter }) {
+  const [open, setOpen]       = useState(false);
+  const [load, setLoad]       = useState({ status: "idle", rows: [] });
+  const [issue, setIssue]     = useState("all");
+  const [shown, setShown]     = useState(OLDER_STEP);
+  const [attempt, setAttempt] = useState(0);
+  const query  = (search || "").trim().toLowerCase();
+  const active = open || query !== "";
+
+  // Depends on `active` and `attempt` only: with the load status among the
+  // dependencies, setting "loading" re-ran the effect and its cleanup threw
+  // the answer away.
+  useEffect(() => {
+    if (!active) return undefined;
+    let cancelled = false;
+    setLoad(l => (l.status === "ready" ? l : { status: "loading", rows: [] }));
+    _loadArchive()
+      .then(rows => { if (!cancelled) setLoad({ status: "ready", rows }); })
+      .catch(() => { if (!cancelled) setLoad({ status: "error", rows: [] }); });
+    return () => { cancelled = true; };
+  }, [active, attempt]);
+  // A new search or filter starts the list over from the top.
+  useEffect(() => { setShown(OLDER_STEP); }, [query, sourceFilter, issue]);
+
+  const label = { fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.16em", color: "#5a5a5a" };
+  if (!active) {
+    return (
+      <button type="button" onClick={() => { track("Archive", { action: "browse" }); setOpen(true); }} style={{
+        display: "block", width: "100%", padding: "14px", cursor: "pointer", textAlign: "center",
+        background: CREAM, border: "none", borderTop: `2px solid ${RULE}`,
+        fontFamily: FONT_DISPLAY, fontSize: "12px", letterSpacing: "0.16em", color: TEAL,
+      }}>
+        BROWSE OLDER MEETINGS <span aria-hidden="true">▾</span>
+      </button>
+    );
+  }
+
+  const issueLabels = Object.fromEntries(ISSUES.map(i => [i.key, i.label]));
+  const onList = new Set(MEETINGS.map(m => m.id));
+  const terms  = query ? query.split(/\s+/) : [];
+  const rows   = load.rows.filter(r =>
+    SOURCE_CONFIG[r.source] && !onList.has(r.id)
+    && (sourceFilter === "all" || r.source === sourceFilter)
+    && (issue === "all" || (r.issues || []).includes(issue))
+    && terms.every(t => _archiveBlob(r, issueLabels).includes(t)));
+
+  return (
+    <section aria-label="Older meetings" style={{ borderTop: `2px solid ${RULE}`, background: CREAM }}>
+      <div style={{ padding: "12px 14px 10px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "10px", flexWrap: "wrap" }}>
+        <div style={label} role="status">
+          OLDER MEETINGS
+          {load.status === "ready" && <> · {rows.length} {query || issue !== "all" || sourceFilter !== "all" ? (rows.length === 1 ? "MATCH" : "MATCHES") : "IN THE ARCHIVE"}</>}
+        </div>
+        {ISSUES.length > 0 && (
+          <select value={issue} aria-label="Filter older meetings by issue"
+            onChange={e => { track("Archive", { action: "issue", issue: e.target.value }); setIssue(e.target.value); }}
+            style={{ fontFamily: FONT_BODY, fontSize: "12px", padding: "4px 6px", border: `1px solid ${RULE}`, background: "#fff", color: INK, maxWidth: "100%" }}>
+            <option value="all">All issues</option>
+            {ISSUES.map(i => <option key={i.key} value={i.key}>{i.label}</option>)}
+          </select>
+        )}
+      </div>
+      {load.status === "loading" && (
+        <div style={{ padding: "4px 14px 16px", fontFamily: FONT_BODY, fontSize: "13px", color: "#5a5a5a" }}>Loading older meetings…</div>
+      )}
+      {load.status === "error" && (
+        <div role="alert" style={{ padding: "4px 14px 16px", fontFamily: FONT_BODY, fontSize: "13px", color: "#5a5a5a" }}>
+          Older meetings could not be loaded.{" "}
+          <button type="button" onClick={() => setAttempt(n => n + 1)}
+            style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: TEAL, fontFamily: FONT_BODY, fontSize: "13px", textDecoration: "underline" }}>
+            Try again
+          </button>
+        </div>
+      )}
+      {load.status === "ready" && rows.length === 0 && (
+        <div style={{ padding: "4px 14px 16px", fontFamily: FONT_BODY, fontSize: "13px", color: "#5a5a5a" }}>
+          No older meetings match.
+        </div>
+      )}
+      {rows.slice(0, shown).map(r => {
+        const src = SOURCE_CONFIG[r.source];
+        const when = new Date(r.date + "T00:00:00")
+          .toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }).toUpperCase();
+        const body = (
+          <>
+            <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10.5px", letterSpacing: "0.12em", color: "#5a5a5a" }}>
+              {when}{" · "}<span style={{ color: src.accent }}>{src.label.toUpperCase()}</span>
+              {r.agendaOnly && <>{" · "}AGENDA ONLY</>}
+            </div>
+            <div style={{ fontFamily: FONT_HEADLINE, fontWeight: 700, fontSize: "14px", color: INK, margin: "2px 0 3px" }}>{r.title}</div>
+            <div style={{
+              fontFamily: FONT_BODY, fontSize: "12.5px", color: "#444", lineHeight: 1.45,
+              display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden",
+            }}>{r.overview}</div>
+          </>
+        );
+        const rowStyle = { display: "block", padding: "10px 14px", background: "#fff", borderTop: `1px solid ${RULE}`, textDecoration: "none" };
+        return r.page ? (
+          <a key={r.id} href={`${BASE_URL}meetings/${r.id}/`} target="_blank" rel="noreferrer" style={rowStyle}
+            onClick={() => track("Archive", { action: "open", source: r.source })}>{body}</a>
+        ) : (
+          <div key={r.id} style={rowStyle}>{body}</div>
+        );
+      })}
+      {rows.length > shown && (
+        <button type="button" onClick={() => setShown(n => n + OLDER_STEP)} style={{
+          display: "block", width: "100%", padding: "12px", cursor: "pointer", textAlign: "center",
+          background: CREAM, border: "none", borderTop: `1px solid ${RULE}`,
+          fontFamily: FONT_DISPLAY, fontSize: "11px", letterSpacing: "0.14em", color: TEAL,
+        }}>
+          SHOW {Math.min(OLDER_STEP, rows.length - shown)} MORE
+        </button>
+      )}
+    </section>
+  );
+}
+
 // "Your chance to speak": upcoming meetings in the next CHANCE_DAYS days whose
 // posted agenda has a public hearing or a public comment period, read from the
 // agenda preview. Hearings come first; they are the rarer and the more pointed.
@@ -2652,7 +2801,7 @@ function Tracker() {
                     <div style={{ padding: "32px 18px", color: "#5a5a5a", fontFamily: FONT_BODY, fontSize: "14px", lineHeight: 1.55, textAlign: "center" }}>
                       <div style={{ fontFamily: FONT_DISPLAY, fontSize: "13px", letterSpacing: "0.14em", color: "#5a5a5a", marginBottom: "8px" }}>NO MATCHES</div>
                       {search
-                        ? <>No meetings match <em>&ldquo;{search}&rdquo;</em>. Try a different search term or change the source filter.</>
+                        ? <>No recent meetings match <em>&ldquo;{search}&rdquo;</em>. Older meetings are searched below.</>
                         : sourceFilter !== "all"
                           ? <>No recent meetings yet for this source. Check back after the next scheduled meeting.</>
                           : <>No recent meetings have been summarized yet.</>}
@@ -2671,6 +2820,7 @@ function Tracker() {
                     );
                   })
                 }
+                <OlderMeetings search={search} sourceFilter={sourceFilter} />
               </div>
 
               </>}

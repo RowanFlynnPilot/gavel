@@ -27,7 +27,8 @@ import shutil
 import sys
 from pathlib import Path
 
-from .config import MEETINGS_JSON, UPCOMING_JSON, InstanceConfig, load_instance, utf8_console
+from .config import (ARCHIVE_INDEX_JSON, MEETINGS_JSON, UPCOMING_JSON, InstanceConfig, load_instance,
+                     utf8_console)
 
 NOINDEX = '<meta name="robots" content="noindex, nofollow">'
 
@@ -62,6 +63,11 @@ def write_views(cfg: InstanceConfig, out_dir: Path, preview_dir: Path | None = N
     public_meetings = [m for m in meetings if m.get("source") not in hidden]
     _write(out_dir / "data" / "meetings.json", public_meetings)
     _write(out_dir / "data" / "upcoming.json", {k: v for k, v in upcoming.items() if k not in hidden})
+    # The archive index (engine.archive), when one has been written.
+    archive = _load(ARCHIVE_INDEX_JSON, None)
+    if isinstance(archive, list):
+        _write(out_dir / "data" / "archive.json",
+               [r for r in archive if r.get("source") not in hidden])
 
     if preview_dir is not None:
         if preview_dir.exists():
@@ -70,6 +76,8 @@ def write_views(cfg: InstanceConfig, out_dir: Path, preview_dir: Path | None = N
             _write(preview_dir / "instance.json", {**raw, "preview": True})
             _write(preview_dir / "data" / "meetings.json", meetings)
             _write(preview_dir / "data" / "upcoming.json", upcoming)
+            if isinstance(archive, list):
+                _write(preview_dir / "data" / "archive.json", archive)
     return {"hidden": sorted(hidden), "public_meetings": len(public_meetings),
             "all_meetings": len(meetings), "preview": bool(hidden and preview_dir is not None)}
 

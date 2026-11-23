@@ -34,6 +34,7 @@ from urllib.parse import quote
 
 from .config import (ARCHIVE_UPDATES_JSON, MEETINGS_JSON, InstanceConfig, load_instance,
                      setup_logging)
+from . import archive
 from .state import load_state
 
 E = html.escape
@@ -284,6 +285,21 @@ def main() -> None:
         Path(MEETINGS_JSON).parent / ARCHIVE_UPDATES_JSON.name, {m.get("id") for m in meetings})
     if rewritten:
         print(f"[pages] rewrote {rewritten} archive page(s) for rebuilt meetings")
+
+    # Every summarized meeting has a page, including the ones that left the
+    # list before pages were written: the archive search opens them.
+    have = {p.parent.name for p in pages_dir.glob("*/index.html")}
+    backfilled = 0
+    for _, m in archive.records(cfg):
+        if m["id"] in have or m.get("source") in hidden:
+            continue
+        d = pages_dir / m["id"]
+        d.mkdir(exist_ok=True)
+        (d / "index.html").write_text(render_page(cfg, {**m, "badge": None}, base_url, noindex),
+                                      encoding="utf-8")
+        backfilled += 1
+    if backfilled:
+        print(f"[pages] wrote {backfilled} page(s) for older meetings that had none")
 
     refreshed = refresh_archive_footers(cfg, pages_dir, base_url)
     if refreshed:

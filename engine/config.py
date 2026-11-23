@@ -61,6 +61,8 @@ INJECTED_FILE = Path(os.environ.get("INJECTED_FILE", "./injected_meetings.json")
 DATA_DIR = Path(os.environ.get("DATA_DIR", "./data"))
 MEETINGS_JSON = DATA_DIR / "meetings.json"
 UPCOMING_JSON = DATA_DIR / "upcoming.json"
+# Every summarized meeting in brief, for the search of older meetings (engine.archive).
+ARCHIVE_INDEX_JSON = DATA_DIR / "archive.json"
 # Meeting records rebuilt this run that are too old for the displayed list;
 # publish queues them here and pages rewrites their archive pages, then
 # removes the file.

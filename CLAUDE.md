@@ -53,6 +53,16 @@ WPR is Instance Zero and the permanent reference deployment.
   reads) and, when `instance.corrections_email` is set, a "Request a
   correction" mailto; `refresh_archive_footers` brings pages already on disk
   up to date in place.
+- `python -m engine.archive [--out data/archive.json] [--pages-dir
+  frontend/public/meetings]` — the archive index: one short row per summarized
+  meeting, newest first (`{id, source, title, date, committee, agendaOnly,
+  overview, topics, issues, text, page}`), built from the sidecars with the
+  same record builder as the displayed list. The frontend fetches it only when
+  a reader searches or browses older meetings, and a row opens the meeting's
+  static page. CI writes it after `engine.pages`, which also writes a page for
+  any summarized meeting that has none. The committed file holds every board;
+  `engine.visibility` stages the public copy without hidden boards. No API
+  calls.
 - `python -m engine.scrub [--check] [--pages-dir frontend/public/meetings]` —
   removes residents' home addresses from summaries/, data/meetings.json and
   archive pages, and re-applies every fix logged in corrections.json.
@@ -269,6 +279,7 @@ engine/
 │                        in data/previews.json by agenda hash)
 ├── speakers.py          public-comment speaker counts (field, else prose)
 ├── report.py            funder report for a period (no API calls)
+├── archive.py           data/archive.json: every summarized meeting in brief
 ├── coverage.py          monthly coverage check: agenda before, summary after
 ├── portal_votes.py      each member's vote from the portal, for recorded meetings
 ├── tipsheet.py          weekly reporter tip sheet (no API calls)
