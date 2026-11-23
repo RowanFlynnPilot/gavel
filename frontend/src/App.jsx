@@ -724,9 +724,12 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
   const avatarClear = isMobile ? "64px" : "88px";
 
   const hasCivic = !!(meeting.civicItems && meeting.civicItems.length);
-  // Structured votes extracted from transcripts/minutes (non-CivicClerk
-  // sources). CivicClerk's richer civicItems take precedence when present.
-  const hasVotes = !hasCivic && !!(meeting.votes && meeting.votes.length);
+  // The portal's own vote records (civicItems) name each member and take
+  // precedence once the portal has recorded a vote. Until it has, the votes
+  // drawn from the recording or minutes are shown instead of an empty list.
+  const anyVote = items => (items || []).some(it => (it.votes && it.votes.length) || anyVote(it.children));
+  const hasVotes = !(hasCivic && anyVote(meeting.civicItems)) && !!(meeting.votes && meeting.votes.length);
+  const showCivicVotes = hasCivic && !hasVotes;
 
   const voteTab = (hasCivic || hasVotes) ? [{ id: "votes", label: "Votes" }] : [];
   const tabs = [
@@ -1175,7 +1178,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
           );
         })()}
 
-        {tab === "votes" && hasCivic && (() => {
+        {tab === "votes" && showCivicVotes && (() => {
           const VoteBar = ({ votes, label, color }) => {
             if (!votes.length) return null;
             return (
@@ -1205,7 +1208,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
           const isPublicCommentItem = (item) =>
             item.name.toLowerCase().startsWith("public comment");
 
-          const renderItem = (item, depth = 0) => {
+          const renderItem = (item, depth = 0, index = 0) => {
             const hasVotes    = item.votes && item.votes.length > 0;
             const hasDocs     = item.docs  && item.docs.length  > 0;
             const hasChildren = item.children && item.children.length > 0;
@@ -1213,7 +1216,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
             const isEmpty = !hasVotes && !hasDocs && !hasChildren && !isPublicComment;
 
             return (
-              <div key={item.number} style={{ marginBottom: depth === 0 ? "20px" : "14px" }}>
+              <div key={`${depth}-${index}`} style={{ marginBottom: depth === 0 ? "20px" : "14px" }}>
 
                 <div style={{
                   display: "flex", alignItems: "flex-start", gap: "10px",
@@ -1353,7 +1356,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
 
                 {hasChildren && (
                   <div style={{ marginLeft: depth === 0 ? "14px" : "28px" }}>
-                    {item.children.map(child => renderItem(child, depth + 1))}
+                    {item.children.map((child, ci) => renderItem(child, depth + 1, ci))}
                   </div>
                 )}
               </div>
@@ -1369,7 +1372,7 @@ function SummaryDetail({ meeting, onBack, isMobile, onTopicClick, onSelectPart }
                   CivicClerk
                 </a>
               </div>
-              {meeting.civicItems.map(item => renderItem(item, 0))}
+              {meeting.civicItems.map((item, ii) => renderItem(item, 0, ii))}
             </>
           );
         })()}

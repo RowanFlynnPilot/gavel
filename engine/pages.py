@@ -114,6 +114,29 @@ def render_page(cfg: InstanceConfig, m: dict, base_url: str, noindex: bool) -> s
             f"{('<br><em>' + E(who) + '</em>') if who else ''}</li>")
     votes_html = f"<h2>Votes</h2><ul>{votes_rows}</ul>" if votes_rows else ""
 
+    # The portal's own record of each member's vote, where it has one
+    # (engine.portal_votes). It names everyone; the list above may not.
+    def portal_rows(items) -> str:
+        rows = ""
+        for it in items or []:
+            for v in it.get("votes") or []:
+                yes, no, abstain = (v.get(k) or [] for k in ("yes", "no", "abstain"))
+                names = " · ".join(x for x in [
+                    f"Yes: {', '.join(yes)}" if yes else "",
+                    f"No: {', '.join(no)}" if no else "",
+                    f"Abstained: {', '.join(abstain)}" if abstain else ""] if x)
+                rows += (
+                    f"<li><strong>{E(it.get('name', ''))}</strong> — {E(v.get('motion', ''))}: "
+                    f"{'Passed' if v.get('passed') else 'Failed'}"
+                    f"{f' {len(yes)}-{len(no)}' if yes or no else ''}"
+                    f"{('<br><em>' + E(names) + '</em>') if names else ''}</li>")
+            rows += portal_rows(it.get("children"))
+        return rows
+
+    member_rows = portal_rows(m.get("civicItems"))
+    if member_rows:
+        votes_html += f"<h2>Votes by member, from the official record</h2><ul>{member_rows}</ul>"
+
     actions = "".join(f"<li>{E(a)}</li>" for a in (m.get("actionItems") or []))
     actions_html = f"<h2>Action items</h2><ul>{actions}</ul>" if actions else ""
 

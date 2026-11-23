@@ -19,6 +19,28 @@ from .. import net
 logger = logging.getLogger(__name__)
 
 _HEADERS = {"Accept": "application/json", "User-Agent": "Mozilla/5.0"}
+_MAX_PAGES = 20
+
+
+def _all_events(url: str, fetch) -> list[dict]:
+    """Every event an Events query matches. CivicClerk answers 15 at a time
+    whatever $top asks for and gives the next page's address in
+    @odata.nextLink. Until Nov. 2026 only the first page was read, so a busy
+    city's upcoming list stopped after its next 15 events. `fetch` turns a
+    URL into the decoded page and raises when the portal doesn't answer."""
+    events: list[dict] = []
+    for _ in range(_MAX_PAGES):
+        page = fetch(url)
+        events += page.get("value", [])
+        url = page.get("@odata.nextLink")
+        if not url:
+            break
+    return events
+
+
+def _skipped(name: str) -> bool:
+    """Not a meeting to track: called off, or only a quorum notice."""
+    return "CANCEL" in name.upper() or "POSSIBLE QUORUM" in name.upper()
 
 
 def fetch_meeting_data(agendas_cfg: dict, doc_url: str) -> dict | None:
@@ -139,12 +161,12 @@ def fetch_upcoming(agendas_cfg: dict, jurisdiction_key: str,
         "%20and%20isDeleted%20eq%20false"
         "&%24orderby=eventDate&%24top=30"
     )
-    events = net.get_json(url, headers=_HEADERS).get("value", [])
+    events = _all_events(url, lambda u: net.get_json(u, headers=_HEADERS))
 
     results = []
     for e in events:
         name = e.get("eventName", "")
-        if "CANCEL" in name.upper() or "POSSIBLE QUORUM" in name.upper():
+        if _skipped(name):
             continue
         raw = e.get("eventDate", "")
         date_part = raw[:10]
@@ -182,12 +204,15 @@ def list_recent(agendas_cfg: dict, since: date) -> list[dict]:
         "%20and%20isDeleted%20eq%20false"
         "&%24orderby=eventDate%20desc&%24top=100"
     )
-    r = requests.get(url, headers=_HEADERS, timeout=15)
-    r.raise_for_status()
+    def fetch(u: str) -> dict:
+        r = requests.get(u, headers=_HEADERS, timeout=15)
+        r.raise_for_status()
+        return r.json()
+
     results = []
-    for e in r.json().get("value", []):
+    for e in _all_events(url, fetch):
         name = e.get("eventName", "")
-        if not e.get("hasAgenda") or "CANCEL" in name.upper() or "POSSIBLE QUORUM" in name.upper():
+        if not e.get("hasAgenda") or _skipped(name):
             continue
         results.append({
             "id": str(e["id"]),
@@ -196,3 +221,25 @@ def list_recent(agendas_cfg: dict, since: date) -> list[dict]:
             "url": f"{portal}/event/{e['id']}/files",
         })
     return results
+
+
+def events_on(agendas_cfg: dict, day: date) -> list[dict]:
+    """The portal's events on one day: {id, name, date, url}, cancelled ones
+    and quorum notices left out. url is the event's portal page, the doc_url
+    fetch_meeting_data reads. Raises UpstreamUnavailableError when CivicClerk
+    doesn't answer. Used to find the portal event behind a recorded meeting
+    (engine.portal_votes)."""
+    base = agendas_cfg["api_base"]
+    portal = agendas_cfg["portal"].rstrip("/")
+    url = (
+        f"{base}/Events"
+        f"?%24filter=eventDate%20ge%20{day}T00%3A00%3A00Z"
+        f"%20and%20eventDate%20le%20{day}T23%3A59%3A59Z"
+        "%20and%20isDeleted%20eq%20false"
+        "&%24orderby=eventDate"
+    )
+    return [{"id": str(e["id"]), "name": e.get("eventName", ""),
+             "date": (e.get("eventDate") or "")[:10],
+             "url": f"{portal}/event/{e['id']}/files"}
+            for e in _all_events(url, lambda u: net.get_json(u, headers=_HEADERS))
+            if not _skipped(e.get("eventName", ""))]

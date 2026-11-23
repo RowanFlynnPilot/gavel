@@ -204,6 +204,20 @@ than rename.
 The transcript and minutes prompts also ask who voted no or abstained on each
 vote and who was present, by name, and only when the record says so.
 
+A body that votes on an electronic board never says who voted how (the chair
+reads "Motion failed. 5 to six."), so a recording can't supply names. For a
+jurisdiction with a video channel whose agendas adapter keeps vote records and
+has `events_on` (civicclerk), `engine.portal_votes.attach` finds each recent
+recording's portal event — its `doc_url` when that is a portal link, else the
+one event held that day whose body words equal the recording title's
+("Wausau City Council Meeting" and "Common Council Meeting" are both
+{council}; no fuzzy fallback) — and, once the portal has recorded votes,
+saves them as the summary's `_votes.json`. publish puts them on the record as
+`civicItems`; the Votes tab shows them in place of the transcript's votes, and
+archive pages list them under "Votes by member". No Claude call. Each
+recording is looked up at most once a day (`portal_votes_checked` in the state
+file) for `votes_upgrade_window_days` (30).
+
 ## Speaker counts
 
 The transcript and minutes prompts return `publicCommentSpeakers` (residents
@@ -241,6 +255,7 @@ engine/
 ├── speakers.py          public-comment speaker counts (field, else prose)
 ├── report.py            funder report for a period (no API calls)
 ├── coverage.py          monthly coverage check: agenda before, summary after
+├── portal_votes.py      each member's vote from the portal, for recorded meetings
 ├── tipsheet.py          weekly reporter tip sheet (no API calls)
 ├── watchdog.py          skipped_videos.json first-seen tracking → stale list
 ├── health.py            source_health.json: which boards' sites stopped answering
@@ -255,7 +270,8 @@ engine/
     ├── __init__.py      registry — get_adapter(name), fail loud on unknown
     ├── youtube.py       channel listing (flat-playlist), title-date parsing,
     │                    LISTED_IDS / LISTED_DURATIONS per run, ytdlp_base()
-    ├── civicclerk.py    OData API: votes, agenda text, upcoming
+    ├── civicclerk.py    OData API: votes, agenda text, upcoming, one day's
+    │                    events (every query reads all pages: 15 events each)
     ├── legistar.py      Legistar Web API: items + roll calls, agenda item list, upcoming
     ├── primegov.py      PrimeGov public portal: HTML agenda text, upcoming (no votes)
     ├── boardbook.py     org-page scrape, agenda scrape, recording matcher

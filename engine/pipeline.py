@@ -29,7 +29,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 from . import publish as publish_mod
-from . import health, summarize, upcoming, watchdog
+from . import health, portal_votes, summarize, upcoming, watchdog
 from .adapters import boardbook as bb_adapter
 from .adapters import for_jurisdiction, get_adapter, youtube
 from .portal_cache import MINUTES_WINDOW_DAYS as PORTAL_CACHE_MINUTES_WINDOW_DAYS
@@ -1024,6 +1024,10 @@ def main() -> None:
     for src in portal_first:
         upgraded_ids += upgrade_portal_from_votes(cfg, src, state)
         upgraded_ids += upgrade_portal_from_minutes(cfg, src, state)
+    # Recorded meetings of a body whose portal keeps each member's vote: the
+    # recording can't say who voted how, the portal can (engine.portal_votes).
+    for src in youtube_first:
+        upgraded_ids += portal_votes.attach(cfg, src, state)
 
     if upgraded_ids:
         clear_injected(upgraded_ids)
