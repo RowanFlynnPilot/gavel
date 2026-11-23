@@ -27,6 +27,10 @@ on:
         description: 'Comma-separated video IDs whose transcript summaries to redo (python -m engine.audit_votes lists them)'
         required: false
         default: ''
+      backfill_issues:
+        description: 'File displayed summaries that have no issues yet under the issue list (true/false; one cheap call each)'
+        required: false
+        default: 'false'
 
 permissions:
   contents: write
@@ -171,6 +175,17 @@ jobs:
         # Ingest may have cleared injected IDs; publish-only is cheap and
         # idempotent. It builds from the sidecars the scrub just cleaned.
         run: python -m engine.pipeline --publish-only
+
+      - name: File older summaries under issues
+        # On request only. Summaries written before instance.json had an
+        # `issues` list carry none; this files the displayed ones from their
+        # own text, one cheap call each, and writes the keys into the sidecars
+        # and data/meetings.json in place. After the last publish so nothing
+        # is re-published; safe to run again (filed summaries are skipped).
+        if: github.event.inputs.backfill_issues == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m engine.backfill_issues
 
       - name: Generate weekly newsletter roundup
         continue-on-error: true

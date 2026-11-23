@@ -201,6 +201,15 @@ stays free-form and is not a substitute: its tags almost never repeat.
 Changing a key orphans the summaries filed under it, so add or relabel rather
 than rename.
 
+`python -m engine.backfill_issues [--include-hidden] [--all] [--limit N]
+[--dry-run]` files summaries written before the list existed: one Haiku call
+each from the summary's own text (`purpose=issues_backfill`, about a sixth of
+a cent), written into the sidecar and onto the record in data/meetings.json in
+place, with nothing re-published. Default scope is the displayed list of
+published boards; a summary with an `issues` key, even an empty one, is
+skipped. In CI: run the workflow with `backfill_issues` set to `true`. More
+than 40 calls in a day trips the spending alarm's call count, by design.
+
 The transcript and minutes prompts also ask who voted no or abstained on each
 vote and who was present, by name, and only when the record says so.
 
