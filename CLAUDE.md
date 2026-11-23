@@ -165,8 +165,8 @@ still get their votes from the model alone.
 
 The normal pipeline run attaches a `preview` to upcoming meetings in the next
 `PREVIEW_DAYS` (8) whose agenda is posted: `{overview, items: [{item, why,
-action: vote|hearing|discussion|report}], issues?, publicComment, closedSession,
-generated}`, one Haiku call each (`purpose=agenda_preview`), through
+action: vote|hearing|discussion|report}], hearings: [str], issues?, publicComment,
+closedSession, generated}`, one Haiku call each (`purpose=agenda_preview`), through
 `engine.previews.attach` inside `update_upcoming(previews="generate")`.
 `--publish-only` attaches cached previews and never calls Claude.
 
@@ -182,6 +182,12 @@ generated}`, one Haiku call each (`purpose=agenda_preview`), through
 - Agenda text per platform is in `previews._AGENDA_TEXT`. `rule_schedule`
   jurisdictions have no posted agenda and get no previews; a new agendas
   adapter needs an entry there to get them.
+- `hearings` lists every public hearing on the agenda by subject (not capped
+  by the six `items`). The Upcoming panel opens with "Your chance to speak":
+  meetings in the next 8 days with a hearing, and the ones with only a public
+  comment period behind one line; the Recent panel points to it. A click fires
+  the Plausible event `Chance To Speak` with `{source, kind: hearing|comment|
+  pointer, days_before}`. Add it as a Goal in Plausible.
 - The frontend's Upcoming panel expands a preview and fires the Plausible
   event `Agenda Preview` with `{source, days_before}` — the "agenda views
   before the meeting" number in funder reports. Add it as a Goal in Plausible.

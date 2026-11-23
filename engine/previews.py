@@ -51,7 +51,7 @@ MIN_AGENDA_CHARS = 200
 MAX_AGENDA_CHARS = int(os.environ.get("PREVIEW_MAX_AGENDA_CHARS", "30000"))
 # Part of every cached agenda hash: bump it when the prompt changes in a way
 # that should rewrite previews already cached (still capped per meeting).
-PROMPT_VERSION = "3"
+PROMPT_VERSION = "4"
 ACTIONS = ("vote", "hearing", "discussion", "report")
 
 
@@ -184,6 +184,7 @@ Return a JSON object with this exact structure and nothing else - no markdown, n
   "items": [
     {{"item": "the agenda item in plain language, 12 words or fewer", "why": "one sentence: what it is and what the body is being asked to do", "action": "vote | hearing | discussion | report"}}
   ],
+  "hearings": ["each public hearing on this agenda: what it is about, in plain language, 12 words or fewer"],
   {issues_field(cfg.issues)}"publicComment": true,
   "closedSession": false
 }}
@@ -193,6 +194,7 @@ Return a JSON object with this exact structure and nothing else - no markdown, n
 Rules:
 - items: at most 6, the most consequential first, drawn from the WHOLE agenda: new business, unfinished business and reports usually come after long consent and policy lists. Skip procedural items (call to order, roll call, approval of minutes, adjournment). Policy readings, budgets, contracts, hires, studies and course or program proposals are not procedural; group a long list of them into one item ("Second reading of 44 district policies"). An empty list is right only when the agenda has nothing but procedure; say so in the overview.
 - action: "vote" when the agenda asks for a decision (approve, adopt, award, deny); "hearing" for a public hearing; "report" for updates and presentations; otherwise "discussion".
+- hearings: every item the agenda calls a public hearing, whether or not it is among the items above; [] when there is none. A general public comment period is not a hearing. Say what the hearing is about ("Rezoning 12 acres on County Road X for apartments"), not "Public hearing".
 - publicComment: true only if the agenda lists a public comment period or a public hearing where residents can speak.
 - closedSession: true only if the agenda lists a closed or executive session.
 - Use ONLY what the agenda says. Do not predict outcomes. Do not invent dollar amounts, names, or background the agenda does not give.
@@ -232,6 +234,9 @@ def parse_preview(raw: str, issues: list[dict] | None = None) -> dict | None:
         "publicComment": data.get("publicComment") is True,
         "closedSession": data.get("closedSession") is True,
     }
+    hearings = data.get("hearings")
+    preview["hearings"] = ([h.strip() for h in hearings if isinstance(h, str) and h.strip()][:8]
+                           if isinstance(hearings, list) else [])
     if issues:
         preview["issues"] = clean_issues(data.get("issues"), issues)
     return preview

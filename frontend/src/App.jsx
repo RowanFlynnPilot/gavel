@@ -1631,6 +1631,108 @@ function AgendaPreview({ preview, url, accent, open, onToggle, panelId, describe
   );
 }
 
+// "Your chance to speak": upcoming meetings in the next CHANCE_DAYS days whose
+// posted agenda has a public hearing or a public comment period, read from the
+// agenda preview. Hearings come first; they are the rarer and the more pointed.
+// A preview written before previews listed hearings falls back to its items.
+const CHANCE_DAYS = 8;
+
+function _chances(sourceKey, today) {
+  const out = [];
+  for (const j of JURISDICTIONS) {
+    if (sourceKey !== "all" && sourceKey !== j.key) continue;
+    for (const ev of UPCOMING[j.key] || []) {
+      const p = ev.preview;
+      if (!p || ev.date < today || _daysBefore(ev.date, today) > CHANCE_DAYS) continue;
+      const hearings = Array.isArray(p.hearings) && p.hearings.length
+        ? p.hearings
+        : (p.items || []).filter(it => it.action === "hearing").map(it => it.item);
+      if (hearings.length || p.publicComment) out.push({ ev, hearings });
+    }
+  }
+  return out.sort((a, b) =>
+    (b.hearings.length > 0) - (a.hearings.length > 0)
+    || a.ev.date.localeCompare(b.ev.date) || (a.ev.time || "").localeCompare(b.ev.time || ""));
+}
+
+function ChancesToSpeak({ sourceKey, today, dateLabel }) {
+  const [showAll, setShowAll] = useState(false);
+  const chances = _chances(sourceKey, today);
+  if (!chances.length) return null;
+  // Hearings are always shown. Comment periods are on most agendas, so they
+  // sit behind one line until asked for; otherwise the section fills a phone.
+  const withHearing = chances.filter(c => c.hearings.length > 0);
+  const commentOnly = chances.filter(c => c.hearings.length === 0);
+  const shown = showAll ? chances : withHearing;
+  return (
+    <section aria-label="Your chance to speak" style={{
+      margin: "12px 14px 6px", background: "#fff",
+      border: `1px solid ${RULE}`, borderLeft: `4px solid ${TEAL}`,
+    }}>
+      <div style={{ padding: "10px 12px 8px", borderBottom: `1px solid ${RULE}` }}>
+        <div style={{ fontFamily: FONT_DISPLAY, fontSize: "13px", letterSpacing: "0.16em", color: INK }}>
+          YOUR CHANCE TO SPEAK
+        </div>
+        <div style={{ fontFamily: FONT_BODY, fontSize: "12px", color: "#5a5a5a", marginTop: "3px", lineHeight: 1.45 }}>
+          {withHearing.length === 0
+            ? `No public hearings are on agendas in the next ${CHANCE_DAYS} days.`
+            : `Public hearings on agendas in the next ${CHANCE_DAYS} days.`}
+          {" "}Each board sets its own rules for speaking, so check the agenda first.
+        </div>
+      </div>
+      {shown.map(({ ev, hearings }, i) => {
+        const src = SOURCE_CONFIG[ev.source];
+        const body = (
+          <>
+            <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10.5px", letterSpacing: "0.12em", color: "#5a5a5a" }}>
+              {dateLabel(ev.date)}{ev.time ? ` · ${ev.time}` : ""}{" · "}
+              <span style={{ color: src.accent }}>{src.label.toUpperCase()}</span>
+            </div>
+            <div style={{ fontFamily: FONT_HEADLINE, fontWeight: 700, fontSize: "14px", color: INK, margin: "2px 0 3px" }}>
+              {ev.name}
+            </div>
+            {hearings.map((h, hi) => (
+              <div key={hi} style={{ fontFamily: FONT_BODY, fontSize: "12.5px", color: "#333", lineHeight: 1.45 }}>
+                <strong>Public hearing:</strong> {h}
+              </div>
+            ))}
+            {hearings.length === 0 && (
+              <div style={{ fontFamily: FONT_BODY, fontSize: "12.5px", color: "#333" }}>Public comment period</div>
+            )}
+          </>
+        );
+        const rowStyle = {
+          display: "block", padding: "9px 12px", textDecoration: "none",
+          borderTop: i === 0 ? "none" : `1px solid ${RULE}`,
+        };
+        return ev.url ? (
+          <a key={`${ev.source}-${ev.date}-${i}`} href={ev.url} target="_blank" rel="noreferrer" style={rowStyle}
+            onClick={() => track("Chance To Speak", {
+              source: ev.source, kind: hearings.length ? "hearing" : "comment",
+              days_before: _daysBefore(ev.date, today),
+            })}>
+            {body}
+          </a>
+        ) : (
+          <div key={`${ev.source}-${ev.date}-${i}`} style={rowStyle}>{body}</div>
+        );
+      })}
+      {commentOnly.length > 0 && (
+        <button type="button" aria-expanded={showAll} onClick={() => setShowAll(s => !s)} style={{
+          display: "block", width: "100%", padding: "8px 12px", cursor: "pointer",
+          background: CREAM, border: "none", borderTop: shown.length ? `1px solid ${RULE}` : "none",
+          fontFamily: FONT_DISPLAY, fontSize: "11px", letterSpacing: "0.14em", color: TEAL, textAlign: "left",
+        }}>
+          {showAll
+            ? "HIDE PUBLIC COMMENT PERIODS"
+            : `PUBLIC COMMENT IS ON THE AGENDA AT ${commentOnly.length} ${withHearing.length ? "MORE " : ""}MEETING${commentOnly.length === 1 ? "" : "S"}`}
+          {" "}<span aria-hidden="true">{showAll ? "▴" : "▾"}</span>
+        </button>
+      )}
+    </section>
+  );
+}
+
 function UpcomingMeetings({ isMobile }) {
   const [upFilter, setUpFilter]       = useState("all");
   const [calOpen,  setCalOpen]        = useState(null);  // ev key with open dropdown
@@ -1769,6 +1871,7 @@ function UpcomingMeetings({ isMobile }) {
 
 
       <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch" }} onClick={e => { if (calOpen) setCalOpen(null); }}>
+        <ChancesToSpeak sourceKey={upFilter} today={today} dateLabel={dateLabel} />
         {Object.entries(grouped).slice(0, 12).map(([date, events]) => {
           const isToday    = date === today;
           const isTomorrow = date === tomorrow;
@@ -2267,6 +2370,7 @@ function Tracker() {
   const [search,      setSearch]      = useState("");
   const [sourceFilter, setSourceFilter] = useState("all"); // "all" | jurisdiction key
   const [panelTab,     setPanelTab]     = useState("recent"); // "recent" | "upcoming"
+  const chanceCount = _chances("all", new Date().toLocaleDateString("en-CA")).length;
 
   useEffect(() => {
     if (!isMobile && !selected) setSelected(MEETINGS[0]);
@@ -2451,6 +2555,19 @@ function Tracker() {
               {panelTab === "recent" && <>
 
               <div style={{ padding: "12px 14px 10px", borderBottom: `2px solid ${RULE}`, background: CREAM }}>
+                {chanceCount > 0 && (
+                  <button type="button"
+                    onClick={() => { track("Chance To Speak", { kind: "pointer" }); setPanelTab("upcoming"); }}
+                    style={{
+                      display: "block", width: "100%", textAlign: "left", cursor: "pointer",
+                      background: "#fff", border: `1px solid ${RULE}`, borderLeft: `4px solid ${TEAL}`,
+                      padding: "8px 10px", marginBottom: "10px",
+                      fontFamily: FONT_DISPLAY, fontSize: "11px", letterSpacing: "0.12em", color: INK,
+                    }}>
+                    YOUR CHANCE TO SPEAK: {chanceCount} MEETING{chanceCount === 1 ? "" : "S"} IN THE NEXT {CHANCE_DAYS} DAYS{" "}
+                    <span aria-hidden="true" style={{ color: TEAL }}>›</span>
+                  </button>
+                )}
                 <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.18em", color: "#5a5a5a", marginBottom: "10px" }}>RECENT MEETINGS</div>
                 <ChipRow scroll={isMobile} activeKey={sourceFilter}>
                   {FILTER_OPTIONS.map(({ key, label, color }) => {

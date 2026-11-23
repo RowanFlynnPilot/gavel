@@ -77,6 +77,17 @@ class PromptTest(unittest.TestCase):
         self.assertNotIn("issues", previews.parse_preview(reply))
         self.assertNotIn('"issues"', previews.build_prompt(make_config(), entry, "1. Paving"))
 
+    def test_preview_lists_every_public_hearing(self):
+        entry = {"date": "2027-03-09", "time": "6:00 PM", "name": "Plan Commission", "source": "city"}
+        prompt = previews.build_prompt(make_config(), entry, "1. Public hearing: rezoning")
+        self.assertIn('"hearings": ["each public hearing on this agenda', prompt)
+        self.assertIn("A general public comment period is not a hearing.", prompt)
+        reply = {"overview": "The commission is scheduled to hold a hearing.", "items": []}
+        got = previews.parse_preview(json.dumps({**reply, "hearings": [" Rezoning 12 acres for apartments ", "", 4]}))
+        self.assertEqual(got["hearings"], ["Rezoning 12 acres for apartments"])
+        self.assertEqual(previews.parse_preview(json.dumps(reply))["hearings"], [])
+        self.assertEqual(previews.parse_preview(json.dumps({**reply, "hearings": "one"}))["hearings"], [])
+
 
 class AnswerTest(unittest.TestCase):
     def summary(self, reply, **kw):
