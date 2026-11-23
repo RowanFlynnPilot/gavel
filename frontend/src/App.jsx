@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { Component, useState, useEffect, useRef, useCallback } from "react";
 
 const BASE_URL = import.meta.env.BASE_URL;
 // <site>/preview/ is the editor's view: the same app over preview/ data, which
@@ -149,8 +149,16 @@ function _applyConfig(config, meetings, upcoming) {
   INSTANCE      = config.instance;
   THEME         = config.theme;
   JURISDICTIONS = config.jurisdictions;
-  MEETINGS      = Array.isArray(meetings) ? meetings : [];
-  UPCOMING      = upcoming || {};
+  // A meeting or an upcoming list from a board that isn't in instance.json
+  // has no name, color or avatar to draw with, and one such record used to
+  // blank the whole page. It is left out and the rest is shown.
+  const known = new Set(JURISDICTIONS.map(j => j.key));
+  const listed = Array.isArray(meetings) ? meetings : [];
+  MEETINGS      = listed.filter(m => m && known.has(m.source));
+  UPCOMING      = Object.fromEntries(Object.entries(upcoming || {}).filter(([key]) => known.has(key)));
+  if (MEETINGS.length !== listed.length) {
+    console.warn(`${listed.length - MEETINGS.length} meeting(s) from a board that is not in instance.json were left out.`);
+  }
 
   PARTS_BY_ID   = _groupParts(MEETINGS);
   MEETING_COUNT = new Set(MEETINGS.map(m => PARTS_BY_ID[m.id] || m)).size;
@@ -2648,6 +2656,39 @@ function BootError({ file }) {
   );
 }
 
+// What a reader sees if drawing the tracker fails for a reason the checks
+// above did not anticipate: a way to try again instead of an empty page.
+function RenderError() {
+  return (
+    <div role="alert" style={{
+      height: "100%", minHeight: "100vh",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      background: "#fff", padding: "24px", textAlign: "center",
+      fontFamily: "Georgia, serif", color: "#1a1a1a",
+    }}>
+      <div style={{ maxWidth: "520px" }}>
+        <div style={{ fontSize: "18px", fontWeight: 700, marginBottom: "10px" }}>
+          The meeting tracker could not be displayed
+        </div>
+        <div style={{ fontSize: "14px", lineHeight: 1.6, marginBottom: "16px" }}>
+          Something went wrong while showing this page. Reloading usually fixes it.
+        </div>
+        <button type="button" onClick={() => window.location.reload()} style={{
+          fontFamily: "Georgia, serif", fontSize: "14px", padding: "8px 18px", cursor: "pointer",
+          background: "#1a1a1a", color: "#fff", border: "none",
+        }}>Reload</button>
+      </div>
+    </div>
+  );
+}
+
+class RenderGuard extends Component {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch(error) { console.error("The tracker failed to render:", error); }
+  render() { return this.state.failed ? <RenderError /> : this.props.children; }
+}
+
 export default function App() {
   const [boot, setBoot] = useState({ status: "loading" });
 
@@ -2679,10 +2720,10 @@ export default function App() {
 
   if (boot.status === "error") return <BootError file={boot.file} />;
   if (boot.status === "loading") return <BootLoading />;
-  if (!IS_PREVIEW) return <Tracker />;
+  if (!IS_PREVIEW) return <RenderGuard><Tracker /></RenderGuard>;
   return (
     <>
-      <Tracker />
+      <RenderGuard><Tracker /></RenderGuard>
       <div role="status" style={{
         position: "fixed", bottom: "10px", left: "50%", transform: "translateX(-50%)",
         zIndex: 1000, pointerEvents: "none", whiteSpace: "nowrap",

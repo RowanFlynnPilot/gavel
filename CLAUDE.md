@@ -370,6 +370,11 @@ Other optional fields, all validated at load:
 voted (`summarize.member_vote_rules`); names that disagree with a numeric
 tally are dropped in code (`summarize._finish`). Summaries written before
 Nov. 2026 have neither those lists, `attendance` nor `issues`.
+`badge` is "new" for `NEW_BADGE_HOURS` (24) after the meeting's `processed_at`
+in the state file, the first time the tracker summarized it; a later upgrade
+or re-publication does not make it new again. The frontend leaves out any
+record whose `source` is not a jurisdiction in instance.json (one such record
+used to blank the page) and shows a reload screen if drawing fails.
 Newest-first, pruned to `instance.max_meetings`. `id` is the YouTube video
 ID, `bb_<meeting_id>` (BoardBook), or `<id_prefix>_<guid>` (Municode).
 

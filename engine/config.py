@@ -80,6 +80,8 @@ SKIPPED_FILE = Path(os.environ.get("SKIPPED_FILE", "./skipped_videos.json"))
 UNAVAILABLE_FILE = Path(os.environ.get("UNAVAILABLE_FILE", "./transcripts/unavailable.json"))
 # The residential fetcher normally clears a video within ~12 hours.
 STALE_VIDEO_HOURS = int(os.environ.get("STALE_VIDEO_HOURS", "36"))
+# How long a meeting carries the NEW badge after the tracker first summarizes it.
+NEW_BADGE_HOURS = int(os.environ.get("NEW_BADGE_HOURS", "24"))
 
 # Days a meeting may stay agenda-only before its upgrade counts as late, for a
 # jurisdiction that doesn't set expected_lag_days (engine.overdue).

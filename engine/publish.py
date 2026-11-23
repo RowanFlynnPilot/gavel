@@ -17,10 +17,10 @@ from __future__ import annotations
 import json
 import logging
 import re
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from .config import (ARCHIVE_UPDATES_JSON, InstanceConfig, MEETINGS_JSON, MINUTES_ADAPTERS,
+from .config import (ARCHIVE_UPDATES_JSON, InstanceConfig, MEETINGS_JSON, MINUTES_ADAPTERS, NEW_BADGE_HOURS,
                      PORTAL_PREFIX,
                      STATE_FILE, VOTE_ADAPTERS)
 from .state import load_injected, load_state, save_injected
@@ -380,9 +380,25 @@ def queue_archive_updates(path: Path, entries: list[dict]) -> None:
                     encoding="utf-8")
 
 
-def publish(cfg: InstanceConfig, data_path: Path | None = None) -> int:
+def is_new(info: dict | None, now: datetime) -> bool:
+    """True for NEW_BADGE_HOURS after the tracker first summarized a meeting
+    (`processed_at`, which later re-summarizing never moves). The badge used to
+    go to "whatever this publish pass built", and every run publishes twice,
+    so the second pass wiped the first one's badges and none was ever seen."""
+    try:
+        first = datetime.fromisoformat(((info or {}).get("processed_at") or "").replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    if first.tzinfo is None:
+        first = first.replace(tzinfo=timezone.utc)
+    return timedelta(0) <= now - first < timedelta(hours=NEW_BADGE_HOURS)
+
+
+def publish(cfg: InstanceConfig, data_path: Path | None = None,
+            now: datetime | None = None) -> int:
     """Rebuild data/meetings.json from state + sidecars. Returns the number
     of newly built entries."""
+    now = now or datetime.now(timezone.utc)
     data_path = data_path or MEETINGS_JSON
     print(f"\n[publish]  target: {data_path}")
 
@@ -506,10 +522,11 @@ def publish(cfg: InstanceConfig, data_path: Path | None = None) -> int:
         queue_archive_updates(data_path.parent / ARCHIVE_UPDATES_JSON.name, off_list)
         print(f"   [archive] queued {len(off_list)} rebuilt meeting(s) for their archive pages")
 
-    # Badge sweep: only this run's new entries keep badge=new. (badge=null
-    # instead of a missing key keeps the JSON diff minimal between runs.)
+    # Badge sweep: a meeting is NEW for its first day on the tracker, however
+    # many times the list is rebuilt in that day. (badge=null instead of a
+    # missing key keeps the JSON diff minimal between runs.)
     for m in combined:
-        m["badge"] = "new" if m["id"] in newly_injected else None
+        m["badge"] = "new" if is_new(processed.get(m["id"]), now) else None
 
     # Backfill missing doc URLs by date for agendacenter jurisdictions.
     from .adapters import agendacenter
