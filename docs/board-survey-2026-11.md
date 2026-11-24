@@ -65,3 +65,21 @@ fetched from the residential machine, like transcripts.
 Caveats: lead times come from a few file timestamps per board; "none found"
 for recordings and coverage means the search found nothing, not proof of
 absence. The coverage claim must be re-checked for each board chosen.
+
+## Added Nov. 22-23, 2026: Town of Stettin
+
+Not among the twelve surveyed above; the publisher named it as one of the six
+on Nov. 22, 2026.
+
+| Board | Platform | Listing | Recordings | Cadence | Blockers |
+|---|---|---|---|---|---|
+| Town of Stettin | HeyGov (Town Web), the Town of Weston's platform | townofstettin.org/agendas-minutes | None found | Town Board 2nd & 4th Mon 7 PM, agendas posted 48 hours ahead; also a Plan Commission and a Zoning Board of Appeals | `api.heygov.com/robots.txt` disallows all robots; the town's own site allows them |
+
+Its jurisdiction block is `docs/new-boards/stettin.json`, written from the
+town's own pages (officials, schedule, bodies). It has no `bodies` filter: the
+exact category names are in HeyGov's data, which has not been read. Nothing
+has been fetched from HeyGov for this town, and the block is not in
+instance.json. To switch it on after the town agrees: append the block with
+`"hidden": true`, run the pipeline once on a rehearsal branch, and add a
+`bodies` list if the categories include ones that should not be tracked.
+

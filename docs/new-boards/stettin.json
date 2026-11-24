@@ -1,0 +1,50 @@
+{
+  "key": "stettin",
+  "name": "Town of Stettin",
+  "filter_label": "Town of Stettin",
+  "short": "TOWN",
+  "start_date": "2026-12-01",
+  "accent": "#9C3D54",
+  "monogram": "ST",
+  "doc_host": "app.heygov.com",
+  "video": null,
+  "agendas": {
+    "adapter": "heygov",
+    "site": "townofstettin.org",
+    "portal": "https://townofstettin.org/agendas-minutes",
+    "days_ahead": 60,
+    "fallback_rules": [
+      {
+        "name": "Town Board Meeting",
+        "weekday": 0,
+        "nth": 2,
+        "time": "7:00 PM"
+      },
+      {
+        "name": "Town Board Meeting",
+        "weekday": 0,
+        "nth": 4,
+        "time": "7:00 PM"
+      }
+    ]
+  },
+  "title_strip_patterns": [],
+  "committee_map": {
+    "zoning board of appeals": "Zoning Board of Appeals",
+    "board of review": "Board of Review",
+    "annual meeting": "Annual Town Meeting",
+    "plan commission": "Plan Commission",
+    "town board": "Town Board"
+  },
+  "officials": [
+    "Tim Buttke (Town Chairman)",
+    "Dave Thunder (Supervisor)",
+    "Dale Skrzypchak (Supervisor)",
+    "Marlo Turner (Clerk)",
+    "Faye Zernicke (Treasurer)",
+    "Bob Voigt (Plan Commission Chairman)",
+    "Pat Kage (Zoning Board of Appeals Chairman)"
+  ],
+  "calendar_url": "https://townofstettin.org/calendar",
+  "expected_lag_days": 45
+}
