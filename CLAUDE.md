@@ -365,6 +365,13 @@ per jurisdiction:
   vocabulary hints. **Update after each spring election.**
 - `calendar_url` (optional): the jurisdiction's official calendar page
   (frontend FULL CALENDARS link)
+- `group` (optional): the kind of body ("Cities", "Schools"), for the board
+  filter. On a wider screen an instance with nine or more boards shows one
+  chip per kind and the chosen kind's boards in a second row (a kind with one
+  board shows that board); phones keep one scrolling row and smaller
+  instances keep a chip per board. Without `group` the frontend reads the
+  kind from the name: "... County", "City of ...", "Village of ...", "Town of
+  ...", anything with "School", else "Other".
 - `expected_lag_days` (optional, positive integer, default 7): how long a
   meeting here normally stays agenda-only before its recording, audio,
   minutes or votes arrive. `engine.overdue` flags anything later.

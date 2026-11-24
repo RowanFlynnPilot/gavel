@@ -53,6 +53,8 @@ let COMMITTEE_STYLES       = {};
 let _COMMITTEE_STYLES_NORM = {};
 let FILTER_OPTIONS         = []; // "All Sources" first, then one per jurisdiction
 let ISSUES                 = []; // instance.json `issues`: [{key, label, about}]
+let GROUPS                 = []; // [{name, keys}]: boards by kind of body, in display order
+let GROUP_OF               = {}; // board key -> its group's name
 let CAL_URLS               = {}; // FULL CALENDAR(S) destination per source filter
 
 // Raw hex mirror of the ink token — the filter chips build "#RRGGBB15" alpha
@@ -298,6 +300,12 @@ function _applyConfig(config, meetings, upcoming) {
     })),
   ];
 
+  // Boards by kind of body, for the grouped filter (SourceFilter).
+  GROUP_OF = Object.fromEntries(JURISDICTIONS.map(j => [j.key, _groupOf(j)]));
+  const groupNames = [...new Set(Object.values(GROUP_OF))];
+  GROUPS = [...GROUP_ORDER.filter(n => groupNames.includes(n)), ...groupNames.filter(n => !GROUP_ORDER.includes(n))]
+    .map(name => ({ name, keys: JURISDICTIONS.filter(j => GROUP_OF[j.key] === name).map(j => j.key) }));
+
   // Calendar destination follows the source filter so the link doesn't always
   // drop the reader on the first jurisdiction's site.
   CAL_URLS = { all: JURISDICTIONS[0].calendar_url };
@@ -504,6 +512,103 @@ function ChipRow({ scroll, activeKey, style, children }) {
       }}>{children}</div>
       <div aria-hidden="true" style={fade("left")} />
       <div aria-hidden="true" style={fade("right")} />
+    </div>
+  );
+}
+
+// The board filter for the Recent and Upcoming panels. A value is "all", a
+// board's key, or "group:<Name>" for every board of one kind.
+//
+// On a phone the chips scroll in one row (ChipRow). On a wider screen a few
+// boards wrap comfortably, but a dozen take five rows of the narrow list
+// panel, so from GROUP_FROM boards up they are grouped by kind of body: one
+// chip per kind, and the boards of the chosen kind in a second row. A kind
+// with a single board shows that board's own chip.
+const GROUP_ORDER = ["County", "Cities", "Villages", "Towns", "Schools"];
+const GROUP_FROM  = 9;
+
+function _groupOf(j) {
+  if (typeof j.group === "string" && j.group.trim()) return j.group.trim();
+  const name = `${j.name || ""} ${j.filter_label || ""}`;
+  if (/\bschool/i.test(name))      return "Schools";
+  if (/\bcounty\b/i.test(name))    return "County";
+  if (/\bcity of\b/i.test(name))   return "Cities";
+  if (/\bvillage of\b/i.test(name)) return "Villages";
+  if (/\btown of\b/i.test(name))   return "Towns";
+  return "Other";
+}
+
+function sourceMatches(filter, key) {
+  if (filter === "all") return true;
+  if (filter.startsWith("group:")) return GROUP_OF[key] === filter.slice(6);
+  return filter === key;
+}
+
+function SourceFilter({ value, onChange, panel, isMobile, large, style }) {
+  const pick = key => { track("Filter", { source: key, panel }); onChange(key); };
+  const chip = ({ key, label, color, avatar }, active) => (
+    <button
+      key={key}
+      aria-pressed={active}
+      aria-label={`Filter ${panel} meetings by ${label}`}
+      onClick={() => pick(key)}
+      onMouseEnter={e => { if (!active) { e.currentTarget.style.background = `${color}15`; e.currentTarget.style.borderColor = color; e.currentTarget.style.color = color; }}}
+      onMouseLeave={e => { if (!active) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#d0ccc4"; e.currentTarget.style.color = "#888"; }}}
+      style={{
+        background:    active ? color : "transparent",
+        border:        `1.5px solid ${active ? color : "#d0ccc4"}`,
+        color:         active ? "#fff" : "#888",
+        fontFamily:    FONT_DISPLAY,
+        fontSize:      large ? "12px" : "11px",
+        letterSpacing: "0.12em",
+        padding:       large ? "6px 13px" : "5px 12px",
+        cursor:        "pointer",
+        transition:    "all 0.15s",
+        display:       "flex", alignItems: "center", gap: large ? "7px" : "6px",
+        whiteSpace:    "nowrap",
+      }}
+    >
+      {avatar && (
+        <SourceAvatar
+          source={key}
+          label={label}
+          size={large ? 18 : 16}
+          style={{
+            flexShrink: 0,
+            opacity: active ? 1 : (large ? 0.7 : 0.75),
+            border: `${large ? "1.5px" : "1px"} solid ${active ? "rgba(255,255,255,0.5)" : "transparent"}`,
+            transition: "opacity 0.15s",
+          }}
+        />
+      )}
+      {label}
+    </button>
+  );
+  const board = o => chip({ ...o, avatar: o.key !== "all" }, value === o.key);
+
+  if (isMobile || JURISDICTIONS.length < GROUP_FROM) {
+    return <ChipRow scroll={isMobile} activeKey={value} style={style}>{FILTER_OPTIONS.map(board)}</ChipRow>;
+  }
+
+  const byKey = Object.fromEntries(FILTER_OPTIONS.map(o => [o.key, o]));
+  const openName = value.startsWith("group:") ? value.slice(6) : GROUP_OF[value];
+  const open = GROUPS.find(g => g.name === openName && g.keys.length > 1);
+  return (
+    <div style={style}>
+      <ChipRow>
+        {board(byKey.all)}
+        {GROUPS.map(g => g.keys.length === 1
+          ? board(byKey[g.keys[0]])
+          : chip({ key: `group:${g.name}`, label: `${g.name} · ${g.keys.length}`, color: INK_RAW, avatar: false },
+                 !!open && open.name === g.name))}
+      </ChipRow>
+      {open && (
+        <div role="group" aria-label={`${open.name}: choose one`}>
+          <ChipRow style={{ marginTop: "6px", paddingLeft: "8px", borderLeft: `2px solid ${RULE}` }}>
+            {open.keys.map(k => board(byKey[k]))}
+          </ChipRow>
+        </div>
+      )}
     </div>
   );
 }
@@ -1705,7 +1810,7 @@ function OlderMeetings({ search, sourceFilter }) {
   const terms  = query ? query.split(/\s+/) : [];
   const rows   = load.rows.filter(r =>
     SOURCE_CONFIG[r.source] && !onList.has(r.id)
-    && (sourceFilter === "all" || r.source === sourceFilter)
+    && sourceMatches(sourceFilter, r.source)
     && (issue === "all" || (r.issues || []).includes(issue))
     && terms.every(t => _archiveBlob(r, issueLabels).includes(t)));
 
@@ -1789,7 +1894,7 @@ const CHANCE_DAYS = 8;
 function _chances(sourceKey, today) {
   const out = [];
   for (const j of JURISDICTIONS) {
-    if (sourceKey !== "all" && sourceKey !== j.key) continue;
+    if (!sourceMatches(sourceKey, j.key)) continue;
     for (const ev of UPCOMING[j.key] || []) {
       const p = ev.preview;
       if (!p || ev.date < today || _daysBefore(ev.date, today) > CHANCE_DAYS) continue;
@@ -1891,7 +1996,7 @@ function UpcomingMeetings({ isMobile }) {
   const today = new Date().toLocaleDateString("en-CA");
 
   const allUpcoming = JURISDICTIONS
-    .filter(j => upFilter === "all" || upFilter === j.key)
+    .filter(j => sourceMatches(upFilter, j.key))
     .flatMap(j => UPCOMING[j.key] || [])
     .filter(e => e.date >= today)
     .sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time));
@@ -1931,49 +2036,8 @@ function UpcomingMeetings({ isMobile }) {
       <div style={{ padding: "12px 14px 10px", borderBottom: `2px solid ${RULE}`, background: CREAM }}>
 
 
-        <ChipRow scroll={isMobile} activeKey={upFilter} style={{ marginBottom: "10px" }}>
-          {FILTER_OPTIONS.map(({ key, label, color }) => {
-            const active = upFilter === key;
-            return (
-              <button
-                key={key}
-                aria-pressed={active}
-                aria-label={`Filter upcoming meetings by ${label}`}
-                onClick={() => { track("Filter", { source: key, panel: "upcoming" }); setUpFilter(key); }}
-                onMouseEnter={e => { if (!active) { e.currentTarget.style.background = `${color}15`; e.currentTarget.style.borderColor = color; e.currentTarget.style.color = color; }}}
-                onMouseLeave={e => { if (!active) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#d0ccc4"; e.currentTarget.style.color = "#888"; }}}
-                style={{
-                  background:    active ? color : "transparent",
-                  border:        `1.5px solid ${active ? color : "#d0ccc4"}`,
-                  color:         active ? "#fff" : "#888",
-                  fontFamily:    FONT_DISPLAY,
-                  fontSize:      "12px",
-                  letterSpacing: "0.12em",
-                  padding:       "6px 13px",
-                  cursor:        "pointer",
-                  transition:    "all 0.15s",
-                  display:       "flex", alignItems: "center", gap: "7px",
-                  whiteSpace:    "nowrap",
-                }}
-              >
-                {key !== "all" && (
-                  <SourceAvatar
-                    source={key}
-                    label={label}
-                    size={18}
-                    style={{
-                      flexShrink: 0,
-                      opacity: active ? 1 : 0.7,
-                      border: active ? "1.5px solid rgba(255,255,255,0.5)" : "1.5px solid transparent",
-                      transition: "opacity 0.15s",
-                    }}
-                  />
-                )}
-                {label}
-              </button>
-            );
-          })}
-        </ChipRow>
+        <SourceFilter value={upFilter} onChange={setUpFilter} panel="upcoming" isMobile={isMobile} large
+          style={{ marginBottom: "10px" }} />
 
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
@@ -2001,7 +2065,7 @@ function UpcomingMeetings({ isMobile }) {
             {(() => {
               // Calendar destination follows the source filter so the link
               // doesn't always drop the reader on the first jurisdiction.
-              const calLabel = upFilter === "all" ? "FULL CALENDARS" : "FULL CALENDAR";
+              const calLabel = CAL_URLS[upFilter] && upFilter !== "all" ? "FULL CALENDAR" : "FULL CALENDARS";
               return (
                 <a href={CAL_URLS[upFilter] || CAL_URLS.all} target="_blank" rel="noreferrer"
                   style={{
@@ -2542,7 +2606,7 @@ function Tracker() {
 
   const filtered = MEETINGS
     .filter(m => {
-      const matchSource = sourceFilter === "all" || m.source === sourceFilter;
+      const matchSource = sourceMatches(sourceFilter, m.source);
       if (!matchSearch(m, search)) return false;
       return matchSource;
     })
@@ -2718,48 +2782,7 @@ function Tracker() {
                   </button>
                 )}
                 <div style={{ fontFamily: FONT_DISPLAY, fontSize: "10px", letterSpacing: "0.18em", color: "#5a5a5a", marginBottom: "10px" }}>RECENT MEETINGS</div>
-                <ChipRow scroll={isMobile} activeKey={sourceFilter}>
-                  {FILTER_OPTIONS.map(({ key, label, color }) => {
-                    const active = sourceFilter === key;
-                    return (
-                      <button
-                        key={key}
-                        aria-pressed={active}
-                        aria-label={`Filter recent meetings by ${label}`}
-                        onClick={() => { track("Filter", { source: key, panel: "recent" }); setSourceFilter(key); }}
-                        onMouseEnter={e => { if (!active) { e.currentTarget.style.background = color + "15"; e.currentTarget.style.borderColor = color; e.currentTarget.style.color = color; }}}
-                        onMouseLeave={e => { if (!active) { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "#d0ccc4"; e.currentTarget.style.color = "#888"; }}}
-                        style={{
-                          background:    active ? color : "transparent",
-                          border:        "1.5px solid " + (active ? color : "#d0ccc4"),
-                          color:         active ? "#fff" : "#888",
-                          fontFamily:    FONT_DISPLAY,
-                          fontSize:      "11px", letterSpacing: "0.12em",
-                          padding:       "5px 12px",
-                          cursor:        "pointer",
-                          transition:    "all 0.15s",
-                          display:       "flex", alignItems: "center", gap: "6px",
-                          whiteSpace:    "nowrap",
-                        }}
-                      >
-                        {key !== "all" && (
-                          <SourceAvatar
-                            source={key}
-                            label={label}
-                            size={16}
-                            style={{
-                              flexShrink: 0,
-                              opacity: active ? 1 : 0.75,
-                              border: active ? "1px solid rgba(255,255,255,0.5)" : "1px solid transparent",
-                              transition: "opacity 0.15s",
-                            }}
-                          />
-                        )}
-                        {label}
-                      </button>
-                    );
-                  })}
-                </ChipRow>
+                <SourceFilter value={sourceFilter} onChange={setSourceFilter} panel="recent" isMobile={isMobile} />
                 <div style={{ position: "relative" }}>
                   <input
                     type="search"

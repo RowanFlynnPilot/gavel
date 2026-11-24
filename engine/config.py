@@ -183,6 +183,12 @@ class Jurisdiction:
         self.hidden = raw.get("hidden", False)
         if not isinstance(self.hidden, bool):
             raise ConfigError(f"{ctx}: 'hidden' must be true or false, got {self.hidden!r}")
+        # Optional: the kind of body, for grouping the filter chips when an
+        # instance has many boards ("Cities", "Schools"). Without it the
+        # frontend reads the kind from the name ("City of ...", "... County").
+        self.group: str = raw.get("group", "")
+        if not isinstance(self.group, str) or ("group" in raw and not self.group.strip()):
+            raise ConfigError(f"{ctx}: 'group' must be a non-empty string, got {raw.get('group')!r}")
         # Optional "YYYY-MM-DD": the first meeting date this jurisdiction is
         # tracked from. A portal-first board never creates a meeting held
         # before it, which is what lets the pipeline keep looking back as far

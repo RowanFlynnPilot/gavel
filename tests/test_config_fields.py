@@ -62,6 +62,13 @@ class ValidationTest(unittest.TestCase):
                     {"text": "x", "url": "fund.example"}, {"text": "x", "url": 7}):
             self._rejects(lambda r, bad=bad: r["instance"].update(credit_line=bad), "credit_line")
 
+    def test_group_is_an_optional_name(self):
+        self.assertEqual(make_config().jurisdictions[0].group, "")
+        cfg = _load(lambda r: r["jurisdictions"][0].update(group="Regional bodies"))
+        self.assertEqual(cfg.jurisdictions[0].group, "Regional bodies")
+        for bad in ("", "  ", 4, ["Cities"]):
+            self._rejects(lambda r, bad=bad: r["jurisdictions"][0].update(group=bad), "'group'")
+
     def test_place_names_must_be_a_list_of_names(self):
         for bad in ("Riverton", ["Riverton", ""], ["Riverton", 3]):
             self._rejects(lambda r, bad=bad: r.update(place_names=bad), "place_names")
