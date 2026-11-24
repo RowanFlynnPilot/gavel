@@ -53,6 +53,15 @@ class ValidationTest(unittest.TestCase):
         self.assertEqual(make_config(corrections_email="editor@ledger.example").corrections_email,
                          "editor@ledger.example")
 
+    def test_credit_line_is_optional_and_checked(self):
+        self.assertEqual(make_config().credit_line, {})
+        ok = make_config(credit_line={"text": "Supported by the Example Fund.", "url": "https://fund.example/"})
+        self.assertEqual(ok.credit_line["text"], "Supported by the Example Fund.")
+        self.assertEqual(make_config(credit_line={"text": "Supported by the Example Fund."}).credit_line.get("url"), None)
+        for bad in ("Supported by", {"text": ""}, {"text": 3}, {"url": "https://fund.example/"},
+                    {"text": "x", "url": "fund.example"}, {"text": "x", "url": 7}):
+            self._rejects(lambda r, bad=bad: r["instance"].update(credit_line=bad), "credit_line")
+
     def test_place_names_must_be_a_list_of_names(self):
         for bad in ("Riverton", ["Riverton", ""], ["Riverton", 3]):
             self._rejects(lambda r, bad=bad: r.update(place_names=bad), "place_names")

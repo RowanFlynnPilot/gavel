@@ -385,6 +385,10 @@ Other optional fields, all validated at load:
 - `instance.corrections_email` (an email address): where readers send
   correction requests. Without it, static pages and the frontend show no
   "Request a correction" link.
+- `instance.credit_line` (`{text, url?}`): a funder's or sponsor's credit, shown
+  under the tracker's coverage note, linked when `url` is given. Without it
+  nothing is shown. The wording is the funder's to approve, so there is no
+  default.
 - `place_names` (top level, list of non-empty strings): municipality and state
   names that may trail a street address (", Wausau, WI"). `engine.scrub`
   removes up to two along with a resident's address; with none listed only

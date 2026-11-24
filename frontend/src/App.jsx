@@ -2848,6 +2848,17 @@ function Tracker() {
                   })}
                   {" "}meetings. Details are scraped from public agendas, minutes, and recordings — these summaries are not a substitute for official minutes.
                 </div>
+                {/* A funder's credit, in the funder's approved wording
+                    (instance.credit_line). Nothing is shown without one. */}
+                {INSTANCE.credit_line && INSTANCE.credit_line.text && (
+                  <div style={{ fontFamily: FONT_BODY, fontSize: "10px", color: "#666", lineHeight: 1.55, marginTop: "6px" }}>
+                    {INSTANCE.credit_line.url
+                      ? <a href={INSTANCE.credit_line.url} target="_blank" rel="noreferrer"
+                          onClick={() => track("Outbound Link", { source: "all", kind: "CREDIT LINE" })}
+                          style={{ color: "#555", textDecoration: "underline" }}>{INSTANCE.credit_line.text}</a>
+                      : INSTANCE.credit_line.text}
+                  </div>
+                )}
               </div>
             </nav>
           )}

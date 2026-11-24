@@ -334,6 +334,19 @@ class InstanceConfig:
             raise ConfigError(
                 "instance.corrections_email must be an email address, "
                 f"got {self.corrections_email!r}")
+        # A funder's or sponsor's credit, shown under the tracker's coverage
+        # note: {"text": "...", "url"?: "https://..."}. Optional; with none,
+        # nothing is shown. The wording is the funder's to approve, so it is
+        # config and never a default.
+        self.credit_line: dict = inst.get("credit_line", {})
+        if not isinstance(self.credit_line, dict):
+            raise ConfigError("instance.credit_line must be an object with 'text' and optional 'url'")
+        if self.credit_line:
+            text, url = self.credit_line.get("text"), self.credit_line.get("url", "")
+            if not isinstance(text, str) or not text.strip():
+                raise ConfigError("instance.credit_line.text must be a non-empty string")
+            if not isinstance(url, str) or (url and not re.fullmatch(r"https?://\S+", url)):
+                raise ConfigError(f"instance.credit_line.url must be an http(s) address, got {url!r}")
 
         self.theme: dict = _require(raw, "theme", "top level")
         self.committee_styles: dict = raw.get("committee_styles", {})
