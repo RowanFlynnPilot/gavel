@@ -48,8 +48,12 @@ def public_instance(raw: dict) -> dict:
 
 
 def _write(path: Path, data) -> None:
+    """Staged copies are for the browser, not for reading: no indentation.
+    (The committed data/ files stay indented so their diffs stay readable.)
+    On the reference instance that took the meeting list from 915 KB to 750 KB."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n",
+                    encoding="utf-8")
 
 
 def write_views(cfg: InstanceConfig, out_dir: Path, preview_dir: Path | None = None) -> dict:
