@@ -119,6 +119,17 @@ WPR is Instance Zero and the permanent reference deployment.
   every run and commits the files with the data (not copied onto the deployed
   site).
 
+- `python -m engine.alerts [--since ISO-TIME] [--out data/alerts.json]` — the alert
+  feed that email alerts will be sent from: one entry the first time the
+  tracker has an agenda preview for an upcoming meeting (`kind: agenda`) or a
+  summary from a recording, minutes or vote records (`kind: result`), with the
+  board, issues, a short text and links. `{entries: [...], seen: {id:
+  first_seen}}`; `seen` keeps an entry from being made twice, entries leave
+  after 45 days, hidden boards are left out. `--since` lists what entered
+  after a time (`alerts.new_since`, what a send covers). It never reads or
+  writes a subscriber's address: the repo and its logs are public, and who
+  receives what is the email service's business. CI updates it every run. No
+  API calls.
 - `python -m engine.audit_votes [--json] [--root DIR]` — check every transcript
   summary's `votes` against the results the chair announced with a tally
   (`engine.vote_announcements`, found by code): lists announced results a
@@ -288,6 +299,7 @@ engine/
 ├── report.py            funder report for a period (no API calls)
 ├── archive.py           data/archive.json: every summarized meeting in brief
 ├── coverage.py          monthly coverage check: agenda before, summary after
+├── alerts.py            data/alerts.json: what is new enough to tell a subscriber
 ├── portal_votes.py      each member's vote from the portal, for recorded meetings
 ├── tipsheet.py          weekly reporter tip sheet (no API calls)
 ├── watchdog.py          skipped_videos.json first-seen tracking → stale list

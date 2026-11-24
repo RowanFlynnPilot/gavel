@@ -238,6 +238,13 @@ jobs:
         continue-on-error: true
         run: python -m engine.coverage --write-dir data/coverage
 
+      - name: Update the alert feed
+        # One entry the first time the tracker has an agenda preview or a
+        # summary of what happened: what email alerts will be sent from. It
+        # holds meetings, never subscribers. No API calls; nothing is sent here.
+        continue-on-error: true
+        run: python -m engine.alerts
+
       - name: Export officials rosters
         # assets/rosters.json, written from instance.json's officials for
         # tools that read the name spellings without the whole config (the
